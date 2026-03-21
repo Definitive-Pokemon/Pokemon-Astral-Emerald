@@ -9,7 +9,6 @@
 #include "trig.h"
 #include "main.h"
 #include "intro.h"
-#include "intro_frlg.h"
 #include "m4a.h"
 #include "expansion_intro.h"
 #include "constants/rgb.h"

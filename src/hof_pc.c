@@ -1,6 +1,5 @@
 #include "global.h"
 #include "hall_of_fame.h"
-#include "hall_of_fame_frlg.h"
 #include "main.h"
 #include "palette.h"
 #include "overworld.h"

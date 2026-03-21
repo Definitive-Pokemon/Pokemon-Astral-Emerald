@@ -3,7 +3,6 @@
 #include "credits.h"
 #include "event_data.h"
 #include "hall_of_fame.h"
-#include "hall_of_fame_frlg.h"
 #include "load_save.h"
 #include "overworld.h"
 #include "script_pokemon_util.h"

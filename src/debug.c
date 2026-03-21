@@ -5,7 +5,6 @@
 #include "clock.h"
 #include "coins.h"
 #include "credits.h"
-#include "credits_frlg.h"
 #include "data.h"
 #include "daycare.h"
 #include "debug.h"

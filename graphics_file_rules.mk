@@ -266,13 +266,6 @@ $(FONTGFXDIR)/short.fwjpnfont: $(FONTGFXDIR)/japanese_short.png
 $(FONTGFXDIR)/braille.fwjpnfont: $(FONTGFXDIR)/braille.png
 	$(GFX) $< $@
 
-$(FONTGFXDIR)/frlg_male.fwjpnfont: $(FONTGFXDIR)/japanese_frlg_male.png
-	$(GFX) $< $@
-
-$(FONTGFXDIR)/frlg_female.fwjpnfont: $(FONTGFXDIR)/japanese_frlg_female.png
-	$(GFX) $< $@
-
-
 ### Miscellaneous ###
 
 $(MISCGFXDIR)/emoticons.4bpp: %.4bpp: %.png

@@ -6,7 +6,6 @@
 #include "berry.h"
 #include "bg.h"
 #include "cable_club.h"
-#include "credits_frlg.h"
 #include "clock.h"
 #include "dexnav.h"
 #include "event_data.h"
