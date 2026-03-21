@@ -45,7 +45,12 @@ jobs:
             tools/wav2agb/wav2agb
           key: tools-${{ runner.os }}-${{ hashFiles('tools/*/Makefile', 'tools/**/*.c', 'tools/**/*.cpp', 'tools/**/*.h') }}
 
-      - name: Release
+      - name: Make
         env:
           GAME_VERSION: EMERALD
         run: make -j$(nproc) release
+        
+      - name: Upload ROM
+        uses: softprops/action-gh-release@v1
+        with:
+          files: pokeemerald.gba
