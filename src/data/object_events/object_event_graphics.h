@@ -485,8 +485,6 @@ const u16 gObjectEventPic_GreenFish[] = INCBIN_U16("graphics/object_events/pics/
 const u16 gObjectEventPic_GreenItem[] = INCBIN_U16("graphics/object_events/pics/people/leaf/green_item.4bpp");
 const u16 gObjectEventPic_GreenVSSeekerBike[] = INCBIN_U16("graphics/object_events/pics/people/leaf/green_vs_seeker_bike.4bpp");
 
-const u16 gObjectEventPal_PlayerFrlg[] = INCBIN_U16("graphics/object_events/palettes/player_frlg.gbapal");
-const u16 gObjectEventPal_PlayerReflectionFrlg[] = INCBIN_U16("graphics/object_events/palettes/player_reflection_frlg.gbapal");
 const u16 gObjectEventPal_NpcBlue[] = INCBIN_U16("graphics/object_events/palettes/npc_blue.gbapal");
 const u16 gObjectEventPal_NpcPink[] = INCBIN_U16("graphics/object_events/palettes/npc_pink.gbapal");
 const u16 gObjectEventPal_NpcGreen[] = INCBIN_U16("graphics/object_events/palettes/npc_green.gbapal");
