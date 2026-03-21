@@ -64,11 +64,11 @@ enum Language
 
 #ifdef FIRERED
     #define GAME_VERSION (VERSION_FIRE_RED)
-    #define IS_FRLG 0
+    #define IS_FRLG 1
 #else
     #ifdef LEAFGREEN
     #define GAME_VERSION (VERSION_LEAF_GREEN)
-    #define IS_FRLG 0
+    #define IS_FRLG 1
     #else
     #define GAME_VERSION (VERSION_EMERALD)
     #define IS_FRLG 0
