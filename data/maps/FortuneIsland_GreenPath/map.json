@@ -1,7 +1,7 @@
 {
-  "id": "MAP_SIX_ISLAND_GREEN_PATH",
-  "name": "SixIsland_GreenPath",
-  "layout": "LAYOUT_SIX_ISLAND_GREEN_PATH",
+  "id": "MAP_FORTUNE_ISLAND_GREEN_PATH",
+  "name": "FortuneIsland_GreenPath",
+  "layout": "LAYOUT_FORTUNE_ISLAND_GREEN_PATH",
   "music": "MUS_RG_SEVII_ROUTE",
   "region_map_section": "MAPSEC_GREEN_PATH",
   "requires_flash": false,
@@ -15,12 +15,12 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_SIX_ISLAND_OUTCAST_ISLAND",
+      "map": "MAP_FORTUNE_ISLAND_OUTCAST_ISLAND",
       "offset": 0,
       "direction": "up"
     },
     {
-      "map": "MAP_SIX_ISLAND_WATER_PATH",
+      "map": "MAP_FORTUNE_ISLAND_WATER_PATH",
       "offset": 0,
       "direction": "right"
     }
@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "SixIsland_GreenPath_EventScript_Jaclyn",
+      "script": "FortuneIsland_GreenPath_EventScript_Jaclyn",
       "flag": "0"
     }
   ],
@@ -46,28 +46,28 @@
       "x": 63,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND_PATTERN_BUSH",
+      "dest_map": "MAP_FORTUNE_ISLAND_PATTERN_BUSH",
       "dest_warp_id": "1"
     },
     {
       "x": 64,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND_PATTERN_BUSH",
+      "dest_map": "MAP_FORTUNE_ISLAND_PATTERN_BUSH",
       "dest_warp_id": "1"
     },
     {
       "x": 45,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND_PATTERN_BUSH",
+      "dest_map": "MAP_FORTUNE_ISLAND_PATTERN_BUSH",
       "dest_warp_id": "4"
     },
     {
       "x": 46,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND_PATTERN_BUSH",
+      "dest_map": "MAP_FORTUNE_ISLAND_PATTERN_BUSH",
       "dest_warp_id": "4"
     }
   ],
@@ -79,7 +79,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SixIsland_GreenPath_EventScript_LeftRouteSign"
+      "script": "FortuneIsland_GreenPath_EventScript_LeftRouteSign"
     },
     {
       "type": "sign",
@@ -87,7 +87,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SixIsland_GreenPath_EventScript_RightRouteSign"
+      "script": "FortuneIsland_GreenPath_EventScript_RightRouteSign"
     },
     {
       "type": "hidden_item",
@@ -95,7 +95,7 @@
       "y": 9,
       "elevation": 3,
       "item": "ITEM_ULTRA_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_SIX_ISLAND_GREEN_PATH_ULTRA_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_FORTUNE_ISLAND_GREEN_PATH_ULTRA_BALL",
       "quantity": 1,
       "underfoot": false
     }

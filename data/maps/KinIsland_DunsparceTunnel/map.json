@@ -1,7 +1,7 @@
 {
-  "id": "MAP_THREE_ISLAND_DUNSPARCE_TUNNEL",
-  "name": "ThreeIsland_DunsparceTunnel",
-  "layout": "LAYOUT_THREE_ISLAND_DUNSPARCE_TUNNEL",
+  "id": "MAP_KIN_ISLAND_DUNSPARCE_TUNNEL",
+  "name": "KinIsland_DunsparceTunnel",
+  "layout": "LAYOUT_KIN_ISLAND_DUNSPARCE_TUNNEL",
   "music": "MUS_RG_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_THREE_ISLE_PATH",
   "requires_flash": false,
@@ -26,7 +26,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ThreeIsland_DunsparceTunnel_EventScript_Prospector",
+      "script": "KinIsland_DunsparceTunnel_EventScript_Prospector",
       "flag": "0"
     }
   ],
@@ -35,14 +35,14 @@
       "x": 3,
       "y": 4,
       "elevation": 3,
-      "dest_map": "MAP_THREE_ISLAND_PORT",
+      "dest_map": "MAP_KIN_ISLAND_PORT",
       "dest_warp_id": "0"
     },
     {
       "x": 25,
       "y": 5,
       "elevation": 3,
-      "dest_map": "MAP_THREE_ISLAND_PORT",
+      "dest_map": "MAP_KIN_ISLAND_PORT",
       "dest_warp_id": "1"
     }
   ],
@@ -54,7 +54,7 @@
       "y": 3,
       "elevation": 0,
       "item": "ITEM_NUGGET",
-      "flag": "FLAG_HIDDEN_ITEM_THREE_ISLAND_DUNSPARCE_TUNNEL_NUGGET",
+      "flag": "FLAG_HIDDEN_ITEM_KIN_ISLAND_DUNSPARCE_TUNNEL_NUGGET",
       "quantity": 1,
       "underfoot": false
     }

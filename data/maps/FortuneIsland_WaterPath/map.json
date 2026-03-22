@@ -1,7 +1,7 @@
 {
-  "id": "MAP_SIX_ISLAND_WATER_PATH",
-  "name": "SixIsland_WaterPath",
-  "layout": "LAYOUT_SIX_ISLAND_WATER_PATH",
+  "id": "MAP_FORTUNE_ISLAND_WATER_PATH",
+  "name": "FortuneIsland_WaterPath",
+  "layout": "LAYOUT_FORTUNE_ISLAND_WATER_PATH",
   "music": "MUS_RG_SEVII_ROUTE",
   "region_map_section": "MAPSEC_WATER_PATH",
   "requires_flash": false,
@@ -15,17 +15,17 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_SIX_ISLAND_GREEN_PATH",
+      "map": "MAP_FORTUNE_ISLAND_GREEN_PATH",
       "offset": 0,
       "direction": "left"
     },
     {
-      "map": "MAP_SIX_ISLAND",
+      "map": "MAP_FORTUNE_ISLAND",
       "offset": 40,
       "direction": "left"
     },
     {
-      "map": "MAP_SIX_ISLAND_RUIN_VALLEY",
+      "map": "MAP_FORTUNE_ISLAND_RUIN_VALLEY",
       "offset": 80,
       "direction": "left"
     }
@@ -42,7 +42,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "SixIsland_WaterPath_EventScript_Rose",
+      "script": "FortuneIsland_WaterPath_EventScript_Rose",
       "flag": "0"
     },
     {
@@ -56,7 +56,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "SixIsland_WaterPath_EventScript_Edward",
+      "script": "FortuneIsland_WaterPath_EventScript_Edward",
       "flag": "0"
     },
     {
@@ -70,7 +70,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "SixIsland_WaterPath_EventScript_Samir",
+      "script": "FortuneIsland_WaterPath_EventScript_Samir",
       "flag": "0"
     },
     {
@@ -84,7 +84,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "SixIsland_WaterPath_EventScript_Denise",
+      "script": "FortuneIsland_WaterPath_EventScript_Denise",
       "flag": "0"
     },
     {
@@ -98,7 +98,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "SixIsland_WaterPath_EventScript_Miu",
+      "script": "FortuneIsland_WaterPath_EventScript_Miu",
       "flag": "0"
     },
     {
@@ -112,7 +112,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "SixIsland_WaterPath_EventScript_Mia",
+      "script": "FortuneIsland_WaterPath_EventScript_Mia",
       "flag": "0"
     },
     {
@@ -126,7 +126,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "SixIsland_WaterPath_EventScript_Earl",
+      "script": "FortuneIsland_WaterPath_EventScript_Earl",
       "flag": "0"
     },
     {
@@ -140,8 +140,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_WaterPath_EventScript_ItemElixir",
-      "flag": "FLAG_HIDE_SIX_ISLAND_WATER_PATH_ELIXIR"
+      "script": "FortuneIsland_WaterPath_EventScript_ItemElixir",
+      "flag": "FLAG_HIDE_FORTUNE_ISLAND_WATER_PATH_ELIXIR"
     },
     {
       "type": "object",
@@ -154,8 +154,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_WaterPath_EventScript_ItemDragonScale",
-      "flag": "FLAG_HIDE_SIX_ISLAND_WATER_PATH_DRAGON_SCALE"
+      "script": "FortuneIsland_WaterPath_EventScript_ItemDragonScale",
+      "flag": "FLAG_HIDE_FORTUNE_ISLAND_WATER_PATH_DRAGON_SCALE"
     }
   ],
   "warp_events": [
@@ -163,14 +163,14 @@
       "x": 5,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_SIX_ISLAND_WATER_PATH_HOUSE1",
+      "dest_map": "MAP_FORTUNE_ISLAND_WATER_PATH_HOUSE1",
       "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_SIX_ISLAND_WATER_PATH_HOUSE2",
+      "dest_map": "MAP_FORTUNE_ISLAND_WATER_PATH_HOUSE2",
       "dest_warp_id": "0"
     }
   ],
@@ -182,7 +182,7 @@
       "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SixIsland_WaterPath_EventScript_HornWantedSign"
+      "script": "FortuneIsland_WaterPath_EventScript_HornWantedSign"
     },
     {
       "type": "hidden_item",
@@ -190,7 +190,7 @@
       "y": 76,
       "elevation": 3,
       "item": "ITEM_ASPEAR_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_ASPEAR_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FORTUNE_ISLAND_WATER_PATH_ASPEAR_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -200,7 +200,7 @@
       "y": 8,
       "elevation": 3,
       "item": "ITEM_ORAN_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_ORAN_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FORTUNE_ISLAND_WATER_PATH_ORAN_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -210,7 +210,7 @@
       "y": 63,
       "elevation": 3,
       "item": "ITEM_PINAP_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_PINAP_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FORTUNE_ISLAND_WATER_PATH_PINAP_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -220,7 +220,7 @@
       "y": 54,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SixIsland_WaterPath_EventScript_RouteSign"
+      "script": "FortuneIsland_WaterPath_EventScript_RouteSign"
     }
   ]
 }

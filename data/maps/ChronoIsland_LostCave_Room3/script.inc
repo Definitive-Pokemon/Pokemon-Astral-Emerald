@@ -1,2 +1,2 @@
-FiveIsland_LostCave_Room3_MapScripts::
+ChronoIsland_LostCave_Room3_MapScripts::
 	.byte 0

@@ -1,7 +1,7 @@
 {
-  "id": "MAP_SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
-  "name": "SixIsland_DottedHole_SapphireRoom",
-  "layout": "LAYOUT_SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
+  "id": "MAP_FORTUNE_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
+  "name": "FortuneIsland_DottedHole_SapphireRoom",
+  "layout": "LAYOUT_FORTUNE_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
   "music": "MUS_RG_SEVII_DUNGEON",
   "region_map_section": "MAPSEC_DOTTED_HOLE",
   "requires_flash": false,
@@ -26,7 +26,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_DottedHole_SapphireRoom_EventScript_Sapphire",
+      "script": "FortuneIsland_DottedHole_SapphireRoom_EventScript_Sapphire",
       "flag": "FLAG_HIDE_SAPPHIRE"
     },
     {
@@ -49,14 +49,14 @@
       "x": 11,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND_DOTTED_HOLE_1F",
+      "dest_map": "MAP_FORTUNE_ISLAND_DOTTED_HOLE_1F",
       "dest_warp_id": "2"
     },
     {
       "x": 5,
       "y": 9,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND_DOTTED_HOLE_B4F",
+      "dest_map": "MAP_FORTUNE_ISLAND_DOTTED_HOLE_B4F",
       "dest_warp_id": "3"
     }
   ],
@@ -68,7 +68,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "SixIsland_DottedHole_SapphireRoom_EventScript_BrailleMessage"
+      "script": "FortuneIsland_DottedHole_SapphireRoom_EventScript_BrailleMessage"
     }
   ]
 }

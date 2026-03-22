@@ -1,18 +1,18 @@
-ThreeIsland_Mart_MapScripts::
+KinIsland_Mart_MapScripts::
 	.byte 0
 
-ThreeIsland_Mart_EventScript_Clerk::
+KinIsland_Mart_EventScript_Clerk::
 	lock
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart ThreeIsland_Mart_Items
+	pokemart KinIsland_Mart_Items
 	msgbox Text_PleaseComeAgain
 	release
 	end
 
 	.align 2
-ThreeIsland_Mart_Items::
+KinIsland_Mart_Items::
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_REVIVE
@@ -23,30 +23,30 @@ ThreeIsland_Mart_Items::
 	release
 	end
 
-ThreeIsland_Mart_EventScript_Picnicker::
-	msgbox ThreeIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger, MSGBOX_NPC
+KinIsland_Mart_EventScript_Picnicker::
+	msgbox KinIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger, MSGBOX_NPC
 	end
 
-ThreeIsland_Mart_EventScript_BugCatcher::
-	msgbox ThreeIsland_Mart_Text_PeopleHealWithBerriesFromForest, MSGBOX_NPC
+KinIsland_Mart_EventScript_BugCatcher::
+	msgbox KinIsland_Mart_Text_PeopleHealWithBerriesFromForest, MSGBOX_NPC
 	end
 
-ThreeIsland_Mart_EventScript_Youngster::
-	msgbox ThreeIsland_Mart_Text_BikersWereAboutToTrashMart, MSGBOX_NPC
+KinIsland_Mart_EventScript_Youngster::
+	msgbox KinIsland_Mart_Text_BikersWereAboutToTrashMart, MSGBOX_NPC
 	end
-ThreeIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger::
+KinIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger::
     .string "Is it true?\p"
     .string "CELADON DEPT. STORE is several\n"
     .string "times bigger than this shop?$"
 
-ThreeIsland_Mart_Text_PeopleHealWithBerriesFromForest::
+KinIsland_Mart_Text_PeopleHealWithBerriesFromForest::
     .string "I sometimes buy medicine here.\p"
     .string "But a lot of people heal POKéMON\n"
     .string "with BERRIES from BERRY FOREST.\p"
     .string "After all, BERRIES are free and\n"
     .string "they never run out.$"
 
-ThreeIsland_Mart_Text_BikersWereAboutToTrashMart::
+KinIsland_Mart_Text_BikersWereAboutToTrashMart::
     .string "Those BIKERS were about to trash\n"
     .string "this POKéMON MART.\p"
     .string "Am I glad they decided to leave!$"

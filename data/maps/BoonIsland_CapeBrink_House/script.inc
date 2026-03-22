@@ -1,6 +1,6 @@
 .set LOCALID_CAPE_BRINK_TUTOR, 1
 
-TwoIsland_CapeBrink_House_MapScripts::
+BoonIsland_CapeBrink_House_MapScripts::
 	.byte 0
 
 @ See move_tutors.inc

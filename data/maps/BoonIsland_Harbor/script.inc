@@ -1,11 +1,11 @@
-TwoIsland_Harbor_MapScripts::
+BoonIsland_Harbor_MapScripts::
 	.byte 0
 
-TwoIsland_Harbor_EventScript_Sailor::
+BoonIsland_Harbor_EventScript_Sailor::
 	lock
 	faceplayer
 	message Text_WhereDoYouWantToSail
 	waitmessage
-	setvar VAR_0x8004, SEAGALLOP_TWO_ISLAND
-	goto EventScript_ChooseDestFromTwoIsland
+	setvar VAR_0x8004, SEAGALLOP_BOON_ISLAND
+	goto EventScript_ChooseDestFromBoonIsland
 	end

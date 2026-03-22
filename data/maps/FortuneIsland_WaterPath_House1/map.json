@@ -1,6 +1,6 @@
 {
-  "id": "MAP_SIX_ISLAND_WATER_PATH_HOUSE1",
-  "name": "SixIsland_WaterPath_House1",
+  "id": "MAP_FORTUNE_ISLAND_WATER_PATH_HOUSE1",
+  "name": "FortuneIsland_WaterPath_House1",
   "layout": "LAYOUT_HOUSE4",
   "music": "MUS_RG_FUCHSIA",
   "region_map_section": "MAPSEC_WATER_PATH",
@@ -26,7 +26,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_WaterPath_House1_EventScript_Beauty",
+      "script": "FortuneIsland_WaterPath_House1_EventScript_Beauty",
       "flag": "0"
     }
   ],
@@ -35,7 +35,7 @@
       "x": 3,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND_WATER_PATH",
+      "dest_map": "MAP_FORTUNE_ISLAND_WATER_PATH",
       "dest_warp_id": "0"
     }
   ],
@@ -47,7 +47,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SixIsland_WaterPath_House1_EventScript_SizeRecord"
+      "script": "FortuneIsland_WaterPath_House1_EventScript_SizeRecord"
     }
   ]
 }

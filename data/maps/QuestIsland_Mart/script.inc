@@ -1,18 +1,18 @@
-SevenIsland_Mart_MapScripts::
+QuestIsland_Mart_MapScripts::
 	.byte 0
 
-SevenIsland_Mart_EventScript_Clerk::
+QuestIsland_Mart_EventScript_Clerk::
 	lock
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart SevenIsland_Mart_Items
+	pokemart QuestIsland_Mart_Items
 	msgbox Text_PleaseComeAgain
 	release
 	end
 
 	.align 2
-SevenIsland_Mart_Items::
+QuestIsland_Mart_Items::
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_FULL_RESTORE
@@ -26,28 +26,28 @@ SevenIsland_Mart_Items::
 	release
 	end
 
-SevenIsland_Mart_EventScript_Lass::
-	msgbox SevenIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn, MSGBOX_NPC
+QuestIsland_Mart_EventScript_Lass::
+	msgbox QuestIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn, MSGBOX_NPC
 	end
 
-SevenIsland_Mart_EventScript_Hiker::
-	msgbox SevenIsland_Mart_Text_PreparationsCompleteForRuins, MSGBOX_NPC
+QuestIsland_Mart_EventScript_Hiker::
+	msgbox QuestIsland_Mart_Text_PreparationsCompleteForRuins, MSGBOX_NPC
 	end
 
-SevenIsland_Mart_EventScript_Fisher::
-	msgbox SevenIsland_Mart_Text_NeedToFishOnSevenIsland, MSGBOX_NPC
+QuestIsland_Mart_EventScript_Fisher::
+	msgbox QuestIsland_Mart_Text_NeedToFishOnQuestIsland, MSGBOX_NPC
 	end
-SevenIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn::
+QuestIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn::
     .string "POKéMON have personalities of their\n"
     .string "own, just like people.\p"
     .string "My PIKACHU has a HASTY nature,\n"
     .string "so it grew to be a speedy POKéMON.$"
 
-SevenIsland_Mart_Text_PreparationsCompleteForRuins::
+QuestIsland_Mart_Text_PreparationsCompleteForRuins::
     .string "Okay, preparations are complete\n"
     .string "for me to explore the RUINS.$"
 
-SevenIsland_Mart_Text_NeedToFishOnSevenIsland::
+QuestIsland_Mart_Text_NeedToFishOnQuestIsland::
     .string "I need to fish on SEVEN ISLAND.\p"
     .string "That will complete my fishing tour\n"
     .string "of the SEVII ISLANDS.\p"

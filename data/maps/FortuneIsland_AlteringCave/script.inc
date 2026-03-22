@@ -1,7 +1,7 @@
-SixIsland_AlteringCave_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SixIsland_AlteringCave_OnTransition
+FortuneIsland_AlteringCave_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FortuneIsland_AlteringCave_OnTransition
 	.byte 0
 
-SixIsland_AlteringCave_OnTransition::
-	@setworldmapflag FLAG_WORLD_MAP_SIX_ISLAND_ALTERING_CAVE
+FortuneIsland_AlteringCave_OnTransition::
+	@setworldmapflag FLAG_WORLD_MAP_FORTUNE_ISLAND_ALTERING_CAVE
 	end

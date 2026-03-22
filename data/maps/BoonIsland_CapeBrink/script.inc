@@ -1,2 +1,2 @@
-TwoIsland_CapeBrink_MapScripts::
+BoonIsland_CapeBrink_MapScripts::
 	.byte 0
