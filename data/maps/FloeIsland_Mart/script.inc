@@ -1,18 +1,18 @@
-FourIsland_Mart_MapScripts::
+FloeIsland_Mart_MapScripts::
 	.byte 0
 
-FourIsland_Mart_EventScript_Clerk::
+FloeIsland_Mart_EventScript_Clerk::
 	lock
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart FourIsland_Mart_Items
+	pokemart FloeIsland_Mart_Items
 	msgbox Text_PleaseComeAgain
 	release
 	end
 
 	.align 2
-FourIsland_Mart_Items::
+FloeIsland_Mart_Items::
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_MAX_POTION
@@ -25,10 +25,10 @@ FourIsland_Mart_Items::
 	release
 	end
 
-FourIsland_Mart_EventScript_Camper::
-	msgbox FourIsland_Mart_Text_IcefallCaveIsFrigid, MSGBOX_NPC
+FloeIsland_Mart_EventScript_Camper::
+	msgbox FloeIsland_Mart_Text_IcefallCaveIsFrigid, MSGBOX_NPC
 	end
-FourIsland_Mart_Text_LoreleiGrewUpOnThisIsland::
+FloeIsland_Mart_Text_LoreleiGrewUpOnThisIsland::
     .string "We've had a great and powerful\n"
     .string "TRAINER grow up on this island.\p"
     .string "I bet even you'd know her.\n"
@@ -36,7 +36,7 @@ FourIsland_Mart_Text_LoreleiGrewUpOnThisIsland::
     .string "When LORELEI was just a tyke,\n"
     .string "I taught her about POKéMON.$"
 
-FourIsland_Mart_Text_IcefallCaveIsFrigid::
+FloeIsland_Mart_Text_IcefallCaveIsFrigid::
     .string "The SEVII ISLANDS are in a warm\n"
     .string "region overall.\p"
     .string "But there is one exception you\n"

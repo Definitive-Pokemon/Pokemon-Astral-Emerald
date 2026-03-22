@@ -1,18 +1,18 @@
-ThreeIsland_House2_MapScripts::
+KinIsland_House2_MapScripts::
 	.byte 0
 
-ThreeIsland_House2_EventScript_Man::
+KinIsland_House2_EventScript_Man::
 	lock
 	faceplayer
 	famechecker FAMECHECKER_SABRINA, 1
-	msgbox ThreeIsland_House2_Text_IAdmireSabrina
+	msgbox KinIsland_House2_Text_IAdmireSabrina
 	release
 	end
 
-ThreeIsland_House2_EventScript_Rocker::
-	msgbox ThreeIsland_House2_Text_CantMakeThisSpoonBend, MSGBOX_NPC
+KinIsland_House2_EventScript_Rocker::
+	msgbox KinIsland_House2_Text_CantMakeThisSpoonBend, MSGBOX_NPC
 	end
-ThreeIsland_House2_Text_CantMakeThisSpoonBend::
+KinIsland_House2_Text_CantMakeThisSpoonBend::
     .string "Urrrrrrrrgggghhhh…\n"
     .string "Kwaaaaah!\p"
     .string "…It's useless! I can't make this\n"
@@ -20,7 +20,7 @@ ThreeIsland_House2_Text_CantMakeThisSpoonBend::
     .string "Maybe I really don't have any\n"
     .string "psychic powers.$"
 
-ThreeIsland_House2_Text_IAdmireSabrina::
+KinIsland_House2_Text_IAdmireSabrina::
     .string "You know about a girl GYM LEADER\n"
     .string "in SAFFRON CITY?\p"
     .string "She uses PSYCHIC-type POKéMON,\n"

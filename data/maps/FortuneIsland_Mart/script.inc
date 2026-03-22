@@ -1,18 +1,18 @@
-SixIsland_Mart_MapScripts::
+FortuneIsland_Mart_MapScripts::
 	.byte 0
 
-SixIsland_Mart_EventScript_Clerk::
+FortuneIsland_Mart_EventScript_Clerk::
 	lock
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart SixIsland_Mart_Items
+	pokemart FortuneIsland_Mart_Items
 	msgbox Text_PleaseComeAgain
 	release
 	end
 
 	.align 2
-SixIsland_Mart_Items::
+FortuneIsland_Mart_Items::
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_MAX_POTION
@@ -25,10 +25,10 @@ SixIsland_Mart_Items::
 	release
 	end
 
-SixIsland_Mart_EventScript_Picnicker::
-	msgbox SixIsland_Mart_Text_ShouldBuyMailAndWriteLetter, MSGBOX_NPC
+FortuneIsland_Mart_EventScript_Picnicker::
+	msgbox FortuneIsland_Mart_Text_ShouldBuyMailAndWriteLetter, MSGBOX_NPC
 	end
-SixIsland_Mart_Text_AgathaOldestEverEliteFourMember::
+FortuneIsland_Mart_Text_AgathaOldestEverEliteFourMember::
     .string "Play with POKéMON lots and live\n"
     .string "a long life!\p"
     .string "Take AGATHA, for example.\p"
@@ -36,7 +36,7 @@ SixIsland_Mart_Text_AgathaOldestEverEliteFourMember::
     .string "oldest-ever ELITE FOUR member.\p"
     .string "She spurs me to do bigger things.$"
 
-SixIsland_Mart_Text_ShouldBuyMailAndWriteLetter::
+FortuneIsland_Mart_Text_ShouldBuyMailAndWriteLetter::
     .string "I should buy some MAIL and write\n"
     .string "him a letter…$"
 

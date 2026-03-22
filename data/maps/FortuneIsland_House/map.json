@@ -1,9 +1,9 @@
 {
-  "id": "MAP_SIX_ISLAND_HOUSE",
-  "name": "SixIsland_House",
+  "id": "MAP_FORTUNE_ISLAND_HOUSE",
+  "name": "FortuneIsland_House",
   "layout": "LAYOUT_HOUSE3",
   "music": "MUS_RG_SEVII_67",
-  "region_map_section": "MAPSEC_SIX_ISLAND",
+  "region_map_section": "MAPSEC_FORTUNE_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -26,7 +26,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_House_EventScript_OldMan",
+      "script": "FortuneIsland_House_EventScript_OldMan",
       "flag": "0"
     }
   ],
@@ -35,7 +35,7 @@
       "x": 4,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND",
+      "dest_map": "MAP_FORTUNE_ISLAND",
       "dest_warp_id": "2"
     }
   ],

@@ -1,31 +1,31 @@
-FourIsland_PokemonCenter_1F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, FourIsland_PokemonCenter_1F_OnTransition
+FloeIsland_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FloeIsland_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
-FourIsland_PokemonCenter_1F_OnTransition::
-	setrespawn HEAL_LOCATION_FOUR_ISLAND
+FloeIsland_PokemonCenter_1F_OnTransition::
+	setrespawn HEAL_LOCATION_FLOE_ISLAND
 	end
 
-FourIsland_PokemonCenter_1F_EventScript_Nurse::
+FloeIsland_PokemonCenter_1F_EventScript_Nurse::
 	lock
 	faceplayer
 	call EventScript_PkmnCenterNurse
 	release
 	end
 
-FourIsland_PokemonCenter_1F_EventScript_Man::
-	msgbox FourIsland_PokemonCenter_1F_Text_RareIceMonsInCave, MSGBOX_NPC
+FloeIsland_PokemonCenter_1F_EventScript_Man::
+	msgbox FloeIsland_PokemonCenter_1F_Text_RareIceMonsInCave, MSGBOX_NPC
 	end
 
-FourIsland_PokemonCenter_1F_EventScript_Woman::
-	msgbox FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore, MSGBOX_NPC
+FloeIsland_PokemonCenter_1F_EventScript_Woman::
+	msgbox FloeIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore, MSGBOX_NPC
 	end
 
-FourIsland_PokemonCenter_1F_EventScript_Gentleman::
-	msgbox FourIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived, MSGBOX_NPC
+FloeIsland_PokemonCenter_1F_EventScript_Gentleman::
+	msgbox FloeIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived, MSGBOX_NPC
 	end
-@ The 5 texts below are supposed to be in FourIsland_House1
+@ The 5 texts below are supposed to be in FloeIsland_House1
 Text_BodySlamTeach::
     .string "Ready?\n"
     .string "Boing!\p"
@@ -47,17 +47,17 @@ Text_BodySlamWhichMon::
 Text_BodySlamTaught::
     .string "Boioing!$"
 
-FourIsland_House1_Text_FatMan::
-    .string "それ　ぼよ�Eん！\n"
-    .string "おまえ　おもぁE��あ�E�E�E"
+FloeIsland_House1_Text_FatMan::
+    .string "それ　ぼよ�Eん！\n"
+    .string "おまえ　おもぁE��あ�E�E�E"
 
-FourIsland_PokemonCenter_1F_Text_RareIceMonsInCave::
+FloeIsland_PokemonCenter_1F_Text_RareIceMonsInCave::
     .string "There's a rare kind of ICE POKéMON\n"
     .string "that lives in the cave.\p"
     .string "We get a lot of visitors hoping to\n"
     .string "see that POKéMON.$"
 
-FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
+FloeIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
     .string "Oh? A POKéMON EGG?\n"
     .string "…I have no idea.\p"
     .string "…Oh, wait. The DAY-CARE people\n"
@@ -65,7 +65,7 @@ FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
     .string "They said that they'd found EGGS\n"
     .string "before on their property.$"
 
-FourIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived::
+FloeIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived::
     .string "What's this?\p"
     .string "The new POKéMON JOURNAL hasn't\n"
     .string "arrived on this island?$"

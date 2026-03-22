@@ -1,9 +1,9 @@
 {
-  "id": "MAP_TWO_ISLAND_JOYFUL_GAME_CORNER",
-  "name": "TwoIsland_JoyfulGameCorner",
-  "layout": "LAYOUT_TWO_ISLAND_JOYFUL_GAME_CORNER",
+  "id": "MAP_BOON_ISLAND_JOYFUL_GAME_CORNER",
+  "name": "BoonIsland_JoyfulGameCorner",
+  "layout": "LAYOUT_BOON_ISLAND_JOYFUL_GAME_CORNER",
   "music": "MUS_RG_GAME_CORNER",
-  "region_map_section": "MAPSEC_TWO_ISLAND",
+  "region_map_section": "MAPSEC_BOON_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -26,7 +26,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_JoyfulGameCorner_EventScript_LostellesDaddy",
+      "script": "BoonIsland_JoyfulGameCorner_EventScript_LostellesDaddy",
       "flag": "0"
     },
     {
@@ -41,7 +41,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_TWO_ISLAND_GAME_CORNER_BIKER"
+      "flag": "FLAG_HIDE_BOON_ISLAND_GAME_CORNER_BIKER"
     },
     {
       "type": "object",
@@ -54,8 +54,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_JoyfulGameCorner_EventScript_Lostelle",
-      "flag": "FLAG_HIDE_TWO_ISLAND_GAME_CORNER_LOSTELLE"
+      "script": "BoonIsland_JoyfulGameCorner_EventScript_Lostelle",
+      "flag": "FLAG_HIDE_BOON_ISLAND_GAME_CORNER_LOSTELLE"
     },
     {
       "type": "object",
@@ -68,7 +68,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_JoyfulGameCorner_EventScript_InfoMan",
+      "script": "BoonIsland_JoyfulGameCorner_EventScript_InfoMan",
       "flag": "0"
     }
   ],
@@ -77,7 +77,7 @@
       "x": 5,
       "y": 8,
       "elevation": 3,
-      "dest_map": "MAP_TWO_ISLAND",
+      "dest_map": "MAP_BOON_ISLAND",
       "dest_warp_id": "0"
     }
   ],
@@ -89,7 +89,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "TwoIsland_JoyfulGameCorner_EventScript_ShowPokemonJumpRecords"
+      "script": "BoonIsland_JoyfulGameCorner_EventScript_ShowPokemonJumpRecords"
     },
     {
       "type": "sign",
@@ -97,7 +97,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "TwoIsland_JoyfulGameCorner_EventScript_ShowDodrioBerryPickingRecords"
+      "script": "BoonIsland_JoyfulGameCorner_EventScript_ShowDodrioBerryPickingRecords"
     }
   ]
 }

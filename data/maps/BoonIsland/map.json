@@ -1,9 +1,9 @@
 {
-  "id": "MAP_TWO_ISLAND",
-  "name": "TwoIsland",
-  "layout": "LAYOUT_TWO_ISLAND",
+  "id": "MAP_BOON_ISLAND",
+  "name": "BoonIsland",
+  "layout": "LAYOUT_BOON_ISLAND",
   "music": "MUS_RG_SEVII_123",
-  "region_map_section": "MAPSEC_TWO_ISLAND",
+  "region_map_section": "MAPSEC_BOON_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
@@ -15,7 +15,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_TWO_ISLAND_CAPE_BRINK",
+      "map": "MAP_BOON_ISLAND_CAPE_BRINK",
       "offset": 24,
       "direction": "up"
     }
@@ -32,7 +32,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_EventScript_Clerk",
+      "script": "BoonIsland_EventScript_Clerk",
       "flag": "0"
     },
     {
@@ -46,8 +46,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_EventScript_Woman",
-      "flag": "FLAG_HIDE_TWO_ISLAND_WOMAN"
+      "script": "BoonIsland_EventScript_Woman",
+      "flag": "FLAG_HIDE_BOON_ISLAND_WOMAN"
     },
     {
       "type": "object",
@@ -60,8 +60,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_EventScript_Beauty",
-      "flag": "FLAG_HIDE_TWO_ISLAND_BEAUTY"
+      "script": "BoonIsland_EventScript_Beauty",
+      "flag": "FLAG_HIDE_BOON_ISLAND_BEAUTY"
     },
     {
       "type": "object",
@@ -74,7 +74,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_EventScript_Sailor",
+      "script": "BoonIsland_EventScript_Sailor",
       "flag": "0"
     },
     {
@@ -88,8 +88,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_EventScript_SuperNerd",
-      "flag": "FLAG_HIDE_TWO_ISLAND_SUPER_NERD"
+      "script": "BoonIsland_EventScript_SuperNerd",
+      "flag": "FLAG_HIDE_BOON_ISLAND_SUPER_NERD"
     },
     {
       "type": "object",
@@ -116,8 +116,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_EventScript_ItemRevive",
-      "flag": "FLAG_HIDE_TWO_ISLAND_REVIVE"
+      "script": "BoonIsland_EventScript_ItemRevive",
+      "flag": "FLAG_HIDE_BOON_ISLAND_REVIVE"
     },
     {
       "type": "object",
@@ -130,7 +130,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_EventScript_LittleBoy",
+      "script": "BoonIsland_EventScript_LittleBoy",
       "flag": "0"
     },
     {
@@ -144,7 +144,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwoIsland_EventScript_Boy",
+      "script": "BoonIsland_EventScript_Boy",
       "flag": "0"
     }
   ],
@@ -153,28 +153,28 @@
       "x": 39,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_TWO_ISLAND_JOYFUL_GAME_CORNER",
+      "dest_map": "MAP_BOON_ISLAND_JOYFUL_GAME_CORNER",
       "dest_warp_id": "0"
     },
     {
       "x": 33,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_TWO_ISLAND_HOUSE",
+      "dest_map": "MAP_BOON_ISLAND_HOUSE",
       "dest_warp_id": "0"
     },
     {
       "x": 21,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_TWO_ISLAND_POKEMON_CENTER_1F",
+      "dest_map": "MAP_BOON_ISLAND_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 10,
       "y": 8,
       "elevation": 3,
-      "dest_map": "MAP_TWO_ISLAND_HARBOR",
+      "dest_map": "MAP_BOON_ISLAND_HARBOR",
       "dest_warp_id": "0"
     }
   ],
@@ -186,7 +186,7 @@
       "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "TwoIsland_EventScript_IslandSign"
+      "script": "BoonIsland_EventScript_IslandSign"
     },
     {
       "type": "sign",
@@ -194,7 +194,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "TwoIsland_EventScript_JoyfulGameCornerSign"
+      "script": "BoonIsland_EventScript_JoyfulGameCornerSign"
     },
     {
       "type": "sign",
@@ -202,7 +202,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "TwoIsland_EventScript_FastCurrentSign"
+      "script": "BoonIsland_EventScript_FastCurrentSign"
     }
   ]
 }

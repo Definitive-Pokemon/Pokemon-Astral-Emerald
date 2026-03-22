@@ -1,106 +1,106 @@
-.set LOCALID_FOUR_ISLAND_DAYCARE_MAN, 1
-.set LOCALID_FOUR_ISLAND_RIVAL, 10
+.set LOCALID_FLOE_ISLAND_DAYCARE_MAN, 1
+.set LOCALID_FLOE_ISLAND_RIVAL, 10
 
-FourIsland_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, FourIsland_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, FourIsland_OnFrame
+FloeIsland_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FloeIsland_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, FloeIsland_OnFrame
 	.byte 0
 
-FourIsland_OnTransition::
-	setflag FLAG_VISITED_FOUR_ISLAND
-	call_if_eq VAR_MAP_SCENE_FOUR_ISLAND, 0, FourIsland_EventScript_ShowRival
-	call FourIsland_EventScript_TrySetDayCareManPos
+FloeIsland_OnTransition::
+	setflag FLAG_VISITED_FLOE_ISLAND
+	call_if_eq VAR_MAP_SCENE_FLOE_ISLAND, 0, FloeIsland_EventScript_ShowRival
+	call FloeIsland_EventScript_TrySetDayCareManPos
 	end
 
-FourIsland_EventScript_ShowRival::
-	clearflag FLAG_HIDE_FOUR_ISLAND_RIVAL
+FloeIsland_EventScript_ShowRival::
+	clearflag FLAG_HIDE_FLOE_ISLAND_RIVAL
 	return
 
-FourIsland_EventScript_TrySetDayCareManPos::
-	goto_if_unset FLAG_PENDING_DAYCARE_EGG, FourIsland_EventScript_EndSetDayCareManPos
-	setobjectxyperm LOCALID_FOUR_ISLAND_DAYCARE_MAN, 16, 14
-FourIsland_EventScript_EndSetDayCareManPos::
+FloeIsland_EventScript_TrySetDayCareManPos::
+	goto_if_unset FLAG_PENDING_DAYCARE_EGG, FloeIsland_EventScript_EndSetDayCareManPos
+	setobjectxyperm LOCALID_FLOE_ISLAND_DAYCARE_MAN, 16, 14
+FloeIsland_EventScript_EndSetDayCareManPos::
 	return
 
-FourIsland_OnFrame::
-	map_script_2 VAR_MAP_SCENE_FOUR_ISLAND, 0, FourIsland_EventScript_RivalScene
+FloeIsland_OnFrame::
+	map_script_2 VAR_MAP_SCENE_FLOE_ISLAND, 0, FloeIsland_EventScript_RivalScene
 	.2byte 0
 
-FourIsland_EventScript_RivalScene::
+FloeIsland_EventScript_RivalScene::
 	lockall
 	textcolor NPC_TEXT_COLOR_MALE
-	applymovement LOCALID_FOUR_ISLAND_RIVAL, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_FLOE_ISLAND_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
-	applymovement LOCALID_FOUR_ISLAND_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_FLOE_ISLAND_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_FOUR_ISLAND_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_FLOE_ISLAND_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	delay 25
-	applymovement LOCALID_FOUR_ISLAND_RIVAL, FourIsland_Movement_RivalApproach
+	applymovement LOCALID_FLOE_ISLAND_RIVAL, FloeIsland_Movement_RivalApproach
 	waitmovement 0
-	msgbox FourIsland_Text_RivalAlreadyGotEggBeSmellingYa
+	msgbox FloeIsland_Text_RivalAlreadyGotEggBeSmellingYa
 	closemessage
-	applymovement LOCALID_PLAYER, FourIsland_Movement_PlayerWatchRivalExit
-	applymovement LOCALID_FOUR_ISLAND_RIVAL, FourIsland_Movement_RivalExit
+	applymovement LOCALID_PLAYER, FloeIsland_Movement_PlayerWatchRivalExit
+	applymovement LOCALID_FLOE_ISLAND_RIVAL, FloeIsland_Movement_RivalExit
 	waitmovement 0
 	fadedefaultbgm
 	playse SE_EXIT
 	delay 35
-	removeobject LOCALID_FOUR_ISLAND_RIVAL
-	setvar VAR_MAP_SCENE_FOUR_ISLAND, 1
+	removeobject LOCALID_FLOE_ISLAND_RIVAL
+	setvar VAR_MAP_SCENE_FLOE_ISLAND, 1
 	releaseall
 	end
 
-FourIsland_Movement_RivalApproach::
+FloeIsland_Movement_RivalApproach::
 	walk_right
 	walk_right
 	walk_down
 	walk_down
 	step_end
 
-FourIsland_Movement_RivalExit::
+FloeIsland_Movement_RivalExit::
 	delay_16
 	delay_4
 	walk_down
 	step_end
 
-FourIsland_Movement_PlayerWatchRivalExit::
+FloeIsland_Movement_PlayerWatchRivalExit::
 	walk_left
 	walk_in_place_faster_right
 	step_end
 
-FourIsland_EventScript_DaycareMan::
+FloeIsland_EventScript_DaycareMan::
 	lock
 	faceplayer
 	special GetDaycareMonNicknames
 	specialvar VAR_RESULT, GetDaycareState
-	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, FourIsland_EventScript_DaycareEggWaiting
-	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, FourIsland_EventScript_CheckOnOneMon
-	goto_if_eq VAR_RESULT, DAYCARE_TWO_MONS, FourIsland_EventScript_CheckOnTwoMons
+	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, FloeIsland_EventScript_DaycareEggWaiting
+	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, FloeIsland_EventScript_CheckOnOneMon
+	goto_if_eq VAR_RESULT, DAYCARE_TWO_MONS, FloeIsland_EventScript_CheckOnTwoMons
 	msgbox DayCare_Text_ImDaycareManSpeakToMyWife
 	release
 	end
 
-FourIsland_EventScript_DaycareEggWaiting::
+FloeIsland_EventScript_DaycareEggWaiting::
 	msgbox DayCare_Text_DoYouWantEgg, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, FourIsland_EventScript_DaycareAcceptEgg
+	goto_if_eq VAR_RESULT, YES, FloeIsland_EventScript_DaycareAcceptEgg
 	msgbox DayCare_Text_IWillKeepDoYouWantIt, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, FourIsland_EventScript_DaycareAcceptEgg
+	goto_if_eq VAR_RESULT, YES, FloeIsland_EventScript_DaycareAcceptEgg
 	msgbox DayCare_Text_IllKeepIt
 	clearflag FLAG_PENDING_DAYCARE_EGG
 	special RejectEggFromDayCare
 	release
 	end
 
-FourIsland_EventScript_DaycareAcceptEgg::
+FloeIsland_EventScript_DaycareAcceptEgg::
 	specialvar VAR_RESULT, CalculatePlayerPartyCount
-	goto_if_ne VAR_RESULT, PARTY_SIZE, FourIsland_EventScript_DaycareReceivedEgg
+	goto_if_ne VAR_RESULT, PARTY_SIZE, FloeIsland_EventScript_DaycareReceivedEgg
 	msgbox DayCare_Text_YouHaveNoRoomForIt
 	release
 	end
 
-FourIsland_EventScript_DaycareReceivedEgg::
+FloeIsland_EventScript_DaycareReceivedEgg::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	message DayCare_Text_ReceivedEgg
 	call EventScript_RestorePrevTextColor
@@ -113,13 +113,13 @@ FourIsland_EventScript_DaycareReceivedEgg::
 	release
 	end
 
-FourIsland_EventScript_CheckOnOneMon::
+FloeIsland_EventScript_CheckOnOneMon::
 	special GetDaycareMonNicknames
 	msgbox DayCare_Text_YourMonIsDoingFine
 	release
 	end
 
-FourIsland_EventScript_CheckOnTwoMons::
+FloeIsland_EventScript_CheckOnTwoMons::
 	special GetDaycareMonNicknames
 	msgbox DayCare_Text_YourMonsAreDoingFine
 	special SetDaycareCompatibilityString
@@ -129,49 +129,49 @@ FourIsland_EventScript_CheckOnTwoMons::
 	release
 	end
 
-FourIsland_EventScript_OldWoman::
+FloeIsland_EventScript_OldWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, FourIsland_EventScript_OldWomanLoreleiLeft
-	msgbox FourIsland_Text_LoreleiHasReturned
+	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, FloeIsland_EventScript_OldWomanLoreleiLeft
+	msgbox FloeIsland_Text_LoreleiHasReturned
 	release
 	end
 
-FourIsland_EventScript_OldWomanLoreleiLeft::
+FloeIsland_EventScript_OldWomanLoreleiLeft::
 	famechecker FAMECHECKER_LORELEI, 5
-	msgbox FourIsland_Text_LoreleiMetLaprasAsChild
+	msgbox FloeIsland_Text_LoreleiMetLaprasAsChild
 	release
 	end
 
-FourIsland_EventScript_LittleGirl::
+FloeIsland_EventScript_LittleGirl::
 	lock
 	faceplayer
 	famechecker FAMECHECKER_LORELEI, 4
-	msgbox FourIsland_Text_LoreleiHasLotsOfStuffedDolls
+	msgbox FloeIsland_Text_LoreleiHasLotsOfStuffedDolls
 	release
 	end
 
-FourIsland_EventScript_FatMan::
-	msgbox FourIsland_Text_MadeSlushieUsingIcefallCaveIce, MSGBOX_NPC
+FloeIsland_EventScript_FatMan::
+	msgbox FloeIsland_Text_MadeSlushieUsingIcefallCaveIce, MSGBOX_NPC
 	end
 
-FourIsland_EventScript_IslandSign::
-	msgbox FourIsland_Text_IslandSign, MSGBOX_SIGN
+FloeIsland_EventScript_IslandSign::
+	msgbox FloeIsland_Text_IslandSign, MSGBOX_SIGN
 	end
 
-FourIsland_EventScript_LoreleisHouseSign::
-	msgbox FourIsland_Text_LoreleisHouse, MSGBOX_SIGN
+FloeIsland_EventScript_LoreleisHouseSign::
+	msgbox FloeIsland_Text_LoreleisHouse, MSGBOX_SIGN
 	end
-FourIsland_Text_IslandSign::
+FloeIsland_Text_IslandSign::
     .string "FOUR ISLAND\n"
     .string "The Warm, Blue, Floe Island$"
 
-FourIsland_Text_LoreleiHasReturned::
+FloeIsland_Text_LoreleiHasReturned::
     .string "LORELEI has returned.\p"
     .string "Did she find the city life too\n"
     .string "stressful, I wonder?$"
 
-FourIsland_Text_LoreleiMetLaprasAsChild::
+FloeIsland_Text_LoreleiMetLaprasAsChild::
     .string "LORELEI has gone back.\p"
     .string "The LAPRAS she has, I imagine it\n"
     .string "to be the one she met as a child.\p"
@@ -180,7 +180,7 @@ FourIsland_Text_LoreleiMetLaprasAsChild::
     .string "Perhaps that POKéMON has been with\n"
     .string "her ever since.$"
 
-FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
+FloeIsland_Text_RivalAlreadyGotEggBeSmellingYa::
     .string "{RIVAL}: Hey!\n"
     .string "{PLAYER}!\p"
     .string "What are you doing here in the\n"
@@ -201,7 +201,7 @@ FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
     .string "waste.\p"
     .string "Be smelling ya!$"
 
-FourIsland_Text_LoreleiHasLotsOfStuffedDolls::
+FloeIsland_Text_LoreleiHasLotsOfStuffedDolls::
     .string "Oh, you found me!\n"
     .string "Please don't tell LORELEI.\p"
     .string "Did you know that LORELEI has lots\n"
@@ -209,12 +209,12 @@ FourIsland_Text_LoreleiHasLotsOfStuffedDolls::
     .string "Every time she comes back to\n"
     .string "FOUR ISLAND, her collection grows!$"
 
-FourIsland_Text_MadeSlushieUsingIcefallCaveIce::
+FloeIsland_Text_MadeSlushieUsingIcefallCaveIce::
     .string "Ooh, chilly!\p"
     .string "I made a slushie using ice I\n"
     .string "shaved inside ICEFALL CAVE.\p"
     .string "It's chilly and tasty!$"
 
-FourIsland_Text_LoreleisHouse::
+FloeIsland_Text_LoreleisHouse::
     .string "LORELEI'S HOUSE$"
 

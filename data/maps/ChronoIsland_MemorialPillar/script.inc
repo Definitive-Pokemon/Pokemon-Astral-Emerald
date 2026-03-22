@@ -1,56 +1,56 @@
 .set LOCALID_MEMORIAL_MAN, 1
 
-FiveIsland_MemorialPillar_MapScripts::
+ChronoIsland_MemorialPillar_MapScripts::
 	.byte 0
 
-FiveIsland_MemorialPillar_EventScript_MemorialMan::
+ChronoIsland_MemorialPillar_EventScript_MemorialMan::
 	lock
-	goto_if_set FLAG_GOT_TM42_AT_MEMORIAL_PILLAR, FiveIsland_MemorialPillar_EventScript_AlreadyGotTM42
-	goto_if_set FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR, FiveIsland_MemorialPillar_EventScript_ReturnedForTM42
-	msgbox FiveIsland_MemorialPillar_Text_ScrubScrub
+	goto_if_set FLAG_GOT_TM42_AT_MEMORIAL_PILLAR, ChronoIsland_MemorialPillar_EventScript_AlreadyGotTM42
+	goto_if_set FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR, ChronoIsland_MemorialPillar_EventScript_ReturnedForTM42
+	msgbox ChronoIsland_MemorialPillar_Text_ScrubScrub
 	closemessage
 	applymovement LOCALID_MEMORIAL_MAN, Common_Movement_FacePlayer
 	waitmovement 0
 	delay 45
-	msgbox FiveIsland_MemorialPillar_Text_YourMonsLookHealthy
+	msgbox ChronoIsland_MemorialPillar_Text_YourMonsLookHealthy
 	applymovement LOCALID_MEMORIAL_MAN, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox FiveIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix
+	msgbox ChronoIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix
 	release
 	end
 
-FiveIsland_MemorialPillar_EventScript_AlreadyGotTM42::
-	msgbox FiveIsland_MemorialPillar_Text_ScrubScrubTectonix
+ChronoIsland_MemorialPillar_EventScript_AlreadyGotTM42::
+	msgbox ChronoIsland_MemorialPillar_Text_ScrubScrubTectonix
 	release
 	end
 
-FiveIsland_MemorialPillar_EventScript_ReturnedForTM42::
-	msgbox FiveIsland_MemorialPillar_Text_StillHaveThingAsMyThanks
+ChronoIsland_MemorialPillar_EventScript_ReturnedForTM42::
+	msgbox ChronoIsland_MemorialPillar_Text_StillHaveThingAsMyThanks
 	giveitem ITEM_TM42
-	goto_if_eq VAR_RESULT, FALSE, FiveIsland_MemorialPillar_EventScript_NoRoomForTM42
-	call FiveIsland_MemorialPillar_EventScript_ReceivedTM42
+	goto_if_eq VAR_RESULT, FALSE, ChronoIsland_MemorialPillar_EventScript_NoRoomForTM42
+	call ChronoIsland_MemorialPillar_EventScript_ReceivedTM42
 	release
 	end
 
-FiveIsland_MemorialPillar_EventScript_Memorial::
+ChronoIsland_MemorialPillar_EventScript_Memorial::
 	lockall
-	goto_if_set FLAG_GOT_TM42_AT_MEMORIAL_PILLAR, FiveIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced
-	goto_if_set FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR, FiveIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced
-	msgbox FiveIsland_MemorialPillar_Text_HereLiesTectonixLemonadeOffering
+	goto_if_set FLAG_GOT_TM42_AT_MEMORIAL_PILLAR, ChronoIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced
+	goto_if_set FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR, ChronoIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced
+	msgbox ChronoIsland_MemorialPillar_Text_HereLiesTectonixLemonadeOffering
 	checkitem ITEM_LEMONADE
-	goto_if_eq VAR_RESULT, TRUE, FiveIsland_MemorialPillar_EventScript_AskPlaceLemonade
+	goto_if_eq VAR_RESULT, TRUE, ChronoIsland_MemorialPillar_EventScript_AskPlaceLemonade
 	releaseall
 	end
 
-FiveIsland_MemorialPillar_EventScript_AskPlaceLemonade::
-	msgbox FiveIsland_MemorialPillar_Text_LeaveAnotherLemonadeOffering, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, FiveIsland_MemorialPillar_EventScript_PlaceLemonade
+ChronoIsland_MemorialPillar_EventScript_AskPlaceLemonade::
+	msgbox ChronoIsland_MemorialPillar_Text_LeaveAnotherLemonadeOffering, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, ChronoIsland_MemorialPillar_EventScript_PlaceLemonade
 	releaseall
 	end
 
-FiveIsland_MemorialPillar_EventScript_PlaceLemonade::
+ChronoIsland_MemorialPillar_EventScript_PlaceLemonade::
 	removeitem ITEM_LEMONADE
-	msgbox FiveIsland_MemorialPillar_Text_PlacedCanOfLemonade
+	msgbox ChronoIsland_MemorialPillar_Text_PlacedCanOfLemonade
 	closemessage
 	applymovement LOCALID_MEMORIAL_MAN, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -58,96 +58,96 @@ FiveIsland_MemorialPillar_EventScript_PlaceLemonade::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	textcolor NPC_TEXT_COLOR_MALE
-	msgbox FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis
+	msgbox ChronoIsland_MemorialPillar_Text_ThankYouPleaseTakeThis
 	giveitem ITEM_TM42
-	goto_if_eq VAR_RESULT, FALSE, FiveIsland_MemorialPillar_EventScript_NoRoomForTM42
-	call FiveIsland_MemorialPillar_EventScript_ReceivedTM42
+	goto_if_eq VAR_RESULT, FALSE, ChronoIsland_MemorialPillar_EventScript_NoRoomForTM42
+	call ChronoIsland_MemorialPillar_EventScript_ReceivedTM42
 	releaseall
 	end
 
-FiveIsland_MemorialPillar_EventScript_ReceivedTM42::
-	msgbox FiveIsland_MemorialPillar_Text_BeGoodToYourMonsToo
+ChronoIsland_MemorialPillar_EventScript_ReceivedTM42::
+	msgbox ChronoIsland_MemorialPillar_Text_BeGoodToYourMonsToo
 	applymovement LOCALID_MEMORIAL_MAN, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	setflag FLAG_GOT_TM42_AT_MEMORIAL_PILLAR
 	return
 
-FiveIsland_MemorialPillar_EventScript_NoRoomForTM42::
+ChronoIsland_MemorialPillar_EventScript_NoRoomForTM42::
 	setflag FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR
-	msgbox FiveIsland_MemorialPillar_Text_DontHaveRoomForIt
+	msgbox ChronoIsland_MemorialPillar_Text_DontHaveRoomForIt
 	releaseall
 	end
 
-FiveIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced::
-	msgbox FiveIsland_MemorialPillar_Text_HereLiesTectonix
+ChronoIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced::
+	msgbox ChronoIsland_MemorialPillar_Text_HereLiesTectonix
 	releaseall
 	end
-FiveIsland_MemorialPillar_Text_MiloIntro::
+ChronoIsland_MemorialPillar_Text_MiloIntro::
     .string "I'm the eldest of the BIRD\n"
     .string "BROTHERS.\p"
     .string "The best thing about birds…\n"
     .string "It has to be the beak.$"
 
-FiveIsland_MemorialPillar_Text_MiloDefeat::
+ChronoIsland_MemorialPillar_Text_MiloDefeat::
     .string "Oh, so sharp!$"
 
-FiveIsland_MemorialPillar_Text_MiloPostBattle::
+ChronoIsland_MemorialPillar_Text_MiloPostBattle::
     .string "You can fly to FOUR ISLAND from\n"
     .string "here.$"
 
-FiveIsland_MemorialPillar_Text_ChazIntro::
+ChronoIsland_MemorialPillar_Text_ChazIntro::
     .string "I'm the middle kid of the BIRD\n"
     .string "BROTHERS.\p"
     .string "The best thing about birds…\n"
     .string "It has to be the wings.$"
 
-FiveIsland_MemorialPillar_Text_ChazDefeat::
+ChronoIsland_MemorialPillar_Text_ChazDefeat::
     .string "Flap, flap!$"
 
-FiveIsland_MemorialPillar_Text_ChazPostBattle::
+ChronoIsland_MemorialPillar_Text_ChazPostBattle::
     .string "There was a really somber guy\n"
     .string "over that way.$"
 
-FiveIsland_MemorialPillar_Text_HaroldIntro::
+ChronoIsland_MemorialPillar_Text_HaroldIntro::
     .string "I'm the youngest of the BIRD\n"
     .string "BROTHERS.\p"
     .string "The best thing about birds…\n"
     .string "It has to be the down.$"
 
-FiveIsland_MemorialPillar_Text_HaroldDefeat::
+ChronoIsland_MemorialPillar_Text_HaroldDefeat::
     .string "Down is so comfy…\n"
     .string "It makes me drowsy…$"
 
-FiveIsland_MemorialPillar_Text_HaroldPostBattle::
+ChronoIsland_MemorialPillar_Text_HaroldPostBattle::
     .string "It fills me with happiness when\n"
     .string "bird POKéMON beg playfully…$"
 
-FiveIsland_MemorialPillar_Text_ScrubScrub::
+ChronoIsland_MemorialPillar_Text_ScrubScrub::
     .string "Scrub, scrub…$"
 
-FiveIsland_MemorialPillar_Text_YourMonsLookHealthy::
+ChronoIsland_MemorialPillar_Text_YourMonsLookHealthy::
     .string "Hello…\n"
     .string "Your POKéMON look healthy…$"
 
-FiveIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix::
+ChronoIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix::
     .string "This is where I buried my ONIX…\n"
     .string "It was named TECTONIX…$"
 
-FiveIsland_MemorialPillar_Text_HereLiesTectonixLemonadeOffering::
+ChronoIsland_MemorialPillar_Text_HereLiesTectonixLemonadeOffering::
     .string "“Here lies TECTONIX Eis engraved\n"
     .string "on a boulder.\p"
     .string "There is a LEMONADE placed as an\n"
     .string "offering in front of the grave.$"
 
-FiveIsland_MemorialPillar_Text_LeaveAnotherLemonadeOffering::
+ChronoIsland_MemorialPillar_Text_LeaveAnotherLemonadeOffering::
     .string "Would you like to leave another\n"
     .string "LEMONADE as an offering?$"
 
-FiveIsland_MemorialPillar_Text_PlacedCanOfLemonade::
+ChronoIsland_MemorialPillar_Text_PlacedCanOfLemonade::
     .string "{PLAYER} placed a can of LEMONADE\n"
     .string "in front of the grave.$"
 
-FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis::
+ChronoIsland_MemorialPillar_Text_ThankYouPleaseTakeThis::
     .string "Th-thank you…\p"
     .string "That was my TECTONIX's favorite\n"
     .string "drink…\p"
@@ -157,25 +157,25 @@ FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis::
     .string "Can you please take this as my\n"
     .string "thanks?$"
 
-FiveIsland_MemorialPillar_Text_BeGoodToYourMonsToo::
+ChronoIsland_MemorialPillar_Text_BeGoodToYourMonsToo::
     .string "Please be good to your POKéMON,\n"
     .string "too.$"
 
-FiveIsland_MemorialPillar_Text_DontHaveRoomForIt::
+ChronoIsland_MemorialPillar_Text_DontHaveRoomForIt::
     .string "If you don't have room for it,\n"
     .string "I'll hold it for you till next time.$"
 
-FiveIsland_MemorialPillar_Text_StillHaveThingAsMyThanks::
+ChronoIsland_MemorialPillar_Text_StillHaveThingAsMyThanks::
     .string "Oh, it's you from that time…\p"
     .string "I still have that thing I wanted\n"
     .string "you to have as my thanks.$"
 
-FiveIsland_MemorialPillar_Text_ScrubScrubTectonix::
+ChronoIsland_MemorialPillar_Text_ScrubScrubTectonix::
     .string "Scrub, scrub…\p"
     .string "… … …\n"
     .string "TECTONIX…$"
 
-FiveIsland_MemorialPillar_Text_HereLiesTectonix::
+ChronoIsland_MemorialPillar_Text_HereLiesTectonix::
     .string "Boulders and rocks are neatly piled\n"
     .string "up as a cairn.\p"
     .string "“Here lies TECTONIX Eis engraved\n"

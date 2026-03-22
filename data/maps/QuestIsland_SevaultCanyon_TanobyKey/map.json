@@ -1,7 +1,7 @@
 {
-  "id": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
-  "name": "SevenIsland_SevaultCanyon_TanobyKey",
-  "layout": "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
+  "id": "MAP_QUEST_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
+  "name": "QuestIsland_SevaultCanyon_TanobyKey",
+  "layout": "LAYOUT_QUEST_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
   "music": "MUS_RG_SEVII_DUNGEON",
   "region_map_section": "MAPSEC_TANOBY_KEY",
   "requires_flash": false,
@@ -119,7 +119,7 @@
       "x": 7,
       "y": 13,
       "elevation": 3,
-      "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON",
+      "dest_map": "MAP_QUEST_ISLAND_SEVAULT_CANYON",
       "dest_warp_id": "0"
     }
   ],
@@ -131,7 +131,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_1",
       "var_value": "99",
-      "script": "SevenIsland_SevaultCanyon_TanobyKey_EventScript_Switch1"
+      "script": "QuestIsland_SevaultCanyon_TanobyKey_EventScript_Switch1"
     },
     {
       "type": "trigger",
@@ -140,7 +140,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_7",
       "var_value": "99",
-      "script": "SevenIsland_SevaultCanyon_TanobyKey_EventScript_Switch7"
+      "script": "QuestIsland_SevaultCanyon_TanobyKey_EventScript_Switch7"
     },
     {
       "type": "trigger",
@@ -149,7 +149,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_6",
       "var_value": "99",
-      "script": "SevenIsland_SevaultCanyon_TanobyKey_EventScript_Switch6"
+      "script": "QuestIsland_SevaultCanyon_TanobyKey_EventScript_Switch6"
     },
     {
       "type": "trigger",
@@ -158,7 +158,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_5",
       "var_value": "99",
-      "script": "SevenIsland_SevaultCanyon_TanobyKey_EventScript_Switch5"
+      "script": "QuestIsland_SevaultCanyon_TanobyKey_EventScript_Switch5"
     },
     {
       "type": "trigger",
@@ -167,7 +167,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_4",
       "var_value": "99",
-      "script": "SevenIsland_SevaultCanyon_TanobyKey_EventScript_Switch4"
+      "script": "QuestIsland_SevaultCanyon_TanobyKey_EventScript_Switch4"
     },
     {
       "type": "trigger",
@@ -176,7 +176,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_3",
       "var_value": "99",
-      "script": "SevenIsland_SevaultCanyon_TanobyKey_EventScript_Switch3"
+      "script": "QuestIsland_SevaultCanyon_TanobyKey_EventScript_Switch3"
     },
     {
       "type": "trigger",
@@ -185,7 +185,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_2",
       "var_value": "99",
-      "script": "SevenIsland_SevaultCanyon_TanobyKey_EventScript_Switch2"
+      "script": "QuestIsland_SevaultCanyon_TanobyKey_EventScript_Switch2"
     }
   ],
   "bg_events": []

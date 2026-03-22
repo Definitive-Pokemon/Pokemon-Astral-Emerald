@@ -1,9 +1,9 @@
 {
-  "id": "MAP_THREE_ISLAND_HOUSE4",
-  "name": "ThreeIsland_House4",
+  "id": "MAP_KIN_ISLAND_HOUSE4",
+  "name": "KinIsland_House4",
   "layout": "LAYOUT_HOUSE3",
   "music": "MUS_RG_SEVII_123",
-  "region_map_section": "MAPSEC_THREE_ISLAND",
+  "region_map_section": "MAPSEC_KIN_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -26,7 +26,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ThreeIsland_House4_EventScript_BaldingMan",
+      "script": "KinIsland_House4_EventScript_BaldingMan",
       "flag": "0"
     },
     {
@@ -40,7 +40,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ThreeIsland_House4_EventScript_LittleBoy",
+      "script": "KinIsland_House4_EventScript_LittleBoy",
       "flag": "0"
     }
   ],
@@ -49,7 +49,7 @@
       "x": 4,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_THREE_ISLAND",
+      "dest_map": "MAP_KIN_ISLAND",
       "dest_warp_id": "5"
     }
   ],

@@ -1,7 +1,7 @@
 {
-  "id": "MAP_SEVEN_ISLAND_SEVAULT_CANYON",
-  "name": "SevenIsland_SevaultCanyon",
-  "layout": "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON",
+  "id": "MAP_QUEST_ISLAND_SEVAULT_CANYON",
+  "name": "QuestIsland_SevaultCanyon",
+  "layout": "LAYOUT_QUEST_ISLAND_SEVAULT_CANYON",
   "music": "MUS_RG_SEVII_ROUTE",
   "region_map_section": "MAPSEC_SEVAULT_CANYON",
   "requires_flash": false,
@@ -15,12 +15,12 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS",
+      "map": "MAP_QUEST_ISLAND_TANOBY_RUINS",
       "offset": -48,
       "direction": "down"
     },
     {
-      "map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE",
+      "map": "MAP_QUEST_ISLAND_SEVAULT_CANYON_ENTRANCE",
       "offset": -20,
       "direction": "left"
     }
@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Cyndy",
+      "script": "QuestIsland_SevaultCanyon_EventScript_Cyndy",
       "flag": "0"
     },
     {
@@ -51,7 +51,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Evan",
+      "script": "QuestIsland_SevaultCanyon_EventScript_Evan",
       "flag": "0"
     },
     {
@@ -65,7 +65,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Jackson",
+      "script": "QuestIsland_SevaultCanyon_EventScript_Jackson",
       "flag": "0"
     },
     {
@@ -79,7 +79,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Katelyn",
+      "script": "QuestIsland_SevaultCanyon_EventScript_Katelyn",
       "flag": "0"
     },
     {
@@ -93,7 +93,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Leroy",
+      "script": "QuestIsland_SevaultCanyon_EventScript_Leroy",
       "flag": "0"
     },
     {
@@ -107,7 +107,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Michelle",
+      "script": "QuestIsland_SevaultCanyon_EventScript_Michelle",
       "flag": "0"
     },
     {
@@ -121,7 +121,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Lex",
+      "script": "QuestIsland_SevaultCanyon_EventScript_Lex",
       "flag": "0"
     },
     {
@@ -135,7 +135,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Nya",
+      "script": "QuestIsland_SevaultCanyon_EventScript_Nya",
       "flag": "0"
     },
     {
@@ -261,8 +261,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_ItemKingsRock",
-      "flag": "FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_KINGS_ROCK"
+      "script": "QuestIsland_SevaultCanyon_EventScript_ItemKingsRock",
+      "flag": "FLAG_HIDE_QUEST_ISLAND_SEVAULT_CANYON_KINGS_ROCK"
     },
     {
       "type": "object",
@@ -275,8 +275,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_ItemMaxElixir",
-      "flag": "FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_MAX_ELIXIR"
+      "script": "QuestIsland_SevaultCanyon_EventScript_ItemMaxElixir",
+      "flag": "FLAG_HIDE_QUEST_ISLAND_SEVAULT_CANYON_MAX_ELIXIR"
     },
     {
       "type": "object",
@@ -289,8 +289,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_ItemNugget",
-      "flag": "FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_NUGGET"
+      "script": "QuestIsland_SevaultCanyon_EventScript_ItemNugget",
+      "flag": "FLAG_HIDE_QUEST_ISLAND_SEVAULT_CANYON_NUGGET"
     },
     {
       "type": "object",
@@ -303,7 +303,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_BlackBelt",
+      "script": "QuestIsland_SevaultCanyon_EventScript_BlackBelt",
       "flag": "0"
     }
   ],
@@ -312,14 +312,14 @@
       "x": 7,
       "y": 17,
       "elevation": 5,
-      "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
+      "dest_map": "MAP_QUEST_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
       "dest_warp_id": "0"
     },
     {
       "x": 14,
       "y": 61,
       "elevation": 0,
-      "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE",
+      "dest_map": "MAP_QUEST_ISLAND_SEVAULT_CANYON_HOUSE",
       "dest_warp_id": "0"
     }
   ],
@@ -331,7 +331,7 @@
       "y": 66,
       "elevation": 3,
       "item": "ITEM_CHERI_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_SEVAULT_CANYON_CHERI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_QUEST_ISLAND_SEVAULT_CANYON_CHERI_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -341,7 +341,7 @@
       "y": 71,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SevenIsland_SevaultCanyon_EventScript_RouteSign"
+      "script": "QuestIsland_SevaultCanyon_EventScript_RouteSign"
     }
   ]
 }

@@ -1,21 +1,21 @@
-SevenIsland_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SevenIsland_OnTransition
+QuestIsland_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, QuestIsland_OnTransition
 	.byte 0
 
-SevenIsland_OnTransition::
-	setflag FLAG_VISITED_SEVEN_ISLAND
+QuestIsland_OnTransition::
+	setflag FLAG_VISITED_QUEST_ISLAND
 	end
 
-SevenIsland_EventScript_IslandSign::
-	msgbox SevenIsland_Text_IslandSign, MSGBOX_SIGN
+QuestIsland_EventScript_IslandSign::
+	msgbox QuestIsland_Text_IslandSign, MSGBOX_SIGN
 	end
 
-SevenIsland_EventScript_OldWoman::
-	msgbox SevenIsland_Text_IslandsMadeInSevenDays, MSGBOX_NPC
+QuestIsland_EventScript_OldWoman::
+	msgbox QuestIsland_Text_IslandsMadeInSevenDays, MSGBOX_NPC
 	end
 
-SevenIsland_EventScript_Scientist::
-	msgbox SevenIsland_Text_IslandVirtuallyUntouched, MSGBOX_NPC
+QuestIsland_EventScript_Scientist::
+	msgbox QuestIsland_Text_IslandVirtuallyUntouched, MSGBOX_NPC
 	end
     
 Text_SwordsDanceTeach::
@@ -37,11 +37,11 @@ Text_SwordsDanceTaught::
     .string "If only we could keep getting\n"
     .string "stronger and stronger, eh?$"
 
-SevenIsland_Text_IslandSign::
+QuestIsland_Text_IslandSign::
     .string "SEVEN ISLAND\n"
     .string "Quest Island of Infinity$"
 
-SevenIsland_Text_IslandsMadeInSevenDays::
+QuestIsland_Text_IslandsMadeInSevenDays::
     .string "These islands are called the SEVII\n"
     .string "ISLANDS because there are seven.\p"
     .string "…Or at least that's what the young\n"
@@ -50,7 +50,7 @@ SevenIsland_Text_IslandsMadeInSevenDays::
     .string "named because they are said to\l"
     .string "have been made in seven days.$"
 
-SevenIsland_Text_IslandVirtuallyUntouched::
+QuestIsland_Text_IslandVirtuallyUntouched::
     .string "This island has been left virtually\n"
     .string "untouched in its natural state.\p"
     .string "It could be a little difficult to\n"

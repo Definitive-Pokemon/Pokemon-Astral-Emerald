@@ -1,9 +1,9 @@
 {
-  "id": "MAP_SIX_ISLAND_POKEMON_CENTER_1F",
-  "name": "SixIsland_PokemonCenter_1F",
+  "id": "MAP_FORTUNE_ISLAND_POKEMON_CENTER_1F",
+  "name": "FortuneIsland_PokemonCenter_1F",
   "layout": "LAYOUT_POKEMON_CENTER_1F",
   "music": "MUS_RG_POKE_CENTER",
-  "region_map_section": "MAPSEC_SIX_ISLAND",
+  "region_map_section": "MAPSEC_FORTUNE_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -26,7 +26,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_PokemonCenter_1F_EventScript_Nurse",
+      "script": "FortuneIsland_PokemonCenter_1F_EventScript_Nurse",
       "flag": "0"
     },
     {
@@ -41,7 +41,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_SIX_ISLAND_POKECENTER_RIVAL"
+      "flag": "FLAG_HIDE_FORTUNE_ISLAND_POKECENTER_RIVAL"
     },
     {
       "type": "object",
@@ -54,7 +54,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_PokemonCenter_1F_EventScript_Hiker",
+      "script": "FortuneIsland_PokemonCenter_1F_EventScript_Hiker",
       "flag": "0"
     },
     {
@@ -68,7 +68,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_PokemonCenter_1F_EventScript_OldMan",
+      "script": "FortuneIsland_PokemonCenter_1F_EventScript_OldMan",
       "flag": "0"
     }
   ],
@@ -77,14 +77,14 @@
       "x": 7,
       "y": 8,
       "elevation": 3,
-      "dest_map": "MAP_SIX_ISLAND",
+      "dest_map": "MAP_FORTUNE_ISLAND",
       "dest_warp_id": "1"
     },
     {
       "x": 1,
       "y": 6,
       "elevation": 4,
-      "dest_map": "MAP_SIX_ISLAND_POKEMON_CENTER_2F",
+      "dest_map": "MAP_FORTUNE_ISLAND_POKEMON_CENTER_2F",
       "dest_warp_id": "0"
     }
   ],

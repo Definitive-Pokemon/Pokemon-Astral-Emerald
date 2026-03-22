@@ -1,2 +1,2 @@
-SevenIsland_UnusedHouse_MapScripts::
+QuestIsland_UnusedHouse_MapScripts::
 	.byte 0
