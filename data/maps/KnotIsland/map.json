@@ -1,7 +1,7 @@
 {
-  "id": "MAP_KNOT_ISLAND_MAIN",
-  "name": "KnotIsland_Main",
-  "layout": "LAYOUT_KNOT_ISLAND_MAIN",
+  "id": "MAP_KNOT_ISLAND",
+  "name": "KnotIsland",
+  "layout": "LAYOUT_KNOT_ISLAND",
   "music": "MUS_RG_SEVII_123",
   "region_map_section": "MAPSEC_KNOT_ISLAND",
   "requires_flash": false,
@@ -48,7 +48,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "KnotIsland_Main_EventScript_OldMan",
+      "script": "KnotIsland_EventScript_OldMan",
       "flag": "0"
     },
     {
@@ -61,7 +61,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "KnotIsland_Main_EventScript_BaldingMan",
+      "script": "KnotIsland_EventScript_BaldingMan",
       "flag": "0"
     }
   ],
@@ -105,7 +105,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "KnotIsland_Main_EventScript_PokemonNetCenterSign"
+      "script": "KnotIsland_EventScript_PokemonNetCenterSign"
     },
     {
       "type": "sign",
@@ -113,7 +113,7 @@
       "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "KnotIsland_Main_EventScript_IslandSign"
+      "script": "KnotIsland_EventScript_IslandSign"
     }
   ]
 }
