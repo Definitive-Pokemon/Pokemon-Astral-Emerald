@@ -1,0 +1,41 @@
+KnotIsland_Harbor_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, KnotIsland_Harbor_OnFrameTable
+	.byte 0
+	
+KnotIsland_Harbor_OnFrameTable::
+	map_script_2 VAR_KNOT_ISLAND_STATE, 0, KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime
+	.2byte 0
+	
+KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, KnotIsland_Harbor_Movement_PlayerExitHarbor
+	waitmovement 0
+	warp MAP_KNOT_ISLAND_MAIN, 12, 18
+	waitstate
+	releaseall
+	end
+	
+KnotIsland_Harbor_Movement_PlayerExitHarbor:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+KnotIsland_Harbor_EventScript_Sailor::
+	lock
+	faceplayer
+	msgbox Island_Harbors_Text_Oi_Chap, MSGBOX_DEFAULT
+	setvar VAR_0x8004, 1
+	@special ScriptMenu_CreateSeviiFerryMultichoice
+	waitstate
+	setvar VAR_0x8001, 1
+	switch VAR_RESULT
+	case 0, Island_Harbors_EventScript_GoToLilycove
+	case 1, Island_Harbors_EventScript_GoToIsland2
+	case 2, Island_Harbors_EventScript_GoToIsland3
+	case 3, Island_Harbors_EventScript_GoToIsland4
+	case 4, Island_Harbors_EventScript_GoToIsland5
+	case 5, Island_Harbors_EventScript_GoToIsland6
+	case 6, Island_Harbors_EventScript_GoToIsland7
+	end
