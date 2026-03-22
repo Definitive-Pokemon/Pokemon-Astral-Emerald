@@ -47,6 +47,8 @@
 
 #if IS_FRLG
 
+#include "constants/flags_frlg.h"
+
 #else
 
 #define FLAG_UNUSED_0x020    0x20 // Unused Flag
