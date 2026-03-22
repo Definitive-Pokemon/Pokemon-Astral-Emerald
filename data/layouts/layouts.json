@@ -9337,16 +9337,16 @@
       "blockdata_filepath": "data/layouts/KnotIsland_TreasureBeach/map.bin"
     },
     {
-      "id": "LAYOUT_KNOT_ISLAND_MAIN",
-      "name": "KnotIsland_Main_Layout",
+      "id": "LAYOUT_KNOT_ISLAND",
+      "name": "KnotIsland_Layout",
       "width": 24,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/KnotIsland_Main/border.bin",
-      "blockdata_filepath": "data/layouts/KnotIsland_Main/map.bin"
+      "border_filepath": "data/layouts/KnotIsland/border.bin",
+      "blockdata_filepath": "data/layouts/KnotIsland/map.bin"
     },
     {
       "id": "LAYOUT_KNOT_ISLAND_HARBOR",
@@ -9589,16 +9589,16 @@
       "blockdata_filepath": "data/layouts/MtEmber_Summit/map.bin"
     },
     {
-      "id": "LAYOUT_BOON_ISLAND_MAIN",
-      "name": "BoonIsland_Main_Layout",
+      "id": "LAYOUT_BOON_ISLAND",
+      "name": "BoonIsland_Layout",
       "width": 48,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/BoonIsland_Main/border.bin",
-      "blockdata_filepath": "data/layouts/BoonIsland_Main/map.bin"
+      "border_filepath": "data/layouts/BoonIsland/border.bin",
+      "blockdata_filepath": "data/layouts/BoonIsland/map.bin"
     },
     {
       "id": "LAYOUT_BOON_ISLAND_CAPE_BRINK",
@@ -9685,16 +9685,16 @@
       "blockdata_filepath": "data/layouts/BoonIsland_CapeBrink_House/map.bin"
     },
     {
-      "id": "LAYOUT_KIN_ISLAND_MAIN",
-      "name": "KinIsland_Main_Layout",
+      "id": "LAYOUT_KIN_ISLAND",
+      "name": "KinIsland_Layout",
       "width": 24,
       "height": 40,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/KinIsland_Main/border.bin",
-      "blockdata_filepath": "data/layouts/KinIsland_Main/map.bin"
+      "border_filepath": "data/layouts/KinIsland/border.bin",
+      "blockdata_filepath": "data/layouts/KinIsland/map.bin"
     },
     {
       "id": "LAYOUT_KIN_ISLAND_PORT",
@@ -9853,16 +9853,16 @@
       "blockdata_filepath": "data/layouts/KinIsland_Harbor/map.bin"
     },
     {
-      "id": "LAYOUT_FLOE_ISLAND_MAIN",
-      "name": "FloeIsland_Main_Layout",
+      "id": "LAYOUT_FLOE_ISLAND",
+      "name": "FloeIsland_Layout",
       "width": 48,
       "height": 40,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/FloeIsland_Main/border.bin",
-      "blockdata_filepath": "data/layouts/FloeIsland_Main/map.bin"
+      "border_filepath": "data/layouts/FloeIsland/border.bin",
+      "blockdata_filepath": "data/layouts/FloeIsland/map.bin"
     },
     {
       "id": "LAYOUT_FLOE_ISLAND_POKEMON_DAYCARE",
@@ -10009,16 +10009,16 @@
       "blockdata_filepath": "data/layouts/IcefallCave_Back/map.bin"
     },
     {
-      "id": "LAYOUT_CHRONO_ISLAND_MAIN",
-      "name": "ChronoIsland_Main_Layout",
+      "id": "LAYOUT_CHRONO_ISLAND",
+      "name": "ChronoIsland_Layout",
       "width": 24,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/ChronoIsland_Main/border.bin",
-      "blockdata_filepath": "data/layouts/ChronoIsland_Main/map.bin"
+      "border_filepath": "data/layouts/ChronoIsland/border.bin",
+      "blockdata_filepath": "data/layouts/ChronoIsland/map.bin"
     },
     {
       "id": "LAYOUT_CHRONO_ISLAND_MEADOW",
@@ -10333,16 +10333,16 @@
       "blockdata_filepath": "data/layouts/ChronoIsland_Warehouse/map.bin"
     },
     {
-      "id": "LAYOUT_FORTUNE_ISLAND_MAIN",
-      "name": "FortuneIsland_Main_Layout",
+      "id": "LAYOUT_FORTUNE_ISLAND",
+      "name": "FortuneIsland_Layout",
       "width": 24,
       "height": 30,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/FortuneIsland_Main/border.bin",
-      "blockdata_filepath": "data/layouts/FortuneIsland_Main/map.bin"
+      "border_filepath": "data/layouts/FortuneIsland/border.bin",
+      "blockdata_filepath": "data/layouts/FortuneIsland/map.bin"
     },
     {
       "id": "LAYOUT_FORTUNE_ISLAND_WATER_PATH",
@@ -10573,16 +10573,16 @@
       "blockdata_filepath": "data/layouts/FortuneIsland_AlteringCave/map.bin"
     },
     {
-      "id": "LAYOUT_QUEST_ISLAND_MAIN",
-      "name": "QuestIsland_Main_Layout",
+      "id": "LAYOUT_QUEST_ISLAND",
+      "name": "QuestIsland_Layout",
       "width": 24,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/QuestIsland_Main/border.bin",
-      "blockdata_filepath": "data/layouts/QuestIsland_Main/map.bin"
+      "border_filepath": "data/layouts/QuestIsland/border.bin",
+      "blockdata_filepath": "data/layouts/QuestIsland/map.bin"
     },
     {
       "id": "LAYOUT_QUEST_ISLAND_TRAINER_TOWER",

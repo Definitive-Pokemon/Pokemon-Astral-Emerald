@@ -10,7 +10,7 @@ KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, KnotIsland_Harbor_Movement_PlayerExitHarbor
 	waitmovement 0
-	warp MAP_KNOT_ISLAND_MAIN, 12, 18
+	warp MAP_KNOT_ISLAND, 12, 18
 	waitstate
 	releaseall
 	end

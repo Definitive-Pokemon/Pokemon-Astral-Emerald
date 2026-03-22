@@ -46,7 +46,7 @@
       "x": 8,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_KNOT_ISLAND_MAIN",
+      "dest_map": "MAP_KNOT_ISLAND",
       "dest_warp_id": "0"
     }
   ],

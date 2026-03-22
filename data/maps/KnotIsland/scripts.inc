@@ -1,32 +1,32 @@
 .equ LOCALID_BILL, 1
 
-KnotIsland_Main_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, KnotIsland_Main_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, KnotIsland_Main_OnFrameTable
+KnotIsland_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, KnotIsland_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, KnotIsland_OnFrameTable
 	.byte 0
 
-KnotIsland_Main_OnTransition::
+KnotIsland_OnTransition::
 	setflag FLAG_VISITED_KNOT_ISLAND
 	end
 	
-KnotIsland_Main_OnFrameTable::
-	map_script_2 VAR_KNOT_ISLAND_STATE, 0, KnotIsland_Main_EventScript_EnterKnotIsland_FirstTime
+KnotIsland_OnFrameTable::
+	map_script_2 VAR_KNOT_ISLAND_STATE, 0, KnotIsland_EventScript_EnterKnotIsland_FirstTime
 	.2byte 0
 
-KnotIsland_Main_EventScript_EnterKnotIsland_FirstTime::
+KnotIsland_EventScript_EnterKnotIsland_FirstTime::
 	lockall
 	textcolor NPC_TEXT_COLOR_MALE
-	applymovement LOCALID_PLAYER, KnotIsland_Main_Movement_PlayerExitHarbor
+	applymovement LOCALID_PLAYER, KnotIsland_Movement_PlayerExitHarbor
 	waitmovement 0
-	msgbox KnotIsland_Main_Text_BillLetsGoSeeCelio
+	msgbox KnotIsland_Text_BillLetsGoSeeCelio
 	closemessage
-	applymovement LOCALID_KNOT_ISLAND_BILL, KnotIsland_Main_Movement_BillWalkToPokeCenter
-	applymovement LOCALID_PLAYER, KnotIsland_Main_Movement_PlayerWalkToPokeCenter
+	applymovement LOCALID_KNOT_ISLAND_BILL, KnotIsland_Movement_BillWalkToPokeCenter
+	applymovement LOCALID_PLAYER, KnotIsland_Movement_PlayerWalkToPokeCenter
 	waitmovement 0
 	opendoor 14, 5
 	waitdooranim
-	applymovement LOCALID_KNOT_ISLAND_BILL, KnotIsland_Main_Movement_BillEnterPokeCenter
-	applymovement LOCALID_PLAYER, KnotIsland_Main_Movement_PlayerEnterPokeCenter
+	applymovement LOCALID_KNOT_ISLAND_BILL, KnotIsland_Movement_BillEnterPokeCenter
+	applymovement LOCALID_PLAYER, KnotIsland_Movement_PlayerEnterPokeCenter
 	waitmovement 0
 	closedoor 14, 5
 	waitdooranim
@@ -37,7 +37,7 @@ KnotIsland_Main_EventScript_EnterKnotIsland_FirstTime::
 	releaseall
 	end
 
-KnotIsland_Main_Movement_PlayerExitHarbor::
+KnotIsland_Movement_PlayerExitHarbor::
 	walk_up
 	step_end
 
@@ -55,50 +55,50 @@ KnotIsland_Main_Movement_PlayerExitHarbor::
 	walk_up
 	.endm
 
-KnotIsland_Main_Movement_PlayerWalkToPokeCenter::
+KnotIsland_Movement_PlayerWalkToPokeCenter::
 	walk_up
 	walk_to_pokecenter
 	step_end
 
-KnotIsland_Main_Movement_PlayerEnterPokeCenter::
+KnotIsland_Movement_PlayerEnterPokeCenter::
 	walk_up
 	walk_up
 	set_invisible
 	step_end
 
 
-KnotIsland_Main_Movement_BillWalkToPokeCenter::
+KnotIsland_Movement_BillWalkToPokeCenter::
 	walk_to_pokecenter
 	walk_up
 	step_end
 
-KnotIsland_Main_Movement_BillEnterPokeCenter::
+KnotIsland_Movement_BillEnterPokeCenter::
 	walk_up
 	set_invisible
 	step_end
 
-KnotIsland_Main_EventScript_OldMan::
+KnotIsland_EventScript_OldMan::
 	lock
 	faceplayer
 	@
 	@ Alt text here for SEVII_DETOUR and RS_LINK!
-	msgbox KnotIsland_Main_Text_LuckyToHaveCelioHere
+	msgbox KnotIsland_Text_LuckyToHaveCelioHere
 	release
 	end
 
-KnotIsland_Main_EventScript_BaldingMan::
-	msgbox KnotIsland_Main_Text_IsntWarmClimateHereGreat, MSGBOX_NPC
+KnotIsland_EventScript_BaldingMan::
+	msgbox KnotIsland_Text_IsntWarmClimateHereGreat, MSGBOX_NPC
 	end
 
-KnotIsland_Main_EventScript_IslandSign::
-	msgbox KnotIsland_Main_Text_IslandSign, MSGBOX_SIGN
+KnotIsland_EventScript_IslandSign::
+	msgbox KnotIsland_Text_IslandSign, MSGBOX_SIGN
 	end
 
-KnotIsland_Main_EventScript_PokemonNetCenterSign::
-	msgbox KnotIsland_Main_Text_PokemonNetCenterSign, MSGBOX_SIGN
+KnotIsland_EventScript_PokemonNetCenterSign::
+	msgbox KnotIsland_Text_PokemonNetCenterSign, MSGBOX_SIGN
 	end
 	
-KnotIsland_Main_Text_BillLetsGoSeeCelio::
+KnotIsland_Text_BillLetsGoSeeCelio::
     .string "BILL: Here we are!\n"
     .string "This is ONE ISLAND.\p"
     .string "There are several islands around\n"
@@ -110,7 +110,7 @@ KnotIsland_Main_Text_BillLetsGoSeeCelio::
     .string "…Why am I telling you this now?\n"
     .string "Let's just go see CELIO!$"
 
-KnotIsland_Main_Text_LuckyToHaveCelioHere::
+KnotIsland_Text_LuckyToHaveCelioHere::
     .string "Here we are on an island smack in\n"
     .string "the middle of nowhere.\p"
     .string "We're lucky to have an upstanding\n"
@@ -123,16 +123,16 @@ KnotIsland_Main_Text_LuckyToHaveCelioHere::
     .string "Celio is quite the man!$"
 
 
-KnotIsland_Main_Text_IslandSign::
+KnotIsland_Text_IslandSign::
     .string "One Island\n"
     .string "Friends Gather at Knot Island$"
 
-KnotIsland_Main_Text_PokemonNetCenterSign::
+KnotIsland_Text_PokemonNetCenterSign::
     .string "Expanding the Pokémon World!\n"
     .string "Pokémon Net Center$"
 
 
-KnotIsland_Main_Text_IsntWarmClimateHereGreat::
+KnotIsland_Text_IsntWarmClimateHereGreat::
     .string "Hi, sight-seeing, are you?\n"
     .string "Isn't the warm climate here great?$"
 

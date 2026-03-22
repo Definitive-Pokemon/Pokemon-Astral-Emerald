@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_KNOT_ISLAND_MAIN",
+      "map": "MAP_KNOT_ISLAND",
       "offset": 120,
       "direction": "left"
     }
@@ -396,7 +396,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KnotIsland_KindleRoad_EventScript_ItemEther",
-      "flag": "FLAG_HIDE_KNOT_ISLAND_MAIN_KINDLE_ROAD_ETHER"
+      "flag": "FLAG_HIDE_KNOT_ISLAND_KINDLE_ROAD_ETHER"
     },
     {
       "type": "object",
@@ -410,7 +410,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KnotIsland_KindleRoad_EventScript_ItemMaxRepel",
-      "flag": "FLAG_HIDE_KNOT_ISLAND_MAIN_KINDLE_ROAD_MAX_REPEL"
+      "flag": "FLAG_HIDE_KNOT_ISLAND_KINDLE_ROAD_MAX_REPEL"
     },
     {
       "type": "object",
@@ -424,7 +424,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KnotIsland_KindleRoad_EventScript_ItemCarbos",
-      "flag": "FLAG_HIDE_KNOT_ISLAND_MAIN_KINDLE_ROAD_CARBOS"
+      "flag": "FLAG_HIDE_KNOT_ISLAND_KINDLE_ROAD_CARBOS"
     }
   ],
   "warp_events": [
@@ -446,7 +446,7 @@
       "x": 15,
       "y": 58,
       "elevation": 3,
-      "dest_map": "MAP_KNOT_ISLAND_MAIN_KINDLE_ROAD_EMBER_SPA",
+      "dest_map": "MAP_KNOT_ISLAND_KINDLE_ROAD_EMBER_SPA",
       "dest_warp_id": "0"
     }
   ],
