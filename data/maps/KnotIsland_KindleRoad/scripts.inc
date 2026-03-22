@@ -1,0 +1,83 @@
+KnotIsland_KindleRoad_MapScripts::
+	.byte 0
+
+KnotIsland_KindleRoad_EventScript_Maria::
+	trainerbattle_single TRAINER_CLIFFORD KnotIsland_KindleRoad_Text_MariaIntro, KnotIsland_KindleRoad_Text_MariaDefeat
+	msgbox KnotIsland_KindleRoad_Text_MariaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Abigail::
+	trainerbattle_single TRAINER_CLIFFORD KnotIsland_KindleRoad_Text_AbigailIntro, KnotIsland_KindleRoad_Text_AbigailDefeat
+	msgbox KnotIsland_KindleRoad_Text_AbigailPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Finn::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_FinnIntro, KnotIsland_KindleRoad_Text_FinnDefeat
+	msgbox KnotIsland_KindleRoad_Text_FinnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Garrett::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_GarrettIntro, KnotIsland_KindleRoad_Text_GarrettDefeat
+	msgbox KnotIsland_KindleRoad_Text_GarrettPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Tommy::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_TommyIntro, KnotIsland_KindleRoad_Text_TommyDefeat
+	msgbox KnotIsland_KindleRoad_Text_TommyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Sharon::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_SharonIntro, KnotIsland_KindleRoad_Text_SharonDefeat
+	msgbox KnotIsland_KindleRoad_Text_SharonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Tanya::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_TanyaIntro, KnotIsland_KindleRoad_Text_TanyaDefeat
+	msgbox KnotIsland_KindleRoad_Text_TanyaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Shea::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_SheaIntro, KnotIsland_KindleRoad_Text_SheaDefeat
+	msgbox KnotIsland_KindleRoad_Text_SheaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Hugh::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_HughIntro, KnotIsland_KindleRoad_Text_HughDefeat
+	msgbox KnotIsland_KindleRoad_Text_HughPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Bryce::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_BryceIntro, KnotIsland_KindleRoad_Text_BryceDefeat
+	msgbox KnotIsland_KindleRoad_Text_BrycePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Claire::
+	trainerbattle_single TRAINER_CLIFFORD, KnotIsland_KindleRoad_Text_ClaireIntro, KnotIsland_KindleRoad_Text_ClaireDefeat
+	msgbox KnotIsland_KindleRoad_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Kia::
+	trainerbattle_double TRAINER_KIRA_AND_DAN_1, KnotIsland_KindleRoad_Text_KiaIntro, KnotIsland_KindleRoad_Text_KiaDefeat, KnotIsland_KindleRoad_Text_KiaNotEnoughMons
+	msgbox KnotIsland_KindleRoad_Text_KiaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_Mik::
+	trainerbattle_double TRAINER_KIRA_AND_DAN_1, KnotIsland_KindleRoad_Text_MikIntro, KnotIsland_KindleRoad_Text_MikDefeat, KnotIsland_KindleRoad_Text_MikNotEnoughMons
+	msgbox KnotIsland_KindleRoad_Text_MikPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KnotIsland_KindleRoad_EventScript_RouteSign::
+	msgbox KnotIsland_KindleRoad_Text_RouteSign, MSGBOX_SIGN
+	end
+
+KnotIsland_KindleRoad_EventScript_EmberSpaSign::
+	msgbox KnotIsland_KindleRoad_Text_EmberSpaSign, MSGBOX_SIGN
+	end
+
+KnotIsland_KindleRoad_Text_RouteSign::
+    .string "This is Kindle Road.\p"
+    .string "Go straight for Mt. Ember.$"
+
+KnotIsland_KindleRoad_Text_EmberSpaSign::
+    .string "Light the Fire in Your Heart!\n"
+    .string "Ember Spa$"
