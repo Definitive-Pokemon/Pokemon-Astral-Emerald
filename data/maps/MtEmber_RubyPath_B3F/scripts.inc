@@ -7,7 +7,7 @@ MtEmber_RubyPath_B3F_MapScripts::
 MtEmber_RubyPath_B5F_EventScript_Ruby::
 	lock
 	faceplayer
-	setflag FLAG_GOT_RUBY
+	setflag FLAG_AE_GOT_RUBY
 	removeobject LOCALID_RUBY
 	@giveitem_msg MtEmber_RubyPath_B3F_Text_FoundARuby, ITEM_RUBY, 1, MUS_RG_OBTAIN_KEY_ITEM
 	giveitem ITEM_RUBY
