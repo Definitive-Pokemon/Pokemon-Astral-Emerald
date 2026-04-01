@@ -270,7 +270,7 @@
 // Expansion Setup Flags
 // DN_VAR_SPECIES									  	0x40F7 // Registered DexNav species
 // DN_VAR_STEP_COUNTER									0x40F8 // Steps for finding hidden pokemon
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
+// VAR_UNUSED_0x40F9                                    0x40F9 // If this var has been assigned, last Repel/Lure used will be saved and the player will get prompted with the vanilla repel YES/NO option, unless I_REPEL_LURE_MENU is set to TRUE.
 #define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
