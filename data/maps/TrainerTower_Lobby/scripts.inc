@@ -55,7 +55,7 @@ TrainerTower_Lobby_EventScript_EntryTrigger::
 
 TrainerTower_Lobby_EventScript_BeginChallenge::
 	copyvar VAR_0x8005, VAR_RESULT
-	setvar VAR_MAP_SCENE_TRAINER_TOWER, 1
+	setvar VAR_AE_MAP_SCENE_TRAINER_TOWER, 1
 	special HealPlayerParty
 	msgbox TrainerTower_Lobby_Text_StartClockGetSetGo
 	releaseall

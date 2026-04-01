@@ -4,7 +4,7 @@ KinIsland_House5_MapScripts::
 KinIsland_House5_EventScript_LittleGirl::
 	lock
 	faceplayer
-	goto_if_set FLAG_RESCUED_LOSTELLE, KinIsland_House5_EventScript_LittleGirlLostelleFound
+	goto_if_set FLAG_AE_RESCUED_LOSTELLE, KinIsland_House5_EventScript_LittleGirlLostelleFound
 	msgbox KinIsland_House5_Text_ImNotLostelle
 	release
 	end

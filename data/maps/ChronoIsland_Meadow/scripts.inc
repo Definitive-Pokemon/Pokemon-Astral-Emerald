@@ -5,19 +5,19 @@ ChronoIsland_Meadow_MapScripts::
 	.byte 0
 
 ChronoIsland_Meadow_OnLoad::
-	call_if_set FLAG_UNLOCKED_ROCKET_WAREHOUSE, ChronoIsland_Meadow_EventScript_SetWarehouseDoorUnlocked
+	call_if_set FLAG_AE_UNLOCKED_ROCKET_WAREHOUSE, ChronoIsland_Meadow_EventScript_SetWarehouseDoorUnlocked
 	end
 
 ChronoIsland_Meadow_EventScript_WarehouseDoor::
 	lockall
-	goto_if_set FLAG_UNLOCKED_ROCKET_WAREHOUSE, ChronoIsland_Meadow_EventScript_WarehouseDoorAlreadyOpen
-	goto_if_set FLAG_LEARNED_YES_NAH_CHANSEY, ChronoIsland_Meadow_EventScript_OpenWarehouseDoor
+	goto_if_set FLAG_AE_UNLOCKED_ROCKET_WAREHOUSE, ChronoIsland_Meadow_EventScript_WarehouseDoorAlreadyOpen
+	goto_if_set FLAG_AE_LEARNED_YES_NAH_CHANSEY, ChronoIsland_Meadow_EventScript_OpenWarehouseDoor
 	msgbox ChronoIsland_Meadow_Text_EnteredPasswordAnotherNeeded
 	releaseall
 	end
 
 ChronoIsland_Meadow_EventScript_OpenWarehouseDoor::
-	setflag FLAG_UNLOCKED_ROCKET_WAREHOUSE
+	setflag FLAG_AE_UNLOCKED_ROCKET_WAREHOUSE
 	message ChronoIsland_Meadow_Text_EnteredPasswordDoorOpened
 	waitmessage
 	delay 60

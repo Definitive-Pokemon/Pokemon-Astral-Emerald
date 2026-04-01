@@ -26,7 +26,7 @@ ChronoIsland_Warehouse_EventScript_SetArrowsForReEntry::
 
 ChronoIsland_Warehouse_EventScript_Cage::
 	lockall
-	goto_if_set FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE, ChronoIsland_Warehouse_EventScript_CageUnlocked
+	goto_if_set FLAG_AE_DEFEATED_ROCKETS_IN_WAREHOUSE, ChronoIsland_Warehouse_EventScript_CageUnlocked
 	msgbox ChronoIsland_Warehouse_Text_ManyMonsLockedInPen
 	releaseall
 	end
@@ -44,7 +44,7 @@ ChronoIsland_Warehouse_EventScript_Admin2Trigger::
 	lockall
 	applymovement LOCALID_WAREHOUSE_ADMIN2, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	setvar VAR_MAP_SCENE_ROCKET_WAREHOUSE, 1
+	setvar VAR_AE_MAP_SCENE_MT_EMBER_EXTERIOR, 1
 	releaseall
 	end
 
@@ -92,8 +92,8 @@ ChronoIsland_Warehouse_EventScript_DefeatedAdmin2::
 	removeobject LOCALID_WAREHOUSE_ADMIN1
 	setflag FLAG_HIDE_CHRONO_ISLAND_ROCKETS
 	fadescreen FADE_FROM_BLACK
-	setvar VAR_MAP_SCENE_ROCKET_WAREHOUSE, 1
-	setflag FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE
+	setvar VAR_AE_MAP_SCENE_MT_EMBER_EXTERIOR, 1
+	setflag FLAG_AE_DEFEATED_ROCKETS_IN_WAREHOUSE
 	release
 	end
 

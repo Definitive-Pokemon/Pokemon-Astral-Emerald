@@ -3,7 +3,7 @@ QuestIsland_TrainerTower_MapScripts::
 	.byte 0
 
 QuestIsland_TrainerTower_OnTransition::
-	setvar VAR_MAP_SCENE_TRAINER_TOWER, 0
+	setvar VAR_AE_MAP_SCENE_TRAINER_TOWER, 0
 	end
 
 QuestIsland_TrainerTower_EventScript_Dario::

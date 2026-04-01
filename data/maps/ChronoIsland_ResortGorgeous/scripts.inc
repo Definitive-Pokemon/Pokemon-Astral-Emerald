@@ -31,7 +31,7 @@ ChronoIsland_ResortGorgeous_EventScript_SelphyReturnHomeScene::
 	closedoor 39, 8
 	waitdooranim
 	removeobject LOCALID_RESORT_GORGEOUS_SELPHY
-	clearflag FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
+	clearflag FLAG_AE_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
 	setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 2
 	releaseall
 	end

@@ -14,7 +14,7 @@ KinIsland_MapScripts::
 
 KinIsland_OnTransition::
 	setflag FLAG_VISITED_KIN_ISLAND
-	call_if_set FLAG_RESCUED_LOSTELLE, KinIsland_EventScript_HideAntiBikers
+	call_if_set FLAG_AE_RESCUED_LOSTELLE, KinIsland_EventScript_HideAntiBikers
 	call_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_SetAntiBikersMovementAfterBikers
 	end
 

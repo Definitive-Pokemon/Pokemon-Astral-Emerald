@@ -5,7 +5,7 @@ FortuneIsland_RuinValley_MapScripts::
 	.byte 0
 
 FortuneIsland_RuinValley_OnLoad::
-	call_if_set FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE, FortuneIsland_RuinValley_EventScript_OpenDottedHoleDoor
+	call_if_set FLAG_AE_USED_CUT_ON_RUIN_VALLEY_BRAILLE, FortuneIsland_RuinValley_EventScript_OpenDottedHoleDoor
 	end
 
 FortuneIsland_RuinValley_EventScript_OpenDottedHoleDoor::
@@ -25,7 +25,7 @@ FortuneIsland_RuinValley_EventScript_Scientist::
 
 FortuneIsland_RuinValley_EventScript_DottedHoleDoor::
 	lockall
-	goto_if_set FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE, FortuneIsland_RuinValley_EventScript_DottedHoleDoorOpen
+	goto_if_set FLAG_AE_USED_CUT_ON_RUIN_VALLEY_BRAILLE, FortuneIsland_RuinValley_EventScript_DottedHoleDoorOpen
 	msgbox FortuneIsland_RuinValley_Text_CheckDoorMoreThoroughly, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, FortuneIsland_RuinValley_EventScript_IgnoreDottedHoleDoor
 	msgbox FortuneIsland_RuinValley_Text_SeveralDotsOnTheDoor

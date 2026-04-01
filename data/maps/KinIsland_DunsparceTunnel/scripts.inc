@@ -24,7 +24,7 @@ KinIsland_DunsparceTunnel_EventScript_MoveProspectorToWall::
 KinIsland_DunsparceTunnel_EventScript_Prospector::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL, KinIsland_DunsparceTunnel_EventScript_ProspectorAlreadyGaveNugget
+	goto_if_set FLAG_AE_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL, KinIsland_DunsparceTunnel_EventScript_ProspectorAlreadyGaveNugget
 	@specialvar VAR_RESULT, IsNationalPokedexEnabled
 	goto_if_eq VAR_RESULT, TRUE, KinIsland_DunsparceTunnel_EventScript_ProspectorStruckGold
 	msgbox KinIsland_DunsparceTunnel_Text_ProspectingForGold
@@ -38,7 +38,7 @@ KinIsland_DunsparceTunnel_EventScript_ProspectorStruckGold::
 	msgbox KinIsland_DunsparceTunnel_Text_StruckGoldThisIsForYou
 	giveitem ITEM_NUGGET
 	goto_if_eq VAR_RESULT, FALSE, KinIsland_DunsparceTunnel_EventScript_NoRoomForNugget
-	setflag FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL
+	setflag FLAG_AE_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL
 	goto KinIsland_DunsparceTunnel_EventScript_ProspectorAlreadyGaveNugget
 	end
 

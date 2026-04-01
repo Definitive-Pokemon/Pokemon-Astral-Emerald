@@ -27,7 +27,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FloeIsland_LoreleisHouse_EventScript_Lorelei",
-      "flag": "FLAG_HIDE_LORELEI_IN_HER_HOUSE"
+      "flag": "FLAG_AE_HIDE_LORELEI_IN_HER_HOUSE"
     },
     {
       "type": "object",

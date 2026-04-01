@@ -36,8 +36,8 @@ ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene::
 	end
 
 ChronoIsland_LostCave_Room10_EventScript_SetSelphyFound::
-	setflag FLAG_HIDE_LOST_CAVE_SELPHY
-	clearflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
+	setflag FLAG_AE_HIDE_LOST_CAVE_SELPHY
+	clearflag FLAG_AE_HIDE_RESORT_GORGEOUS_SELPHY
 	setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
 	setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1
 	return

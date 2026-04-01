@@ -10,8 +10,8 @@ ChronoIsland_ResortGorgeous_House_EventScript_Selphy::
 	lock
 	faceplayer
 	goto_if_set SHOWN_REQUESTED_MON, ChronoIsland_ResortGorgeous_House_EventScript_JustFulfilledRequest
-	goto_if_eq VAR_RESORT_GORGEOUS_REQUESTED_MON, 0xFFFF, ChronoIsland_ResortGorgeous_House_EventScript_RequestTookTooLong
-	goto_if_ne VAR_RESORT_GORGEOUS_REQUESTED_MON, SPECIES_NONE, ChronoIsland_ResortGorgeous_House_EventScript_CheckForRequestedMon
+	goto_if_eq VAR_AE_RESORT_GORGEOUS_REQUESTED_MON, 0xFFFF, ChronoIsland_ResortGorgeous_House_EventScript_RequestTookTooLong
+	goto_if_ne VAR_AE_RESORT_GORGEOUS_REQUESTED_MON, SPECIES_NONE, ChronoIsland_ResortGorgeous_House_EventScript_CheckForRequestedMon
 	msgbox ChronoIsland_ResortGorgeous_House_Text_PleaseHearMyWish
 	goto ChronoIsland_ResortGorgeous_House_EventScript_RequestMon
 	end
@@ -28,7 +28,7 @@ ChronoIsland_ResortGorgeous_House_EventScript_RequestTookTooLong::
 	end
 
 ChronoIsland_ResortGorgeous_House_EventScript_CheckForRequestedMon::
-	copyvar VAR_0x8004, VAR_RESORT_GORGEOUS_REQUESTED_MON
+	copyvar VAR_0x8004, VAR_AE_RESORT_GORGEOUS_REQUESTED_MON
 	@specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	goto_if_eq VAR_RESULT, TRUE, ChronoIsland_ResortGorgeous_House_EventScript_ShowRequestedMon
 	goto ChronoIsland_ResortGorgeous_House_EventScript_RequestMon
@@ -58,7 +58,7 @@ ChronoIsland_ResortGorgeous_House_EventScript_ShowRequestedMon::
 	@giveitem VAR_RESORT_GORGEOUS_REWARD
 	goto_if_eq VAR_RESULT, FALSE, ChronoIsland_ResortGorgeous_House_EventScript_NoRoomForReward
 	setflag SHOWN_REQUESTED_MON
-	setvar VAR_RESORT_GORGEOUS_REQUESTED_MON, SPECIES_NONE
+	setvar VAR_AE_RESORT_GORGEOUS_REQUESTED_MON, SPECIES_NONE
 	release
 	end
 
@@ -96,7 +96,7 @@ ChronoIsland_ResortGorgeous_House_EventScript_NoRoomForReward::
 
 	msgbox ChronoIsland_ResortGorgeous_House_Text_OhHowDisappointing
 	setflag SHOWN_REQUESTED_MON
-	setvar VAR_RESORT_GORGEOUS_REQUESTED_MON, SPECIES_NONE
+	setvar VAR_AE_RESORT_GORGEOUS_REQUESTED_MON, SPECIES_NONE
 	release
 	end
 

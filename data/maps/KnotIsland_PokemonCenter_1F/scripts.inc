@@ -258,7 +258,7 @@ KnotIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire::
 	waitmovement 0
 	msgbox KnotIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou
 	@setflag FLAG_SYS_CAN_LINK_WITH_RS
-	setflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
+	setflag FLAG_AE_HIDE_LORELEI_IN_HER_HOUSE
 	@setvar VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F, 6
 	special InitRoamer
 	release
@@ -326,7 +326,7 @@ KnotIsland_PokemonCenter_1F_EventScript_CelioRequestRuby::
 	applymovement LOCALID_CELIO, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox KnotIsland_PokemonCenter_1F_Text_NeedsSpecialGemstone
-	setvar VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 1
+	setvar VAR_AE_MAP_SCENE_MT_EMBER_EXTERIOR, 1
 	setvar VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F, 4
 	release
 	end
