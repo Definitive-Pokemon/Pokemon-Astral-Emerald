@@ -108,21 +108,21 @@
 #define VAR_MAP_SCENE_KIN_ISLAND                       0x4056
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
-#define VAR_MAP_SCENE_ICEFALL_CAVE_BACK                  0x4059
+#define VAR_AE_MAP_SCENE_ICEFALL_CAVE_BACK                  0x4059
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
 #define VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1           0x405B
 #define VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F       0x405C
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
-#define VAR_MAP_SCENE_TRAINER_TOWER                      0x405F
+#define VAR_AE_MAP_SCENE_TRAINER_TOWER                      0x405F
 #define VAR_ROUTE101_STATE                               0x4060
-#define VAR_MAP_SCENE_MT_EMBER_EXTERIOR                  0x4061
+#define VAR_AE_MAP_SCENE_MT_EMBER_EXTERIOR                  0x4061
 #define VAR_MAP_SCENE_FLOE_ISLAND                        0x4062
 #define VAR_ROUTE104_STATE                               0x4063
 #define VAR_MAP_SCENE_FORTUNE_ISLAND_POKEMON_CENTER_1F       0x4064
-#define VAR_MAP_SCENE_ROCKET_WAREHOUSE                   0x4065
+#define VAR_AE_MAP_SCENE_MT_EMBER_EXTERIOR                   0x4065
 #define VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS        0x4066 
-#define VAR_RESORT_GORGEOUS_REQUESTED_MON                0x4067 
+#define VAR_AE_RESORT_GORGEOUS_REQUESTED_MON                0x4067 
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_ROUTE111_STATE                               0x406A // Unused Var

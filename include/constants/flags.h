@@ -58,11 +58,11 @@
 #define FLAG_HIDE_KNOT_ISLAND_KINDLE_ROAD_MAX_REPEL    0x23 
 #define FLAG_HIDE_KNOT_ISLAND_KINDLE_ROAD_CARBOS    0x24 
 #define FLAG_HIDE_KNOT_ISLAND_POKECENTER_CELIO    0x25 
-#define FLAG_SYS_SEVII_MAP_123    0x26
-#define FLAG_HIDE_MT_EMBER_EXTERIOR_ROCKETS    0x27
-#define FLAG_HIDE_MT_EMBER_EXTERIOR_ULTRA_BALL    0x28 
-#define FLAG_HIDE_MT_EMBER_EXTERIOR_FIRE_STONE    0x29 
-#define FLAG_HIDE_MT_EMBER_EXTERIOR_DIRE_HIT    0x2A 
+#define FLAG_AE_SYS_SEVII_MAP_123    0x26
+#define FLAG_AE_HIDE_MT_EMBER_EXTERIOR_ROCKETS    0x27
+#define FLAG_AE_HIDE_MT_EMBER_EXTERIOR_ULTRA_BALL    0x28 
+#define FLAG_AE_HIDE_MT_EMBER_EXTERIOR_FIRE_STONE    0x29 
+#define FLAG_AE_HIDE_MT_EMBER_EXTERIOR_DIRE_HIT    0x2A 
 #define FLAG_HIDE_BOON_ISLAND_REVIVE    0x2B 
 #define FLAG_BOON_ISLAND_SHOP_EXPANDED_3    0x2C
 #define FLAG_BOON_ISLAND_SHOP_EXPANDED_2    0x2D
@@ -74,19 +74,19 @@
 #define FLAG_HIDE_KIN_ISLAND_BIKERS    0x33 
 #define FLAG_HIDE_KIN_ISLAND_ZINC    0x34
 #define FLAG_HIDE_KIN_ISLAND_LONE_BIKER    0x35 
-#define FLAG_SYS_SEVII_MAP_4567    0x36 
-#define FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER    0x37 
-#define FLAG_NO_ROOM_FOR_JOYFUL_GAME_CORNER_MOON_STONE    0x38
+#define FLAG_AE_SYS_SEVII_MAP_4567    0x36 
+#define FLAG_AE_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER    0x37 
+#define FLAG_AE_NO_ROOM_FOR_JOYFUL_GAME_CORNER_MOON_STONE    0x38
 #define FLAG_GOT_FULL_RESTORE_FROM_KIN_ISLAND_DEFENDER    0x39 
 #define FLAG_HIDE_KIN_ISLAND_BERRY_FOREST_MAX_ETHER    0x3A 
 #define FLAG_HIDE_KIN_ISLAND_BERRY_FOREST_FULL_HEAL    0x3B 
 #define FLAG_HIDE_KIN_ISLAND_BERRY_FOREST_MAX_ELIXIR    0x3C 
-#define FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST    0x3D 
-#define FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL    0x3E 
-#define FLAG_HIDE_LOSTELLE_IN_HER_HOME    0x3F 
-#define FLAG_RESCUED_LOSTELLE    0x40 
-#define FLAG_GOT_TOGEPI_EGG    0x41 
-#define FLAG_NO_ROOM_FOR_TOGEPI_EGG    0x42 
+#define FLAG_AE_HIDE_LOSTELLE_IN_BERRY_FOREST    0x3D 
+#define FLAG_AE_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL    0x3E 
+#define FLAG_AE_HIDE_LOSTELLE_IN_HER_HOME    0x3F 
+#define FLAG_AE_RESCUED_LOSTELLE    0x40 
+#define FLAG_AE_GOT_TOGEPI_EGG    0x41 
+#define FLAG_AE_NO_ROOM_FOR_TOGEPI_EGG    0x42 
 #define FLAG_HIDE_FLOE_ISLAND_STAR_PIECE    0x43
 #define FLAG_HIDE_FLOE_ISLAND_STARDUST    0x44
 #define FLAG_HIDE_FLOE_ISLAND_RIVAL    0x45
@@ -94,12 +94,12 @@
 #define FLAG_HIDE_FLOE_ISLAND_ICEFALL_CAVE_1F_HM07    0x47
 #define FLAG_HIDE_FLOE_ISLAND_ICEFALL_CAVE_B1F_FULL_RESTORE    0x48
 #define FLAG_HIDE_FLOE_ISLAND_ICEFALL_CAVE_B1F_NEVER_MELT_ICE    0x49
-#define FLAG_HIDE_ICEFALL_CAVE_ROCKETS    0x4A 
-#define FLAG_HIDE_ICEFALL_CAVE_LORELEI    0x4B 
-#define FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE    0x4C 
-#define FLAG_TALKED_TO_LORELEI_AFTER_WAREHOUSE    0x4D 
-#define FLAG_HIDE_LORELEI_IN_HER_HOUSE    0x4E 
-#define FLAG_GOT_NEST_BALL_FROM_WATER_PATH_HOUSE_1    0x4F 
+#define FLAG_AE_HIDE_ICEFALL_CAVE_ROCKETS    0x4A 
+#define FLAG_AE_HIDE_ICEFALL_CAVE_LORELEI    0x4B 
+#define FLAG_AE_DEFEATED_ROCKETS_IN_WAREHOUSE    0x4C 
+#define FLAG_AE_TALKED_TO_LORELEI_AFTER_WAREHOUSE    0x4D 
+#define FLAG_AE_HIDE_LORELEI_IN_HER_HOUSE    0x4E 
+#define FLAG_AE_GOT_NEST_BALL_FROM_WATER_PATH_HOUSE_1    0x4F 
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -732,7 +732,7 @@
 //(FLAG_HIDDEN_ITEMS_START + 0xAE)
 //(FLAG_HIDDEN_ITEMS_START + 0xAF)
 #define FLAG_HIDE_RUBY  0x2A3
-#define FLAG_HIDE_SAPPHIRE  0x2A4
+#define FLAG_AE_HIDE_SAPPHIRE  0x2A4
 #define FLAG_RECOVERED_SAPPHIRE  0x2A5
 #define FLAG_GOT_RUBY  0x2A6
 #define FLAG_SYS_PC_STORAGE_DISABLED  0x2A7 
@@ -1227,7 +1227,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 // Vanilla Sevii flags part 2
-#define FLAG_HIDE_LOST_CAVE_SELPHY                                  0x493 
+#define FLAG_AE_HIDE_LOST_CAVE_SELPHY                                  0x493 
 #define FLAG_HIDE_CHRONO_ISLAND_LOST_CAVE_ROOM10_SILK_SCARF           0x494 
 #define FLAG_HIDE_CHRONO_ISLAND_LOST_CAVE_ROOM11_LAX_INCENSE          0x495 
 #define FLAG_HIDE_CHRONO_ISLAND_LOST_CAVE_ROOM12_SEA_INCENSE                                           0x496
@@ -1236,38 +1236,38 @@
 #define FLAG_HIDE_CHRONO_ISLAND_ROCKETS                                           0x499 
 #define FLAG_HIDE_CHRONO_ISLAND_MEADOW_MAX_POTION                                           0x49A 
 #define FLAG_HIDE_CHRONO_ISLAND_MEADOW_PP_UP                                           0x49B 
-#define FLAG_UNLOCKED_ROCKET_WAREHOUSE                                           0x49C 
-#define FLAG_UNLOCKED_ROCKET_WAREHOUSE                                           0x49D 
+#define FLAG_AE_UNLOCKED_ROCKET_WAREHOUSE                                           0x49C 
+#define FLAG_UNUSEDUIB                                           0x49D 
 #define FLAG_HIDE_CHRONO_ISLAND_ROCKET_WAREHOUSE_BIG_PEARL                                           0x49E
 #define FLAG_HIDE_CHRONO_ISLAND_ROCKET_WAREHOUSE_TM36                                           0x49F 
 #define FLAG_HIDE_CHRONO_ISLAND_ROCKET_WAREHOUSE_UP_GRADE                                           0x4A0 
-#define FLAG_LEARNED_YES_NAH_CHANSEY                                           0x4A1 
-#define FLAG_HIDE_DOTTED_HOLE_SCIENTIST              0x4A2 
+#define FLAG_AE_LEARNED_YES_NAH_CHANSEY                                           0x4A1 
+#define FLAG_AE_HIDE_DOTTED_HOLE_SCIENTIST              0x4A2 
 #define FLAG_HIDE_FORTUNE_ISLAND_OUTCAST_ISLAND_PP_UP                                           0x4A3 
 #define FLAG_HIDE_FORTUNE_ISLAND_POKECENTER_RIVAL                                           0x4A4 
-#define FLAG_HIDE_RUIN_VALLEY_SCIENTIST                                           0x4A5 
+#define FLAG_AE_HIDE_RUIN_VALLEY_SCIENTIST                                           0x4A5 
 #define FLAG_HIDE_FORTUNE_ISLAND_RUIN_VALLEY_HP_UP                                           0x4A6 
 #define FLAG_HIDE_FORTUNE_ISLAND_RUIN_VALLEY_FULL_RESTORE                                           0x4A7 
 #define FLAG_HIDE_FORTUNE_ISLAND_RUIN_VALLEY_SUN_STONE                                           0x4A8 
-#define FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE                                           0x4A9 
+#define FLAG_AE_USED_CUT_ON_RUIN_VALLEY_BRAILLE                                           0x4A9 
 #define FLAG_HIDE_FORTUNE_ISLAND_WATER_PATH_ELIXIR                                           0x4AA 
 #define FLAG_HIDE_FORTUNE_ISLAND_WATER_PATH_DRAGON_SCALE                                           0x4AB 
-#define FLAG_HIDE_MG_DELIVERYMEN                                           0x4AC // TODO
+#define FLAG_AE_HIDE_MG_DELIVERYMEN                                           0x4AC // TODO
 #define FLAG_HIDE_CHRONO_ISLAND_MEMORIAL_PILLAR_METAL_COAT                                           0x4AD 
-#define FLAG_GOT_TM42_AT_MEMORIAL_PILLAR                                           0x4AE 
-#define FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR                                           0x4AF 
-#define FLAG_HIDE_RESORT_GORGEOUS_SELPHY                                           0x4B0 
-#define FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY                                           0x4B1
-#define FLAG_HIDE_SELPHYS_BUTLER                                           0x4B2 
-#define FLAG_SYS_UNLOCKED_TANOBY_RUINS                                           0x4B3 
-#define FLAG_HIDE_QUEST_ISLAND_SEVAULT_CANYON_KINGS_ROCK                                           0x4B4 
-#define FLAG_HIDE_QUEST_ISLAND_SEVAULT_CANYON_MAX_ELIXIR                                           0x4B5 
-#define FLAG_HIDE_QUEST_ISLAND_SEVAULT_CANYON_NUGGET                                           0x4B6 
+#define FLAG_AE_GOT_TM42_AT_MEMORIAL_PILLAR                                           0x4AE 
+#define FLAG_AE_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR                                           0x4AF 
+#define FLAG_AE_HIDE_RESORT_GORGEOUS_SELPHY                                           0x4B0 
+#define FLAG_AE_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY                                           0x4B1
+#define FLAG_AE_HIDE_SELPHYS_BUTLER                                           0x4B2 
+#define FLAG_AE_SYS_UNLOCKED_TANOBY_RUINS                                           0x4B3 
+#define FLAG_AE_HIDE_QUEST_ISLAND_SEVAULT_CANYON_KINGS_ROCK                                           0x4B4 
+#define FLAG_AE_HIDE_QUEST_ISLAND_SEVAULT_CANYON_MAX_ELIXIR                                           0x4B5 
+#define FLAG_AE_HIDE_QUEST_ISLAND_SEVAULT_CANYON_NUGGET                                           0x4B6 
 #define FLAG_HIDE_QUEST_ISLAND_SEVAULT_CANYON_HOUSE_LUCKY_PUNCH                                           0x4B7 
 #define FLAG_WORLD_MAP_QUEST_ISLAND_SEVAULT_CANYON_TANOBY_KEY                                           0x4B8 
 
 #define FLAG_HIDE_BOON_ISLAND_BEAUTY                                           0x4B9 // Unused Flag
-#define FLAG_HIDE_SAPPHIRE                                           0x4BA // Unused Flag
+#define FLAG_AE_HIDE_SAPPHIRE                                           0x4BA // Unused Flag
 #define FLAG_HIDE_BOON_ISLAND_WOMAN                                           0x4BB // Unused Flag
 #define FLAG_HIDE_CHRONO_ISLAND_ROCKET_WAREHOUSE_PEARL                                           0x4BC // Unused Flag
 #define FLAG_KNOT_ISLAND_HIDE_BILL                                           0x4BD // Unused Flag

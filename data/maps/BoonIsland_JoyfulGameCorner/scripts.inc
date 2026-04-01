@@ -10,7 +10,7 @@ BoonIsland_JoyfulGameCorner_MapScripts::
 	.byte 0
 
 BoonIsland_JoyfulGameCorner_OnTransition::
-	call_if_set FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER, BoonIsland_JoyfulGameCorner_EventScript_SetLostelleReturnedPos
+	call_if_set FLAG_AE_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER, BoonIsland_JoyfulGameCorner_EventScript_SetLostelleReturnedPos
 	end
 
 BoonIsland_JoyfulGameCorner_EventScript_SetLostelleReturnedPos::
@@ -128,7 +128,7 @@ BoonIsland_JoyfulGameCorner_Movement_BikerLookAround::
 BoonIsland_JoyfulGameCorner_EventScript_InfoMan::
 	lock
 	faceplayer
-	goto_if_set FLAG_RESCUED_LOSTELLE, BoonIsland_JoyfulGameCorner_EventScript_GetGamesGoingSoon
+	goto_if_set FLAG_AE_RESCUED_LOSTELLE, BoonIsland_JoyfulGameCorner_EventScript_GetGamesGoingSoon
 	msgbox BoonIsland_JoyfulGameCorner_Text_NotRunningAnyGamesToday
 	release
 	end
@@ -142,7 +142,7 @@ BoonIsland_JoyfulGameCorner_EventScript_GetGamesGoingSoon::
 BoonIsland_JoyfulGameCorner_EventScript_LostellesDaddy::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER, BoonIsland_JoyfulGameCorner_EventScript_GetGameCornerRunning
+	goto_if_set FLAG_AE_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER, BoonIsland_JoyfulGameCorner_EventScript_GetGameCornerRunning
 	goto_if_eq VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 3, BoonIsland_JoyfulGameCorner_EventScript_GiveDaddyMeteorite
 	msgbox BoonIsland_JoyfulGameCorner_Text_PleaseGoToKinIsland
 	release
@@ -165,7 +165,7 @@ BoonIsland_JoyfulGameCorner_EventScript_ReceiveMoonStone::
 	checkitemspace ITEM_MOON_STONE
 	goto_if_eq VAR_RESULT, FALSE, BoonIsland_JoyfulGameCorner_EventScript_NoRoomForMoonStone
 	@additem ITEM_MOON_STONE
-	setflag FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER
+	setflag FLAG_AE_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER
 	giveitem ITEM_MOON_STONE
 	@msgreceiveditem BoonIsland_JoyfulGameCorner_Text_ReceivedMoonStoneFromLostellesDaddy, ITEM_MOON_STONE
 	release

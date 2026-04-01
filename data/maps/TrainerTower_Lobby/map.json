@@ -119,7 +119,7 @@
       "x": 9,
       "y": 7,
       "elevation": 3,
-      "var": "VAR_MAP_SCENE_TRAINER_TOWER",
+      "var": "VAR_AE_MAP_SCENE_TRAINER_TOWER",
       "var_value": "0",
       "script": "TrainerTower_Lobby_EventScript_EntryTrigger"
     }

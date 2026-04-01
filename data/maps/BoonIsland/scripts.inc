@@ -10,7 +10,7 @@ BoonIsland_OnTransition::
 BoonIsland_EventScript_SetShopState::
 	@goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, BoonIsland_EventScript_SetShopStateAfterHoennLink
 	goto_if_set FLAG_SYS_GAME_CLEAR, BoonIsland_EventScript_SetShopStateAfterChampion
-	goto_if_set FLAG_RESCUED_LOSTELLE, BoonIsland_EventScript_SetShopStateAfterLostelleRescue
+	goto_if_set FLAG_AE_RESCUED_LOSTELLE, BoonIsland_EventScript_SetShopStateAfterLostelleRescue
 	goto BoonIsland_EventScript_SetShopStateDefault
 	end
 
@@ -23,7 +23,7 @@ BoonIsland_EventScript_SetShopStateAfterHoennLink::
 
 BoonIsland_EventScript_SetShopStateAfterChampion::
 	goto_if_unset FLAG_BOON_ISLAND_SHOP_INTRODUCED, BoonIsland_EventScript_SetShopInitial
-	goto_if_unset FLAG_RESCUED_LOSTELLE, BoonIsland_EventScript_SetShopInitial
+	goto_if_unset FLAG_AE_RESCUED_LOSTELLE, BoonIsland_EventScript_SetShopInitial
 	goto_if_unset FLAG_BOON_ISLAND_SHOP_EXPANDED_1, BoonIsland_EventScript_SetShopExpanded1
 	goto BoonIsland_EventScript_SetShopExpanded2
 	end

@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_BerryForest_EventScript_Lostelle",
-      "flag": "FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST",
+      "flag": "FLAG_AE_HIDE_LOSTELLE_IN_BERRY_FOREST",
       "type": "object"
     },
     {

@@ -15,7 +15,7 @@ QuestIsland_SevaultCanyon_TanobyKey_MapScripts::
 
 QuestIsland_SevaultCanyon_TanobyKey_OnTransition::
 	@setworldmapflag FLAG_WORLD_MAP_QUEST_ISLAND_SEVAULT_CANYON_TANOBY_KEY
-	call_if_set FLAG_SYS_UNLOCKED_TANOBY_RUINS, QuestIsland_SevaultCanyon_TanobyKey_EventScript_MoveBouldersToSolvedPos
+	call_if_set FLAG_AE_SYS_UNLOCKED_TANOBY_RUINS, QuestIsland_SevaultCanyon_TanobyKey_EventScript_MoveBouldersToSolvedPos
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_2, 0
 	setvar VAR_TEMP_3, 0
@@ -134,7 +134,7 @@ QuestIsland_SevaultCanyon_TanobyKey_EventScript_SwitchAlreadyPressed::
 QuestIsland_SevaultCanyon_TanobyKey_EventScript_PuzzleSolved::
 	call QuestIsland_SevaultCanyon_TanobyKey_EventScript_PuzzleSolvedShakeScreen
 	msgbox QuestIsland_SevaultCanyon_TanobyKey_Text_MysteriousRumbleFarAway
-	setflag FLAG_SYS_UNLOCKED_TANOBY_RUINS
+	setflag FLAG_AE_SYS_UNLOCKED_TANOBY_RUINS
 	releaseall
 	end
 QuestIsland_SevaultCanyon_TanobyKey_Text_MysteriousRumbleFarAway::

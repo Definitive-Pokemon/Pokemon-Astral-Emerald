@@ -8,7 +8,7 @@ MtEmber_Exterior_MapScripts::
 
 MtEmber_Exterior_OnTransition::
 	@setworldmapflag FLAG_WORLD_MAP_MT_EMBER_EXTERIOR
-	call_if_eq VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 2, MtEmber_Exterior_EventScript_RocketsFaceDown
+	call_if_eq VAR_AE_MAP_SCENE_MT_EMBER_EXTERIOR, 2, MtEmber_Exterior_EventScript_RocketsFaceDown
 	end
 
 MtEmber_Exterior_EventScript_RocketsFaceDown::
@@ -106,7 +106,7 @@ MtEmber_Exterior_EventScript_RocketPasswordScene::
 	waitmovement 0
 	call MtEmber_Exterior_EventScript_RocketsFaceDown
 	msgbox MtEmber_Exterior_Text_SnoopsBeenListeningIn
-	setvar VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 2
+	setvar VAR_AE_MAP_SCENE_MT_EMBER_EXTERIOR, 2
 	releaseall
 	end
 

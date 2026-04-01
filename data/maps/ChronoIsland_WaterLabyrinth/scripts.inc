@@ -4,8 +4,8 @@ ChronoIsland_WaterLabyrinth_MapScripts::
 ChronoIsland_WaterLabyrinth_EventScript_EggGentleman::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_TOGEPI_EGG, ChronoIsland_WaterLabyrinth_EventScript_PostEggComment
-	goto_if_set FLAG_NO_ROOM_FOR_TOGEPI_EGG, ChronoIsland_WaterLabyrinth_EventScript_ReturnForEgg
+	goto_if_set FLAG_AE_GOT_TOGEPI_EGG, ChronoIsland_WaterLabyrinth_EventScript_PostEggComment
+	goto_if_set FLAG_AE_NO_ROOM_FOR_TOGEPI_EGG, ChronoIsland_WaterLabyrinth_EventScript_ReturnForEgg
 	msgbox ChronoIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons
 	specialvar VAR_RESULT, GetLeadMonFriendshipScore
 	goto_if_eq VAR_RESULT, 6, ChronoIsland_WaterLabyrinth_EventScript_LeadMonMaxFriendship
@@ -26,7 +26,7 @@ ChronoIsland_WaterLabyrinth_EventScript_LeadMonMaxFriendship::
 ChronoIsland_WaterLabyrinth_EventScript_TryGiveEgg::
 	getpartysize
 	goto_if_eq VAR_RESULT, PARTY_SIZE, ChronoIsland_WaterLabyrinth_EventScript_NoRoomForEgg
-	setflag FLAG_GOT_TOGEPI_EGG
+	setflag FLAG_AE_GOT_TOGEPI_EGG
 	giveegg SPECIES_TOGEPI
 
 	playfanfare MUS_LEVEL_UP
@@ -52,7 +52,7 @@ ChronoIsland_WaterLabyrinth_EventScript_PostEggComment::
 	end
 
 ChronoIsland_WaterLabyrinth_EventScript_NoRoomForEgg::
-	setflag FLAG_NO_ROOM_FOR_TOGEPI_EGG
+	setflag FLAG_AE_NO_ROOM_FOR_TOGEPI_EGG
 	msgbox ChronoIsland_WaterLabyrinth_Text_DontHaveSpaceInYourParty
 	release
 	end
