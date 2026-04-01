@@ -1332,15 +1332,14 @@
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
 #define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
 
-#define FLAG_UNUSED_0x4F9                                           0x4F9 // Unused Flag
-#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
-
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
 #define FLAG_DEFEATED_ELITE_4_GLACIA                                0x4FD
 #define FLAG_DEFEATED_ELITE_4_DRAKE                                 0x4FE
 
 // Expansion Setup Flags
+// I_ORAS_DOWSING_FLAG												0x4F9 // Replace 0 with an unused flag to enable the Dowsing Machine mechanic from ORAS.
+// FLAG_TEXT_SPEED_INSTANT											0x4FA // Use this if you want to toggle instant text speed
 // DN_FLAG_SEARCHING                        			            0x4FF // Searching for mon
 // DN_FLAG_DEXNAV_GET												0x500 // DexNav shows in start menu
 // DN_FLAG_DETECTOR_MODE											0x501 // Allow player to find hidden mons
