@@ -1334,7 +1334,11 @@
 #define FLAG_DEFEATED_ELITE_4_GLACIA                                0x4FD
 #define FLAG_DEFEATED_ELITE_4_DRAKE                                 0x4FE
 
-#define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
+// Expansion Setup Flags
+// DN_FLAG_SEARCHING                        			            0x4FF // Searching for mon
+// DN_FLAG_DEXNAV_GET												0x500 // DexNav shows in start menu
+// DN_FLAG_DETECTOR_MODE											0x501 // Allow player to find hidden mons
+
 
 // Trainer Flags
 // Trainer flags occupy 0x500 - 0x85F, the last 9 of which are unused
