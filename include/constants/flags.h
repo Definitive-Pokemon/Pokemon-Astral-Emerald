@@ -1333,7 +1333,7 @@
 
 // Expansion Setup Flags
 // I_ORAS_DOWSING_FLAG												0x4F9 // Replace 0 with an unused flag to enable the Dowsing Machine mechanic from ORAS.
-// FLAG_TEXT_SPEED_INSTANT											0x4FA // Use this if you want to toggle instant text speed
+#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
 // DN_FLAG_SEARCHING                        			            0x4FF // Searching for mon
 // DN_FLAG_DEXNAV_GET												0x500 // DexNav shows in start menu
 // DN_FLAG_DETECTOR_MODE											0x501 // Allow player to find hidden mons
