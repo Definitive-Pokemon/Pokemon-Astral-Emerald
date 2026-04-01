@@ -19,7 +19,7 @@ ChronoIsland_LostCave_Room10_OnFrame::
 
 ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	applymovement LOCALID_LOST_CAVE_SELPHY, ChronoIsland_LostCave_Room10_Movement_SelphyWander
 	waitmovement 0
 	delay 100

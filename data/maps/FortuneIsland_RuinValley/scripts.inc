@@ -9,7 +9,7 @@ FortuneIsland_RuinValley_OnLoad::
 	end
 
 FortuneIsland_RuinValley_EventScript_OpenDottedHoleDoor::
-	setmetatile 24, 24, METATILE_SeviiIslands67_DottedHoleDoor_Open, 0
+	@setmetatile 24, 24, METATILE_SeviiIslands67_DottedHoleDoor_Open, 0
 	return
 
 FortuneIsland_RuinValley_EventScript_Scientist::
@@ -29,7 +29,7 @@ FortuneIsland_RuinValley_EventScript_DottedHoleDoor::
 	msgbox FortuneIsland_RuinValley_Text_CheckDoorMoreThoroughly, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, FortuneIsland_RuinValley_EventScript_IgnoreDottedHoleDoor
 	msgbox FortuneIsland_RuinValley_Text_SeveralDotsOnTheDoor
-	braillemessage Braille_Text_Cut
+	@braillemessage Braille_Text_Cut
 	waitbuttonpress
 	releaseall
 	end
@@ -43,6 +43,88 @@ FortuneIsland_RuinValley_EventScript_IgnoreDottedHoleDoor::
 	msgbox FortuneIsland_RuinValley_Text_LeftDoorAlone
 	releaseall
 	end
+
+FortuneIsland_RuinValley_EventScript_Stanly::
+	trainerbattle_single TRAINER_RUIN_MANIAC_STANLY, FortuneIsland_RuinValley_Text_StanlyIntro, FortuneIsland_RuinValley_Text_StanlyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_RuinValley_EventScript_StanlyRematch
+	msgbox FortuneIsland_RuinValley_Text_StanlyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_StanlyRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_RuinValley_Text_StanlyRematchIntro, FortuneIsland_RuinValley_Text_StanlyDefeat
+	msgbox FortuneIsland_RuinValley_Text_StanlyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_Foster::
+	trainerbattle_single TRAINER_RUIN_MANIAC_FOSTER, FortuneIsland_RuinValley_Text_FosterIntro, FortuneIsland_RuinValley_Text_FosterDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_RuinValley_EventScript_FosterRematch
+	msgbox FortuneIsland_RuinValley_Text_FosterPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_FosterRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_RuinValley_Text_FosterRematchIntro, FortuneIsland_RuinValley_Text_FosterDefeat
+	msgbox FortuneIsland_RuinValley_Text_FosterPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_Larry::
+	trainerbattle_single TRAINER_RUIN_MANIAC_LARRY, FortuneIsland_RuinValley_Text_LarryIntro, FortuneIsland_RuinValley_Text_LarryDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_RuinValley_EventScript_LarryRematch
+	msgbox FortuneIsland_RuinValley_Text_LarryPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_LarryRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_RuinValley_Text_LarryRematchIntro, FortuneIsland_RuinValley_Text_LarryDefeat
+	msgbox FortuneIsland_RuinValley_Text_LarryPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_Daryl::
+	trainerbattle_single TRAINER_HIKER_DARYL, FortuneIsland_RuinValley_Text_DarylIntro, FortuneIsland_RuinValley_Text_DarylDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_RuinValley_EventScript_DarylRematch
+	msgbox FortuneIsland_RuinValley_Text_DarylPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_DarylRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_RuinValley_Text_DarylRematchIntro, FortuneIsland_RuinValley_Text_DarylDefeat
+	msgbox FortuneIsland_RuinValley_Text_DarylPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_Hector::
+	trainerbattle_single TRAINER_POKEMANIAC_HECTOR, FortuneIsland_RuinValley_Text_HectorIntro, FortuneIsland_RuinValley_Text_HectorDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_RuinValley_EventScript_HectorRematch
+	msgbox FortuneIsland_RuinValley_Text_HectorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_EventScript_HectorRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_RuinValley_Text_HectorRematchIntro, FortuneIsland_RuinValley_Text_HectorDefeat
+	msgbox FortuneIsland_RuinValley_Text_HectorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_RuinValley_Text_StanlyRematchIntro::
+	.string "There appear to be many secrets\n"
+	.string "still unsolved in this world.$"
+
+FortuneIsland_RuinValley_Text_FosterRematchIntro::
+	.string "Hi, didn't we meet before?\n"
+	.string "What compelled you to come back?$"
+
+FortuneIsland_RuinValley_Text_LarryRematchIntro::
+	.string "It's been said that there are\n"
+	.string "mysterious stones on this island.\p"
+	.string "Have you discovered anything since\n"
+	.string "we last met?$"
+
+FortuneIsland_RuinValley_Text_DarylRematchIntro::
+	.string "A rematch with you, so high up!$"
+
+FortuneIsland_RuinValley_Text_HectorRematchIntro::
+	.string "I'm pretty familiar with the land\n"
+	.string "around these parts.$"
+
 FortuneIsland_RuinValley_Text_CantFigureOutHowToGetInside::
     .string "I can't figure out how I'm supposed\n"
     .string "to get inside.$"

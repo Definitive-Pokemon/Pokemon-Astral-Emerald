@@ -8,7 +8,7 @@ QuestIsland_House_Room1_MapScripts::
 	.byte 0
 
 QuestIsland_House_Room1_OnTransition::
-	special ValidateEReaderTrainer
+	@special ValidateEReaderTrainer
 	call_if_eq VAR_RESULT, 0, QuestIsland_House_Room1_EventScript_SetTrainerVisitingLayout
 	call_if_ne VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 0, QuestIsland_House_Room1_EventScript_MoveOldWomanToDoor
 	end
@@ -17,7 +17,7 @@ QuestIsland_House_Room1_EventScript_SetTrainerVisitingLayout::
 	setvar TRAINER_VISITING, TRUE
 	setobjectxyperm LOCALID_QUEST_ISLAND_HOUSE_OLD_WOMAN, 4, 2
 	setobjectmovementtype LOCALID_QUEST_ISLAND_HOUSE_OLD_WOMAN, MOVEMENT_TYPE_FACE_DOWN
-	setmaplayoutindex LAYOUT_QUEST_ISLAND_HOUSE_ROOM1_DOOR_OPEN
+	@setmaplayoutindex LAYOUT_QUEST_ISLAND_HOUSE_ROOM1_DOOR_OPEN
 	return
 
 QuestIsland_House_Room1_EventScript_MoveOldWomanToDoor::
@@ -33,7 +33,7 @@ QuestIsland_House_Room1_OnFrame::
 
 QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	applymovement LOCALID_PLAYER, QuestIsland_House_Room1_Movement_PlayerReEnterRoom
 	waitmovement 0
 	applymovement LOCALID_QUEST_ISLAND_HOUSE_OLD_WOMAN, QuestIsland_House_Room1_Movement_OldWomanWalkBehindPlayer
@@ -73,7 +73,7 @@ QuestIsland_House_Room1_Movement_OldWomanWalkBehindPlayer::
 QuestIsland_House_Room1_EventScript_OldWoman::
 	lock
 	faceplayer
-	special ValidateEReaderTrainer
+	@special ValidateEReaderTrainer
 	call_if_eq VAR_RESULT, 1, QuestIsland_House_Room1_EventScript_InvalidVisitingTrainer
 	goto_if_eq TRAINER_VISITING, TRUE, QuestIsland_House_Room1_EventScript_TrainerVisiting
 	msgbox QuestIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles
@@ -95,10 +95,10 @@ QuestIsland_House_Room1_EventScript_TrainerVisiting::
 	msgbox QuestIsland_House_Room1_Text_SaveProgressBeforeBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, QuestIsland_House_Room1_EventScript_DeclineBattle
 	special LoadPlayerParty
-	call EventScript_AskSaveGame
+	@call EventScript_AskSaveGame
 	goto_if_eq VAR_RESULT, 0, QuestIsland_House_Room1_EventScript_DeclineBattle
 	special SavePlayerParty
-	special ReducePlayerPartyToThree
+	@special ReducePlayerPartyToThree
 	msgbox QuestIsland_House_Room1_Text_DontHoldAnythingBack
 	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, QuestIsland_House_Room1_EventScript_EnterBattleRoomNorth
@@ -171,6 +171,7 @@ QuestIsland_House_Room1_Movement_OldWomanMoveAsideRight::
 QuestIsland_House_Room1_EventScript_Box::
 	msgbox QuestIsland_House_Room1_Text_SlightBreezeAroundBox, MSGBOX_SIGN
 	end
+
 QuestIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles::
     .string "I may not look like much now,\n"
     .string "but when I was younger…\p"

@@ -11,7 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
+  
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -56,7 +56,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 4,
       "y": 34,
       "elevation": 3,
@@ -98,7 +98,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
       "x": 11,
       "y": 17,
       "elevation": 5,
@@ -109,14 +109,6 @@
       "trainer_sight_or_berry_tree_id": "1",
       "script": "QuestIsland_SevaultCanyon_Entrance_EventScript_Mason",
       "flag": "0"
-    },
-    {
-      "type": "clone",
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
-      "x": 7,
-      "y": -2,
-      "target_local_id": "LOCALID_SWORDS_DANCE_TUTOR",
-      "target_map": "MAP_QUEST_ISLAND"
     }
   ],
   "warp_events": [],

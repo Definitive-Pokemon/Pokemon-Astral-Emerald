@@ -1,10 +1,92 @@
 FortuneIsland_OutcastIsland_MapScripts::
 	.byte 0
 
+FortuneIsland_OutcastIsland_EventScript_Tylor::
+	trainerbattle_single TRAINER_FISHERMAN_TYLOR, FortuneIsland_OutcastIsland_Text_TylorIntro, FortuneIsland_OutcastIsland_Text_TylorDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_OutcastIsland_EventScript_TylorRematch
+	msgbox FortuneIsland_OutcastIsland_Text_TylorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_TylorRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_OutcastIsland_Text_TylorRematchIntro, FortuneIsland_OutcastIsland_Text_TylorDefeat
+	msgbox FortuneIsland_OutcastIsland_Text_TylorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_Mymo::
+	trainerbattle_single TRAINER_SWIMMER_MALE_MYMO, FortuneIsland_OutcastIsland_Text_MymoIntro, FortuneIsland_OutcastIsland_Text_MymoDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_OutcastIsland_EventScript_MymoRematch
+	msgbox FortuneIsland_OutcastIsland_Text_MymoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_MymoRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_OutcastIsland_Text_MymoRematchIntro, FortuneIsland_OutcastIsland_Text_MymoDefeat
+	msgbox FortuneIsland_OutcastIsland_Text_MymoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_Nicole::
+	trainerbattle_single TRAINER_SWIMMER_FEMALE_NICOLE, FortuneIsland_OutcastIsland_Text_NicoleIntro, FortuneIsland_OutcastIsland_Text_NicoleDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_OutcastIsland_EventScript_NicoleRematch
+	msgbox FortuneIsland_OutcastIsland_Text_NicolePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_NicoleRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_OutcastIsland_Text_NicoleRematchIntro, FortuneIsland_OutcastIsland_Text_NicoleDefeat
+	msgbox FortuneIsland_OutcastIsland_Text_NicolePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_Ava::
+	trainerbattle_double TRAINER_SIS_AND_BRO_AVA_GEB, FortuneIsland_OutcastIsland_Text_AvaIntro, FortuneIsland_OutcastIsland_Text_AvaDefeat, FortuneIsland_OutcastIsland_Text_AvaNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_OutcastIsland_EventScript_AvaRematch
+	msgbox FortuneIsland_OutcastIsland_Text_AvaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_AvaRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_OutcastIsland_Text_AvaRematchIntro, FortuneIsland_OutcastIsland_Text_AvaDefeat
+	msgbox FortuneIsland_OutcastIsland_Text_AvaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_Geb::
+	trainerbattle_double TRAINER_SIS_AND_BRO_AVA_GEB, FortuneIsland_OutcastIsland_Text_GebIntro, FortuneIsland_OutcastIsland_Text_GebDefeat, FortuneIsland_OutcastIsland_Text_GebNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, FortuneIsland_OutcastIsland_EventScript_GebRematch
+	msgbox FortuneIsland_OutcastIsland_Text_GebPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_EventScript_GebRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, FortuneIsland_OutcastIsland_Text_GebRematchIntro, FortuneIsland_OutcastIsland_Text_GebDefeat
+	msgbox FortuneIsland_OutcastIsland_Text_GebPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FortuneIsland_OutcastIsland_Text_TylorRematchIntro::
+	.string "I'm still having no luck at all.\n"
+	.string "A battle'd be a change of pace!$"
+
+FortuneIsland_OutcastIsland_Text_MymoRematchIntro::
+	.string "Gasp… Gasp…\p"
+	.string "I swam here from SIX ISLAND's port\n"
+	.string "in one go again.$"
+
+FortuneIsland_OutcastIsland_Text_NicoleRematchIntro::
+	.string "You always come along while I'm\n"
+	.string "swimming.$"
+
+FortuneIsland_OutcastIsland_Text_AvaRematchIntro::
+	.string "AVA: Let's have another\n"
+	.string "two-on-two marine battle today!$"
+
+FortuneIsland_OutcastIsland_Text_GebRematchIntro::
+	.string "GEB: My big sister and I are way\n"
+	.string "tougher than before!$"
+
 FortuneIsland_OutcastIsland_EventScript_Rocket::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_46, FortuneIsland_OutcastIsland_Text_RocketIntro, FortuneIsland_OutcastIsland_Text_RocketDefeat
 	msgbox FortuneIsland_OutcastIsland_Text_RocketPostBattle, MSGBOX_AUTOCLOSE
 	end
+
 FortuneIsland_OutcastIsland_Text_RocketIntro::
     .string "There're no rare POKéMON around\n"
     .string "these parts! Not a one!\p"

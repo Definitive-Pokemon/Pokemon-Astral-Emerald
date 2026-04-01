@@ -28,7 +28,7 @@ FloeIsland_OnFrame::
 
 FloeIsland_EventScript_RivalScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+
 	applymovement LOCALID_FLOE_ISLAND_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
@@ -71,59 +71,28 @@ FloeIsland_Movement_PlayerWatchRivalExit::
 	step_end
 
 FloeIsland_EventScript_DaycareMan::
-	lock
-	faceplayer
-	special GetDaycareMonNicknames
-	specialvar VAR_RESULT, GetDaycareState
-	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, FloeIsland_EventScript_DaycareEggWaiting
-	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, FloeIsland_EventScript_CheckOnOneMon
-	goto_if_eq VAR_RESULT, DAYCARE_TWO_MONS, FloeIsland_EventScript_CheckOnTwoMons
-	msgbox DayCare_Text_ImDaycareManSpeakToMyWife
-	release
 	end
 
 FloeIsland_EventScript_DaycareEggWaiting::
-	msgbox DayCare_Text_DoYouWantEgg, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, FloeIsland_EventScript_DaycareAcceptEgg
-	msgbox DayCare_Text_IWillKeepDoYouWantIt, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, FloeIsland_EventScript_DaycareAcceptEgg
-	msgbox DayCare_Text_IllKeepIt
-	clearflag FLAG_PENDING_DAYCARE_EGG
-	special RejectEggFromDayCare
-	release
 	end
 
 FloeIsland_EventScript_DaycareAcceptEgg::
-	specialvar VAR_RESULT, CalculatePlayerPartyCount
-	goto_if_ne VAR_RESULT, PARTY_SIZE, FloeIsland_EventScript_DaycareReceivedEgg
-	msgbox DayCare_Text_YouHaveNoRoomForIt
-	release
 	end
 
 FloeIsland_EventScript_DaycareReceivedEgg::
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	message DayCare_Text_ReceivedEgg
-	call EventScript_RestorePrevTextColor
-	playfanfare MUS_RG_LEVEL_UP
-	waitfanfare
-	waitbuttonpress
-	msgbox DayCare_Text_TakeGoodCareOfIt
-	special GiveEggFromDaycare
-	clearflag FLAG_PENDING_DAYCARE_EGG
-	release
 	end
 
 FloeIsland_EventScript_CheckOnOneMon::
 	special GetDaycareMonNicknames
-	msgbox DayCare_Text_YourMonIsDoingFine
+	@msgbox DayCare_Text_YourMonIsDoingFine
 	release
 	end
 
 FloeIsland_EventScript_CheckOnTwoMons::
 	special GetDaycareMonNicknames
-	msgbox DayCare_Text_YourMonsAreDoingFine
-	special SetDaycareCompatibilityString
-	special ShowFieldMessageStringVar4
+	@msgbox DayCare_Text_YourMonsAreDoingFine
+	@special SetDaycareCompatibilityString
+	@special ShowFieldMessageStringVar4
 	waitmessage
 	waitbuttonpress
 	release
@@ -132,13 +101,12 @@ FloeIsland_EventScript_CheckOnTwoMons::
 FloeIsland_EventScript_OldWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, FloeIsland_EventScript_OldWomanLoreleiLeft
+	@goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, FloeIsland_EventScript_OldWomanLoreleiLeft
 	msgbox FloeIsland_Text_LoreleiHasReturned
 	release
 	end
 
 FloeIsland_EventScript_OldWomanLoreleiLeft::
-	famechecker FAMECHECKER_LORELEI, 5
 	msgbox FloeIsland_Text_LoreleiMetLaprasAsChild
 	release
 	end
@@ -146,7 +114,6 @@ FloeIsland_EventScript_OldWomanLoreleiLeft::
 FloeIsland_EventScript_LittleGirl::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_LORELEI, 4
 	msgbox FloeIsland_Text_LoreleiHasLotsOfStuffedDolls
 	release
 	end

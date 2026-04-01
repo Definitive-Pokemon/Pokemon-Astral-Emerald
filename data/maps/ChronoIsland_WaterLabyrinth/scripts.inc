@@ -7,14 +7,13 @@ ChronoIsland_WaterLabyrinth_EventScript_EggGentleman::
 	goto_if_set FLAG_GOT_TOGEPI_EGG, ChronoIsland_WaterLabyrinth_EventScript_PostEggComment
 	goto_if_set FLAG_NO_ROOM_FOR_TOGEPI_EGG, ChronoIsland_WaterLabyrinth_EventScript_ReturnForEgg
 	msgbox ChronoIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons
-	specialvar VAR_RESULT, GetLeadMonFriendship
+	specialvar VAR_RESULT, GetLeadMonFriendshipScore
 	goto_if_eq VAR_RESULT, 6, ChronoIsland_WaterLabyrinth_EventScript_LeadMonMaxFriendship
 	msgbox ChronoIsland_WaterLabyrinth_Text_HmmISeeIsee
 	release
 	end
 
 ChronoIsland_WaterLabyrinth_EventScript_MonDaisyComment::
-	famechecker FAMECHECKER_DAISY, 2
 	msgbox ChronoIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy
 	release
 	end
@@ -29,12 +28,11 @@ ChronoIsland_WaterLabyrinth_EventScript_TryGiveEgg::
 	goto_if_eq VAR_RESULT, PARTY_SIZE, ChronoIsland_WaterLabyrinth_EventScript_NoRoomForEgg
 	setflag FLAG_GOT_TOGEPI_EGG
 	giveegg SPECIES_TOGEPI
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	playfanfare MUS_RG_LEVEL_UP
+
+	playfanfare MUS_LEVEL_UP
 	message ChronoIsland_WaterLabyrinth_Text_ReceivedEggFromMan
 	waitfanfare
 	waitmessage
-	call EventScript_RestorePrevTextColor
 	goto ChronoIsland_WaterLabyrinth_EventScript_PostEggComment
 	end
 
@@ -43,11 +41,11 @@ ChronoIsland_WaterLabyrinth_EventScript_TryGiveEgg::
 ChronoIsland_WaterLabyrinth_EventScript_PostEggComment::
 	bufferspeciesname STR_VAR_2, SPECIES_TOGEPI
 	setvar VAR_0x8004, SPECIES_TOGEPI
-	specialvar VAR_RESULT, PlayerPartyContainsSpeciesWithPlayerID
+	@specialvar VAR_RESULT, PlayerPartyContainsSpeciesWithPlayerID
 	goto_if_eq VAR_RESULT, TRUE, ChronoIsland_WaterLabyrinth_EventScript_MonDaisyComment
 	bufferspeciesname STR_VAR_2, SPECIES_TOGETIC
 	setvar VAR_0x8004, SPECIES_TOGETIC
-	specialvar VAR_RESULT, PlayerPartyContainsSpeciesWithPlayerID
+	@specialvar VAR_RESULT, PlayerPartyContainsSpeciesWithPlayerID
 	goto_if_eq VAR_RESULT, TRUE, ChronoIsland_WaterLabyrinth_EventScript_MonDaisyComment
 	msgbox ChronoIsland_WaterLabyrinth_Text_GladIMetSomeoneLikeYou
 	release
@@ -62,6 +60,7 @@ ChronoIsland_WaterLabyrinth_EventScript_NoRoomForEgg::
 ChronoIsland_WaterLabyrinth_EventScript_ReturnForEgg::
 	goto ChronoIsland_WaterLabyrinth_EventScript_TryGiveEgg
 	end
+
 ChronoIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons::
     .string "You travel all over the place,\n"
     .string "don't you?\p"
@@ -91,11 +90,6 @@ ChronoIsland_WaterLabyrinth_Text_DontHaveSpaceInYourParty::
     .string "You'd better come back for it\n"
     .string "another time.$"
 
-@ Unused
-ChronoIsland_WaterLabyrinth_Text_YouveComeBackForTheEgg::
-    .string "めE��\n"
-    .string "タマゴを　もらぁE��\l"
-    .string "きて　くれたんだね$"
 
 ChronoIsland_WaterLabyrinth_Text_GladIMetSomeoneLikeYou::
     .string "I received that EGG while I was\n"
@@ -111,6 +105,23 @@ ChronoIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy::
     .string "She was a little angel.\p"
     .string "That little girl's name…\n"
     .string "I think it was DAISY.$"
+
+ChronoIsland_WaterLabyrinth_EventScript_Alize::
+	trainerbattle_single TRAINER_PKMN_BREEDER_ALIZE, ChronoIsland_WaterLabyrinth_Text_AlizeIntro, ChronoIsland_WaterLabyrinth_Text_AlizeDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ChronoIsland_WaterLabyrinth_EventScript_AlizeRematch
+	msgbox ChronoIsland_WaterLabyrinth_Text_AlizePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ChronoIsland_WaterLabyrinth_EventScript_AlizeRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, ChronoIsland_WaterLabyrinth_Text_AlizeRematchIntro, ChronoIsland_WaterLabyrinth_Text_AlizeDefeat
+	msgbox ChronoIsland_WaterLabyrinth_Text_AlizePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ChronoIsland_WaterLabyrinth_Text_AlizeRematchIntro::
+	.string "Oh, hello!\p"
+	.string "Are you raising your POKéMON in a\n"
+	.string "good environment?$"
 
 ChronoIsland_WaterLabyrinth_Text_AlizeIntro::
     .string "This is an excellent environment\n"

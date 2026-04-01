@@ -4,6 +4,105 @@ QuestIsland_SevaultCanyon_Entrance_MapScripts::
 QuestIsland_SevaultCanyon_Entrance_EventScript_RouteSign::
 	msgbox QuestIsland_SevaultCanyon_Entrance_Text_RouteSign, MSGBOX_SIGN
 	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_Miah::
+	trainerbattle_single TRAINER_AROMA_LADY_MIAH, QuestIsland_SevaultCanyon_Entrance_Text_MiahIntro, QuestIsland_SevaultCanyon_Entrance_Text_MiahDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_Entrance_EventScript_MiahRematch
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_MiahPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_MiahRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Entrance_Text_MiahRematchIntro, QuestIsland_SevaultCanyon_Entrance_Text_MiahDefeat
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_MiahPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_Eve::
+	trainerbattle_double TRAINER_YOUNG_COUPLE_EVE_JON, QuestIsland_SevaultCanyon_Entrance_Text_EveIntro, QuestIsland_SevaultCanyon_Entrance_Text_EveDefeat, QuestIsland_SevaultCanyon_Entrance_Text_EveNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_Entrance_EventScript_EveRematch
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_EvePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_EveRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Entrance_Text_EveRematchIntro, QuestIsland_SevaultCanyon_Entrance_Text_EveDefeat
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_EvePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_Jon::
+	trainerbattle_double TRAINER_YOUNG_COUPLE_EVE_JON, QuestIsland_SevaultCanyon_Entrance_Text_JonIntro, QuestIsland_SevaultCanyon_Entrance_Text_JonDefeat, QuestIsland_SevaultCanyon_Entrance_Text_JonNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_Entrance_EventScript_JonRematch
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_JonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_JonRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Entrance_Text_JonRematchIntro, QuestIsland_SevaultCanyon_Entrance_Text_JonDefeat
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_JonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_Mason::
+	trainerbattle_single TRAINER_JUGGLER_MASON, QuestIsland_SevaultCanyon_Entrance_Text_MasonIntro, QuestIsland_SevaultCanyon_Entrance_Text_MasonDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_Entrance_EventScript_MasonRematch
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_MasonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_MasonRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Entrance_Text_MasonRematchIntro, QuestIsland_SevaultCanyon_Entrance_Text_MasonDefeat
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_MasonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_Nicolas::
+	trainerbattle_single TRAINER_PKMN_RANGER_NICOLAS, QuestIsland_SevaultCanyon_Entrance_Text_NicolasIntro, QuestIsland_SevaultCanyon_Entrance_Text_NicolasDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_Entrance_EventScript_NicolasRematch
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_NicolasRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Entrance_Text_NicolasRematchIntro, QuestIsland_SevaultCanyon_Entrance_Text_NicolasDefeat
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_Madeline::
+	trainerbattle_single TRAINER_PKMN_RANGER_MADELINE, QuestIsland_SevaultCanyon_Entrance_Text_MadelineIntro, QuestIsland_SevaultCanyon_Entrance_Text_MadelineDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_Entrance_EventScript_MadelineRematch
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_Entrance_EventScript_MadelineRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Entrance_Text_MadelineRematchIntro, QuestIsland_SevaultCanyon_Entrance_Text_MadelineDefeat
+	msgbox QuestIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+    QuestIsland_SevaultCanyon_Entrance_Text_MiahRematchIntro::
+	.string "Kyahaha!\p"
+	.string "Coming back won't change a thing.\n"
+	.string "I'll flick you away effortlessly!$"
+
+QuestIsland_SevaultCanyon_Entrance_Text_MasonRematchIntro::
+	.string "Howdy! You're a member of my\n"
+	.string "fan club, isn't that right?$"
+
+QuestIsland_SevaultCanyon_Entrance_Text_NicolasRematchIntro::
+	.string "This island is too spread out…\n"
+	.string "Patrolling the place is a drag…$"
+
+QuestIsland_SevaultCanyon_Entrance_Text_MadelineRematchIntro::
+	.string "I don't forgive people who abuse\n"
+	.string "POKéMON!$"
+
+QuestIsland_SevaultCanyon_Entrance_Text_EveRematchIntro::
+	.string "EVE: I'll team up with JON and\n"
+	.string "battle together again.$"
+
+QuestIsland_SevaultCanyon_Entrance_Text_JonRematchIntro::
+	.string "JON: When I'm with EVE, it feels\n"
+	.string "like we could never lose, not ever.$"
+
+
 QuestIsland_SevaultCanyon_Entrance_Text_MiahIntro::
     .string "Kyahaha!\n"
     .string "I'll flick you away effortlessly!$"

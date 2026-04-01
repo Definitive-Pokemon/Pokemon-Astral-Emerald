@@ -17,11 +17,11 @@ FloeIsland_IcefallCave_Back_EventScript_HideLorelei::
 
 FloeIsland_IcefallCave_Back_EventScript_LoreleiRocketsScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	msgbox FloeIsland_IcefallCave_Back_Text_LoreleiKeepHandsOffMons
 	applymovement LOCALID_ICEFALL_ROCKET1, FloeIsland_IcefallCave_Back_Movement_WalkInPlaceDown
 	waitmovement 0
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox FloeIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe
 	closemessage
 	playse SE_PIN
@@ -31,7 +31,7 @@ FloeIsland_IcefallCave_Back_EventScript_LoreleiRocketsScene::
 	waitmovement 0
 	applymovement LOCALID_ICEFALL_LORELEI, Common_Movement_Delay48
 	waitmovement 0
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	msgbox FloeIsland_IcefallCave_Back_Text_LoreleiPlayerHelpMeKickPoachersOut
 	closemessage
 	applymovement LOCALID_ICEFALL_LORELEI, Common_Movement_WalkInPlaceFasterRight
@@ -47,17 +47,17 @@ FloeIsland_IcefallCave_Back_EventScript_LoreleiRocketsScene::
 	applymovement LOCALID_ICEFALL_ROCKET2, FloeIsland_IcefallCave_Back_Movement_WalkInPlaceDown
 	waitmovement 0
 	playbgm MUS_RG_ENCOUNTER_ROCKET, 0
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox FloeIsland_IcefallCave_Back_Text_GruntIntro
 	setvar VAR_LAST_TALKED, LOCALID_ICEFALL_ROCKET3
 	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_45, FloeIsland_IcefallCave_Back_Text_GruntDefeat
 	applymovement LOCALID_ICEFALL_LORELEI, FloeIsland_IcefallCave_Back_Movement_WalkInPlaceUp
 	waitmovement 0
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	msgbox FloeIsland_IcefallCave_Back_Text_LoreleiWhereHaveYouTakenMons
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox FloeIsland_IcefallCave_Back_Text_NotTellingYouThat
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	message FloeIsland_IcefallCave_Back_Text_LoreleiWellDeepFreezeYou
 	waitmessage
 	waitse
@@ -66,7 +66,7 @@ FloeIsland_IcefallCave_Back_EventScript_LoreleiRocketsScene::
 	waitmoncry
 	applymovement LOCALID_ICEFALL_ROCKET1, FloeIsland_IcefallCave_Back_Movement_Rocket1ReactToThreat
 	waitmovement 0
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox FloeIsland_IcefallCave_Back_Text_OkayRocketWareHouseChronoIsland
 	closemessage
 	applymovement LOCALID_ICEFALL_LORELEI, FloeIsland_IcefallCave_Back_Movement_LoreleiWatchRocketsExit
@@ -83,7 +83,7 @@ FloeIsland_IcefallCave_Back_EventScript_LoreleiRocketsScene::
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	msgbox FloeIsland_IcefallCave_Back_Text_ThankYouThisIsAwful
 	setflag FLAG_HIDE_RUIN_VALLEY_SCIENTIST
 	clearflag FLAG_HIDE_LORELEI_IN_HER_HOUSE

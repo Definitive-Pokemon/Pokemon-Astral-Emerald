@@ -10,28 +10,28 @@ KnotIsland_OnTransition::
 	end
 	
 KnotIsland_OnFrameTable::
-	map_script_2 VAR_KNOT_ISLAND_STATE, 0, KnotIsland_EventScript_EnterKnotIsland_FirstTime
+	map_script_2 VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 0, KnotIsland_EventScript_EnterKnotIsland_FirstTime
 	.2byte 0
 
 KnotIsland_EventScript_EnterKnotIsland_FirstTime::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+
 	applymovement LOCALID_PLAYER, KnotIsland_Movement_PlayerExitHarbor
 	waitmovement 0
 	msgbox KnotIsland_Text_BillLetsGoSeeCelio
 	closemessage
-	applymovement LOCALID_KNOT_ISLAND_BILL, KnotIsland_Movement_BillWalkToPokeCenter
+	applymovement LOCALID_BILL, KnotIsland_Movement_BillWalkToPokeCenter
 	applymovement LOCALID_PLAYER, KnotIsland_Movement_PlayerWalkToPokeCenter
 	waitmovement 0
 	opendoor 14, 5
 	waitdooranim
-	applymovement LOCALID_KNOT_ISLAND_BILL, KnotIsland_Movement_BillEnterPokeCenter
+	applymovement LOCALID_BILL, KnotIsland_Movement_BillEnterPokeCenter
 	applymovement LOCALID_PLAYER, KnotIsland_Movement_PlayerEnterPokeCenter
 	waitmovement 0
 	closedoor 14, 5
 	waitdooranim
-	removeobject LOCALID_KNOT_ISLAND_BILL
-	@setvar VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 3
+	removeobject LOCALID_BILL
+	setvar VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 3
 	warp MAP_KNOT_ISLAND_POKEMON_CENTER_1F, 9, 9
 	waitstate
 	releaseall

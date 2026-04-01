@@ -1,6 +1,90 @@
 KinIsland_BondBridge_MapScripts::
 	.byte 0
 
+KinIsland_BondBridge_EventScript_Nikki::
+	trainerbattle_single TRAINER_AROMA_LADY_NIKKI, KinIsland_BondBridge_Text_NikkiIntro, KinIsland_BondBridge_Text_NikkiDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, KinIsland_BondBridge_EventScript_NikkiRematch
+	msgbox KinIsland_BondBridge_Text_NikkiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_NikkiRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, KinIsland_BondBridge_Text_NikkiRematchIntro, KinIsland_BondBridge_Text_NikkiDefeat
+	msgbox KinIsland_BondBridge_Text_NikkiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_Violet::
+	trainerbattle_single TRAINER_AROMA_LADY_VIOLET, KinIsland_BondBridge_Text_VioletIntro, KinIsland_BondBridge_Text_VioletDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, KinIsland_BondBridge_EventScript_VioletRematch
+	msgbox KinIsland_BondBridge_Text_VioletPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_VioletRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, KinIsland_BondBridge_Text_VioletRematchIntro, KinIsland_BondBridge_Text_VioletDefeat
+	msgbox KinIsland_BondBridge_Text_VioletPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_Amira::
+	trainerbattle_single TRAINER_TUBER_AMIRA, KinIsland_BondBridge_Text_AmiraIntro, KinIsland_BondBridge_Text_AmiraDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, KinIsland_BondBridge_EventScript_AmiraRematch
+	msgbox KinIsland_BondBridge_Text_AmiraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_AmiraRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, KinIsland_BondBridge_Text_AmiraRematchIntro, KinIsland_BondBridge_Text_AmiraDefeat
+	msgbox KinIsland_BondBridge_Text_AmiraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_Alexis::
+	trainerbattle_single TRAINER_TUBER_ALEXIS, KinIsland_BondBridge_Text_AlexisIntro, KinIsland_BondBridge_Text_AlexisDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, KinIsland_BondBridge_EventScript_AlexisRematch
+	msgbox KinIsland_BondBridge_Text_AlexisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_AlexisRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, KinIsland_BondBridge_Text_AlexisRematchIntro, KinIsland_BondBridge_Text_AlexisDefeat
+	msgbox KinIsland_BondBridge_Text_AlexisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_Tisha::
+	trainerbattle_single TRAINER_SWIMMER_FEMALE_TISHA, KinIsland_BondBridge_Text_TishaIntro, KinIsland_BondBridge_Text_TishaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, KinIsland_BondBridge_EventScript_TishaRematch
+	msgbox KinIsland_BondBridge_Text_TishaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_TishaRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, KinIsland_BondBridge_Text_TishaRematchIntro, KinIsland_BondBridge_Text_TishaDefeat
+	msgbox KinIsland_BondBridge_Text_TishaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_Joy::
+	trainerbattle_double TRAINER_TWINS_JOY_MEG, KinIsland_BondBridge_Text_JoyIntro, KinIsland_BondBridge_Text_JoyDefeat, KinIsland_BondBridge_Text_JoyNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, KinIsland_BondBridge_EventScript_JoyRematch
+	msgbox KinIsland_BondBridge_Text_JoyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_JoyRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, KinIsland_BondBridge_Text_JoyRematchIntro, KinIsland_BondBridge_Text_JoyDefeat
+	msgbox KinIsland_BondBridge_Text_JoyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_Meg::
+	trainerbattle_double TRAINER_TWINS_JOY_MEG, KinIsland_BondBridge_Text_MegIntro, KinIsland_BondBridge_Text_MegDefeat, KinIsland_BondBridge_Text_MegNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, KinIsland_BondBridge_EventScript_MegRematch
+	msgbox KinIsland_BondBridge_Text_MegPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+KinIsland_BondBridge_EventScript_MegRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, KinIsland_BondBridge_Text_MegRematchIntro, KinIsland_BondBridge_Text_MegDefeat
+	msgbox KinIsland_BondBridge_Text_MegPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 KinIsland_BondBridge_EventScript_BerryForestSign::
 	msgbox KinIsland_BondBridge_Text_BerryForestAhead, MSGBOX_SIGN
 	end
@@ -8,6 +92,7 @@ KinIsland_BondBridge_EventScript_BerryForestSign::
 KinIsland_BondBridge_EventScript_BondBridgeSign::
 	msgbox KinIsland_BondBridge_Text_BondBridgeSign, MSGBOX_SIGN
 	end
+
 KinIsland_BondBridge_Text_NikkiIntro::
     .string "The salty tang of the sea…\n"
     .string "It tickles my heart.$"
@@ -100,6 +185,32 @@ KinIsland_BondBridge_Text_MegNotEnoughMons::
     .string "MEG: I want to battle together\n"
     .string "with JOY.\p"
     .string "One POKéMON isn't enough.$"
+
+KinIsland_BondBridge_Text_NikkiRematchIntro::
+	.string "Are we to battle again?$"
+
+KinIsland_BondBridge_Text_VioletRematchIntro::
+	.string "From where have you come, and\n"
+	.string "where are you bound?$"
+
+KinIsland_BondBridge_Text_AmiraRematchIntro::
+	.string "I want to swim without my float\n"
+	.string "ring soon.$"
+
+KinIsland_BondBridge_Text_AlexisRematchIntro::
+	.string "Yay, yay!\n"
+	.string "POKéMON!$"
+
+KinIsland_BondBridge_Text_TishaRematchIntro::
+	.string "Oh, no, didn't I tell you already?\n"
+	.string "Please, stay away from me!$"
+
+KinIsland_BondBridge_Text_JoyRematchIntro::
+	.string "JOY: We've gotten stronger!\n"
+	.string "Lots and lots!$"
+
+KinIsland_BondBridge_Text_MegRematchIntro::
+	.string "MEG: You can't beat us today!$"
 
 KinIsland_BondBridge_Text_BerryForestAhead::
     .string "BERRY FOREST AHEAD$"

@@ -67,27 +67,25 @@ BoonIsland_House_EventScript_ChooseMoveToTeach::
 
 BoonIsland_House_EventScript_GiveBigMushroom::
 	removeitem ITEM_BIG_MUSHROOM
-	textcolor NPC_TEXT_COLOR_NEUTRAL
+
 	msgbox BoonIsland_House_Text_HandedOverOneBigMushroom
-	call EventScript_RestorePrevTextColor
 	goto BoonIsland_House_EventScript_EndTutorMove
 	end
 
 BoonIsland_House_EventScript_GiveTinyMushrooms::
 	removeitem ITEM_TINY_MUSHROOM, 2
-	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox BoonIsland_House_Text_HandedOverTwoTinyMushrooms
-	call EventScript_RestorePrevTextColor
 	goto BoonIsland_House_EventScript_EndTutorMove
 	end
 
 BoonIsland_House_EventScript_ChooseMushroom::
 	message BoonIsland_House_Text_IllNeedMushroomOrTwo
 	waitmessage
-	multichoice 0, 0, MULTICHOICE_MUSHROOMS, TRUE
-	switch VAR_RESULT
-	case 0, BoonIsland_House_EventScript_GiveTinyMushrooms
-	case 1, BoonIsland_House_EventScript_GiveBigMushroom
+	@ mushroom menu
+	@multichoice 0, 0, MULTICHOICE_MUSHROOMS, TRUE
+	@switch VAR_RESULT
+	@case 0, BoonIsland_House_EventScript_GiveTinyMushrooms
+	@case 1, BoonIsland_House_EventScript_GiveBigMushroom
 	end
 
 BoonIsland_House_EventScript_NoMoveToTutorMon::
