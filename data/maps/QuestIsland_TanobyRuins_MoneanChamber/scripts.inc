@@ -4,5 +4,5 @@ QuestIsland_TanobyRuins_MoneanChamber_MapScripts::
 
 QuestIsland_TanobyRuins_MoneanChamber_OnTransition::
 	@setworldmapflag FLAG_WORLD_MAP_QUEST_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER
-	call EventScript_TryDarkenRuins
+	@call EventScript_TryDarkenRuins
 	end

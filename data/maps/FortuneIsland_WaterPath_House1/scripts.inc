@@ -6,7 +6,7 @@ FortuneIsland_WaterPath_House1_EventScript_Beauty::
 	faceplayer
 
 	setvar VAR_0x8004, SPECIES_HERACROSS
-	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	@specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	goto_if_eq VAR_RESULT, FALSE, FortuneIsland_WaterPath_House1_EventScript_NoHeracrossInParty
 	@special GetHeracrossSizeRecordInfo
 	msgbox FortuneIsland_WaterPath_House1_Text_MayIMeasureHeracross

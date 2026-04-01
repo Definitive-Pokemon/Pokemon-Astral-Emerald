@@ -39,7 +39,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KnotIsland_PokemonCenter_1F_EventScript_Bill",
-      "flag": "FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL"
+      "flag": "FLAG_HIDE_KNOT_ISLAND_POKECENTER_BILL"
     },
     {
       "type": "object",
@@ -53,7 +53,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KnotIsland_PokemonCenter_1F_EventScript_Celio",
-      "flag": "FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO"
+      "flag": "FLAG_HIDE_KNOT_ISLAND_POKECENTER_CELIO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",

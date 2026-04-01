@@ -8,28 +8,28 @@ FortuneIsland_DottedHole_1F_OnTransition::
 
 FortuneIsland_DottedHole_B1F_EventScript_BrailleUp::
 	lockall
-	braillemessage Braille_Text_Up
+	@braillemessage Braille_Text_Up
 	waitbuttonpress
 	releaseall
 	end
 
 FortuneIsland_DottedHole_B4F_EventScript_BrailleDown::
 	lockall
-	braillemessage Braille_Text_Down
+	@braillemessage Braille_Text_Down
 	waitbuttonpress
 	releaseall
 	end
 
 FortuneIsland_DottedHole_B3F_EventScript_BrailleRight::
 	lockall
-	braillemessage Braille_Text_Right
+	@braillemessage Braille_Text_Right
 	waitbuttonpress
 	releaseall
 	end
 
 FortuneIsland_DottedHole_B2F_EventScript_BrailleLeft::
 	lockall
-	braillemessage Braille_Text_Left
+	@braillemessage Braille_Text_Left
 	waitbuttonpress
 	releaseall
 	end

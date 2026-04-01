@@ -34,7 +34,7 @@ ChronoIsland_Meadow_EventScript_WarehouseDoorAlreadyOpen::
 	end
 
 ChronoIsland_Meadow_EventScript_SetWarehouseDoorUnlocked::
-	setmetatile 12, 21, METATILE_SeviiIslands45_RocketWarehouseDoor_Unlocked, 1
+	@setmetatile 12, 21, METATILE_SeviiIslands45_RocketWarehouseDoor_Unlocked, 1
 	return
 
 ChronoIsland_Meadow_EventScript_Rocket1::
@@ -51,10 +51,6 @@ ChronoIsland_Meadow_EventScript_Rocket3::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_51, ChronoIsland_Meadow_Text_Rocket3Intro, ChronoIsland_Meadow_Text_Rocket3Defeat
 	msgbox ChronoIsland_Meadow_Text_Rocket3PostBattle, MSGBOX_AUTOCLOSE
 	end
-@ Unused
-ChronoIsland_Meadow_Text_DoorNeedsTwoPasswords::
-    .string "とびらを　あけるには\n"
-    .string "パスワードが　2つ　ぁE��ようだ$"
 
 ChronoIsland_Meadow_Text_EnteredPasswordAnotherNeeded::
     .string "{PLAYER} entered a password.\p"

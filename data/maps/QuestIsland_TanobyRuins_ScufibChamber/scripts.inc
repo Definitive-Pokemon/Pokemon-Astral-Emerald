@@ -3,5 +3,5 @@ QuestIsland_TanobyRuins_ScufibChamber_MapScripts::
 	.byte 0
 
 QuestIsland_TanobyRuins_ScufibChamber_OnTransition::
-	call EventScript_TryDarkenRuins
+	@call EventScript_TryDarkenRuins
 	end

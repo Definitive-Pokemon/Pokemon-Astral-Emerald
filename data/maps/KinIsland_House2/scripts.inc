@@ -4,7 +4,6 @@ KinIsland_House2_MapScripts::
 KinIsland_House2_EventScript_Man::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_SABRINA, 1
 	msgbox KinIsland_House2_Text_IAdmireSabrina
 	release
 	end

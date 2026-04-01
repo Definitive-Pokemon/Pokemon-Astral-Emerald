@@ -3,8 +3,8 @@ KinIsland_Port_MapScripts::
 	.byte 0
 
 KinIsland_Port_OnTransition::
-	clearflag FLAG_SYS_PC_STORAGE_DISABLED
-	setflag FLAG_SEVII_DETOUR_FINISHED
+	@clearflag FLAG_SYS_PC_STORAGE_DISABLED
+	@setflag FLAG_SEVII_DETOUR_FINISHED
 	end
 
 KinIsland_Port_EventScript_Woman::

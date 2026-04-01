@@ -3,7 +3,7 @@ KnotIsland_Harbor_MapScripts::
 	.byte 0
 	
 KnotIsland_Harbor_OnFrameTable::
-	map_script_2 VAR_KNOT_ISLAND_STATE, 0, KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime
+	map_script_2 VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 0, KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime
 	.2byte 0
 	
 KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime::
@@ -32,10 +32,10 @@ KnotIsland_Harbor_EventScript_Sailor::
 	setvar VAR_0x8001, 1
 	switch VAR_RESULT
 	case 0, Island_Harbors_EventScript_GoToLilycove
-	case 1, Island_Harbors_EventScript_GoToIsland2
-	case 2, Island_Harbors_EventScript_GoToIsland3
-	case 3, Island_Harbors_EventScript_GoToIsland4
-	case 4, Island_Harbors_EventScript_GoToIsland5
-	case 5, Island_Harbors_EventScript_GoToIsland6
-	case 6, Island_Harbors_EventScript_GoToIsland7
+	case 1, Island_Harbors_EventScript_GoToBoonIsland
+	case 2, Island_Harbors_EventScript_GoToKinIsland
+	case 3, Island_Harbors_EventScript_GoToFloeIsland
+	case 4, Island_Harbors_EventScript_GoToChronoIsland
+	case 5, Island_Harbors_EventScript_GoToFortuneIsland
+	case 6, Island_Harbors_EventScript_GoToQuestIsland
 	end

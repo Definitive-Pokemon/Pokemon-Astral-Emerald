@@ -7,7 +7,7 @@ FortuneIsland_DottedHole_SapphireRoom_MapScripts::
 FortuneIsland_DottedHole_SapphireRoom_EventScript_Sapphire::
 	lock
 	faceplayer
-	textcolor NPC_TEXT_COLOR_NEUTRAL
+
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message FortuneIsland_DottedHole_SapphireRoom_Text_FoundSapphire
 	waitmessage
@@ -27,13 +27,13 @@ FortuneIsland_DottedHole_SapphireRoom_EventScript_Sapphire::
 	setvar VAR_0x8005, 0
 	setvar VAR_0x8006, 12
 	setvar VAR_0x8007, 3
-	special ShakeScreen
+	special ShakeCamera
 	delay 60
 	call_if_eq VAR_FACING, DIR_NORTH, FortuneIsland_DottedHole_SapphireRoom_EventScript_ThiefLookAtSapphireNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, FortuneIsland_DottedHole_SapphireRoom_EventScript_ThiefLookAtSapphireSouth
 	call_if_eq VAR_FACING, DIR_EAST, FortuneIsland_DottedHole_SapphireRoom_EventScript_ThiefLookAtSapphireEast
 	call_if_eq VAR_FACING, DIR_WEST, FortuneIsland_DottedHole_SapphireRoom_EventScript_ThiefLookAtSapphireWest
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox FortuneIsland_DottedHole_SapphireRoom_Text_IWasRightInTailingYou
 	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, FortuneIsland_DottedHole_SapphireRoom_EventScript_ThiefGetSapphireNorth
@@ -222,22 +222,22 @@ FortuneIsland_DottedHole_SapphireRoom_Movement_PlayerWatchThiefExit::
 FortuneIsland_DottedHole_SapphireRoom_EventScript_BrailleMessage::
 	lockall
 	setvar VAR_0x8005, 130
-	braillemessage_wait Braille_Text_LetTheTwo
-	braillemessage_wait Braille_Text_Glittering
-	braillemessage_wait Braille_Text_Stones
-	braillemessage_wait Braille_Text_OneInRed
-	braillemessage_wait Braille_Text_OneInBlue
-	braillemessage_wait Braille_Text_ConnectThe
-	braillemessage_wait Braille_Text_Past
-	braillemessage_wait Braille_Text_TwoFriends
-	braillemessage_wait Braille_Text_Sharing
-	braillemessage_wait Braille_Text_PowerOpen
-	braillemessage_wait Braille_Text_AWindowTo
-	braillemessage_wait Braille_Text_ANewWorld
-	braillemessage_wait Braille_Text_ThatGlows
-	braillemessage_wait Braille_Text_TheNext
-	braillemessage_wait Braille_Text_WorldWaits
-	braillemessage Braille_Text_ForYou
+	@braillemessage Braille_Text_LetTheTwo
+	@braillemessage Braille_Text_Glittering
+	@braillemessage Braille_Text_Stones
+	@braillemessage Braille_Text_OneInRed
+	@braillemessage Braille_Text_OneInBlue
+	@braillemessage Braille_Text_ConnectThe
+	@braillemessage Braille_Text_Past
+	@braillemessage Braille_Text_TwoFriends
+	@braillemessage Braille_Text_Sharing
+	@braillemessage Braille_Text_PowerOpen
+	@braillemessage Braille_Text_AWindowTo
+	@braillemessage Braille_Text_ANewWorld
+	@braillemessage Braille_Text_ThatGlows
+	@braillemessage Braille_Text_TheNext
+	@braillemessage Braille_Text_WorldWaits
+	@braillemessage Braille_Text_ForYou
 	waitbuttonpress
 	releaseall
 	end

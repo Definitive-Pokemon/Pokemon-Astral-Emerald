@@ -3,5 +3,5 @@ QuestIsland_TanobyRuins_DilfordChamber_MapScripts::
 	.byte 0
 
 QuestIsland_TanobyRuins_DilfordChamber_OnTransition::
-	call EventScript_TryDarkenRuins
+	@call EventScript_TryDarkenRuins
 	end

@@ -3,5 +3,5 @@ QuestIsland_TanobyRuins_LiptooChamber_MapScripts::
 	.byte 0
 
 QuestIsland_TanobyRuins_LiptooChamber_OnTransition::
-	call EventScript_TryDarkenRuins
+	@call EventScript_TryDarkenRuins
 	end

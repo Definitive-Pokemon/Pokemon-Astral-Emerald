@@ -22,7 +22,7 @@ BoonIsland_JoyfulGameCorner_EventScript_SetLostelleReturnedPos::
 
 BoonIsland_JoyfulGameCorner_OnWarp::
 	map_script_2 VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 2, BoonIsland_JoyfulGameCorner_EventScript_TurnPlayerNorth
-	map_script_2 VAR_CABLE_CLUB_STATE, USING_MINIGAME, EventScript_CheckTurnAttendant
+	@map_script_2 VAR_CABLE_CLUB_STATE, USING_MINIGAME, EventScript_CheckTurnAttendant
 	.2byte 0
 
 BoonIsland_JoyfulGameCorner_EventScript_TurnPlayerNorth::
@@ -37,9 +37,9 @@ BoonIsland_JoyfulGameCorner_OnFrame::
 
 BoonIsland_JoyfulGameCorner_EventScript_FoundLostelleScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox BoonIsland_JoyfulGameCorner_Text_YouRescuedLostelle
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	@special BufferBigGuyOrBigGirlString
 	msgbox BoonIsland_JoyfulGameCorner_Text_LostelleItsOkayDaddy
 	closemessage
@@ -51,7 +51,7 @@ BoonIsland_JoyfulGameCorner_EventScript_FoundLostelleScene::
 
 BoonIsland_JoyfulGameCorner_EventScript_HelpFindLostelleScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+
 	applymovement LOCALID_JOYFUL_GAME_CORNER_DADDY, BoonIsland_JoyfulGameCorner_Movement_DaddyPacing
 	waitmovement 0
 	msgbox BoonIsland_JoyfulGameCorner_Text_WhereHasLostelleGottenTo
@@ -69,7 +69,7 @@ BoonIsland_JoyfulGameCorner_EventScript_HelpFindLostelleScene::
 	waitmovement 0
 	msgbox BoonIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle
 	closemessage
-	playse SE_RS_DOOR
+	playse SE_DOOR
 	waitse
 	applymovement LOCALID_PLAYER, BoonIsland_JoyfulGameCorner_Movement_PlayerFaceDaddy
 	waitmovement 0
@@ -128,7 +128,6 @@ BoonIsland_JoyfulGameCorner_Movement_BikerLookAround::
 BoonIsland_JoyfulGameCorner_EventScript_InfoMan::
 	lock
 	faceplayer
-	goto_if_eq VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 4, JoyfulGameCorner_EventScript_InfoMan2
 	goto_if_set FLAG_RESCUED_LOSTELLE, BoonIsland_JoyfulGameCorner_EventScript_GetGamesGoingSoon
 	msgbox BoonIsland_JoyfulGameCorner_Text_NotRunningAnyGamesToday
 	release
@@ -143,7 +142,6 @@ BoonIsland_JoyfulGameCorner_EventScript_GetGamesGoingSoon::
 BoonIsland_JoyfulGameCorner_EventScript_LostellesDaddy::
 	lock
 	faceplayer
-	goto_if_eq VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 4, JoyfulGameCorner_EventScript_MinigameAttendant
 	goto_if_set FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER, BoonIsland_JoyfulGameCorner_EventScript_GetGameCornerRunning
 	goto_if_eq VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 3, BoonIsland_JoyfulGameCorner_EventScript_GiveDaddyMeteorite
 	msgbox BoonIsland_JoyfulGameCorner_Text_PleaseGoToKinIsland
@@ -154,12 +152,10 @@ BoonIsland_JoyfulGameCorner_EventScript_GiveDaddyMeteorite::
 	goto_if_set FLAG_NO_ROOM_FOR_JOYFUL_GAME_CORNER_MOON_STONE, BoonIsland_JoyfulGameCorner_EventScript_ReceiveMoonStone
 	msgbox BoonIsland_JoyfulGameCorner_Text_ThisIsForMe
 	setvar VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F, 2
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	playfanfare MUS_RG_OBTAIN_TMHM
+	playfanfare MUS_OBTAIN_TMHM
 	message BoonIsland_JoyfulGameCorner_Text_HandedMeteoriteToLostellesDaddy
 	waitmessage
 	waitfanfare
-	call EventScript_RestorePrevTextColor
 	removeitem ITEM_METEORITE
 	msgbox BoonIsland_JoyfulGameCorner_Text_OhThisIsFromBill
 	goto BoonIsland_JoyfulGameCorner_EventScript_ReceiveMoonStone

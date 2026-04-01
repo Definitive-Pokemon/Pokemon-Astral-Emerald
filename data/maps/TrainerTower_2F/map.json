@@ -17,7 +17,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_TRAINER_TOWER_DUDE",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
       "x": 9,
       "y": 7,
       "elevation": 3,
@@ -26,10 +26,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TrainerTower_EventScript_Owner",
+      "script": "0x0",
       "flag": "FLAG_TEMP_6"
     },
     {
+      "local_id": "LOCALID_TOWER_TRAINER_DOUBLES1",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 10,
@@ -40,10 +41,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TrainerTower_EventScript_DoublesTrainer1",
+      "script": "0x0",
       "flag": "FLAG_TEMP_2"
     },
     {
+      "local_id": "LOCALID_TOWER_TRAINER_SINGLES",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
       "x": 15,
@@ -54,10 +56,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TrainerTower_EventScript_SinglesTrainer",
+      "script": "0x0",
       "flag": "FLAG_TEMP_3"
     },
     {
+      "local_id": "LOCALID_TOWER_TRAINER_KNOCKOUT",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_2",
       "x": 10,
@@ -68,10 +71,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TrainerTower_EventScript_KnockoutTrainer",
+      "script": "0x0",
       "flag": "FLAG_TEMP_4"
     },
     {
+      "local_id": "LOCALID_TOWER_TRAINER_DOUBLES2",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_3",
       "x": 11,
@@ -82,7 +86,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TrainerTower_EventScript_DoublesTrainer2",
+      "script": "0x0",
       "flag": "FLAG_TEMP_5"
     }
   ],
@@ -117,7 +121,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_E",
       "var_value": "0",
-      "script": "TrainerTower_EventScript_SingleBattleTrigger"
+      "script": "0x0"
     },
     {
       "type": "trigger",
@@ -126,7 +130,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_F",
       "var_value": "0",
-      "script": "TrainerTower_EventScript_DoubleBattleTriggerTop"
+      "script": "0x0"
     },
     {
       "type": "trigger",
@@ -135,7 +139,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_F",
       "var_value": "0",
-      "script": "TrainerTower_EventScript_DoubleBattleTriggerBottom"
+      "script": "0x0"
     }
   ],
   "bg_events": []

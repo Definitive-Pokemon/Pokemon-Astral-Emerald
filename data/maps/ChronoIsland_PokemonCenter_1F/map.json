@@ -11,7 +11,7 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
-  "floor_number": 0,
+  
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -31,7 +31,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
       "x": 9,
       "y": 4,
       "elevation": 3,
@@ -45,7 +45,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CHEF",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
       "x": 4,
       "y": 8,
       "elevation": 3,
@@ -68,8 +68,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ChronoIsland_PokemonCenter_1F_EventScript_PokemonJournal",
-      "flag": "FLAG_HIDE_POSTGAME_GOSSIPERS"
+      "script": "0x0",
+      "flag": "0"
     },
     {
       "type": "object",
@@ -82,8 +82,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ChronoIsland_PokemonCenter_1F_EventScript_PokemonJournal",
-      "flag": "FLAG_HIDE_POSTGAME_GOSSIPERS"
+      "script": "0x0",
+      "flag": "0"
     }
   ],
   "warp_events": [
