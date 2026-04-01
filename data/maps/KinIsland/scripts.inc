@@ -145,7 +145,7 @@ KinIsland_EventScript_AntiBiker2BikersGone::
 
 KinIsland_EventScript_BikerBossIntroTrigger::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+
 	applymovement LOCALID_KIN_ISLAND_ANTIBIKER1, KinIsland_Movement_SpeakRight
 	waitmovement 0
 	msgbox KinIsland_Text_AreYouBossGoBackToKanto
@@ -204,7 +204,7 @@ KinIsland_EventScript_BattleBikersTriggerRight::
 	end
 
 KinIsland_EventScript_BattleBikersScene::
-	textcolor NPC_TEXT_COLOR_MALE
+
 	applymovement LOCALID_KIN_ISLAND_BIKER1, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -256,7 +256,7 @@ KinIsland_EventScript_BattleBikersScene::
 	playbgm MUS_RG_ENCOUNTER_BOY, 0
 	msgbox KinIsland_Text_PaxtonIntro
 	setvar VAR_LAST_TALKED, LOCALID_PAXTON
-	trainerbattle_no_intro TRAINER_CUE_BALL_PAXTON, KinIsland_Text_PaxtonDefeat
+	trainerbattle_no_intro TRAINER_PAXTON, KinIsland_Text_PaxtonDefeat
 	msgbox KinIsland_Text_PaxtonPostBattle
 	closemessage
 	fadescreen FADE_TO_BLACK

@@ -725,11 +725,10 @@
 #define FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TRAINER_TOWER_BIG_PEARL (FLAG_HIDDEN_ITEMS_START + 0xA9)
 #define FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TRAINER_TOWER_PEARL (FLAG_HIDDEN_ITEMS_START + 0xAA)
 #define FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TRAINER_TOWER_NANAB_BERRY (FLAG_HIDDEN_ITEMS_START + 0xAB)
-
+#define FLAG_HIDDEN_ITEM_MT_EMBER_EXTERIOR_ULTRA_BALL (FLAG_HIDDEN_ITEMS_START + 0xAC)
+#define FLAG_HIDDEN_ITEM_MT_EMBER_EXTERIOR_FIRE_STONE (FLAG_HIDDEN_ITEMS_START + 0xAD)
 // Astral Emerald Sevii new content
 
-//(FLAG_HIDDEN_ITEMS_START + 0xAC)
-//(FLAG_HIDDEN_ITEMS_START + 0xAD)
 //(FLAG_HIDDEN_ITEMS_START + 0xAE)
 //(FLAG_HIDDEN_ITEMS_START + 0xAF)
 #define FLAG_HIDE_RUBY  0x2A3
@@ -1267,14 +1266,13 @@
 #define FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE_LUCKY_PUNCH                                           0x4B7 
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY                                           0x4B8 
 
-// Last remaining available flags for Astral emerald
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
+#define FLAG_HIDE_BOON_ISLAND_BEAUTY                                           0x4B9 // Unused Flag
+#define FLAG_HIDE_SAPPHIRE                                           0x4BA // Unused Flag
+#define FLAG_HIDE_BOON_ISLAND_WOMAN                                           0x4BB // Unused Flag
+#define FLAG_HIDE_CHRONO_ISLAND_ROCKET_WAREHOUSE_PEARL                                           0x4BC // Unused Flag
+#define FLAG_KNOT_ISLAND_HIDE_BILL                                           0x4BD // Unused Flag
+#define FLAG_CERULEAN_CAVE_LUCKY_EGG                                           0x4BE // remove please!
+#define FLAG_HIDE_BOON_ISLAND_SUPER_NERD                                           0x4BF // Unused Flag
 #define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
 #define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
 #define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag

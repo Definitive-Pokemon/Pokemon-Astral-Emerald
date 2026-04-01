@@ -1,9 +1,142 @@
 QuestIsland_SevaultCanyon_MapScripts::
 	.byte 0
 
+QuestIsland_SevaultCanyon_EventScript_Cyndy::
+	trainerbattle_single TRAINER_CRUSH_GIRL_CYNDY, QuestIsland_SevaultCanyon_Text_CyndyIntro, QuestIsland_SevaultCanyon_Text_CyndyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_EventScript_CyndyRematch
+	msgbox QuestIsland_SevaultCanyon_Text_CyndyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_CyndyRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Text_CyndyRematchIntro, QuestIsland_SevaultCanyon_Text_CyndyDefeat
+	msgbox QuestIsland_SevaultCanyon_Text_CyndyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_Evan::
+	trainerbattle_single TRAINER_TAMER_EVAN, QuestIsland_SevaultCanyon_Text_EvanIntro, QuestIsland_SevaultCanyon_Text_EvanDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_EventScript_EvanRematch
+	msgbox QuestIsland_SevaultCanyon_Text_EvanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_EvanRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Text_EvanRematchIntro, QuestIsland_SevaultCanyon_Text_EvanDefeat
+	msgbox QuestIsland_SevaultCanyon_Text_EvanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_Jackson::
+	trainerbattle_single TRAINER_PKMN_RANGER_JACKSON, QuestIsland_SevaultCanyon_Text_JacksonIntro, QuestIsland_SevaultCanyon_Text_JacksonDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_EventScript_JacksonRematch
+	msgbox QuestIsland_SevaultCanyon_Text_JacksonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_JacksonRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Text_JacksonRematchIntro, QuestIsland_SevaultCanyon_Text_JacksonDefeat
+	msgbox QuestIsland_SevaultCanyon_Text_JacksonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_Katelyn::
+	trainerbattle_single TRAINER_PKMN_RANGER_KATELYN, QuestIsland_SevaultCanyon_Text_KatelynIntro, QuestIsland_SevaultCanyon_Text_KatelynDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_EventScript_KatelynRematch
+	msgbox QuestIsland_SevaultCanyon_Text_KatelynPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_KatelynRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Text_KatelynRematchIntro, QuestIsland_SevaultCanyon_Text_KatelynDefeat
+	msgbox QuestIsland_SevaultCanyon_Text_KatelynPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_Leroy::
+	trainerbattle_single TRAINER_COOLTRAINER_LEROY, QuestIsland_SevaultCanyon_Text_LeroyIntro, QuestIsland_SevaultCanyon_Text_LeroyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_EventScript_LeroyRematch
+	msgbox QuestIsland_SevaultCanyon_Text_LeroyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_LeroyRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Text_LeroyRematchIntro, QuestIsland_SevaultCanyon_Text_LeroyDefeat
+	msgbox QuestIsland_SevaultCanyon_Text_LeroyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_Michelle::
+	trainerbattle_single TRAINER_COOLTRAINER_MICHELLE, QuestIsland_SevaultCanyon_Text_MichelleIntro, QuestIsland_SevaultCanyon_Text_MichelleDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_EventScript_MichelleRematch
+	msgbox QuestIsland_SevaultCanyon_Text_MichellePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_MichelleRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Text_MichelleRematchIntro, QuestIsland_SevaultCanyon_Text_MichelleDefeat
+	msgbox QuestIsland_SevaultCanyon_Text_MichellePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_Lex::
+	trainerbattle_double TRAINER_COOL_COUPLE_LEX_NYA, QuestIsland_SevaultCanyon_Text_LexIntro, QuestIsland_SevaultCanyon_Text_LexDefeat, QuestIsland_SevaultCanyon_Text_LexNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_EventScript_LexRematch
+	msgbox QuestIsland_SevaultCanyon_Text_LexPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_LexRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Text_LexRematchIntro, QuestIsland_SevaultCanyon_Text_LexDefeat
+	msgbox QuestIsland_SevaultCanyon_Text_LexPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_Nya::
+	trainerbattle_double TRAINER_COOL_COUPLE_LEX_NYA, QuestIsland_SevaultCanyon_Text_NyaIntro, QuestIsland_SevaultCanyon_Text_NyaDefeat, QuestIsland_SevaultCanyon_Text_NyaNotEnoughMons
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_SevaultCanyon_EventScript_NyaRematch
+	msgbox QuestIsland_SevaultCanyon_Text_NyaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_NyaRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_SevaultCanyon_Text_NyaRematchIntro, QuestIsland_SevaultCanyon_Text_NyaDefeat
+	msgbox QuestIsland_SevaultCanyon_Text_NyaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+    QuestIsland_SevaultCanyon_Text_CyndyRematchIntro::
+	.string "Let's have another battle.\n"
+	.string "My conditioning's in top form!$"
+
+QuestIsland_SevaultCanyon_Text_EvanRematchIntro::
+	.string "It doesn't matter if you happen to\n"
+	.string "have the strongest POKéMON…\p"
+	.string "It doesn't mean a thing if you don't\n"
+	.string "know how to use them properly!$"
+
+QuestIsland_SevaultCanyon_Text_JacksonRematchIntro::
+	.string "I work to protect the environment.\n"
+	.string "In turn, nature protects me!$"
+
+QuestIsland_SevaultCanyon_Text_KatelynRematchIntro::
+	.string "Every time we meet, you have those\n"
+	.string "snazzy shoes on.$"
+
+QuestIsland_SevaultCanyon_Text_LeroyRematchIntro::
+	.string "You must have gotten tougher.\n"
+	.string "Let me battle you, please!$"
+
+QuestIsland_SevaultCanyon_Text_MichelleRematchIntro::
+	.string "I was given the best possible\n"
+	.string "education to become this strong.\p"
+	.string "I won't lose this time.\n"
+	.string "Absolutely not!$"
+
+QuestIsland_SevaultCanyon_Text_LexRematchIntro::
+	.string "LEX: My darling NYA, together\n"
+	.string "we will win for certain!$"
+
+QuestIsland_SevaultCanyon_Text_NyaRematchIntro::
+	.string "NYA: I won't drag down my mentor\n"
+	.string "LEX! We're going to win!$"
+
 QuestIsland_SevaultCanyon_EventScript_RouteSign::
 	msgbox QuestIsland_SevaultCanyon_Text_RouteSign, MSGBOX_SIGN
 	end
+
 QuestIsland_SevaultCanyon_Text_CyndyIntro::
     .string "My conditioning's in top form!$"
 

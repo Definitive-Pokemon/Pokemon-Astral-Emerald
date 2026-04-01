@@ -4,12 +4,6 @@ ChronoIsland_House1_MapScripts::
 ChronoIsland_House1_EventScript_Woman::
 	msgbox ChronoIsland_House1_Text_HusbandWentOffFishing, MSGBOX_NPC
 	end
-ChronoIsland_House1_JPText_HusbandWentOffFishing::
-    .string "こんばん�E　おかず�E\n"
-    .string "ようぁE��しなくて　ぁE��ぞ！\p"
-    .string "って　だんなが\n"
-    .string "つりに　ぁE��たん　だけど‥\l"
-    .string "しんじて　ぁE��のか�EぁE"
 
 ChronoIsland_House1_Text_HusbandWentOffFishing::
     .string "Don't worry about buying anything\n"

@@ -17,7 +17,7 @@ ChronoIsland_ResortGorgeous_House_EventScript_Selphy::
 	end
 
 ChronoIsland_ResortGorgeous_House_EventScript_RequestMon::
-	special SampleResortGorgeousMonAndReward
+	@special SampleResortGorgeousMonAndReward
 	msgbox ChronoIsland_ResortGorgeous_House_Text_WishToSeeMonPlease
 	release
 	end
@@ -29,24 +29,24 @@ ChronoIsland_ResortGorgeous_House_EventScript_RequestTookTooLong::
 
 ChronoIsland_ResortGorgeous_House_EventScript_CheckForRequestedMon::
 	copyvar VAR_0x8004, VAR_RESORT_GORGEOUS_REQUESTED_MON
-	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	@specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	goto_if_eq VAR_RESULT, TRUE, ChronoIsland_ResortGorgeous_House_EventScript_ShowRequestedMon
 	goto ChronoIsland_ResortGorgeous_House_EventScript_RequestMon
 	end
 
 ChronoIsland_ResortGorgeous_House_EventScript_ShowRequestedMon::
-	special SampleResortGorgeousMonAndReward
+	@special SampleResortGorgeousMonAndReward
 	msgbox ChronoIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou
 	addobject LOCALID_RESORT_GORGEOUS_HOUSE_BUTLER
 	applymovement LOCALID_RESORT_GORGEOUS_HOUSE_BUTLER, ChronoIsland_ResortGorgeous_House_Movement_ButlerEnter
 	waitmovement 0
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox ChronoIsland_ResortGorgeous_House_Text_ButlerYesMyLady
 	applymovement LOCALID_RESORT_GORGEOUS_HOUSE_SELPHY, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	msgbox ChronoIsland_ResortGorgeous_House_Text_SelphyGiveTokenOfAppreciation
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox ChronoIsland_ResortGorgeous_House_Text_ButlerIShallDoAsYouBid
 	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, ChronoIsland_ResortGorgeous_House_EventScript_ButlerApproachPlayerNorth
@@ -55,7 +55,7 @@ ChronoIsland_ResortGorgeous_House_EventScript_ShowRequestedMon::
 	call_if_eq VAR_FACING, DIR_WEST, ChronoIsland_ResortGorgeous_House_EventScript_ButlerApproachPlayerWest
 	copyobjectxytoperm LOCALID_RESORT_GORGEOUS_HOUSE_BUTLER
 	msgbox ChronoIsland_ResortGorgeous_House_Text_ButlerPleaseAcceptThisAsHerThanks
-	giveitem VAR_RESORT_GORGEOUS_REWARD
+	@giveitem VAR_RESORT_GORGEOUS_REWARD
 	goto_if_eq VAR_RESULT, FALSE, ChronoIsland_ResortGorgeous_House_EventScript_NoRoomForReward
 	setflag SHOWN_REQUESTED_MON
 	setvar VAR_RESORT_GORGEOUS_REQUESTED_MON, SPECIES_NONE
@@ -91,9 +91,9 @@ ChronoIsland_ResortGorgeous_House_EventScript_ButlerApproachPlayerWest::
 	return
 
 ChronoIsland_ResortGorgeous_House_EventScript_NoRoomForReward::
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox ChronoIsland_ResortGorgeous_House_Text_ButlerBagAppearsToBeFull
-	textcolor NPC_TEXT_COLOR_FEMALE
+
 	msgbox ChronoIsland_ResortGorgeous_House_Text_OhHowDisappointing
 	setflag SHOWN_REQUESTED_MON
 	setvar VAR_RESORT_GORGEOUS_REQUESTED_MON, SPECIES_NONE

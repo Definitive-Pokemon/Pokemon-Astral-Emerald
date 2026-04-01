@@ -124,7 +124,7 @@ FortuneIsland_PatternBush_Text_JonahDefeat::
     .string "POKéMON's appeal, too.$"
 
 FortuneIsland_PatternBush_Text_JonahPostBattle::
-    .string "By the way, “appeal Eis a weird\n"
+    .string "By the way, “appeal” is a weird\n"
     .string "word, if you think about it.\p"
     .string "Like, is it like an orange peel?\n"
     .string "Or like a ringing bell?$"

@@ -21,7 +21,7 @@ MtEmber_Exterior_OnLoad::
 	end
 
 MtEmber_Exterior_EventScript_OpenCave::
-	setmetatile 42, 39, METATILE_MtEmber_CaveEntrance, 0
+	@setmetatile 42, 39, METATILE_MtEmber_CaveEntrance, 0
 	return
 
 MtEmber_Exterior_EventScript_Grunt1::
@@ -86,7 +86,7 @@ MtEmber_Exterior_EventScript_BattleGrunt2::
 
 MtEmber_Exterior_EventScript_RocketPasswordScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
+
 	msgbox MtEmber_Exterior_Text_PunchedThroughAtLast
 	message MtEmber_Exterior_Text_WhatsPasswordAgain
 	waitmessage
@@ -145,27 +145,6 @@ Text_ExplosionTaught::
     .string "Using EXPLOSION while on this\n"
     .string "volcano…\p"
     .string "What a terrifying thrill!$"
-
-@ Below 4 are unused JP versions of the above texts
-Text_ExplosionTeachJP::
-    .string "こ　こ�E　かざんが\n"
-    .string "もし　だぁE�Eく�Eつ　したら\l"
-    .string "お　おれら　ひとたまりも\l"
-    .string "なぁE��あ　‥ブルブル�E�\p"
-    .string "こ　こわぁE��つぁE��に\n"
-    .string "だぁE�Eく�Eつ　でも　おぼえてみる！E"
-
-Text_ExplosionDeclinedJP::
-    .string "めE��めE��ぱ　こわぁE��んな\n"
-    .string "ブルブル$"
-
-Text_ExplosionWhichMonJP::
-    .string "つ　つよきだね�E�\n"
-    .string "じゃあ　どの　ポケモンに　する�E�E"
-
-Text_ExplosionTaughtJP::
-    .string "かざんで　だぁE�Eく�Eつを‥\n"
-    .string "す　すごぁE��スリル�E�E"
 
 MtEmber_Exterior_Text_WellTryDiggingHere::
     .string "Over here.\n"

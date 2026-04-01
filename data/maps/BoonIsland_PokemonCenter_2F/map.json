@@ -11,13 +11,13 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
-  "floor_number": 0,
+  
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
+      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_NURSE",
       "x": 6,
       "y": 2,
       "elevation": 3,
@@ -31,7 +31,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
+      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_NURSE",
       "x": 2,
       "y": 2,
       "elevation": 3,
@@ -45,7 +45,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
+      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_NURSE",
       "x": 10,
       "y": 2,
       "elevation": 3,
@@ -59,7 +59,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MG_DELIVERYMAN",
+      "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
       "x": 1,
       "y": 2,
       "elevation": 3,

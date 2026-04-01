@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -28,11 +27,15 @@
       "map": "MAP_FORTUNE_ISLAND_RUIN_VALLEY",
       "offset": 80,
       "direction": "left"
+    },
+    {
+      "map": "MAP_KIN_ISLAND_BOND_BRIDGE",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 12,
       "y": 13,
@@ -43,11 +46,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "FortuneIsland_WaterPath_EventScript_Rose",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
       "x": 11,
       "y": 52,
       "elevation": 3,
@@ -57,11 +60,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "FortuneIsland_WaterPath_EventScript_Edward",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
       "x": 13,
       "y": 35,
       "elevation": 1,
@@ -71,11 +74,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "FortuneIsland_WaterPath_EventScript_Samir",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
       "x": 15,
       "y": 45,
       "elevation": 1,
@@ -85,10 +88,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_WaterPath_EventScript_Denise",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
       "x": 6,
       "y": 21,
@@ -99,10 +102,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_WaterPath_EventScript_Miu",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
       "x": 7,
       "y": 21,
@@ -113,10 +116,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_WaterPath_EventScript_Mia",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 11,
       "y": 76,
@@ -127,10 +130,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "FortuneIsland_WaterPath_EventScript_Earl",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 17,
       "y": 19,
@@ -141,10 +144,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FortuneIsland_WaterPath_EventScript_ItemElixir",
-      "flag": "FLAG_HIDE_FORTUNE_ISLAND_WATER_PATH_ELIXIR"
+      "flag": "FLAG_HIDE_FORTUNE_ISLAND_WATER_PATH_ELIXIR",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 17,
       "y": 87,
@@ -155,7 +158,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FortuneIsland_WaterPath_EventScript_ItemDragonScale",
-      "flag": "FLAG_HIDE_FORTUNE_ISLAND_WATER_PATH_DRAGON_SCALE"
+      "flag": "FLAG_HIDE_FORTUNE_ISLAND_WATER_PATH_DRAGON_SCALE",
+      "type": "object"
     }
   ],
   "warp_events": [
@@ -174,7 +178,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

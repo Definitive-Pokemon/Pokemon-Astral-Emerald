@@ -1,13 +1,20 @@
 FortuneIsland_Mart_MapScripts::
 	.byte 0
 
+FortuneIsland_Mart_EventScript_OldWoman::
+	lock
+	faceplayer
+	msgbox FortuneIsland_Mart_Text_AgathaOldestEverEliteFourMember
+	release
+	end
+
 FortuneIsland_Mart_EventScript_Clerk::
 	lock
 	faceplayer
-	message Text_MayIHelpYou
+	message gText_HowMayIServeYou
 	waitmessage
 	pokemart FortuneIsland_Mart_Items
-	msgbox Text_PleaseComeAgain
+	msgbox gText_PleaseComeAgain
 	release
 	end
 
@@ -28,6 +35,7 @@ FortuneIsland_Mart_Items::
 FortuneIsland_Mart_EventScript_Picnicker::
 	msgbox FortuneIsland_Mart_Text_ShouldBuyMailAndWriteLetter, MSGBOX_NPC
 	end
+
 FortuneIsland_Mart_Text_AgathaOldestEverEliteFourMember::
     .string "Play with POKéMON lots and live\n"
     .string "a long life!\p"

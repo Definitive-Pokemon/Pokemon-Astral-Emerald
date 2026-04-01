@@ -6,6 +6,37 @@ QuestIsland_TrainerTower_OnTransition::
 	setvar VAR_MAP_SCENE_TRAINER_TOWER, 0
 	end
 
+QuestIsland_TrainerTower_EventScript_Dario::
+	trainerbattle_single TRAINER_PSYCHIC_DARIO, QuestIsland_TrainerTower_Text_DarioIntro, QuestIsland_TrainerTower_Text_DarioDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_TrainerTower_EventScript_DarioRematch
+	msgbox QuestIsland_TrainerTower_Text_DarioPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_TrainerTower_EventScript_DarioRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_TrainerTower_Text_DarioRematchIntro, QuestIsland_TrainerTower_Text_DarioDefeat
+	msgbox QuestIsland_TrainerTower_Text_DarioPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_TrainerTower_EventScript_Rodette::
+	trainerbattle_single TRAINER_PSYCHIC_RODETTE, QuestIsland_TrainerTower_Text_RodetteIntro, QuestIsland_TrainerTower_Text_RodetteDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, QuestIsland_TrainerTower_EventScript_RodetteRematch
+	msgbox QuestIsland_TrainerTower_Text_RodettePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_TrainerTower_EventScript_RodetteRematch::
+	trainerbattle_rematch TRAINER_CLIFFORD, QuestIsland_TrainerTower_Text_RodetteRematchIntro, QuestIsland_TrainerTower_Text_RodetteDefeat
+	msgbox QuestIsland_TrainerTower_Text_RodettePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+QuestIsland_TrainerTower_Text_DarioRematchIntro::
+	.string "I sensed your approach.$"
+
+QuestIsland_TrainerTower_Text_RodetteRematchIntro::
+	.string "Somewhere on this island, peculiar\n"
+	.string "POKéMON are sleeping.$"
+
 QuestIsland_TrainerTower_EventScript_TrainerTowerSign::
 	msgbox QuestIsland_TrainerTower_Text_TrainerTowerSign, MSGBOX_SIGN
 	end
@@ -13,6 +44,7 @@ QuestIsland_TrainerTower_EventScript_TrainerTowerSign::
 QuestIsland_TrainerTower_EventScript_TrainerTowerAheadSign::
 	msgbox QuestIsland_TrainerTower_Text_TrainerTowerAhead, MSGBOX_SIGN
 	end
+
 QuestIsland_TrainerTower_Text_DarioIntro::
     .string "I sensed your approach.$"
 
@@ -44,13 +76,3 @@ QuestIsland_TrainerTower_Text_TrainerTowerSign::
 
 QuestIsland_TrainerTower_Text_TrainerTowerAhead::
     .string "TRAINER TOWER AHEAD$"
-
-@ Unused text perhaps indicating Trainer Tower was planned to be unlocked by something
-QuestIsland_TrainerTower_Text_LooksLikeTrainerTowerIsClosed::
-    .string "トレーナ�Eタワーには\n"
-    .string "ぁE��は　はぁE��なぁE��みたい‥$"
-
-QuestIsland_TrainerTower_Text_TrainerTowerIsOpenLetsGoIn::
-    .string "トレーナ�Eタワーが　あいてる！\n"
-    .string "さっそく　はぁE��てみよう�E�E"
-

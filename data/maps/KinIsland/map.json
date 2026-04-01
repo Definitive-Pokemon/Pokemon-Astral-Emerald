@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -27,8 +26,7 @@
   ],
   "object_events": [
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 7,
       "y": 24,
       "elevation": 3,
@@ -38,11 +36,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_AntiBiker1",
-      "flag": "FLAG_HIDE_KIN_ISLAND_ANTIBIKERS"
+      "flag": "FLAG_HIDE_KIN_ISLAND_ANTIBIKERS",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 8,
       "y": 23,
       "elevation": 3,
@@ -52,11 +50,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_AntiBiker2",
-      "flag": "FLAG_HIDE_KIN_ISLAND_ANTIBIKERS"
+      "flag": "FLAG_HIDE_KIN_ISLAND_ANTIBIKERS",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
       "x": 8,
       "y": 24,
       "elevation": 3,
@@ -66,11 +64,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_KIN_ISLAND_LONE_BIKER"
+      "flag": "FLAG_HIDE_KIN_ISLAND_LONE_BIKER",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
       "x": 9,
       "y": 23,
       "elevation": 3,
@@ -80,11 +78,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
       "x": 9,
       "y": 24,
       "elevation": 3,
@@ -94,11 +92,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
       "x": 10,
       "y": 22,
       "elevation": 3,
@@ -108,11 +106,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
       "x": 10,
       "y": 24,
       "elevation": 3,
@@ -122,11 +120,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
       "x": 11,
       "y": 23,
       "elevation": 3,
@@ -136,11 +134,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 20,
       "y": 7,
       "elevation": 3,
@@ -150,10 +148,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_TEMP_12"
+      "flag": "FLAG_TEMP_12",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 18,
       "y": 17,
@@ -164,10 +162,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_ItemZinc",
-      "flag": "FLAG_HIDE_KIN_ISLAND_ZINC"
+      "flag": "FLAG_HIDE_KIN_ISLAND_ZINC",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
       "x": 15,
       "y": 7,
@@ -178,11 +176,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Woman",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_1",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
       "x": 14,
       "y": 14,
       "elevation": 3,
@@ -192,11 +190,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_LittleBoy",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_DODUO",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DODUO)",
       "x": 15,
       "y": 14,
       "elevation": 3,
@@ -206,11 +204,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Doduo",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BIKER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
       "x": 15,
       "y": 31,
       "elevation": 3,
@@ -220,7 +218,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "KinIsland_EventScript_Biker6",
-      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_KIN_ISLAND_BIKERS",
+      "type": "object"
     }
   ],
   "warp_events": [
