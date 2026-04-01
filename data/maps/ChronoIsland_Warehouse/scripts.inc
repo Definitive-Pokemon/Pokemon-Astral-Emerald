@@ -60,7 +60,7 @@ ChronoIsland_Warehouse_EventScript_MentionGiovannisKid::
 
 ChronoIsland_Warehouse_EventScript_DefeatedGideon::
 	msgbox ChronoIsland_Warehouse_Text_GideonPostBattle
-	setflag FLAG_RECOVERED_SAPPHIRE
+	setflag FLAG_AE_RECOVERED_SAPPHIRE
 	giveitem ITEM_SAPPHIRE
 	release
 	end

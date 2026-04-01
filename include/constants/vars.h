@@ -120,7 +120,7 @@
 #define VAR_MAP_SCENE_FLOE_ISLAND                        0x4062
 #define VAR_ROUTE104_STATE                               0x4063
 #define VAR_MAP_SCENE_FORTUNE_ISLAND_POKEMON_CENTER_1F       0x4064
-#define VAR_AE_MAP_SCENE_MT_EMBER_EXTERIOR                   0x4065
+#define VAR_UESLESS                   0x4065
 #define VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS        0x4066 
 #define VAR_AE_RESORT_GORGEOUS_REQUESTED_MON                0x4067 
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var
