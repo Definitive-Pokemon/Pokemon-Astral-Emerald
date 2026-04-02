@@ -45,11 +45,7 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#if IS_FRLG
-
 #include "constants/flags_frlg.h"
-
-#else
 
 // Vanilla Sevii flags part 1
 #define FLAG_HIDE_KNOT_ISLAND_BILL    0x20 
