@@ -640,7 +640,7 @@ gStdScripts_End::
 	.include "data/maps/KinIsland_House5/scripts.inc"
 	.include "data/maps/KinIsland_Harbor/scripts.inc"
 	.include "data/maps/FloeIsland/scripts.inc"
-	.include "data/maps/FloeIsland_PokemonDaycare/scripts.inc"
+	.include "data/maps/FloeIsland_PokemonDayCare/scripts.inc"
 	.include "data/maps/FloeIsland_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/FloeIsland_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/FloeIsland_House1/scripts.inc"
