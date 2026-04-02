@@ -1,7 +1,7 @@
 {
   "id": "MAP_FORTUNE_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
   "name": "FortuneIsland_DottedHole_SapphireRoom",
-  "layout": "LAYOUT_FORTUNE_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
+  "layout": "LAYOUT_FORTUNE_ISLAND_DOTTED_HOLE_BOTTOM_ROOM",
   "music": "MUS_RG_SEVII_DUNGEON",
   "region_map_section": "MAPSEC_DOTTED_HOLE",
   "requires_flash": false,
