@@ -673,7 +673,7 @@ gStdScripts_End::
 	.include "data/maps/ChronoIsland_LostCave_Room13/scripts.inc"
 	.include "data/maps/ChronoIsland_LostCave_Room14/scripts.inc"
 	.include "data/maps/ChronoIsland_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/ChronoIsland_PokeCenter_2F/scripts.inc"
+	.include "data/maps/ChronoIsland_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/ChronoIsland_Harbor/scripts.inc"
 	.include "data/maps/ChronoIsland_House1/scripts.inc"
 	.include "data/maps/ChronoIsland_House2/scripts.inc"
