@@ -696,7 +696,7 @@ gStdScripts_End::
 	.include "data/maps/FortuneIsland_DottedHole_B2F/scripts.inc"
 	.include "data/maps/FortuneIsland_DottedHole_B3F/scripts.inc"
 	.include "data/maps/FortuneIsland_DottedHole_B4F/scripts.inc"
-	.include "data/maps/FortuneIsland_DottedHole_BottomRoom/scripts.inc"
+	.include "data/maps/FortuneIsland_DottedHole_SapphireRoom/scripts.inc"
 	.include "data/maps/FortuneIsland_PatternBush/scripts.inc"
 	.include "data/maps/FortuneIsland_AlteringCave/scripts.inc"
 	.include "data/maps/QuestIsland/scripts.inc"
