@@ -16878,8 +16878,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_42 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
-Gender: Male
+Pic: Rocket Grunt F
+Gender: Female
 Music: Aqua
 Double Battle: No
 
@@ -16894,8 +16894,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PSYCHIC_JACLYN ===
 Name: JACLYN
 Class: Psychic
-Pic: None
-Gender: Male
+Pic: Psychic F
+Gender: Female
 Music: Intense
 Double Battle: No
 
@@ -16926,8 +16926,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_CRUSH_GIRL_SHARON ===
 Name: SHARON
 Class: Battle Girl
-Pic: None
-Gender: Male
+Pic: Battle Girl
+Gender: Female
 Music: Intense
 Double Battle: No
 
@@ -16942,8 +16942,8 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_TUBER_AMIRA ===
 Name: AMIRA
 Class: Tuber F
-Pic: None
-Gender: Male
+Pic: Tuber F
+Gender: Female
 Music: Girl
 Double Battle: No
 
@@ -16962,8 +16962,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PKMN_BREEDER_ALIZE ===
 Name: ALIZE
 Class: Pkmn Breeder
-Pic: None
-Gender: Male
+Pic: Pokemon Breeder F
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -16982,7 +16982,7 @@ IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 === TRAINER_PKMN_RANGER_NICOLAS ===
 Name: NICOLAS
 Class: Pkmn Ranger
-Pic: None
+Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
 Items: Full Restore
@@ -17007,8 +17007,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_PKMN_RANGER_MADELINE ===
 Name: MADELINE
 Class: Pkmn Ranger
-Pic: None
-Gender: Male
+Pic: Pokemon Ranger F
+Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
@@ -17032,8 +17032,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_AROMA_LADY_NIKKI ===
 Name: NIKKI
 Class: Aroma Lady
-Pic: None
-Gender: Male
+Pic: Aroma Lady
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -17048,7 +17048,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_RUIN_MANIAC_STANLY ===
 Name: STANLY
 Class: Ruin Maniac
-Pic: None
+Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -17068,8 +17068,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_LADY_JACKI ===
 Name: JACKI
 Class: Lady
-Pic: None
-Gender: Male
+Pic: Lady
+Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
@@ -17085,8 +17085,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PAINTER_DAISY ===
 Name: DAISY
 Class: RS Protag
-Pic: None
-Gender: Male
+Pic: RS Protag
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -17101,7 +17101,7 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_BIKER_GOON ===
 Name: GOON
 Class: Triathlete
-Pic: None
+Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17125,7 +17125,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BIKER_GOON_2 ===
 Name: GOON
 Class: Triathlete
-Pic: None
+Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17141,7 +17141,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BIKER_GOON_3 ===
 Name: GOON
 Class: Triathlete
-Pic: None
+Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17153,7 +17153,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BIKER_2 ===
 Name: 
 Class: Triathlete
-Pic: None
+Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17165,7 +17165,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BUG_CATCHER_ANTHONY ===
 Name: ANTHONY
 Class: Bug Catcher
-Pic: None
+Pic: Bug Catcher M
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17181,7 +17181,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BUG_CATCHER_CHARLIE ===
 Name: CHARLIE
 Class: Bug Catcher
-Pic: None
+Pic: Bug Catcher M
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17201,7 +17201,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TWINS_ELI_ANNE_2 ===
 Name: ELI & ANNE
 Class: Twins
-Pic: None
+Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
@@ -17217,7 +17217,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 === TRAINER_YOUNGSTER_JOHNSON ===
 Name: JOHNSON
 Class: Youngster
-Pic: None
+Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17237,7 +17237,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BIKER_RICARDO ===
 Name: RICARDO
 Class: Triathlete
-Pic: None
+Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17269,7 +17269,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BIKER_JAREN ===
 Name: JAREN
 Class: Triathlete
-Pic: None
+Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17285,7 +17285,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_43 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -17301,7 +17301,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_44 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -17325,7 +17325,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_45 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -17345,7 +17345,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_46 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -17365,7 +17365,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_47 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -17385,7 +17385,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_48 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -17401,8 +17401,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_ADMIN ===
 Name: ADMIN
 Class: Rocket Admin
-Pic: None
-Gender: Male
+Pic: Rocket Grunt F
+Gender: Female
 Music: Aqua
 Items: Hyper Potion
 Double Battle: No
@@ -17434,7 +17434,7 @@ IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 === TRAINER_TEAM_ROCKET_ADMIN_2 ===
 Name: ADMIN
 Class: Rocket Admin
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Items: Hyper Potion
@@ -17467,7 +17467,7 @@ IVs: 33 HP / 33 Atk / 33 Def / 33 SpA / 33 SpD / 33 Spe
 === TRAINER_SCIENTIST_GIDEON ===
 Name: GIDEON
 Class: RS Protag
-Pic: None
+Pic: RS Protag
 Gender: Male
 Music: Suspicious
 Double Battle: No
@@ -17515,8 +17515,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_FEMALE_AMARA ===
 Name: AMARA
 Class: Swimmer F
-Pic: None
-Gender: Male
+Pic: Swimmer F
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -17535,8 +17535,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_FEMALE_MARIA ===
 Name: MARIA
 Class: Swimmer F
-Pic: None
-Gender: Male
+Pic: Swimmer F
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -17551,8 +17551,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_FEMALE_ABIGAIL ===
 Name: ABIGAIL
 Class: Swimmer F
-Pic: None
-Gender: Male
+Pic: Swimmer F
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -17571,7 +17571,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_MALE_FINN ===
 Name: FINN
 Class: Swimmer M
-Pic: None
+Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -17583,7 +17583,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_MALE_GARRETT ===
 Name: GARRETT
 Class: Swimmer M
-Pic: None
+Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -17603,7 +17603,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_FISHERMAN_TOMMY ===
 Name: TOMMY
 Class: Fisherman
-Pic: None
+Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -17631,8 +17631,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CRUSH_GIRL_TANYA ===
 Name: TANYA
 Class: Battle Girl
-Pic: None
-Gender: Male
+Pic: Battle Girl
+Gender: Female
 Music: Intense
 Double Battle: No
 
@@ -17647,8 +17647,8 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_BLACK_BELT_SHEA ===
 Name: SHEA
 Class: Black Belt
-Pic: None
-Gender: Male
+Pic: Black Belt
+Gender: Female
 Music: Intense
 Double Battle: No
 
@@ -17663,7 +17663,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_BLACK_BELT_HUGH ===
 Name: HUGH
 Class: Black Belt
-Pic: None
+Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -17679,7 +17679,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_CAMPER_BRYCE ===
 Name: BRYCE
 Class: Camper
-Pic: None
+Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17699,8 +17699,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PICNICKER_CLAIRE ===
 Name: CLAIRE
 Class: Picnicker
-Pic: None
-Gender: Male
+Pic: Picnicker
+Gender: Female
 Music: Girl
 Double Battle: No
 
@@ -17723,7 +17723,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CRUSH_KIN_MIK_KIA ===
 Name: MIK & KIA
 Class: Young Couple
-Pic: None
+Pic: Young Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
@@ -17739,7 +17739,7 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_AROMA_LADY_VIOLET ===
 Name: VIOLET
 Class: Aroma Lady
-Pic: None
+Pic: Aroma Lady
 Gender: Male
 Music: Female
 Double Battle: No
@@ -17759,7 +17759,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TUBER_ALEXIS ===
 Name: ALEXIS
 Class: Tuber F
-Pic: None
+Pic: Tuber F
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -17783,7 +17783,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TWINS_JOY_MEG ===
 Name: JOY & MEG
 Class: Twins
-Pic: None
+Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
@@ -17799,7 +17799,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_FEMALE_TISHA ===
 Name: TISHA
 Class: Swimmer F
-Pic: None
+Pic: Swimmer F
 Gender: Male
 Music: Female
 Double Battle: No
@@ -17811,7 +17811,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PAINTER_CELINA ===
 Name: CELINA
 Class: RS Protag
-Pic: None
+Pic: RS Protag
 Gender: Male
 Music: Female
 Double Battle: No
@@ -17827,7 +17827,7 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_PAINTER_RAYNA ===
 Name: RAYNA
 Class: RS Protag
-Pic: None
+Pic: RS Protag
 Gender: Male
 Music: Female
 Double Battle: No
@@ -17843,7 +17843,7 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_LADY_GILLIAN ===
 Name: GILLIAN
 Class: Lady
-Pic: None
+Pic: Lady
 Gender: Male
 Music: Female
 Items: Full Restore
@@ -17864,7 +17864,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_YOUNGSTER_DESTIN ===
 Name: DESTIN
 Class: Youngster
-Pic: None
+Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17880,7 +17880,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_MALE_TOBY ===
 Name: TOBY
 Class: Swimmer M
-Pic: None
+Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -17900,7 +17900,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_49 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -17920,7 +17920,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_50 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
+Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -17944,8 +17944,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TEAM_ROCKET_GRUNT_51 ===
 Name: GRUNT
 Class: Rocket Grunt
-Pic: None
-Gender: Male
+Pic: Rocket Grunt M
+Gender: Female
 Music: Aqua
 Double Battle: No
 
@@ -17964,7 +17964,7 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_BIRD_KEEPER_MILO ===
 Name: MILO
 Class: Bird Keeper
-Pic: None
+Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
@@ -17980,7 +17980,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BIRD_KEEPER_CHAZ ===
 Name: CHAZ
 Class: Bird Keeper
-Pic: None
+Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
@@ -17996,7 +17996,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BIRD_KEEPER_HAROLD ===
 Name: HAROLD
 Class: Bird Keeper
-Pic: None
+Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
@@ -18012,7 +18012,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_FISHERMAN_TYLOR ===
 Name: TYLOR
 Class: Fisherman
-Pic: None
+Pic: Fisher
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18028,7 +18028,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_MALE_MYMO ===
 Name: MYMO
 Class: Swimmer M
-Pic: None
+Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -18044,8 +18044,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_FEMALE_NICOLE ===
 Name: NICOLE
 Class: Swimmer F
-Pic: None
-Gender: Male
+Pic: Swimmer F
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -18056,7 +18056,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SIS_AND_BRO_AVA_GEB ===
 Name: AVA & GEB
 Class: Sis And Bro
-Pic: None
+Pic: Sis And Bro
 Gender: Male
 Music: Swimmer
 Double Battle: Yes
@@ -18072,7 +18072,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_AROMA_LADY_ROSE ===
 Name: ROSE
 Class: Aroma Lady
-Pic: None
+Pic: Aroma Lady
 Gender: Male
 Music: Female
 Double Battle: No
@@ -18088,7 +18088,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_MALE_SAMIR ===
 Name: SAMIR
 Class: Swimmer M
-Pic: None
+Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -18100,8 +18100,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_FEMALE_DENISE ===
 Name: DENISE
 Class: Swimmer F
-Pic: None
-Gender: Male
+Pic: Swimmer F
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -18116,7 +18116,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TWINS_MIU_MIA ===
 Name: MIU & MIA
 Class: Twins
-Pic: None
+Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
@@ -18132,7 +18132,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_HIKER_EARL ===
 Name: EARL
 Class: Hiker
-Pic: None
+Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18148,7 +18148,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_RUIN_MANIAC_FOSTER ===
 Name: FOSTER
 Class: Ruin Maniac
-Pic: None
+Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18160,7 +18160,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_RUIN_MANIAC_LARRY ===
 Name: LARRY
 Class: Ruin Maniac
-Pic: None
+Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18176,7 +18176,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_HIKER_DARYL ===
 Name: DARYL
 Class: Hiker
-Pic: None
+Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18188,7 +18188,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_POKEMANIAC_HECTOR ===
 Name: HECTOR
 Class: Pokemaniac
-Pic: None
+Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
@@ -18204,7 +18204,7 @@ IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 === TRAINER_PSYCHIC_DARIO ===
 Name: DARIO
 Class: Psychic
-Pic: None
+Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -18220,8 +18220,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_PSYCHIC_RODETTE ===
 Name: RODETTE
 Class: Psychic
-Pic: None
-Gender: Male
+Pic: Psychic F
+Gender: Female
 Music: Intense
 Double Battle: No
 
@@ -18252,8 +18252,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_AROMA_LADY_MIAH ===
 Name: MIAH
 Class: Aroma Lady
-Pic: None
-Gender: Male
+Pic: Aroma Lady
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -18268,7 +18268,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_YOUNG_COUPLE_EVE_JON ===
 Name: EVE & JON
 Class: Young Couple
-Pic: None
+Pic:Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
@@ -18284,7 +18284,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_JUGGLER_MASON ===
 Name: MASON
 Class: Kindler
-Pic: None
+Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18324,8 +18324,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CRUSH_GIRL_CYNDY ===
 Name: CYNDY
 Class: Battle Girl
-Pic: None
-Gender: Male
+Pic: Battle Girl
+Gender: Female
 Music: Intense
 Double Battle: No
 
@@ -18344,8 +18344,8 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_CRUSH_GIRL_JOCELYN ===
 Name: JOCELYN
 Class: Battle Girl
-Pic: None
-Gender: Male
+Pic: Battle Girl
+Gender: Female
 Music: Intense
 Double Battle: No
 
@@ -18360,7 +18360,7 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_TAMER_EVAN ===
 Name: EVAN
 Class: Pkmn Breeder
-Pic: None
+Pic: Pokemon Breeder M
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18380,7 +18380,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 === TRAINER_POKEMANIAC_MARK_2 ===
 Name: MARK
 Class: Pokemaniac
-Pic: None
+Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
@@ -18396,7 +18396,7 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 === TRAINER_PKMN_RANGER_LOGAN ===
 Name: LOGAN
 Class: Pkmn Ranger
-Pic: None
+Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
 Items: Full Restore
@@ -18421,7 +18421,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_PKMN_RANGER_JACKSON ===
 Name: JACKSON
 Class: Pkmn Ranger
-Pic: None
+Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
 Items: Full Restore
@@ -18454,8 +18454,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_PKMN_RANGER_BETH ===
 Name: BETH
 Class: Pkmn Ranger
-Pic: None
-Gender: Male
+Pic: Pokemon Ranger F
+Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
@@ -18492,7 +18492,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_COOLTRAINER_LEROY ===
 Name: LEROY
 Class: Cooltrainer
-Pic: None
+Pic: Cooltrainer
 Gender: Male
 Music: Cool
 Items: Full Restore
@@ -18541,7 +18541,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_COOLTRAINER_MICHELLE ===
 Name: MICHELLE
 Class: Cooltrainer
-Pic: None
+Pic: Cooltrainer
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -18590,7 +18590,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_COOL_COUPLE_LEX_NYA ===
 Name: LEX & NYA
 Class: Young Couple
-Pic: None
+Pic: Young Couple
 Gender: Male
 Music: Cool
 Items: Full Restore / Full Restore
@@ -18615,7 +18615,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_RUIN_MANIAC_BRANDON ===
 Name: BRANDON
 Class: Ruin Maniac
-Pic: None
+Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18627,7 +18627,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_RUIN_MANIAC_BENJAMIN ===
 Name: BENJAMIN
 Class: Ruin Maniac
-Pic: None
+Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18659,7 +18659,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PAINTER_EDNA ===
 Name: EDNA
 Class: RS Protag
-Pic: None
+Pic: RS Protag
 Gender: Male
 Music: Female
 Double Battle: No
@@ -18675,7 +18675,7 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 === TRAINER_GENTLEMAN_CLIFFORD ===
 Name: CLIFFORD
 Class: Gentleman
-Pic: None
+Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
@@ -18691,8 +18691,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_LADY_SELPHY ===
 Name: SELPHY
 Class: Lady
-Pic: None
-Gender: Male
+Pic: Lady
+Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
@@ -18716,7 +18716,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_RUIN_MANIAC_LAWSON ===
 Name: LAWSON
 Class: Ruin Maniac
-Pic: None
+Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -18736,8 +18736,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PSYCHIC_LAURA ===
 Name: LAURA
 Class: Psychic
-Pic: None
-Gender: Male
+Pic: Psychic F
+Gender: Female
 Music: Intense
 Double Battle: No
 
@@ -18756,8 +18756,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_PKMN_BREEDER_BETHANY ===
 Name: BETHANY
 Class: Pkmn Breeder
-Pic: None
-Gender: Male
+Pic: Pokemon Breeder F
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -18768,8 +18768,8 @@ IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 === TRAINER_PKMN_BREEDER_ALLISON ===
 Name: ALLISON
 Class: Pkmn Breeder
-Pic: None
-Gender: Male
+Pic: Pokemon Breeder F
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -18788,7 +18788,7 @@ IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 === TRAINER_BUG_CATCHER_GARRET ===
 Name: GARRET
 Class: Bug Catcher
-Pic: None
+Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18800,7 +18800,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BUG_CATCHER_JONAH ===
 Name: JONAH
 Class: Bug Catcher
-Pic: None
+Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18824,7 +18824,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BUG_CATCHER_VANCE ===
 Name: VANCE
 Class: Bug Catcher
-Pic: None
+Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18840,7 +18840,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_YOUNGSTER_NASH ===
 Name: NASH
 Class: Youngster
-Pic: None
+Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18860,7 +18860,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_YOUNGSTER_CORDELL ===
 Name: CORDELL
 Class: Youngster
-Pic: None
+Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18876,8 +18876,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_LASS_DALIA ===
 Name: DALIA
 Class: Lass
-Pic: None
-Gender: Male
+Pic: Lass
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -18900,8 +18900,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_LASS_JOANA ===
 Name: JOANA
 Class: Lass
-Pic: None
-Gender: Male
+Pic: Lass
+Gender: Female
 Music: Female
 Double Battle: No
 
@@ -18912,7 +18912,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CAMPER_RILEY ===
 Name: RILEY
 Class: Camper
-Pic: None
+Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18928,8 +18928,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PICNICKER_MARCY ===
 Name: MARCY
 Class: Picnicker
-Pic: None
-Gender: Male
+Pic: Picnicker
+Gender: Female
 Music: Girl
 Double Battle: No
 
@@ -18948,7 +18948,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_RUIN_MANIAC_LAYTON ===
 Name: LAYTON
 Class: Ruin Maniac
-Pic: None
+Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
