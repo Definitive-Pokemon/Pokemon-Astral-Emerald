@@ -18475,8 +18475,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_PKMN_RANGER_KATELYN ===
 Name: KATELYN
 Class: Pkmn Ranger
-Pic: None
-Gender: Male
+Pic: Pokemon Ranger F
+Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
@@ -18492,7 +18492,7 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_COOLTRAINER_LEROY ===
 Name: LEROY
 Class: Cooltrainer
-Pic: Cooltrainer
+Pic: Cooltrainer M
 Gender: Male
 Music: Cool
 Items: Full Restore
@@ -18541,8 +18541,8 @@ IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 === TRAINER_COOLTRAINER_MICHELLE ===
 Name: MICHELLE
 Class: Cooltrainer
-Pic: Cooltrainer
-Gender: Male
+Pic: Cooltrainer F
+Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
