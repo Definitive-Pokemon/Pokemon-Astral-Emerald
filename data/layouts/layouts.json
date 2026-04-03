@@ -7726,19 +7726,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_MT_EMBER_RUBY_PATH_B4F",
-      "name": "MtEmber_RubyPath_B4F_Layout",
-      "width": 18,
-      "height": 16,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_MtEmber",
-      "border_filepath": "data/layouts/MtEmber_RubyPath_B4F_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/MtEmber_RubyPath_B4F_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_THREE_ISLAND_BERRY_FOREST",
       "name": "ThreeIsland_BerryForest_Layout",
       "width": 57,
