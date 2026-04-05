@@ -422,8 +422,8 @@
 #define OBJ_EVENT_GFX_ROCKET_GRUNT_F             389
 #define OBJ_EVENT_GFX_ROCKET_ADMIN_M             390
 #define OBJ_EVENT_GFX_ROCKET_ADMIN_F             391
-#define OBJ_EVENT_GFX_GIOVANNI                   392
-#define OBJ_EVENT_GFX_CELIO                      393
+#define OBJ_EVENT_GFX_AE_GIOVANNI                   392
+#define OBJ_EVENT_GFX_AE_CELIO                      393
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
