@@ -28,14 +28,8 @@ KnotIsland_Harbor_EventScript_Sailor::
 	msgbox Island_Harbors_Text_Oi_Chap, MSGBOX_DEFAULT
 	setvar VAR_0x8004, 1
 	@special ScriptMenu_CreateSeviiFerryMultichoice
-	waitstate
-	setvar VAR_0x8001, 1
-	switch VAR_RESULT
-	case 0, Island_Harbors_EventScript_GoToLilycove
-	case 1, Island_Harbors_EventScript_GoToBoonIsland
-	case 2, Island_Harbors_EventScript_GoToKinIsland
-	case 3, Island_Harbors_EventScript_GoToFloeIsland
-	case 4, Island_Harbors_EventScript_GoToChronoIsland
-	case 5, Island_Harbors_EventScript_GoToFortuneIsland
-	case 6, Island_Harbors_EventScript_GoToQuestIsland
 	end
+
+	
+Island_Harbors_Text_Oi_Chap::
+    .string "IM ERROR$"
