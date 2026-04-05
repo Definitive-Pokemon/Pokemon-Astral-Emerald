@@ -9500,8 +9500,8 @@
       "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonDayCare",
-      "border_filepath": "data/layouts/FloeIsland_PokemonDaycare/border.bin",
-      "blockdata_filepath": "data/layouts/FloeIsland_PokemonDaycare/map.bin",
+      "border_filepath": "data/layouts/FloeIsland_PokemonDayCare/border.bin",
+      "blockdata_filepath": "data/layouts/FloeIsland_PokemonDayCare/map.bin",
       "border_height": 2,
       "border_width": 2,
       "layout_version": "emerald"
