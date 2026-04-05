@@ -716,6 +716,7 @@ gStdScripts_End::
 	.include "data/maps/QuestIsland_SevaultCanyon/scripts.inc"
 	.include "data/maps/QuestIsland_TanobyRuins/scripts.inc"
 	.include "data/maps/QuestIsland_House_Room1/scripts.inc"
+	.include "data/maps/QuestIsland_House_Room2/scripts.inc"
 	.include "data/maps/QuestIsland_Mart/scripts.inc"
 	.include "data/maps/QuestIsland_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/QuestIsland_PokemonCenter_2F/scripts.inc"
