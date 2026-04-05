@@ -5,7 +5,7 @@ FloeIsland_IcefallCave_1F_MapScripts::
 	.byte 0
 
 FloeIsland_IcefallCave_1F_OnResume::
-	setstepcallback STEP_CB_ICE
+	@setstepcallback STEP_CB_ICE
 	end
 
 FloeIsland_IcefallCave_1F_OnLoad::
