@@ -103,7 +103,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Electrode
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -116,11 +116,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Wailmer
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Seadra
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -133,7 +133,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Wailmer
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -146,7 +146,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Duskull
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -159,7 +159,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Seviper
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -172,7 +172,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Electrode
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -185,7 +185,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Golbat
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -232,6 +232,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Poochyena
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -296,7 +300,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Muk
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -324,7 +328,11 @@ AI: Check Bad Move
 
 Poochyena
 Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 1 Spe
+
+Carvanha
+Level: 11
+IVs: 1 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_GRUNT_WEATHER_INST_1 ===
 Name: GRUNT
@@ -335,11 +343,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Golbat
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Poochyena
+Tentacool
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -352,11 +360,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Mightyena
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Tentacool
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -369,15 +377,15 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Grimer
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
+Voltorb
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Grimer
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -394,6 +402,10 @@ Carvanha
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Zubat
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MUSEUM_2 ===
 Name: GRUNT
 Class: Team Aqua
@@ -403,12 +415,12 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Poochyena
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
-Level: 14
+Tentacool
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_1 ===
@@ -420,8 +432,8 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Numel
-Level: 32
+Camerupt
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_1 ===
@@ -433,7 +445,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Crobat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -446,7 +458,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Sharpedo
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -459,11 +471,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Tentacruel
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Seviper
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -476,7 +488,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Seviper
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -489,7 +501,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Grimer
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -502,7 +514,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Tentacruel
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Golbat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -533,11 +549,19 @@ Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
+Electrode
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Golbat
+Crawdaunt
+Level: 34
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Machamp
+Level: 34
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Huntail
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -563,11 +587,15 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Carvanha
+Mightyena
 Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Mightyena
+Seviper
+Level: 28
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Gorebyss
 Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -580,11 +608,15 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Sharpedo
+Seviper
 Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Mightyena
+Castform
+Level: 37
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Gorebyss
 Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -600,6 +632,14 @@ AI: Basic Trainer
 
 Mightyena
 Level: 41
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Wailord
+Level: 41
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Machamp
+Level: 43
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Crobat
@@ -2166,11 +2206,11 @@ Mightyena
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Mightyena
+Golem
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Numel
+Magcargo
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2674,7 +2714,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Vulpix
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3387,11 +3427,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Electrode
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
+Golbat
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3404,7 +3444,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
+Gyarados
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sableye
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10528,7 +10572,11 @@ Mightyena
 Level: 35
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Golbat
+Tentacruel
+Level: 35
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Linoone // GALARIAN! CHECK HOW TO APPLY
 Level: 35
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -10558,11 +10606,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Wailmer
+Mightyena
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
+Seadra
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10575,7 +10623,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Zangoose
 Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -10710,8 +10758,8 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
-Level: 20
+Golbat
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CLARENCE ===
@@ -10801,11 +10849,11 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Golbat
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Poochyena
+Mightyena
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10818,7 +10866,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Baltoy
+Rhyhorn
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10831,7 +10879,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Ninetales
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10947,11 +10995,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Linoone // GALARIAN, CHECK HOW TO APPLY!
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Poochyena
+Wailmer
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10964,20 +11012,16 @@ Music: Magma
 Double Battle: No
 AI: Basic Trainer
 
-Numel
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Poochyena
+Cacnea
 Level: 20
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Numel
+Lairon
 Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Zubat
-Level: 22
+Zangoose
+Level: 24
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_JONATHAN ===
@@ -13308,7 +13352,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Graveler
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13321,7 +13365,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Zangoose
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13334,7 +13378,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Torkoal
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13347,11 +13391,11 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Baltoy
+Donphan
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
+Golbat
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13364,11 +13408,11 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Baltoy
+Mightyena
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Numel
+Ninjask
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13381,7 +13425,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Mightyena
+Ninetales
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13394,7 +13438,11 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Rhyhorn
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Koffing
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13407,7 +13455,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
+Lairon
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13420,7 +13468,11 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Graveler
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magcargo
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13446,6 +13498,10 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
+Zangoose
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 Baltoy
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
@@ -13459,7 +13515,11 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Cacturne
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rhyhorn
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13472,7 +13532,11 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
+Magcargo
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Golbat
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13485,7 +13549,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Mightyena
+Weezing
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13502,6 +13566,10 @@ Numel
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Lairon
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MAGMA_HIDEOUT_16 ===
 Name: GRUNT
 Class: Team Magma
@@ -13511,7 +13579,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Baltoy
+Claydol
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13524,19 +13592,19 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Crobat
 Level: 26
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Mightyena
+Lairon
 Level: 28
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Zubat
+Cacturne
 Level: 30
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Camerupt
+Zangoose
 Level: 33
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
@@ -13567,11 +13635,11 @@ Music: Magma
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
+Absol
 Level: 42
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-Crobat
+Shiftry
 Level: 43
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
