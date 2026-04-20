@@ -74,7 +74,6 @@ Comments can be added as C comment blocks
 
 
 === TRAINER_NONE ===
-=== TRAINER_NONE ===
 Name:
 Class: Pkmn Trainer 1
 Pic: Hiker
@@ -106,8 +105,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Electrode
-Level: 32
-/*Level 38*/
+Level: 32	/*Level 38*/
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
@@ -120,13 +118,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Wailmer
-Level: 31
-/*Level 37*/
+Level: 31	/*Level 37*/
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Seadra
-Level: 31
-/*Level 37*/
+Level: 31	/*Level 37*/
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
@@ -139,8 +135,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Wailmer
-Level: 32
-/*Level 38*/
+Level: 32	/*Level 38*/
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
