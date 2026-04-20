@@ -5224,7 +5224,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic
 - Flamethrower
 
-=== TRAINER_WALLACE_1 ===
+=== TRAINER_WALLACE ===
 Name: WALLACE
 Class: Leader
 Pic: Leader Wallace
@@ -15883,7 +15883,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Psychic
 - Flamethrower
 
-=== TRAINER_JUAN_2 ===
+=== TRAINER_JUAN_1 ===
 Name: JUAN
 Class: Leader
 Pic: Leader Juan
@@ -15933,7 +15933,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Rest
 
-=== TRAINER_JUAN_3 ===
+=== TRAINER_JUAN_2 ===
 Name: JUAN
 Class: Leader
 Pic: Leader Juan
@@ -15983,7 +15983,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Rest
 
-=== TRAINER_JUAN_4 ===
+=== TRAINER_JUAN_3 ===
 Name: JUAN
 Class: Leader
 Pic: Leader Juan
@@ -16041,7 +16041,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Rest
 
-=== TRAINER_JUAN_5 ===
+=== TRAINER_JUAN_4 ===
 Name: JUAN
 Class: Leader
 Pic: Leader Juan
