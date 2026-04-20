@@ -276,7 +276,7 @@
 #define TRAINER_NORMAN_1                    269
 #define TRAINER_WINONA_1                    270
 #define TRAINER_TATE_AND_LIZA_1             271
-#define TRAINER_WALLACE                     272
+#define TRAINER_WALLACE_1                   272
 #define TRAINER_JERRY_1                     273
 #define TRAINER_TED                         274
 #define TRAINER_PAUL                        275
