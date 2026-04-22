@@ -51,10 +51,10 @@
 
 #else
 
-#define FLAG_HIDE_SOOTOPOLIS_GYM_JUAN    0x20
-#define FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE 0x21
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_HIDE_SOOTOPOLIS_GYM_JUAN               0x20
+#define FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE            0x21
+#define FLAG_HIDE_CHAMPIONS_ROOM_WALLACE            0x22
+#define FLAG_HIDE_CHAMPIONS_ROOM_STEVEN             0x23
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
