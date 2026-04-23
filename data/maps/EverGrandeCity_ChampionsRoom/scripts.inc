@@ -111,15 +111,15 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	goto EverGrandeCity_ChampionsRoom_EventScript_WallaceGoToHOF
 	
 EverGrandeCity_ChampionsRoom_EventScript_StevenGoToHOF::
-	applymovement LOCALID_CHAMPIONS_ROOM_STEVEN, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
-	applymovement LOCALID_CHAMPIONS_ROOM_STEVEN, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox EverGrandeCity_ChampionsRoom_Text_StevenComeWithMe, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	applymovement LOCALID_CHAMPIONS_ROOM_STEVEN, EverGrandeCity_ChampionsRoom_Movement_WallaceExitStart
+	applymovement LOCALID_STEVEN, EverGrandeCity_ChampionsRoom_Movement_WallaceExitStart
 	applymovement LOCALID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExitStart
 	applymovement LOCALID_CHAMPIONS_ROOM_BIRCH, Common_Movement_WalkInPlaceFasterUp
 	applymovement LOCALID_CHAMPIONS_ROOM_RIVAL, EverGrandeCity_ChampionsRoom_Movement_RivalFollows
@@ -132,7 +132,7 @@ EverGrandeCity_ChampionsRoom_EventScript_StevenGoToHOF::
 	call_if_eq VAR_RESULT, MALE, EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations
 	call_if_eq VAR_RESULT, FEMALE, EverGrandeCity_ChampionsRoom_EventScript_BrendanCongratulations
 	closemessage
-	applymovement LOCALID_CHAMPIONS_ROOM_STEVEN, EverGrandeCity_ChampionsRoom_Movement_WallaceExit
+	applymovement LOCALID_STEVEN, EverGrandeCity_ChampionsRoom_Movement_WallaceExit
 	applymovement LOCALID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExit
 	waitmovement 0
 	setflag FLAG_HIDE_PETALBURG_GYM_GREETER
@@ -227,10 +227,10 @@ EverGrandeCity_ChampionsRoom_EventScript_WallaceGoToHOF::
 	delay 20
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-	msgbox EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside, MSGBOX_DEFAULT
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, EverGrandeCity_ChampionsRoom_EventScript_RematchMayCongratulations
-	call_if_eq VAR_RESULT, FEMALE, EverGrandeCity_ChampionsRoom_EventScript_RematchBrendanCongratulations
+	call_if_eq VAR_RESULT, MALE, EverGrandeCity_ChampionsRoom_EventScript_RematchMayCantGoIn
+	call_if_eq VAR_RESULT, FEMALE, EverGrandeCity_ChampionsRoom_EventScript_RematchBrendanCantGoIn
+	msgbox EverGrandeCity_ChampionsRoom_Text_RematchWallaceChampion, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_CHAMPIONS_ROOM_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExit
 	applymovement LOCALID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExit
@@ -241,12 +241,12 @@ EverGrandeCity_ChampionsRoom_EventScript_WallaceGoToHOF::
 	releaseall
 	end
 
-EverGrandeCity_ChampionsRoom_EventScript_RematchMayCongratulations:
-	msgbox EverGrandeCity_ChampionsRoom_Text_RematchMayCongratulations, MSGBOX_DEFAULT
+EverGrandeCity_ChampionsRoom_EventScript_RematchMayCantGoIn::
+	msgbox EverGrandeCity_ChampionsRoom_Text_RematchMayCantGoIn, MSGBOX_DEFAULT
 	return
 
-EverGrandeCity_ChampionsRoom_EventScript_RematchBrendanCongratulations:
-	msgbox EverGrandeCity_ChampionsRoom_Text_RematchBrendanCongratulations, MSGBOX_DEFAULT
+EverGrandeCity_ChampionsRoom_EventScript_RematchBrendanCantGoIn::
+	msgbox EverGrandeCity_ChampionsRoom_Text_RematchBrendanCantGoIn, MSGBOX_DEFAULT
 	return
 
 EverGrandeCity_ChampionsRoom_Movement_PlayerExitStart:
@@ -316,10 +316,7 @@ EverGrandeCity_ChampionsRoom_Text_StevenIntroSpeech:
 	.string "STEVEN: Welcome, {PLAYER}{KUN}.\p"
 	.string "I was looking forward to seeing you\n"
 	.string "here one day.\p"
-	.string "That incident in SOOTOPOLIS CITY…\n"
-	.string "That was superb work, putting an end\l"
-	.string "to that crisis all by yourself.\p"
-	.string "What else did you achieve during your\n"
+	.string "You… What did you see on your\n"
 	.string "journey with POKéMON?\p"
 	.string "What did you feel, meeting so many\n"
 	.string "other TRAINERS like you?\p"
@@ -391,15 +388,14 @@ EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
 
 EverGrandeCity_ChampionsRoom_Text_StevenComeWithMe:
 	.string "STEVEN: {PLAYER}{KUN}…\p"
-	.string "No, let me rephrase that properly.\p"
-	.string "The new CHAMPION!\p"
+	.string "No, the new CHAMPION!\p"
 	.string "Come with me.$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside:
 	.string "WALLACE: I'm sorry, but…\p"
 	.string "From here on, only those TRAINERS who\n"
 	.string "have become CHAMPIONS may enter.\p"
-	.string "You'll have to wait outside with\n"
+	.string "You'll have to wait outside with the\n"
 	.string "PROF. BIRCH.$"
 
 EverGrandeCity_ChampionsRoom_Text_StevenWaitOutside:
@@ -424,38 +420,32 @@ EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
 	.string "It can't be helped if that's the rule.\p"
 	.string "{PLAYER}, way to go!\n"
 	.string "Congratulations!$"
-	.string "PROFESSOR.$"
 
 EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "WALLACE: Welcome, {PLAYER}{KUN}.\p"
-	.string "It's been quite some time\n"
-	.string "since we last met…\p"
-	.string "Let me reintroduce myself.\p"
-	.string "I am WALLACE, former CHAMPION\n"
-	.string "of the HOENN region.\p"
-	.string "I've heard about your struggles\n"
-	.string "on the SEVII ISLANDS.\p"
-	.string "You overcame many difficult situations\n"
-	.string "by working as one with your POKéMON.\p"
+	.string "Our paths cross again…\n"
+	.string "but this time, I am the challenger.\p"
+	.string "I watched as you brought peace to\n"
+	.string "SOOTOPOLIS CITY… A remarkable feat,\l"
+	.string "achieved with your POKéMON by your\l"
+	.string "side.\p"
 	.string "We TRAINERS raise POKéMON by giving\n"
 	.string "them items and by teaching them new\l"
 	.string "techniques for battle.\p"
 	.string "But we ourselves also learn many\n"
 	.string "things from POKéMON.\p"
-	.string "And this is where your achievements\n"
-	.string "are put to the test against what\l"
-	.string "others like you have achieved.\p"
-	.string "Now!\p"
-	.string "Who can most elegantly dance with\n"
+	.string "You've shown the strength of a true\n"
+	.string "CHAMPION, {PLAYER}{KUN}.\p"
+	.string "But now, your achievements must be\n"
+	.string "put to the ultimate test.\p"
+	.string "Now! Who can most elegantly dance with\n"
 	.string "their POKéMON in HOENN?\p"
 	.string "Show me right here and now!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:
-	.string "I, former CHAMPION, fall in defeat…\n"
+	.string "I, the challenger, fall in defeat…\n"
 	.string "That was wonderful work.\l"
-	.string "You were elegant, infuriatingly so.\l"
-	.string "And yet it was utterly glorious!\p"
-	.string "Congratulations, {PLAYER}{KUN}!$"
+	.string "Kudos to you, {PLAYER}{KUN}!$"
 
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "WALLACE: The POKéMON you sent into\n"
@@ -467,64 +457,59 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "elegance that you led your POKéMON.\p"
 	.string "Even I felt bedazzled by your\n"
 	.string "masterful performance!\p"
-	.string "You remain HOENN's CHAMPION,\n"
-	.string "{PLAYER}{KUN}.$"
+	.string "You remain at the glorious peak\n"
+	.string "of the POKéMON LEAGUE, {PLAYER}{KUN}.\p"
+	.string "Congratulations… HOENN's CHAMPION.$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchMayAdvice:
 	.string "MAY: {PLAYER}{KUN}!\p"
-	.string "You've beaten WALLACE again!\n"
+	.string "Wow! You did it!\n"
+	.string "No advice this time… just congrats!\p"
+	.string "Taking on WALLACE and winning…\n"
 	.string "That's amazing!$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchBrendanAdvice:
 	.string "BRENDAN: {PLAYER}{KUN}!\p"
-	.string "Wow! You beat WALLACE again!\n"
+	.string "Wow! You did it!\n"
+	.string "No advice this time… just congrats!\p"
+	.string "Taking on WALLACE and winning…\n"
 	.string "That's amazing!$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchBirchArriveRatePokedex:
-	.string "PROF. BIRCH: {PLAYER}{KUN},\n"
-	.string "I expected nothing else.\p"
-	.string "Now, can I see your POKéDEX?\p"
-	.string "You must have seen many new POKéMON\n"
-	.string "unknown to the HOENN region!$"
+	.string "PROF. BIRCH: Well, {RIVAL}, looks like\n"
+	.string "I was right about {PLAYER}{KUN}!\p"
+	.string "I had no doubt you could defend your\n"
+	.string "title, and here you are… still CHAMPION!\p"
+	.string "It's amazing to see how far you've come.\n"
+	.string "I knew you had talent, but this…\p"
+	.string "{PLAYER}{KUN}, you've truly made history.\p"
+	.string "Ah, yes! Your POKéDEX…\n"
+	.string "Mind if I take a look at it? I'm eager\l"
+	.string "to see the progress you've made.$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchBirchCongratulations:
 	.string "PROF. BIRCH: Anyways,\n"
-	.string "I knew you could handle yourself\n"
-	.string "in another fight against WALLACE,\l"
-	.string "even if he isn't holding back.\p"
-	.string "You see, WALLACE and STEVEN have\n"
-	.string "both been CHAMPION of HOENN.\p"
-	.string "Evenly matched, the two kept taking\n"
-	.string "the title from each other.\p"
-	.string "I knew that if you could beat one,\n"
-	.string "you could take on the other.\p"
-	.string "Anyways,\n"
-	.string "congratulations!\p"
-	.string "Now, go proudly into the final room!$"
+	.string "congratulations once more!\p"
+	.string "Now, go proudly again into the\n"
+	.string "final room!$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchWallaceComeWithMe:
-	.string "WALLACE: {PLAYER}{KUN}…\p"
-	.string "You've firmly entrenched yourself\n"
-	.string "into the history of HOENN.\p"
-	.string "Come with me.\p"
-	.string "It is time to record this splendid\n"
-	.string "achievement at the HALL OF FAME.$"
+	.string "WALLACE: {PLAYER}{KUN},\n"
+	.string "you've proven yourself once again.\p"
+	.string "Let's not waste any time.\n"
+	.string "CHAMPION, follow me…\p"
+	.string "It's time we head to the HALL OF FAME\n"
+	.string "to record this latest triumph.$"
 
-EverGrandeCity_ChampionsRoom_Text_RematchMayCongratulations:
-	.string "MAY: Groan…\n"
-	.string "Not again…\p"
-	.string "… … … … … … … …\p"
-	.string "Only joking!\n"
-	.string "You know that I don't mind.\p"
-	.string "{PLAYER}{KUN}!\n"
-	.string "Honestly, congratulations!$"
+EverGrandeCity_ChampionsRoom_Text_RematchMayCantGoIn:
+	.string "MAY: Hey, wait a second!\n"
+	.string "WALLACE, you're not the CHAMPION.\p"
+	.string "You shouldn't be going in!$"
 
-EverGrandeCity_ChampionsRoom_Text_RematchBrendanCongratulations:
-	.string "BRENDAN: Pfffft!\n"
-	.string "Stupid…\p"
-	.string "Oh well, rules are rules.\p"
-	.string "{PLAYER}, way to go!\n"
-	.string "Congratulations!$"
+EverGrandeCity_ChampionsRoom_Text_RematchBrendanCantGoIn:
+	.string "BRENDAN: Hey, wait a second!\n"
+	.string "WALLACE, you're not the CHAMPION.\p"
+	.string "You shouldn't be going in!$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchWallaceChampion::
 	.string "WALLACE: Ah, {RIVAL},\n"
