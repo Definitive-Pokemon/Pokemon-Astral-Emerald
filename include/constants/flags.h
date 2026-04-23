@@ -101,6 +101,7 @@
 #define FLAG_AE_HIDE_LORELEI_IN_HER_HOUSE    0x4E 
 #define FLAG_AE_GOT_NEST_BALL_FROM_WATER_PATH_HOUSE_1    0x4F 
 
+
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
 #define FLAG_SET_WALL_CLOCK                      0x51
@@ -519,7 +520,7 @@
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
 
-#define FLAG_UNUSED_0x1DA                    0x1DA // Unused Flag
+#define FLAG_RECEIVED_EON_TICKET             0x1DA // Unused Flag
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
@@ -1273,11 +1274,13 @@
 #define FLAG_KNOT_ISLAND_HIDE_BILL                                           0x4BD // Unused Flag
 #define FLAG_CERULEAN_CAVE_LUCKY_EGG                                           0x4BE // remove please!
 #define FLAG_HIDE_BOON_ISLAND_SUPER_NERD                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
+
+// Astral Emerald new flags
+#define FLAG_HIDE_SOOTOPOLIS_GYM_JUAN                               0x4C0 
+#define FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE                            0x4C1 
+#define FLAG_HIDE_CHAMPIONS_ROOM_WALLACE                            0x4C2 
+#define FLAG_HIDE_CHAMPIONS_ROOM_STEVEN                             0x4C3 
+#define FLAG_ENABLE_WALLACE_MATCH_CALL                              0x4C4 
 #define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
 #define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
 #define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag

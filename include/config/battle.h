@@ -16,7 +16,7 @@
 #define B_SPLIT_EXP                 GEN_5 // In Gen6+, all participating mon get full experience.
 #define B_SCALED_EXP                GEN_5 // In Gen5 and Gen7+, experience is weighted by level difference.
 #define B_UNEVOLVED_EXP_MULTIPLIER  GEN_5 // In Gen6+, if the Pokémon is at or past the level where it would be able to evolve, but it has not, it gets a ~1.2 multiplier to EXP gain. Only applies to Pokémon with EVO_LEVEL method.
-#define B_LEVEL_UP_NOTIFICATION     GEN_6 // In Gen9+, if the Pokémon gets enough experience to level up multiple times, the message is only displayed once.
+#define B_LEVEL_UP_NOTIFICATION     GEN_LATEST // In Gen9+, if the Pokémon gets enough experience to level up multiple times, the message is only displayed once.
 
 // Stat settings
 #define B_BADGE_BOOST               GEN_6 // In Gen4+, Gym Badges no longer boost a Pokémon's stats. (Gen2 does not include the additional boost to the type matching the gym the badge is from)
@@ -342,7 +342,7 @@
 #define B_CRITICAL_CAPTURE_LOCAL_DEX    FALSE       // If set to FALSE, Critical Capture % is based off of the National Pokedex estimated by enabled generations.
 #define B_CRITICAL_CAPTURE_IF_OWNED     GEN_6 // In Gen9, a capture appear critical if the pokemon you are trying to catch already has a dex entry (has already been caught)
 
-#define B_LAST_USED_BALL            TRUE       // If TRUE, the "last used ball" feature from Gen 7 will be implemented
+#define B_LAST_USED_BALL            FALSE       // If TRUE, the "last used ball" feature from Gen 7 will be implemented
 #define B_LAST_USED_BALL_BUTTON     R_BUTTON   // If last used ball is implemented, this button (or button combo) will trigger throwing the last used ball.
 #define B_LAST_USED_BALL_CYCLE      TRUE       // If TRUE, then holding B_LAST_USED_BALL_BUTTON while pressing the D-Pad cycles through the balls
 #define B_CATCH_SWAP_INTO_PARTY     GEN_6 // In Gen 7+, the option to swap the caught wild mon to the party will appear, allowing you to send a different mon to the box.
