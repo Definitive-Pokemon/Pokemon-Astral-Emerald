@@ -29,6 +29,7 @@
       "flag": "FLAG_HIDE_HALL_OF_FAME_STEVEN"
     },
     {
+      "local_id": "LOCALID_HALL_OF_FAME_WALLACE",
       "graphics_id": "OBJ_EVENT_GFX_WALLACE",
       "x": 6,
       "y": 16,
