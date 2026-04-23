@@ -44,11 +44,11 @@ SootopolisCity_Gym_1F_OnFrame:
 SootopolisCity_Gym_1F_EventScript_TryRematchReward::
 	setvar VAR_TEMP_1, 0
 	goto_if_set FLAG_GOT_JUAN_REMATCH_REWARD, SootopolisCity_Gym_1F_EventScript_TryRematchRewardEnd
-	setvar 0x8005, TRAINER_JUAN_3
+	setvar 0x8005, TRAINER_JUAN_1
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_GiveRematchReward
 SootopolisCity_Gym_1F_EventScript_TryRematchRewardEnd::
-	ClearTrainerFlag TRAINER_JUAN_5
+	ClearTrainerFlag TRAINER_JUAN_1
 	releaseall
 	end
 
@@ -158,7 +158,7 @@ SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge::
 
 SootopolisCity_Gym_1F_EventScript_JuanRematch::
 	goto_if_set FLAG_GOT_JUAN_REMATCH_REWARD, SootopolisCity_Gym_1F_EventScript_JuanRematchContinue
-	setvar 0x8005, TRAINER_JUAN_3
+	setvar 0x8005, TRAINER_JUAN_1
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_GiveRematchReward
 SootopolisCity_Gym_1F_EventScript_JuanRematchContinue::
