@@ -967,9 +967,9 @@
 #define TRAINER_PKMN_RANGER_LOGAN 966
 #define TRAINER_PKMN_RANGER_BETH 967
 #define TRAINER_PICNICKER_MARCY 968
+#define TRAINER_WALLACE_2 969
 
 /*
-#define aba 969
 #define aba 970
 #define aba 971
 #define aba 972
@@ -1005,8 +1005,8 @@
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     969
-#define MAX_TRAINERS_COUNT_EMERALD 969
+#define TRAINERS_COUNT_EMERALD     970
+#define MAX_TRAINERS_COUNT_EMERALD 970
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG
