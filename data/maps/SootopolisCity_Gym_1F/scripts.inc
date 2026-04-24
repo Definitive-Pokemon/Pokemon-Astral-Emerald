@@ -308,9 +308,3 @@ SootopolisCity_Gym_1F_Text_WallaceRematchNeedTwoMons:
 	.string "You have with you but one POKéMON.\p"
 	.string "I wish that you would return with\n"
 	.string "two, perhaps more, POKéMON, please.$"
-
-SootopolisCity_Gym_1F_Text_WallaceRematchDefeat:
-	.string "placeholder$"
-
-SootopolisCity_Gym_1F_Text_WallaceRematchNeedTwoMons:
-	.string "placeholder2$"
