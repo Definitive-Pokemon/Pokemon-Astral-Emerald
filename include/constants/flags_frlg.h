@@ -1887,7 +1887,6 @@
 #define FLAG_ENABLE_FLANNERY_MATCH_CALL      0
 #define FLAG_ENABLE_WINONA_MATCH_CALL        0
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0
-#define FLAG_ENABLE_JUAN_MATCH_CALL          0
 
 #define FLAG_UNUSED_0x1DA                    0 // Unused Flag
 

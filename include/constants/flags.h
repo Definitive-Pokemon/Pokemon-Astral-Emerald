@@ -518,7 +518,7 @@
 #define FLAG_ENABLE_FLANNERY_MATCH_CALL      0x1D6
 #define FLAG_ENABLE_WINONA_MATCH_CALL        0x1D7
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
-#define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
+#define FLAG_ENABLE_WALLACE_MATCH_CALL       0x1D9
 
 #define FLAG_RECEIVED_EON_TICKET             0x1DA // Unused Flag
 
@@ -1275,15 +1275,16 @@
 #define FLAG_CERULEAN_CAVE_LUCKY_EGG                                           0x4BE // remove please!
 #define FLAG_HIDE_BOON_ISLAND_SUPER_NERD                                           0x4BF // Unused Flag
 
+
 // Astral Emerald new flags
 #define FLAG_HIDE_SOOTOPOLIS_GYM_JUAN                               0x4C0 
 #define FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE                            0x4C1 
 #define FLAG_HIDE_CHAMPIONS_ROOM_WALLACE                            0x4C2 
 #define FLAG_HIDE_CHAMPIONS_ROOM_STEVEN                             0x4C3 
 #define FLAG_ENABLE_WALLACE_MATCH_CALL                              0x4C4 
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
+#define FLAG_HIDE_HALL_OF_FAME_STEVEN                               0x4C5 
+#define FLAG_HIDE_HALL_OF_FAME_WALLACE                              0x4C6 
+#define FLAG_ENABLE_JUAN_MATCH_CALL                                 0x4C7 
 #define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
 #define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
