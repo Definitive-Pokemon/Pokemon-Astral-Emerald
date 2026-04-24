@@ -309,24 +309,24 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clerk;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MGDeliveryman;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrainerTowerDude;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfOak;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlueFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bill;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lance;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Agatha;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AgathaFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Daisy;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lorelei;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LoreleiFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MrFuji;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bruno;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brock;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Misty;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LtSurge;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Erika;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KogaFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sabrina;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blaine;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giovanni;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GiovanniFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MomFrlg;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Celio;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CelioFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TeachyTVHost;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GymGuy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TownMap;
@@ -387,6 +387,16 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysD;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysA;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysN;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketGruntM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketGruntF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAdminM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketAdminF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giovanni;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Celio;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Agatha;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lorelei;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
@@ -645,6 +655,17 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
+    [OBJ_EVENT_GFX_ROCKET_GRUNT_M] =           &gObjectEventGraphicsInfo_RocketGruntM,
+    [OBJ_EVENT_GFX_ROCKET_GRUNT_F] =           &gObjectEventGraphicsInfo_RocketGruntF,
+    [OBJ_EVENT_GFX_ROCKET_ADMIN_M] =           &gObjectEventGraphicsInfo_RocketAdminM,
+    [OBJ_EVENT_GFX_ROCKET_ADMIN_F] =           &gObjectEventGraphicsInfo_RocketAdminF,
+    [OBJ_EVENT_GFX_GIOVANNI] =                 &gObjectEventGraphicsInfo_Giovanni,
+    [OBJ_EVENT_GFX_CELIO] =                    &gObjectEventGraphicsInfo_Celio,
+    [OBJ_EVENT_GFX_BLUE] =                     &gObjectEventGraphicsInfo_Blue,
+    [OBJ_EVENT_GFX_AGATHA] =                   &gObjectEventGraphicsInfo_Agatha,
+    [OBJ_EVENT_GFX_LORELEI] =                  &gObjectEventGraphicsInfo_Lorelei,
+    [OBJ_EVENT_GFX_KOGA] =                     &gObjectEventGraphicsInfo_Koga,
+
 #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,
@@ -692,8 +713,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SWIMMER_F_LAND]           = &gObjectEventGraphicsInfo_SwimmerFLand,
     [OBJ_EVENT_GFX_WORKER_M]                 = &gObjectEventGraphicsInfo_WorkerM,
     [OBJ_EVENT_GFX_WORKER_F]                 = &gObjectEventGraphicsInfo_WorkerF,
-    [OBJ_EVENT_GFX_ROCKET_M]                 = &gObjectEventGraphicsInfo_RocketM,
-    [OBJ_EVENT_GFX_ROCKET_F]                 = &gObjectEventGraphicsInfo_RocketF,
+    [OBJ_EVENT_GFX_ROCKET_M_FRLG]                 = &gObjectEventGraphicsInfo_RocketM,
+    [OBJ_EVENT_GFX_ROCKET_F_FRLG]                 = &gObjectEventGraphicsInfo_RocketF,
     [OBJ_EVENT_GFX_GBA_KID]                  = &gObjectEventGraphicsInfo_GBAKid,
     [OBJ_EVENT_GFX_SUPER_NERD]               = &gObjectEventGraphicsInfo_SuperNerd,
     [OBJ_EVENT_GFX_BIKER]                    = &gObjectEventGraphicsInfo_Biker,
@@ -714,24 +735,24 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MG_DELIVERYMAN]           = &gObjectEventGraphicsInfo_MGDeliveryman,
     [OBJ_EVENT_GFX_TRAINER_TOWER_DUDE]       = &gObjectEventGraphicsInfo_TrainerTowerDude,
     [OBJ_EVENT_GFX_PROF_OAK]                 = &gObjectEventGraphicsInfo_ProfOak,
-    [OBJ_EVENT_GFX_BLUE]                     = &gObjectEventGraphicsInfo_Blue,
+    [OBJ_EVENT_GFX_BLUE_FRLG]                     = &gObjectEventGraphicsInfo_BlueFrlg,
     [OBJ_EVENT_GFX_BILL]                     = &gObjectEventGraphicsInfo_Bill,
     [OBJ_EVENT_GFX_LANCE]                    = &gObjectEventGraphicsInfo_Lance,
-    [OBJ_EVENT_GFX_AGATHA]                   = &gObjectEventGraphicsInfo_Agatha,
+    [OBJ_EVENT_GFX_AGATHA_FRLG]                   = &gObjectEventGraphicsInfo_AgathaFrlg,
     [OBJ_EVENT_GFX_DAISY]                    = &gObjectEventGraphicsInfo_Daisy,
-    [OBJ_EVENT_GFX_LORELEI]                  = &gObjectEventGraphicsInfo_Lorelei,
+    [OBJ_EVENT_GFX_LORELEI_FRLG]                  = &gObjectEventGraphicsInfo_LoreleiFrlg,
     [OBJ_EVENT_GFX_MR_FUJI]                  = &gObjectEventGraphicsInfo_MrFuji,
     [OBJ_EVENT_GFX_BRUNO]                    = &gObjectEventGraphicsInfo_Bruno,
     [OBJ_EVENT_GFX_BROCK]                    = &gObjectEventGraphicsInfo_Brock,
     [OBJ_EVENT_GFX_MISTY]                    = &gObjectEventGraphicsInfo_Misty,
     [OBJ_EVENT_GFX_LT_SURGE]                 = &gObjectEventGraphicsInfo_LtSurge,
     [OBJ_EVENT_GFX_ERIKA]                    = &gObjectEventGraphicsInfo_Erika,
-    [OBJ_EVENT_GFX_KOGA]                     = &gObjectEventGraphicsInfo_Koga,
+    [OBJ_EVENT_GFX_KOGA_FRLG]                     = &gObjectEventGraphicsInfo_KogaFrlg,
     [OBJ_EVENT_GFX_SABRINA]                  = &gObjectEventGraphicsInfo_Sabrina,
     [OBJ_EVENT_GFX_BLAINE]                   = &gObjectEventGraphicsInfo_Blaine,
-    [OBJ_EVENT_GFX_GIOVANNI]                 = &gObjectEventGraphicsInfo_Giovanni,
+    [OBJ_EVENT_GFX_GIOVANNI_FRLG]                 = &gObjectEventGraphicsInfo_GiovanniFrlg,
     [OBJ_EVENT_GFX_MOM_FRLG]                 = &gObjectEventGraphicsInfo_MomFrlg,
-    [OBJ_EVENT_GFX_CELIO]                    = &gObjectEventGraphicsInfo_Celio,
+    [OBJ_EVENT_GFX_CELIO_FRLG]                    = &gObjectEventGraphicsInfo_CelioFrlg,
     [OBJ_EVENT_GFX_TEACHY_TV_HOST]           = &gObjectEventGraphicsInfo_TeachyTVHost,
     [OBJ_EVENT_GFX_GYM_GUY]                  = &gObjectEventGraphicsInfo_GymGuy,
     [OBJ_EVENT_GFX_TOWN_MAP]                 = &gObjectEventGraphicsInfo_TownMap,

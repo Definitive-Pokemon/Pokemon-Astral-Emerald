@@ -300,8 +300,8 @@
 #define OBJ_EVENT_GFX_SWIMMER_F_LAND             273
 #define OBJ_EVENT_GFX_WORKER_M                   274
 #define OBJ_EVENT_GFX_WORKER_F                   275
-#define OBJ_EVENT_GFX_ROCKET_M                   276
-#define OBJ_EVENT_GFX_ROCKET_F                   277
+#define OBJ_EVENT_GFX_ROCKET_M_FRLG              276
+#define OBJ_EVENT_GFX_ROCKET_F_FRLG              277
 #define OBJ_EVENT_GFX_GBA_KID                    278
 #define OBJ_EVENT_GFX_SUPER_NERD                 279
 #define OBJ_EVENT_GFX_BIKER                      280
@@ -318,23 +318,23 @@
 #define OBJ_EVENT_GFX_MG_DELIVERYMAN             291
 #define OBJ_EVENT_GFX_TRAINER_TOWER_DUDE         292
 #define OBJ_EVENT_GFX_PROF_OAK                   293
-#define OBJ_EVENT_GFX_BLUE                       294
+#define OBJ_EVENT_GFX_BLUE_FRLG                  294
 #define OBJ_EVENT_GFX_BILL                       295
 #define OBJ_EVENT_GFX_LANCE                      296
-#define OBJ_EVENT_GFX_AGATHA                     297
+#define OBJ_EVENT_GFX_AGATHA_FRLG                297
 #define OBJ_EVENT_GFX_DAISY                      298
-#define OBJ_EVENT_GFX_LORELEI                    299
+#define OBJ_EVENT_GFX_LORELEI_FRLG               299
 #define OBJ_EVENT_GFX_MR_FUJI                    300
 #define OBJ_EVENT_GFX_BRUNO                      301
 #define OBJ_EVENT_GFX_BROCK                      302
 #define OBJ_EVENT_GFX_MISTY                      303
 #define OBJ_EVENT_GFX_LT_SURGE                   304
 #define OBJ_EVENT_GFX_ERIKA                      305
-#define OBJ_EVENT_GFX_KOGA                       306
+#define OBJ_EVENT_GFX_KOGA_FRLG                  306
 #define OBJ_EVENT_GFX_SABRINA                    307
 #define OBJ_EVENT_GFX_BLAINE                     308
-#define OBJ_EVENT_GFX_GIOVANNI                   309
-#define OBJ_EVENT_GFX_CELIO                      310
+#define OBJ_EVENT_GFX_GIOVANNI_FRLG              309
+#define OBJ_EVENT_GFX_CELIO_FRLG                 310
 #define OBJ_EVENT_GFX_TEACHY_TV_HOST             311
 #define OBJ_EVENT_GFX_GYM_GUY                    312
 #define OBJ_EVENT_GFX_TOWN_MAP                   313
@@ -415,20 +415,21 @@
 
 // FRLG equivalents
 
-// #define OBJ_EVENT_GFX_MEW OBJ_EVENT_GFX_NINJA_BOY
-// #define OBJ_EVENT_GFX_LUGIA OBJ_EVENT_GFX_NINJA_BOY
-
 #define OBJ_EVENT_GFX_ROCKET_GRUNT_M             388
 #define OBJ_EVENT_GFX_ROCKET_GRUNT_F             389
 #define OBJ_EVENT_GFX_ROCKET_ADMIN_M             390
 #define OBJ_EVENT_GFX_ROCKET_ADMIN_F             391
-#define OBJ_EVENT_GFX_AE_GIOVANNI                   392
-#define OBJ_EVENT_GFX_AE_CELIO                      393
+#define OBJ_EVENT_GFX_GIOVANNI                   392
+#define OBJ_EVENT_GFX_CELIO                      393
+#define OBJ_EVENT_GFX_BLUE                       394
+#define OBJ_EVENT_GFX_AGATHA                     395
+#define OBJ_EVENT_GFX_LORELEI                    396
+#define OBJ_EVENT_GFX_KOGA                       397
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        394
+#define NUM_OBJ_EVENT_GFX                        398
 
 
 // These are dynamic object gfx ids.
@@ -573,6 +574,7 @@
 #define OBJ_EVENT_PAL_TAG_METEORITE               0x1131
 #define OBJ_EVENT_PAL_TAG_SEAGALLOP               0x1132
 #define OBJ_EVENT_PAL_TAG_SS_ANNE                 0x1133
+#define OBJ_EVENT_PAL_TAG_ROCKET_NPC              0x1134
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
