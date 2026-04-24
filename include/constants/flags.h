@@ -57,7 +57,7 @@
 #define FLAG_HIDE_CHAMPIONS_ROOM_STEVEN             0x23
 #define FLAG_HIDE_HALL_OF_FAME_STEVEN               0x24
 #define FLAG_HIDE_HALL_OF_FAME_WALLACE              0x25
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_FINISHED_SEVII                         0x26
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag

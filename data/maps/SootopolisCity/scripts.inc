@@ -865,7 +865,11 @@ SootopolisCity_EventScript_Boy1Normal::
 	end
 
 SootopolisCity_EventScript_GymSign::
+	goto_if_set FLAG_FINISHED_SEVII, SootopolisCity_EventScript_GymSignPostGame
 	msgbox SootopolisCity_Text_GymSign, MSGBOX_SIGN
+	end
+SootopolisCity_EventScript_GymSignPostGame::
+	msgbox SootopolisCity_Text_GymSignPostGame, MSGBOX_SIGN
 	end
 
 SootopolisCity_EventScript_CitySign::
@@ -1388,6 +1392,11 @@ SootopolisCity_Movement_DestroyTask::
 	step_end
 
 SootopolisCity_Text_GymSign:
+	.string "SOOTOPOLIS CITY POKéMON GYM\n"
+	.string "LEADER: WALLACE\p"
+	.string "“Artist, and lover of WATER.”$"
+
+SootopolisCity_Text_GymSignPostGame:
 	.string "SOOTOPOLIS CITY POKéMON GYM\n"
 	.string "LEADER: JUAN\p"
 	.string "“The GYM LEADER with the beauty\n"
