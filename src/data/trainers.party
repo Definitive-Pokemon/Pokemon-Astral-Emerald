@@ -5166,6 +5166,56 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Dance
 - Roost
 
+=== TRAINER_JUAN_1 ===
+Name: JUAN
+Class: Leader
+Pic: Leader Juan
+Gender: Male
+Music: Male
+Items: Hyper Potion / Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Basic Trainer
+
+Gyarados
+Level: 32	/*Level 38*/
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- Waterfall
+- Rain Dance
+- Ice Fang
+- Dragon Rage
+
+Lanturn
+Level: 32	/*Level 38*/
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- Rain Dance
+- Thunder
+- Thunder Wave
+- Surf
+
+Sealeo
+Level: 33	/*Level 39*/
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- Surf
+- Body Slam
+- Signal Beam
+- Ice Beam
+
+Crawdaunt @ Chesto Berry
+Level: 34	/*Level 40*/
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Crabhammer
+- Knock Off
+- Taunt
+- Swords Dance
+
+Kingdra @ Chesto Berry
+Level: 36	/*Level 42*/
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Surf
+- Dragon Pulse
+- Ice Beam
+- Rest
+
 === TRAINER_TATE_AND_LIZA_1 ===
 Name: TATE&LIZA
 Class: Leader
@@ -14690,56 +14740,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Solar Beam
 - Psychic
 - Flamethrower
-
-=== TRAINER_JUAN_1 ===
-Name: JUAN
-Class: Leader
-Pic: Leader Juan
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
-
-Poliwag
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Whiscash
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Walrein
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Crabhammer
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
-- Ice Beam
-- Rest
 
 === TRAINER_JUAN_2 ===
 Name: JUAN
