@@ -57,7 +57,7 @@ SlateportCity_EventScript_Juan::
 	setflag FLAG_ENABLE_JUAN_MATCH_CALL
 	msgbox SlateportCity_Text_Juan4, MSGBOX_DEFAULT
 	closemessage
-	applymovement SlateportCity_Movement_JuanGoFurtherDown
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanGoFurtherDown
 	waitmovement 0
 	setflag FLAG_HIDE_SLATEPORT_CITY_JUAN
 	releaseall
@@ -78,7 +78,7 @@ SlateportCity_EventScript_JuanHahaha::
 	setflag FLAG_ENABLE_JUAN_MATCH_CALL
 	msgbox SlateportCity_Text_Juan4, MSGBOX_DEFAULT
 	closemessage
-	applymovement SlateportCity_Movement_JuanGoFurtherDown
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanGoFurtherDown
 	waitmovement 0
 	setflag FLAG_HIDE_SLATEPORT_CITY_JUAN
 	releaseall
