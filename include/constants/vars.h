@@ -126,7 +126,7 @@
 #define VAR_MAP_SCENE_BOON_ISLAND                        0x4068 
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10     0x406A // Unused Var
-#define VAR_ROUTE112_STATE                               0x406B // Unused Var
+#define VAR_ROUTE112_STATE                               0x406B
 #define VAR_ROUTE113_STATE                               0x406C // Unused Var
 #define VAR_ROUTE114_STATE                               0x406D // Unused Var
 #define VAR_ROUTE115_STATE                               0x406E // Unused Var
@@ -271,8 +271,8 @@
 // DN_VAR_SPECIES									  	0x40F7 // Registered DexNav species
 // DN_VAR_STEP_COUNTER									0x40F8 // Steps for finding hidden pokemon
 // VAR_UNUSED_0x40F9                                    0x40F9 // If this var has been assigned, last Repel/Lure used will be saved and the player will get prompted with the vanilla repel YES/NO option, unless I_REPEL_LURE_MENU is set to TRUE.
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
+#define VAR_SLATEPORT_CITY_JUAN                          0x40FA
+#define VAR_LILYCOVE_CITY_JUAN                           0x40FB
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var

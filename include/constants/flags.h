@@ -1285,8 +1285,8 @@
 #define FLAG_HIDE_HALL_OF_FAME_STEVEN                               0x4C5 
 #define FLAG_HIDE_HALL_OF_FAME_WALLACE                              0x4C6 
 #define FLAG_ENABLE_JUAN_MATCH_CALL                                 0x4C7 
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
+#define FLAG_HIDE_SLATEPORT_CITY_JUAN                               0x4C8
+#define FLAG_HIDE_LILYCOVE_CITY_JUAN                                0x4C9
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag

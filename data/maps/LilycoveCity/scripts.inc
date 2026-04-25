@@ -30,6 +30,14 @@ LilycoveCity_EventScript_SetWailmerMetatiles::
 	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
 	return
 
+LilycoveCity_EventScript_Juan::	/*unfinished*/
+	lockall
+	msgbox LilycoveCity_Text_ItsHim, MSGBOX_DEFAULT
+	end
+
+LilycoveCity_Text_ItsHim::
+	.string ".$"	
+
 LilycoveCity_EventScript_BerryGentleman::
 	lock
 	faceplayer

@@ -33,6 +33,133 @@ SlateportCity_EventScript_MovePeopleForSternInterview::
 	setobjectmovementtype LOCALID_SLATEPORT_MAN_1, MOVEMENT_TYPE_FACE_LEFT
 	return
 
+SlateportCity_EventScript_Juan::
+	lockall
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanGoDown
+	waitmovement 0
+	delay_8
+	msgbox SlateportCity_Text_Juan1, MSGBOX_DEFAULT
+	closemessage
+	delay_16
+	msgbox SlateportCity_Text_Juan2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SlateportCity_EventScript_JuanHahaha
+	msgbox SlateportCity_Text_Juan2, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_JUAN_1, SlateportCity_Text_JuanDefeat
+	msgbox SlateportCity_Text_JuanRegister, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox SlateportCity_Text_RegisteredJuan, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_JUAN_MATCH_CALL
+	msgbox SlateportCity_Text_Juan4, MSGBOX_DEFAULT
+	closemessage
+	applymovement SlateportCity_Movement_JuanGoFurtherDown
+	waitmovement 0
+	setflag FLAG_HIDE_SLATEPORT_CITY_JUAN
+	releaseall
+	end
+	
+SlateportCity_EventScript_JuanHahaha::
+	msgbox SlateportCity_Text_Juan3, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_JUAN_1, SlateportCity_Text_JuanDefeat
+	msgbox SlateportCity_Text_JuanRegister, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox SlateportCity_Text_RegisteredJuan, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_JUAN_MATCH_CALL
+	msgbox SlateportCity_Text_Juan4, MSGBOX_DEFAULT
+	closemessage
+	applymovement SlateportCity_Movement_JuanGoFurtherDown
+	waitmovement 0
+	setflag FLAG_HIDE_SLATEPORT_CITY_JUAN
+	releaseall
+	end
+
+SlateportCity_Movement_JuanGoDown::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SlateportCity_Movement_JuanGoFurtherDown::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SlateportCity_Text_Juan1::
+	.string "Hmm…\n"
+	.string "And who might you be?\p"
+	.string "Are you, perchance, a POKéMON TRAINER?$"
+
+SlateportCity_Text_Juan2::
+	.string "Ahahaha, just as I thought!\n"
+	.string "I can see it in your eyes…\p"
+	.string "They contain a spark of passion\n"
+	.string "unseen in those lacking the will\l"
+	.string "to raise POKéMON.\p"
+	.string "I myself happen to be a TRAINER,\n"
+	.string "just like you.\p"
+	.string "Of course, I have had the time\n"
+	.string "to properly hone my elegance\l"
+	.string "in POKéMON battling.\p"
+	.string "It is a luxury you haven't had\n"
+	.string "as of yet.\p"
+	.string "Still… I do sense talent in you.\n"
+	.string "Allow me to test your ability.$"
+
+SlateportCity_Text_Juan3::
+	.string "Ahahaha, I am afraid you cannot\n"
+	.string "fool me so easily.\p"
+	.string "I can see it in your eyes…\p"
+	.string "They contain a spark of passion\n"
+	.string "unseen in those lacking the will\l"
+	.string "to raise POKéMON.\p"
+	.string "I myself happen to be a TRAINER,\n"
+	.string "just like you.\p"
+	.string "Of course, I have had the time\n"
+	.string "to properly hone my elegance\l"
+	.string "in POKéMON battling.\p"
+	.string "It is a luxury you haven't had\n"
+	.string "as of yet.\p"
+	.string "Still… I do sense talent in you.\n"
+	.string "Allow me to test your ability.$"
+
+SlateportCity_Text_JuanRegister::
+	.string "What a splendid battle!\p"
+	.string "It appears that I was right\n"
+	.string "about that spark I saw.\p"
+	.string "You have a lot of potential\n"
+	.string "bubbling inside of you.\p"
+	.string "How about we register each other\n"
+	.string "in our POKéNAVS?\p"
+	.string "I want to keep track of your\n"
+	.string "development as a TRAINER.$"
+
+SlateportCity_Text_RegisteredJuan::
+	.string "Registered POKéMON TRAINER JUAN\n"
+	.string "in the POKéNAV.$"
+
+SlateportCity_Text_Juan4::
+	.string "Your potential may yet transform\n"
+	.string "you into a wild, dashing typhoon.\p"
+	.string "I want witness that metamorphosis\n"
+	.string "with my own eyes.\p"
+	.string "We will meet again, I assure you.$"
+
 SlateportCity_EventScript_SetReadyForScottScene::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	getplayerxy VAR_0x8004, VAR_0x8005
