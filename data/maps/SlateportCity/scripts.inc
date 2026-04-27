@@ -33,10 +33,38 @@ SlateportCity_EventScript_MovePeopleForSternInterview::
 	setobjectmovementtype LOCALID_SLATEPORT_MAN_1, MOVEMENT_TYPE_FACE_LEFT
 	return
 
-SlateportCity_EventScript_Juan::
+
+SlateportCity_EventScript_Juan_Left::
 	lockall
-	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanGoDown
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanApproachPlayer_Left
 	waitmovement 0
+	call SlateportCity_EventScript_Juan_Main
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanWalkAway_Left
+	waitmovement 0
+	call SlateportCity_EventScript_Juan_End
+	end
+
+SlateportCity_EventScript_Juan_Middle::
+	lockall
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanApproachPlayer_Middle
+	waitmovement 0
+	call SlateportCity_EventScript_Juan_Main
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanWalkAway_Middle
+	waitmovement 0
+	call SlateportCity_EventScript_Juan_End
+	end
+
+SlateportCity_EventScript_Juan_Right::
+	lockall
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanApproachPlayer_Right
+	waitmovement 0
+	call SlateportCity_EventScript_Juan_Main
+	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanWalkAway_Right
+	waitmovement 0
+	call SlateportCity_EventScript_Juan_End
+	end
+
+SlateportCity_EventScript_Juan_Main::
 	delay_8
 	msgbox SlateportCity_Text_Juan1, MSGBOX_DEFAULT
 	closemessage
@@ -45,27 +73,11 @@ SlateportCity_EventScript_Juan::
 	goto_if_eq VAR_RESULT, NO, SlateportCity_EventScript_JuanHahaha
 	msgbox SlateportCity_Text_Juan2, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro TRAINER_JUAN_1, SlateportCity_Text_JuanDefeat
-	msgbox SlateportCity_Text_JuanRegister, MSGBOX_DEFAULT
-	closemessage
-	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox SlateportCity_Text_RegisteredJuan, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_JUAN_MATCH_CALL
-	msgbox SlateportCity_Text_Juan4, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanGoFurtherDown
-	waitmovement 0
-	setflag FLAG_HIDE_SLATEPORT_CITY_JUAN
-	releaseall
-	end
-	
+	goto SlateportCity_EventScript_JuanBattle
 SlateportCity_EventScript_JuanHahaha::
 	msgbox SlateportCity_Text_Juan3, MSGBOX_DEFAULT
 	closemessage
+SlateportCity_EventScript_JuanBattle::
 	trainerbattle_no_intro TRAINER_JUAN_1, SlateportCity_Text_JuanDefeat
 	msgbox SlateportCity_Text_JuanRegister, MSGBOX_DEFAULT
 	closemessage
@@ -78,13 +90,15 @@ SlateportCity_EventScript_JuanHahaha::
 	setflag FLAG_ENABLE_JUAN_MATCH_CALL
 	msgbox SlateportCity_Text_Juan4, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_JUAN, SlateportCity_Movement_JuanGoFurtherDown
-	waitmovement 0
-	setflag FLAG_HIDE_SLATEPORT_CITY_JUAN
-	releaseall
-	end
+	return
 
-SlateportCity_Movement_JuanGoDown::
+SlateportCity_EventScript_Juan_End::
+	setflag FLAG_HIDE_SLATEPORT_CITY_JUAN
+	setvar VAR_SLATEPORT_CITY_JUAN, 1
+	releaseall
+	return
+
+SlateportCity_Movement_JuanApproachPlayer_Middle::
 	walk_down
 	walk_down
 	walk_down
@@ -92,7 +106,44 @@ SlateportCity_Movement_JuanGoDown::
 	walk_down
 	step_end
 
-SlateportCity_Movement_JuanGoFurtherDown::
+SlateportCity_Movement_JuanApproachPlayer_Left::
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+SlateportCity_Movement_JuanApproachPlayer_Right::
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+SlateportCity_Movement_JuanWalkAway_Middle::
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SlateportCity_Movement_JuanWalkAway_Left::
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SlateportCity_Movement_JuanWalkAway_Right::
+	walk_left
 	walk_down
 	walk_down
 	walk_down

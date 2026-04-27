@@ -643,7 +643,7 @@
       "elevation": 0,
       "var": "VAR_SLATEPORT_CITY_JUAN",
       "var_value": "0",
-      "script": "SlateportCity_EventScript_Juan"
+      "script": "SlateportCity_EventScript_Juan_Left"
     },
     {
       "type": "trigger",
@@ -652,7 +652,7 @@
       "elevation": 0,
       "var": "VAR_SLATEPORT_CITY_JUAN",
       "var_value": "0",
-      "script": "SlateportCity_EventScript_Juan"
+      "script": "SlateportCity_EventScript_Juan_Middle"
     },
     {
       "type": "trigger",
@@ -661,7 +661,7 @@
       "elevation": 0,
       "var": "VAR_SLATEPORT_CITY_JUAN",
       "var_value": "0",
-      "script": "SlateportCity_EventScript_Juan"
+      "script": "SlateportCity_EventScript_Juan_Right"
     }
   ],
   "bg_events": [
