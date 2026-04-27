@@ -211,6 +211,9 @@ SlateportCity_Text_Juan4::
 	.string "with my own eyes.\p"
 	.string "We will meet again, I assure you.$"
 
+SlateportCity_Text_JuanDefeat::
+	.string "Placeholder$"
+
 SlateportCity_EventScript_SetReadyForScottScene::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	getplayerxy VAR_0x8004, VAR_0x8005
