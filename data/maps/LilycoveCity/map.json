@@ -553,7 +553,7 @@
       "elevation": 0,
       "var": "VAR_LILYCOVE_CITY_JUAN",
       "var_value": "0",
-      "script": "LilycoveCity_EventScript_Juan"
+      "script": "LilycoveCity_EventScript_JuanEncounter_Bottom"
     },
     {
       "type": "trigger",
@@ -562,7 +562,7 @@
       "elevation": 0,
       "var": "VAR_LILYCOVE_CITY_JUAN",
       "var_value": "0",
-      "script": "LilycoveCity_EventScript_Juan"
+      "script": "LilycoveCity_EventScript_JuanEncounter_MiddleBottom"
     },
     {
       "type": "trigger",
@@ -571,7 +571,7 @@
       "elevation": 0,
       "var": "VAR_LILYCOVE_CITY_JUAN",
       "var_value": "0",
-      "script": "LilycoveCity_EventScript_Juan"
+      "script": "LilycoveCity_EventScript_JuanEncounter_MiddleTop"
     },
     {
       "type": "trigger",
@@ -580,7 +580,7 @@
       "elevation": 0,
       "var": "VAR_LILYCOVE_CITY_JUAN",
       "var_value": "0",
-      "script": "LilycoveCity_EventScript_Juan"
+      "script": "LilycoveCity_EventScript_JuanEncounter_Top"
     }
   ],
   "bg_events": [

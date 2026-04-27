@@ -30,10 +30,43 @@ LilycoveCity_EventScript_SetWailmerMetatiles::
 	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
 	return
 
-LilycoveCity_EventScript_Juan::	/*unfinished*/
-	lockall
-	msgbox LilycoveCity_Text_ItsHim, MSGBOX_DEFAULT
+LilycoveCity_EventScript_JuanEncounter_Top::
+	@ placement specific code
+	@ shared code 1
+	call LilycoveCity_EventScript_JuanEncounter_Start
+	@ placement specific code 2
+	@ shared code 2
 	end
+
+LilycoveCity_EventScript_JuanEncounter_MiddleTop::
+	@ placement specific code
+	@ shared code 1
+	call LilycoveCity_EventScript_JuanEncounter_Start
+	@ placement specific code 2
+	@ shared code 2
+	end
+
+LilycoveCity_EventScript_JuanEncounter_MiddleBottom::
+	@ placement specific code
+	@ shared code 1
+	call LilycoveCity_EventScript_JuanEncounter_Start
+	@ placement specific code 2
+	@ shared code 2
+	end
+
+LilycoveCity_EventScript_JuanEncounter_Bottom::
+	@ placement specific code
+	@ shared code 1
+	call LilycoveCity_EventScript_JuanEncounter_Start
+	@ placement specific code 2
+	@ shared code 2
+	end
+
+LilycoveCity_EventScript_JuanEncounter_Start::
+	lockall
+	setvar VAR_LILYCOVE_CITY_JUAN, 1
+	msgbox LilycoveCity_Text_ItsHim, MSGBOX_DEFAULT
+	return
 
 LilycoveCity_Text_ItsHim::
 	.string ".$"	
