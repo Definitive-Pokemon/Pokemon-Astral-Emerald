@@ -5234,7 +5234,7 @@ IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 - Signal Beam
 - Ice Beam
 
-Crawdaunt @ Chesto Berry
+Crawdaunt
 Level: 34	/*Level 40*/
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 - Crabhammer
@@ -14775,7 +14775,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Psychic
 - Flamethrower
 
-=== TRAINER_JUAN_2 ===
+=== TRAINER_JUAN_3 ===
 Name: JUAN
 Class: Leader
 Pic: Leader Juan
