@@ -145,6 +145,7 @@ void Sav2_ClearSetDefault(void)
 {
     ClearSav2();
     SetDefaultOptions();
+    gSaveBlock2Ptr->autorunEnabled = FALSE;
 }
 
 void ResetMenuAndMonGlobals(void)
