@@ -829,7 +829,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
 
     party = GetTrainerPartyFromId(opponentId);
     for (i = 0; i < count && party != NULL; i++)
-        sum += party[i].lvl;
+        sum += ModifiedOpponentLevel(party[i].lvl);
 
     return sum;
 }
@@ -2131,3 +2131,25 @@ void SetMultiTrainerBattle(struct ScriptContext *ctx)
     gPartnerTrainerId = TRAINER_PARTNER(ScriptReadHalfword(ctx));
 };
 
+u8 ModifiedOpponentLevel(u8 lvl)
+{
+    u8 levelScaling = 0;
+    if (FlagGet(FLAG_BADGE08_GET))
+        levelScaling = 10;
+    else if (FlagGet(FLAG_BADGE07_GET))
+        levelScaling = 8;
+    else if (FlagGet(FLAG_BADGE05_GET))
+        levelScaling = 6;
+    else if (FlagGet(FLAG_BADGE03_GET))
+        levelScaling = 3;
+    else if (FlagGet(FLAG_BADGE01_GET))
+        levelScaling = 1;
+    else
+        levelScaling = 0;
+
+    lvl += levelScaling;
+
+    if (lvl > 100)
+        lvl = 100;
+    return lvl;
+}
