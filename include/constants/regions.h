@@ -15,6 +15,7 @@ enum Region
     REGION_GALAR,
     REGION_HISUI,
     REGION_PALDEA,
+    REGION_SEVII, // not a region persay, but will be inside the code.
     REGIONS_COUNT,
 };
 

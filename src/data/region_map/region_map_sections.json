@@ -1188,6 +1188,62 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_KNOT_ISLAND",
+      "name": "One Island",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_BOON_ISLAND",
+      "name": "Two Island",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_KIN_ISLAND",
+      "name": "Three Island",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_FLOE_ISLAND",
+      "name": "Four Island",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_CHRONO_ISLAND",
+      "name": "Five Island",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_QUEST_ISLAND",
+      "name": "Seven Island",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_FORTUNE_ISLAND",
+      "name": "Six Island",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_KINDLE_ROAD",
       "name": "KINDLE ROAD",
       "x": 2,
@@ -1618,62 +1674,6 @@
     {
       "id": "MAPSEC_NAVEL_ROCK",
       "name": "NAVEL ROCK"
-    },
-    {
-      "id": "MAPSEC_KNOT_ISLAND",
-      "name": "One Island",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_BOON_ISLAND",
-      "name": "Two Island",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_KIN_ISLAND",
-      "name": "Three Island",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_FLOE_ISLAND",
-      "name": "Four Island",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_CHRONO_ISLAND",
-      "name": "Five Island",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_QUEST_ISLAND",
-      "name": "Seven Island",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_FORTUNE_ISLAND",
-      "name": "Six Island",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
     },
     {
       "id": "MAPSEC_TRAINER_HILL",

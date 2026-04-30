@@ -293,6 +293,8 @@ static const u16 ALIGNED(4) sPokedexAreaMap_Pal[] = INCBIN_U16("graphics/pokedex
 static const u32 sPokedexAreaMap_Gfx[] = INCBIN_U32("graphics/pokedex/region_map.8bpp.smol");
 static const u32 sPokedexAreaMap_Tilemap[] = INCBIN_U32("graphics/pokedex/region_map.bin.smolTM");
 
+// add sevii
+
 static const u16 ALIGNED(4) sPokedexAreaMapKanto_Pal[] = INCBIN_U16("graphics/pokedex/region_map_kanto.gbapal");
 static const u32 sPokedexAreaMapKanto_Gfx[] = INCBIN_U32("graphics/pokedex/region_map_kanto.8bpp.smol");
 static const u32 sPokedexAreaMapKanto_Tilemap[] = INCBIN_U32("graphics/pokedex/region_map_kanto.bin.smolTM");
@@ -324,6 +326,16 @@ static const u32 sRegionMapSevii67_Tilemap[] = INCBIN_U32("graphics/pokenav/regi
 const struct RegionMapInfo gRegionMapInfos[] =
 {
     [REGION_MAP_HOENN]    =
+    {
+        .dexMapPalette = sPokedexAreaMap_Pal,
+        .dexMapGfx = sPokedexAreaMap_Gfx,
+        .dexMapTilemap = sPokedexAreaMap_Tilemap,
+        .dexMapPaletteSize = sizeof(sPokedexAreaMap_Pal),
+        .regionMapPalette = sRegionMapBg_Pal,
+        .regionMapGfx = sRegionMapBg_GfxLZ,
+        .regionMapTilemap = sRegionMapBg_TilemapLZ,
+    },
+    [REGION_MAP_SEVIICOMPLETE] =
     {
         .dexMapPalette = sPokedexAreaMap_Pal,
         .dexMapGfx = sPokedexAreaMap_Gfx,
@@ -1173,6 +1185,8 @@ enum RegionMapType GetRegionMapType(u32 mapSecId)
         default:
             return REGION_MAP_KANTO;
         }
+    case REGION_SEVII:
+        return REGION_MAP_SEVIICOMPLETE;
     case REGION_HOENN:
     default:
         return REGION_MAP_HOENN;
@@ -1203,6 +1217,8 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
         default:
                 return sRegionMapSections_Kanto[y][x];
         }
+    case REGION_SEVII:
+        return sRegionMapSections_SeviiComplete[y][x];
     case REGION_HOENN:
     default:
             return sRegionMap_MapSectionLayout[y][x];
@@ -2133,6 +2149,7 @@ struct FlyLocation
     u16 mapsec;
 };
 
+// Todo add fly locations for Sevii
 static const struct FlyLocation sFlyLocations[] =
 {
     {
