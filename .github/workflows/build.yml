@@ -2,26 +2,53 @@ name: Build ROM
 
 on:
   push:
-    branches: [ followers ]
-  pull_request:
+    # Sequence of patterns matched against refs/tags
+    tags:
+    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
-  build_rom:
+  build:
     name: Build ROM
     runs-on: ubuntu-latest
     steps:
+      - name: Check for cache
+        id: cache-build
+        uses: actions/cache@v4
+        with:
+          path: |
+                /usr
+                /opt
+                /agbcc
+                /pokeemerald
+                /bin
+          key: default-cache
+          
       - uses: actions/checkout@v2
-      - name: Install dependencies
+      - name: Install dependencies (no cache)
+        if: steps.cache-build.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install binutils-arm-none-eabi gcc-arm-none-eabi libpng-dev
-      - name: Build & install agbcc
+      - name: Build & install agbcc (no cache)
+        if: steps.cache-build.outputs.cache-hit != 'true'
         run: |
           cd ..
           git clone --depth 1 https://github.com/pret/agbcc
           cd agbcc
           ./build.sh
           ./install.sh ../pokeemerald
+          
+      - name: Start from Cache
+        if: steps.cache-build.outputs.cache-hit
+        run: |
+              cd ./pokeemerald
       - name: Build ROM
         run: |
           make modern
+        
+      - name: Release and upload ROM
+        id: upload-rom
+        uses: softprops/action-gh-release@v1
+        with:
+          files: pokeemerald_modern.gba
+
