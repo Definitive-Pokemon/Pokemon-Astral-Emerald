@@ -1,6 +1,7 @@
 .set LOCALID_WALLACE, 1
 .set LOCALID_RIVAL, 2
 .set LOCALID_BIRCH, 3
+.set LOCALID_STEVEN, 4
 
 EverGrandeCity_ChampionsRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_ChampionsRoom_OnTransition
@@ -55,7 +56,10 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace:
 EverGrandeCity_ChampionsRoom_EventScript_Wallace::
 	playbgm MUS_ENCOUNTER_CHAMPION, FALSE
 	msgbox EverGrandeCity_ChampionsRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_WALLACE, EverGrandeCity_ChampionsRoom_Text_Defeat
+	msgbox EverGrandeCity_ChampionsRoom_Text_StevenSpeech, MSGBOX_DEFAULT
+	msgbox EverGrandeCity_ChampionsRoom_Text_WallaceSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_BATTLE_SET_TRAINER_A, TRAINER_STEVEN, EverGrandeCity_ChampionsRoom_Text_StevenDefeat
+	trainerbattle_no_intro TRAINER_BATTLE_SET_TRAINER_B, TRAINER_WALLACE, EverGrandeCity_ChampionsRoom_Text_WallaceDefeat
 	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
 	end
 
@@ -182,9 +186,12 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	msgbox EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe, MSGBOX_DEFAULT
 	closemessage
 	delay 30
+	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceRight
+	delay 20
 	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExitStart
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExitStart
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterUp
 	applymovement LOCALID_RIVAL, EverGrandeCity_ChampionsRoom_Movement_RivalFollows
 	waitmovement 0
 	delay 20
@@ -274,6 +281,11 @@ EverGrandeCity_ChampionsRoom_Movement_RivalFollows:
 	walk_up
 	step_end
 
+EverGrandeCity_ChampionsRoom_Movement_WallaceRight:
+	walk_right
+	walk_in_place_faster_down
+	step_end
+
 EverGrandeCity_ChampionsRoom_Movement_WallaceExitStart:
 	walk_up
 	walk_up
@@ -322,8 +334,25 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "things from Pokémon.\p"
 	.string "And this is where your achievements\n"
 	.string "are put to the test against what\l"
-	.string "others like you have achieved.\p"
-	.string "Now!\p"
+	.string "others like you have achieved.$"
+
+EverGrandeCity_ChampionsRoom_Text_StevenSpeech::
+	.string "Steven: As you may realize by now,\n"
+	.string "Hoenn has not one Champion…\l"
+	.string "It has two.\p"
+	.string "Both Wallace and I have held\n"
+	.string "this title, defeating each other\l"
+	.string "and reclaiming it in turn.\p"
+	.string "This continued for some time,\n"
+	.string "until the Pokémon League decided\l"
+	.string "to recognize us both as Champions.\p"
+	.string "And so any Trainer who wishes to\n"
+	.string "take the title must defeat both\l"
+	.string "of us… together.$"
+
+EverGrandeCity_ChampionsRoom_Text_WallaceSpeech::
+	.string "Now!\n"
+	.string "The time has come!\p"
 	.string "Who can most elegantly dance with\n"
 	.string "their Pokémon in Hoenn?\p"
 	.string "Show me right here and now!$"
@@ -357,9 +386,11 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech2:
 	.string "my rhythm.\p"
 	.string "Show me that you are the strongest\n"
 	.string "Pokémon Trainer in Hoenn!$"
+	
+EverGrandeCity_ChampionsRoom_Text_StevenDefeat:
+	.string "We, the Champions, fall in defeat…\$
 
-EverGrandeCity_ChampionsRoom_Text_Defeat:
-	.string "I, the Champion, fall in defeat…\p"
+EverGrandeCity_ChampionsRoom_Text_WallaceDefeat:
 	.string "That was wonderful work.\n"
 	.string "You were elegant, infuriatingly so.\l"
 	.string "And yet it was utterly glorious!\p"
