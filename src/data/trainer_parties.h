@@ -310,7 +310,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Fredrick[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Matt[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Matt[] = {
     {
     .iv = 150,
     .lvl = 32,
@@ -371,21 +371,18 @@ static const struct TrainerMonNoItemCustomMoves sParty_ShellySeafloorCavern[] = 
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_SEVIPER,
-    .heldItem = ITEM_NONE,
     .moves = {MOVE_POISON_TAIL, MOVE_POISON_FANG, MOVE_IRON_TAIL, MOVE_GLARE}
     },
     {
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_CASTFORM,
-    .heldItem = ITEM_NONE,
     .moves = {MOVE_WEATHER_BALL, MOVE_RAIN_DANCE, MOVE_HEADBUTT, MOVE_AURORA_BEAM}
     },
     {
     .iv = 100,
     .lvl = 37,
     .species = SPECIES_GOREBYSS,
-    .heldItem = ITEM_NONE,
     .moves = {MOVE_DOUBLE_EDGE, MOVE_PSYCHIC, MOVE_HYDRO_PUMP, MOVE_AMNESIA}
     }
 };
