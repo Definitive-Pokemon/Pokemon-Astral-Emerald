@@ -66,8 +66,8 @@
 #define FLAG_HELIX_FOSSIL_ALTERING           0x35 
 #define FLAG_CALM_MINT_SANDTOWER             0x36
 #define FLAG_DRAKE_REMATCH                   0x37 // Elite Four Rematch 4
-#define FLAG_STEVEN_REMATCH                 0x38 // Elite Four Rematch 5, Champion
-#define FLAG_RED_REMATCH                  0x39 // Steven Rematch, true champion
+#define FLAG_WALLACE_REMATCH                 0x38 // Elite Four Rematch 5, Champion
+#define FLAG_STEVEN_REMATCH                  0x39 // Steven Rematch, true champion
 #define FLAG_SYS_BRAILLE_REGIELEKI_COMPLETED 0x3A
 #define FLAG_DEFEATED_REGIELEKI              0x3B 
 #define FLAG_HIDE_REGIELEKI                  0x3C 
@@ -454,7 +454,7 @@
 #define FLAG_REMATCH_PHOEBE                  0x1A6
 #define FLAG_REMATCH_GLACIA                  0x1A7
 #define FLAG_REMATCH_DRAKE                   0x1A8
-#define FLAG_REMATCH_STEVEN                  0x1A9
+#define FLAG_REMATCH_WALLACE                 0x1A9
 
 #define FLAG_DIFFICULTY_HARD                 0x1AA
 #define FLAG_NO_SHINY                        0x1AB
