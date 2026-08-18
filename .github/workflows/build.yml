@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Check for cache
         id: cache-build
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: |
                 /usr
@@ -23,7 +23,7 @@ jobs:
                 /bin
           key: default-cache
           
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Install dependencies (no cache)
         if: steps.cache-build.outputs.cache-hit != 'true'
         run: |
@@ -48,7 +48,7 @@ jobs:
         
       - name: Release and upload ROM
         id: upload-rom
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         with:
           files: pokeemerald_modern.gba
 
