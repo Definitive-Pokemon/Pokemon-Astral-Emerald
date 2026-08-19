@@ -3801,7 +3801,7 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
     .lvl = 41,
     .species = SPECIES_GOREBYSS,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_PSYCHIC, MOVE_WATER_PULSE, MOVE_ICE_BEAM, RAIN_DANCE}
+    .moves = {MOVE_PSYCHIC, MOVE_WATER_PULSE, MOVE_ICE_BEAM, MOVE_RAIN_DANCE}
     },
     {
     .iv = 200,
