@@ -735,6 +735,17 @@
 	.endif
 	.endm
 
+	@ Starts a double battle with the player against two trainers
+	@ Takes two trainers and defeat text for each
+	.macro trainerbattle_two_trainers trainer_a:req, lose_text_a:req, trainer_b:req, lose_text_b:req
+	.byte 0x5c
+	.byte TRAINER_BATTLE_TWO_TRAINERS_NO_INTRO
+	.2byte \trainer_a
+	.4byte \lose_text_a
+	.2byte \trainer_b
+	.4byte \lose_text_b
+	.endm
+
 	NO_MUSIC = FALSE
 
 	@ Starts a single trainer battle. Takes a trainer, intro text, loss text, and an optional event script.
