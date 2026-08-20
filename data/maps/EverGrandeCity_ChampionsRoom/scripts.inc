@@ -387,7 +387,7 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech2:
 	.string "Pokémon Trainer in Hoenn!$"
 	
 EverGrandeCity_ChampionsRoom_Text_StevenDefeat:
-	.string "We, the Champions, fall in defeat…\$
+	.string "We, the Champions, fall in defeat…$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceDefeat:
 	.string "That was wonderful work.\n"
