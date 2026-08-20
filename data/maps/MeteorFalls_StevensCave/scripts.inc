@@ -7,7 +7,6 @@ MeteorFalls_StevensCave_MapScripts::
 
 MeteorFalls_StevensCave_EventScript_Steven::
 	lock
-	goto_if_set FLAG_STEVEN_REMATCH, MeteorFalls_StevensCave_EventScript_StevenRematch
 	goto_if_set FLAG_DEFEATED_METEOR_FALLS_STEVEN, MeteorFalls_StevensCave_EventScript_Defeated
 	waitse
 	playse SE_PIN
