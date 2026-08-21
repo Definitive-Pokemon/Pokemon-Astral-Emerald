@@ -143,6 +143,18 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanEast::
 	waitmovement 0
 	return
 
+GiveLegends::
+	lock
+	playse SE_ORB
+	givemon SPECIES_MEWTWO, 100, ITEM_LEFTOVERS
+	givemon SPECIES_LUGIA, 100, ITEM_LEFTOVERS
+	givemon SPECIES_HO_OH, 100, ITEM_LEFTOVERS
+	givemon SPECIES_KYOGRE, 100, ITEM_LEFTOVERS
+	givemon SPECIES_GROUDON, 100, ITEM_LEFTOVERS
+	givemon SPECIES_RAYQUAZA, 100, ITEM_LEFTOVERS
+	release
+	end
+
 LittlerootTown_BrendansHouse_2F_Movement_BrendanEnters:
 	walk_down
 	walk_down
