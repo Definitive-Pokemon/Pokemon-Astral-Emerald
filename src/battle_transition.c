@@ -111,9 +111,8 @@ static void Task_Sidney(u8);
 static void Task_Phoebe(u8);
 static void Task_Glacia(u8);
 static void Task_Drake(u8);
-static void Task_Champion(u8);
+static void Task_WallaceAndSteven(u8);
 static void Task_Wallace(u8);
-static void Task_Steven(u8);
 static void Task_Aqua(u8);
 static void Task_Magma(u8);
 static void Task_Regice(u8);
@@ -372,9 +371,8 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     [B_TRANSITION_PHOEBE] = Task_Phoebe,
     [B_TRANSITION_GLACIA] = Task_Glacia,
     [B_TRANSITION_DRAKE] = Task_Drake,
-    [B_TRANSITION_CHAMPION] = Task_Champion,
+    [B_TRANSITION_DUAL_CHAMPION] = Task_WallaceAndSteven,
     [B_TRANSITION_WALLACE] = Task_Wallace,
-    [B_TRANSITION_STEVEN] = Task_Steven,
     [B_TRANSITION_AQUA] = Task_Aqua,
     [B_TRANSITION_MAGMA] = Task_Magma,
     [B_TRANSITION_REGICE] = Task_Regice,
@@ -2376,7 +2374,7 @@ static void Task_Drake(u8 taskId)
     DoMugshotTransition(taskId);
 }
 
-static void Task_Champion(u8 taskId)
+static void Task_WallaceAndSteven(u8 taskId)
 {
     gTasks[taskId].tMugshotId = MUGSHOT_WALLACE;
     DoMugshotTransition(taskId);
@@ -2387,12 +2385,6 @@ static void Task_Champion(u8 taskId)
 static void Task_Wallace(u8 taskId)
 {
     gTasks[taskId].tMugshotId = MUGSHOT_WALLACE;
-    DoMugshotTransition(taskId);
-}
-
-static void Task_StevenkId)
-{
-    gTasks[taskId].tMugshotId = MUGSHOT_STEVEN;
     DoMugshotTransition(taskId);
 }
 
