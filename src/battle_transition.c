@@ -372,7 +372,7 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     [B_TRANSITION_GLACIA] = Task_Glacia,
     [B_TRANSITION_DRAKE] = Task_Drake,
     [B_TRANSITION_DUAL_CHAMPION] = Task_WallaceAndSteven,
-    [B_TRANSITION_WALLACE] = Task_Wallace,
+    [B_TRANSITION_CHAMPION_WALLACE] = Task_Wallace,
     [B_TRANSITION_AQUA] = Task_Aqua,
     [B_TRANSITION_MAGMA] = Task_Magma,
     [B_TRANSITION_REGICE] = Task_Regice,
@@ -580,7 +580,7 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_GLACIA]   = TRAINER_PIC_ELITE_FOUR_GLACIA,
     [MUGSHOT_DRAKE]    = TRAINER_PIC_ELITE_FOUR_DRAKE,
     [MUGSHOT_WALLACE] = TRAINER_PIC_CHAMPION_WALLACE,
-    [MUGSHOT_STEVEN] = TRAINER_PIC_CHAMPION_STEVEN
+    [MUGSHOT_STEVEN] = TRAINER_PIC_STEVEN
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
