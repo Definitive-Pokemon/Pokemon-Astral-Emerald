@@ -354,7 +354,7 @@ EverGrandeCity_ChampionsRoom_Text_WallaceSpeech::
 	.string "The time has come!\p"
 	.string "Who can most elegantly dance with\n"
 	.string "their Pokémon in Hoenn?\p"
-	.string "Show me right here and now!$"
+	.string "Show us right here and now!$"
 
 EverGrandeCity_ChampionsRoom_Text_DoublesOrSingles::
 	.string "Wallace: Welcome, {PLAYER}{KUN}.\n"
