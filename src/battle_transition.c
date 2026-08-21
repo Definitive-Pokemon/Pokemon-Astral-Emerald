@@ -2383,7 +2383,9 @@ static void Task_Drake(u8 taskId)
 
 static void Task_Champion(u8 taskId)
 {
-    gTasks[taskId].tMugshotId = MUGSHOT_CHAMPION;
+    gTasks[taskId].tMugshotId = MUGSHOT_WALLACE;
+    DoMugshotTransition(taskId);
+    gTasks[taskId].tMugshotId = MUGSHOT_STEVEN;
     DoMugshotTransition(taskId);
 }
 
