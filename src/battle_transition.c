@@ -581,7 +581,6 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_PHOEBE]   = TRAINER_PIC_ELITE_FOUR_PHOEBE,
     [MUGSHOT_GLACIA]   = TRAINER_PIC_ELITE_FOUR_GLACIA,
     [MUGSHOT_DRAKE]    = TRAINER_PIC_ELITE_FOUR_DRAKE,
-    [MUGSHOT_CHAMPION] = TRAINER_PIC_CHAMPION,
     [MUGSHOT_WALLACE] = TRAINER_PIC_CHAMPION_WALLACE,
     [MUGSHOT_STEVEN] = TRAINER_PIC_CHAMPION_STEVEN
 };
@@ -591,7 +590,6 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_PHOEBE] =   {0x200, 0x200},
     [MUGSHOT_GLACIA] =   {0x1B0, 0x1B0},
     [MUGSHOT_DRAKE] =    {0x1A0, 0x1A0},
-    [MUGSHOT_CHAMPION] = {0x188, 0x188},
     [MUGSHOT_WALLACE] = {0x188, 0x188},
     [MUGSHOT_STEVEN] = {0x188, 0x188},
 };
@@ -601,7 +599,6 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_PHOEBE] =   { 0,  0},
     [MUGSHOT_GLACIA] =   {-4,  4},
     [MUGSHOT_DRAKE] =    { 0,  5},
-    [MUGSHOT_CHAMPION] = {-8,  7},
     [MUGSHOT_WALLACE] = {-8,  7},
     [MUGSHOT_STEVEN] = {-8,  7},
 };
@@ -930,7 +927,6 @@ static const u16 sMugshotPal_Sidney[] = INCBIN_U16("graphics/battle_transitions/
 static const u16 sMugshotPal_Phoebe[] = INCBIN_U16("graphics/battle_transitions/phoebe_bg.gbapal");
 static const u16 sMugshotPal_Glacia[] = INCBIN_U16("graphics/battle_transitions/glacia_bg.gbapal");
 static const u16 sMugshotPal_Drake[] = INCBIN_U16("graphics/battle_transitions/drake_bg.gbapal");
-static const u16 sMugshotPal_Champion[] = INCBIN_U16("graphics/battle_transitions/wallace_bg.gbapal");
 static const u16 sMugshotPal_Wallace[] = INCBIN_U16("graphics/battle_transitions/wallace_bg.gbapal");
 static const u16 sMugshotPal_Steven[] = INCBIN_U16("graphics/battle_transitions/wallace_bg.gbapal");
 static const u16 sMugshotPal_Brendan[] = INCBIN_U16("graphics/battle_transitions/brendan_bg.gbapal");
@@ -942,8 +938,7 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_PHOEBE] = sMugshotPal_Phoebe,
     [MUGSHOT_GLACIA] = sMugshotPal_Glacia,
     [MUGSHOT_DRAKE] = sMugshotPal_Drake,
-    [MUGSHOT_CHAMPION] = sMugshotPal_Champion
-    [MUGSHOT_WALLACE] = sMugshotPal_Wallace
+    [MUGSHOT_WALLACE] = sMugshotPal_Wallace,
     [MUGSHOT_STEVEN] = sMugshotPal_Steven
 };
 
