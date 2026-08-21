@@ -350,7 +350,7 @@ EverGrandeCity_ChampionsRoom_Text_StevenSpeech::
 	.string "of us… together.$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceSpeech::
-	.string "Now!\n"
+	.string "Wallace: Now!\n"
 	.string "The time has come!\p"
 	.string "Who can most elegantly dance with\n"
 	.string "their Pokémon in Hoenn?\p"
