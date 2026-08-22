@@ -274,12 +274,19 @@ MeteorFalls_1F_1R_Text_ArchieSeenYouBefore:
 	.string "of Team Magma's goons.\p"
 	.string "Humph…\n"
 	.string "You're one odd kid.\p"
-	.string "Team Magma is a dangerous group of\n"
-	.string "total fanatics.\p"
-	.string "They engage in destruction, claiming\n"
-	.string "to expand the land mass.\p"
-	.string "They are the rivals to us,\n"
-	.string "the sea-loving Team Aqua!$"
+	.string "Team Magma… they're misguided, \n"
+	.string "believing they can free the ancient\l"
+	.string "force that once saved us, convinced it\l"
+	.string "will bring good again.\p"
+	.string "But they're blind.\p"
+	.string "These ancient powers, their rivalry will\n"
+	.string "only bring ruin.\p"
+	.string "Our savior, the protector from the\n"
+	.string "droughts, must be the one to awaken.\p"
+	.string "It's the only way to stop this drought\n"
+	.string "and bring peace.\p"
+	.string "That’s why they’re our enemies! We can't\n"
+	.string "let them win!$"
 
 MeteorFalls_1F_1R_Text_BossWeShouldChaseMagma:
 	.string "Boss, we should give chase to\n"
@@ -293,7 +300,8 @@ MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo:
 
 MeteorFalls_1F_1R_Text_ArchieFarewell:
 	.string "Archie: {PLAYER}, you should keep\n"
-	.string "an eye out for Team Magma, too.\p"
+	.string "an eye out for Team Magma, too. They're\l"
+	.string "more dangerous than you realize.\p"
 	.string "Farewell!$"
 
 MeteorFalls_1F_1R_Text_MeetProfCozmo:

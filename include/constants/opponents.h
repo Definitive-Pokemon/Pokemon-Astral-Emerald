@@ -865,12 +865,19 @@
 #define TRAINER_PHOEBE_2_SINGLE             861 //85D, Phoebe Rematch (Singles)
 #define TRAINER_GLACIA_2_SINGLE             862 //85E, Glacia Rematch (Singles)
 #define TRAINER_DRAKE_2_SINGLE              863 //85F, Drake Rematch (Singles)
+#define TRAINER_COURTNEY_1                  864 //Magma Hideout
+#define TRAINER_COURTNEY_2                  865
+#define TRAINER_ARCHIE_MT_PYRE              866
+#define TRAINER_ARCHIE_MARINE_CAVE          867
+#define TRAINER_MAXIE_TERRA_CAVE            868
+#define TRAINER_MATT_MT_PYRE                869
+#define TRAINER_ZINNIA                      870
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      864
-#define MAX_TRAINERS_COUNT                  864
+#define TRAINERS_COUNT                      871
+#define MAX_TRAINERS_COUNT                  871
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

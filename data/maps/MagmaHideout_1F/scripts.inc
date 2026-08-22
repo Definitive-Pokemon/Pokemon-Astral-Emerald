@@ -4,15 +4,7 @@ MagmaHideout_1F_MapScripts::
 	.byte 0
 
 MagmaHideout_1F_OnTransition:
-	callnative ChangeEncounterTable
 	setvar VAR_JAGGED_PASS_ASH_WEATHER, 0
-	goto_if_set FLAG_DEFEATED_ENTEI, MagmaHideout_End
-	goto_if_set FLAG_UNLOCK_DOGS, MagmaHideout_Entei_CryFaint
-	end
-
-MagmaHideout_Entei_CryFaint::
-	playmoncry SPECIES_ENTEI, CRY_MODE_FAINT
-	release
 	end
 
 MagmaHideout_End::
@@ -26,6 +18,11 @@ MagmaHideout_1F_EventScript_Grunt1::
 MagmaHideout_1F_EventScript_Grunt2::
 	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_2, MagmaHideout_1F_Text_Grunt2Intro, MagmaHideout_1F_Text_Grunt2Defeat
 	msgbox MagmaHideout_1F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MagmaHideout_1F_EventScript_Courtney::
+	trainerbattle_single TRAINER_COURTNEY_1, MagmaHideout_1F_Text_CourtneyIntro, MagmaHideout_1F_Text_CourtneyDefeat
+	msgbox MagmaHideout_1F_Text_CourtneyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MagmaHideout_1F_Text_Grunt1Intro:
@@ -62,4 +59,22 @@ MagmaHideout_1F_Text_Grunt2PostBattle:
 	.string "You'll find out when you get there!\p"
 	.string "It'd be better if you saved surprises\n"
 	.string "to the end, don't you think?$"
+
+MagmaHideout_1F_Text_CourtneyIntro:
+	.string "Ahahahaha!\p"
+	.string "You dare intrude on Team Magma’s\n"
+	.string "hideout?\p"
+	.string "You must be either incredibly brave or\n"
+	.string "utterly foolish to challenge me here.$"
+
+MagmaHideout_1F_Text_CourtneyDefeat:
+	.string "Ahahahaha!\n"
+	.string "You’re stronger than I expected…\p"
+	.string "But Team Magma will not be so easily\n"
+	.string "stopped!$"
+
+MagmaHideout_1F_Text_CourtneyPostBattle:
+	.string "Ahahahaha!\p"
+	.string "You managed to get past me, but don’t\n"
+	.string "think you’re done.$"
 
