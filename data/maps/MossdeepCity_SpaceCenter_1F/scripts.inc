@@ -312,8 +312,8 @@ MossdeepCity_SpaceCenter_1F_Text_RocketLaunchDemandsPerfection:
 MossdeepCity_SpaceCenter_1F_Text_MagmaHaveSightsOnSpaceCenter:
 	.string "Those Magma thugs have their sights\n"
 	.string "set on our Space Center.\p"
-	.string "But we can't allow anything that minor\n"
-	.string "to interfere with our rocket launch!$"
+	.string "But we can't allow them to interfere\n"
+	.string "with our satellite operations!$"
 
 MossdeepCity_SpaceCenter_1F_Text_FoundThisYouCanHaveIt:
 	.string "I was taking a stroll down the beach\n"
@@ -326,8 +326,8 @@ MossdeepCity_SpaceCenter_1F_Text_HoennFamousForMeteorShowers:
 	.string "its meteor showers for a long time.$"
 
 MossdeepCity_SpaceCenter_1F_Text_MagmaCantStealFuelTakeThis:
-	.string "Team Magma can't be allowed to steal\n"
-	.string "the rocket fuel.\p"
+	.string "Team Magma can't be allowed to take\n"
+	.string "over our satellite systems.\p"
 	.string "Oh, by the way, you can have this stone\n"
 	.string "I found on the beach.$"
 
@@ -359,22 +359,22 @@ MossdeepCity_SpaceCenter_1F_Text_MagmaWantsToSpoilMyDream:
 
 MossdeepCity_SpaceCenter_1F_Text_StevenMagmaCantBeAllowedToTakeFuel:
 	.string "Steven: {PLAYER}{KUN}, have you read that\n"
-	.string "proclamation already?\p"
-	.string "Team Magma is coming after the rocket\n"
-	.string "fuel on this island.\p"
+	.string "notice already?\p"
+	.string "Team Magma is coming to seize control\n"
+	.string "of the satellite system here.\p"
 	.string "I don't know what they'd need it for,\n"
-	.string "but they can't be allowed to take it.\p"
+	.string "but they can't be allowed to interfere.\p"
 	.string "I'll keep an eye on things for\n"
 	.string "a while longer.\p"
 	.string "In the meantime, why don't you go\n"
 	.string "check out the town?$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt3Intro:
-	.string "As promised, we've come for\n"
-	.string "the rocket fuel!$"
+	.string "As promised, we've come to\n"
+	.string "access your satellites!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt3Defeat:
-	.string "Ran out of fuel…$"
+	.string "Ran out of power…$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt3PostBattle:
 	.string "Don't think you're on a roll just\n"
@@ -393,17 +393,17 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt1PostBattle:
 	.string "we'll come unannounced.$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4Intro:
-	.string "The rocket fuel the Space Center has\n"
-	.string "in storage--that's what we're after.\p"
-	.string "We mean to take every last bit of it!$"
+	.string "The Space Center's satellites…\n"
+	.string "that's what we're after.\p"
+	.string "We'll use them, no matter what!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4Defeat:
-	.string "Please, can you spare some fuel?\n"
-	.string "Even a chintzy cup will do!$"
+	.string "Please, let us use them?\n"
+	.string "Even just for a moment!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4PostBattle:
 	.string "What are we going to do with\n"
-	.string "the rocket fuel?\p"
+	.string "the satellite systems?\p"
 	.string "How would I know?\n"
 	.string "Ask our leader upstairs!$"
 
@@ -421,12 +421,12 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt2PostBattle:
 
 MossdeepCity_SpaceCenter_1F_Text_MagmaIntentToStealNotice:
 	.string "This is…\n"
-	.string "An intent-to-steal notice?\p"
+	.string "An intent-to-access notice?\p"
 	.string "“To the staff of the Space Center:\n"
 	.string "How are you? We are doing fine.\p"
-	.string "“We will soon visit you to take your\n"
-	.string "rocket fuel.\p"
+	.string "“We will soon visit you to use your\n"
+	.string "satellite systems.\p"
 	.string "“Please don't try to stop us.\n"
-	.string "We will take the fuel no matter what.\p"
-	.string "“Let there be more land!\n"
+	.string "We will achieve our goal no matter what.\p"
+	.string "“Let us prevent disaster!\n"
 	.string "                                          Team Magma”$"

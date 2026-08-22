@@ -8,6 +8,7 @@
 .set LOCALID_GRUNT_7, 7
 .set LOCALID_TABITHA, 8
 .set LOCALID_MAXIE, 9
+.set LOCALID_COURTNEY, 10
 
 MossdeepCity_SpaceCenter_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_SpaceCenter_2F_OnTransition
@@ -55,6 +56,11 @@ MossdeepCity_SpaceCenter_2F_EventScript_ThreeMagmaGrunts::
 	warp MAP_MOSSDEEP_CITY_SPACE_CENTER_1F, 13, 1
 	waitstate
 	releaseall
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_Courtney::
+	trainerbattle_single TRAINER_COURTNEY_2, MossdeepCity_SpaceCenter_2F_Text_CourtneyIntro, MossdeepCity_SpaceCenter_2F_Text_CourtneyDefeated
+	msgbox MossdeepCity_SpaceCenter_2F_Text_CourtneyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_SpaceCenter_2F_Movement_PlayerExit:
@@ -298,6 +304,7 @@ MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha::
 	removeobject LOCALID_GRUNT_5
 	removeobject LOCALID_TABITHA
 	removeobject LOCALID_MAXIE
+	removeobject LOCALID_COURTNEY
 	setobjectxy LOCALID_SCIENTIST, 5, 6
 	turnobject LOCALID_SCIENTIST, DIR_SOUTH
 	setobjectxy LOCALID_GENTLEMAN, 11, 8
@@ -375,8 +382,8 @@ MossdeepCity_SpaceCenter_2F_Text_MossdeepIdealForRockets:
 	.string "rockets.$"
 
 MossdeepCity_SpaceCenter_2F_Text_WhyWouldMagmaStealRocketFuel:
-	.string "Why would Team Magma want to steal\n"
-	.string "our rocket fuel in the first place?$"
+	.string "Why would Team Magma be here\n"
+	.string "at our Space Center in the first place?$"
 
 MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut:
 	.string "If only I was a little younger, I would\n"
@@ -385,10 +392,11 @@ MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut:
 	.string "I can and will try!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis:
-	.string "If Team Magma takes the rocket fuel,\n"
-	.string "I won't be able to go to space!\p"
-	.string "They can't be allowed to get away\n"
-	.string "with such an outrage!$"
+	.string "If Team Magma takes over our satellite\n"
+	.string "systems, we won't be able to continue\l"
+	.string "our research!\p"
+	.string "They can't be allowed to get away with\n"
+	.string "such a violation!$"
 
 MossdeepCity_SpaceCenter_2F_Text_WishOrdinaryPeopleCouldGoIntoSpace:
 	.string "I wish ordinary people could go into\n"
@@ -445,30 +453,29 @@ MossdeepCity_SpaceCenter_2F_Text_Grunt5PostBattle:
 
 MossdeepCity_SpaceCenter_2F_Text_WellTakeCareOfYou:
 	.string "Hehehe!\p"
-	.string "We come all the way here to get some\n"
-	.string "fuel, and we're interfered with again!\p"
+	.string "We come all the way here for our mission,\n"
+	.string "and we're interfered with again!\p"
 	.string "If you're going to mess with us too,\n"
 	.string "we'll take care of you at the same time!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere:
-	.string "Maxie: Clear out of the way!\n"
-	.string "Don't you dare interfere!$"
+	.string "Maxie: Out of my way!\n"
+	.string "I don't have time for this!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel:
 	.string "Steven: Team Magma…\p"
-	.string "What's the point of stealing rocket\n"
-	.string "fuel?$"
+	.string "What are you doing here?$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano:
-	.string "Maxie: Fufufu… Since you're so\n"
-	.string "curious, you deserve an explanation.\p"
-	.string "We're going to jettison the entire\n"
-	.string "load into Mt. Chimney!\p"
-	.string "With Groudon gone, we have no need\n"
-	.string "for that slag heap of a mountain!\p"
-	.string "So we'll use the fuel's power to make\n"
-	.string "the volcano erupt!\p"
-	.string "It will be savage!$"
+	.string "Maxie: Hmph… You're persistent, but\n"
+	.string "you cannot comprehend the scale of our\l"
+	.string "mission.\p"
+	.string "I don't have time to explain myself to\n"
+	.string "you. You're meddling in something far\l"
+	.string "beyond your understanding.\p"
+	.string "We are on the verge of something\n"
+	.string "critical…\p"
+	.string "and you won't stand in our way.$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle:
 	.string "Steven: {PLAYER}{KUN}!\n"
@@ -482,37 +489,35 @@ MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly:
 
 MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand:
 	.string "All I want…\n"
-	.string "I just want to expand the land mass…$"
+	.string "I just want to prevent disaster…$"
 
 MossdeepCity_SpaceCenter_Text_TabithaDefeat:
 	.string "I'm with our leader…$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
-	.string "Maxie: We failed to make the volcano\n"
-	.string "erupt…\p"
-	.string "We failed to control Groudon after\n"
-	.string "we had awoken it…\p"
-	.string "Is our goal to expand the land\n"
-	.string "misguided?\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "If…\n"
-	.string "If we, Team Magma, are wrong…\l"
-	.string "… … … … … …\p"
-	.string "Then might Team Aqua's goal to expand\n"
-	.string "the sea also be equally misguided?$"
+	.string "Maxie: You fools!\n"
+	.string "Precious time… wasted!\p"
+	.string "We were going to use this facility to\n"
+	.string "track down Archie.\p"
+	.string "He is on the verge of awakening\n"
+	.string "Kyogre…  If it clashes with Groudon…\p"
+	.string "The world will be torn apart by\n"
+	.string "unrelenting chaos!\p"
+	.string "I sought to stop him… but now…\n"
+	.string "It may already be too late!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp:
-	.string "Maxie: All right…\n"
-	.string "We will give up on the fuel…\p"
-	.string "There appear to be more important\n"
-	.string "matters that I must examine…$"
+	.string "Maxie: Hmph…\n"
+	.string "There's no time left. I must act now.\p"
+	.string "Perhaps there is still a chance to stop\n"
+	.string "the impending disaster…\p"
+	.string "I suggest you stay out of this!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome:
 	.string "Steven: Whew, that was too tense.\n"
 	.string "{PLAYER}{KUN}, thank you.\p"
-	.string "I have something to give you as\n"
-	.string "thanks for your support.\p"
+	.string "But what did MAXIE mean?\n"
+	.string "We need to investigate.\p"
 	.string "Please come see me at home\n"
 	.string "after this.\p"
 	.string "Oh, yes, I don't live in Rustboro City.\n"
