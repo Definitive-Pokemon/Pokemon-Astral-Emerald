@@ -749,7 +749,10 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_HIKER, 10},
     {TRAINER_CLASS_YOUNG_COUPLE, 8},
     {TRAINER_CLASS_WINSTRATE, 10},
-    {TRAINER_CLASS_NURSE, 2},
+    {TRAINER_CLASS_CHAMPION_STEVEN, 50},
+    {TRAINER_CLASS_LOREKEEPER, 25},
+    {TRAINER_CLASS_WALLY, 15},
+    {TRAINER_CLASS_PKMN_TRAINER_1, 50},
     {0xFF, 5}, // Any trainer class not listed above uses this
 };
 
@@ -2290,6 +2293,16 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
         for (i = 0; i < monsCount; i++)
         {
+            const struct TrainerMon *partyData = gTrainers[trainerNum].party.TrainerMon;
+            
+            fixedIV = partyData[i].iv;
+
+// Comment out the following line if you have changed .iv to go 0-31, instead of 0-255 as in vanilla.
+            fixedIV = fixedIV * MAX_PER_STAT_IVS / 255;
+
+            fixedIV = fixedIV + TRAINER_IV_MODIFIER;
+
+            gender = MON_MALE; // defaults to 0
 
             if (gTrainers[trainerNum].doubleBattle == TRUE)
                 personalityValue = 0x80;
