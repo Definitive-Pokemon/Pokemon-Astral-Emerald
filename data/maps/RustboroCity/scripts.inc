@@ -1226,6 +1226,8 @@ RustboroCity_Text_BrendanMrBrineyHint:
 	.string "I bet you didn't know this, since you\n"
 	.string "just moved here, {PLAYER}, but\l"
 	.string "Mr. Briney was once a great sailor.$"
+	.string "I'm going to stick around Rustboro\n"
+    .string "for a while and look for more Pokémon.$"
 
 RustboroCity_Text_TunnelNearingCompletion:
 	.string "“Timesaving tunnel nearing\n"

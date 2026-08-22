@@ -546,8 +546,11 @@ Route119_EventScript_ScottWonAtFortreeGymCall::
 	end
 
 Route119_Text_MayIntro:
-	.string "{RIVAL}: {PLAYER}{KUN}!\n"
+	.string "May: {PLAYER}{KUN}!\n"
 	.string "Where were you? I was looking for you!\p"
+	.string "I've been so busy lately… You won't\n"
+	.string "believe the amazing Pokémon I found!\l"
+	.string "But enough about that for now!\p"
 	.string "How much stronger have you gotten?\n"
 	.string "Let me check for you!\p"
 	.string "Ready with your Pokémon?\n"
@@ -556,13 +559,19 @@ Route119_Text_MayIntro:
 Route119_Text_MayDefeat:
 	.string "Achah!\n"
 	.string "{PLAYER}{KUN}, you're strong!\p"
-	.string "I was worried that you might be\n"
-	.string "struggling with your training.$"
+	.string "I guess I shouldn't be surprised.\n"
+	.string "You've always been so focused.$"
 
 Route119_Text_MayPresentForYou:
-	.string "{RIVAL}: But I had absolutely nothing to\n"
-	.string "worry about! Keep it up!\p"
-	.string "And, here! I have a present for you.$"
+	.string "MAY: Hey, you know…\n"
+	.string "I ran into some rare Pokémon while\l"
+	.string "training nearby.\p"
+	.string "I couldn't help but take notes on\n"
+	.string "them!\p"
+	.string "There's so much to learn beyond just\n"
+	.string "fighting hard, you know?\p"
+	.string "Oh, right! I almost forgot!\n"
+	.string "Here! I have a present for you.$"
 
 Route119_Text_MayExplainFly:
 	.string "{RIVAL}: Use Fly, and your Pokémon will\n"
@@ -578,8 +587,11 @@ Route119_Text_MayExplainFly:
 	.string "Well, let's meet again somewhere!$"
 
 Route119_Text_BrendanIntro:
-	.string "{RIVAL}: {PLAYER}! So this is where\n"
+	.string "Brendan: {PLAYER}! So this is where\n"
 	.string "you've been looking for Pokémon?\p"
+	.string "I've been so busy lately… You won't\n"
+	.string "believe the amazing Pokémon I found!\l"
+	.string "But enough about that for now!\p"
 	.string "Let me see how good you got.\n"
 	.string "I'll test you!\p"
 	.string "Now!\n"
@@ -587,12 +599,20 @@ Route119_Text_BrendanIntro:
 
 Route119_Text_BrendanDefeat:
 	.string "Hmm…\n"
-	.string "You've gotten pretty darn decent.$"
+	.string "You've gotten pretty darn decent.\p"
+	.string "I guess I shouldn't be surprised.\n"
+	.string "You've always been so focused.$"
 
 Route119_Text_BrendanIllGiveYouThis:
-	.string "{RIVAL}: I'd say you're good enough\n"
-	.string "to search for Pokémon anywhere.\p"
-	.string "Here, I'll give you this.\n"
+	.string "Brendan: Hey, you know…\n"
+	.string "I ran into some rare Pokémon while\l"
+	.string "training nearby.\p"
+	.string "I couldn't help but take notes on\n"
+	.string "them!\p"
+	.string "There's so much to learn beyond just\n"
+	.string "fighting hard, you know?\p"
+	.string "Oh, right! I almost forgot!\n"
+	.string "Here, I'll give you this.\p"
 	.string "Try it out.$"
 
 Route119_Text_BrendanExplainFly:

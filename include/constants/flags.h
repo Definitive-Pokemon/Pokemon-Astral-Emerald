@@ -1249,15 +1249,15 @@
 #define FLAG_TEST_HIDE_1                                            0x4AE
 #define FLAG_TEST_HIDE_2                                            0x4AF
 #define FLAG_TEST_HIDE_3                                            0x4B0
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
+#define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                                           0x4B1 // Unused Flag
+#define FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA                                           0x4B2 // Unused Flag
+#define FLAG_ARCHIE_LEFT_MARINE_CAVE                                           0x4B3 // Unused Flag
+#define FLAG_MAXIE_LEFT_TERRA_CAVE                                           0x4B4 // Unused Flag
+#define FLAG_HIDE_ARCHIE_MARINE_CAVE                                           0x4B5 // Unused Flag
+#define FLAG_HIDE_MAXIE_TERRA_CAVE                                           0x4B6 // Unused Flag
+#define FLAG_HIDE_SOOTOPOLIS_CITY_MAY                                           0x4B7 // Unused Flag
+#define FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN                                           0x4B8 // Unused Flag
+#define FLAG_SOOTOPOLIS_CITY_RIVAL_PROFESSOR                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
 #define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
 #define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag

@@ -424,30 +424,30 @@ LilycoveCity_EventScript_DontKnowAboutBerryBlender::
 	return
 
 LilycoveCity_Text_MayShoppingLetsBattle:
-	.string "{RIVAL}: Oh, hey?\n"
+	.string "May: Oh, hey?\n"
 	.string "{PLAYER}{KUN}, are you shopping, too?\p"
 	.string "I bought a whole bunch of Dolls and\n"
 	.string "Posters.\p"
-	.string "Of course, I've also caught a lot of\n"
-	.string "Pokémon, and I'm raising them\l"
-	.string "properly, too.\p"
-	.string "Actually, I'm more worried if you're\n"
-	.string "raising Pokémon properly, {PLAYER}{KUN}.\p"
-	.string "I'll battle with you, so you can show\n"
+	.string "Honestly, I've been spending more\n"
+	.string "time exploring and observing Pokémon.\p"
+	.string "It's fascinating to see how they behave\n"
+	.string "in different environments.\p"
+	.string "But that's enough about me.\n"
+	.string "I'll battle with you, so you can show\l"
 	.string "me your Pokémon, {PLAYER}{KUN}.$"
 
 LilycoveCity_Text_MayNotRaisingPokemon:
-	.string "{RIVAL}: Oh, why? {PLAYER}{KUN}, haven't you\n"
+	.string "May: Oh, why? {PLAYER}{KUN}, haven't you\n"
 	.string "been raising your Pokémon?\p"
 	.string "That's not a very good showing as a\n"
 	.string "Trainer…$"
 
 LilycoveCity_Text_MayBattleMe:
-	.string "{RIVAL}: Come on, battle with me, so I can\n"
+	.string "May: Come on, battle with me, so I can\n"
 	.string "check out your Pokémon!$"
 
 LilycoveCity_Text_MayWontBeBeaten:
-	.string "{RIVAL}: The Pokémon I raised won't be\n"
+	.string "May: The Pokémon I raised won't be\n"
 	.string "beaten by your Pokémon, {PLAYER}{KUN}!$"
 
 LilycoveCity_Text_MayDefeat:
@@ -458,11 +458,13 @@ LilycoveCity_Text_MayDefeat:
 	.string "strong, {PLAYER}{KUN}, didn't it?$"
 
 LilycoveCity_Text_MayGoingBackToLittleroot:
-	.string "{RIVAL}: I'm thinking of going back to\n"
+	.string "May: I'm thinking of going back to\n"
 	.string "Littleroot soon.\p"
-	.string "I've caught a decent group of Pokémon,\n"
-	.string "and my Pokédex is coming along, so\l"
-	.string "I'm going home to show my dad.$"
+	.string "I've learned a lot about Pokémon during\n"
+	.string "my journey, and I want to share it\l"
+	.string "with my Dad.\p"
+	.string "It's exciting to think about all the\n"
+	.string "possibilities Pokémon hold.$"
 
 LilycoveCity_Text_MayYouGoingToCollectBadges:
 	.string "{PLAYER}{KUN}, what are you going to do?\p"
@@ -494,23 +496,27 @@ LilycoveCity_Text_MayYouGoingToBattleFrontier:
 	.string "See you!$"
 
 LilycoveCity_Text_BrendanShoppingLetsBattle:
-	.string "{RIVAL}: Oh, hey, it's {PLAYER}.\p"
+	.string "Brendan: Oh, hey, it's {PLAYER}.\p"
 	.string "I'm running an errand for my dad.\n"
 	.string "No, I'm not buying any Dolls.\p"
-	.string "Anyways, it's been a while.\p"
-	.string "Want to have a battle to see who's been\n"
-	.string "raising Pokémon better?$"
+	.string "Honestly, I've been spending more\n"
+	.string "time exploring and observing Pokémon.\p"
+	.string "It's fascinating to see how they behave\n"
+	.string "in different environments.\p"
+	.string "But that's enough about me.\n"
+	.string "I'll battle with you, so you can show\l"
+	.string "me your Pokémon, {PLAYER}{KUN}.$"
 
 LilycoveCity_Text_BrendanNoConfidence:
-	.string "{RIVAL}: Oh, what's the matter?\n"
+	.string "Brendan: Oh, what's the matter?\n"
 	.string "Don't have the confidence?$"
 
 LilycoveCity_Text_BrendanBattleMe:
-	.string "{RIVAL}: Want to battle to see who's\n"
+	.string "Brendan: Want to battle to see who's\n"
 	.string "been raising Pokémon better?$"
 
 LilycoveCity_Text_BrendanWontBeBeaten:
-	.string "{RIVAL}: Aww, but you know I'm not\n"
+	.string "Brendan: Aww, but you know I'm not\n"
 	.string "going to lose to no {PLAYER}.$"
 
 LilycoveCity_Text_BrendanDefeat:
@@ -520,11 +526,13 @@ LilycoveCity_Text_BrendanDefeat:
 	.string "on you as a Trainer…$"
 
 LilycoveCity_Text_BrendanGoingBackToLittleroot:
-	.string "{RIVAL}: I…\n"
+	.string "Brendan: I…\n"
 	.string "I plan on going home to Littleroot.\p"
-	.string "You know I'm helping out my dad on his\n"
-	.string "Pokédex. It's coming together pretty\l"
-	.string "decently, so I should go show him.$"
+	.string "I've learned a lot about Pokémon during\n"
+	.string "my journey, and I want to share it\l"
+	.string "with my Dad.\p"
+	.string "It's exciting to think about all the\n"
+	.string "possibilities Pokémon hold.$"
 
 LilycoveCity_Text_BrendanYouGoingToCollectBadges:
 	.string "{PLAYER}, what are you going to do?\p"

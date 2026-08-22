@@ -15,6 +15,8 @@
 .set LOCALID_MAXIE, 16
 .set LOCALID_ARCHIE, 17
 .set LOCALID_WALLACE, 18
+.set LOCALID_MAY, 19
+.set LOCALID_BRENDAN, 20
 
 SootopolisCity_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SootopolisCity_OnLoad
@@ -50,6 +52,8 @@ SootopolisCity_EventScript_LockGymDoor::
 	return
 
 SootopolisCity_OnTransition:
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_MAY
 	setflag FLAG_VISITED_SOOTOPOLIS_CITY
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 1, SootopolisCity_EventScript_HideMapNamePopup
 	call_if_eq VAR_SKY_PILLAR_STATE, 1, SootopolisCity_EventScript_HideMapNamePopup
@@ -65,7 +69,20 @@ SootopolisCity_OnTransition:
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 4, SootopolisCity_EventScript_SetExitCaveOfOriginObjPos
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 5, SootopolisCity_EventScript_SetOutsideGymObjPos
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
+	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_ShowRival
 	end
+
+SootopolisCity_EventScript_ShowRival::
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, SootopolisCity_EventScript_ShowBrendan
+	goto_if_eq VAR_RESULT, MALE, SootopolisCity_EventScript_ShowMay
+	return
+SootopolisCity_EventScript_ShowMay::
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAY
+	return
+SootopolisCity_EventScript_ShowBrendan::
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN
+	return
 
 SootopolisCity_EventScript_HideMapNamePopup::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
@@ -183,6 +200,7 @@ SootopolisCity_OnResume:
 SootopolisCity_OnFrame:
 	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 1, SootopolisCity_EventScript_StartLegendariesScene
 	map_script_2 VAR_SKY_PILLAR_STATE, 1, SootopolisCity_EventScript_StartRayquazaScene
+	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_RivalProfessor
 	.2byte 0
 
 @ If not at PokeCenter, assumed to have arrived via Dive
@@ -1389,13 +1407,100 @@ SootopolisCity_EventScript_MaxieArchieLeave::
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_ARCHIE
 	setflag FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE
-	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
-	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
-	setvar VAR_MT_PYRE_STATE, 2
 	warpsilent MAP_SOOTOPOLIS_CITY, 31, 34
 	waitstate
 	releaseall
 	end
+
+SootopolisCity_EventScript_RivalProfessor::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, SootopolisCity_EventScript_MayProfessor
+	goto_if_eq VAR_RESULT, FEMALE, SootopolisCity_EventScript_BrendanProfessor
+	end
+
+SootopolisCity_EventScript_MayProfessor::
+	playse SE_PIN
+	applymovement LOCALID_MAY, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_MAY, Common_Movement_FaceUp
+	delay 80
+	waitmovement 0
+	msgbox SootopolisCity_Text_MayBecomingProfessor, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MAY, SootopolisCity_Movement_RivalMovement1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, SootopolisCity_Movement_RivalPlayerMovement1
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor2, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MAY, SootopolisCity_Movement_RivalMovement2
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor3, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MAY, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor4, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MAY, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor5, MSGBOX_DEFAULT
+	closemessage
+	goto SootopolisCity_EventScript_RivalProfessorEnd
+
+SootopolisCity_EventScript_BrendanProfessor::
+	playse SE_PIN
+	applymovement LOCALID_BRENDAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_BRENDAN, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox SootopolisCity_Text_BrendanBecomingProfessor, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BRENDAN, SootopolisCity_Movement_RivalMovement1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, SootopolisCity_Movement_RivalPlayerMovement1
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor2, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BRENDAN, SootopolisCity_Movement_RivalMovement2
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor3, MSGBOX_DEFAULT
+	applymovement LOCALID_BRENDAN, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor4, MSGBOX_DEFAULT
+	applymovement LOCALID_BRENDAN, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor5, MSGBOX_DEFAULT
+	closemessage
+	goto SootopolisCity_EventScript_RivalProfessorEnd
+
+SootopolisCity_EventScript_RivalProfessorEnd::
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_BRENDAN
+	removeobject LOCALID_MAY
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_MAY
+	setflag FLAG_SOOTOPOLIS_CITY_RIVAL_PROFESSOR
+	setflag FLAG_HIDE_LILYCOVE_CITY_RIVAL
+	setflag FLAG_ENABLE_NORMAN_REMATCH_CALL
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 6
+	setvar VAR_NORMAN_REMATCH_CALL_STEP_COUNTER, 0
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+SootopolisCity_Movement_RivalMovement1:
+	walk_left
+	walk_left
+	step_end
+
+SootopolisCity_Movement_RivalPlayerMovement1:
+	walk_down
+	face_left
+	step_end
+
+SootopolisCity_Movement_RivalMovement2:
+	walk_right
+	step_end
 
 @ Unused
 SootopolisCity_Movement_Levitate::
@@ -1602,78 +1707,95 @@ SootopolisCity_Text_GroudonPleaseStop:
 	.string "Maxie: G… Groudon…\n"
 	.string "Please! Stop what you're doing!\p"
 	.string "I know the extent of your power now!\p"
-	.string "If you keep going, all Hoenn, not just\n"
-	.string "Sootopolis, will be utterly ruined!$"
+	.string "If you continue, all of Hoenn, not just\n"
+	.string "Sootopolis, will be consumed by ruin!\p"
+	.string "This wasn't what I sought… not like\n"
+	.string "this.$"
 
 SootopolisCity_Text_AfterAllOurScheming:
-	.string "Maxie: So the super-ancient Pokémon\n"
-	.string "weren't only Groudon and Kyogre…\p"
-	.string "After all our fruitless scheming and\n"
-	.string "frantic efforts, that one Pokémon's\l"
-	.string "simple action puts everything right\l"
-	.string "again as if nothing had happened…\p"
+	.string "Maxie: So, it wasn't only Groudon and\n"
+	.string "Kyogre…\p"
+	.string "After all our efforts,\n"
+	.string "all our grand designs…\p"
+	.string "A single action from one Pokémon \n"
+	.string "restores everything…\p"
+	.string "As if none of it had ever mattered…\p"
 	.string "Fu…\n"
-	.string "Fuhahaha…$"
+	.string "Fuhahaha…\p"
+	.string "Perhaps we were never meant to control\n"
+	.string "such forces.\p"
+	.string "Perhaps… balance was always the key.$"
 
 SootopolisCity_Text_KyogreCalmDown:
 	.string "Archie: Kyogre! What's wrong?!\n"
-	.string "Look over here! It's the Red Orb!\l"
+	.string "Look over here! It's the Blue Orb!\l"
 	.string "Calm down! Kyogre!\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "It's no good!\n"
-	.string "It's not responding at all!$"
+	.string "It doesn't respond…\p"
+	.string "Have I truly lost control?$"
 
 SootopolisCity_Text_TryingMeaninglessToPokemon:
-	.string "Archie: Kyogre and Groudon both\n"
-	.string "flew off to who knows where.\p"
-	.string "The weather in Hoenn has returned\n"
-	.string "to its normal state…\p"
+	.string "Archie: Kyogre and Groudon have\n"
+	.string "disappeared…\p"
+	.string "And the weather in Hoenn has returned\n"
+	.string "to normal.\p"
 	.string "Haha…\n"
 	.string "Hahaha…\p"
-	.string "Maybe what we were trying to do was\n"
-	.string "something small, even meaningless,\l"
-	.string "to Pokémon…$"
+	.string "Maybe what we were trying to do,\n"
+	.string "to force nature's hand, was something\l"
+	.string "small, something meaningless in the\l"
+	.string "grand scheme.\p"
+	.string "Nature doesn't bend to our will.\n"
+	.string "Perhaps… it thrives in balance.$"
 
 SootopolisCity_Text_InvolvedWithCrisisComeWithMe:
 	.string "Steven: Those Pokémon fighting…\n"
 	.string "Groudon… And Kyogre…\p"
-	.string "The two super-ancient Pokémon\n"
-	.string "were awakened from a long sleep…\p"
-	.string "And now they are smashing each other\n"
-	.string "with their uncontrollable energy…\p"
+	.string "The two super-ancient titans,\n"
+	.string "awoken from their long slumber…\p"
+	.string "Now their power rages out of control,\n"
+	.string "threatening to tear the land and sea\l"
+	.string "apart.\p"
 	.string "…{PLAYER}{KUN}.\p"
-	.string "You being here now I'll take to mean\n"
-	.string "that you're prepared to become\l"
-	.string "involved in this crisis.\p"
-	.string "Well, then, there's someone that\n"
-	.string "I'd like you to meet.\p"
+	.string "Your presence here means you're ready\n"
+	.string "to face this disaster head-on.\p"
+	.string "There's someone you need to meet.\n"
 	.string "Come with me, please.$"
 
 SootopolisCity_Text_DoesThisMakeYourFearPokemon:
-	.string "Steven: Listen, {PLAYER}{KUN}.\p"
-	.string "Does seeing Groudon and Kyogre make\n"
-	.string "you think Pokémon are to be feared?\p"
-	.string "But that's not true.\n"
-	.string "Pokémon are really more…\p"
+	.string "Steven: {PLAYER}{KUN}, tell me…\p"
+	.string "Seeing Groudon and Kyogre like this,\n"
+	.string "does it make you fear Pokémon?\p"
+	.string "You know better, don't you?\n"
+	.string "Pokémon are more than just power.\p"
 	.string "…Why am I asking you this?\n"
 	.string "You already know.$"
 
 SootopolisCity_Text_HereWereAreHelpWallace:
-	.string "Steven: Okay, here we are!\p"
-	.string "Inside here you'll find someone named\n"
-	.string "Wallace.\p"
-	.string "I think you have what's needed to\n"
-	.string "help him…$"
+	.string "Steven: This is the Cave Of Origin.\p"
+	.string "Inside, you'll find Wallace,\n"
+	.string "an old friend of mine.\p"
+	.string "He's been studying the ancient\n"
+	.string "carvings and legends here.\p"
+	.string "I believe he may have found a way\n"
+	.string "to help us all.$"
 
 SootopolisCity_Text_KnowWhatsNeededToHelpHim:
-	.string "Steven: I think you have what's\n"
-	.string "needed to help him…$"
+	.string "{PLAYER}{KUN}, I'm counting on you\n"
+	.string "to assist him.$"
 
 SootopolisCity_Text_NeverBeenToSkyPillar:
-	.string "Steven: The Sky Pillar…\p"
-	.string "I've never been there.\n"
-	.string "I wonder where it could be?$"
+	.string "Steven: So, Wallace believes the\n"
+	.string "Dragon Lord can help us…\p"
+	.string "The Sky Pillar…\n"
+	.string "I've heard of it, though I've\l"
+	.string "never ventured there myself.\p"
+	.string "I must stay here in Sootopolis\n"
+	.string "to ensure the safety of the people.\p"
+	.string "{PLAYER}{KUN}, I have faith in you\n"
+	.string "and Wallace.$"
 
 SootopolisCity_Text_SoThatsRayquaza:
 	.string "Steven: So that's Rayquaza…\p"
@@ -1727,3 +1849,68 @@ SootopolisCity_Text_DazzledByMentor:
 	.string "Wallace: I'm sure that you will be\n"
 	.string "dazzled by my mentor's breathtakingly\l"
 	.string "elegant battle style.$"
+
+SootopolisCity_Text_MayBecomingProfessor:
+	.string "May: {PLAYER}{KUN}!\n"
+	.string "There you are!\p"
+	.string "I heard about what happened with\n"
+	.string "Groudon and Kyogre! I was so worried!\p"
+	.string "But… you look totally fine!\n"
+	.string "Actually, you look even stronger!\p"
+	.string "Wait, is that the Rain Badge?\n"
+	.string "You already defeated Juan?!\p"
+	.string "Wow, {PLAYER}{KUN}, you never cease\n"
+	.string "to amaze me!$"
+
+SootopolisCity_Text_BrendanBecomingProfessor:
+	.string "Brendan: {PLAYER}{KUN}!\n"
+	.string "There you are!\p"
+	.string "I heard about what happened with\n"
+	.string "Groudon and Kyogre! I was so worried!\p"
+	.string "But… you look totally fine!\n"
+	.string "Actually, you look even stronger!\p"
+	.string "Wait, is that the Rain Badge?\n"
+	.string "You already defeated Juan?!\p"
+	.string "Wow, {PLAYER}{KUN}, you never cease\n"
+	.string "to amaze me!$"
+
+SootopolisCity_Text_RivalBecomingProfessor2:
+	.string "You know, seeing you grow so much\n"
+	.string "as a Trainer made me think…\p"
+	.string "I don't have the same talent and drive\n"
+	.string "for battling that you do.\p"
+	.string "And that's okay!\n"
+	.string "We all have our own strengths.\p"
+	.string "I realized my dream isn't about\n"
+	.string "becoming the strongest Trainer.$"
+
+SootopolisCity_Text_RivalBecomingProfessor3:
+	.string "I want to become friends with Pokémon\n"
+	.string "all over the world, just like I said\l"
+	.string "when we first met.\p"
+	.string "So I've decided… I'm going to become\n"
+	.string "a Pokémon Professor.\l"
+	.string "Like my Dad!$"
+
+SootopolisCity_Text_RivalBecomingProfessor4:
+	.string "There's so much to learn about Pokémon,\n"
+	.string "and I want to help others understand\l"
+	.string "them better.$"
+
+SootopolisCity_Text_RivalBecomingProfessor5:
+	.string "But don't think I'm giving up on\n"
+	.string "battling entirely!\l"
+	.string "I'll still keep training my Pokémon.\p"
+	.string "Anyway, I just wanted to let you know.\n"
+	.string "I'll be cheering you on as you take on\l"
+	.string "the Pokémon League!\p"
+	.string "I know you'll be just fine.\n"
+	.string "You've got what it takes to become the\l"
+	.string "Champion!\p"
+	.string "Well, I should get going.\n"
+	.string "There's so much to learn!\p"
+	.string "Let's meet again sometime!\p"
+	.string "Maybe next time, I'll have some new\n"
+	.string "discoveries to share with you!\p"
+	.string "Good luck with everything,\n"
+	.string "{PLAYER}{KUN}!$"

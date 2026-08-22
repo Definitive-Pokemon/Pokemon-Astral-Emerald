@@ -19,36 +19,6 @@ CaveOfOrigin_B1F_EventScript_Wallace::
 	delay 30
 	applymovement LOCALID_WALLACE, Common_Movement_FacePlayer
 	waitmovement 0
-	message CaveOfOrigin_B1F_Text_WhereIsRayquaza
-	waitmessage
-	goto CaveOfOrigin_B1F_EventScript_WheresRayquaza
-
-CaveOfOrigin_B1F_EventScript_WheresRayquaza::
-	multichoice 0, 0, MULTI_WHERES_RAYQUAZA, FALSE
-	switch VAR_RESULT
-	case 0, CaveOfOrigin_B1F_EventScript_AtCaveOfOrigin
-	case 1, CaveOfOrigin_B1F_EventScript_AtMtPyre
-	case 2, CaveOfOrigin_B1F_EventScript_AtSkyPillar
-	case 3, CaveOfOrigin_B1F_EventScript_DontRemember
-	goto CaveOfOrigin_B1F_EventScript_DontRemember
-	end
-
-CaveOfOrigin_B1F_EventScript_AtCaveOfOrigin::
-	message CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin
-	waitmessage
-	goto CaveOfOrigin_B1F_EventScript_WheresRayquaza
-
-CaveOfOrigin_B1F_EventScript_AtMtPyre::
-	message CaveOfOrigin_B1F_Text_OldLadyDidntMentionThat
-	waitmessage
-	goto CaveOfOrigin_B1F_EventScript_WheresRayquaza
-
-CaveOfOrigin_B1F_EventScript_DontRemember::
-	message CaveOfOrigin_B1F_Text_CantYouRememberSomehow
-	waitmessage
-	goto CaveOfOrigin_B1F_EventScript_WheresRayquaza
-
-CaveOfOrigin_B1F_EventScript_AtSkyPillar::
 	msgbox CaveOfOrigin_B1F_Text_WellHeadToSkyPillar, MSGBOX_DEFAULT
 	closemessage
 	playse SE_EXIT
@@ -62,59 +32,44 @@ CaveOfOrigin_B1F_EventScript_AtSkyPillar::
 	end
 
 CaveOfOrigin_B1F_Text_WallaceStory:
-	.string "Ah, so you are {PLAYER}{KUN}?\n"
-	.string "I've heard tales of your exploits.\p"
+	.string "Ah, so you are {PLAYER}{KUN}?\p"
+	.string "I've heard such marvelous tales of your\n"
+	.string "exploits.\p"
 	.string "My name is Wallace.\p"
 	.string "I was once the Gym Leader of\n"
 	.string "Sootopolis, but something came up.\p"
 	.string "So now, I've entrusted my mentor Juan\n"
 	.string "with the Gym's operation.\p"
+	.string "And now, here we are…\n"
+	.string "standing amidst a legend.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "Groudon and Kyogre, the two Pokémon\n"
-	.string "wreaking havoc here, are considered\l"
-	.string "to be super-ancient Pokémon.\p"
-	.string "But there aren't just two super-\n"
-	.string "ancient Pokémon.\p"
-	.string "There is one more somewhere.\p"
-	.string "Somewhere, there is a super-\n"
-	.string "ancient Pokémon named Rayquaza.\p"
-	.string "It's said that it was Rayquaza that\n"
-	.string "becalmed the two combatants in\l"
-	.string "the distant past.\p"
-	.string "But even I have no clue as to\n"
-	.string "Rayquaza's whereabouts…$"
-
-CaveOfOrigin_B1F_Text_WhereIsRayquaza:
-	.string "Wallace: {PLAYER}{KUN}, do you perhaps\n"
-	.string "know where Rayquaza is now?\p"
-	.string "If you do, please tell me.$"
-
-CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin:
-	.string "Wallace: The Cave Of Origin?\p"
-	.string "But that's right here!\n"
-	.string "I need you to do better than that!\p"
-	.string "Please, I need you to think about\n"
-	.string "where Rayquaza might be right now.$"
-
-CaveOfOrigin_B1F_Text_OldLadyDidntMentionThat:
-	.string "Wallace: Mt. Pyre?\p"
-	.string "But when I met the old lady there\n"
-	.string "earlier, she made no mention of it.\p"
-	.string "I very much doubt that the old lady\n"
-	.string "would try to hide something from me…\p"
-	.string "{PLAYER}{KUN}, could you think about this\n"
-	.string "more carefully for me?$"
-
-CaveOfOrigin_B1F_Text_CantYouRememberSomehow:
-	.string "Wallace: Huh? You don't remember?\n"
-	.string "Hmm… That's a problem…\p"
-	.string "Can't you remember somehow?$"
+	.string "Groudon and Kyogre… such power.\p"
+	.string "But according to the ancient carvings\n"
+	.string "here in the Cave of Origin, there is yet\l"
+	.string "another being.\p"
+	.string "A sacred Pokémon, known in legends\n"
+	.string "as the Dragon Lord.\p"
+	.string "It is said that in times of strife, this\n"
+	.string "ethereal being descended from the\l"
+	.string "heavens to quell the chaos below.\p"
+	.string "I believe that seeking out this\n"
+	.string "Dragon Lord may be our only hope.\p"
+	.string "The Sky Pillar, a monument to its\n"
+	.string "majesty, lies waiting on Route 131.\p"
+	.string "I trust that we will find the answers we\n"
+	.string "seek there.\p"
+	.string "I've studied the carvings, and at long\n"
+	.string "last…\p"
+	.string "I believe I know how to unlock its\n"
+	.string "secrets.$"
 
 CaveOfOrigin_B1F_Text_WellHeadToSkyPillar:
-	.string "Wallace: The Sky Pillar?\p"
-	.string "That's it!\n"
-	.string "It must be the Sky Pillar!\p"
-	.string "{PLAYER}{KUN}, there's not a moment to lose!\n"
-	.string "We'll head to the Sky Pillar right away!$"
-
+	.string "Wallace: {PLAYER}{KUN}, will you\n"
+	.string "accompany me?\p"
+	.string "There's not a moment to lose!\p"
+	.string "Let us make haste to the Sky Pillar.\n"
+	.string "Time is of the essence!\p"
+	.string "I will go ahead and prepare to open\n"
+	.string "its entrance.\p"
+	.string "Please meet me there as soon as you can.$"
