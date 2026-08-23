@@ -285,6 +285,7 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .FLASH = TRUE,
+        .CALM_MIND = TRUE,
     } },
 
     [SPECIES_WEEDLE] = { .learnset = {
@@ -1104,6 +1105,7 @@ const union {
         .ATTRACT = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
+        .SAFEGUARD = TRUE,
     } },
 
     [SPECIES_VILEPLUME] = { .learnset = {
@@ -1963,6 +1965,7 @@ const union {
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
+        .SAFEGUARD = TRUE,
     } },
 
     [SPECIES_RAPIDASH] = { .learnset = {
@@ -1984,6 +1987,8 @@ const union {
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
+        .SAFEGUARD = TRUE,
+        .REFLECT = TRUE,
     } },
 
     [SPECIES_SLOWPOKE] = { .learnset = {
@@ -3260,6 +3265,7 @@ const union {
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .TORMENT = TRUE,
     } },
 
     [SPECIES_PINSIR] = { .learnset = {
@@ -4143,6 +4149,7 @@ const union {
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .THIEF = TRUE,
     } },
 
     [SPECIES_CROCONAW] = { .learnset = {
@@ -4173,6 +4180,8 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .THIEF = TRUE,
+        .TORMENT = TRUE,
     } },
 
     [SPECIES_FERALIGATR] = { .learnset = {
@@ -4206,6 +4215,9 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .THIEF = TRUE,
+        .TORMENT = TRUE,
+        .TAUNT = TRUE,
     } },
 
     [SPECIES_SENTRET] = { .learnset = {
@@ -4369,6 +4381,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .FLASH = TRUE,
+        .BULK_UP = TRUE,
     } },
 
     [SPECIES_SPINARAK] = { .learnset = {
@@ -4412,6 +4425,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .FLASH = TRUE,
+        .TORMENT = TRUE,
     } },
 
     [SPECIES_CROBAT] = { .learnset = {
@@ -4725,6 +4739,7 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
+        .DRAGON_CLAW = TRUE,
     } },
 
     [SPECIES_AMPHAROS] = { .learnset = {
@@ -4750,6 +4765,7 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
+        .DRAGON_CLAW = TRUE,
     } },
 
     [SPECIES_BELLOSSOM] = { .learnset = {
@@ -4772,6 +4788,7 @@ const union {
         .ATTRACT = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
+        .REFLECT = TRUE,
     } },
 
     [SPECIES_MARILL] = { .learnset = {
@@ -4883,6 +4900,8 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .BULLET_SEED = TRUE,
+        .GIGA_DRAIN = TRUE,
     } },
 
     [SPECIES_HOPPIP] = { .learnset = {
@@ -5018,6 +5037,7 @@ const union {
         .ATTRACT = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
+        .FLAMETHROWER = TRUE,
     } },
 
     [SPECIES_YANMA] = { .learnset = {
@@ -5241,6 +5261,7 @@ const union {
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
         .FLASH = TRUE,
+        .SAFEGUARD = TRUE,
     } },
 
     [SPECIES_UNOWN] = { .learnset = {
@@ -5277,6 +5298,7 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
+        .TORMENT = TRUE,
     } },
 
     [SPECIES_PINECO] = { .learnset = {
@@ -6720,6 +6742,7 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
+        .DRAGON_CLAW = TRUE,
     } },
 
     [SPECIES_SCEPTILE] = { .learnset = {
@@ -7301,6 +7324,7 @@ const union {
         .THIEF = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
+        .TORMENT = TRUE,
     } },
 
     [SPECIES_SHEDINJA] = { .learnset = {
@@ -8781,6 +8805,7 @@ const union {
         .FLY = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .REFLECT = TRUE,
     } },
 
     [SPECIES_WYNAUT] = { .learnset = {
@@ -9182,6 +9207,7 @@ const union {
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .TORMENT = TRUE,
     } },
 
     [SPECIES_GOREBYSS] = { .learnset = {
@@ -9207,6 +9233,7 @@ const union {
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .LIGHT_SCREEN = TRUE,
     } },
 
     [SPECIES_ABSOL] = { .learnset = {
@@ -10612,6 +10639,7 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
+        .BULK_UP = TRUE,
     } }, 
         
     [SPECIES_FROSLASS] = { .learnset = {
@@ -10882,6 +10910,7 @@ const union {
         .THIEF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .TORMENT = TRUE,
     } }, 
         
     [SPECIES_MAGNEZONE] = { .learnset = {
@@ -10980,6 +11009,7 @@ const union {
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
         .FLASH = TRUE
+        .SAFEGUARD = TRUE,
     } }, 
         
     [SPECIES_MIME_JR] = { .learnset = {
@@ -11445,6 +11475,8 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE
+        .TORMENT = TRUE,
+        .TAUNT = TRUE,
     } }, 
 
     [SPECIES_DUDUNSPARCE] = { .learnset = {
