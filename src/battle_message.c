@@ -437,7 +437,6 @@ static const u8 sText_SpAtk2[] = _("Sp. Atk");
 static const u8 sText_SpDef2[] = _("Sp. Def");
 static const u8 sText_Accuracy[] = _("Accuracy");
 static const u8 sText_Evasiveness[] = _("Evasiveness");
-static const u8 sText_MagmaArmorActivated[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} reduced\nthe damage from {B_CURRENT_MOVE}!"); // Added new Battle result message to provide text for Magma Armor activation
 
 const u8 * const gStatNamesTable[NUM_BATTLE_STATS] =
 {
@@ -906,7 +905,6 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_PKMNDROPPEDITEM - BATTLESTRINGS_TABLE_START] = sText_PkmnDroppedItem,
     [STRINGID_FOURITEMSUSED - BATTLESTRINGS_TABLE_START] = sText_FourItemsUsed,
     [STRINGID_PLAYERWHITEOUT_NOMONEY - BATTLESTRINGS_TABLE_START] = sText_PlayerWhiteoutNoMoney,
-    [STRINGID_MAGMAARMORACTIVATED - BATTLESTRINGS_TABLE_START] = sText_MagmaArmorActivated,
 };
 
 const u16 gMissStringIds[] =

@@ -2560,15 +2560,6 @@ static void Cmd_resultmessage(void)
     }
     else
     {
-        // Added check for Magma Armor to provide a message if activated
-        if (gBattleMons[gBattlerTarget].ability == ABILITY_MAGMA_ARMOR && moveType == TYPE_WATER && !gBattleStruct->checkedMagmaArmor)
-        {
-            BattleScriptPushCursor();
-            gBattleCommunication[MSG_DISPLAY] = 1;
-            gBattlescriptCurrInstr = BattleScript_MagmaArmorActivated;
-            gBattleStruct->checkedMagmaArmor = TRUE;
-            return;
-        }
         gBattleCommunication[MSG_DISPLAY] = 1;
         switch (gMoveResultFlags & (u8)(~MOVE_RESULT_MISSED))
         {

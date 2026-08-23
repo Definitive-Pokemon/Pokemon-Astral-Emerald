@@ -390,10 +390,9 @@
 #define STRINGID_BAGISFULL                  389
 #define STRINGID_FOURITEMSUSED              390
 #define STRINGID_PLAYERWHITEOUT_NOMONEY     391
-#define STRINGID_MAGMAARMORACTIVATED        392  // Added new Battle result message to provide text for Magma Armor activation
 
 
-#define BATTLESTRINGS_COUNT                 393
+#define BATTLESTRINGS_COUNT                 392
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

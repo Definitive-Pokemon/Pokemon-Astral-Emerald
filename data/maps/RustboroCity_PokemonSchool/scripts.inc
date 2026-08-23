@@ -273,12 +273,12 @@ RustboroCity_PokemonSchool_Text_PokemontCantUseManMadeItems:
 	.string "items like Potion and Antidote.$"
 
 RustboroCity_PokemonSchool_Text_ConfusedPokemonAttacksItself:
-	.string "Abilities are so cool!\p"
-	.string "Pokémon with Pickup can find all sorts\n"
-	.string "of rare items, even a Rare Candy.\p"
-	.string "Magma Armor is so hot, it evaporates\n"
-	.string "Water attacks and reduces their\l"
-	.string "damage.\p"
+	.string "You know how some Pokémon moves can\n"
+	.string "confuse a Pokémon?\p"
+	.string "A confused Pokémon will sometimes\n"
+	.string "attack itself without meaning to.\p"
+	.string "But once it leaves battle, it will\n"
+	.string "return to normal.$"
 
 RustboroCity_PokemonSchool_Text_PokemonHealItselfWithBerry:
 	.string "A Pokémon holding a Berry will heal\n"

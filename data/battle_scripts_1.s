@@ -4612,11 +4612,6 @@ BattleScript_PrintPlayerForfeitedLinkBattle::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
-BattleScript_MagmaArmorActivated::
-	printstring STRINGID_MAGMAARMORACTIVATED
-	waitmessage B_WAIT_TIME_SHORT
-	return
-
 BattleScript_Safari_OneTypeChallengeCaptureBlocked::
 	printselectionstring STRINGID_ONETYPECAPTUREBLOCKED
 	endselectionscript
