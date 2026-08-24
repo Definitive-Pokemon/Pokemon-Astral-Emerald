@@ -1,6 +1,22 @@
 DewfordTown_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, DewfordTown_Gym_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, DewfordTown_Gym_OnFrame
 	.byte 0
+
+DewfordTown_Gym_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, DewfordTown_Gym_EventScript_TryRematchReward
+	.2byte 0
+
+DewfordTown_Gym_EventScript_TryRematchReward::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_BRAWLY_REMATCH_REWARD, DewfordTown_Gym_EventScript_TryRematchRewardEnd
+	setvar 0x8005, TRAINER_BRAWLY_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_GiveRematchReward
+DewfordTown_Gym_EventScript_TryRematchRewardEnd::
+	ClearTrainerFlag TRAINER_BRAWLY_5
+	releaseall
+	end
 
 DewfordTown_Gym_OnTransition:
 	call DewfordTown_Gym_EventScript_SetFlashLevel
@@ -183,9 +199,51 @@ DewfordTown_Gym_EventScript_GiveBulkUp2:
 	end
 
 DewfordTown_Gym_EventScript_BrawlyRematch::
+	goto_if_set FLAG_GOT_BRAWLY_REMATCH_REWARD, DewfordTown_Gym_EventScript_BrawlyRematchContinue
+	setvar 0x8005, TRAINER_BRAWLY_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_GiveRematchReward
+DewfordTown_Gym_EventScript_BrawlyRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons
 	msgbox DewfordTown_Gym_Text_BrawlyPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
+DewfordTown_Gym_EventScript_GiveRematchReward::
+	msgbox DewfordTown_Gym_Text_BrawlyGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_STAR_PIECE, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, DewfordTown_Gym_EventScript_NoRoom
+	msgbox DewfordTown_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_BRAWLY_REMATCH_REWARD
+	release
+	end
+DewfordTown_Gym_EventScript_NoRoom::
+	msgbox DewfordTown_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+DewfordTown_Gym_Text_BrawlyGiveRematchReward:
+	.string "Whoa, {PLAYER}!\n"
+	.string "That was one intense match!\p"
+	.string "You've got some serious power behind\n"
+	.string "those moves.\p"
+	.string "To honor your strength, I want you to\n"
+	.string "have this Star Piece.$"
+
+DewfordTown_Gym_Text_NoRoomForReward:
+	.string "Oh, looks like your Bag is too full.\p"
+	.string "Clear some space, and I'll hold onto\n"
+	.string "this for you until you come back.$"
+
+DewfordTown_Gym_Text_GaveReward:
+	.string "It's a fragment of a big rock\n"
+	.string "I once found in Granite Cave.\p"
+	.string "Its value reflects the value\n"
+	.string "of your Pokémon partners!$"
 
 DewfordTown_Gym_EventScript_Takao::
 	trainerbattle_single TRAINER_TAKAO, DewfordTown_Gym_Text_TakaoIntro, DewfordTown_Gym_Text_TakaoDefeat, DewfordTown_Gym_EventScript_TakaoBrightenRoom
