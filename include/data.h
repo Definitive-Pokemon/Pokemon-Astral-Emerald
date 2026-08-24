@@ -62,7 +62,8 @@ struct TrainerMon
     u16 unused:1;
 };
 
-#define NO_ITEM_DEFAULT_MOVES(party) { .NoItemDefaultMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = 0
+#define TRAINER_MON(party) { .NoItemDefaultMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = 0
+
 
 union TrainerMonPtr
 {

@@ -3664,7 +3664,7 @@ static const struct TrainerMon sParty_Walter5[] = {
     }
 };
 // Elite Four
-static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
+static const struct TrainerMon sParty_Sidney[] = {
     {
     .iv = 250,
     .lvl = 51,
@@ -3709,7 +3709,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     }
 };
 // Elite Four
-static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
+static const struct TrainerMon sParty_Phoebe[] = {
     {
     .iv = 250,
     .lvl = 52,
@@ -3754,7 +3754,7 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
     }
 };
 // Elite Four
-static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
+static const struct TrainerMon sParty_Glacia[] = {
     {
     .iv = 250,
     .lvl = 54,
@@ -3799,7 +3799,7 @@ static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
     }
 };
 // Elite Four
-static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
+static const struct TrainerMon sParty_Drake[] = {
     {
     .iv = 250,
     .lvl = 54,
@@ -5043,7 +5043,7 @@ static const struct TrainerMon sParty_Wallace[] = {
 };
 
 // Champion
-static const struct TrainerMonItemCustomMoves sParty_Steven[] = {
+static const struct TrainerMon sParty_Steven[] = {
     {
     .iv = 255,
     .lvl = 57,
@@ -14218,8 +14218,9 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
     .lvl = 5,
     .species = SPECIES_KYOGRE,
     }
+};
 
-static const struct TrainerMonNoItemCustomMoves sParty_Chansey1[] = { //Unused
+static const struct TrainerMon sParty_Chansey1[] = { //Unused
     {
     .iv = 0,
     .lvl = 15,
@@ -14234,7 +14235,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Chansey1[] = { //Unused
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Wallace2[] = {
+static const struct TrainerMon sParty_Wallace2[] = {
     {
     .iv = 255,
     .lvl = 90,
@@ -14279,7 +14280,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace2[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Chansey3[] = { //Unused
+static const struct TrainerMon sParty_Chansey3[] = { //Unused
     {
     .iv = 0,
     .lvl = 25,
@@ -14306,7 +14307,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Chansey3[] = { //Unused
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Chansey4[] = { //Unused
+static const struct TrainerMon sParty_Chansey4[] = { //Unused
     {
     .iv = 0,
     .lvl = 30,
@@ -14333,7 +14334,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Chansey4[] = { //Unused
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Nurse[] = {
+static const struct TrainerMon sParty_Nurse[] = {
     {
     .iv = 0,
     .lvl = 100,
