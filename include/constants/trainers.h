@@ -387,5 +387,7 @@
 // Pokémon.
 #define F_TRAINER_PARTY_CUSTOM_MOVESET (1 << 0)
 #define F_TRAINER_PARTY_HELD_ITEM      (1 << 1)
+#define F_TRAINER_PARTY_EV_SET         (1 << 2)
+#define F_TRAINER_PARTY_SET_ABILITY    (1 << 3)
 
 #endif  // GUARD_TRAINERS_H

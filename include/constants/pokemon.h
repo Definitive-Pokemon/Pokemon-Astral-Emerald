@@ -82,6 +82,8 @@
 #define STAT_SPDEF   5
 #define NUM_STATS    6
 
+#define BEST_IV_SPREAD     {31, 31, 31, 31, 31, 31}
+
 #define STAT_ACC     6 // Only in battles.
 #define STAT_EVASION 7 // Only in battles.
 
