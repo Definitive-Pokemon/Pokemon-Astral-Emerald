@@ -266,3 +266,79 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayUnderwater_RS =
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayFishing_RS = {TAG_NONE, OBJ_EVENT_PAL_TAG_RS_MAY, OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION, 512, 32, 32, 0, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Fishing, sPicTable_MayFishing_RS, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayWatering_RS = {TAG_NONE, OBJ_EVENT_PAL_TAG_RS_MAY, OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION, 512, 32, 32, 0, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Standard, sPicTable_MayWatering_RS, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayDecorating_RS = {TAG_NONE, OBJ_EVENT_PAL_TAG_RS_MAY, OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION, 256, 16, 32, 10, SHADOW_SIZE_M, TRUE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Inanimate, sPicTable_MayDecorating_RS, gDummySpriteAffineAnimTable};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Matt = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_4,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Matt,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Shelly = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_4,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Shelly,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tabitha = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_2,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Tabitha,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Courtney = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_2,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Courtney,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};

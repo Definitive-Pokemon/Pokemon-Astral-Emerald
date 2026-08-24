@@ -268,6 +268,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayFishing_
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayWatering_RS;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayDecorating_RS;
 
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Courtney;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tabitha;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Shelly;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Matt;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -532,6 +536,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MAY_FISHING_RS] =           &gObjectEventGraphicsInfo_MayFishing_RS,
     [OBJ_EVENT_GFX_MAY_WATERING_RS] =          &gObjectEventGraphicsInfo_MayWatering_RS,
     [OBJ_EVENT_GFX_MAY_DECORATING_RS] =        &gObjectEventGraphicsInfo_MayDecorating_RS,
+    [OBJ_EVENT_GFX_COURTNEY] =                 &gObjectEventGraphicsInfo_Courtney,
+    [OBJ_EVENT_GFX_TABITHA] =                  &gObjectEventGraphicsInfo_Tabitha,
+    [OBJ_EVENT_GFX_SHELLY] =                   &gObjectEventGraphicsInfo_Shelly,
+    [OBJ_EVENT_GFX_MATT] =                     &gObjectEventGraphicsInfo_Matt,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

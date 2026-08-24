@@ -264,16 +264,13 @@
 #define OBJ_EVENT_GFX_MAY_WATERING_RS                 OBJ_EVENT_GFX_DUSCLOPS
 #define OBJ_EVENT_GFX_MAY_DECORATING_RS               OBJ_EVENT_GFX_AZURILL
 
-// NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
-//
-// Object event graphics ids are 1 byte in size (max value of 255), and the dynamic
-// graphics ids that start after NUM_OBJ_EVENT_GFX reach this limit. No graphics id
-// uses the value 239 itself, so removing the "+ 1" in OBJ_EVENT_GFX_VARS would
-// allow increasing NUM_OBJ_EVENT_GFX to 240. There are also a handful of unused
-// object graphics that can be removed. If more graphics are needed, anything that
-// stores graphics ids will need to be increased in size. See wiki entry below:
-// https://github.com/pret/pokeemerald/wiki/Feature-Branches#overworld-expansion
-#define NUM_OBJ_EVENT_GFX                        239
+// Astral Emerald new objects
+#define OBJ_EVENT_GFX_COURTNEY                   239
+#define OBJ_EVENT_GFX_TABITHA                    240
+#define OBJ_EVENT_GFX_SHELLY                     241
+#define OBJ_EVENT_GFX_MATT                       242
+
+#define NUM_OBJ_EVENT_GFX                        243
 
 
 // These are dynamic object gfx ids.

@@ -96,6 +96,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_NURSE] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LEADER_TATE] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LEADER_LIZA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_MAGMA_ADMIN_F] = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -198,6 +199,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(NURSE, gTrainerFrontPic_Nurse, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(LEADER_TATE, gTrainerFrontPic_Tate, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(LEADER_LIZA, gTrainerFrontPic_Liza, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(MAGMA_ADMIN_F, gTrainerFrontPic_MagmaAdminF, TRAINER_PIC_SIZE),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -300,4 +302,5 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(NURSE, gTrainerPalette_Nurse),
     TRAINER_PAL(LEADER_TATE, gTrainerPalette_LeaderTateAndLiza),
     TRAINER_PAL(LEADER_LIZA, gTrainerPalette_LeaderTateAndLiza),
+    TRAINER_PAL(MAGMA_ADMIN_F, gTrainerPalette_MagmaAdminF),
 };

@@ -873,7 +873,10 @@ const u32 gObjectEventPic_MayFishing_RS[] = INCBIN_U32("graphics/object_events/p
 const u32 gObjectEventPic_MayWatering_RS[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/watering.4bpp");
 const u32 gObjectEventPic_MayDecorating_RS[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/decorating.4bpp");
 const u32 gObjectEventPic_MayUnderwater_RS[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/underwater.4bpp");
-
+const u32 gObjectEventPic_Matt[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/matt.4bpp");
+const u32 gObjectEventPic_Shelly[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/shelly.4bpp");
+const u32 gObjectEventPic_Tabitha[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/tabitha.4bpp");
+const u32 gObjectEventPic_Courtney[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/courtney.4bpp");
 #if OW_MON_POKEBALLS
 // Vanilla
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");
