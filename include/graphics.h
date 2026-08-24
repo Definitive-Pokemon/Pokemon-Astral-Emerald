@@ -3356,7 +3356,6 @@ extern const u32 gTrainerFrontPic_Nurse[];
 extern const u32 gTrainerFrontPic_Tate[];
 extern const u32 gTrainerFrontPic_Liza[];
 extern const u32 gTrainerFrontPic_MagmaAdminF[];
-extern const u32 gTrainerFrontPic_ArchieAndMatt[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
@@ -3453,7 +3452,6 @@ extern const u32 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerPalette_RubySapphireMay[];
 extern const u32 gTrainerPalette_Nurse[];
 extern const u32 gTrainerPalette_MagmaAdminF[];
-extern const u32 gTrainerPalette_ArchieAndMatt[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];

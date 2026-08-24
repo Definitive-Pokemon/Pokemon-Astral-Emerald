@@ -113,7 +113,6 @@
 #define TRAINER_PIC_LEADER_TATE           94
 #define TRAINER_PIC_LEADER_LIZA           95
 #define TRAINER_PIC_MAGMA_ADMIN_F         96
-#define TRAINER_PIC_ARCHIE_AND_MATT       97
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
