@@ -1812,7 +1812,7 @@ static void PopulateSpeciesFromTrainerParty(int matchCallId, u8 *destStr)
         break;
     case F_TRAINER_PARTY_EV_SET: 
         speciesName = gSpeciesNames[party.ItemCustomMovesEVs[monId].species];
-        break
+        break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET:
         speciesName = gSpeciesNames[party.NoItemCustomMoves[monId].species];
         break;
