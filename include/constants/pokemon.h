@@ -82,7 +82,11 @@
 #define STAT_SPDEF   5
 #define NUM_STATS    6
 
+#define BEST_IV_SPREAD_HIDDEN_POWER_ICE      {31, 31, 31, 30, 31, 31}
 #define BEST_IV_SPREAD     {31, 31, 31, 31, 31, 31}
+
+#define ABILITY_SLOT_1 3
+#define ABILITY_SLOT_2 1
 
 #define STAT_ACC     6 // Only in battles.
 #define STAT_EVASION 7 // Only in battles.

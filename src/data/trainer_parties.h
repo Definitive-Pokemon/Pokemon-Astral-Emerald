@@ -3500,17 +3500,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jacki3[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Jacki4[] = {
     {
-    .ivs = BEST_IV_SPREAD,
+    .iv = 40,
     .lvl = 53,
     .species = SPECIES_ALAKAZAM,
     },
     {
-    .ivs = BEST_IV_SPREAD,
+    .iv = 40,
     .lvl = 53,
     .species = SPECIES_GIRAFARIG,
     },
     {
-    .ivs = BEST_IV_SPREAD,
+    .iv = 40,
     .lvl = 53,
     .species = SPECIES_LUNATONE,
     }
@@ -7556,7 +7556,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jazmyn[] = {
     }
 };
 // Route 123 (via 123 with Cut) Ninja Boy
-static const struct TrainerMonNoItemDefaultMoves sParty_Jonas[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Jonas[] = {
     {
     .iv = 0,
     .lvl = 35,
@@ -8803,7 +8803,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Marc[] = {
     }
 };
 // Dewford Gym Sailor 1 (Double Battle w Lilith)
-static const struct TrainerMonItemCustomMoves sParty_Brendan[] = {
+static const struct TrainerMonItemCustomMoves sParty_Brenden[] = {
     {
     .iv = 100,
     .lvl = 13,
@@ -8819,7 +8819,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brendan[] = {
     .moves = {MOVE_ROCK_SMASH, MOVE_BUBBLE, MOVE_HARDEN, MOVE_VICE_GRIP}
     }
 };
-// Dewford Gym Battle Girl 2 (Double Battle w Brendan)
+// Dewford Gym Battle Girl 2 (Double Battle w Brenden)
 static const struct TrainerMonNoItemDefaultMoves sParty_Lilith[] = {
     {
     .iv = 150,
@@ -14229,51 +14229,6 @@ static const struct TrainerMonNoItemCustomMoves sParty_Chansey1[] = { //Unused
     .lvl = 15,
     .species = SPECIES_CHANSEY,
     .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-static const struct TrainerMonItemCustomMoves sParty_Wallace2[] = {
-    {
-    .iv = 255,
-    .lvl = 90,
-    .species = SPECIES_WAILORD,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_SPOUT, MOVE_DOUBLE_EDGE, MOVE_BOUNCE}
-    },
-    {
-    .iv = 255,
-    .lvl = 90,
-    .species = SPECIES_TENTACRUEL,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_TOXIC, MOVE_HYDRO_PUMP, MOVE_SLUDGE_BOMB, MOVE_ICE_BEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 91,
-    .species = SPECIES_SWAMPERT,
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_EARTHQUAKE, MOVE_ICE_BEAM, MOVE_PROTECT, MOVE_HYDRO_PUMP}
-    },
-    {
-    .iv = 255,
-    .lvl = 92,
-    .species = SPECIES_GYARADOS,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_SURF}
-    },
-    {
-    .iv = 255,
-    .lvl = 93,
-    .species = SPECIES_WHISCASH,
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_AMNESIA, MOVE_HYPER_BEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 94,
-    .species = SPECIES_MILOTIC,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_RECOVER, MOVE_SURF, MOVE_REFRESH, MOVE_TOXIC}
     }
 };
 
