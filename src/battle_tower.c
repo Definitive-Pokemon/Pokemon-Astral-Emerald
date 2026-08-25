@@ -2313,6 +2313,16 @@ void DoSpecialTrainerBattle(void)
         PlayMapChosenOrBattleBGM(0);
         BattleTransition_StartOnField(B_TRANSITION_MAGMA);
         break;
+    case SPECIAL_BATTLE_ARCHIE_AND_MATT:
+        gBattleTypeFlags = BATTLE_TYPE_TRAINER | BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS;
+        gApproachingTrainerId = 0;
+        BattleSetup_ConfigureTrainerBattle(MtPyre_Summit_EventScript_ArchieTrainer + 1);
+        gApproachingTrainerId = 1;
+        BattleSetup_ConfigureTrainerBattle(MtPyre_Summit_EventScript_MattTrainer + 1);
+        CreateTask(Task_StartBattleAfterTransition, 1);
+        PlayMapChosenOrBattleBGM(0);
+        BattleTransition_StartOnField(B_TRANSITION_AQUA);
+        break;
     }
 }
 
