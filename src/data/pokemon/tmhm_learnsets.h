@@ -1038,7 +1038,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SNATCH = TRUE,
-        .FLY = TRUE
+        .FLY = TRUE,
     } },
 
     [SPECIES_GOLBAT] = { .learnset = {
@@ -1064,7 +1064,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SNATCH = TRUE,
-        .FLY = TRUE
+        .FLY = TRUE,
     } },
 
     [SPECIES_ODDISH] = { .learnset = {
@@ -11008,7 +11008,7 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
         .SAFEGUARD = TRUE,
     } }, 
         
@@ -11043,7 +11043,7 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_MUNCHLAX] = { .learnset = {
@@ -11078,7 +11078,7 @@ const union {
         .ATTRACT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_PORYGON_Z] = { .learnset = {
@@ -11105,7 +11105,7 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .THIEF = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_PROBOPASS] = { .learnset = {
@@ -11130,7 +11130,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_REGIDRAGO] = { .learnset = {
@@ -11155,7 +11155,7 @@ const union {
         .REST = TRUE,
         .SNATCH = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_REGIGIGAS] = { .learnset = {
@@ -11181,7 +11181,7 @@ const union {
         .REST = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_REGIELEKI] = { .learnset = {
@@ -11207,7 +11207,7 @@ const union {
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_RHYPERIOR] = { .learnset = {
@@ -11243,7 +11243,7 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
 
     [SPECIES_ROSERADE] = { .learnset = {
@@ -11265,7 +11265,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .CUT = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_SYLVEON] = { .learnset = {
@@ -11290,7 +11290,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .CUT = TRUE,
-        .STRENGTH = TRUE
+        .STRENGTH = TRUE,
     } }, 
         
     [SPECIES_TANGROWTH] = { .learnset = {
@@ -11320,7 +11320,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_TOGEKISS] = { .learnset = {
@@ -11353,7 +11353,7 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_WEAVILE] = { .learnset = {
@@ -11387,7 +11387,7 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_YANMEGA] = { .learnset = {
@@ -11412,7 +11412,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .FLY = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
 
     [SPECIES_ANNIHILAPE] = { .learnset = {
@@ -11444,7 +11444,7 @@ const union {
         .THIEF = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } },                                  
 
     [SPECIES_FARIGIRAF] = { .learnset = {
@@ -11474,7 +11474,7 @@ const union {
         .SKILL_SWAP = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
         .TORMENT = TRUE,
         .TAUNT = TRUE,
     } }, 
@@ -11510,7 +11510,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
 
     [SPECIES_WYRDEER] = { .learnset = {
@@ -22588,7 +22588,7 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_MIME_JR] = { .learnset = {
@@ -22622,7 +22622,7 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_MUNCHLAX] = { .learnset = {
@@ -22657,7 +22657,7 @@ const union {
         .ATTRACT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_PORYGON_Z] = { .learnset = {
@@ -22684,7 +22684,7 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .THIEF = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_PROBOPASS] = { .learnset = {
@@ -22709,7 +22709,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_REGIDRAGO] = { .learnset = {
@@ -22734,7 +22734,7 @@ const union {
         .REST = TRUE,
         .SNATCH = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_REGIGIGAS] = { .learnset = {
@@ -22760,7 +22760,7 @@ const union {
         .REST = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_REGIELEKI] = { .learnset = {
@@ -22786,7 +22786,7 @@ const union {
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_RHYPERIOR] = { .learnset = {
@@ -22822,7 +22822,7 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
 
     [SPECIES_ROSERADE] = { .learnset = {
@@ -22844,7 +22844,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .CUT = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
         
     [SPECIES_SYLVEON] = { .learnset = {
@@ -22869,7 +22869,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .CUT = TRUE,
-        .STRENGTH = TRUE
+        .STRENGTH = TRUE,
     } }, 
         
     [SPECIES_TANGROWTH] = { .learnset = {
@@ -22899,7 +22899,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_TOGEKISS] = { .learnset = {
@@ -22932,7 +22932,7 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_WEAVILE] = { .learnset = {
@@ -22966,7 +22966,7 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
         
     [SPECIES_YANMEGA] = { .learnset = {
@@ -22991,7 +22991,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .FLY = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
     } }, 
 
     [SPECIES_ANNIHILAPE] = { .learnset = {
@@ -23023,7 +23023,7 @@ const union {
         .THIEF = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } },                                  
 
     [SPECIES_FARIGIRAF] = { .learnset = {
@@ -23053,7 +23053,7 @@ const union {
         .SKILL_SWAP = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
 
     [SPECIES_DUDUNSPARCE] = { .learnset = {
@@ -23087,7 +23087,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE
+        .ROCK_SMASH = TRUE,
     } }, 
 
     [SPECIES_WYRDEER] = { .learnset = {
