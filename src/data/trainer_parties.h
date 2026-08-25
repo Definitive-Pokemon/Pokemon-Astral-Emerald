@@ -10064,6 +10064,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_WallyMauville[] = {
     .species = SPECIES_RALTS,
     }
 };
+
 // Rematch 1
 static const struct TrainerMonItemCustomMoves sParty_WallyVR2[] = {
     {
