@@ -81,8 +81,7 @@ PetalburgCity_Gym_OnFrame:
 PetalburgCity_Gym_EventScript_TryRematchReward::
 	setvar VAR_TEMP_1, 0
 	goto_if_set FLAG_GOT_NORMAN_REMATCH_REWARD, PetalburgCity_Gym_EventScript_TryRematchRewardEnd
-	setvar 0x8005, TRAINER_NORMAN_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_NORMAN_3
 	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveRematchReward
 PetalburgCity_Gym_EventScript_TryRematchRewardEnd::
 	ClearTrainerFlag TRAINER_NORMAN_5
@@ -461,8 +460,7 @@ PetalburgCity_Gym_EventScript_GiveFacade2::
 
 PetalburgCity_Gym_EventScript_NormanRematch::
 	goto_if_set FLAG_GOT_NORMAN_REMATCH_REWARD, PetalburgCity_Gym_EventScript_NormanRematchContinue
-	setvar 0x8005, TRAINER_NORMAN_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_NORMAN_3
 	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveRematchReward
 PetalburgCity_Gym_EventScript_NormanRematchContinue::
 	setvar VAR_TEMP_1, 1

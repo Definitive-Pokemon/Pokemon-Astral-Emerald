@@ -10,8 +10,7 @@ MauvilleCity_Gym_OnFrame:
 MauvilleCity_Gym_EventScript_TryRematchReward::
 	setvar VAR_TEMP_1, 0
 	goto_if_set FLAG_GOT_WATTSON_REMATCH_REWARD, MauvilleCity_Gym_EventScript_TryRematchRewardEnd
-	setvar 0x8005, TRAINER_WATTSON_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_WATTSON_3
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_GiveRematchReward
 MauvilleCity_Gym_EventScript_TryRematchRewardEnd::
 	ClearTrainerFlag TRAINER_WATTSON_5
@@ -150,8 +149,7 @@ MauvilleCity_Gym_EventScript_CompletedNewMauville::
 
 MauvilleCity_Gym_EventScript_WattsonRematch::
 	goto_if_set FLAG_GOT_WATTSON_REMATCH_REWARD, MauvilleCity_Gym_EventScript_WattsonRematchContinue
-	setvar 0x8005, TRAINER_WATTSON_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_WATTSON_3
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_GiveRematchReward
 MauvilleCity_Gym_EventScript_WattsonRematchContinue::
 	setvar VAR_TEMP_1, 1

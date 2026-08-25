@@ -15,8 +15,7 @@ MossdeepCity_Gym_OnTransition:
 MossdeepCity_Gym_EventScript_TryRematchReward::
 	setvar VAR_TEMP_1, 0
 	goto_if_set FLAG_GOT_TATEANDLIZA_REMATCH_REWARD, MossdeepCity_Gym_EventScript_TryRematchRewardEnd
-	setvar 0x8005, TRAINER_TATE_AND_LIZA_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_TATE_AND_LIZA_3
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_GiveRematchReward
 MossdeepCity_Gym_EventScript_TryRematchRewardEnd::
 	ClearTrainerFlag TRAINER_TATE_AND_LIZA_5
@@ -127,8 +126,7 @@ MossdeepCity_Gym_EventScript_GiveCalmMind::
 
 MossdeepCity_Gym_EventScript_TateAndLizaRematch::
 	goto_if_set FLAG_GOT_TATEANDLIZA_REMATCH_REWARD, MossdeepCity_Gym_EventScript_TateAndLizaRematchContinue
-	setvar 0x8005, TRAINER_TATE_AND_LIZA_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_TATE_AND_LIZA_3
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_GiveRematchReward
 MossdeepCity_Gym_EventScript_TateAndLizaRematchContinue::
 	setvar VAR_TEMP_1, 1

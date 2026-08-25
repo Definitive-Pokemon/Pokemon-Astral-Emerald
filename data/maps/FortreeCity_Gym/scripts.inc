@@ -11,8 +11,7 @@ FortreeCity_Gym_OnFrame:
 FortreeCity_Gym_EventScript_TryRematchReward::
 	setvar VAR_TEMP_1, 0
 	goto_if_set FLAG_GOT_WINONA_REMATCH_REWARD, FortreeCity_Gym_EventScript_TryRematchRewardEnd
-	setvar 0x8005, TRAINER_WINONA_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_WINONA_3
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_GiveRematchReward
 FortreeCity_Gym_EventScript_TryRematchRewardEnd::
 	ClearTrainerFlag TRAINER_WINONA_5
@@ -82,8 +81,7 @@ FortreeCity_Gym_EventScript_GiveAerialAce::
 
 FortreeCity_Gym_EventScript_WinonaRematch::
 	goto_if_set FLAG_GOT_WINONA_REMATCH_REWARD, FortreeCity_Gym_EventScript_WinonaRematchContinue
-	setvar 0x8005, TRAINER_WINONA_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_WINONA_3
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_GiveRematchReward
 FortreeCity_Gym_EventScript_WinonaRematchContinue::
 	setvar VAR_TEMP_1, 1

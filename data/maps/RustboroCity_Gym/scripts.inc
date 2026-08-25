@@ -9,8 +9,7 @@ RustboroCity_Gym_OnFrame:
 RustboroCity_Gym_EventScript_TryRematchReward::
 	setvar VAR_TEMP_1, 0
 	goto_if_set FLAG_GOT_ROXANNE_REMATCH_REWARD, RustboroCity_Gym_EventScript_TryRematchRewardEnd
-	setvar 0x8005, TRAINER_ROXANNE_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_ROXANNE_3
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_GiveRematchReward
 RustboroCity_Gym_EventScript_TryRematchRewardEnd::
 	ClearTrainerFlag TRAINER_ROXANNE_5
@@ -57,8 +56,7 @@ RustboroCity_Gym_EventScript_GiveRockTombFinite::
 
 RustboroCity_Gym_EventScript_RoxanneRematch::
 	goto_if_set FLAG_GOT_ROXANNE_REMATCH_REWARD, RustboroCity_Gym_EventScript_RoxanneRematchContinue
-	setvar 0x8005, TRAINER_ROXANNE_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_ROXANNE_3
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_GiveRematchReward
 RustboroCity_Gym_EventScript_RoxanneRematchContinue::
 	setvar VAR_TEMP_1, 1
