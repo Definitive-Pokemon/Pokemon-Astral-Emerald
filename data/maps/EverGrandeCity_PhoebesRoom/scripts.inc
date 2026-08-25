@@ -37,37 +37,13 @@ EverGrandeCity_PhoebesRoom_EventScript_CloseDoor::
 	return
 
 EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
-	goto_if_set FLAG_PHOEBE_REMATCH, EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
-	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
-	end
-
-EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch::
-	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
-	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech_DoublesOrSingles
-	dynmultichoice 20, 8, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, EverGrandeCity_SidneysRoom_Text_Doubles, EverGrandeCity_SidneysRoom_Text_Singles
-	switch VAR_RESULT
-	case 0, EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch_Doubles
-	case 1, EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch_Singles
-	case MULTI_B_PRESSED, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_NotReady
-	end
-
-EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch_Singles::
-	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech2, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_PHOEBE_2_SINGLE, EverGrandeCity_PhoebesRoom_Text_Defeat2
-	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
-	end
-
-EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch_Doubles::
-	getpartysize
-	goto_if_eq VAR_RESULT, 1, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_Doubles_CantBattle
-	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech2, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_PHOEBE_2_DOUBLE, EverGrandeCity_PhoebesRoom_Text_Defeat2
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
 	end
 
@@ -83,6 +59,35 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	release
 	end
 
+EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_RematchPostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_PhoebesRoom_Text_RematchIntroSpeech, MSGBOX_DEFAULT
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematchSingle
+	trainerbattle_no_intro TRAINER_PHOEBE_2, EverGrandeCity_PhoebesRoom_Text_RematchDefeat
+	goto EverGrandeCity_PhoebesRoom_EventScript_RematchDefeated
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematchSingle::
+	trainerbattle_no_intro TRAINER_PHOEBE_2_SINGLE, EverGrandeCity_PhoebesRoom_Text_RematchDefeat
+	goto EverGrandeCity_PhoebesRoom_EventScript_RematchDefeated
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_RematchPostBattleSpeech::
+	msgbox EverGrandeCity_PhoebesRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_RematchDefeated::
+	setflag FLAG_DEFEATED_ELITE_4_PHOEBE
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_PhoebesRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
 	.string "Ahahaha!\p"
 	.string "I'm Phoebe of the Elite Four.\n"
@@ -94,27 +99,9 @@ EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
 	.string "So, come on, just try and see if you can\n"
 	.string "even inflict damage on my Pokémon!$"
 
-EverGrandeCity_PhoebesRoom_Text_IntroSpeech_DoublesOrSingles:
-	.string "Ahahaha! It's you again!\p"
-	.string "I'm Phoebe of the Elite Four.\n"
-	.string "The bond I developed with my Pokémon\l"
-	.string "has grown even stronger!\p"
-	.string "You may choose between having a\n"
-	.string "Double Battle or a Single Battle.\l"
-	.string "Which one will you choose?$"
-
-EverGrandeCity_PhoebesRoom_Text_IntroSpeech2:
-	.string "Just try and see if you can even\n"
-	.string "inflict damage on my Pokémon.\p"
-	.string "Because it won't be like last time!$"
-
 EverGrandeCity_PhoebesRoom_Text_Defeat:
 	.string "Oh, darn.\n"
 	.string "I've gone and lost.$"
-
-EverGrandeCity_PhoebesRoom_Text_Defeat2:
-	.string "Oh, darn…\n"
-	.string "It happened again.$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
 	.string "There's a definite bond between you\n"
@@ -125,3 +112,21 @@ EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
 	.string "will carry you.\p"
 	.string "Go ahead, move on to the next room.$"
 
+EverGrandeCity_PhoebesRoom_Text_RematchIntroSpeech:
+	.string "Phoebe: Ahahaha! You're back!\n"
+	.string "Guess I couldn't keep you away!\p"
+	.string "My bond with Ghost-type Pokémon has\n"
+	.string "only deepened.\p"
+	.string "I'm excited to see how far your bond\n"
+	.string "has grown, too.\p"
+	.string "Let's dance with the spirits!$"
+
+EverGrandeCity_PhoebesRoom_Text_RematchDefeat:
+	.string "Ooooh… Lost again, huh?\n"
+	.string "You've really grown, haven't you?$"
+
+EverGrandeCity_PhoebesRoom_Text_RematchPostBattleSpeech:
+	.string "Your connection with your Pokémon…\n"
+	.string "It's as strong as ever.\p"
+	.string "I'm glad we battled again. Go on and\n"
+	.string "show them what you've got!$"

@@ -38,37 +38,13 @@ EverGrandeCity_DrakesRoom_EventScript_CloseDoor::
 	return
 
 EverGrandeCity_DrakesRoom_EventScript_Drake::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_DrakesRoom_EventScript_DrakeRematch
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
-	goto_if_set FLAG_DRAKE_REMATCH, EverGrandeCity_DrakesRoom_EventScript_DrakeRematch
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_DrakesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_DRAKE, EverGrandeCity_DrakesRoom_Text_Defeat
-	goto EverGrandeCity_DrakesRoom_EventScript_Defeated
-	end
-
-EverGrandeCity_DrakesRoom_EventScript_DrakeRematch::
-	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
-	msgbox EverGrandeCity_DrakesRoom_Text_DoublesOrSingles
-	dynmultichoice 20, 8, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, EverGrandeCity_SidneysRoom_Text_Doubles, EverGrandeCity_SidneysRoom_Text_Singles
-	switch VAR_RESULT
-	case 0, EverGrandeCity_DrakesRoom_EventScript_DrakeRematch_Doubles
-	case 1, EverGrandeCity_DrakesRoom_EventScript_DrakeRematch_Singles
-	case MULTI_B_PRESSED, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_NotReady
-	end
-
-EverGrandeCity_DrakesRoom_EventScript_DrakeRematch_Singles::
-	msgbox EverGrandeCity_DrakesRoom_Text_IntroSpeech2, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_DRAKE_2_SINGLE, EverGrandeCity_DrakesRoom_Text_Defeat2
-	goto EverGrandeCity_DrakesRoom_EventScript_Defeated
-	end
-
-EverGrandeCity_DrakesRoom_EventScript_DrakeRematch_Doubles::
-	getpartysize
-	goto_if_eq VAR_RESULT, 1, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_Doubles_CantBattle
-	msgbox EverGrandeCity_DrakesRoom_Text_IntroSpeech2, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_DRAKE_2_DOUBLE, EverGrandeCity_DrakesRoom_Text_Defeat2
 	goto EverGrandeCity_DrakesRoom_EventScript_Defeated
 	end
 
@@ -86,6 +62,30 @@ EverGrandeCity_DrakesRoom_EventScript_Defeated::
 	release
 	end
 
+EverGrandeCity_DrakesRoom_EventScript_DrakeRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_RematchPostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_DrakesRoom_Text_RematchIntroSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_DRAKE_2, EverGrandeCity_DrakesRoom_Text_RematchDefeat
+	goto EverGrandeCity_DrakesRoom_EventScript_RematchDefeated
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_RematchPostBattleSpeech::
+	msgbox EverGrandeCity_DrakesRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_RematchDefeated::
+	setvar VAR_0x8004, FANCOUNTER_DEFEATED_DRAKE
+	special Script_TryGainNewFanFromCounter
+	setflag FLAG_DEFEATED_ELITE_4_DRAKE
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_DrakesRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
 EverGrandeCity_DrakesRoom_Text_IntroSpeech:
 	.string "I am the last of the Pokémon League\n"
 	.string "Elite Four, Drake the Dragon master!\p"
@@ -99,29 +99,8 @@ EverGrandeCity_DrakesRoom_Text_IntroSpeech:
 	.string "If you don't, then you will never\n"
 	.string "prevail over me!$"
 
-EverGrandeCity_DrakesRoom_Text_DoublesOrSingles:
-	.string "I am the last of the Pokémon League\n"
-	.string "Elite Four, Drake the Dragon master!\p"
-	.string "How are your Pokémon partners?\n"
-	.string "Did they help you get stronger?\p"
-	.string "I'm sure they did! Ready?\p"
-	.string "I'll let you choose. Will you face\n"
-	.string "me in a Double or a Single Battle?$"
-
-EverGrandeCity_DrakesRoom_Text_IntroSpeech2:
-	.string "You seem already fired up. Did the\n"
-	.string "other Elite Four members took a\l"
-	.string "toll on you? Don't falter me now!\p"
-	.string "Prevail over me! Let's dance!$"
-
 EverGrandeCity_DrakesRoom_Text_Defeat:
 	.string "Superb, it should be said.$"
-
-EverGrandeCity_DrakesRoom_Text_Defeat2:
-	.string "Ha, ha, ha!\n"
-	.string "I can't help but laugh!\p"
-	.string "Amazing. Superb.\n"
-	.string "You really are the best.$"
 
 EverGrandeCity_DrakesRoom_Text_PostBattleSpeech:
 	.string "You deserve every credit for coming\n"
@@ -132,7 +111,24 @@ EverGrandeCity_DrakesRoom_Text_PostBattleSpeech:
 	.string "Pokémon touch the good hearts of\n"
 	.string "Trainers and learn good from wrong.\p"
 	.string "They touch the good hearts of\n"
-	.string "Trainers and grow strong.\p"
+	.string "Trainer and grow strong.\p"
 	.string "Go! Go onwards!\n"
 	.string "The Champion is waiting!$"
 
+EverGrandeCity_DrakesRoom_Text_RematchIntroSpeech:
+	.string "Drake: Once more you stand before me…\n"
+	.string "the last of the Elite Four.\p"
+	.string "Wallace awaits, seeking to regain\n"
+	.string "the title of Champion,\l"
+	.string "but first you must conquer me.\p"
+	.string "So, tell me… What is strength to you?\n"
+	.string "Only with true resolve can you prevail!$"
+
+EverGrandeCity_DrakesRoom_Text_RematchDefeat:
+	.string "A powerful display…\n"
+	.string "You have my respect, Champion.$"
+
+EverGrandeCity_DrakesRoom_Text_RematchPostBattleSpeech:
+	.string "You've grown indeed… but know this. A\n"
+	.string "true Champion must face every test.\p"
+	.string "Go now! Wallace awaits you.$"

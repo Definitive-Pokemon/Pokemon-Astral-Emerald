@@ -18,6 +18,33 @@ EverGrandeCity_HallOfFame_OnFrame:
 	.2byte 0
 
 EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
+	goto_if_unset FLAG_IS_CHAMPION, EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame
+	goto EverGrandeCity_HallOfFame_EventScript_EnterHallOfFameRematch
+	
+EverGrandeCity_HallOfFame_EventScript_EnterHallOfFameRematch::
+	lockall
+	applymovement LOCALID_WALLACE, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
+	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
+	waitmovement 0
+	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampionsRematch, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_WALLACE, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2
+	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2
+	waitmovement 0
+	delay 20
+	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNamesRematch, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp
+	goto EverGrandeCity_HallOfFame_EventScript_FinishEnterHallOfFame
+	end
+
+EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	lockall
 	applymovement LOCALID_WALLACE, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
@@ -37,6 +64,10 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	msgbox EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp
+	goto EverGrandeCity_HallOfFame_EventScript_FinishEnterHallOfFame
+	end
+
+EverGrandeCity_HallOfFame_EventScript_FinishEnterHallOfFame::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
@@ -83,6 +114,21 @@ EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2:
 	walk_up
 	step_end
 
+EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampionsRematch:
+	.string "Wallace: This room…\p"
+	.string "You know it well, {PLAYER}{KUN}.\p"
+	.string "It's where Champions like you and your\n"
+	.string "Pokémon are immortalized.\p"
+	.string "To defend your title here is a rare\n"
+	.string "feat, one few can claim.$"
+
+EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNamesRematch:
+	.string "Wallace: Now, let's record your name\n"
+	.string "once more, as the Champion who\l"
+	.string "defended their place with unwavering\p"
+	.string "resolve, and the names of the partners\n"
+	.string "who stood by your side in victory.$"
+
 EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
 	.string "Wallace: This room…\p"
 	.string "This is where we keep records of\n"
@@ -96,4 +142,3 @@ EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
 	.string "name as a Trainer who triumphed over\l"
 	.string "the Pokémon League, and the names of\l"
 	.string "the partners who battled with you.$"
-

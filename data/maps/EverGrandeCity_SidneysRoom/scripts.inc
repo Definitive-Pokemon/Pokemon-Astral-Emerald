@@ -43,52 +43,14 @@ EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor::
 	end
 
 EverGrandeCity_SidneysRoom_EventScript_Sidney::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
-	goto_if_set FLAG_SIDNEY_REMATCH, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
-	end
-
-EverGrandeCity_SidneysRoom_EventScript_SidneyRematch::
-	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
-	msgbox EverGrandeCity_SidneysRoom_Text_DoublesOrSingles
-	dynmultichoice 20, 8, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, EverGrandeCity_SidneysRoom_Text_Doubles, EverGrandeCity_SidneysRoom_Text_Singles
-	switch VAR_RESULT
-	case 0, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_Doubles
-	case 1, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_Singles
-	case MULTI_B_PRESSED, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_NotReady
-	end
-
-EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_Singles::
-	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech2, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_SIDNEY_2_SINGLE, EverGrandeCity_SidneysRoom_Text_Defeat2
-	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
-	end
-
-EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_Doubles::
-	getpartysize
-	goto_if_eq VAR_RESULT, 1, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_Doubles_CantBattle
-	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech2, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_SIDNEY_2_DOUBLE, EverGrandeCity_SidneysRoom_Text_Defeat2
-	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
-	end
-
-EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_NotReady::
-	msgbox EverGrandeCity_SidneysRoom_Text_NotReady, MSGBOX_DEFAULT
-	playbgm MUS_VICTORY_ROAD, FALSE
-	closemessage
-	release
-	end
-
-EverGrandeCity_SidneysRoom_EventScript_SidneyRematch_Doubles_CantBattle::
-	msgbox EverGrandeCity_SidneysRoom_Text_NotEnoughPokemon, MSGBOX_DEFAULT
-	playbgm MUS_VICTORY_ROAD, FALSE
-	closemessage
-	release
 	end
 
 EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech::
@@ -103,11 +65,34 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated::
 	release
 	end
 
-EverGrandeCity_SidneysRoom_Text_Doubles::
-	.string "Double Battle$"
+EverGrandeCity_SidneysRoom_EventScript_SidneyRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_RematchPostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchIntroSpeech, MSGBOX_DEFAULT
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, EverGrandeCity_SidneysRoom_EventScript_SidneyRematchOnePokemon
+	trainerbattle_no_intro TRAINER_SIDNEY_2, EverGrandeCity_SidneysRoom_Text_RematchDefeat
+	goto EverGrandeCity_SidneysRoom_EventScript_RematchDefeated
+	end
 
-EverGrandeCity_SidneysRoom_Text_Singles::
-	.string "Single Battle$"
+EverGrandeCity_SidneysRoom_EventScript_SidneyRematchOnePokemon::
+	trainerbattle_no_intro TRAINER_SIDNEY_2_SINGLE, EverGrandeCity_SidneysRoom_Text_RematchDefeat
+	goto EverGrandeCity_SidneysRoom_EventScript_RematchDefeated
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_RematchPostBattleSpeech::
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_RematchDefeated::
+	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
 
 EverGrandeCity_SidneysRoom_Text_IntroSpeech:
 	.string "Welcome, challenger!\n"
@@ -119,35 +104,9 @@ EverGrandeCity_SidneysRoom_Text_IntroSpeech:
 	.string "a battle that can only be staged\l"
 	.string "here in the Pokémon League!$"
 
-EverGrandeCity_SidneysRoom_Text_DoublesOrSingles::
-	.string "Welcome back, challenger!\n"
-	.string "I'm Sidney of the Elite Four.\p"
-	.string "But you already know me!\n"
-	.string "I guess you'll give me a good match\l"
-	.string "again. Looking real good!\p"
-	.string "All right! You and me, let's enjoy\n"
-	.string "a battle that can only be staged\l"
-	.string "here in the Pokémon League!\p"
-	.string "You may choose whether to have a\n"
-	.string "Double Battle or a Single Battle.$"
-
-EverGrandeCity_SidneysRoom_Text_IntroSpeech2::
-	.string "This time, I won't lose.$"
-
-EverGrandeCity_SidneysRoom_Text_NotEnoughPokemon::
-	.string "You only have one Pokémon. You need\n"
-	.string "two or more Pokémon to battle me.$"
-
-EverGrandeCity_SidneysRoom_Text_NotReady::
-	.string "Let me know when you're ready.$"
-
 EverGrandeCity_SidneysRoom_Text_Defeat:
 	.string "Well, how do you like that? I lost!\n"
 	.string "Eh, it was fun, so it doesn't matter.$"
-
-EverGrandeCity_SidneysRoom_Text_Defeat2:
-	.string "Well, how do you like that? I lost!\n"
-	.string "Again! It doesn't matter. It was fun.$"
 
 EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
 	.string "Well, listen to what this loser has\n"
@@ -155,3 +114,21 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
 	.string "You've got what it takes to go far.\n"
 	.string "Now, go on to the next room and enjoy\l"
 	.string "your next battle!$"
+
+EverGrandeCity_SidneysRoom_Text_RematchIntroSpeech:
+	.string "Sidney: Hey, Champion! Back for more?\n"
+	.string "I knew you had a fiery spirit!\p"
+	.string "Well, Wallace wants his title back.\n"
+	.string "Think of us as your warm-up!\p"
+	.string "Show me that same fire from before!\n"
+	.string "Let's make it a battle to remember!$"
+
+EverGrandeCity_SidneysRoom_Text_RematchDefeat:
+	.string "You really are somethin'…\n"
+	.string "Looks like you're warmed up already!$"
+
+EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech:
+	.string "You're as tough as ever!\n"
+	.string "Think you'll hold onto that title?\p"
+	.string "Go on, the next room's waiting!\n"
+	.string "Keep up the heat!$"
