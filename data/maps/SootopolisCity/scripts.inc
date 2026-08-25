@@ -1483,7 +1483,6 @@ SootopolisCity_EventScript_RivalProfessorEnd::
 	setflag FLAG_HIDE_LILYCOVE_CITY_RIVAL
 	setflag FLAG_ENABLE_NORMAN_REMATCH_CALL
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 6
-	setvar VAR_NORMAN_REMATCH_CALL_STEP_COUNTER, 0
 	fadescreen FADE_FROM_BLACK
 	releaseall
 	end

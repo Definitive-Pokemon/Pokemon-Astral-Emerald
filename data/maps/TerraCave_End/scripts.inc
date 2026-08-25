@@ -105,6 +105,14 @@ TerraCave_End_EventScript_MaxieLeaves_NoText::
 	releaseall
 	end
 
+TerraCave_End_EventScript_SetMtPyre::
+	goto_if_unset FLAG_ARCHIE_LEFT_MARINE_CAVE, Common_EventScript_NopReturn
+	goto_if_unset FLAG_MAXIE_LEFT_TERRA_CAVE, Common_EventScript_NopReturn
+	setvar VAR_MT_PYRE_STATE, 2
+	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
+	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
+	return
+
 TerraCave_End_Movement_GroudonApproach:
 	@init_affine_anim
 	walk_down_start_affine

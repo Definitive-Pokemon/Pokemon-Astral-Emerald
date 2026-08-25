@@ -10,8 +10,7 @@ DewfordTown_Gym_OnFrame:
 DewfordTown_Gym_EventScript_TryRematchReward::
 	setvar VAR_TEMP_1, 0
 	goto_if_set FLAG_GOT_BRAWLY_REMATCH_REWARD, DewfordTown_Gym_EventScript_TryRematchRewardEnd
-	setvar 0x8005, TRAINER_BRAWLY_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_BRAWLY_3
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_GiveRematchReward
 DewfordTown_Gym_EventScript_TryRematchRewardEnd::
 	ClearTrainerFlag TRAINER_BRAWLY_5
@@ -200,8 +199,7 @@ DewfordTown_Gym_EventScript_GiveBulkUp2:
 
 DewfordTown_Gym_EventScript_BrawlyRematch::
 	goto_if_set FLAG_GOT_BRAWLY_REMATCH_REWARD, DewfordTown_Gym_EventScript_BrawlyRematchContinue
-	setvar 0x8005, TRAINER_BRAWLY_3
-	special HasRematchBeenFought
+	checktrainerflag TRAINER_BRAWLY_3
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_GiveRematchReward
 DewfordTown_Gym_EventScript_BrawlyRematchContinue::
 	setvar VAR_TEMP_1, 1
