@@ -4779,3 +4779,20 @@ Route134_Text_HudsonPostBattle:
 	.string "Our boat drifted out to sea.\p"
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
+
+MossdeepCity_SpaceCenter_2F_Text_CourtneyIntro:
+	.string "Ahahahaha!\p"
+	.string "You're going to meddle in Team Magma's\n"
+	.string "affairs?\p"
+	.string "You're either absolutely fearless,\n"
+	.string "simply ignorant, or both!\p"
+	.string "You're so cute, you're disgusting!\n"
+	.string "I'll put you down, kiddy!$"
+
+MossdeepCity_SpaceCenter_2F_Text_CourtneyDefeated:
+	.string "Ahahahaha!\n"
+	.string "You're disgustingly strong!$"
+
+MossdeepCity_SpaceCenter_2F_Text_CourtneyPostBattle:
+	.string "Ahahahaha!\n"
+	.string "We got meddled with unexpectedly!$"
