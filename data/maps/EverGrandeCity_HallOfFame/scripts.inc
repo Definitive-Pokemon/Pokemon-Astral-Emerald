@@ -14,10 +14,10 @@ EverGrandeCity_HallOfFame_EventScript_TurnPlayerNorth::
 	end
 
 EverGrandeCity_HallOfFame_OnFrame:
-	map_script_2 VAR_TEMP_1, 0, EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame
+	map_script_2 VAR_TEMP_1, 0, EverGrandeCity_HallOfFame_EventScript_EnterHallOfFameStart
 	.2byte 0
 
-EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
+EverGrandeCity_HallOfFame_EventScript_EnterHallOfFameStart::
 	goto_if_unset FLAG_IS_CHAMPION, EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame
 	goto EverGrandeCity_HallOfFame_EventScript_EnterHallOfFameRematch
 	

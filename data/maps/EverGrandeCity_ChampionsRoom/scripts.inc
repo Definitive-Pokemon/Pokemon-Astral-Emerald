@@ -179,19 +179,19 @@ EverGrandeCity_ChampionsRoom_EventScript_RivalLookBackAndForth::
 	waitmovement 0
 	return
 
-EverGrandeCity_ChampionsRoom_EventScript_Wallace2::
+EverGrandeCity_ChampionsRoom_EventScript_WallaceRematch::
 	playbgm MUS_ENCOUNTER_CHAMPION, FALSE
-	msgbox EverGrandeCity_ChampionsRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_WALLACE_2, EverGrandeCity_ChampionsRoom_Text_Defeat
-	goto EverGrandeCity_ChampionsRoom_EventScript_WallaceDefeated
+	msgbox EverGrandeCity_ChampionsRoom_Text_IntroSpeechRematch, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WALLACE_2, EverGrandeCity_ChampionsRoom_Text_DefeatRematch
+	goto EverGrandeCity_ChampionsRoom_EventScript_DefeatedRematch
 	end
 
-EverGrandeCity_ChampionsRoom_EventScript_WallaceDefeated::
+EverGrandeCity_ChampionsRoom_EventScript_DefeatedRematch::
 	playse SE_DOOR
 	setmetatile 6, 1, METATILE_EliteFour_OpenDoorChampion_Frame, FALSE
 	setmetatile 6, 2, METATILE_EliteFour_OpenDoorChampion_Opening, FALSE
 	special DrawWholeMapView
-	msgbox EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	msgbox EverGrandeCity_ChampionsRoom_Text_PostBattleSpeechRematch, MSGBOX_DEFAULT
 	closemessage
 	playse SE_DOOR
 	checkplayergender
@@ -522,7 +522,7 @@ EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
 	.string "{PLAYER}, way to go!\n"
 	.string "Congratulations!$"
 
-EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
+EverGrandeCity_ChampionsRoom_Text_IntroSpeechRematch:
 	.string "Wallace: Welcome, {PLAYER}{KUN}.\p"
 	.string "Our paths cross again…\n"
 	.string "but this time, I am the challenger.\p"
@@ -543,12 +543,12 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "the moves of a Pokémon battle?\p"
 	.string "Show me your skill once more!$"
 
-EverGrandeCity_ChampionsRoom_Text_Defeat:
+EverGrandeCity_ChampionsRoom_Text_DefeatRematch:
 	.string "I, the challenger, fall in defeat…\n"
 	.string "That was wonderful work.\l"
 	.string "Kudos to you, {PLAYER}{KUN}!$"
 
-EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
+EverGrandeCity_ChampionsRoom_Text_PostBattleSpeechRematch:
 	.string "Wallace: The Pokémon you sent into\n"
 	.string "battle…\p"
 	.string "At times they danced like an autumn\n"
