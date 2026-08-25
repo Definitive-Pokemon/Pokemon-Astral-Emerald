@@ -5,7 +5,23 @@
 
 LavaridgeTown_Gym_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_Gym_1F_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LavaridgeTown_Gym_1F_OnFrame
 	.byte 0
+
+LavaridgeTown_Gym_1F_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, LavaridgeTown_Gym_1F_EventScript_TryRematchReward
+	.2byte 0
+
+LavaridgeTown_Gym_1F_EventScript_TryRematchReward::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_FLANNERY_REMATCH_REWARD, LavaridgeTown_Gym_1F_EventScript_TryRematchRewardEnd
+	setvar 0x8005, TRAINER_FLANNERY_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_GiveRematchReward
+LavaridgeTown_Gym_1F_EventScript_TryRematchRewardEnd::
+	ClearTrainerFlag TRAINER_FLANNERY_5
+	releaseall
+	end
 
 LavaridgeTown_Gym_1F_OnTransition:
 	call LavaridgeTown_Gym_1F_EventScript_SetTrainerTempVars
@@ -64,6 +80,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_WHITEOUT_TO_LAVARIDGE
 	setflag FLAG_DEFEATED_LAVARIDGE_GYM
+	setflag FLAG_REMATCH_READY_BRAWLY
 	setflag FLAG_BADGE04_GET
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
@@ -99,9 +116,47 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat::
 	return
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryRematch::
+	goto_if_set FLAG_GOT_FLANNERY_REMATCH_REWARD, LavaridgeTown_Gym_1F_EventScript_FlanneryRematchContinue
+	setvar 0x8005, TRAINER_FLANNERY_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_GiveRematchReward
+LavaridgeTown_Gym_1F_EventScript_FlanneryRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
+LavaridgeTown_Gym_1F_EventScript_GiveRematchReward::
+	msgbox LavaridgeTown_Gym_1F_Text_FlanneryGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_SACRED_ASH, 5
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, LavaridgeTown_Gym_1F_EventScript_NoRoom
+	msgbox LavaridgeTown_Gym_1F_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_FLANNERY_REMATCH_REWARD
+	release
+	end
+LavaridgeTown_Gym_1F_EventScript_NoRoom::
+	msgbox LavaridgeTown_Gym_1F_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+LavaridgeTown_Gym_1F_Text_FlanneryGiveRematchReward:
+	.string "Your skills truly blaze with intensity,\n"
+	.string "{PLAYER}.\p"
+	.string "To celebrate our fiery battle and to\n"
+	.string "show my respect, I have something\l"
+	.string "special for you.$"
+
+LavaridgeTown_Gym_1F_Text_NoRoomForReward:
+	.string "Oh no, it looks like your Bag is full!\n"
+	.string "Make some space, and I’ll keep these\l"
+	.string "safe for you until then.$"
+
+LavaridgeTown_Gym_1F_Text_GaveReward:
+	.string "They embody the spirit of rejuvenation.$"
 
 LavaridgeTown_Gym_1F_EventScript_Cole::
 	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_COLE, LOCALID_COLE, LavaridgeTown_Gym_1F_Text_ColeIntro, LavaridgeTown_Gym_1F_Text_ColeDefeat, LavaridgeTown_Gym_EventScript_CheckTrainerScript

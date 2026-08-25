@@ -1,13 +1,29 @@
 MossdeepCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_Gym_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, MossdeepCity_Gym_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MossdeepCity_Gym_OnFrame
 	.byte 0
 
-@ NOTE: Mossdeep Gym was redesigned between R/S and E. Leftover (and now functionally unused) scripts are commented below
-
+MossdeepCity_Gym_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, MossdeepCity_Gym_EventScript_TryRematchReward
+	.2byte 0
+	
 MossdeepCity_Gym_OnTransition:
 	setflag FLAG_TEMP_HIDE_FOLLOWER @ Hide follower since it can collide with moving statues
 	end
+
+MossdeepCity_Gym_EventScript_TryRematchReward::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_TATEANDLIZA_REMATCH_REWARD, MossdeepCity_Gym_EventScript_TryRematchRewardEnd
+	setvar 0x8005, TRAINER_TATE_AND_LIZA_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_GiveRematchReward
+MossdeepCity_Gym_EventScript_TryRematchRewardEnd::
+	ClearTrainerFlag TRAINER_TATE_AND_LIZA_5
+	releaseall
+	end
+
+@ NOTE: Mossdeep Gym was redesigned between R/S and E. Leftover (and now functionally unused) scripts are commented below
 
 @ All the below checks are leftover from RS. FLAG_MOSSDEEP_GYM_SWITCH_X is never set
 MossdeepCity_Gym_OnLoad:
@@ -110,9 +126,55 @@ MossdeepCity_Gym_EventScript_GiveCalmMind::
 	return
 
 MossdeepCity_Gym_EventScript_TateAndLizaRematch::
+	goto_if_set FLAG_GOT_TATEANDLIZA_REMATCH_REWARD, MossdeepCity_Gym_EventScript_TateAndLizaRematchContinue
+	setvar 0x8005, TRAINER_TATE_AND_LIZA_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_GiveRematchReward
+MossdeepCity_Gym_EventScript_TateAndLizaRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
+MossdeepCity_Gym_EventScript_GiveRematchReward::
+	msgbox MossdeepCity_Gym_Text_TateAndLizaGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_KINGS_ROCK, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_Gym_EventScript_NoRoom
+	msgbox MossdeepCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_TATEANDLIZA_REMATCH_REWARD
+	release
+	end
+MossdeepCity_Gym_EventScript_NoRoom::
+	msgbox MossdeepCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MossdeepCity_Gym_Text_TateAndLizaGiveRematchReward:
+	.string "Tate: Your skills truly resonate with\n"
+	.string "the strength of mind and heart,\l"
+	.string "{PLAYER}.\p"
+	.string "Liza: As a sign of our respect and to\n"
+	.string "celebrate this match, we wish to give\l"
+	.string "you something special.\p"
+	.string "Tate: Please accept this King's Rock.\n"
+	.string "It holds power that can turn the tide\l"
+	.string "of battle.$"
+
+MossdeepCity_Gym_Text_NoRoomForReward:
+	.string "Tate: Oh…\n"
+	.string "Liza: Your Bag is full.\p"
+	.string "Tate: Clear some space and come back,\n"
+	.string "and we will keep it safe for you.$"
+
+MossdeepCity_Gym_Text_GaveReward:
+	.string "Tate: This item can cause flinching…\n"
+	.string "Liza: And even bring evolution!\p"
+	.string "Tate: Use it wisely in your journey,\n"
+	.string "for it holds great potential.$"
 
 @ All the below switch scripts are leftover from RS and are functionally unused
 MossdeepCity_Gym_EventScript_Switch1::
@@ -374,6 +436,9 @@ MossdeepCity_Gym_Text_GymGuideAdvice:
 	.string "{PLAYER}?\p"
 	.string "The Gym Leaders here use\n"
 	.string "Psychic-type Pokémon.\p"
+	.string "You heard that right, you'll be\n"
+	.string "facing two Trainers in a\l"
+	.string "Double Battle!\p"
 	.string "If you go up against them with\n"
 	.string "Fighting- or Poison-type Pokémon,\l"
 	.string "they'll inflict horrible damage!\p"

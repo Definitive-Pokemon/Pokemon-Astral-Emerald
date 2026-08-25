@@ -1,7 +1,23 @@
 FortreeCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, FortreeCity_Gym_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, FortreeCity_Gym_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, FortreeCity_Gym_OnFrame
 	.byte 0
+
+FortreeCity_Gym_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, FortreeCity_Gym_EventScript_TryRematchReward
+	.2byte 0
+
+FortreeCity_Gym_EventScript_TryRematchReward::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_WINONA_REMATCH_REWARD, FortreeCity_Gym_EventScript_TryRematchRewardEnd
+	setvar 0x8005, TRAINER_WINONA_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_GiveRematchReward
+FortreeCity_Gym_EventScript_TryRematchRewardEnd::
+	ClearTrainerFlag TRAINER_WINONA_5
+	releaseall
+	end
 
 FortreeCity_Gym_OnTransition:
 	special RotatingGate_InitPuzzle
@@ -65,9 +81,52 @@ FortreeCity_Gym_EventScript_GiveAerialAce::
 	return
 
 FortreeCity_Gym_EventScript_WinonaRematch::
+	goto_if_set FLAG_GOT_WINONA_REMATCH_REWARD, FortreeCity_Gym_EventScript_WinonaRematchContinue
+	setvar 0x8005, TRAINER_WINONA_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_GiveRematchReward
+FortreeCity_Gym_EventScript_WinonaRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
 	msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
+FortreeCity_Gym_EventScript_GiveRematchReward::
+	msgbox FortreeCity_Gym_Text_WinonaGiveRematchReward, MSGBOX_DEFAULT
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, FortreeCity_Gym_EventScript_NoRoom
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_TOGEPI
+	msgbox FortreeCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_WINONA_REMATCH_REWARD
+	release
+	end
+FortreeCity_Gym_EventScript_NoRoom::
+	msgbox FortreeCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+FortreeCity_Gym_Text_WinonaGiveRematchReward:
+	.string "Your performance in battle was truly\n"
+	.string "breathtaking, {PLAYER}.\p"
+	.string "To honor your graceful strength, I wish\n"
+	.string "to present you with a most cherished\l"
+	.string "gift.$"
+
+FortreeCity_Gym_Text_NoRoomForReward:
+	.string "Ah, it seems your party is full.\n"
+	.string "Clear some space, and I shall keep\l"
+	.string "this Egg safe for you until then.$"
+
+FortreeCity_Gym_Text_GaveReward:
+	.string "Please accept this Togepi Egg.\p"
+	.string "It embodies the hope and wonder of\n"
+	.string "new beginnings and the sky's limitless\l"
+	.string "potential.$"
 
 FortreeCity_Gym_EventScript_Jared::
 	trainerbattle_single TRAINER_JARED, FortreeCity_Gym_Text_JaredIntro, FortreeCity_Gym_Text_JaredDefeat

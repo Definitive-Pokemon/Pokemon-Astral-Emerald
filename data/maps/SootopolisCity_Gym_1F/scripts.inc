@@ -38,7 +38,19 @@ SootopolisCity_Gym_1F_OnFrame:
 	map_script_2 VAR_ICE_STEP_COUNT, 28, SootopolisCity_Gym_1F_EventScript_UnlockSecondStairs
 	map_script_2 VAR_ICE_STEP_COUNT, 67, SootopolisCity_Gym_1F_EventScript_UnlockThirdStairs
 	map_script_2 VAR_ICE_STEP_COUNT, 0, SootopolisCity_Gym_1F_EventScript_FallThroughIce
+	map_script_2 VAR_TEMP_1, 1, SootopolisCity_Gym_1F_EventScript_TryRematchReward
 	.2byte 0
+
+SootopolisCity_Gym_1F_EventScript_TryRematchReward::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_JUAN_REMATCH_REWARD, SootopolisCity_Gym_1F_EventScript_TryRematchRewardEnd
+	setvar 0x8005, TRAINER_JUAN_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_GiveRematchReward
+SootopolisCity_Gym_1F_EventScript_TryRematchRewardEnd::
+	ClearTrainerFlag TRAINER_JUAN_5
+	releaseall
+	end
 
 SootopolisCity_Gym_1F_EventScript_UnlockFirstStairs::
 	addvar VAR_ICE_STEP_COUNT, 1
@@ -81,20 +93,20 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce:
 
 SootopolisCity_Gym_1F_CheckBadgeAndSetWeather::
 	goto_if_unset FLAG_BADGE08_GET, SootopolisCity_Gym_1F_SetWeatherHardMode
-	goto_if_set FLAG_BADGE08_GET, SootopolisCity_Gym_1F_EventScript_Juan2
+	goto_if_set FLAG_BADGE08_GET, SootopolisCity_Gym_1F_EventScript_Juan
 	end
 
 SootopolisCity_Gym_1F_SetWeatherHardMode::
 	setweather WEATHER_RAIN
 	doweather
-	goto SootopolisCity_Gym_1F_EventScript_Juan2
+	goto SootopolisCity_Gym_1F_EventScript_Juan
 
-SootopolisCity_Gym_1F_EventScript_Juan::
+SootopolisCity_Gym_1F_EventScript_JuanW::
 	goto_if_set FLAG_DIFFICULTY_HARD, SootopolisCity_Gym_1F_CheckBadgeAndSetWeather
-	goto_if_unset FLAG_DIFFICULTY_HARD, SootopolisCity_Gym_1F_EventScript_Juan2
+	goto_if_unset FLAG_DIFFICULTY_HARD, SootopolisCity_Gym_1F_EventScript_Juan
 	end
 
-SootopolisCity_Gym_1F_EventScript_Juan2::
+SootopolisCity_Gym_1F_EventScript_Juan::
 	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_JuanRematch
@@ -113,10 +125,16 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	msgbox SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_SOOTOPOLIS_GYM
 	setflag FLAG_BADGE08_GET
+	setflag FLAG_ENABLE_NORMAN_REMATCH_CALL
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
+	goto_if_set FLAG_SOOTOPOLIS_CITY_RIVAL_PROFESSOR, SootopolisCity_Gym_1F_EventScript_SootopolisDoneRivalScene1
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 7
+	goto SootopolisCity_Gym_1F_EventScript_SootopolisDoneRivalScene2
+SootopolisCity_Gym_1F_EventScript_SootopolisDoneRivalScene1::
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 6
+SootopolisCity_Gym_1F_EventScript_SootopolisDoneRivalScene2::
 	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1
 	setvar VAR_0x8008, 8
 	call Common_EventScript_SetGymTrainers
@@ -155,10 +173,39 @@ SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge::
 SootopolisCity_Gym_1F_EventScript_JuanRematch::
 	setweather WEATHER_RAIN
 	doweather
+	goto_if_set FLAG_GOT_JUAN_REMATCH_REWARD, SootopolisCity_Gym_1F_EventScript_JuanRematchContinue
+	setvar 0x8005, TRAINER_JUAN_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_GiveRematchReward
+SootopolisCity_Gym_1F_EventScript_JuanRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
 	setweather WEATHER_NONE
 	doweather
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostRematch, MSGBOX_AUTOCLOSE
+	release
+	end
+SootopolisCity_Gym_1F_EventScript_GiveRematchReward::
+	msgbox SootopolisCity_Gym_1F_Text_JuanGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_DRAGON_SCALE, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, SootopolisCity_Gym_1F_EventScript_NoRoom
+	msgbox SootopolisCity_Gym_1F_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_JUAN_REMATCH_REWARD
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox SootopolisCity_Gym_1F_Text_RegisteredJuan, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_JUAN_MATCH_CALL
+	release
+	end
+SootopolisCity_Gym_1F_EventScript_NoRoom::
+	msgbox SootopolisCity_Gym_1F_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	release
 	end
 
 SootopolisCity_Gym_1F_EventScript_GymGuide::
@@ -338,3 +385,22 @@ SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
 	.string "I wish that you would return with\n"
 	.string "two, perhaps more, Pokémon, please.$"
 
+SootopolisCity_Gym_1F_Text_JuanGiveRematchReward:
+	.string "Ah, splendid indeed, {PLAYER}.\n"
+	.string "Your performance was nothing short\l"
+	.string "of mesmerizing.\p"
+	.string "To honor this remarkable battle, I shall\n"
+	.string "bestow upon you a rare item, one that is\l"
+	.string "close to my heart.$"
+
+SootopolisCity_Gym_1F_Text_NoRoomForReward:
+	.string "Ah, it seems your Bag is filled to\n"
+	.string "the brim.\p"
+	.string "No matter, I shall keep this safe until\n"
+	.string "you make space for it.$"
+
+SootopolisCity_Gym_1F_Text_GaveReward:
+	.string "This Dragon Scale embodies the majesty\n"
+	.string "and power of dragons, much like the\l"
+	.string "Kingdra that I have trained with care.\p"
+	.string "May it serve you well on your journey.$"

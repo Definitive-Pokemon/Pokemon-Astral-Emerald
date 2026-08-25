@@ -42,7 +42,7 @@ PetalburgCity_Gym_EventScript_UnlockAllDoors::
 PetalburgCity_Gym_OnTransition:
 	call_if_eq VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_MoveWallyToEntrance
 	call_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_MoveNormanToEntrance
-	call_if_set FLAG_SYS_GAME_CLEAR, PetalburgCity_Gym_EventScript_CheckNormanForRematch
+	call_if_set FLAG_REMATCH_READY_NORMAN, PetalburgCity_Gym_EventScript_CheckNormanForRematch
 	end
 
 PetalburgCity_Gym_EventScript_MoveWallyToEntrance::
@@ -75,7 +75,19 @@ PetalburgCity_Gym_EventScript_TurnPlayerNorth::
 
 PetalburgCity_Gym_OnFrame:
 	map_script_2 VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial
+	map_script_2 VAR_TEMP_1, 1, PetalburgCity_Gym_EventScript_TryRematchReward
 	.2byte 0
+
+PetalburgCity_Gym_EventScript_TryRematchReward::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_NORMAN_REMATCH_REWARD, PetalburgCity_Gym_EventScript_TryRematchRewardEnd
+	setvar 0x8005, TRAINER_NORMAN_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveRematchReward
+PetalburgCity_Gym_EventScript_TryRematchRewardEnd::
+	ClearTrainerFlag TRAINER_NORMAN_5
+	releaseall
+	end
 
 PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial::
 	lockall
@@ -448,9 +460,50 @@ PetalburgCity_Gym_EventScript_GiveFacade2::
 	end
 
 PetalburgCity_Gym_EventScript_NormanRematch::
+	goto_if_set FLAG_GOT_NORMAN_REMATCH_REWARD, PetalburgCity_Gym_EventScript_NormanRematchContinue
+	setvar 0x8005, TRAINER_NORMAN_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveRematchReward
+PetalburgCity_Gym_EventScript_NormanRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
 	msgbox PetalburgCity_Gym_Text_NormanPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
+PetalburgCity_Gym_EventScript_GiveRematchReward::
+	msgbox PetalburgCity_Gym_Text_NormanGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_LUCKY_EGG, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, PetalburgCity_Gym_EventScript_NoRoom
+	msgbox PetalburgCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_NORMAN_REMATCH_REWARD
+	release
+	end
+PetalburgCity_Gym_EventScript_NoRoom::
+	msgbox PetalburgCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+PetalburgCity_Gym_Text_NormanGiveRematchReward:
+	.string "I must say, {PLAYER}, you\n"
+	.string "continue to surpass my expectations.\p"
+	.string "As a father and as a Gym Leader,\n"
+	.string "I'm proud of the trainer you've become.\p"
+	.string "To commemorate this hard-fought battle,\n"
+	.string "I would like you to have this.$"
+
+PetalburgCity_Gym_Text_NoRoomForReward:
+	.string "Hm, it looks like your Bag is full.\n"
+	.string "Make some space, {PLAYER}, and return\l"
+	.string "when you're ready.\p"
+	.string "I'll keep it safe until then.$"
+
+PetalburgCity_Gym_Text_GaveReward:
+	.string "Please take this Lucky Egg. It should\n"
+	.string "aid you in your future journeys.$"
 
 PetalburgCity_Gym_EventScript_ShouldGiveEnigmaBerry::
 	specialvar VAR_RESULT, IsEnigmaBerryValid
@@ -1245,6 +1298,17 @@ PetalburgCity_Gym_EventScript_GymStatue::
 	releaseall
 	end
 
+PetalburgCity_Gym_EventScript_NormanRematchCall::
+	lockall
+	pokenavcall PetalburgCity_Gym_Text_NormanRematchCall
+	waitmessage
+	closemessage
+	clearflag FLAG_ENABLE_NORMAN_REMATCH_CALL
+	setflag FLAG_REMATCH_READY_NORMAN
+	special UpdateGymLeaderRematch
+	releaseall
+	end
+
 PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon:
 	.string "Dad: Hm?\p"
 	.string "Well, if it isn't {PLAYER}!\n"
@@ -1706,3 +1770,20 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons:
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two Pokémon.$"
 
+PetalburgCity_Gym_Text_NormanRematchCall:
+	.string "… … … … … …\n"
+	.string "… … … … … Beep!\p"
+	.string "Norman: Hello, {PLAYER}?\n"
+	.string "I heard that you've collected\l"
+	.string "all eight Gym Badges.\p"
+	.string "That's an impressive feat, I\n"
+	.string "can't tell you how proud I am.\p"
+	.string "But, as a Gym Leader, I won't\n"
+	.string "rest until I've tested how far\l"
+	.string "you've come.\p"
+	.string "Come by Petalburg Gym anytime.\n"
+	.string "I'll be waiting for your challenge.\p"
+	.string "Let's see just how strong my child\n"
+	.string "has become.\p"
+	.string "… … … … … …\n"
+	.string "… … … … … Click!$"
