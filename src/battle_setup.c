@@ -877,6 +877,22 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
                 sum += GetScaledLevel(party[i].lvl); //difficulty
         }
         break;
+    case F_TRAINER_PARTY_SET_ABILITY: 
+        {
+            const struct TrainerMonItemCustomMovesEVsSpecificAbility *party;
+            party = gTrainers[opponentId].party.AllCustom;
+            for (i = 0; i < count; i++)
+                sum += GetScaledLevel(party[i].lvl); //difficulty
+        }
+        break;
+    case F_TRAINER_PARTY_EV_SET: 
+        {
+            const struct TrainerMonItemCustomMovesEVs *party;
+            party = gTrainers[opponentId].party.ItemCustomMovesEVs;
+            for (i = 0; i < count; i++)
+                sum += GetScaledLevel(party[i].lvl); //difficulty
+        }
+        break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET:
         {
             const struct TrainerMonNoItemCustomMoves *party;

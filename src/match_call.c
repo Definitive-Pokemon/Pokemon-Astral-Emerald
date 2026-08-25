@@ -1807,6 +1807,12 @@ static void PopulateSpeciesFromTrainerParty(int matchCallId, u8 *destStr)
     default:
         speciesName = gSpeciesNames[party.NoItemDefaultMoves[monId].species];
         break;
+    case F_TRAINER_PARTY_SET_ABILITY: 
+        speciesName = gSpeciesNames[party.AllCustom[monId].species];
+        break;
+    case F_TRAINER_PARTY_EV_SET: 
+        speciesName = gSpeciesNames[party.ItemCustomMovesEVs[monId].species];
+        break
     case F_TRAINER_PARTY_CUSTOM_MOVESET:
         speciesName = gSpeciesNames[party.NoItemCustomMoves[monId].species];
         break;

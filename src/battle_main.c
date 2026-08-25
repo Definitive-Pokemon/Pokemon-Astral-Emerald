@@ -2322,6 +2322,316 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     CreateMon(&party[i], partyData[i].species, GetScaledLevel(partyData[i].lvl), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 break;
             }
+            case F_TRAINER_PARTY_SET_ABILITY:
+            {
+                const struct TrainerMonItemCustomMovesEVsSpecificAbility *partyData = gTrainers[trainerNum].party.AllCustom;
+
+                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
+                    nameHash += gSpeciesNames[partyData[i].species][j];
+
+                personalityValue += nameHash << 8;
+                fixedIV = 222 * MAX_PER_STAT_IVS / 255;
+                if (gSaveBlock1Ptr->tx_Random_Trainer) //tx_randomizer_and_challenges
+                {
+                    species = GetSpeciesRandomSeeded(partyData[i].species, TX_RANDOM_T_TRAINER, trainerNum);
+                    CreateMon(&party[i], species, GetScaledLevel(partyData[i].lvl), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                }
+                else
+                    CreateMon(&party[i], partyData[i].species, GetScaledLevel(partyData[i].lvl), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
+                helditem = GetMonData(&party[i], MON_DATA_HELD_ITEM);
+                for (j = 0; j < NUM_STATS; j++)
+                {
+                    SetMonData(&party[i], MON_DATA_HP_IV + j, &partyData[i].ivs[j]);
+                    SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
+                }
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].ability);
+
+                if (gSaveBlock2Ptr->optionsDifficulty == 2) //only in hard mode
+                {
+                    if (partyData[i].species == SPECIES_SLAKING && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_NORMAN  
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER)
+                    {
+                        helditem = ITEM_072; //no modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+
+                    if (partyData[i].species == SPECIES_ALTARIA && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_WINONA  
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE06_GET) == FALSE))
+                    {
+                        helditem = ITEM_073; //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_ALTARIA && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_WINONA  
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE06_GET) == TRUE))
+                    {
+                        helditem = ITEM_074; //chesto modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    
+                    if (partyData[i].species == SPECIES_LUNATONE && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_TATE_AND_LIZA
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE07_GET) == FALSE))
+                    {
+                        helditem = ITEM_073; //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_LUNATONE && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_TATE_AND_LIZA
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE07_GET) == TRUE))
+                    {
+                        helditem = ITEM_074; //chesto modifier, for rematches
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+
+                    if (partyData[i].species == SPECIES_SOLROCK && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_TATE_AND_LIZA
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER)
+                    {
+                        helditem = ITEM_073; //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    
+                    if (partyData[i].species == SPECIES_KINGDRA && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_JUAN
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE08_GET) == FALSE))
+                    {
+                        helditem = ITEM_074; //chesto modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_KINGDRA && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_JUAN
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE08_GET) == TRUE))
+                    {
+                        helditem = ITEM_076; //liechi modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+
+                    if (partyData[i].species == SPECIES_ABSOL && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_SIDNEY
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR)
+                    {
+                        helditem = ITEM_SALAC_BERRY;  //Salac Berry
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem); 
+                    }
+                    
+                    if (partyData[i].species == SPECIES_DUSKNOIR && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_PHOEBE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR && (FlagGet(FLAG_PHOEBE_REMATCH) == FALSE))
+                    {
+                        helditem = ITEM_072;  //no modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_DUSKNOIR && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_PHOEBE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR && (FlagGet(FLAG_PHOEBE_REMATCH) == TRUE))
+                    {
+                        helditem = ITEM_075;  //leftoverse modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    
+                    if (partyData[i].species == SPECIES_WALREIN && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_GLACIA
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR)
+                    {
+                        helditem = ITEM_LEFTOVERS;  //Leftovers
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem); 
+                    }
+                    
+                    if (partyData[i].species == SPECIES_SALAMENCE && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_DRAKE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR)
+                    {
+                        helditem = ITEM_073;  //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem); 
+                    }
+                    
+                    if (partyData[i].species == SPECIES_WHISCASH && gTrainers[trainerNum].trainerPic == TRAINER_PIC_CHAMPION_WALLACE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_CHAMPION)
+                    {
+                        helditem = ITEM_072;  //no modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+
+                    if (partyData[i].species == SPECIES_MILOTIC && gTrainers[trainerNum].trainerPic == TRAINER_PIC_CHAMPION_WALLACE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_CHAMPION && (FlagGet(FLAG_WALLACE_REMATCH) == FALSE))
+                    {
+                        helditem = ITEM_073;  //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_MILOTIC && gTrainers[trainerNum].trainerPic == TRAINER_PIC_CHAMPION_WALLACE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_CHAMPION && (FlagGet(FLAG_WALLACE_REMATCH) == TRUE))
+                    {
+                        helditem = ITEM_075;  //leftoverse modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                }
+
+                for (j = 0; j < MAX_MON_MOVES; j++)
+                {
+                    if (gSaveBlock1Ptr->tx_Random_Moves) //tx_randomizer_and_challenges
+                    {
+                        move = GetRandomMove(partyData[i].moves[j], partyData[i].species);
+                        SetMonData(&party[i], MON_DATA_MOVE1 + j, &move);
+                        SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[move].pp);
+                    }
+                    else
+                    {
+                        if (gSaveBlock1Ptr->tx_Random_Trainer) //tx_randomizer_and_challenges
+                            continue;
+                        SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
+                        SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
+                    }
+                }
+                break;
+            }
+            case F_TRAINER_PARTY_EV_SET: 
+            {
+                const struct TrainerMonItemCustomMovesEVs *partyData = gTrainers[trainerNum].party.ItemCustomMovesEVs;
+
+                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
+                    nameHash += gSpeciesNames[partyData[i].species][j];
+
+                personalityValue += nameHash << 8;
+                fixedIV = &partyData[i].iv * MAX_PER_STAT_IVS / 255;
+                if (gSaveBlock1Ptr->tx_Random_Trainer) //tx_randomizer_and_challenges
+                {
+                    species = GetSpeciesRandomSeeded(partyData[i].species, TX_RANDOM_T_TRAINER, trainerNum);
+                    CreateMon(&party[i], species, GetScaledLevel(partyData[i].lvl), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                }
+                else
+                    CreateMon(&party[i], partyData[i].species, GetScaledLevel(partyData[i].lvl), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
+                helditem = GetMonData(&party[i], MON_DATA_HELD_ITEM);
+                for (j = 0; j < NUM_STATS; j++)
+                {
+                    SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
+                }
+
+                if (gSaveBlock2Ptr->optionsDifficulty == 2) //only in hard mode
+                {
+                    if (partyData[i].species == SPECIES_SLAKING && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_NORMAN  
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER)
+                    {
+                        helditem = ITEM_072; //no modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+
+                    if (partyData[i].species == SPECIES_ALTARIA && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_WINONA  
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE06_GET) == FALSE))
+                    {
+                        helditem = ITEM_073; //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_ALTARIA && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_WINONA  
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE06_GET) == TRUE))
+                    {
+                        helditem = ITEM_074; //chesto modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    
+                    if (partyData[i].species == SPECIES_LUNATONE && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_TATE_AND_LIZA
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE07_GET) == FALSE))
+                    {
+                        helditem = ITEM_073; //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_LUNATONE && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_TATE_AND_LIZA
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE07_GET) == TRUE))
+                    {
+                        helditem = ITEM_074; //chesto modifier, for rematches
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+
+                    if (partyData[i].species == SPECIES_SOLROCK && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_TATE_AND_LIZA
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER)
+                    {
+                        helditem = ITEM_073; //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    
+                    if (partyData[i].species == SPECIES_KINGDRA && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_JUAN
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE08_GET) == FALSE))
+                    {
+                        helditem = ITEM_074; //chesto modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_KINGDRA && gTrainers[trainerNum].trainerPic == TRAINER_PIC_LEADER_JUAN
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_LEADER && (FlagGet(FLAG_BADGE08_GET) == TRUE))
+                    {
+                        helditem = ITEM_076; //liechi modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+
+                    if (partyData[i].species == SPECIES_ABSOL && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_SIDNEY
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR)
+                    {
+                        helditem = ITEM_SALAC_BERRY;  //Salac Berry
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem); 
+                    }
+                    
+                    if (partyData[i].species == SPECIES_DUSKNOIR && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_PHOEBE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR && (FlagGet(FLAG_PHOEBE_REMATCH) == FALSE))
+                    {
+                        helditem = ITEM_072;  //no modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_DUSKNOIR && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_PHOEBE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR && (FlagGet(FLAG_PHOEBE_REMATCH) == TRUE))
+                    {
+                        helditem = ITEM_075;  //leftoverse modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    
+                    if (partyData[i].species == SPECIES_WALREIN && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_GLACIA
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR)
+                    {
+                        helditem = ITEM_LEFTOVERS;  //Leftovers
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem); 
+                    }
+                    
+                    if (partyData[i].species == SPECIES_SALAMENCE && gTrainers[trainerNum].trainerPic == TRAINER_PIC_ELITE_FOUR_DRAKE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_ELITE_FOUR)
+                    {
+                        helditem = ITEM_073;  //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem); 
+                    }
+                    
+                    if (partyData[i].species == SPECIES_WHISCASH && gTrainers[trainerNum].trainerPic == TRAINER_PIC_CHAMPION_WALLACE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_CHAMPION)
+                    {
+                        helditem = ITEM_072;  //no modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+
+                    if (partyData[i].species == SPECIES_MILOTIC && gTrainers[trainerNum].trainerPic == TRAINER_PIC_CHAMPION_WALLACE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_CHAMPION && (FlagGet(FLAG_WALLACE_REMATCH) == FALSE))
+                    {
+                        helditem = ITEM_073;  //sitrus modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                    else if (partyData[i].species == SPECIES_MILOTIC && gTrainers[trainerNum].trainerPic == TRAINER_PIC_CHAMPION_WALLACE
+                    && gTrainers[trainerNum].trainerClass == TRAINER_CLASS_CHAMPION && (FlagGet(FLAG_WALLACE_REMATCH) == TRUE))
+                    {
+                        helditem = ITEM_075;  //leftoverse modifier
+                        SetMonData(&party[i], MON_DATA_HELD_ITEM, &helditem);
+                    }
+                }
+
+                for (j = 0; j < MAX_MON_MOVES; j++)
+                {
+                    if (gSaveBlock1Ptr->tx_Random_Moves) //tx_randomizer_and_challenges
+                    {
+                        move = GetRandomMove(partyData[i].moves[j], partyData[i].species);
+                        SetMonData(&party[i], MON_DATA_MOVE1 + j, &move);
+                        SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[move].pp);
+                    }
+                    else
+                    {
+                        if (gSaveBlock1Ptr->tx_Random_Trainer) //tx_randomizer_and_challenges
+                            continue;
+                        SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
+                        SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
+                    }
+                }
+                break;
+            }
+            
+
+            for (j = 0; j < NUM_STATS; j++)
+            {
+                SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
+            }
             case F_TRAINER_PARTY_CUSTOM_MOVESET:
             {
                 const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
