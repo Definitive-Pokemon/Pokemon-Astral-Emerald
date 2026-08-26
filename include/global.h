@@ -1152,12 +1152,14 @@ struct SaveBlock1
         u8 tx_Nuzlocke_ShinyClause:1;
         u8 tx_Nuzlocke_Nicknaming:1;
         u8 tx_Challenges_Mirror:1;
+        //
         u8 tx_Challenges_Mirror_Thief:1;
         u8 tx_Random_Static:1;
         u8 tx_Challenges_NoEVs:1;
         u8 tx_Challenges_TrainerScalingIVs:2;
         u8 tx_Challenges_TrainerScalingEVs:2;
         u8 tx_Nuzlocke_Deletion:1;
+        //
         u8 tx_Random_Starter:1;
         u8 tx_Challenges_MaxPartyIVs:2;
         u8 tx_Mode_InfiniteTMs:1;
@@ -1165,11 +1167,13 @@ struct SaveBlock1
         u8 tx_Features_EasierFeebas:1;
         u8 tx_Nuzlocke_EasyMode:1;
         u8 tx_Challenges_PCHeal:1;
+        //
         u8 tx_Features_RTCType:1;
         u8 tx_Features_ShinyColors:1;
         u8 tx_Features_LimitDifficulty:1;
         u8 tx_Features_ShinyChance:4;
         u8 tx_Features_WildMonDropItems:1;
+        //
         u8 tx_Features_Unlimited_WT:1;
         u8 tx_Mode_Synchronize:1;
         u8 tx_Mode_Mints:1;
@@ -1178,6 +1182,7 @@ struct SaveBlock1
         u8 tx_Mode_Fairy_Types:1;
         u8 tx_Mode_New_Stats:1;
         u8 tx_Mode_Sturdy:1;
+        //
         u8 tx_Mode_Modern_Moves:1;
         u8 tx_Mode_Legendary_Abilities:1;
         u8 tx_Mode_New_Legendaries:1;
@@ -1188,6 +1193,7 @@ struct SaveBlock1
         u8 tx_Difficulty_HardExp:1;
         u8 tx_Mode_TypeEffectiveness:1;
         u8 tx_Difficulty_CatchRate:3;
+        u8 tx_Mode_Teams:1;
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;

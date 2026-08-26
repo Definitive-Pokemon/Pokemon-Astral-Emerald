@@ -42,6 +42,7 @@ enum
 {
     //Preset selector
     MENUITEM_MODE_CLASSIC_MODERN,
+    MENUITEM_MODE_TRAINER_TEAMS,
     //Original / Post-game / New encounters
     MENUITEM_MODE_ALTERNATE_SPAWNS,
     //Gen VI+ / Improved
@@ -333,6 +334,7 @@ static void DrawChoices_Difficulty_HardExp(int selection, int y);
 static void DrawChoices_Difficulty_CatchRate(int selection, int y);
 static void DrawChoices_Mode_New_Effectiveness(int selection, int y);
 static void DrawChoices_Features_Shiny_Colors(int selection, int y);
+static void DrawChoices_Mode_Change_Teams(int selection, int y);
 
 static void DrawChoices_Difficulty_Escape_Rope_Dig(int selection, int y);
 
@@ -368,6 +370,7 @@ struct // MENU_MODE
 } static const sItemFunctionsMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = {DrawChoices_Mode_Classic_Modern_Selector,       ProcessInput_Options_Three},
+    [MENUITEM_MODE_TRAINER_TEAMS]         = {DrawChoices_Mode_Change_Teams,         ProcessInput_Options_Two},
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {DrawChoices_Mode_AlternateSpawns,      ProcessInput_Options_Three},
     [MENUITEM_MODE_INFINITE_TMS]          = {DrawChoices_Mode_InfiniteTMs,          ProcessInput_Options_Two},
     [MENUITEM_MODE_SURVIVE_POISON]        = {DrawChoices_Mode_SurvivePoison,        ProcessInput_Options_Two},
@@ -482,6 +485,7 @@ struct // MENU_CHALLENGES
 
 
 static const u8 sText_Gamemode[]            = _("GAMEMODE");
+static const u8 sText_TrainerTeams[]        = _("TRAINERS");
 static const u8 sText_AlternateSpawns[]     = _("ENCOUNTERS");
 static const u8 sText_InfiniteTMs[]         = _("REUSABLE TMS");
 static const u8 sText_Poison[]              = _("SURVIVE POISON");
@@ -501,6 +505,7 @@ static const u8 sText_Next[]                = _("NEXT");
 static const u8 *const sOptionMenuItemsNamesMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]            = sText_Gamemode,
+    [MENUITEM_MODE_TRAINER_TEAMS]             = sText_TrainerTeams,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]          = sText_AlternateSpawns,
     [MENUITEM_MODE_INFINITE_TMS]              = sText_InfiniteTMs,
     [MENUITEM_MODE_SURVIVE_POISON]            = sText_Poison,
@@ -670,6 +675,7 @@ static bool8 CheckConditions(int selection)
         {
             case MENUITEM_MODE_CLASSIC_MODERN:            return TRUE;
             case MENUITEM_MODE_NEXT:                      return TRUE;
+            case MENUITEM_MODE_TRAINER_TEAMS:             return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
             case MENUITEM_MODE_ALTERNATE_SPAWNS:          return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
             case MENUITEM_MODE_MINTS:                     return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
             case MENUITEM_MODE_SYNCHRONIZE:               return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
@@ -2708,7 +2714,28 @@ static void DrawChoices_Features_Rtc_Type(int selection, int y)
     DrawOptionMenuChoice(sText_Features_RTC_Fake_RTC, GetStringRightAlignXOffset(1, sText_Features_RTC_Fake_RTC, 198), y, styles[1], active);
 }
 
-static const u8 sText_Encounters_Vanilla[]   = _("Orig");
+static const u8 sText_Encounters_Vanilla[] = _("Orig");
+
+static void DrawChoices_Mode_Change_Teams(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_MODE_TRAINER_TEAMS);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    if (selection == 0)
+    {
+        gSaveBlock1Ptr->tx_Mode_Teams = 0;
+    }
+    else
+    {
+        gSaveBlock1Ptr->tx_Mode_Teams = 1;
+    }
+
+    DrawOptionMenuChoice(sText_Encounters_Vanilla_Long, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_Encounters_Modern_Long, GetStringRightAlignXOffset(1, sText_Encounters_Modern_Long, 198), y, styles[1], active);
+}
+
+
 static const u8 sText_Encounters_Postgame[]  = _("Post");
 static const u8 sText_Encounters_Modern[]    = _("New");
 static const u8 sText_Encounters_Vanilla_Long[]   = _("Original");
