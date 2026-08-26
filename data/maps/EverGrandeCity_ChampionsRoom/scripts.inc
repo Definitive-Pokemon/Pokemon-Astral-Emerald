@@ -2,6 +2,7 @@
 .set LOCALID_RIVAL, 2
 .set LOCALID_BIRCH, 3
 .set LOCALID_STEVEN, 4
+.set LOCALID_WALLACERE, 5
 
 EverGrandeCity_ChampionsRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_ChampionsRoom_OnTransition
@@ -15,11 +16,22 @@ EverGrandeCity_ChampionsRoom_OnTransition:
 
 EverGrandeCity_ChampionsRoom_OnWarp:
 	map_script_2 VAR_TEMP_1, 0, EverGrandeCity_ChampionsRoom_EventScript_PlayerTurnNorth
+	call_if_set FLAG_IS_CHAMPION, EverGrandeCity_ChampionsRoom_EventScript_HideWallaceSteven
+	call_if_unset FLAG_IS_CHAMPION, EverGrandeCity_ChampionsRoom_EventScript_HideWallaceCenter
 	.2byte 0
 
 EverGrandeCity_ChampionsRoom_EventScript_PlayerTurnNorth::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	end
+
+EverGrandeCity_ChampionsRoom_EventScript_HideWallaceSteven::
+	removeobject LOCALID_WALLACE
+	removeobject LOCALID_STEVEN
+	return
+
+EverGrandeCity_ChampionsRoom_EventScript_HideWallaceCenter::
+	removeobject LOCALID_WALLACERE
+	return
 
 EverGrandeCity_ChampionsRoom_OnFrame:
 	map_script_2 VAR_TEMP_1, 0, EverGrandeCity_ChampionsRoom_EventScript_EnterRoomF
