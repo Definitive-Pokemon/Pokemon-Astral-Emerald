@@ -6352,18 +6352,6 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
                 lastMonLevel = party[gTrainers[trainerId].partySize - 1].lvl;
             }
             break;
-        case F_TRAINER_PARTY_SET_ABILITY: 
-            {
-                const struct TrainerMonItemCustomMovesEVsSpecificAbility *party = gTrainers[trainerId].party.AllCustom;
-                lastMonLevel = party[gTrainers[trainerId].partySize - 1].lvl;
-            }
-            break;
-        case F_TRAINER_PARTY_EV_SET: 
-            {
-                const struct TrainerMonItemCustomMovesEVs *party = gTrainers[trainerId].party.ItemCustomMovesEVs;
-                lastMonLevel = party[gTrainers[trainerId].partySize - 1].lvl;
-            }
-            break;
         case F_TRAINER_PARTY_CUSTOM_MOVESET:
             {
                 const struct TrainerMonNoItemCustomMoves *party = gTrainers[trainerId].party.NoItemCustomMoves;
@@ -6382,7 +6370,20 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
                 lastMonLevel = party[gTrainers[trainerId].partySize - 1].lvl;
             }
             break;
+        case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET: 
+            {
+                const struct TrainerMonItemCustomMovesEVs *party = gTrainers[trainerId].party.ItemCustomMovesEVs;
+                lastMonLevel = party[gTrainers[trainerId].partySize - 1].lvl;
+            }
+            break;
+        case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY: 
+            {
+                const struct TrainerMonItemCustomMovesEVsSpecificAbility *party = gTrainers[trainerId].party.AllCustom;
+                lastMonLevel = party[gTrainers[trainerId].partySize - 1].lvl;
+            }
+            break;
         }
+        
 
         for (; gTrainerMoneyTable[i].classId != 0xFF; i++)
         {

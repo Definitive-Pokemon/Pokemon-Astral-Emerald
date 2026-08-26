@@ -2322,7 +2322,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     CreateMon(&party[i], partyData[i].species, GetScaledLevel(partyData[i].lvl), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 break;
             }
-            case F_TRAINER_PARTY_SET_ABILITY:
+            case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY:
             {
                 u8 abilityNum;
                 const struct TrainerMonItemCustomMovesEVsSpecificAbility *partyData = gTrainers[trainerNum].party.AllCustom;
@@ -2368,7 +2368,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 }
                 break;
             }
-            case F_TRAINER_PARTY_EV_SET: 
+            case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET: 
             {
                 const struct TrainerMonItemCustomMovesEVs *partyData = gTrainers[trainerNum].party.ItemCustomMovesEVs;
 
