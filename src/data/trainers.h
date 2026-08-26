@@ -10404,4 +10404,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES_EVS(sParty_Phoebe2),
     },
+    [TRAINER_PHOEBE_2_SINGLE + 1] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_RED,
+        .trainerName = _("Red"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = 0,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Red),
+    }
 };
