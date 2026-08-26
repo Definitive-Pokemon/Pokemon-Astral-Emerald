@@ -1032,6 +1032,7 @@ static const u8 *const sOptionMenuItemDescriptionsChallenges[MENUITEM_CHALLENGES
 static const u8 *const sOptionMenuItemDescriptionsDisabledMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = sText_Empty,
+    [MENUITEM_MODE_TRAINER_TEAMS]         = sText_Empty,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = sText_Empty,
     [MENUITEM_MODE_INFINITE_TMS]          = sText_Empty,
     [MENUITEM_MODE_SURVIVE_POISON]        = sText_Empty,
@@ -1525,6 +1526,7 @@ void CB2_InitTxRandomizerChallengesMenu(void)
         sOptions = AllocZeroed(sizeof(*sOptions));
         //MENU MODE
         sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN]         = FALSE;
+        sOptions->sel_mode[MENUITEM_MODE_TRAINER_TEAMS]          = gSaveBlock1Ptr->tx_Mode_Teams;
         sOptions->sel_mode[MENUITEM_MODE_ALTERNATE_SPAWNS]       = gSaveBlock1Ptr->tx_Mode_Encounters;
         sOptions->sel_mode[MENUITEM_MODE_INFINITE_TMS]           = gSaveBlock1Ptr->tx_Mode_InfiniteTMs;
         sOptions->sel_mode[MENUITEM_MODE_SURVIVE_POISON]         = gSaveBlock1Ptr->tx_Mode_PoisonSurvive;
@@ -2295,6 +2297,8 @@ static void DrawChoices_Mode_Classic_Modern_Selector(int selection, int y)
 
     if (selection == 0)
     {
+        sOptions->sel_mode[MENUITEM_MODE_TRAINER_TEAMS]             = TX_MODE_TRAINER_TEAMS;
+        gSaveBlock1Ptr->tx_Mode_Teams = 0;
         sOptions->sel_mode[MENUITEM_MODE_ALTERNATE_SPAWNS]          = TX_MODE_ALTERNATE_SPAWNS;
         gSaveBlock1Ptr->tx_Mode_Encounters = 0;
         sOptions->sel_mode[MENUITEM_MODE_INFINITE_TMS]              = TX_MODE_INFINITE_TMS;
@@ -2328,6 +2332,8 @@ static void DrawChoices_Mode_Classic_Modern_Selector(int selection, int y)
     }
     else if (selection == 1)
     {
+        sOptions->sel_mode[MENUITEM_MODE_TRAINER_TEAMS]             = !TX_MODE_TRAINER_TEAMS;
+        gSaveBlock1Ptr->tx_Mode_Teams = 1;
         sOptions->sel_mode[MENUITEM_MODE_ALTERNATE_SPAWNS]          = !TX_MODE_ALTERNATE_SPAWNS;
         gSaveBlock1Ptr->tx_Mode_Encounters = 1;
         sOptions->sel_mode[MENUITEM_MODE_INFINITE_TMS]              = !TX_MODE_INFINITE_TMS;
