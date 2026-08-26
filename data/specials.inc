@@ -571,4 +571,10 @@ gSpecials::
 	def_special DoSlidingPuzzle
     def_special NameRival
     def_special Special_OpenChallengeViewer
-
+	def_special HasAllMons
+	def_special CheckSpecies
+	def_special HasRematchBeenFought
+	def_special CheckFoundAllHeartScales
+	def_special CheckFoundAllKecleon
+	def_special CheckGotAllKantoStarters
+	def_special UpdateGymLeaderRematch
