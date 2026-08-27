@@ -6344,43 +6344,43 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     }
     else
     {
-        u8 lastMonIndex = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].party.size - 1: gTrainers[trainerId].classicParty.size - 1;
-        union TrainerMonPtr partyPointer = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].party.monPointers: gTrainers[trainerId].classicParty.monPointers;
+        struct TrainerParty partyTemplate = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].party: gTrainers[trainerId].classicParty;
+        u8 lastMonIndex = partyTemplate.size - 1;
         switch (gTrainers[trainerId].partyFlags)
         {
         case 0:
             {
-                const struct TrainerMonNoItemDefaultMoves *party = partyPointer.NoItemDefaultMoves;
+                const struct TrainerMonNoItemDefaultMoves *party = partyTemplate.monPointers.NoItemDefaultMoves;
                 lastMonLevel = party[lastMonIndex].lvl;
             }
             break;
         case F_TRAINER_PARTY_CUSTOM_MOVESET:
             {
-                const struct TrainerMonNoItemCustomMoves *party = partyPointer.NoItemCustomMoves;
+                const struct TrainerMonNoItemCustomMoves *party = partyTemplate.monPointers.NoItemCustomMoves;
                 lastMonLevel = party[lastMonIndex].lvl;
             }
             break;
         case F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemDefaultMoves *party = partyPointer.ItemDefaultMoves;
+                const struct TrainerMonItemDefaultMoves *party = partyTemplate.monPointers.ItemDefaultMoves;
                 lastMonLevel = party[lastMonIndex].lvl;
             }
             break;
         case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemCustomMoves *party = partyPointer.ItemCustomMoves;
+                const struct TrainerMonItemCustomMoves *party = partyTemplate.monPointers.ItemCustomMoves;
                 lastMonLevel = party[lastMonIndex].lvl;
             }
             break;
         case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET: 
             {
-                const struct TrainerMonItemCustomMovesEVs *party = partyPointer.ItemCustomMovesEVs;
+                const struct TrainerMonItemCustomMovesEVs *party = partyTemplate.monPointers.ItemCustomMovesEVs;
                 lastMonLevel = party[lastMonIndex].lvl;
             }
             break;
         case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY: 
             {
-                const struct TrainerMonItemCustomMovesEVsSpecificAbility *party = partyPointer.AllCustom;
+                const struct TrainerMonItemCustomMovesEVsSpecificAbility *party = partyTemplate.monPointers.AllCustom;
                 lastMonLevel = party[lastMonIndex].lvl;
             }
             break;
