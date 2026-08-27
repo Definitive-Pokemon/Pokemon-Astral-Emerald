@@ -6346,7 +6346,7 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     {
         struct TrainerParty partyTemplate = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].party: gTrainers[trainerId].classicParty;
         u8 lastMonIndex = partyTemplate.size - 1;
-        switch (gTrainers[trainerId].partyFlags)
+        switch (partyTemplate.flags)
         {
         case 0:
             {
