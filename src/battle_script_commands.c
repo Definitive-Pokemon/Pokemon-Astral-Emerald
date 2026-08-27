@@ -6344,8 +6344,8 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     }
     else
     {
-        u8 lastMonIndex = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].partySize - 1: gTrainers[trainerId].classicPartySize - 1;
-        union TrainerMonPtr partyPointer = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].party: gTrainers[trainerId].classicParty;
+        u8 lastMonIndex = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].party.size - 1: gTrainers[trainerId].classicParty.size - 1;
+        union TrainerMonPtr partyPointer = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].party.monPointers: gTrainers[trainerId].classicParty.monPointers;
         switch (gTrainers[trainerId].partyFlags)
         {
         case 0:

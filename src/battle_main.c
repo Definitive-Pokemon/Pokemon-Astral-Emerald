@@ -2262,7 +2262,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u16 species, move; //tx_randomizer_and_challenges
     //u8 opponentClass = gTrainers[trainerNum].trainerClass;
     u16 helditem;
-    const union TrainerMonPtr partyPointer = (gSaveBlock1Ptr->tx_Mode_Teams)?
+    const struct TrainerParty partyTemplate = (gSaveBlock1Ptr->tx_Mode_Teams)?
         gTrainers[trainerNum].party:
         gTrainers[trainerNum].classicParty;
 
@@ -2281,25 +2281,15 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
         {
-            if (gSaveBlock1Ptr->tx_Mode_Teams == 1)
-            {
-                if (gTrainers[trainerNum].partySize > PARTY_SIZE / 2)
-                    monsCount = PARTY_SIZE / 2;
-                else
-                    monsCount = gTrainers[trainerNum].partySize;
-            } 
-            else 
-            {
-                if (gTrainers[trainerNum].classicPartySize > PARTY_SIZE / 2)
-                    monsCount = PARTY_SIZE / 2;
-                else
-                    monsCount = gTrainers[trainerNum].classicPartySize;
-            }
+            if (partyTemplate.size > PARTY_SIZE / 2)
+                monsCount = PARTY_SIZE / 2;
+            else
+                monsCount = partyTemplate.size;
             
         }
         else
         {
-            monsCount = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerNum].partySize: gTrainers[trainerNum].classicPartySize;
+            monsCount = partyTemplate.size;
         }
 
         for (i = 0; i < monsCount; i++)
@@ -2315,11 +2305,11 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
                 nameHash += gTrainers[trainerNum].trainerName[j];
 
-            switch (gTrainers[trainerNum].partyFlags)
+            switch (partyTemplate.flags)
             {
             case 0:
             {
-                const struct TrainerMonNoItemDefaultMoves *partyData = partyPointer.NoItemDefaultMoves;
+                const struct TrainerMonNoItemDefaultMoves *partyData = partyTemplate.monPointers.NoItemDefaultMoves;
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
 
@@ -2338,7 +2328,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY:
             {
                 u8 abilityNum;
-                const struct TrainerMonItemCustomMovesEVsSpecificAbility *partyData = partyPointer.AllCustom;
+                const struct TrainerMonItemCustomMovesEVsSpecificAbility *partyData = partyTemplate.monPointers.AllCustom;
                 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2383,7 +2373,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             }
             case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET: 
             {
-                const struct TrainerMonItemCustomMovesEVs *partyData = partyPointer.ItemCustomMovesEVs;
+                const struct TrainerMonItemCustomMovesEVs *partyData = partyTemplate.monPointers.ItemCustomMovesEVs;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2425,7 +2415,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET:
             {
-                const struct TrainerMonNoItemCustomMoves *partyData = partyPointer.NoItemCustomMoves;
+                const struct TrainerMonNoItemCustomMoves *partyData = partyTemplate.monPointers.NoItemCustomMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2462,7 +2452,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             }
             case F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemDefaultMoves *partyData = partyPointer.ItemDefaultMoves;
+                const struct TrainerMonItemDefaultMoves *partyData = partyTemplate.monPointers.ItemDefaultMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2485,7 +2475,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemCustomMoves *partyData = partyPointer.ItemCustomMoves;
+                const struct TrainerMonItemCustomMoves *partyData = partyTemplate.monPointers.ItemCustomMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2575,7 +2565,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
     }
 
-    return (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerNum].partySize: gTrainers[trainerNum].classicPartySize;
+    return partyTemplate.size;
 }
 
 static void UNUSED HBlankCB_Battle(void)
