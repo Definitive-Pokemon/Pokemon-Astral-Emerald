@@ -2720,6 +2720,8 @@ static void DrawChoices_Features_Rtc_Type(int selection, int y)
     DrawOptionMenuChoice(sText_Features_RTC_Fake_RTC, GetStringRightAlignXOffset(1, sText_Features_RTC_Fake_RTC, 198), y, styles[1], active);
 }
 
+static const u8 sText_Encounters_Vanilla_Long[]   = _("Original");
+static const u8 sText_Encounters_Modern_Long[]    = _("Modern");
 static const u8 sText_Encounters_Vanilla[] = _("Orig");
 
 static void DrawChoices_Mode_Change_Teams(int selection, int y)
@@ -2744,8 +2746,7 @@ static void DrawChoices_Mode_Change_Teams(int selection, int y)
 
 static const u8 sText_Encounters_Postgame[]  = _("Post");
 static const u8 sText_Encounters_Modern[]    = _("New");
-static const u8 sText_Encounters_Vanilla_Long[]   = _("Original");
-static const u8 sText_Encounters_Modern_Long[]    = _("Modern");
+
 
 static void DrawChoices_Mode_AlternateSpawns(int selection, int y)
 {
