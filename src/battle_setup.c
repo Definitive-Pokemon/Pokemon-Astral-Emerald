@@ -1303,6 +1303,15 @@ static void TrainerBattleLoadArgs(const struct TrainerBattleParameter *specs, co
             SetU32(specs->varPtr, 0);
             break;
         case TRAINER_PARAM_LOAD_SCRIPT_RET_ADDR:
+            // hacky way of overwriting the opponent ID
+            if (gSaveBlock1Ptr->tx_Mode_Teams == 0)
+            {
+                gTrainerBattleOpponent_A += TRAINERS_COUNT
+                if (gTrainerBattleOpponent_B != 0)
+                {
+                    gTrainerBattleOpponent_B += TRAINERS_COUNT
+                }
+            }
             SetPtr(specs->varPtr, data);
             return;
         }
