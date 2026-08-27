@@ -97,13 +97,6 @@ struct TrainerMonItemCustomMovesEVsSpecificAbility
     u16 unused:14; // just for clarity
 };
 
-#define NO_ITEM_DEFAULT_MOVES(party) { .NoItemDefaultMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = 0
-#define NO_ITEM_CUSTOM_MOVES(party) { .NoItemCustomMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET
-#define ITEM_DEFAULT_MOVES(party) { .ItemDefaultMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = F_TRAINER_PARTY_HELD_ITEM
-#define ITEM_CUSTOM_MOVES(party) { .ItemCustomMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM
-#define ITEM_CUSTOM_MOVES_EVS(party) { .ItemCustomMovesEVs = party }, .partySize = ARRAY_COUNT(party), .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET
-#define ALL_CUSTOM(party) { .AllCustom = party }, .partySize = ARRAY_COUNT(party), .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY
-
 union TrainerMonPtr
 {
     const struct TrainerMonNoItemDefaultMoves *NoItemDefaultMoves;
@@ -114,19 +107,53 @@ union TrainerMonPtr
     const struct TrainerMonItemCustomMovesEVsSpecificAbility *AllCustom;
 };
 
+struct TrainerParty
+{
+    u8 flags;
+    u8 size;
+    union TrainerMonPtr monPointers;
+};
+
 struct Trainer
 {
-    /*0x00*/ u8 partyFlags;
-    /*0x01*/ u8 trainerClass;
-    /*0x02*/ u8 encounterMusic_gender; // last bit is gender
-    /*0x03*/ u8 trainerPic;
-    /*0x04*/ u8 trainerName[TRAINER_NAME_LENGTH + 1];
-    /*0x10*/ u16 items[MAX_TRAINER_ITEMS];
-    /*0x18*/ bool8 doubleBattle;
-    /*0x1C*/ u32 aiFlags;
-    /*0x20*/ u8 partySize;
-    /*0x24*/ union TrainerMonPtr party;
+    u8 trainerClass;
+    u8 encounterMusic_gender; // last bit is gender
+    u8 trainerPic;
+    u8 trainerName[TRAINER_NAME_LENGTH + 1];
+    u16 items[MAX_TRAINER_ITEMS];
+    bool8 doubleBattle;
+    u32 aiFlags;
+    struct TrainerParty party;
+    struct TrainerParty classicParty;
 };
+
+#define NO_ITEM_DEFAULT_MOVES(identifier) { .monPointers = { .NoItemDefaultMoves = identifier },\
+.flags = 0,\
+.size = ARRAY_COUNT(identifier)}
+
+#define NO_ITEM_CUSTOM_MOVES(identifier) { .monPointers = { .NoItemCustomMoves = identifier },\
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET,\
+.size = ARRAY_COUNT(identifier)}
+
+#define ITEM_DEFAULT_MOVES(identifier) { .monPointers = { .ItemDefaultMoves = identifier },\
+.flags = F_TRAINER_PARTY_HELD_ITEM,\
+.size = ARRAY_COUNT(identifier)}
+
+#define ITEM_CUSTOM_MOVES(identifier) { .monPointers = { .ItemCustomMoves = identifier },\
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,\
+.size = ARRAY_COUNT(identifier)}
+
+#define ITEM_CUSTOM_MOVES_EVS(identifier) { .monPointers = { .ItemCustomMovesEVs = identifier },\
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET,\
+.size = ARRAY_COUNT(identifier)}
+
+#define ALL_CUSTOM(identifier) { .monPointers = { .AllCustom = identifier },\
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY,\
+.size = ARRAY_COUNT(identifier)}
+
+#define LINK_TRAINER_MONS(trainerId, modernType, classicType) \
+.party = modernType(sParty_##trainerId),\
+.classicParty = classicType(sClassicParty_##trainerId)
 
 #define TRAINER_ENCOUNTER_MUSIC(trainer)((gTrainers[trainer].encounterMusic_gender & 0x7F))
 
