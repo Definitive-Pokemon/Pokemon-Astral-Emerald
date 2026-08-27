@@ -1793,34 +1793,34 @@ static void PopulateSpeciesFromTrainerLocation(int matchCallId, u8 *destStr)
 static void PopulateSpeciesFromTrainerParty(int matchCallId, u8 *destStr)
 {
     u16 trainerId;
-    union TrainerMonPtr party;
+    struct TrainerParty party;
     u8 monId;
     const u8 *speciesName;
 
     trainerId = GetLastBeatenRematchTrainerId(sMatchCallTrainers[matchCallId].trainerId);
-    party = gTrainers[trainerId].party;
-    monId = Random() % gTrainers[trainerId].partySize;
+    party = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerId].party: gTrainers[trainerId].classicParty;
+    monId = Random() % party.size;
 
-    switch (gTrainers[trainerId].partyFlags)
+    switch (party.flags)
     {
     case 0:
     default:
-        speciesName = gSpeciesNames[party.NoItemDefaultMoves[monId].species];
+        speciesName = gSpeciesNames[party.monPointers.NoItemDefaultMoves[monId].species];
         break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET:
-        speciesName = gSpeciesNames[party.NoItemCustomMoves[monId].species];
+        speciesName = gSpeciesNames[party.monPointers.NoItemCustomMoves[monId].species];
         break;
     case F_TRAINER_PARTY_HELD_ITEM:
-        speciesName = gSpeciesNames[party.ItemDefaultMoves[monId].species];
+        speciesName = gSpeciesNames[party.monPointers.ItemDefaultMoves[monId].species];
         break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
-        speciesName = gSpeciesNames[party.ItemCustomMoves[monId].species];
+        speciesName = gSpeciesNames[party.monPointers.ItemCustomMoves[monId].species];
         break;
     case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET: 
-        speciesName = gSpeciesNames[party.ItemCustomMovesEVs[monId].species];
+        speciesName = gSpeciesNames[party.monPointers.ItemCustomMovesEVs[monId].species];
         break;
     case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY: 
-        speciesName = gSpeciesNames[party.AllCustom[monId].species];
+        speciesName = gSpeciesNames[party.monPointers.AllCustom[monId].species];
         break;
     }
 

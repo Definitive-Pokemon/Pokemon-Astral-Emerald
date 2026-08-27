@@ -876,4 +876,6 @@
 #define TRAINERS_COUNT                      867
 #define MAX_TRAINERS_COUNT                  867
 
+#define CLASSIC_TRAINER(trainerId)          (trainerId + TRAINERS_COUNT)
+
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

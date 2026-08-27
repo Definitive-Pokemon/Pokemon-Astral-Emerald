@@ -14516,7 +14516,7 @@ static const struct TrainerMonItemCustomMovesEVs sParty_Drake2[] = {
     .iv = 255,
     .lvl = 73,
     .species = SPECIES_AMPHAROS,
-    .heldItem = ITEM_ITEM_MAGNET,
+    .heldItem = ITEM_MAGNET,
     .evs = {252, 0, 0, 0, 252, 0},
     .moves = {MOVE_DRAGON_PULSE, MOVE_FOCUS_BLAST, MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE}
     },

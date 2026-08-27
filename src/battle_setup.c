@@ -860,18 +860,21 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
     u8 i;
     u8 sum;
     u32 count = numMons;
+    struct TrainerParty partyTemplate = (gSaveBlock1Ptr->tx_Mode_Teams)? 
+        gTrainers[opponentId].party: 
+        gTrainers[opponentId].classicParty;
 
-    if (gTrainers[opponentId].partySize < count)
-        count = gTrainers[opponentId].partySize;
+
+    if (partyTemplate.size < count)
+        count = partyTemplate.size;
 
     sum = 0;
 
-    switch (gTrainers[opponentId].partyFlags)
+    switch (partyTemplate.flags)
     {
     case 0:
         {
-            const struct TrainerMonNoItemDefaultMoves *party;
-            party = gTrainers[opponentId].party.NoItemDefaultMoves;
+            const struct TrainerMonNoItemDefaultMoves *party = partyTemplate.monPointers.NoItemDefaultMoves;
             for (i = 0; i < count; i++)
                 //sum += party[i].lvl;
                 sum += GetScaledLevel(party[i].lvl); //difficulty
@@ -879,8 +882,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
         break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET:
         {
-            const struct TrainerMonNoItemCustomMoves *party;
-            party = gTrainers[opponentId].party.NoItemCustomMoves;
+            const struct TrainerMonNoItemCustomMoves *party = partyTemplate.monPointers.NoItemCustomMoves;
             for (i = 0; i < count; i++)
                 //sum += party[i].lvl;
                 sum += GetScaledLevel(party[i].lvl); //difficulty
@@ -888,8 +890,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
         break;
     case F_TRAINER_PARTY_HELD_ITEM:
         {
-            const struct TrainerMonItemDefaultMoves *party;
-            party = gTrainers[opponentId].party.ItemDefaultMoves;
+            const struct TrainerMonItemDefaultMoves *party = partyTemplate.monPointers.ItemDefaultMoves;
             for (i = 0; i < count; i++)
                 //sum += party[i].lvl;
                 sum += GetScaledLevel(party[i].lvl); //difficulty
@@ -897,8 +898,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
         break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
         {
-            const struct TrainerMonItemCustomMoves *party;
-            party = gTrainers[opponentId].party.ItemCustomMoves;
+            const struct TrainerMonItemCustomMoves *party = partyTemplate.monPointers.ItemCustomMoves;
             for (i = 0; i < count; i++)
                 //sum += party[i].lvl;
                 sum += GetScaledLevel(party[i].lvl); //difficulty
@@ -906,16 +906,14 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
         break;
     case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET: 
         {
-            const struct TrainerMonItemCustomMovesEVs *party;
-            party = gTrainers[opponentId].party.ItemCustomMovesEVs;
+            const struct TrainerMonItemCustomMovesEVs *party = partyTemplate.monPointers.ItemCustomMovesEVs;
             for (i = 0; i < count; i++)
                 sum += GetScaledLevel(party[i].lvl); //difficulty
         }
         break;
         case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY: 
         {
-            const struct TrainerMonItemCustomMovesEVsSpecificAbility *party;
-            party = gTrainers[opponentId].party.AllCustom;
+            const struct TrainerMonItemCustomMovesEVsSpecificAbility *party = partyTemplate.monPointers.AllCustom;
             for (i = 0; i < count; i++)
                 sum += GetScaledLevel(party[i].lvl); //difficulty
         }
