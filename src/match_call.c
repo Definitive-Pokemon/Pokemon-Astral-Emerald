@@ -1798,8 +1798,8 @@ static void PopulateSpeciesFromTrainerParty(int matchCallId, u8 *destStr)
     const u8 *speciesName;
 
     trainerId = GetLastBeatenRematchTrainerId(sMatchCallTrainers[matchCallId].trainerId);
-    party = gTrainers[trainerId].party;
-    monId = Random() % gTrainers[trainerId].partySize;
+    party = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerNum].party: gTrainers[trainerNum].classicParty;
+    monId = Random() % ((gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerNum].partySize: gTrainers[trainerNum].classicPartySize);
 
     switch (gTrainers[trainerId].partyFlags)
     {

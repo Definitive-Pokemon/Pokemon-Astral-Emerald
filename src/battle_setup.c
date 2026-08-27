@@ -860,9 +860,16 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
     u8 i;
     u8 sum;
     u32 count = numMons;
+    union TrainerMonPtr partyPointer = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerNum].party: gTrainers[trainerNum].classicParty;
 
-    if (gTrainers[opponentId].partySize < count)
-        count = gTrainers[opponentId].partySize;
+    if (gSaveBlock1Ptr->tx_Mode_Teams) 
+    {
+        if (gTrainers[opponentId].partySize < count)
+            count = gTrainers[opponentId].partySize;
+    }
+    else 
+        if (gTrainers[opponentId].classicPartySize < count)
+            count = gTrainers[opponentId].classicPartySize;
 
     sum = 0;
 
@@ -870,8 +877,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
     {
     case 0:
         {
-            const struct TrainerMonNoItemDefaultMoves *party;
-            party = gTrainers[opponentId].party.NoItemDefaultMoves;
+            const struct TrainerMonNoItemDefaultMoves *party = partyPointer.NoItemDefaultMoves;
             for (i = 0; i < count; i++)
                 //sum += party[i].lvl;
                 sum += GetScaledLevel(party[i].lvl); //difficulty
@@ -879,8 +885,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
         break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET:
         {
-            const struct TrainerMonNoItemCustomMoves *party;
-            party = gTrainers[opponentId].party.NoItemCustomMoves;
+            const struct TrainerMonNoItemCustomMoves *party = partyPointer.NoItemCustomMoves;
             for (i = 0; i < count; i++)
                 //sum += party[i].lvl;
                 sum += GetScaledLevel(party[i].lvl); //difficulty
@@ -888,8 +893,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
         break;
     case F_TRAINER_PARTY_HELD_ITEM:
         {
-            const struct TrainerMonItemDefaultMoves *party;
-            party = gTrainers[opponentId].party.ItemDefaultMoves;
+            const struct TrainerMonItemDefaultMoves *party = partyPointer.ItemDefaultMoves;
             for (i = 0; i < count; i++)
                 //sum += party[i].lvl;
                 sum += GetScaledLevel(party[i].lvl); //difficulty
@@ -897,8 +901,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
         break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
         {
-            const struct TrainerMonItemCustomMoves *party;
-            party = gTrainers[opponentId].party.ItemCustomMoves;
+            const struct TrainerMonItemCustomMoves *party = partyPointer.ItemCustomMoves;
             for (i = 0; i < count; i++)
                 //sum += party[i].lvl;
                 sum += GetScaledLevel(party[i].lvl); //difficulty
@@ -906,16 +909,14 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
         break;
     case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET: 
         {
-            const struct TrainerMonItemCustomMovesEVs *party;
-            party = gTrainers[opponentId].party.ItemCustomMovesEVs;
+            const struct TrainerMonItemCustomMovesEVs *party = partyPointer.ItemCustomMovesEVs;
             for (i = 0; i < count; i++)
                 sum += GetScaledLevel(party[i].lvl); //difficulty
         }
         break;
         case F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY: 
         {
-            const struct TrainerMonItemCustomMovesEVsSpecificAbility *party;
-            party = gTrainers[opponentId].party.AllCustom;
+            const struct TrainerMonItemCustomMovesEVsSpecificAbility *party = partyPointer.AllCustom;
             for (i = 0; i < count; i++)
                 sum += GetScaledLevel(party[i].lvl); //difficulty
         }
@@ -1303,15 +1304,6 @@ static void TrainerBattleLoadArgs(const struct TrainerBattleParameter *specs, co
             SetU32(specs->varPtr, 0);
             break;
         case TRAINER_PARAM_LOAD_SCRIPT_RET_ADDR:
-            // hacky way of overwriting the opponent ID
-            if (gSaveBlock1Ptr->tx_Mode_Teams == 0)
-            {
-                gTrainerBattleOpponent_A += TRAINERS_COUNT
-                if (gTrainerBattleOpponent_B != 0)
-                {
-                    gTrainerBattleOpponent_B += TRAINERS_COUNT
-                }
-            }
             SetPtr(specs->varPtr, data);
             return;
         }
