@@ -781,6 +781,8 @@ static const u8 sText_Description_Save[]    = _("Save choices and continue...");
 static const u8 sText_Description_Mode_Gamemode_Classic[]         = _("Vanilla-like preset.\n{COLOR 7}{COLOR 8}Note: All selections are permanent.");
 static const u8 sText_Description_Mode_Gamemode_Modern[]          = _("Modernized preset.\n{COLOR 7}{COLOR 8}Note: All selections are permanent.");
 static const u8 sText_Description_Mode_Gamemode_Custom[]          = _("Choose your own rules.\n{COLOR 7}{COLOR 8}Note: All selections are permanent.");
+static const u8 sText_Description_Mode_TrainerTeams_Classic[]     = _("Mostly teams from\noriginal Emerald.");
+static const u8 sText_Description_Mode_TrainerTeams_Modern[]      = _("Astral teams.");
 static const u8 sText_Description_Mode_AlternateSpawns_Vanilla[]        = _("Use Vanilla wild encounters.\nUnchanged from original Emerald.");
 static const u8 sText_Description_Mode_AlternateSpawns_Postgame[]       = _("Vanilla, but after becoming champion,\nall 423+ {PKMN} end up being available.");
 static const u8 sText_Description_Mode_AlternateSpawns_Modern[]         = _("Use Modern wild encounters.\nAll 423+ {PKMN} will be available.");
@@ -815,6 +817,7 @@ static const u8 sText_Description_Mode_Next[]                     = _("Continue 
 static const u8 *const sOptionMenuItemDescriptionsMode[MENUITEM_MODE_COUNT][5] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = {sText_Description_Mode_Gamemode_Classic,       sText_Description_Mode_Gamemode_Modern,       sText_Description_Mode_Gamemode_Custom,             sText_Empty,                                        sText_Empty},
+    [MENUITEM_MODE_TRAINER_TEAMS]         = {sText_Description_Mode_TrainerTeams_Classic,   sText_Description_Mode_TrainerTeams_Modern,   sText_Empty,                                        sText_Empty,                                        sText_Empty},
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {sText_Description_Mode_AlternateSpawns_Vanilla,    sText_Description_Mode_AlternateSpawns_Modern,      sText_Description_Mode_AlternateSpawns_Postgame,                                         sText_Empty,                                        sText_Empty},
     [MENUITEM_MODE_INFINITE_TMS]          = {sText_Description_Mode_InfiniteTMs_Off,        sText_Description_Mode_InfiniteTMs_On,        sText_Empty,                                        sText_Empty,                                        sText_Empty},
     [MENUITEM_MODE_SURVIVE_POISON]        = {sText_Description_Mode_SurvivePoison_Off,      sText_Description_Mode_SurvivePoison_On,      sText_Empty,                                        sText_Empty,                                        sText_Empty},
