@@ -127,27 +127,27 @@ struct Trainer
     struct TrainerParty classicParty;
 };
 
-#define NO_ITEM_DEFAULT_MOVES(identifier) { monPointers = { .NoItemDefaultMoves = identifier },\
+#define NO_ITEM_DEFAULT_MOVES(identifier) { .monPointers = { .NoItemDefaultMoves = identifier },\
 .flags = 0,\
 .size = ARRAY_COUNT(identifier)}
 
-#define NO_ITEM_CUSTOM_MOVES(identifier) { monPointers = { .NoItemCustomMoves = identifier },\
+#define NO_ITEM_CUSTOM_MOVES(identifier) { .monPointers = { .NoItemCustomMoves = identifier },\
 .flags = F_TRAINER_PARTY_CUSTOM_MOVESET,\
 .size = ARRAY_COUNT(identifier)}
 
-#define ITEM_DEFAULT_MOVES(identifier) { monPointers = { .ItemDefaultMoves = identifier },\
+#define ITEM_DEFAULT_MOVES(identifier) { .monPointers = { .ItemDefaultMoves = identifier },\
 .flags = F_TRAINER_PARTY_HELD_ITEM,\
 .size = ARRAY_COUNT(identifier)}
 
-#define ITEM_CUSTOM_MOVES(identifier) { monPointers = { .ItemCustomMoves = identifier },\
+#define ITEM_CUSTOM_MOVES(identifier) { .monPointers = { .ItemCustomMoves = identifier },\
 .flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,\
 .size = ARRAY_COUNT(identifier)}
 
-#define ITEM_CUSTOM_MOVES_EVS(identifier) { monPointers = { .ItemCustomMovesEVs = identifier },\
+#define ITEM_CUSTOM_MOVES_EVS(identifier) { .monPointers = { .ItemCustomMovesEVs = identifier },\
 .flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET,\
 .size = ARRAY_COUNT(identifier)}
 
-#define ALL_CUSTOM(identifier) { monPointers = { .AllCustom = identifier },\
+#define ALL_CUSTOM(identifier) { .monPointers = { .AllCustom = identifier },\
 .flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY,\
 .size = ARRAY_COUNT(identifier)}
 
