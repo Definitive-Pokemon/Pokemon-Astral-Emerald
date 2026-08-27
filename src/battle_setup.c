@@ -860,7 +860,7 @@ static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
     u8 i;
     u8 sum;
     u32 count = numMons;
-    union TrainerMonPtr partyPointer = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[trainerNum].party: gTrainers[trainerNum].classicParty;
+    union TrainerMonPtr partyPointer = (gSaveBlock1Ptr->tx_Mode_Teams)? gTrainers[opponentId].party: gTrainers[opponentId].classicParty;
 
     if (gSaveBlock1Ptr->tx_Mode_Teams) 
     {
