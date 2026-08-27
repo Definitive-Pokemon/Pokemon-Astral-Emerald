@@ -5088,7 +5088,7 @@ static const struct TrainerMonItemCustomMovesEVs sParty_Wallace2[] = {
     .species = SPECIES_MEGANIUM,
     .heldItem = ITEM_LEFTOVERS,
     .evs = {252, 252, 0, 0, 0, 0},
-    .moves = {MOVE_PLAY_ROUGH, MOVE_EARTHQUAKE, MOVE_SEED_BOMB, MOVE_LIGHT_SCREEN}
+    .moves = {MOVE_PLAY_ROUGH, MOVE_EARTHQUAKE, MOVE_LEAF_BLADE, MOVE_LIGHT_SCREEN}
     },
     {
     .iv = 255,
