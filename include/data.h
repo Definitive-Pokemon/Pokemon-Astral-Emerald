@@ -107,52 +107,53 @@ union TrainerMonPtr
     const struct TrainerMonItemCustomMovesEVsSpecificAbility *AllCustom;
 };
 
-struct Trainer
+struct TrainerParty
 {
-    /*0x00*/ u8 partyFlags;
-    /*0x01*/ u8 trainerClass;
-    /*0x02*/ u8 encounterMusic_gender; // last bit is gender
-    /*0x03*/ u8 trainerPic;
-    /*0x04*/ u8 trainerName[TRAINER_NAME_LENGTH + 1];
-    /*0x10*/ u16 items[MAX_TRAINER_ITEMS];
-    /*0x18*/ bool8 doubleBattle;
-    /*0x1C*/ u32 aiFlags;
-    /*0x20*/ u8 partySize;
-    /*0x24*/ union TrainerMonPtr party;
-    union TrainerMonPtr classicParty;
-    u8 classicPartySize;
+    u8 flags;
+    u8 size;
+    union TrainerMonPtr monPointers;
 };
 
-#define NO_ITEM_DEFAULT_MOVES(identifier) { .NoItemDefaultMoves = sParty_##identifier },\
-.classicParty = { .NoItemDefaultMoves = sClassicParty_##identifier },\
-.partySize = ARRAY_COUNT(sParty_##identifier), .classicPartySize = ARRAY_COUNT(sClassicParty_##identifier),\
-.partyFlags = 0
+struct Trainer
+{
+    u8 trainerClass;
+    u8 encounterMusic_gender; // last bit is gender
+    u8 trainerPic;
+    u8 trainerName[TRAINER_NAME_LENGTH + 1];
+    u16 items[MAX_TRAINER_ITEMS];
+    bool8 doubleBattle;
+    u32 aiFlags;
+    struct TrainerParty party;
+    struct TrainerParty classicParty;
+};
 
-#define NO_ITEM_CUSTOM_MOVES(identifier) { .NoItemCustomMoves = sParty_##identifier },\
-.classicParty = { .NoItemCustomMoves = sClassicParty_##identifier },\
-.partySize = ARRAY_COUNT(sParty_##identifier), .classicPartySize = ARRAY_COUNT(sClassicParty_##identifier),\
-.partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET
+#define NO_ITEM_DEFAULT_MOVES(identifier) { monPointers = { .NoItemDefaultMoves = identifier },\
+.flags = 0,\
+.size = ARRAY_COUNT(identifier)}
 
-#define ITEM_DEFAULT_MOVES(identifier) { .ItemDefaultMoves = sParty_##identifier },\
-.classicParty = { .ItemDefaultMoves = sClassicParty_##identifier },\
-.partySize = ARRAY_COUNT(sParty_##identifier), .classicPartySize = ARRAY_COUNT(sClassicParty_##identifier),\
-.partyFlags = F_TRAINER_PARTY_HELD_ITEM
+#define NO_ITEM_CUSTOM_MOVES(identifier) { monPointers = { .NoItemCustomMoves = identifier },\
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET,\
+.size = ARRAY_COUNT(identifier)}
 
-#define ITEM_CUSTOM_MOVES(identifier) { .ItemCustomMoves = sParty_##identifier },\
-.classicParty = { .ItemCustomMoves = sClassicParty_##identifier },\
-.partySize = ARRAY_COUNT(sParty_##identifier), .classicPartySize = ARRAY_COUNT(sClassicParty_##identifier),\
-.partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM
+#define ITEM_DEFAULT_MOVES(identifier) { monPointers = { .ItemDefaultMoves = identifier },\
+.flags = F_TRAINER_PARTY_HELD_ITEM,\
+.size = ARRAY_COUNT(identifier)}
 
-#define ITEM_CUSTOM_MOVES_EVS(identifier) { .ItemCustomMovesEVs = sParty_##identifier },\
-.classicParty = { .ItemCustomMovesEVs = sClassicParty_##identifier },\
-.partySize = ARRAY_COUNT(sParty_##identifier), .classicPartySize = ARRAY_COUNT(sClassicParty_##identifier),\
-.partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET
+#define ITEM_CUSTOM_MOVES(identifier) { monPointers = { .ItemCustomMoves = identifier },\
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM
+.size = ARRAY_COUNT(identifier)}
 
-#define ALL_CUSTOM(identifier) { .AllCustom = sParty_##identifier },\
-.classicParty = { .AllCustom = sClassicParty_##identifier },\
-.partySize = ARRAY_COUNT(sParty_##identifier), .classicPartySize = ARRAY_COUNT(sClassicParty_##identifier),\
-.partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY
+#define ITEM_CUSTOM_MOVES_EVS(identifier) { monPointers = { .ItemCustomMovesEVs = identifier },\
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET
+.size = ARRAY_COUNT(identifier)}
 
+#define ALL_CUSTOM(identifier) { monPointers = { .AllCustom = identifier },\
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY
+.size = ARRAY_COUNT(identifier)}
+
+#define LINK_TRAINER_MONS(trainerId, modernType, classicType) \
+.party = modernType(sParty_##trainerId),\
+.classicParty = classicType(sClassicParty_##trainerId)
 
 #define TRAINER_ENCOUNTER_MUSIC(trainer)((gTrainers[trainer].encounterMusic_gender & 0x7F))
 
