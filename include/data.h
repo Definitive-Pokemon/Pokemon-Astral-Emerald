@@ -140,15 +140,15 @@ struct Trainer
 .size = ARRAY_COUNT(identifier)}
 
 #define ITEM_CUSTOM_MOVES(identifier) { monPointers = { .ItemCustomMoves = identifier },\
-.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,\
 .size = ARRAY_COUNT(identifier)}
 
 #define ITEM_CUSTOM_MOVES_EVS(identifier) { monPointers = { .ItemCustomMovesEVs = identifier },\
-.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET,\
 .size = ARRAY_COUNT(identifier)}
 
 #define ALL_CUSTOM(identifier) { monPointers = { .AllCustom = identifier },\
-.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY
+.flags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_EV_SET | F_TRAINER_PARTY_SET_ABILITY,\
 .size = ARRAY_COUNT(identifier)}
 
 #define LINK_TRAINER_MONS(trainerId, modernType, classicType) \
