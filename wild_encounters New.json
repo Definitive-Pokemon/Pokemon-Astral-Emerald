@@ -14044,8 +14044,8 @@
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 14,
-                "max_level": 15,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_ODDISH"
               },
               {
@@ -14074,9 +14074,9 @@
                 "species": "SPECIES_VOLBEAT"
               },
               {
-                "min_level": 17,
-                "max_level": 17,
-                "species": "SPECIES_ODDISH"
+                "min_level": 14,
+                "max_level": 15,
+                "species": "SPECIES_BUDEW"
               },
               {
                 "min_level": 16,
@@ -18654,7 +18654,7 @@
               {
                 "min_level": 30,
                 "max_level": 30,
-                "species": "SPECIES_SHUPPET"
+                "species": "SPECIES_MISDREAVUS"
               },
               {
                 "min_level": 26,
@@ -18664,7 +18664,7 @@
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_SHUPPET"
+                "species": "SPECIES_MISDREAVUS"
               },
               {
                 "min_level": 29,
@@ -18674,7 +18674,7 @@
               {
                 "min_level": 24,
                 "max_level": 24,
-                "species": "SPECIES_SHUPPET"
+                "species": "SPECIES_MISDREAVUS"
               },
               {
                 "min_level": 23,
@@ -18792,7 +18792,7 @@
               {
                 "min_level": 30,
                 "max_level": 30,
-                "species": "SPECIES_SHUPPET"
+                "species": "SPECIES_MISDREAVUS"
               },
               {
                 "min_level": 28,
@@ -18802,7 +18802,7 @@
               {
                 "min_level": 27,
                 "max_level": 27,
-                "species": "SPECIES_SHUPPET"
+                "species": "SPECIES_MISDREAVUS"
               },
               {
                 "min_level": 29,
@@ -18812,7 +18812,7 @@
               {
                 "min_level": 27,
                 "max_level": 27,
-                "species": "SPECIES_SHUPPET"
+                "species": "SPECIES_MISDREAVUS"
               },
               {
                 "min_level": 26,
