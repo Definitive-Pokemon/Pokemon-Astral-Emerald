@@ -241,8 +241,8 @@
       "x": 7,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
