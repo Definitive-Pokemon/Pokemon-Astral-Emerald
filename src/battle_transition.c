@@ -266,7 +266,7 @@ static bool8 Mugshot_FadeToBlack(struct Task *);
 static bool8 Mugshot_End(struct Task *);
 static bool8 MugshotDoubleOpponent_Init(struct Task *);
 static bool8 Mugshot_StartDoubleOpponentSlide(struct Task *);
-static void DoDoubleBattleMugshotTransition(u8)
+static void DoDoubleBattleMugshotTransition(u8);
 static void Mugshots_DoubleBattle_CreateTrainerPics(struct Task *);
 static void DoMugshotTransition(u8);
 static void Mugshots_CreateTrainerPics(struct Task *);
