@@ -266,7 +266,8 @@ static bool8 Mugshot_FadeToBlack(struct Task *);
 static bool8 Mugshot_End(struct Task *);
 static bool8 MugshotDoubleOpponent_Init(struct Task *);
 static bool8 Mugshot_StartDoubleOpponentSlide(struct Task *);
-static void Mugshots_DoubleBattle_CreateTrainerPics(void);
+static void DoDoubleBattleMugshotTransition(u8)
+static void Mugshots_DoubleBattle_CreateTrainerPics(struct Task *);
 static void DoMugshotTransition(u8);
 static void Mugshots_CreateTrainerPics(struct Task *);
 static void VBlankCB_Mugshots(void);
@@ -588,7 +589,7 @@ static const TransitionStateFunc sDoubleBattleMugshot_Funcs[] =
     Mugshot_InitFadeWhiteToBlack,
     Mugshot_FadeToBlack,
     Mugshot_End
-}
+};
 
 static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
 {
@@ -596,8 +597,8 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_PHOEBE]   = TRAINER_PIC_ELITE_FOUR_PHOEBE,
     [MUGSHOT_GLACIA]   = TRAINER_PIC_ELITE_FOUR_GLACIA,
     [MUGSHOT_DRAKE]    = TRAINER_PIC_ELITE_FOUR_DRAKE,
-    [MUGSHOT_WALLACE] = TRAINER_PIC_CHAMPION_WALLACE,
-    [MUGSHOT_STEVEN] = TRAINER_PIC_STEVEN
+    [MUGSHOT_WALLACE]  = TRAINER_PIC_CHAMPION_WALLACE,
+    [MUGSHOT_STEVEN]   = TRAINER_PIC_STEVEN
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
