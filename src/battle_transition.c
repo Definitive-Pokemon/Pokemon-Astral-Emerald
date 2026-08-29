@@ -264,6 +264,9 @@ static bool8 Mugshot_GradualWhiteFade(struct Task *);
 static bool8 Mugshot_InitFadeWhiteToBlack(struct Task *);
 static bool8 Mugshot_FadeToBlack(struct Task *);
 static bool8 Mugshot_End(struct Task *);
+static bool8 MugshotDoubleOpponent_Init(struct Task *);
+static bool8 Mugshot_StartDoubleOpponentSlide(struct Task *);
+static void Mugshots_DoubleBattle_CreateTrainerPics(void);
 static void DoMugshotTransition(u8);
 static void Mugshots_CreateTrainerPics(struct Task *);
 static void VBlankCB_Mugshots(void);
@@ -573,6 +576,20 @@ static const TransitionStateFunc sMugshot_Funcs[] =
     Mugshot_End
 };
 
+static const TransitionStateFunc sDoubleBattleMugshot_Funcs[] = 
+{
+    MugshotDoubleOpponent_Init,
+    Mugshot_SetGfx,
+    Mugshot_ShowBanner,
+    Mugshot_StartDoubleOpponentSlide,
+    Mugshot_WaitStartPlayerSlide,
+    Mugshot_WaitPlayerSlide,
+    Mugshot_GradualWhiteFade,
+    Mugshot_InitFadeWhiteToBlack,
+    Mugshot_FadeToBlack,
+    Mugshot_End
+}
+
 static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
 {
     [MUGSHOT_SIDNEY]   = TRAINER_PIC_ELITE_FOUR_SIDNEY,
@@ -598,7 +615,7 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_GLACIA] =   {-4,  4},
     [MUGSHOT_DRAKE] =    { 0,  5},
     [MUGSHOT_WALLACE] = {-8,  7},
-    [MUGSHOT_STEVEN] = {-8,  7},
+    [MUGSHOT_STEVEN] = {0,  7},
 };
 
 static const TransitionSpriteCallback sMugshotTrainerPicFuncs[] =
@@ -2339,6 +2356,8 @@ static void VBlankCB_Wave(void)
 #define tBottomBannerX      data[3]
 #define tTimer              data[3] // Re-used
 #define tFadeSpread         data[4]
+#define tDoubleMugshotId    data[11]
+#define tOpponentBSpriteId  data[12]
 #define tOpponentSpriteId   data[13]
 #define tPlayerSpriteId     data[14]
 #define tMugshotId          data[15]
@@ -2377,9 +2396,8 @@ static void Task_Drake(u8 taskId)
 static void Task_WallaceAndSteven(u8 taskId)
 {
     gTasks[taskId].tMugshotId = MUGSHOT_WALLACE;
-    DoMugshotTransition(taskId);
-    gTasks[taskId].tMugshotId = MUGSHOT_STEVEN;
-    DoMugshotTransition(taskId);
+    gTasks[taskId].tDoubleMugshotId = MUGSHOT_STEVEN;
+    DoDoubleBattleMugshotTransition(taskId);
 }
 
 static void Task_Wallace(u8 taskId)
@@ -2393,6 +2411,11 @@ static void DoMugshotTransition(u8 taskId)
     while (sMugshot_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
+static void DoDoubleBattleMugshotTransition(u8 taskId)
+{
+    while (sDoubleBattleMugshot_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
 static bool8 Mugshot_Init(struct Task *task)
 {
     u8 i;
@@ -2400,6 +2423,30 @@ static bool8 Mugshot_Init(struct Task *task)
     InitTransitionData();
     ScanlineEffect_Clear();
     Mugshots_CreateTrainerPics(task);
+
+    task->tSinIndex = 0;
+    task->tTopBannerX = 1;
+    task->tBottomBannerX = DISPLAY_WIDTH - 1;
+    sTransitionData->WININ = WININ_WIN0_ALL;
+    sTransitionData->WINOUT = WINOUT_WIN01_BG1 | WINOUT_WIN01_BG2 | WINOUT_WIN01_BG3 | WINOUT_WIN01_OBJ | WINOUT_WIN01_CLR;
+    sTransitionData->WIN0V = DISPLAY_HEIGHT;
+
+    for (i = 0; i < DISPLAY_HEIGHT; i++)
+        gScanlineEffectRegBuffers[1][i] = (DISPLAY_WIDTH << 8) | (DISPLAY_WIDTH + 1);
+
+    SetVBlankCallback(VBlankCB_Mugshots);
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 MugshotDoubleOpponent_Init(struct Task *task)
+{
+    u8 i;
+
+    InitTransitionData();
+    ScanlineEffect_Clear();
+    Mugshots_DoubleBattle_CreateTrainerPics(task);
 
     task->tSinIndex = 0;
     task->tTopBannerX = 1;
@@ -2521,6 +2568,40 @@ static bool8 Mugshot_StartOpponentSlide(struct Task *task)
 
     // Start opponent slide
     IncrementTrainerPicState(task->tOpponentSpriteId);
+    
+    PlaySE(SE_MUGSHOT);
+
+    sTransitionData->VBlank_DMA++;
+    return FALSE;
+}
+
+static bool8 Mugshot_StartDoubleOpponentSlide(struct Task *task)
+{
+    u8 i;
+    u16 *toStore;
+
+    sTransitionData->VBlank_DMA = FALSE;
+
+    for (i = 0, toStore = gScanlineEffectRegBuffers[0]; i < DISPLAY_HEIGHT; i++, toStore++)
+        *toStore = DISPLAY_WIDTH;
+
+    task->tState++;
+
+    // Clear old data
+    task->tSinIndex = 0;
+    task->tTopBannerX = 0;
+    task->tBottomBannerX = 0;
+
+    sTransitionData->BG0HOFS_Lower -= 8;
+    sTransitionData->BG0HOFS_Upper += 8;
+
+    SetTrainerPicSlideDirection(task->tOpponentSpriteId, 0);
+    SetTrainerPicSlideDirection(task->tOpponentBSpriteId, 0);
+    SetTrainerPicSlideDirection(task->tPlayerSpriteId, 1);
+
+    // Start opponent slide
+    IncrementTrainerPicState(task->tOpponentSpriteId);
+    IncrementTrainerPicState(task->tOpponentBSpriteId);
 
     PlaySE(SE_MUGSHOT);
 
@@ -2712,6 +2793,58 @@ static void Mugshots_CreateTrainerPics(struct Task *task)
     SetOamMatrixRotationScaling(playerSprite->oam.matrixNum, -512, 512, 0);
 }
 
+static void Mugshots_DoubleBattle_CreateTrainerPics(struct Task *task)
+{
+    struct Sprite *opponentSpriteA, *opponentSpriteB,  *playerSprite;
+
+    s16 mugshotAId = task->tMugshotId;
+    s16 mugshotBId = task->tDoubleMugshotId;
+    task->tOpponentSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[mugshotAId],
+                                                  sMugshotsOpponentCoords[mugshotAId][0] - 32,
+                                                  sMugshotsOpponentCoords[mugshotAId][1] + 42,
+                                                  0, gDecompressionBuffer);
+    task->tOpponentBSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[mugshotBId],
+                                                  DISPLAY_WIDTH + 32,
+                                                  sMugshotsOpponentCoords[mugshotBId][1] + 42,
+                                                  0, gDecompressionBuffer);
+    task->tPlayerSpriteId = CreateTrainerSprite(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender),
+                                                DISPLAY_WIDTH + 32,
+                                                106,
+                                                0, gDecompressionBuffer);
+
+    opponentSpriteA = &gSprites[task->tOpponentSpriteId];
+    opponentSpriteB = &gSprites[task->tOpponentBSpriteId];
+    playerSprite = &gSprites[task->tPlayerSpriteId];
+
+    opponentSpriteA->callback = SpriteCB_MugshotTrainerPic;
+    opponentSpriteB->callback = SpriteCB_MugshotTrainerPic;
+    playerSprite->callback = SpriteCB_MugshotTrainerPic;
+
+    opponentSpriteA->oam.affineMode = ST_OAM_AFFINE_DOUBLE;
+    opponentSpriteB->oam.affineMode = ST_OAM_AFFINE_DOUBLE;
+    playerSprite->oam.affineMode = ST_OAM_AFFINE_DOUBLE;
+
+    opponentSpriteA->oam.matrixNum = AllocOamMatrix();
+    opponentSpriteB->oam.matrixNum = AllocOamMatrix();
+    playerSprite->oam.matrixNum = AllocOamMatrix();
+
+    opponentSpriteA->oam.shape = SPRITE_SHAPE(64x32);
+    opponentSpriteB->oam.shape = SPRITE_SHAPE(64x32);
+    playerSprite->oam.shape = SPRITE_SHAPE(64x32);
+
+    opponentSpriteA->oam.size = SPRITE_SIZE(64x32);
+    opponentSpriteB->oam.size = SPRITE_SIZE(64x32);
+    playerSprite->oam.size = SPRITE_SIZE(64x32);
+
+    CalcCenterToCornerVec(opponentSpriteA, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
+    CalcCenterToCornerVec(opponentSpriteB, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
+    CalcCenterToCornerVec(playerSprite, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
+
+    SetOamMatrixRotationScaling(opponentSpriteA->oam.matrixNum, sMugshotsOpponentRotationScales[mugshotId][0], sMugshotsOpponentRotationScales[mugshotId][1], 0);
+    SetOamMatrixRotationScaling(opponentSpriteB->oam.matrixNum, sMugshotsOpponentRotationScales[mugshotId][0], sMugshotsOpponentRotationScales[mugshotId][1], 0);
+    SetOamMatrixRotationScaling(playerSprite->oam.matrixNum, -512, 512, 0);
+}
+
 static void SpriteCB_MugshotTrainerPic(struct Sprite *sprite)
 {
     while (sMugshotTrainerPicFuncs[sprite->sState](sprite));
@@ -2802,6 +2935,8 @@ static s16 IsTrainerPicSlideDone(s16 spriteId)
 #undef tTopBannerX
 #undef tBottomBannerX
 #undef tTimer
+#undef tOpponentBSpriteId
+#undef tDoubleMugshotId
 #undef tFadeSpread
 #undef tOpponentSpriteId
 #undef tPlayerSpriteId
