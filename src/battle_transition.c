@@ -2841,8 +2841,8 @@ static void Mugshots_DoubleBattle_CreateTrainerPics(struct Task *task)
     CalcCenterToCornerVec(opponentSpriteB, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
     CalcCenterToCornerVec(playerSprite, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
 
-    SetOamMatrixRotationScaling(opponentSpriteA->oam.matrixNum, sMugshotsOpponentRotationScales[mugshotId][0], sMugshotsOpponentRotationScales[mugshotId][1], 0);
-    SetOamMatrixRotationScaling(opponentSpriteB->oam.matrixNum, sMugshotsOpponentRotationScales[mugshotId][0], sMugshotsOpponentRotationScales[mugshotId][1], 0);
+    SetOamMatrixRotationScaling(opponentSpriteA->oam.matrixNum, sMugshotsOpponentRotationScales[mugshotAId][0], sMugshotsOpponentRotationScales[mugshotAId][1], 0);
+    SetOamMatrixRotationScaling(opponentSpriteB->oam.matrixNum, sMugshotsOpponentRotationScales[mugshotBId][0], sMugshotsOpponentRotationScales[mugshotBId][1], 0);
     SetOamMatrixRotationScaling(playerSprite->oam.matrixNum, -512, 512, 0);
 }
 
