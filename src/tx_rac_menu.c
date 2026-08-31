@@ -44,7 +44,7 @@ enum
     MENUITEM_MODE_CLASSIC_MODERN,
     //Original / Post-game / New encounters
     MENUITEM_MODE_ALTERNATE_SPAWNS,
-        MENUITEM_MODE_TRAINER_TEAMS,
+    MENUITEM_MODE_TRAINER_TEAMS,
     //Gen VI+ / Improved
     MENUITEM_MODE_NEW_EFFECTIVENESS,
     //Original / Modern options
@@ -1035,7 +1035,6 @@ static const u8 *const sOptionMenuItemDescriptionsChallenges[MENUITEM_CHALLENGES
 static const u8 *const sOptionMenuItemDescriptionsDisabledMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = sText_Empty,
-    [MENUITEM_MODE_TRAINER_TEAMS]         = sText_Empty,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = sText_Empty,
     [MENUITEM_MODE_INFINITE_TMS]          = sText_Empty,
     [MENUITEM_MODE_SURVIVE_POISON]        = sText_Empty,
