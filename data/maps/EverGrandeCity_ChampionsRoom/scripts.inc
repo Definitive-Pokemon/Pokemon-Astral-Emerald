@@ -215,11 +215,11 @@ EverGrandeCity_ChampionsRoom_EventScript_DefeatedRematch::
 	end
 
 EverGrandeCity_ChampionsRoom_EventScript_RematchMayCantGoIn::
-	msgbox EverGrandeCity_ChampionsRoom_Text_RematchMayCantGoIn, MSGBOX_DEFAULT
+	@msgbox EverGrandeCity_ChampionsRoom_Text_RematchMayCantGoIn, MSGBOX_DEFAULT
 	return
 
 EverGrandeCity_ChampionsRoom_EventScript_RematchBrendanCantGoIn::
-	msgbox EverGrandeCity_ChampionsRoom_Text_RematchBrendanCantGoIn, MSGBOX_DEFAULT
+	@msgbox EverGrandeCity_ChampionsRoom_Text_RematchBrendanCantGoIn, MSGBOX_DEFAULT
 	return
 
 EverGrandeCity_ChampionsRoom_Movement_PlayerExitStart:
