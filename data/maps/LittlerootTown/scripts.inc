@@ -68,7 +68,7 @@ Debug_LT_TrainerMode_Modern::
 Debug_Text_Old:
 	.string "Vanilla teams$"
 
-Debug_Text_Old:
+Debug_Text_Modern:
 	.string "Astral teams!$"
 
 LittlerootTown_Disable_Pokeball_Mints::
