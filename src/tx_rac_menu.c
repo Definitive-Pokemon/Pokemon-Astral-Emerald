@@ -505,7 +505,7 @@ static const u8 sText_Next[]                = _("NEXT");
 static const u8 *const sOptionMenuItemsNamesMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]            = sText_Gamemode,
-    [MENUITEM_MODE_TRAINER_TEAMS]             = sText_Gamemode,
+    [MENUITEM_MODE_TRAINER_TEAMS]             = sText_TrainerTeams,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]          = sText_AlternateSpawns,
     [MENUITEM_MODE_INFINITE_TMS]              = sText_InfiniteTMs,
     [MENUITEM_MODE_SURVIVE_POISON]            = sText_Poison,
@@ -1455,6 +1455,7 @@ void CB2_InitTxRandomizerChallengesMenu(void)
         break;
     case 6:
         //tx_randomizer_and_challenges
+        gSaveBlock1Ptr->tx_Mode_Teams                       = TX_MODE_TRAINER_TEAMS;
         gSaveBlock1Ptr->tx_Mode_Encounters                  = TX_MODE_ALTERNATE_SPAWNS;
         gSaveBlock1Ptr->tx_Mode_InfiniteTMs                 = TX_MODE_INFINITE_TMS;
         gSaveBlock1Ptr->tx_Mode_PoisonSurvive               = TX_MODE_SURVIVE_POISON;
@@ -1885,6 +1886,7 @@ void SaveData_TxRandomizerAndChallenges(void)
 {
     PrintCurrentSelections();
     //MENU MODE
+    gSaveBlock1Ptr->tx_Mode_Teams                       = sOptions->sel_mode[MENUITEM_MODE_TRAINER_TEAMS];
     gSaveBlock1Ptr->tx_Mode_Encounters                  = sOptions->sel_mode[MENUITEM_MODE_ALTERNATE_SPAWNS];
     gSaveBlock1Ptr->tx_Mode_InfiniteTMs                 = sOptions->sel_mode[MENUITEM_MODE_INFINITE_TMS];
     gSaveBlock1Ptr->tx_Mode_PoisonSurvive               = sOptions->sel_mode[MENUITEM_MODE_SURVIVE_POISON];
