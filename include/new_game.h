@@ -14,5 +14,6 @@ void ResetMenuAndMonGlobals(void);
 void Sav2_ClearSetDefault(void);
 void CheckIfChallengesAreActive(void);
 void CheckIfRandomizerIsActive(void);
+bool8 AstralTrainerTeamsEnabled(void);
 
 #endif // GUARD_NEW_GAME_H

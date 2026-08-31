@@ -572,3 +572,4 @@ gSpecials::
     def_special NameRival
     def_special Special_OpenChallengeViewer
 	def_special UpdateGymLeaderRematch
+	def_special AstralTrainerTeamsEnabled

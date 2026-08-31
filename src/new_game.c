@@ -300,6 +300,12 @@ void CheckIfRandomizerIsActive(void)
             FlagSet(FLAG_WT_ENABLED_RANDOMIZER);
 }
 
+bool8 AstralTrainerTeamsEnabled(void)
+{
+    return gSaveBlock1Ptr->tx_Mode_Teams;
+}
+
+
 static void ResetMiniGamesRecords(void)
 {
     CpuFill16(0, &gSaveBlock2Ptr->berryCrush, sizeof(struct BerryCrush));
