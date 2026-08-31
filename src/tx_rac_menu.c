@@ -505,7 +505,7 @@ static const u8 sText_Next[]                = _("NEXT");
 static const u8 *const sOptionMenuItemsNamesMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]            = sText_Gamemode,
-    [MENUITEM_MODE_TRAINER_TEAMS]             = sText_TrainerTeams,
+    [MENUITEM_MODE_TRAINER_TEAMS]             = sText_Gamemode,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]          = sText_AlternateSpawns,
     [MENUITEM_MODE_INFINITE_TMS]              = sText_InfiniteTMs,
     [MENUITEM_MODE_SURVIVE_POISON]            = sText_Poison,
