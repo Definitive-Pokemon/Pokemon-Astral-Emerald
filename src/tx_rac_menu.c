@@ -42,9 +42,9 @@ enum
 {
     //Preset selector
     MENUITEM_MODE_CLASSIC_MODERN,
-    MENUITEM_MODE_TRAINER_TEAMS,
     //Original / Post-game / New encounters
     MENUITEM_MODE_ALTERNATE_SPAWNS,
+        MENUITEM_MODE_TRAINER_TEAMS,
     //Gen VI+ / Improved
     MENUITEM_MODE_NEW_EFFECTIVENESS,
     //Original / Modern options
@@ -370,8 +370,8 @@ struct // MENU_MODE
 } static const sItemFunctionsMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = {DrawChoices_Mode_Classic_Modern_Selector,       ProcessInput_Options_Three},
+        [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {DrawChoices_Mode_AlternateSpawns,      ProcessInput_Options_Three},
     [MENUITEM_MODE_TRAINER_TEAMS]         = {DrawChoices_Mode_Change_Teams,         ProcessInput_Options_Two},
-    [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {DrawChoices_Mode_AlternateSpawns,      ProcessInput_Options_Three},
     [MENUITEM_MODE_INFINITE_TMS]          = {DrawChoices_Mode_InfiniteTMs,          ProcessInput_Options_Two},
     [MENUITEM_MODE_SURVIVE_POISON]        = {DrawChoices_Mode_SurvivePoison,        ProcessInput_Options_Two},
     [MENUITEM_MODE_SYNCHRONIZE]           = {DrawChoices_Mode_Synchronize,          ProcessInput_Options_Two},
