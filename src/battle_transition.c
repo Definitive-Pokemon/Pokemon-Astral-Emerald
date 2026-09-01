@@ -2396,8 +2396,8 @@ static void Task_Drake(u8 taskId)
 
 static void Task_WallaceAndSteven(u8 taskId)
 {
-    gTasks[taskId].tMugshotId = MUGSHOT_WALLACE;
-    gTasks[taskId].tDoubleMugshotId = MUGSHOT_STEVEN;
+    gTasks[taskId].tMugshotId = MUGSHOT_STEVEN;
+    gTasks[taskId].tDoubleMugshotId = MUGSHOT_WALLACE;
     DoDoubleBattleMugshotTransition(taskId);
 }
 
