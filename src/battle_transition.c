@@ -2597,7 +2597,7 @@ static bool8 Mugshot_StartDoubleOpponentSlide(struct Task *task)
     sTransitionData->BG0HOFS_Upper += 8;
 
     SetTrainerPicSlideDirection(task->tOpponentSpriteId, 0);
-    SetTrainerPicSlideDirection(task->tOpponentBSpriteId, 0);
+    SetTrainerPicSlideDirection(task->tOpponentBSpriteId, 1);
     SetTrainerPicSlideDirection(task->tPlayerSpriteId, 1);
 
     // Start opponent slide
