@@ -21,7 +21,7 @@ jobs:
                 /agbcc
                 /pokeemerald
                 /bin
-          key: default-cache
+          key: ${{ runner.os }}
           
       - uses: actions/checkout@v6
       - name: Install dependencies (no cache)
