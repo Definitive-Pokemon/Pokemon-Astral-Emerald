@@ -439,8 +439,14 @@
 #define ITEM_SASSY_MINT          395
 #define ITEM_SERIOUS_MINT        396
 #define ITEM_TIMID_MINT          397
+#define ITEM_TM51                398
+#define ITEM_TM52                399
+#define ITEM_TM53                400
+#define ITEM_TM54                401
+#define ITEM_TM55                402
+#define ITEM_TM56                403
 
-#define ITEMS_COUNT              398
+#define ITEMS_COUNT              404
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
 // Its icon is defined at ITEMS_COUNT as the "return to field" arrow
