@@ -236,14 +236,11 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerExit:
 	step_end
 
 EverGrandeCity_ChampionsRoom_Movement_PlayerExitRematch:
-	walk_up
 	delay_16
 	walk_up
-	delay_8
 	walk_up
-	delay_8
 	walk_up
-	delay_8
+	walk_up
 	set_invisible
 	step_end
 
