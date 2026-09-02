@@ -9207,7 +9207,7 @@ static const struct TrainerMonNoItemDefaultMoves sClassicParty_WallyMauville[] =
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sClassicParty_WallyVR2[] = {
+static const struct TrainerMonItemCustomMoves sClassicParty_WallyVR2[] = {
     {
     .iv = 255,
     .lvl = 55,
@@ -9252,7 +9252,7 @@ static const struct TrainerMonNoItemCustomMoves sClassicParty_WallyVR2[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sClassicParty_WallyVR3[] = {
+static const struct TrainerMonItemCustomMoves sClassicParty_WallyVR3[] = {
     {
     .iv = 255,
     .lvl = 61,
@@ -9297,7 +9297,7 @@ static const struct TrainerMonNoItemCustomMoves sClassicParty_WallyVR3[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sClassicParty_WallyVR4[] = {
+static const struct TrainerMonItemCustomMoves sClassicParty_WallyVR4[] = {
     {
     .iv = 255,
     .lvl = 67,
@@ -9342,7 +9342,7 @@ static const struct TrainerMonNoItemCustomMoves sClassicParty_WallyVR4[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sClassicParty_WallyVR5[] = {
+static const struct TrainerMonItemCustomMoves sClassicParty_WallyVR5[] = {
     {   
     .iv = 255,
     .lvl = 72,
