@@ -634,17 +634,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
 	checkrandomizer
-	call_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedexAltered
-	call_if_ge VAR_ENCOUNTER_TABLE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedexAltered
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
-	return
-
-LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedexAltered::
-	setflag FLAG_SYS_NATIONAL_DEX
-	special EnableNationalPokedex
-	setflag FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS
-	clearflag FLAG_HIDE_SAFARI_ZONE_SOUTH_EAST_EXPANSION
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_PokemonAwait::
