@@ -11274,7 +11274,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_Wattson4[] = {
     {
     .iv = 255,
     .lvl = 60,
-    .species = SPECIES_PORYGONZ_,
+    .species = SPECIES_PORYGON_Z,
     .heldItem = ITEM_CHOICE_BAND,
     .moves = {MOVE_HYPER_BEAM, MOVE_IRON_TAIL, MOVE_AERIAL_ACE, MOVE_THIEF}
     },
