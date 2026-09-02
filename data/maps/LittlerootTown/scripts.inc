@@ -56,6 +56,21 @@ LittlerootTown_OnTransition:
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_EventScript_LeftLabAfterDexUpgrade
 	end
 
+Debug_LT_TrainerMode::
+	specialvar VAR_RESULT, AstralTrainerTeamsEnabled
+	goto_if_eq Debug_LT_TrainerMode_Modern
+	msgbox Debug_Text_Old, MSGBOX_DEFAULT
+	end
+Debug_LT_TrainerMode_Modern::
+	msgbox Debug_Text_Modern, MSGBOX_DEFAULT
+	end
+
+Debug_Text_Old:
+	.string "Vanilla teams$"
+
+Debug_Text_Modern:
+	.string "Astral teams!$"
+
 LittlerootTown_Disable_Pokeball_Mints::
 	setflag FLAG_MODEST_MINT_LILYCOVE
 	setflag FLAG_TIMID_MINT_MAUVILLE

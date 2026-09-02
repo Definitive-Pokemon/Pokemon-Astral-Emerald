@@ -42,9 +42,9 @@ enum
 {
     //Preset selector
     MENUITEM_MODE_CLASSIC_MODERN,
-    MENUITEM_MODE_TRAINER_TEAMS,
     //Original / Post-game / New encounters
     MENUITEM_MODE_ALTERNATE_SPAWNS,
+    MENUITEM_MODE_TRAINER_TEAMS,
     //Gen VI+ / Improved
     MENUITEM_MODE_NEW_EFFECTIVENESS,
     //Original / Modern options
@@ -370,8 +370,8 @@ struct // MENU_MODE
 } static const sItemFunctionsMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = {DrawChoices_Mode_Classic_Modern_Selector,       ProcessInput_Options_Three},
+        [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {DrawChoices_Mode_AlternateSpawns,      ProcessInput_Options_Three},
     [MENUITEM_MODE_TRAINER_TEAMS]         = {DrawChoices_Mode_Change_Teams,         ProcessInput_Options_Two},
-    [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {DrawChoices_Mode_AlternateSpawns,      ProcessInput_Options_Three},
     [MENUITEM_MODE_INFINITE_TMS]          = {DrawChoices_Mode_InfiniteTMs,          ProcessInput_Options_Two},
     [MENUITEM_MODE_SURVIVE_POISON]        = {DrawChoices_Mode_SurvivePoison,        ProcessInput_Options_Two},
     [MENUITEM_MODE_SYNCHRONIZE]           = {DrawChoices_Mode_Synchronize,          ProcessInput_Options_Two},
@@ -1035,7 +1035,6 @@ static const u8 *const sOptionMenuItemDescriptionsChallenges[MENUITEM_CHALLENGES
 static const u8 *const sOptionMenuItemDescriptionsDisabledMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = sText_Empty,
-    [MENUITEM_MODE_TRAINER_TEAMS]         = sText_Empty,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = sText_Empty,
     [MENUITEM_MODE_INFINITE_TMS]          = sText_Empty,
     [MENUITEM_MODE_SURVIVE_POISON]        = sText_Empty,
@@ -1455,6 +1454,7 @@ void CB2_InitTxRandomizerChallengesMenu(void)
         break;
     case 6:
         //tx_randomizer_and_challenges
+        gSaveBlock1Ptr->tx_Mode_Teams                       = TX_MODE_TRAINER_TEAMS;
         gSaveBlock1Ptr->tx_Mode_Encounters                  = TX_MODE_ALTERNATE_SPAWNS;
         gSaveBlock1Ptr->tx_Mode_InfiniteTMs                 = TX_MODE_INFINITE_TMS;
         gSaveBlock1Ptr->tx_Mode_PoisonSurvive               = TX_MODE_SURVIVE_POISON;
@@ -1885,6 +1885,7 @@ void SaveData_TxRandomizerAndChallenges(void)
 {
     PrintCurrentSelections();
     //MENU MODE
+    gSaveBlock1Ptr->tx_Mode_Teams                       = sOptions->sel_mode[MENUITEM_MODE_TRAINER_TEAMS];
     gSaveBlock1Ptr->tx_Mode_Encounters                  = sOptions->sel_mode[MENUITEM_MODE_ALTERNATE_SPAWNS];
     gSaveBlock1Ptr->tx_Mode_InfiniteTMs                 = sOptions->sel_mode[MENUITEM_MODE_INFINITE_TMS];
     gSaveBlock1Ptr->tx_Mode_PoisonSurvive               = sOptions->sel_mode[MENUITEM_MODE_SURVIVE_POISON];
