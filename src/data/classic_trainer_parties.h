@@ -10950,7 +10950,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_Roxanne4[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Roxanne5[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 65,
@@ -11115,7 +11115,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_Brawly4[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Brawly5[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Brawly5[] = {
     {
     .iv = 255,
     .lvl = 65,
@@ -11287,7 +11287,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_Wattson4[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Wattson5[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Wattson5[] = {
     {
     .iv = 255,
     .lvl = 65,
@@ -11466,7 +11466,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_Flannery4[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Flannery5[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Flannery5[] = {
     {
     .iv = 255,
     .lvl = 65,
@@ -11652,7 +11652,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_Norman4[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Norman5[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Norman5[] = {
     {
     .iv = 255,
     .lvl = 65,
@@ -11838,7 +11838,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_Winona4[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Winona5[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Winona5[] = {
     {
     .iv = 255,
     .lvl = 65,
@@ -12024,7 +12024,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_TateAndLiza4[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_TateAndLiza5[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_TateAndLiza5[] = {
     {
     .iv = 255,
     .lvl = 65,
@@ -12204,7 +12204,7 @@ static const struct TrainerMonItemCustomMoves sClassicParty_Juan4[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Juan5[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Juan5[] = {
     {
     .iv = 255,
     .lvl = 65,
