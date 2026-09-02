@@ -320,7 +320,7 @@ static const struct TrainerMonNoItemDefaultMoves sClassicParty_Matt[] = {
     .iv = 50,
     .lvl = 34,
     .species = SPECIES_GOLBAT,
-    }
+    },
     {
     .iv = 50,
     .lvl = 34,
