@@ -1270,7 +1270,7 @@
 #define FLAG_GOT_JUAN_REMATCH_REWARD                                           0x4C3 // Unused Flag
 #define FLAG_BEAT_ARCHIE_MARINE_CAVE                                           0x4C4 // Unused Flag
 #define FLAG_BEAT_MAXIE_TERRA_CAVE                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
+#define FLAG_NO_CHAMPION                                            0x4C6 // Unused Flag
 #define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
 #define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
 #define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
