@@ -13151,7 +13151,7 @@ static const struct TrainerMonNoItemDefaultMoves sClassicParty_MayLinkPlaceholde
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Chansey1[] = { //Unused
+static const struct TrainerMonNoItemCustomMoves sClassicParty_Chansey1[] = { //Unused
     {
     .iv = 0,
     .lvl = 15,
@@ -13166,7 +13166,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Chansey1[] = { //Unused
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Chansey3[] = { //Unused
+static const struct TrainerMonNoItemCustomMoves sClassicParty_Chansey3[] = { //Unused
     {
     .iv = 0,
     .lvl = 25,
@@ -13193,7 +13193,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Chansey3[] = { //Unused
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Chansey4[] = { //Unused
+static const struct TrainerMonNoItemCustomMoves sClassicParty_Chansey4[] = { //Unused
     {
     .iv = 0,
     .lvl = 30,
@@ -13220,7 +13220,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Chansey4[] = { //Unused
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Nurse[] = {
+static const struct TrainerMonNoItemCustomMoves sClassicParty_Nurse[] = {
     {
     .iv = 0,
     .lvl = 100,
@@ -13259,7 +13259,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Nurse[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMovesEVs sParty_Sidney2[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Sidney2[] = {
     {
     .iv = 255,
     .lvl = 67,
@@ -13310,7 +13310,7 @@ static const struct TrainerMonItemCustomMovesEVs sParty_Sidney2[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMovesEVs sParty_Phoebe2[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Phoebe2[] = {
     {
     .iv = 255,
     .lvl = 68,
@@ -13361,7 +13361,7 @@ static const struct TrainerMonItemCustomMovesEVs sParty_Phoebe2[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMovesEVs sParty_Glacia2[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Glacia2[] = {
     {
     .iv = 255,
     .lvl = 72,
@@ -13412,7 +13412,7 @@ static const struct TrainerMonItemCustomMovesEVs sParty_Glacia2[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMovesEVs sParty_Drake2[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Drake2[] = {
     {
     .iv = 255,
     .lvl = 72,
@@ -13464,7 +13464,7 @@ static const struct TrainerMonItemCustomMovesEVs sParty_Drake2[] = {
 };
 
 // Magma Admin (Magma Hideout)
-static const struct TrainerMonNoItemDefaultMoves sParty_Courtney1[] = {
+static const struct TrainerMonNoItemDefaultMoves sClassicParty_Courtney1[] = {
     {
     .iv = 75,
     .lvl = 30,
@@ -13483,7 +13483,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Courtney1[] = {
 };
 
 // Magma Admin (Space Center)
-static const struct TrainerMonNoItemDefaultMoves sParty_Courtney2[] = {
+static const struct TrainerMonNoItemDefaultMoves sClassicParty_Courtney2[] = {
     {
     .iv = 100,
     .lvl = 36,
@@ -13502,7 +13502,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Courtney2[] = {
 };
 
 // Archie Double Battle (Mt Pyre)
-static const struct TrainerMonNoItemDefaultMoves sParty_ArchieMtPyre[] = {
+static const struct TrainerMonNoItemDefaultMoves sClassicParty_ArchieMtPyre[] = {
     {
     .iv = 150,
     .lvl = 33,
@@ -13520,7 +13520,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ArchieMtPyre[] = {
     }
 };
 // Matt Double Battle (Mt Pyre)
-static const struct TrainerMonNoItemDefaultMoves sParty_MattMtPyre[] = {
+static const struct TrainerMonNoItemDefaultMoves sClassicParty_MattMtPyre[] = {
     {
     .iv = 150,
     .lvl = 31,
@@ -13539,7 +13539,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MattMtPyre[] = {
 };
 
 // Archie Marine Cave (Post Game)
-static const struct TrainerMonItemCustomMoves sParty_ArchieMarineCave[] = {
+static const struct TrainerMonItemCustomMoves sClassicParty_ArchieMarineCave[] = {
     {
     .iv = 150,
     .lvl = 66,
@@ -13585,7 +13585,7 @@ static const struct TrainerMonItemCustomMoves sParty_ArchieMarineCave[] = {
 };
 
 // Maxie Terra Cave (Post Game)
-static const struct TrainerMonItemCustomMoves sParty_MaxieTerraCave[] = {
+static const struct TrainerMonItemCustomMoves sClassicParty_MaxieTerraCave[] = {
     {
     .iv = 150,
     .lvl = 65,
