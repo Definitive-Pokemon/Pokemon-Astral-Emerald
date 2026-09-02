@@ -1232,6 +1232,7 @@ static const u16 sVictreebelLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_KNOCK_OFF),
     LEVEL_UP_MOVE( 1, MOVE_POISON_POWDER),
     LEVEL_UP_MOVE(47, MOVE_LEAF_BLADE),
+    LEVEL_UP_MOVE(50, MOVE_POISON_JAB),
     LEVEL_UP_END
 };
 
