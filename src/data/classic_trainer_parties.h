@@ -8005,7 +8005,7 @@ static const struct TrainerMonNoItemDefaultMoves sClassicParty_GruntSeafloorCave
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Steven2[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Steven2[] = {
     {
     .iv = 255,
     .lvl = 76,
@@ -12238,7 +12238,7 @@ static const struct TrainerMonNoItemDefaultMoves sClassicParty_Darius[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sClassicParty_Wallace2[] = {
+static const struct TrainerMonItemCustomMovesEVs sClassicParty_Wallace2[] = {
     {
     .iv = 255,
     .lvl = 77,
@@ -13432,7 +13432,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Courtney1[] = {
     .iv = 75,
     .lvl = 30,
     .species = SPECIES_MIGHTYENA,
-    }
+    },
     {
     .iv = 75,
     .lvl = 32,
