@@ -51,7 +51,7 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
     F(DARK_PULSE) \
     F(FOCUS_BLAST) \
     F(FLASH_CANNON) \
