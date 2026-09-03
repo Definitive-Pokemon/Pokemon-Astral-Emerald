@@ -4575,3 +4575,77 @@ void SwitchMonAbility(void)
         gSpecialVar_Result = FALSE;
     }
 }
+
+void CheckGotAllKantoStarters(void)
+{
+    if (FlagGet(FLAG_RIVAL_GOT_BULBASAUR) &&
+        FlagGet(FLAG_RIVAL_GOT_CHARMANDER) &&
+        FlagGet(FLAG_RIVAL_GOT_SQUIRTLE))
+    {
+        FlagSet(FLAG_RIVAL_GOT_ALL_KANTO_MONS);
+        return;
+    }
+}
+
+void HasRematchBeenFought(void)
+{
+    if (FlagGet(TRAINER_FLAGS_START + gSpecialVar_0x8005))
+    {
+        gSpecialVar_Result = TRUE;
+        return;
+    }
+    else
+    {
+        gSpecialVar_Result = FALSE;
+    }
+}
+
+void CheckFoundAllHeartScales(void)
+{
+    if (FlagGet(FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_1) &&
+        FlagGet(FLAG_HIDDEN_ITEM_UNDERWATER_126_HEART_SCALE) &&
+        FlagGet(FLAG_HIDDEN_ITEM_UNDERWATER_127_HEART_SCALE) &&
+        FlagGet(FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE) &&
+        FlagGet(FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_2) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_106_HEART_SCALE) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_1) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_118_HEART_SCALE) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_105_HEART_SCALE) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_2) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_3) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_1) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_2) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_3) &&
+        FlagGet(FLAG_HIDDEN_ITEM_ROUTE_115_HEART_SCALE))
+    {
+        gSpecialVar_Result = TRUE;
+        return;
+    }
+    else
+    {
+        gSpecialVar_Result = FALSE;
+    }
+}
+
+void CheckFoundAllKecleon(void)
+{
+    if (FlagGet(FLAG_HIDE_FORTREE_CITY_KECLEON) &&
+        FlagGet(FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE) &&
+        FlagGet(FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE_SHADOW) &&
+        FlagGet(FLAG_HIDE_ROUTE_120_KECLEON_1) &&
+        FlagGet(FLAG_HIDE_ROUTE_120_KECLEON_2) &&
+        FlagGet(FLAG_HIDE_ROUTE_120_KECLEON_3) &&
+        FlagGet(FLAG_HIDE_ROUTE_120_KECLEON_4) &&
+        FlagGet(FLAG_HIDE_ROUTE_120_KECLEON_5) &&
+        FlagGet(FLAG_HIDE_ROUTE_119_KECLEON_1) &&
+        FlagGet(FLAG_HIDE_ROUTE_119_KECLEON_2))
+    {
+        gSpecialVar_Result = TRUE;
+        return;
+    }
+    else
+    {
+        gSpecialVar_Result = FALSE;
+    }
+}
