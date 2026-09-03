@@ -1272,9 +1272,9 @@
 #define FLAG_BEAT_MAXIE_TERRA_CAVE                                           0x4C5 // Unused Flag
 #define FLAG_NO_CHAMPION                                            0x4C6 // Unused Flag
 #define FLAG_RIVAL_GOT_ALL_KANTO_MONS                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
+#define FLAG_RIVAL_GOT_BULBASAUR                                           0x4C8 // Unused Flag
+#define FLAG_RIVAL_GOT_CHARMANDER                                           0x4C9 // Unused Flag
+#define FLAG_RIVAL_GOT_SQUIRTLE                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
