@@ -5,7 +5,7 @@ FortreeCity_House1_EventScript_Trader::
 	lock
 	faceplayer
 	goto_if_set FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_PLUSLE
+	setvar VAR_0x8008, INGAME_TRADE_LOUDRED
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -61,32 +61,34 @@ FortreeCity_House1_EventScript_Zigzagoon::
 	end
 
 FortreeCity_House1_Text_YouWillTradeWontYou:
-	.string "Wrooooaaar! I need it!\n"
-	.string "I have to get me a {STR_VAR_1}!\l"
-	.string "I'll do anything for it!\p"
-	.string "…Uh… Did you hear that?\n"
-	.string "My shout from the bottom of my heart?\p"
-	.string "Having heard that, you will trade\n"
+	.string "Hey, listen up! I've been searching\n"
+	.string "for a {STR_VAR_1} forever!\l"
+	.string "I can’t rest until I have one!\p"
+	.string "…Did you catch that?\n"
+	.string "That’s the sound of pure determination!\p"
+	.string "Now that you know, you'll trade\n"
 	.string "your {STR_VAR_1} for my {STR_VAR_2},\l"
-	.string "won't you?$"
+	.string "right?$"
 
 FortreeCity_House1_Text_MonYouTakeCare:
-	.string "Oh, yeah, right on!\p"
-	.string "{STR_VAR_1}, welcome!\n"
-	.string "{STR_VAR_2}, you take care!$"
+	.string "Wow! You really want to trade! I’ll make\n"
+	.string "sure to keep this {STR_VAR_1} in top\l"
+	.string "shape.\p"
+	.string "You take good care of my {STR_VAR_2},\n"
+	.string "okay?$"
 
 FortreeCity_House1_Text_ThisIsntAMon:
-	.string "Uh, no, I don't think so.\n"
-	.string "That isn't a {STR_VAR_1}.$"
+	.string "Hmm, no, that’s not it.\n"
+	.string "I need a real {STR_VAR_1}.$"
 
 FortreeCity_House1_Text_YouWontTradeMe:
-	.string "No? You won't trade me?\n"
-	.string "Even after I bared my heart to you?$"
+	.string "Oh, I see… Not interested in trading,\n"
+	.string "huh? That’s okay, maybe another time!$"
 
 FortreeCity_House1_Text_GoingToMakeVolbeatStrong:
-	.string "I'm going to make Volbeat super\n"
-	.string "strong from this moment on!\p"
-	.string "I hope you do the same with Plusle!$"
+	.string "My Kecleon is gonna be the strongest\n"
+	.string "one around! I hope Loudred fits\l"
+	.string "right into your team!$"
 
 FortreeCity_House1_Text_TradingMemoriesWithOthers:
 	.string "Trading Pokémon with others…\p"
