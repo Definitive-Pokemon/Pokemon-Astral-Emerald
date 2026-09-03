@@ -1142,7 +1142,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Vito[] = {
     }
 };
 // Victory Road CooltrainerM
-static const struct TrainerMonNoItemCustomMoves sParty_Owen[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Owen[] = {
     {
     .iv = 100,
     .lvl = 47,
@@ -14619,7 +14619,7 @@ static const struct TrainerMonItemCustomMoves sParty_ArchieMtPyre[] = {
     }
 };
 // Matt Double Battle (Mt Pyre)
-static const struct TrainerMonItemCustomMoves sParty_MattMyPyre[] = {
+static const struct TrainerMonItemCustomMoves sParty_MattMtPyre[] = {
     {
     .iv = 150,
     .lvl = 36,
