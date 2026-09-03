@@ -10279,12 +10279,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_HP_AWARE | AI_SCRIPT_TRY_SUNNY_DAY_START,
-        .party = {
-            .size = ARRAY_COUNT(sParty_Courtney2),
-            .flags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-            .monPointers = {.ItemCustomMoves = sParty_Courtney2}
-        },
-        .classicParty = NULL
+        LINK_TRAINER_MONS(Courtney2, ITEM_CUSTOM_MOVES, NO_ITEM_DEFAULT_MOVES),
     },
 
     [TRAINER_ARCHIE_MT_PYRE] =
@@ -10296,12 +10291,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_PREFER_POWER_EXTREMES,
-        .party = {
-            .size = ARRAY_COUNT(sParty_ArchieMtPyre),
-            .flags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-            .monPointers = {.ItemCustomMoves = sParty_ArchieMtPyre}
-        },
-        .classicParty = NULL
+        LINK_TRAINER_MONS(sParty_ArchieMtPyre, ITEM_CUSTOM_MOVES, NO_ITEM_DEFAULT_MOVES),
     },
 
     [TRAINER_MATT_MT_PYRE] =
@@ -10313,12 +10303,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_RISKY,
-        .party = {
-            .size = ARRAY_COUNT(sParty_MattMyPyre),
-            .flags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-            .monPointers = {.ItemCustomMoves = sParty_MattMyPyre}
-        },
-        .classicParty = NULL
+        LINK_TRAINER_MONS(sParty_MattMtPyre, ITEM_CUSTOM_MOVES, NO_ITEM_DEFAULT_MOVES),
     },
 
     [TRAINER_ARCHIE_MARINE_CAVE] =
@@ -10330,13 +10315,9 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_PREFER_POWER_EXTREMES,
-        .party = {
-            .size = ARRAY_COUNT(sParty_ArchieMarineCave),
-            .flags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-            .monPointers = {.ItemCustomMoves = sParty_ArchieMarineCave}
-        },
-        .classicParty = NULL
+        LINK_TRAINER_MONS(sParty_ArchieMarineCave, ITEM_CUSTOM_MOVES, ITEM_CUSTOM_MOVES),
     },
+
 
     [TRAINER_MAXIE_TERRA_CAVE] =
     {
@@ -10347,12 +10328,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_PREFER_POWER_EXTREMES | AI_SCRIPT_TRY_SUNNY_DAY_START,
-        .party = {
-            .size = ARRAY_COUNT(sParty_MaxieTerraCave),
-            .flags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-            .monPointers = {.ItemCustomMoves = sParty_MaxieTerraCave}
-        },
-        .classicParty = NULL
+        LINK_TRAINER_MONS(sParty_MaxieTerraCave, ITEM_CUSTOM_MOVES, ITEM_CUSTOM_MOVES),
     },
 
     [TRAINER_SIDNEY_2] =
