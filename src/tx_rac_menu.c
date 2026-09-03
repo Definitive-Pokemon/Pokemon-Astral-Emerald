@@ -42,10 +42,9 @@ enum
 {
     //Preset selector
     MENUITEM_MODE_CLASSIC_MODERN,
-    //Emerald Astral version teams
-    MENUITEM_MODE_TRAINER_TEAMS,
     //Original / Post-game / New encounters
     MENUITEM_MODE_ALTERNATE_SPAWNS,
+    MENUITEM_MODE_TRAINER_TEAMS,
     //Gen VI+ / Improved
     MENUITEM_MODE_NEW_EFFECTIVENESS,
     //Original / Modern options
@@ -372,7 +371,7 @@ struct // MENU_MODE
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = {DrawChoices_Mode_Classic_Modern_Selector,       ProcessInput_Options_Three},
         [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {DrawChoices_Mode_AlternateSpawns,      ProcessInput_Options_Three},
- 
+    [MENUITEM_MODE_TRAINER_TEAMS]         = {DrawChoices_Mode_Change_Teams,         ProcessInput_Options_Two},
     [MENUITEM_MODE_INFINITE_TMS]          = {DrawChoices_Mode_InfiniteTMs,          ProcessInput_Options_Two},
     [MENUITEM_MODE_SURVIVE_POISON]        = {DrawChoices_Mode_SurvivePoison,        ProcessInput_Options_Two},
     [MENUITEM_MODE_SYNCHRONIZE]           = {DrawChoices_Mode_Synchronize,          ProcessInput_Options_Two},
@@ -506,6 +505,7 @@ static const u8 sText_Next[]                = _("NEXT");
 static const u8 *const sOptionMenuItemsNamesMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]            = sText_Gamemode,
+    [MENUITEM_MODE_TRAINER_TEAMS]             = sText_TrainerTeams,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]          = sText_AlternateSpawns,
     [MENUITEM_MODE_INFINITE_TMS]              = sText_InfiniteTMs,
     [MENUITEM_MODE_SURVIVE_POISON]            = sText_Poison,
@@ -817,6 +817,7 @@ static const u8 sText_Description_Mode_Next[]                     = _("Continue 
 static const u8 *const sOptionMenuItemDescriptionsMode[MENUITEM_MODE_COUNT][5] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = {sText_Description_Mode_Gamemode_Classic,       sText_Description_Mode_Gamemode_Modern,       sText_Description_Mode_Gamemode_Custom,             sText_Empty,                                        sText_Empty},
+    [MENUITEM_MODE_TRAINER_TEAMS]         = {sText_Description_Mode_TrainerTeams_Classic,   sText_Description_Mode_TrainerTeams_Modern,   sText_Empty,                                        sText_Empty,                                        sText_Empty},
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {sText_Description_Mode_AlternateSpawns_Vanilla,    sText_Description_Mode_AlternateSpawns_Modern,      sText_Description_Mode_AlternateSpawns_Postgame,                                         sText_Empty,                                        sText_Empty},
     [MENUITEM_MODE_INFINITE_TMS]          = {sText_Description_Mode_InfiniteTMs_Off,        sText_Description_Mode_InfiniteTMs_On,        sText_Empty,                                        sText_Empty,                                        sText_Empty},
     [MENUITEM_MODE_SURVIVE_POISON]        = {sText_Description_Mode_SurvivePoison_Off,      sText_Description_Mode_SurvivePoison_On,      sText_Empty,                                        sText_Empty,                                        sText_Empty},
@@ -1180,7 +1181,7 @@ static u8 MenuItemCount(void)
 {
     switch (sOptions->submenu)
     {
-    case MENU_MODE:         return MENUITEM_MODE_COUNT - 1;
+    case MENU_MODE:         return MENUITEM_MODE_COUNT;
     case MENU_FEATURES:     return MENUITEM_FEATURES_COUNT;
     case MENU_RANDOMIZER:   return MENUITEM_RANDOM_COUNT;
     case MENU_NUZLOCKE:     return MENUITEM_NUZLOCKE_COUNT;
@@ -1193,7 +1194,7 @@ static u8 MenuItemCountFromIndex(u8 index)
 {
     switch (index)
     {
-    case MENU_MODE:         return MENUITEM_MODE_COUNT - 1;
+    case MENU_MODE:         return MENUITEM_MODE_COUNT;
     case MENU_FEATURES:     return MENUITEM_FEATURES_COUNT;
     case MENU_RANDOMIZER:   return MENUITEM_RANDOM_COUNT;
     case MENU_NUZLOCKE:     return MENUITEM_NUZLOCKE_COUNT;
