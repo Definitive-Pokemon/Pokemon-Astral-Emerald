@@ -34,8 +34,43 @@ BattleFrontier_ScottsHouse_EventScript_CheckSilverSymbols::
 	goto_if_unset FLAG_SYS_PIKE_SILVER, BattleFrontier_ScottsHouse_EventScript_CheckGiveShield
 	goto_if_unset FLAG_SYS_PYRAMID_SILVER, BattleFrontier_ScottsHouse_EventScript_CheckGiveShield
 	msgbox BattleFrontier_ScottsHouse_Text_YouveCollectedAllSilverSymbols, MSGBOX_DEFAULT
+	goto_if_set FLAG_SCOTT_RECIEVED_LANSAT_BERRY, BattleFrontier_ScottsHouse_EventScript_GotLansatBerry
 	giveitem ITEM_LANSAT_BERRY
 	goto_if_eq VAR_RESULT, FALSE, BattleFrontier_ScottsHouse_EventScript_BerryPocketFull
+	setflag FLAG_SCOTT_RECIEVED_LANSAT_BERRY
+BattleFrontier_ScottsHouse_EventScript_GotLansatBerry::
+	goto_if_set FLAG_SCOTT_RECIEVED_HP_UP, BattleFrontier_ScottsHouse_EventScript_GotHpUp
+	giveitem ITEM_HP_UP, 5
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SCOTT_RECIEVED_HP_UP
+BattleFrontier_ScottsHouse_EventScript_GotHpUp::
+	goto_if_set FLAG_SCOTT_RECIEVED_PROTEIN, BattleFrontier_ScottsHouse_EventScript_GotProtein
+	giveitem ITEM_PROTEIN, 5
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SCOTT_RECIEVED_PROTEIN
+BattleFrontier_ScottsHouse_EventScript_GotProtein::
+	goto_if_set FLAG_SCOTT_RECIEVED_IRON, BattleFrontier_ScottsHouse_EventScript_GotIron
+	giveitem ITEM_IRON, 5
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SCOTT_RECIEVED_IRON
+BattleFrontier_ScottsHouse_EventScript_GotIron::
+	goto_if_set FLAG_SCOTT_RECIEVED_CALCIUM, BattleFrontier_ScottsHouse_EventScript_GotCalcium
+	giveitem ITEM_CALCIUM, 5
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SCOTT_RECIEVED_CALCIUM
+BattleFrontier_ScottsHouse_EventScript_GotCalcium::
+	goto_if_set FLAG_SCOTT_RECIEVED_ZINC, BattleFrontier_ScottsHouse_EventScript_GotZinc
+	giveitem ITEM_ZINC, 5
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SCOTT_RECIEVED_ZINC
+BattleFrontier_ScottsHouse_EventScript_GotZinc::
+	goto_if_set FLAG_SCOTT_RECIEVED_CARBOS, BattleFrontier_ScottsHouse_EventScript_GotCarbos
+	giveitem ITEM_CARBOS, 5
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SCOTT_RECIEVED_CARBOS
+BattleFrontier_ScottsHouse_EventScript_GotCarbos::
+	giveitem ITEM_PP_UP, 5
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_COLLECTED_ALL_SILVER_SYMBOLS
 	setflag FLAG_TEMP_4
 	release
@@ -50,11 +85,64 @@ BattleFrontier_ScottsHouse_EventScript_CheckGoldSymbols::
 	goto_if_unset FLAG_SYS_PIKE_GOLD, BattleFrontier_ScottsHouse_EventScript_CheckGiveShield
 	goto_if_unset FLAG_SYS_PYRAMID_GOLD, BattleFrontier_ScottsHouse_EventScript_CheckGiveShield
 	msgbox BattleFrontier_ScottsHouse_Text_YouveCollectedAllGoldSymbols, MSGBOX_DEFAULT
+	goto_if_set FLAG_GOT_STARF_BERRY, BattleFrontier_ScottsHouse_EventScript_ScottGivesBeldum
 	giveitem ITEM_STARF_BERRY
 	goto_if_eq VAR_RESULT, FALSE, BattleFrontier_ScottsHouse_EventScript_BerryPocketFull
+	setflag FLAG_GOT_STARF_BERRY
+BattleFrontier_ScottsHouse_EventScript_ScottGivesBeldum::
+	goto_if_set FLAG_RECEIVED_SHINY_BELDUM, BattleFrontier_ScottsHouse_EventScript_CheckGiveShield
+	msgbox BattleFrontier_ScottsHouse_Text_JustKiddingRealReward, MSGBOX_DEFAULT
+	call BattleFrontier_ScottsHouse_EventScript_GiveBeldum
 	setflag FLAG_COLLECTED_ALL_GOLD_SYMBOLS
 	setflag FLAG_TEMP_4
 	release
+	end
+	
+BattleFrontier_ScottsHouse_EventScript_GiveBeldum::
+	setflag FLAG_SHINY_CREATION
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_BELDUM
+	givemon SPECIES_BELDUM, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, BattleFrontier_ScottsHouseEventScript_SendBeldumParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, BattleFrontier_ScottsHouseEventScript_SendBeldumPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+BattleFrontier_ScottsHouseEventScript_SendBeldumParty::
+	call BattleFrontier_ScottsHouseEventScript_ReceivedBeldumFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ScottsHouseEventScript_ReceivedBeldum
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto BattleFrontier_ScottsHouseEventScript_ReceivedBeldum
+	end
+
+BattleFrontier_ScottsHouseEventScript_SendBeldumPC::
+	call BattleFrontier_ScottsHouseEventScript_ReceivedBeldumFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ScottsHouseEventScript_BeldumTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto BattleFrontier_ScottsHouseEventScript_BeldumTransferredToPC
+	end
+
+BattleFrontier_ScottsHouseEventScript_BeldumTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto BattleFrontier_ScottsHouseEventScript_ReceivedBeldum
+	end
+
+BattleFrontier_ScottsHouseEventScript_ReceivedBeldumFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_BELDUM
+	removeobject LOCALID_BELDUM_BALL
+	playfanfare MUS_OBTAIN_ITEM
+	message BattleFrontier_ScottsHouse_Text_ObtainedBeldum
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_BELDUM
+	return
+
+BattleFrontier_ScottsHouseEventScript_ReceivedBeldum::
+	setflag FLAG_COLLECTED_ALL_GOLD_SYMBOLS
+	setflag FLAG_RECEIVED_SHINY_BELDUM
+	releaseall
 	end
 
 BattleFrontier_ScottsHouse_EventScript_BerryPocketFull::
@@ -347,3 +435,10 @@ BattleFrontier_ScottsHouse_Text_ComeBackForThisLater:
 	.string "Oops, well, if you have too much\n"
 	.string "stuff, come back for this later.$"
 
+BattleFrontier_ScottsHouse_Text_ObtainedBeldum:
+	.string "{PLAYER} obtained a BELDUM.$"
+
+BattleFrontier_ScottsHouse_Text_JustKiddingRealReward:
+	.string "Just kidding… there's something else.\p"
+	.string "A little surprise that reflects your\n"
+	.string "incredible efforts!$"

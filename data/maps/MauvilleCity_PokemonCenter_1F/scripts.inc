@@ -52,6 +52,22 @@ MauvilleCity_PokemonCenter_1F_EventScript_Woman1::
 	release
 	end
 
+MauvilleCity_PokemonCenter_1F_EventScript_DeclinePokemonTrade::
+	msgbox MauvilleCity_PokemonCenter_1F_Text_YouWontTradeMe, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_PokemonCenter_1F_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox MauvilleCity_PokemonCenter_1F_Text_ThisIsntAMon, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_PokemonCenter_1F_EventScript_TradeCompleted::
+	msgbox MauvilleCity_PokemonCenter_1F_Text_ThrilledToSeeNewPlaces, MSGBOX_DEFAULT
+	release
+	end
+
 MauvilleCity_PokemonCenter_1F_EventScript_Woman2::
 	msgbox MauvilleCity_PokemonCenter_1F_Text_MyDataUpdatedFromRecordCorner, MSGBOX_NPC
 	end
@@ -59,12 +75,6 @@ MauvilleCity_PokemonCenter_1F_EventScript_Woman2::
 MauvilleCity_PokemonCenter_1F_EventScript_Youngster::
 	msgbox MauvilleCity_PokemonCenter_1F_Text_RecordCornerSoundsFun, MSGBOX_NPC
 	end
-
-MauvilleCity_PokemonCenter_1F_Text_ManOverThereSaysWeirdThings:
-	.string "That man over there, he says weird\n"
-	.string "things!\p"
-	.string "He's funny in a weird way.\n"
-	.string "I doubt I'll forget about him!$"
 
 MauvilleCity_PokemonCenter_1F_Text_MyDataUpdatedFromRecordCorner:
 	.string "When I accessed the Record Corner,\n"
