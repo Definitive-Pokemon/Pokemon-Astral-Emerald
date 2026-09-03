@@ -24,7 +24,48 @@ MauvilleCity_PokemonCenter_1F_EventScript_Nurse::
 	end
 
 MauvilleCity_PokemonCenter_1F_EventScript_Woman1::
-	msgbox MauvilleCity_PokemonCenter_1F_Text_ManOverThereSaysWeirdThings, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_TradeCompleted
+	setvar VAR_0x8008, INGAME_TRADE_SNORUNT
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
+	copyvar VAR_0x8009, VAR_RESULT
+	msgbox MauvilleCity_PokemonCenter_1F_Text_YouWillTradeWontYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_PokemonCenter_1F_EventScript_DeclinePokemonTrade
+	special ChoosePartyMon
+	waitstate
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, MauvilleCity_PokemonCenter_1F_EventScript_DeclinePokemonTrade
+	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_RESULT, GetTradeSpecies
+	copyvar VAR_0x800B, VAR_RESULT
+	goto_if_ne VAR_RESULT, VAR_0x8009, MauvilleCity_PokemonCenter_1F_EventScript_NotRequestedMon
+	copyvar VAR_0x8004, VAR_0x8008
+	copyvar VAR_0x8005, VAR_0x800A
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox MauvilleCity_PokemonCenter_1F_Text_MonYouTakeCare, MSGBOX_DEFAULT
+	setflag FLAG_MAUVILLE_NPC_TRADE_COMPLETED
+	release
+	end
+
+MauvilleCity_PokemonCenter_1F_EventScript_DeclinePokemonTrade::
+	msgbox MauvilleCity_PokemonCenter_1F_Text_YouWontTradeMe, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_PokemonCenter_1F_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox MauvilleCity_PokemonCenter_1F_Text_ThisIsntAMon, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_PokemonCenter_1F_EventScript_TradeCompleted::
+	msgbox MauvilleCity_PokemonCenter_1F_Text_ThrilledToSeeNewPlaces, MSGBOX_DEFAULT
+	release
 	end
 
 MauvilleCity_PokemonCenter_1F_EventScript_Woman2::
@@ -34,12 +75,6 @@ MauvilleCity_PokemonCenter_1F_EventScript_Woman2::
 MauvilleCity_PokemonCenter_1F_EventScript_Youngster::
 	msgbox MauvilleCity_PokemonCenter_1F_Text_RecordCornerSoundsFun, MSGBOX_NPC
 	end
-
-MauvilleCity_PokemonCenter_1F_Text_ManOverThereSaysWeirdThings:
-	.string "That man over there, he says weird\n"
-	.string "things!\p"
-	.string "He's funny in a weird way.\n"
-	.string "I doubt I'll forget about him!$"
 
 MauvilleCity_PokemonCenter_1F_Text_MyDataUpdatedFromRecordCorner:
 	.string "When I accessed the Record Corner,\n"
@@ -54,3 +89,29 @@ MauvilleCity_PokemonCenter_1F_Text_RecordCornerSoundsFun:
 	.string "I don't know what it's about, but it\n"
 	.string "sounds fun. I'll go check it out!$"
 
+MauvilleCity_PokemonCenter_1F_Text_YouWillTradeWontYou:
+	.string "Oh! You have a {STR_VAR_1}, don't you?\p"
+	.string "They're so lively! Would you be willing\n"
+	.string "to trade it for my {STR_VAR_2}?\p"
+	.string "It's quite the unique Pokémon!$"
+
+MauvilleCity_PokemonCenter_1F_Text_MonYouTakeCare:
+	.string "Take good care of Nippy, okay?\p"
+	.string "It's a bit shy at first, but it warms up\n"
+	.string "quickly!$"
+
+MauvilleCity_PokemonCenter_1F_Text_ThisIsntAMon:
+	.string "Hm? Wait a moment… That's not the\n"
+	.string "{STR_VAR_1} I was hoping for!\p"
+	.string "Are you teasing me?$"
+
+MauvilleCity_PokemonCenter_1F_Text_YouWontTradeMe:
+	.string "Oh, you don't want to trade?\p"
+	.string "That's alright, but if you change your\n"
+	.string "mind, I'd love to find a good partner for\l"
+	.string "my Snorunt!$"
+
+MauvilleCity_PokemonCenter_1F_Text_ThrilledToSeeNewPlaces:
+	.string "I know Nippy will be thrilled to\n"
+	.string "see new places! With a bit of training, I\l"
+	.string "bet it'll become a real star!$"

@@ -63,6 +63,7 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	waitmovement 0
 	msgbox EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_DEFAULT
 	closemessage
+	clearflag FLAG_NO_CHAMPION
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp
 	goto EverGrandeCity_HallOfFame_EventScript_FinishEnterHallOfFame
 	end

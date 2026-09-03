@@ -51,7 +51,13 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(DARK_PULSE) \
+    F(FOCUS_BLAST) \
+    F(FLASH_CANNON) \
+    F(SHADOW_CLAW) \
+    F(DRAGON_PULSE) \
+    F(POISON_JAB)
 
 #define FOREACH_HM(F) \
     F(CUT) \

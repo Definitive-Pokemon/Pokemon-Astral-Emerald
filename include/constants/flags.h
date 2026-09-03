@@ -668,18 +668,18 @@
 #define FLAG_REMATCH_READY_JUAN  0x271
 #define FLAG_ENABLE_NORMAN_REMATCH_CALL  0x272
 #define FLAG_UNUSED_0x273  0x273
-#define FLAG_UNUSED_0x274  0x274
-#define FLAG_UNUSED_0x275  0x275
-#define FLAG_UNUSED_0x276  0x276
-#define FLAG_UNUSED_0x277  0x277
-#define FLAG_UNUSED_0x278  0x278
-#define FLAG_UNUSED_0x279  0x279
-#define FLAG_UNUSED_0x27A  0x27A
-#define FLAG_UNUSED_0x27B  0x27B
-#define FLAG_UNUSED_0x27C  0x27C
-#define FLAG_UNUSED_0x27D  0x27D
-#define FLAG_UNUSED_0x27E  0x27E
-#define FLAG_UNUSED_0x27F  0x27F
+#define FLAG_FRONTIER_SEEDOT_NPC_TRADE_COMPLETED  0x274
+#define FLAG_FRONTIER_PLUSLE_NPC_TRADE_COMPLETED  0x275
+#define FLAG_GOT_STARF_BERRY  0x276
+#define FLAG_SCOTT_RECIEVED_LANSAT_BERRY  0x277
+#define FLAG_SCOTT_RECIEVED_HP_UP  0x278
+#define FLAG_SCOTT_RECIEVED_PROTEIN  0x279
+#define FLAG_SCOTT_RECIEVED_IRON  0x27A
+#define FLAG_SCOTT_RECIEVED_CALCIUM  0x27B
+#define FLAG_SCOTT_RECIEVED_ZINC  0x27C
+#define FLAG_SCOTT_RECIEVED_CARBOS  0x27D
+#define FLAG_RECEIVED_SHINY_BELDUM  0x27E
+#define FLAG_SHINY_CREATION  0x27F
 #define FLAG_UNUSED_0x280  0x280
 #define FLAG_UNUSED_0x281  0x281
 #define FLAG_UNUSED_0x282  0x282
@@ -689,7 +689,7 @@
 #define FLAG_SURF_PICHU_OBTAINED  0x286 // Surf Pichu
 #define FLAG_RS_OUTFIT     0x287
 #define FLAG_OUTFIT_BOX_OBTAINED  0x288
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
+#define FLAG_MAUVILLE_NPC_TRADE_COMPLETED  0x289 // Unused Flag
 #define FLAG_UNUSED_0x28A  0x28A // Unused Flag
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
@@ -1270,11 +1270,11 @@
 #define FLAG_GOT_JUAN_REMATCH_REWARD                                           0x4C3 // Unused Flag
 #define FLAG_BEAT_ARCHIE_MARINE_CAVE                                           0x4C4 // Unused Flag
 #define FLAG_BEAT_MAXIE_TERRA_CAVE                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
+#define FLAG_NO_CHAMPION                                            0x4C6 // Unused Flag
+#define FLAG_RIVAL_GOT_ALL_KANTO_MONS                                           0x4C7 // Unused Flag
+#define FLAG_RIVAL_GOT_BULBASAUR                                           0x4C8 // Unused Flag
+#define FLAG_RIVAL_GOT_CHARMANDER                                           0x4C9 // Unused Flag
+#define FLAG_RIVAL_GOT_SQUIRTLE                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag

@@ -1392,6 +1392,36 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
+static const u8 sTM51Desc[] = _(
+    "Attacks with a\n"
+    "horrible aura.\n"
+    "Foe may flinch.");
+
+static const u8 sTM52Desc[] = _(
+    "Launches a power-\n"
+    "ful blast of aura.\n"
+	"May lower Sp. Def.");
+
+static const u8 sTM53Desc[] = _(
+    "Releases a blast\n"
+	"of light that may\n"
+    "lower Sp. Def.");
+
+static const u8 sTM54Desc[] = _(
+    "Strikes with claws\n"
+	"cloaked in shadow.\n"
+    "High crit. rate.");
+
+static const u8 sTM55Desc[] = _(
+    "Generates a wave\n"
+	"of energy, damaging\n"
+    "the foe.");
+
+static const u8 sTM56Desc[] = _(
+    "Stabs the foe with\n"
+    "poison appendages\n"
+    "may poison the foe.");
+
 
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"

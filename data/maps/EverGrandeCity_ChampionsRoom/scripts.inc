@@ -17,7 +17,7 @@ EverGrandeCity_ChampionsRoom_OnTransition:
 EverGrandeCity_ChampionsRoom_OnWarp:
 	map_script_2 VAR_TEMP_1, 0, EverGrandeCity_ChampionsRoom_EventScript_PlayerTurnNorth
 	call_if_set FLAG_IS_CHAMPION, EverGrandeCity_ChampionsRoom_EventScript_HideWallaceSteven
-	call_if_unset FLAG_IS_CHAMPION, EverGrandeCity_ChampionsRoom_EventScript_HideWallaceCenter
+	call_if_set FLAG_NO_CHAMPION, EverGrandeCity_ChampionsRoom_EventScript_HideWallaceCenter
 	.2byte 0
 
 EverGrandeCity_ChampionsRoom_EventScript_PlayerTurnNorth::
@@ -236,14 +236,11 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerExit:
 	step_end
 
 EverGrandeCity_ChampionsRoom_Movement_PlayerExitRematch:
-	walk_up
 	delay_16
 	walk_up
-	delay_8
 	walk_up
-	delay_8
 	walk_up
-	delay_8
+	walk_up
 	set_invisible
 	step_end
 

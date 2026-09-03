@@ -39,7 +39,7 @@ LittlerootTown_ProfessorBirchsLab_OnTransition:
 LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForJohtoStarter::
 	specialvar VAR_RESULT, HasAllHoennMons
 	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_SetReadyForJohtoStarter
-	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
+	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_FACE_DOWN
 	setobjectxyperm LOCALID_RIVAL, 5, 10
 	end
 
@@ -53,7 +53,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetJohtoStarterLayout::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterJohtoStarterLayout::
 	setmaplayoutindex LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE
-	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
+	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_FACE_DOWN
 	setobjectxyperm LOCALID_RIVAL, 5, 10
 	end
 
@@ -634,17 +634,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
 	checkrandomizer
-	call_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedexAltered
-	call_if_ge VAR_ENCOUNTER_TABLE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedexAltered
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
-	return
-
-LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedexAltered::
-	setflag FLAG_SYS_NATIONAL_DEX
-	special EnableNationalPokedex
-	setflag FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS
-	clearflag FLAG_HIDE_SAFARI_ZONE_SOUTH_EAST_EXPANSION
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_PokemonAwait::
@@ -672,12 +663,349 @@ LittlerootTown_ProfessorBirchsLab_EventScript_Machine::
 LittlerootTown_ProfessorBirchsLab_EventScript_Rival::
 	lock
 	faceplayer
+	call_if_set FLAG_IS_CHAMPION, LittlerootTown_ProfessorBirchsLab_EventScript_RivalPostGame
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_RivalFuturePlans
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_RivalHaveYouGoneToBattleFrontier
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_RivalTakeBreakFromFieldwork
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayWhereShouldIGoNext
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanWhereShouldIGoNext
+	release
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RivalPostGame::
+	goto_if_set FLAG_RIVAL_GOT_ALL_KANTO_MONS, Common_EventScript_NopReturn
+	goto_if_set FLAG_RIVAL_TRADE_2_COMPLETED, LittlerootTown_ProfessorBirchsLab_EventScript_RivalGiveKantoMons
+	lock
+	faceplayer
+	goto_if_set FLAG_RIVAL_TRADE_1_COMPLETED, LittlerootTown_ProfessorBirchsLab_EventScript_RivalTrade2
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter1
+	goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter1::
+	switch VAR_STARTER_MON
+	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTreecko1
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTorchic1
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterMudkip1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter1::
+	switch VAR_STARTER_MON
+	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTreecko1
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTorchic1
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterMudkip1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTreecko1::
+	setvar VAR_0x8008, INGAME_TRADE_TORCHIC_MAY_TREECKO
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade1
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTreecko, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTorchic1::
+	setvar VAR_0x8008, INGAME_TRADE_MUDKIP_MAY_TORCHIC
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade1
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTorchic, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterMudkip1::
+	setvar VAR_0x8008, INGAME_TRADE_TREECKO_MAY_MUDKIP
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade1
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyMudkip, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTreecko1::
+	setvar VAR_0x8008, INGAME_TRADE_TORCHIC_BRENDAN_TREECKO
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade1
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTreecko, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTorchic1::
+	setvar VAR_0x8008, INGAME_TRADE_MUDKIP_BRENDAN_TORCHIC
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade1
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTorchic, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterMudkip1::
+	setvar VAR_0x8008, INGAME_TRADE_TREECKO_BRENDAN_MUDKIP
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade1
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyMudkip, MSGBOX_DEFAULT
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon::
+	setflag FLAG_RIVAL_TRADE_1_COMPLETED
+	release
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RivalTrade2::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter2
+	goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter2::
+	switch VAR_STARTER_MON
+	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTreecko2
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTorchic2
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterMudkip2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter2::
+	switch VAR_STARTER_MON
+	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTreecko2
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTorchic2
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterMudkip2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTreecko2::
+	setvar VAR_0x8008, INGAME_TRADE_MUDKIP_MAY_TREECKO
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade2
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTreecko, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTorchic2::
+	setvar VAR_0x8008, INGAME_TRADE_TREECKO_MAY_TORCHIC
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade2
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTorchic, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterMudkip2::
+	setvar VAR_0x8008, INGAME_TRADE_TORCHIC_MAY_MUDKIP
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade2
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyMudkip, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTreecko2::
+	setvar VAR_0x8008, INGAME_TRADE_MUDKIP_BRENDAN_TREECKO
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade2
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTreecko, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTorchic2::
+	setvar VAR_0x8008, INGAME_TRADE_TREECKO_BRENDAN_TORCHIC
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade2
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTorchic, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterMudkip2::
+	setvar VAR_0x8008, INGAME_TRADE_TORCHIC_BRENDAN_MUDKIP
+	call LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade2
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyMudkip, MSGBOX_DEFAULT
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon2::
+	setflag FLAG_RIVAL_TRADE_2_COMPLETED
+	release
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade1::
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
+	copyvar VAR_0x8009, VAR_RESULT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_IllTradeIfYouWant, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineTrade
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FinishTrade
+
+LittlerootTown_ProfessorBirchsLab_EventScript_DoTrade2::
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
+	copyvar VAR_0x8009, VAR_RESULT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_IllTradeIfYouWant2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineTrade
+
+LittlerootTown_ProfessorBirchsLab_EventScript_FinishTrade::
+	special ChoosePartyMon
+	waitstate
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_RESULT, GetTradeSpecies
+	copyvar VAR_0x800B, VAR_RESULT
+	goto_if_ne VAR_RESULT, VAR_0x8009, LittlerootTown_ProfessorBirchsLab_EventScript_NotRequestedMon
+	copyvar VAR_0x8004, VAR_0x8008
+	copyvar VAR_0x8005, VAR_0x800A
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RivalGiveKantoMons::
+	goto_if_set FLAG_RIVAL_GOT_BULBASAUR, LittlerootTown_ProfessorBirchsLab_EventScript_GotBulbasaur
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_BulbasaurQuest, MSGBOX_DEFAULT
+	special CheckFoundAllKecleon
+	call_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_GiveBulbasaur
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_EndGiveKantoStarter
+LittlerootTown_ProfessorBirchsLab_EventScript_GotBulbasaur::
+	goto_if_set FLAG_RIVAL_GOT_CHARMANDER, LittlerootTown_ProfessorBirchsLab_EventScript_GotCharmander
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_CharmanderQuest, MSGBOX_DEFAULT
+	checkitem ITEM_RED_FLUTE
+	goto_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_EndGiveKantoStarter
+	checkitem ITEM_BLUE_FLUTE
+	goto_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_EndGiveKantoStarter
+	checkitem ITEM_YELLOW_FLUTE
+	goto_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_EndGiveKantoStarter
+	call LittlerootTown_ProfessorBirchsLab_EventScript_GiveCharmander
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_EndGiveKantoStarter
+LittlerootTown_ProfessorBirchsLab_EventScript_GotCharmander::
+	goto_if_set FLAG_RIVAL_GOT_SQUIRTLE, LittlerootTown_ProfessorBirchsLab_EventScript_GotSquirtle
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuest, MSGBOX_DEFAULT
+	special CheckFoundAllHeartScales
+	call_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_GiveSquirtle
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_EndGiveKantoStarter
+LittlerootTown_ProfessorBirchsLab_EventScript_GotSquirtle::
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveBulbasaur::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_BulbasaurQuestCompleted, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_BULBASAUR
+	givemon SPECIES_BULBASAUR, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveBulbasaurParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveBulbasaurPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveBulbasaurParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedBulbasaurFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurReturn
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurReturn
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveBulbasaurPC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedBulbasaurFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_SendBulbasaurToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_SendBulbasaurToPC
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SendBulbasaurToPC::
+	call Common_EventScript_TransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurReturn
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedBulbasaurFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedBulbasaur
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurReturn::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GotBulbasaur, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_RIVAL_GOT_BULBASAUR
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveCharmander::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_CharmanderQuestCompleted, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHARMANDER
+	givemon SPECIES_CHARMANDER, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveCharmanderParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveCharmanderPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveCharmanderParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCharmanderFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderReturn
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderReturn
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveCharmanderPC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCharmanderFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_SendCharmanderToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_SendCharmanderToPC
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SendCharmanderToPC::
+	call Common_EventScript_TransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderReturn
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCharmanderFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedCharmander
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderReturn::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GotCharmander, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_RIVAL_GOT_CHARMANDER
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveSquirtle::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuestCompleted, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SQUIRTLE
+	givemon SPECIES_SQUIRTLE, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveSquirtleParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveSquirtlePC
+	goto Common_EventScript_NoMoreRoomForPokemon
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveSquirtleParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedSquirtleFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleReturn
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleReturn
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveSquirtlePC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedSquirtleFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_SendSquirtleToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_SendSquirtleToPC
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SendSquirtleToPC::
+	call Common_EventScript_TransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleReturn
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedSquirtleFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedSquirtle
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_SQUIRTLE
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleReturn::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GotSquirtle, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_RIVAL_GOT_SQUIRTLE
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_EndGiveKantoStarter::
+	special CheckGotAllKantoStarters
+	release
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_DeclineTrade::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_YouDontWantToThatsOkay, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_DoesntLookLikeMonToMe, MSGBOX_DEFAULT
 	release
 	end
 
@@ -957,12 +1285,6 @@ LittlerootTown_ProfessorBirchsLab_Text_BrendanYouCanThankMe:
 LittlerootTown_ProfessorBirchsLab_Text_OkayAllDone:
 	.string "Prof. Birch: Okay, all done!$"
 
-LittlerootTown_ProfessorBirchsLab_Text_IHadDoneThat:
-	.string "Prof. Birch: Wait, what do you mean\n"
-	.string "you have the National Pokédex?\p"
-	.string "I had already upgraded it?\n"
-	.string "Oh well… Doesn't matter.$"
-
 LittlerootTown_ProfessorBirchsLab_Text_PokedexUpgradedToNational:
 	.string "{PLAYER}'s Pokédex was upgraded\n"
 	.string "to the National Mode!$"
@@ -1106,3 +1428,159 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
 	.string "we meet. I'll be waiting!\p"
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_IllTradeIfYouWant:
+	.string "Oh, {PLAYER}{KUN}! Great timing!\p"
+	.string "My dad tasked me with finding more\n"
+	.string "Pokémon for new Trainers, but\l"
+	.string "I'm running short on {STR_VAR_1}…\p"
+	.string "Could I ask a huge favor?\p"
+	.string "If you bring me a {STR_VAR_1},\n"
+	.string "I'd be happy to trade you a {STR_VAR_2}\l"
+	.string "in return.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_IllTradeIfYouWant2:
+	.string "Hey, {PLAYER}{KUN}! Perfect timing!\p"
+	.string "Thanks again for your help before.\n"
+	.string "That {STR_VAR_1} found an amazing new\l"
+	.string "trainer!\p"
+	.string "But my dad needs more help, and I'm still\n"
+	.string "short on {STR_VAR_1}…\p"
+	.string "Would you be up for trading me another?\n"
+	.string "I'll give you a {STR_VAR_2} this time!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyMudkip:
+	.string "Eheheh… Thank you!\p"
+	.string "I'll make sure this Mudkip finds\n"
+	.string "the right trainer to embark on a\l"
+	.string "great adventure.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTreecko:
+	.string "Eheheh… Thank you!\p"
+	.string "I'll make sure this Treecko finds\n"
+	.string "the right trainer to embark on a\l"
+	.string "great adventure.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_PleaseBeGoodToMyTorchic:
+	.string "Eheheh… Thank you!\p"
+	.string "I'll make sure this Torchic finds\n"
+	.string "the right trainer to embark on a\l"
+	.string "great adventure.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_DoesntLookLikeMonToMe:
+	.string "Wait… That doesn't look like a {STR_VAR_1}\n"
+	.string "to me. Could you double-check?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_YouDontWantToThatsOkay:
+	.string "Oh, that's okay if you're not up for it.\n"
+	.string "These Pokémon mean a lot, so I\l"
+	.string "understand.\p"
+	.string "But if you change your mind, let me\n"
+	.string "know!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_BulbasaurQuest:
+	.string "Oh, {PLAYER}{KUN}! Just the\n"
+	.string "person I was hoping to see!\p"
+	.string "I've been researching Kecleon’s\n"
+	.string "camouflage abilities. My own Kecleon is\l"
+	.string "great at hiding, but I'd like to learn\l"
+	.string "even more about how they blend in.\p"
+	.string "I think finding more Kecleon in the wild\n"
+	.string "will give me some good data on how they\l"
+	.string "work.\p"
+	.string "Think you could help me track down\n"
+	.string "every hidden Kecleon around Hoenn?\p"
+	.string "If you do, I'd like to give you a special\n"
+	.string "reward as thanks!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_BulbasaurQuestCompleted:
+	.string "What!\p"
+	.string "That's incredible! I can't believe you\n"
+	.string "managed to track them all down!\p"
+	.string "It's amazing how adaptable they are!\p"
+	.string "Thanks to your efforts, my research is\n"
+	.string "already taking shape. This data will\l"
+	.string "help me train my own Kecleon to be even\l"
+	.string "better.\p"
+	.string "Now, I promised you a reward, didn't I?\n"
+	.string "This Bulbasaur is for you.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedBulbasaur:
+	.string "{PLAYER} received Bulbasaur!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_GotBulbasaur:
+	.string "Take good care of it, alright?\p"
+	.string "I have a feeling you'll make great\n"
+	.string "partners!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_CharmanderQuest:
+	.string "Oh, {PLAYER}{KUN}!\n"
+	.string "I was hoping you'd stop by.\p"
+	.string "I've been looking into the effects of\n"
+	.string "different sounds on Pokémon behavior.\p"
+	.string "Particularly how certain flutes seem to\n"
+	.string "influence their moods and focus.\p"
+	.string "I think studying a few specific flutes\n"
+	.string "might give me some valuable insights!\p"
+	.string "Could you track down a Red Flute, a\n"
+	.string "Blue Flute, and a Yellow Flute and\l"
+	.string "bring them here?\p"
+	.string "If you do, I've got a special reward\n"
+	.string "waiting for you!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_CharmanderQuestCompleted:
+	.string "Wow!\p"
+	.string "You actually found all three flutes!\n"
+	.string "That's incredible, {PLAYER}{KUN}!\p"
+	.string "I can't wait to study their effects up\n"
+	.string "close and compare how each one\l"
+	.string "interacts with different Pokémon.\p"
+	.string "You've done a huge service to my\n"
+	.string "research.\p"
+	.string "As promised, here's your reward.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedCharmander:
+	.string "{PLAYER} received Charmander!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_GotCharmander:
+	.string "I know it'll be in great hands with you!\p"
+	.string "Take good care of it, and keep up the\n"
+	.string "amazing work out there!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuest:
+	.string "Ah, {PLAYER}{KUN}! Just who I was\n"
+	.string "hoping would drop by!\p"
+	.string "I've been curious about the unique way\n"
+	.string "certain Pokémon can recall moves that\l"
+	.string "others of their species can't.\p"
+	.string "I think it has something to do with\n"
+	.string "Heart Scales, which seem to unlock\l"
+	.string "hidden potential in them.\p"
+	.string "But here's the catch… I need Heart\n"
+	.string "Scales that you find hidden in the wild.\p"
+	.string "Could you help me out by collecting\n"
+	.string "some Heart Scales?\p"
+	.string "I'd like to study their properties and\n"
+	.string "effects on Pokémon.\p"
+	.string "If you manage to find enough, I'll have\n"
+	.string "a special reward waiting for you!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuestCompleted:
+	.string "Wow, {PLAYER}{KUN}! You\n"
+	.string "actually found all the Heart Scales!\p"
+	.string "These will be perfect for my research.\p"
+	.string "With this, I can better understand how\n"
+	.string "certain Pokémon tap into their unique\l"
+	.string "move sets during evolution.\p"
+	.string "You've really outdone yourself, and\n"
+	.string "your timing couldn't be better!\p"
+	.string "Now, as promised, here's your reward!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedSquirtle:
+	.string "{PLAYER} received Squirtle!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_GotSquirtle:
+	.string "Take good care of this Squirtle,\n"
+	.string "alright?\p"
+	.string "I have no doubt it'll be a loyal friend\l"
+	.string "on your journey!$"
