@@ -370,8 +370,9 @@
 #define MOVE_MOONBLAST 366
 #define MOVE_POISON_JAB 367
 #define MOVE_HEAL_PULSE 368
+#define MOVE_CRUSH_GRIP 369
 
-#define MOVES_COUNT 369
+#define MOVES_COUNT 370
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

@@ -385,6 +385,7 @@ gBattleAnims_Moves::
 	.4byte Move_MOONBLAST
 	.4byte Move_POISON_JAB
 	.4byte Move_HEAL_PULSE
+	.4byte Move_CRUSH_GRIP
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -9933,6 +9934,21 @@ WeatherBallIce:
 	playsewithpan SE_M_ICY_WIND, SOUND_PAN_TARGET
 	call IceCrystalEffectShort
 	waitforvisualfinish
+	end
+
+Move_CRUSH_GRIP:
+	loadspritegfx ANIM_TAG_GRAB_AWAY
+	loadspritegfx ANIM_TAG_GRAB_TOWARDS
+	createvisualtask AnimTask_CrushGrip, 2
+	playsewithpan SE_M_DRAGON_RAGE, SOUND_PAN_ATTACKER
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	delay 45
+	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
+	clearmonbg ANIM_TARGET
+	blendoff
+	unloadspritegfx ANIM_TAG_GRAB_AWAY
+	unloadspritegfx ANIM_TAG_GRAB_TOWARDS
 	end
 
 Move_COUNT:

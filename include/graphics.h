@@ -4865,6 +4865,8 @@ extern const u32 gBattleAnimSpriteGfx_RazorLeaf[];
 extern const u32 gBattleAnimSpriteGfx_Needle[];
 extern const u32 gBattleAnimSpriteGfx_WhirlwindLines[];
 extern const u32 gBattleAnimSpriteGfx_GoldRing[];
+extern const u32 gBattleAnimSpriteGfx_GrabHandAway[];
+extern const u32 gBattleAnimSpriteGfx_GrabHandToward[];
 extern const u32 gBattleAnimSpriteGfx_GreenLightWall[];
 extern const u32 gBattleAnimSpriteGfx_BlackBall2[];
 extern const u32 gBattleAnimSpriteGfx_SparkH[];

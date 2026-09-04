@@ -1473,6 +1473,12 @@ static const u8 sHealPulseDescription[] = _(
     "Recovers up to half the\n"
     "target's maximum HP.");
 
+static const u8 sCrushGripDescription[] = _(
+    "A crush attack that\n"
+    "is more powerful\n"
+    "the more HP the\n"
+    "foe has left.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1844,4 +1850,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MOONBLAST - 1] = sMoonblastDescription,
     [MOVE_POISON_JAB - 1] = sPoisonJabDescription,
     [MOVE_HEAL_PULSE - 1] = sHealPulseDescription,
+    [MOVE_CRUSH_GRIP - 1] = sCrushGripDescription,
 };
