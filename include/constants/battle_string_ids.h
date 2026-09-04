@@ -390,9 +390,12 @@
 #define STRINGID_BAGISFULL                  389
 #define STRINGID_FOURITEMSUSED              390
 #define STRINGID_PLAYERWHITEOUT_NOMONEY     391
+#define STRINGID_PKMNCANTGETITGOING         392
+#define STRINGID_PKMNRAISEDATTACKWITH       393
+#define STRINGID_PKMNRAISEDSPATKWITH        394
 
 
-#define BATTLESTRINGS_COUNT                 392
+#define BATTLESTRINGS_COUNT                 395
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -569,6 +572,10 @@
 // gFlashFireStringIds
 #define B_MSG_FLASH_FIRE_BOOST    0
 #define B_MSG_FLASH_FIRE_NO_BOOST 1
+
+// gDownloadStringIds
+#define B_MSG_DOWNLOAD_SP_ATK 0
+#define B_MSG_DOWNLOAD_ATTACK 1
 
 // gBerryEffectStringIds
 #define B_MSG_CURED_PROBLEM     0

@@ -4593,6 +4593,10 @@ static void TryDoEventsBeforeFirstTurn(void)
     }
     if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0) != 0)
         return;
+    if (AbilityBattleEffects(ABILITYEFFECT_DOWNLOAD, 0, 0, 0, 0) != 0)
+        return;
+    if (AbilityBattleEffects(ABILITYEFFECT_SLOW_START, 0, 0, 0, 0) != 0)
+        return;
     if (AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0) != 0)
         return;
     // Check all switch in items having effect from the fastest mon to slowest.
@@ -5394,6 +5398,9 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
     }
 
+    if (gDisableStructs[battler1].slowStartTimer > 0  && gBattleMons[battler1].ability == ABILITY_SLOW_START)
+        speedBattler1 /= 2;
+
     // badge boost
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))
         && FlagGet(FLAG_BADGE03_GET)
@@ -5428,6 +5435,9 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battler2].item);
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
     }
+
+    if (gDisableStructs[battler2].slowStartTimer > 0  && gBattleMons[battler2].ability == ABILITY_SLOW_START)
+        speedBattler2 /= 2;
 
     // badge boost
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))

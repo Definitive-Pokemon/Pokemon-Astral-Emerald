@@ -81,6 +81,7 @@ static const u8 sTransistorDescription[] = _("Ups Electric-type moves.");
 static const u8 sDragonsMawDescription[] = _("Ups Dragon-type moves.");
 static const u8 sMultitypeDescription[] = _("Ups type moves with items.");
 static const u8 sPixilateDescription[] = _("Normal moves become Fairy.");
+static const u8 sSlowStartDescription[] = _("Temporarily halves speed and attack.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -166,6 +167,17 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_DRAGONS_MAW] = _("Dragon's Maw"),
     [ABILITY_MULTITYPE] = _("Multitype"),
     [ABILITY_PIXILATE] = _("Pixilate"),
+    [ABILITY_SLOW_START] = _("Slow Start"),
+    [ABILITY_ADAPTABILITY]  = _("Adaptability"),
+    [ABILITY_MOTOR_DRIVE]  = _("Motor Drive"),
+    [ABILITY_SOLID_ROCK]  = _("Solid Rock"),
+    [ABILITY_STEADFAST]  = _("Steadfast"),
+    [ABILITY_TECHNICIAN]  = _("Technician"),
+    [ABILITY_SNOW_CLOAK]  = _("Snow Cloak"),
+    [ABILITY_TINTED_LENS]  = _("Tinted Lens"),
+    [ABILITY_SUPER_LUCK]  = _("Super Luck"),
+    [ABILITY_DOWNLOAD]  = _("Download"),
+    [ABILITY_LEAF_GUARD]  = _("Leaf Guard"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -252,4 +264,15 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_DRAGONS_MAW] = sDragonsMawDescription,
     [ABILITY_MULTITYPE] = sMultitypeDescription,
     [ABILITY_PIXILATE] = sPixilateDescription,
+    [ABILITY_SLOW_START] = sSlowStartDescription,
+    [ABILITY_ADAPTABILITY]  = sSlowStartDescription,
+    [ABILITY_MOTOR_DRIVE]  = sSlowStartDescription,
+    [ABILITY_SOLID_ROCK]  = sSlowStartDescription,
+    [ABILITY_STEADFAST]  = sSlowStartDescription,
+    [ABILITY_TECHNICIAN]  = sSlowStartDescription,
+    [ABILITY_SNOW_CLOAK]  = sSlowStartDescription,
+    [ABILITY_TINTED_LENS]  = sSlowStartDescription,
+    [ABILITY_SUPER_LUCK]  = sSlowStartDescription,
+    [ABILITY_DOWNLOAD]  = sSlowStartDescription,
+    [ABILITY_LEAF_GUARD]  = sSlowStartDescription,
 };

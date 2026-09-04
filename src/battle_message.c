@@ -267,6 +267,8 @@ static const u8 sText_PkmnCantUseMoveTaunt[] = _("{B_ACTIVE_NAME_WITH_PREFIX} ca
 static const u8 sText_PkmnCantUseMoveSealed[] = _("{B_ACTIVE_NAME_WITH_PREFIX} can't use the\nsealed {B_CURRENT_MOVE}!\p");
 static const u8 sText_PkmnMadeItRain[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade it rain!");
 static const u8 sText_PkmnRaisedSpeed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its Speed!");
+static const u8 sText_PkmnRaisedAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s raised its Attack\nusing {B_SCR_ACTIVE_ABILITY}!");
+static const u8 sText_PkmnRaisedSpAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s raised its Sp. Atk\nusing {B_SCR_ACTIVE_ABILITY}!");
 static const u8 sText_PkmnProtectedBy[] = _("{B_DEF_NAME_WITH_PREFIX} was protected\nby {B_DEF_ABILITY}!");
 static const u8 sText_PkmnPreventsUsage[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents {B_ATK_NAME_WITH_PREFIX}\lfrom using {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnRestoredHPUsing[] = _("{B_DEF_NAME_WITH_PREFIX} restored HP\nusing its {B_DEF_ABILITY}!");
@@ -356,6 +358,7 @@ static const u8 sText_HailStopped[] = _("The hail stopped.");
 static const u8 sText_FailedToSpitUp[] = _("But it failed to Spit Up\na thing!");
 static const u8 sText_FailedToSwallow[] = _("But it failed to Swallow\na thing!");
 static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHeat Wave!");
+static const u8 sText_MonCantGetGoing[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} can't get it going\ndue to {B_SCR_ACTIVE_ABILITY}!");
 static const u8 sText_StatChangesGone[] = _("All stat changes were\neliminated!");
 static const u8 sText_CoinsScattered[] = _("Coins scattered everywhere!");
 static const u8 sText_TooWeakForSubstitute[] = _("It was too weak to make\na Substitute!");
@@ -905,6 +908,9 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_PKMNDROPPEDITEM - BATTLESTRINGS_TABLE_START] = sText_PkmnDroppedItem,
     [STRINGID_FOURITEMSUSED - BATTLESTRINGS_TABLE_START] = sText_FourItemsUsed,
     [STRINGID_PLAYERWHITEOUT_NOMONEY - BATTLESTRINGS_TABLE_START] = sText_PlayerWhiteoutNoMoney,
+    [STRINGID_PKMNCANTGETITGOING - BATTLESTRINGS_TABLE_START] = sText_MonCantGetGoing,
+    [STRINGID_PKMNRAISEDATTACKWITH - BATTLESTRINGS_TABLE_START] = sText_PkmnRaisedAttackWith,
+    [STRINGID_PKMNRAISEDSPATKWITH - BATTLESTRINGS_TABLE_START] = sText_PkmnRaisedSpAttackWith,
 };
 
 const u16 gMissStringIds[] =
@@ -1263,6 +1269,12 @@ const u16 gFlashFireStringIds[] =
 {
     [B_MSG_FLASH_FIRE_BOOST]    = STRINGID_PKMNRAISEDFIREPOWERWITH,
     [B_MSG_FLASH_FIRE_NO_BOOST] = STRINGID_PKMNSXMADEYINEFFECTIVE
+};
+
+const u16 gDownloadStringIds[] = 
+{
+    [B_MSG_DOWNLOAD_SP_ATK] = STRINGID_PKMNRAISEDSPATKWITH,
+    [B_MSG_DOWNLOAD_ATTACK] = STRINGID_PKMNRAISEDATTACKWITH
 };
 
 const u16 gCaughtMonStringIds[] =
