@@ -861,12 +861,6 @@ static const u8 *const sOptionMenuItemDescriptionsMode[MENUITEM_MODE_COUNT][5] =
     [MENUITEM_MODE_NEXT]                  = {sText_Description_Mode_Next,                   sText_Empty,                                  sText_Empty,                                        sText_Empty,                                        sText_Empty},
 };
 
-MENUITEM_MODE_NEW_LEGENDARIES,
-    MENUITEM_MODE_LEGENDARY_ABILITIES,
-    MENUITEM_MODE_MINTS,
-    MENUITEM_MODE_INFINITE_TMS,
-    MENUITEM_MODE_SURVIVE_POISON,
-
 static const u8 *const sOptionMenuItemDescriptionsMode_2[MENUITEM_MODE_2_COUNT][5] =
 {
 
