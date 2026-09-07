@@ -1825,9 +1825,9 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             u8 previousOption = sOptions->sel_mode_2[cursor];
             if (CheckConditions(cursor))
             {
-                if (sItemFunctionsMode[cursor].processInput != NULL)
+                if (sItemFunctionsModeSecondPage[cursor].processInput != NULL)
                 {
-                    sOptions->sel_mode_2[cursor] = sItemFunctionsMode[cursor].processInput(previousOption);
+                    sOptions->sel_mode_2[cursor] = sItemFunctionsModeSecondPage[cursor].processInput(previousOption);
                     ReDrawAll();
                     DrawDescriptionText();
                 }
