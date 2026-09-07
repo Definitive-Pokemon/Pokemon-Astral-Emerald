@@ -7813,7 +7813,7 @@ static const struct TrainerMonItemCustomMoves sParty_WallyVR1[] = {
     }
 };
 // Rival 1
-static const struct TrainerMonNoItemCustomMoves sParty_MayRoute103Mudkip[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_BrendanRoute103Mudkip[] = {
     {
     .iv = 0,
     .lvl = 5,
@@ -7984,11 +7984,12 @@ static const struct TrainerMonNoItemCustomMoves sParty_BrendanRoute119Torchic[] 
     }
 };
 // Rival 1
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Mudkip[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_MayRoute103Mudkip[] = {
     {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_TREECKO,
+    .moves = {MOVE_POUND, MOVE_LEER, MOVE_NONE, MOVE_NONE}
     }
 };
 // Rival 3
@@ -8040,11 +8041,12 @@ static const struct TrainerMonNoItemCustomMoves sParty_MayRoute119Mudkip[] = {
     }
 };
 // Rival 1
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Treecko[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_MayRoute103Treecko[] = {
     {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_TORCHIC,
+    .moves = {MOVE_SCRATCH, MOVE_GROWL, MOVE_NONE, MOVE_NONE}
     }
 };
 // Rival 3
@@ -8096,11 +8098,12 @@ static const struct TrainerMonNoItemCustomMoves sParty_MayRoute119Treecko[] = {
     }
 };
 // Rival 1 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Torchic[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_MayRoute103Torchic[] = {
     {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_MUDKIP,
+    .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_NONE, MOVE_NONE}
     }
 };
 // Rival 3
