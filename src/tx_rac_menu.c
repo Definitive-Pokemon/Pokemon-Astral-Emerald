@@ -380,7 +380,6 @@ struct // MENU_MODE
     [MENUITEM_MODE_CLASSIC_MODERN]        = {DrawChoices_Mode_Classic_Modern_Selector,       ProcessInput_Options_Three},
     [MENUITEM_MODE_TRAINER_TEAMS]         = {DrawChoices_Mode_Change_Teams,         ProcessInput_Options_Two},
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {DrawChoices_Mode_AlternateSpawns,      ProcessInput_Options_Three},
-    [MENUITEM_MODE_TRAINER_TEAMS]         = {DrawChoices_Mode_Change_Teams,         ProcessInput_Options_Two},
     [MENUITEM_MODE_SYNCHRONIZE]           = {DrawChoices_Mode_Synchronize,          ProcessInput_Options_Two},
     [MENUITEM_MODE_STURDY]                = {DrawChoices_Mode_Sturdy,               ProcessInput_Options_Two},
     [MENUITEM_MODE_MODERN_TYPES]          = {DrawChoices_Mode_Modern_Types,         ProcessInput_Options_Two},
@@ -715,11 +714,11 @@ static bool8 CheckConditions(int selection)
         switch(selection)
         {
             case MENUITEM_MODE_2_NEXT:                    return TRUE;
-            case MENUITEM_MODE_MINTS:                     return sOptions->sel_mode_2[MENUITEM_MODE_CLASSIC_MODERN] == 2;
-            case MENUITEM_MODE_INFINITE_TMS:              return sOptions->sel_mode_2[MENUITEM_MODE_CLASSIC_MODERN] == 2;
-            case MENUITEM_MODE_SURVIVE_POISON:            return sOptions->sel_mode_2[MENUITEM_MODE_CLASSIC_MODERN] == 2;
-            case MENUITEM_MODE_NEW_LEGENDARIES:           return sOptions->sel_mode_2[MENUITEM_MODE_CLASSIC_MODERN] == 2;
-            case MENUITEM_MODE_LEGENDARY_ABILITIES:       return sOptions->sel_mode_2[MENUITEM_MODE_CLASSIC_MODERN] == 2;
+            case MENUITEM_MODE_MINTS:                     return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
+            case MENUITEM_MODE_INFINITE_TMS:              return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
+            case MENUITEM_MODE_SURVIVE_POISON:            return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
+            case MENUITEM_MODE_NEW_LEGENDARIES:           return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
+            case MENUITEM_MODE_LEGENDARY_ABILITIES:       return sOptions->sel_mode[MENUITEM_MODE_CLASSIC_MODERN] == 2;
         default:       return FALSE;
         }
     case MENU_FEATURES:
@@ -1072,6 +1071,7 @@ static const u8 *const sOptionMenuItemDescriptionsChallenges[MENUITEM_CHALLENGES
 static const u8 *const sOptionMenuItemDescriptionsDisabledMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]        = sText_Empty,
+    [MENUITEM_MODE_TRAINER_TEAMS]         = sText_Empty,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = sText_Empty,
     [MENUITEM_MODE_SYNCHRONIZE]           = sText_Empty,
     [MENUITEM_MODE_STURDY]                = sText_Empty,
@@ -1515,7 +1515,6 @@ void CB2_InitTxRandomizerChallengesMenu(void)
         break;
     case 6:
         //tx_randomizer_and_challenges
-        gSaveBlock1Ptr->tx_Mode_Teams                       = TX_MODE_TRAINER_TEAMS;
         gSaveBlock1Ptr->tx_Mode_Teams                       = TX_MODE_TRAINER_TEAMS;
         gSaveBlock1Ptr->tx_Mode_Encounters                  = TX_MODE_ALTERNATE_SPAWNS;
         gSaveBlock1Ptr->tx_Mode_InfiniteTMs                 = TX_MODE_INFINITE_TMS;
@@ -2828,7 +2827,7 @@ static void DrawChoices_Mode_Change_Teams(int selection, int y)
     }
 
     DrawOptionMenuChoice(sText_Encounters_Vanilla_Long, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_Teams_Legacy, GetStringRightAlignXOffset(1, sText_Encounters_Modern_Long, 198), y, styles[1], active);
+    DrawOptionMenuChoice(sText_Teams_Legacy, GetStringRightAlignXOffset(1, sText_Teams_Legacy, 198), y, styles[1], active);
 }
 
 
