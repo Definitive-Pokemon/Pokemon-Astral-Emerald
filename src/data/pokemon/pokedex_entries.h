@@ -4656,18 +4656,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ARCEUS] =
-    {
-        .categoryName = _("Alpha"),
-        .height = 32,
-        .weight = 3200,
-        .description = gArceusPokedexText,
-        .pokemonScale = 256,
-        .pokemonOffset = -1,
-        .trainerScale = 515,
-        .trainerOffset = 14,
-    },
-
     [NATIONAL_DEX_DEOXYS_ATTACK] =
     {
         .categoryName = _("DNA"),
