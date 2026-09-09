@@ -1473,6 +1473,22 @@ static const u8 sHealPulseDescription[] = _(
     "Recovers up to half the\n"
     "target's maximum HP.");
 
+static const u8 sDazzlingGleamDescription[] = _(
+    "Recovers up to half the\n"
+    "target's maximum HP.");
+
+static const u8 sEnergyBallDescription[] = _(
+    "Recovers up to half the\n"
+    "target's maximum HP.");
+
+static const u8 sXScissorDescription[] = _(
+    "Recovers up to half the\n"
+    "target's maximum HP.");
+
+static const u8 sStoneEdgeDescription[] = _(
+    "Recovers up to half the\n"
+    "target's maximum HP.");
+
 static const u8 sCrushGripDescription[] = _(
     "A crush attack that\n"
     "is more powerful\n"
@@ -1850,5 +1866,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MOONBLAST - 1] = sMoonblastDescription,
     [MOVE_POISON_JAB - 1] = sPoisonJabDescription,
     [MOVE_HEAL_PULSE - 1] = sHealPulseDescription,
+    [MOVE_DAZZLING_GLEAM - 1] = sDazzlingGleamDescription,
+    [MOVE_ENERGY_BALL - 1] = sEnergyBallDescription,
+    [MOVE_X_SCISSOR - 1] = sXScissorDescription,
+    [MOVE_STONE_EDGE - 1] = sStoneEdgeDescription,
     [MOVE_CRUSH_GRIP - 1] = sCrushGripDescription,
 };
