@@ -1,0 +1,7 @@
+ChronoIsland_LostCave_Entrance_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ChronoIsland_LostCave_Entrance_OnTransition
+	.byte 0
+
+ChronoIsland_LostCave_Entrance_OnTransition::
+	@setworldmapflag FLAG_WORLD_MAP_CHRONO_ISLAND_LOST_CAVE_ENTRANCE
+	end

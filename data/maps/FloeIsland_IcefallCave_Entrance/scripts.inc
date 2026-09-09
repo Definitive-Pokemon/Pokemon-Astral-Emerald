@@ -1,0 +1,7 @@
+FloeIsland_IcefallCave_Entrance_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FloeIsland_IcefallCave_Entrance_OnTransition
+	.byte 0
+
+FloeIsland_IcefallCave_Entrance_OnTransition::
+	@setworldmapflag FLAG_WORLD_MAP_FLOE_ISLAND_ICEFALL_CAVE_ENTRANCE
+	end

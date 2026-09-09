@@ -1,0 +1,7 @@
+FortuneIsland_AlteringCave_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FortuneIsland_AlteringCave_OnTransition
+	.byte 0
+
+FortuneIsland_AlteringCave_OnTransition::
+	@setworldmapflag FLAG_WORLD_MAP_FORTUNE_ISLAND_ALTERING_CAVE
+	end
