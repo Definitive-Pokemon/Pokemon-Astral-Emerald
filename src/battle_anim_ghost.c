@@ -176,7 +176,7 @@ const struct SpriteTemplate gEnergyBallSpriteTemplate =
     .oam = &gOamData_AffineNormal_ObjNormal_32x32,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = gAffineAnims_ShadowBall,
+    .affineAnims = sAffineAnims_ShadowBall,
     .callback = AnimShadowBall,
 };
 
