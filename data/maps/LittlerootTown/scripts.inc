@@ -56,6 +56,30 @@ LittlerootTown_OnTransition:
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_EventScript_LeftLabAfterDexUpgrade
 	end
 
+GiveLegends::
+	lock
+	playse SE_ORB
+	givemon SPECIES_MEWTWO, 100, ITEM_LEFTOVERS
+	givemon SPECIES_LUGIA, 100, ITEM_LEFTOVERS
+	givemon SPECIES_HO_OH, 100, ITEM_LEFTOVERS
+	givemon SPECIES_KYOGRE, 100, ITEM_LEFTOVERS
+	givemon SPECIES_GROUDON, 100, ITEM_LEFTOVERS
+	givemon SPECIES_RAYQUAZA, 100, ITEM_LEFTOVERS
+	release
+	end
+
+GiveDexMons::
+	lock
+	playse SE_PIN
+	givemon SPECIES_HOUNDOUR, 100, ITEM_LEFTOVERS
+	givemon SPECIES_MISDREAVUS, 100, ITEM_LEFTOVERS
+	givemon SPECIES_PONYTA, 100, ITEM_LEFTOVERS
+	givemon SPECIES_SWINUB, 100, ITEM_LEFTOVERS
+	givemon SPECIES_SNEASEL, 100, ITEM_LEFTOVERS
+	givemon SPECIES_MURKROW, 100, ITEM_LEFTOVERS
+	release
+	end
+
 Debug_LT_TrainerMode::
 	specialvar VAR_RESULT, AstralTrainerTeamsEnabled
 	goto_if_eq Debug_LT_TrainerMode_Modern

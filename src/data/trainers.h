@@ -6249,7 +6249,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        LINK_TRAINER_MONS(BrendanRoute103Mudkip, NO_ITEM_DEFAULT_MOVES, NO_ITEM_CUSTOM_MOVES),
+        LINK_TRAINER_MONS(BrendanRoute103Mudkip, NO_ITEM_CUSTOM_MOVES, NO_ITEM_CUSTOM_MOVES),
     },
 
     [TRAINER_BRENDAN_ROUTE_110_MUDKIP] =
@@ -6285,7 +6285,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_SETUP_FIRST_TURN,
-        LINK_TRAINER_MONS(BrendanRoute103Treecko,NO_ITEM_DEFAULT_MOVES, NO_ITEM_CUSTOM_MOVES),
+        LINK_TRAINER_MONS(BrendanRoute103Treecko, NO_ITEM_CUSTOM_MOVES, NO_ITEM_CUSTOM_MOVES),
     },
 
     [TRAINER_BRENDAN_ROUTE_110_TREECKO] =
@@ -6321,7 +6321,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        LINK_TRAINER_MONS(BrendanRoute103Torchic, NO_ITEM_DEFAULT_MOVES, NO_ITEM_CUSTOM_MOVES),
+        LINK_TRAINER_MONS(BrendanRoute103Torchic, NO_ITEM_CUSTOM_MOVES, NO_ITEM_CUSTOM_MOVES),
     },
 
     [TRAINER_BRENDAN_ROUTE_110_TORCHIC] =
@@ -6357,7 +6357,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        LINK_TRAINER_MONS(MayRoute103Mudkip, NO_ITEM_DEFAULT_MOVES, NO_ITEM_CUSTOM_MOVES),
+        LINK_TRAINER_MONS(MayRoute103Mudkip, NO_ITEM_CUSTOM_MOVES, NO_ITEM_CUSTOM_MOVES),
     },
 
     [TRAINER_MAY_ROUTE_110_MUDKIP] =
@@ -6393,7 +6393,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        LINK_TRAINER_MONS(MayRoute103Treecko, NO_ITEM_DEFAULT_MOVES, NO_ITEM_CUSTOM_MOVES),
+        LINK_TRAINER_MONS(MayRoute103Treecko, NO_ITEM_CUSTOM_MOVES, NO_ITEM_CUSTOM_MOVES),
     },
 
     [TRAINER_MAY_ROUTE_110_TREECKO] =
@@ -6429,7 +6429,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        LINK_TRAINER_MONS(MayRoute103Torchic, NO_ITEM_DEFAULT_MOVES, NO_ITEM_CUSTOM_MOVES),
+        LINK_TRAINER_MONS(MayRoute103Torchic, NO_ITEM_CUSTOM_MOVES, NO_ITEM_CUSTOM_MOVES),
     },
 
     [TRAINER_MAY_ROUTE_110_TORCHIC] =

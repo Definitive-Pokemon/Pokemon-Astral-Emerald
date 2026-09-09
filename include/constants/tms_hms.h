@@ -57,7 +57,11 @@
     F(FLASH_CANNON) \
     F(SHADOW_CLAW) \
     F(DRAGON_PULSE) \
-    F(POISON_JAB)
+    F(POISON_JAB) \
+    F(DAZZLING_GLEAM) \
+    F(ENERGY_BALL) \
+    F(X_SCISSOR) \
+    F(STONE_EDGE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
