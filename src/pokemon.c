@@ -6557,11 +6557,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
             gBattleMovePower /= 2;
+        if (defender->ability == ABILITY_MAGMA_ARMOR && type == TYPE_WATER)
+            gBattleMovePower /= 8;
     }
     else if (gSaveBlock2Ptr->optionStyle == 1)
     {
         if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
             spAttack /= 2;
+        if (defender->ability == ABILITY_MAGMA_ARMOR && type == TYPE_WATER)
+            spAttack /= 8;
     }
     if ((defender->ability != ABILITY_NONE) 
     && (gSaveBlock2Ptr->optionsDifficulty == 2) 
