@@ -329,6 +329,7 @@ static void Cmd_removeattackerstatus1(void);
 static void Cmd_finishaction(void);
 static void Cmd_finishturn(void);
 static void Cmd_trainerslideout(void);
+static void Cmd_targethpdependentdamagecalculation(void);
 
 extern u8 gMaxPartyLevel;
 
@@ -590,6 +591,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_finishaction,                            //0xF6
     Cmd_finishturn,                              //0xF7
     Cmd_trainerslideout                          //0xF8
+    Cmd_targethpdependentdamagecalculation,
 };
 
 struct StatFractions
@@ -9470,6 +9472,12 @@ static void Cmd_friendshiptodamagecalculation(void)
     else // EFFECT_FRUSTRATION
         gDynamicBasePower = 10 * (MAX_FRIENDSHIP - gBattleMons[gBattlerAttacker].friendship) / 25;
 
+    gBattlescriptCurrInstr++;
+}
+
+static void Cmd_targethpdependentdamagecalculation(void)
+{
+    gDynamicBasePower = 1 + 120 * (gBattleMons[gBattlerTarget].hp / gBattleMons[gBattlerTarget].maxHP);
     gBattlescriptCurrInstr++;
 }
 
