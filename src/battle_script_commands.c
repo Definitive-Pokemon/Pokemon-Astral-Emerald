@@ -2572,7 +2572,9 @@ static void Cmd_effectivenesssound(void)
 static void Cmd_resultmessage(void)
 {
     u32 stringId = 0;
-
+    u32 moveType;
+    GET_MOVE_TYPE(gCurrentMove, moveType)
+    
     if (gBattleControllerExecFlags)
         return;
 
