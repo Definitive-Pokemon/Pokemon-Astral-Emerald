@@ -54,14 +54,15 @@
     F(OVERHEAT) \
     F(DARK_PULSE) \
     F(FOCUS_BLAST) \
-    F(FLASH_CANNON) \
     F(SHADOW_CLAW) \
+    F(FLASH_CANNON) \
     F(DRAGON_PULSE) \
     F(POISON_JAB) \
-    F(DAZZLING_GLEAM) \
     F(ENERGY_BALL) \
+    F(STONE_EDGE) \
+    F(AVALANCHE) \
     F(X_SCISSOR) \
-    F(STONE_EDGE)
+    F(DAZZLING_GLEAM) 
 
 #define FOREACH_HM(F) \
     F(CUT) \

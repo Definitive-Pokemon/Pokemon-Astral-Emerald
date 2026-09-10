@@ -445,8 +445,13 @@
 #define ITEM_TM54                401
 #define ITEM_TM55                402
 #define ITEM_TM56                403
+#define ITEM_TM57                404
+#define ITEM_TM58                405
+#define ITEM_TM59                406
+#define ITEM_TM60                407
+#define ITEM_TM61                408
 
-#define ITEMS_COUNT              404
+#define ITEMS_COUNT              409
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
 // Its icon is defined at ITEMS_COUNT as the "return to field" arrow
