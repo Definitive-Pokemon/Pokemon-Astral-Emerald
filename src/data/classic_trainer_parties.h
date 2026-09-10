@@ -4018,7 +4018,7 @@ static const struct TrainerMonNoItemCustomMoves sClassicParty_AnnaAndMeg5[] = {
     .iv = 255,
     .lvl = 68,
     .species = SPECIES_MEGANIUM,
-    .moves = {MOVE_MOONBLAST, MOVE_GIGA_DRAIN, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM}
+    .moves = {MOVE_LIGHT_SCREEN, MOVE_GIGA_DRAIN, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM}
     }
 };
 
