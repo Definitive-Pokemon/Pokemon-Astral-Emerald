@@ -81,7 +81,13 @@ GiveDexMons::
 	end
 
 Debug_LT_TrainerMode::
-	trainerbattle_no_intro TRAINER_RED, Route111_Text_VictorDefeat
+	specialvar VAR_RESULT, AstralTrainerTeamsEnabled
+	goto_if_eq Debug_LT_TrainerMode_Modern
+	msgbox Debug_Text_Old, MSGBOX_DEFAULT
+	end
+Debug_LT_TrainerMode_Modern::
+	msgbox Debug_Text_Modern, MSGBOX_DEFAULT
+	end
 
 Debug_Text_Old:
 	.string "Vanilla teams$"
