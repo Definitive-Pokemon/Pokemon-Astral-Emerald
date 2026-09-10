@@ -1422,6 +1422,31 @@ static const u8 sTM56Desc[] = _(
     "poison appendages\n"
     "may poison the foe.");
 
+static const u8 sTM57Desc[] = _(
+    "Draws power from\n"
+    "nature to attack.\n"
+    "may lower Sp. Def.");
+
+static const u8 sTM58Desc[] = _(
+    "Stabs the foe with\n"
+    "stones. Has a high\n"
+    "critical-hit ratio.");
+
+static const u8 sTM59Desc[] = _(
+    "Inflicts double the\n"
+    "damage if user was\n"
+    "hurt the same turn.");
+
+static const u8 sTM60Desc[] = _(
+    "Slashes at the foe\n"
+    "with crossed claws,\n"
+    "scythes, etc.");
+
+static const u8 sTM61Desc[] = _(
+    "Damages the foe by\n"
+    "emitting a bright\n"
+    "flash of light.");
+
 
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"

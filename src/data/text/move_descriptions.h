@@ -1474,26 +1474,24 @@ static const u8 sHealPulseDescription[] = _(
     "target's maximum HP.");
 
 static const u8 sDazzlingGleamDescription[] = _(
-    "Recovers up to half the\n"
-    "target's maximum HP.");
+    "Damages foes by emitting\n"
+    "a bright flash."),
 
 static const u8 sEnergyBallDescription[] = _(
-    "Recovers up to half the\n"
-    "target's maximum HP.");
+    "Draws power from nature to\n"
+    "attack. May lower Sp. Def."),
 
 static const u8 sXScissorDescription[] = _(
-    "Recovers up to half the\n"
-    "target's maximum HP.");
+    "Slashes the foe with crossed\n"
+    "scythes, claws, etc."),
 
 static const u8 sStoneEdgeDescription[] = _(
-    "Recovers up to half the\n"
-    "target's maximum HP.");
+    "Stabs the foe with stones.\n"
+    "High critical-hit ratio."),
 
 static const u8 sCrushGripDescription[] = _(
-    "A crush attack that\n"
-    "is more powerful\n"
-    "the more HP the\n"
-    "foe has left.");
+    "The higher the foe's HP\n"
+    "the more damage caused.");
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
