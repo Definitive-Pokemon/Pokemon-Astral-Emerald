@@ -56,6 +56,28 @@ LittlerootTown_OnTransition:
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_EventScript_LeftLabAfterDexUpgrade
 	end
 
+GiveNewTMs::
+	lock
+	msgbox Dikke, MSGBOX_DEFAULT
+	giveitem ITEM_TM51
+	giveitem ITEM_TM52
+	giveitem ITEM_TM53
+	giveitem ITEM_TM54
+	giveitem ITEM_TM55
+	giveitem ITEM_TM56
+	giveitem ITEM_TM57
+	giveitem ITEM_TM58
+	giveitem ITEM_TM59
+	giveitem ITEM_TM60
+	giveitem ITEM_TM61
+	release
+	end
+
+Dikke::
+	.string "Ik ben zo fucking dik Ploetjes!\n"
+	.string "Ik ben Dikzak Buik!\p"
+	.string "Ach neem die kut TMs.$"
+
 GiveLegends::
 	lock
 	playse SE_ORB
