@@ -9955,7 +9955,7 @@ Move_CRUSH_GRIP:
 	unloadspritegfx ANIM_TAG_GRAB_TOWARDS
 	end
 
-gBattleAnimMove_StoneEdge::
+Move_STONE_EDGE::
 	loadspritegfx ANIM_TAG_STONE_EDGE
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_ROCK_THROW SOUND_PAN_TARGET
@@ -10013,7 +10013,7 @@ gBattleAnimMove_StoneEdge::
 	blendoff
 	end
 
-gBattleAnimMove_EnergyBall::
+Move_ENERGY_BALL::
 	loadspritegfx ANIM_TAG_ENERGY_BALL
 	monbg ANIM_TARGET
 	setalpha 12, 8
