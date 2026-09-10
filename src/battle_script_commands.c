@@ -590,8 +590,8 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_removeattackerstatus1,                   //0xF5
     Cmd_finishaction,                            //0xF6
     Cmd_finishturn,                              //0xF7
-    Cmd_trainerslideout                          //0xF8
-    Cmd_targethpdependentdamagecalculation,
+    Cmd_trainerslideout,                          //0xF8
+    Cmd_targethpdependentdamagecalculation
 };
 
 struct StatFractions
