@@ -41,6 +41,7 @@ static void MovePoisonGasCloud(struct Sprite *);
 static void AnimHailBegin(struct Sprite *);
 static void AnimHailContinue(struct Sprite *);
 static void AvalancheAnim_Step(struct Sprite *sprite);
+static void AvalancheAnim_Step2(struct Sprite *sprite);
 static void InitIceBallAnim(struct Sprite *);
 static void AnimThrowIceBall(struct Sprite *);
 static void InitIceBallParticle(struct Sprite *);
