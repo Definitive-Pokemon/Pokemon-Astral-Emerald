@@ -1475,22 +1475,22 @@ static const u8 sHealPulseDescription[] = _(
 
 static const u8 sDazzlingGleamDescription[] = _(
     "Damages foes by emitting\n"
-    "a bright flash."),
+    "a bright flash.");
 
 static const u8 sEnergyBallDescription[] = _(
     "Draws power from nature to\n"
-    "attack. May lower Sp. Def."),
+    "attack. May lower Sp. Def.");
 
 static const u8 sXScissorDescription[] = _(
     "Slashes the foe with crossed\n"
-    "scythes, claws, etc."),
+    "scythes, claws, etc.");
 
 static const u8 sStoneEdgeDescription[] = _(
     "Stabs the foe with stones.\n"
-    "High critical-hit ratio."),
+    "High critical-hit ratio.");
 
 static const u8 sCrushGripDescription[] = _(
-    "The higher the foe's HP\n"
+    "The higher the foe's HP,\n"
     "the more damage caused.");
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
