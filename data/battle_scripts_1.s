@@ -232,6 +232,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+	.4byte BattleScript_EffectCrushGrip
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1660,6 +1661,12 @@ BattleScript_EffectFrustration::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	friendshiptodamagecalculation
+	goto BattleScript_HitFromAtkString
+
+BattleScript_EffectCrushGrip::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	targethpdependentdamagecalculation
 	goto BattleScript_HitFromAtkString
 
 BattleScript_EffectPresent::
@@ -3826,6 +3833,15 @@ BattleScript_MoveUsedIsParalyzed::
 
 BattleScript_MoveUsedFlinched::
 	printstring STRINGID_PKMNFLINCHED
+	jumpifability BS_TARGET, ABILITY_STEADFAST, BattleScript_SteadfastTrigger
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+BattleScript_SteadfastTrigger::
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	setstatchanger STAT_SPEED, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -4154,6 +4170,18 @@ BattleScript_FlashFireBoost::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_MotorDriveBoost_PPLoss::
+	ppreduce
+BattleScript_MotorDriveBoost::
+	attackstring
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	setstatchanger STAT_SPEED, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printstring STRINGID_PKMNRAISEDSPEED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_AbilityPreventsPhasingOut::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNANCHORSITSELFWITH
@@ -4264,6 +4292,29 @@ BattleScript_AbilityCuredStatus::
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_SCRIPTING
 	return
+
+BattleScript_DownloadAbility::
+	pause B_WAIT_TIME_SHORT
+	printfromtable gDownloadStringIds
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_DOWNLOAD_ATTACK, BattleScript_DownloadAbility_Attack
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_DownloadAbility_End
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_DownloadAbility_End
+	goto BattleScript_DownloadAbility_End
+BattleScript_DownloadAbility_Attack::
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_DownloadAbility_End
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_DownloadAbility_End
+BattleScript_DownloadAbility_End::
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_SlowStartActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNCANTGETITGOING
+	waitmessage B_WAIT_TIME_LONG
+	end3
 
 BattleScript_IgnoresWhileAsleep::
 	printstring STRINGID_PKMNIGNORESASLEEP
@@ -4631,4 +4682,9 @@ BattleScript_Safari_SameSpeciesCaptureBlocked::
 BattleScript_ItemDropped::
 	playse SE_BALL_BOUNCE_1
 	printfromtable gItemDroppedStringIds
+	return
+
+BattleScript_MagmaArmorActivated::
+	printstring STRINGID_MAGMAARMORACTIVATED
+	waitmessage B_WAIT_TIME_SHORT
 	return

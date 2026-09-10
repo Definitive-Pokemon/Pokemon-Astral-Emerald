@@ -14192,11 +14192,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Everett[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Red[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Red[] = {
     {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_CHARMANDER,
+    .moves = {MOVE_CRUSH_GRIP, MOVE_ENERGY_BALL, MOVE_STONE_EDGE, MOVE_NONE}
     }
 };
 

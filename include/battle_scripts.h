@@ -173,6 +173,10 @@ extern const u8 BattleScript_ApplySecondaryEffect[];
 extern const u8 BattleScript_SynchronizeActivates[];
 extern const u8 BattleScript_NoItemSteal[];
 extern const u8 BattleScript_AbilityCuredStatus[];
+extern const u8 BattleScript_SlowStartActivates[];
+extern const u8 BattleScript_MotorDriveBoost[];
+extern const u8 BattleScript_MotorDriveBoost_PPLoss[];
+extern const u8 BattleScript_DownloadAbility[];
 extern const u8 BattleScript_IgnoresWhileAsleep[];
 extern const u8 BattleScript_IgnoresAndUsesRandomMove[];
 extern const u8 BattleScript_MoveUsedLoafingAround[];
@@ -224,6 +228,7 @@ extern const u8 BattleScript_RunByUsingItem[];
 extern const u8 BattleScript_ActionWatchesCarefully[];
 extern const u8 BattleScript_ActionGetNear[];
 extern const u8 BattleScript_ActionThrowPokeblock[];
+extern const u8 BattleScript_MagmaArmorActivated[]; 
 //tx_randomizer_and_challenges
 extern const u8 BattleScript_Safari_OneTypeChallengeCaptureBlocked[];
 extern const u8 BattleScript_Safari_NuzlockeCaptureBlocked[];

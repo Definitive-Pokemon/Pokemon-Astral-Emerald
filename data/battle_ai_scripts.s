@@ -62,6 +62,7 @@ AI_CBM_CheckIfNegatesType:
 	if_equal ABILITY_FLASH_FIRE, CheckIfFlashFireCancelsFire
 	if_equal ABILITY_WONDER_GUARD, CheckIfWonderGuardCancelsMove
 	if_equal ABILITY_LEVITATE, CheckIfLevitateCancelsGroundMove
+	if_equal ABILITY_MOTOR_DRIVE, CheckIfMotorDriveCancelsElectric
 	goto AI_CheckBadMove_CheckSoundproof_
 
 CheckIfVoltAbsorbCancelsElectric:
@@ -86,6 +87,11 @@ CheckIfWonderGuardCancelsMove:
 CheckIfLevitateCancelsGroundMove:
 	get_curr_move_type
 	if_equal_ TYPE_GROUND, Score_Minus10
+	
+CheckIfMotorDriveCancelsElectric::
+	get_curr_move_type
+	if_equal_ TYPE_ELECTRIC, Score_Minus12
+
 AI_CheckBadMove_CheckSoundproof_:
 	get_how_powerful_move_is
 	if_equal MOVE_POWER_OTHER, AI_CheckBadMove_CheckSoundproof  @ Pointless check
@@ -2350,6 +2356,11 @@ AI_CV_ChangeSelfAbility_AbilitiesToEncourage:
 	.byte ABILITY_BATTLE_ARMOR
 	.byte ABILITY_SAND_VEIL
 	.byte ABILITY_ILLUMINATE
+	.byte ABILITY_SNOW_CLOAK
+	.byte ABILITY_MOTOR_DRIVE
+	.byte ABILITY_SOLID_ROCK
+	.byte ABILITY_TINTED_LENS
+	.byte ABILITY_SUPER_LUCK
 	.byte ABILITY_STATIC
 	.byte ABILITY_FLASH_FIRE
 	.byte ABILITY_WONDER_GUARD

@@ -294,6 +294,17 @@ const struct SpriteTemplate gWeatherBallRockDownSpriteTemplate =
     .callback = AnimWeatherBallDown,
 };
 
+const struct SpriteTemplate gStoneEdgeSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_STONE_EDGE,
+    .paletteTag = ANIM_TAG_STONE_EDGE,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gAnims_BasicFire,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimParticleInVortex,
+};
+
 static void AnimFallingRock(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[3] != 0)
