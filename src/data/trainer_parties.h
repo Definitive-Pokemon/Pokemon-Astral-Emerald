@@ -14197,7 +14197,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Red[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_CHARMANDER,
-    .moves = {MOVE_STONE_EDGE, MOVE_ENERGY_BALL, MOVE_DAZZLING_GLEAM, MOVE_X_SCISSOR}
+    .moves = {MOVE_CRUSH_GRIP, MOVE_ENERGY_BALL, MOVE_STONE_EDGE, MOVE_NONE}
     }
 };
 
