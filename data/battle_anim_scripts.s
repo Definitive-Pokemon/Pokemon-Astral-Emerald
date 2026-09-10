@@ -389,6 +389,7 @@ gBattleAnims_Moves::
 	.4byte Move_ENERGY_BALL
 	.4byte Move_X_SCISSOR
 	.4byte Move_STONE_EDGE
+	.4byte Move_AVALANCHE
 	.4byte Move_CRUSH_GRIP
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
@@ -10929,6 +10930,57 @@ Move_DARK_PULSE:
 	restorebg
 	waitbgfadein
 	end
+
+Move_AVALANCHE:
+	loadspritegfx ANIM_TAG_ROCKS
+	loadspritegfx ANIM_TAG_ICE_CHUNK
+	monbg ANIM_DEF_PARTNER
+	createsprite gShakeMonOrTerrainSpriteTemplate, ANIM_ATTACKER, 2, 7, 1, 11,1
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, -5, 1, -5, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, 5, 0, 6, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, 19, 1, 10, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate ANIM_TARGET, 2, -17, 2, -20, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 5, 50, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_DEF_PARTNER, 0, 5, 50, 1
+	delay 2
+	call SnowSlide1
+	call SnowSlide1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	end
+SnowSlide1:
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, -20, 0, -10, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, 28, 1, 10, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, -10, 1, -5, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, 10, 0, 6, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, 24, 1, 10, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, -32, 2, -10, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, -20, 0, -10, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	createsprite gAvalancheSpriteTemplate, ANIM_TARGET, 2, 30, 2, 10, 1
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 2
+	return
 
 Move_PSYCHO_CUT:
 	loadspritegfx ANIM_TAG_SPIRAL

@@ -1868,5 +1868,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ENERGY_BALL - 1] = sEnergyBallDescription,
     [MOVE_X_SCISSOR - 1] = sXScissorDescription,
     [MOVE_STONE_EDGE - 1] = sStoneEdgeDescription,
+    [MOVE_AVALANCHE - 1] = sRevengeDescription,
     [MOVE_CRUSH_GRIP - 1] = sCrushGripDescription,
 };

@@ -373,5 +373,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_ENERGY_BALL] = _("Energy Ball"),
     [MOVE_X_SCISSOR] = _("X-Scissor"),
     [MOVE_STONE_EDGE] = _("Stone Edge"), 
+    [MOVE_AVALANCHE] = _("Avalanche"),
     [MOVE_CRUSH_GRIP] = _("Crush Grip"),
 };

@@ -374,9 +374,10 @@
 #define MOVE_ENERGY_BALL 370
 #define MOVE_X_SCISSOR 371
 #define MOVE_STONE_EDGE 372
-#define MOVE_CRUSH_GRIP 373
+#define MOVE_AVALANCHE 373
+#define MOVE_CRUSH_GRIP 374
 
-#define MOVES_COUNT 374
+#define MOVES_COUNT 375
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
