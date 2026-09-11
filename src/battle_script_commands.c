@@ -8716,6 +8716,14 @@ static void Cmd_mimicattackcopy(void)
 
 static void Cmd_metronome(void)
 {
+    s32 moveCount;
+    if (gSaveBlock1Ptr->tx_Mode_Teams || gSaveBlock1Ptr->tx_Mode_Modern_Moves)
+    {
+        moveCount = MOVES_COUNT;
+    } else {
+        moveCount = MOVE_PSYCHO_CUT + 1;
+    }
+    
     while (TRUE)
     {
         s32 i;
@@ -8726,11 +8734,11 @@ static void Cmd_metronome(void)
         // picks in this range it retries. If MOVES_COUNT exceeds 511 we
         // instead use a simpler solution.
         gCurrentMove = (Random() & 0x1FF) + 1;
-        if (gCurrentMove >= MOVES_COUNT)
+        if (gCurrentMove >= moveCount)
             continue;
     #else
         // Just pick a valid move value (between 1 and MOVES_COUNT-1)
-        gCurrentMove = (Random() % (MOVES_COUNT - 1)) + 1;
+        gCurrentMove = (Random() % (moveCount - 1)) + 1;
     #endif
 
         for (i = 0; i < MAX_MON_MOVES; i++); // ?

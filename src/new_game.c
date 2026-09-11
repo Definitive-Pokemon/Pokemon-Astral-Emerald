@@ -305,6 +305,11 @@ bool8 AstralTrainerTeamsEnabled(void)
     return gSaveBlock1Ptr->tx_Mode_Teams;
 }
 
+bool8 ModernMovepoolEnabled(void)
+{
+    return gSaveBlock1Ptr->tx_Mode_Modern_Moves;
+}
+
 
 static void ResetMiniGamesRecords(void)
 {

@@ -573,6 +573,7 @@ gSpecials::
     def_special Special_OpenChallengeViewer
 	def_special UpdateGymLeaderRematch
 	def_special AstralTrainerTeamsEnabled
+	def_special ModernMovepoolEnabled
 	def_special HasRematchBeenFought
 	def_special CheckFoundAllHeartScales
 	def_special CheckFoundAllKecleon

@@ -4928,6 +4928,13 @@ static const u16 sRandomValidMoves[MOVES_COUNT-1] =
     MOVE_PLAY_ROUGH,
     MOVE_MOONBLAST,
     MOVE_POISON_JAB,
+    MOVE_HEAL_PULSE,
+    MOVE_DAZZLING_GLEAM,
+    MOVE_ENERGY_BALL,
+    MOVE_X_SCISSOR,
+    MOVE_STONE_EDGE,
+    MOVE_AVALANCHE,
+    MOVE_CRUSH_GRIP,
 };
 //**********************
 
