@@ -70,6 +70,7 @@ GiveNewTMs::
 	giveitem ITEM_TM59
 	giveitem ITEM_TM60
 	giveitem ITEM_TM61
+	giveitem ITEM_HM01
 	release
 	end
 

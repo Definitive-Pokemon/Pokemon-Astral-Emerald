@@ -372,25 +372,26 @@
 #define ITEM_TM48 336
 #define ITEM_TM49 337
 #define ITEM_TM50 338
-#define ITEM_HM01 339
-#define ITEM_HM02 340
-#define ITEM_HM03 341
-#define ITEM_HM04 342
-#define ITEM_HM05 343
-#define ITEM_HM06 344
-#define ITEM_HM07 345
-#define ITEM_HM08 346
-#define ITEM_TM51 347
-#define ITEM_TM52 348
-#define ITEM_TM53 349
-#define ITEM_TM54 350
-#define ITEM_TM55 351
-#define ITEM_TM56 352
-#define ITEM_TM57 353
-#define ITEM_TM58 354
-#define ITEM_TM59 355
-#define ITEM_TM60 356
-#define ITEM_TM61 357
+#define ITEM_TM51 339
+#define ITEM_TM52 340
+#define ITEM_TM53 341
+#define ITEM_TM54 342
+#define ITEM_TM55 343
+#define ITEM_TM56 344
+#define ITEM_TM57 345
+#define ITEM_TM58 346
+#define ITEM_TM59 347
+#define ITEM_TM60 348
+#define ITEM_TM61 349
+#define ITEM_HM01 350
+#define ITEM_HM02 351
+#define ITEM_HM03 352
+#define ITEM_HM04 353
+#define ITEM_HM05 354
+#define ITEM_HM06 355
+#define ITEM_HM07 356
+#define ITEM_HM08 357
+
 
 // Unknown
 #define ITEM_15B 358
