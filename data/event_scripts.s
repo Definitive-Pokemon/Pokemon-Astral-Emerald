@@ -1163,3 +1163,7 @@ Common_EventScript_LegendaryRanAway::
 	.include "data/maps/NavelRock_Unown_Room_2/scripts.inc"
 
 	.include "data/scripts/test.inc"
+
+	.include "data/maps/FiveEmerald/scripts.inc"
+
+	.include "data/maps/MeadowEmerald/scripts.inc"

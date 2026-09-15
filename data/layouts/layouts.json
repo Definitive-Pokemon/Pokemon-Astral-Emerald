@@ -4640,6 +4640,26 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/NavelRock_Unown_Room_2/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_Unown_Room_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIVE_EMERALD",
+      "name": "FiveEmerald_Layout",
+      "width": 24,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/FiveEmerald/border.bin",
+      "blockdata_filepath": "data/layouts/FiveEmerald/map.bin"
+    },
+    {
+      "id": "LAYOUT_MEADOW_EMERALD",
+      "name": "MeadowEmerald_Layout",
+      "width": 24,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/MeadowEmerald/border.bin",
+      "blockdata_filepath": "data/layouts/MeadowEmerald/map.bin"
     }
   ]
 }
