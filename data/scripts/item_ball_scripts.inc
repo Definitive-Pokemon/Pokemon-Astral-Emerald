@@ -308,7 +308,7 @@ Route134_EventScript_ItemStarPiece::
 	end
 
 PetalburgCity_EventScript_ItemMaxRevive::
-	finditem ITEM_MAX_REVIVE
+	finditem ITEM_WATER_STONE
 	end
 
 PetalburgCity_EventScript_ItemEther::
@@ -388,7 +388,7 @@ MeteorFalls_1F_1R_EventScript_ItemTMIronTail::
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemFullHeal::
-	finditem ITEM_FULL_HEAL
+	finditem ITEM_SUN_STONE
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemMoonStone::
@@ -620,7 +620,7 @@ VictoryRoad_B1F_EventScript_ItemTMPsychic::
 	end
 
 VictoryRoad_B1F_EventScript_ItemFullRestore::
-	finditem ITEM_FULL_RESTORE
+	finditem ITEM_RARE_CANDY
 	end
 
 VictoryRoad_B2F_EventScript_ItemFullHeal::
@@ -636,7 +636,7 @@ ArtisanCave_1F_EventScript_ItemCarbos::
 	end
 
 MagmaHideout_1F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+	finditem ITEM_TM_FLAMETHROWER
 	end
 
 MagmaHideout_2F_2R_EventScript_ItemMaxElixir::
@@ -648,7 +648,7 @@ MagmaHideout_2F_2R_EventScript_ItemFullRestore::
 	end
 
 MagmaHideout_3F_1R_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
+	finditem ITEM_RARE_CANDY
 	end
 
 MagmaHideout_3F_2R_EventScript_ItemPPMax::
@@ -661,4 +661,28 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
+	end
+
+Route108_EventScript_ItemBlueShard::
+	finditem ITEM_BLUE_SHARD
+	end
+
+Route124_EventScript_ItemRedShard2::
+	finditem ITEM_RED_SHARD
+	end
+
+Route132_EventScript_ItemGreenShard::
+	finditem ITEM_GREEN_SHARD
+	end
+
+Route128_EventScript_ItemYellowShard::
+	finditem ITEM_YELLOW_SHARD
+	end
+
+Route125_EventScript_ItemYellowShard::
+	finditem ITEM_YELLOW_SHARD
+	end
+
+Route134_EventScript_ItemBlueShard::
+	finditem ITEM_BLUE_SHARD
 	end
