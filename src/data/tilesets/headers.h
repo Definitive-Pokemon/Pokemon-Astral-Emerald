@@ -849,3 +849,50 @@ const struct Tileset gTileset_UnionRoom =
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
 };
+
+// rekindled general
+const struct Tileset gTileset_RekindledRedGeneral =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_RekindledRedGeneral,
+    .palettes = gTilesetPalettes_RekindledRedGeneral,
+    .metatiles = gMetatiles_RekindledRedGeneral,
+    .metatileAttributes = gMetatileAttributes_RekindledRedGeneral,
+    .callback = InitTilesetAnim_RekindledRedGeneral,
+};
+
+// firered general?
+const struct Tileset gTileset_FireRedGeneral =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_FireRedGeneral,
+    .palettes = gTilesetPalettes_FireRedGeneral,
+    .metatiles = gMetatiles_FireRedGeneral,
+    .metatileAttributes = gMetatileAttributes_FireRedGeneral,
+    .callback = InitTilesetAnim_FireRedGeneral,
+};
+
+// vanilla sevii for easy compat
+const struct Tileset gTileset_SeviiIslands45 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiIslands45,
+    .palettes = gTilesetPalettes_SeviiIslands45,
+    .metatiles = gMetatiles_SeviiIslands45,
+    .metatileAttributes = gMetatileAttributes_SeviiIslands45,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SeviiIslands5 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiIslands5,
+    .palettes = gTilesetPalettes_SeviiIslands5,
+    .metatiles = gMetatiles_SeviiIslands5,
+    .metatileAttributes = gMetatileAttributes_SeviiIslands5,
+    .callback = NULL,
+};

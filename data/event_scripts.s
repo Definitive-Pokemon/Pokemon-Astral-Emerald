@@ -1167,3 +1167,11 @@ Common_EventScript_LegendaryRanAway::
 	.include "data/maps/FiveEmerald/scripts.inc"
 
 	.include "data/maps/MeadowEmerald/scripts.inc"
+
+	.include "data/maps/FiveRekindled/scripts.inc"
+
+	.include "data/maps/MeadowRekindled/scripts.inc"
+
+	.include "data/maps/FiveRed/scripts.inc"
+
+	.include "data/maps/MeadowFire/scripts.inc"

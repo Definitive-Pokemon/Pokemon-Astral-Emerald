@@ -4660,6 +4660,46 @@
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/MeadowEmerald/border.bin",
       "blockdata_filepath": "data/layouts/MeadowEmerald/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIVE_REKINDLED",
+      "name": "FiveRekindled_Layout",
+      "width": 24,
+      "height": 20,
+      "primary_tileset": "gTileset_FireRedGeneral",
+      "secondary_tileset": "gTileset_SeviiIslands5",
+      "border_filepath": "data/layouts/FiveRekindled/border.bin",
+      "blockdata_filepath": "data/layouts/FiveRekindled/map.bin"
+    },
+    {
+      "id": "LAYOUT_MEADOW_REKINDLED",
+      "name": "MeadowRekindled_Layout",
+      "width": 24,
+      "height": 40,
+      "primary_tileset": "gTileset_FireRedGeneral",
+      "secondary_tileset": "gTileset_SeviiIslands5",
+      "border_filepath": "data/layouts/MeadowRekindled/border.bin",
+      "blockdata_filepath": "data/layouts/MeadowRekindled/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIVE_RED",
+      "name": "FiveRed_Layout",
+      "width": 24,
+      "height": 20,
+      "primary_tileset": "gTileset_FireRedGeneral",
+      "secondary_tileset": "gTileset_SeviiIslands45",
+      "border_filepath": "data/layouts/FiveRed/border.bin",
+      "blockdata_filepath": "data/layouts/FiveRed/map.bin"
+    },
+    {
+      "id": "LAYOUT_MEADOW_FIRE",
+      "name": "MeadowFire_Layout",
+      "width": 24,
+      "height": 40,
+      "primary_tileset": "gTileset_FireRedGeneral",
+      "secondary_tileset": "gTileset_SeviiIslands45",
+      "border_filepath": "data/layouts/MeadowFire/border.bin",
+      "blockdata_filepath": "data/layouts/MeadowFire/map.bin"
     }
   ]
 }

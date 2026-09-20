@@ -43,6 +43,8 @@ static void TilesetAnim_MauvilleGym(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
+static void TilesetAnim_RekindledRedGeneral(u16);
+static void TilesetAnim_FireRedGeneral(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
@@ -820,6 +822,20 @@ void InitTilesetAnim_BikeShop(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_BikeShop;
 }
 
+void InitTilesetAnim_RekindledRedGeneral(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_RekindledRedGeneral;
+}
+
+void InitTilesetAnim_FireRedGeneral(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_FireRedGeneral;
+}
+
 void InitTilesetAnim_BattlePyramid(void)
 {
     sSecondaryTilesetAnimCounter = 0;
@@ -1185,4 +1201,59 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
         if (!--sSecondaryTilesetAnimCounterMax)
             sSecondaryTilesetAnimCallback = NULL;
     }
+}
+
+static void QueueAnimTiles_General_Flower(u16 timer)
+{
+    AppendTilesetAnimToBuffer(sTilesetAnims_General_Flower[timer % ARRAY_COUNT(sTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(sTilesetAnims_General_Flower_Black[timer % ARRAY_COUNT(sTilesetAnims_General_Flower_Black)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(488)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_General_Water_Current_LandWatersEdge(u16 timer)
+{
+    AppendTilesetAnimToBuffer(sTilesetAnims_General_Water_Current_LandWatersEdge[timer % ARRAY_COUNT(sTilesetAnims_General_Water_Current_LandWatersEdge)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Mossdeep_Tree_Base[timer % ARRAY_COUNT(gTilesetAnims_Mossdeep_Tree_Base)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(492)), 0x80);
+}
+
+static void QueueAnimTiles_General_SandWatersEdge(u16 timer)
+{
+    AppendTilesetAnimToBuffer(sTilesetAnims_General_SandWatersEdge[timer % ARRAY_COUNT(sTilesetAnims_General_SandWatersEdge)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 18 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_RekindledRedGeneral(u16 timer)
+{
+
+        if (timer % 8 == 0)
+        QueueAnimTiles_General_SandWatersEdge(timer / 8);
+    if (timer % 16 == 1)
+        QueueAnimTiles_General_Water_Current_LandWatersEdge(timer / 16);
+    // flower
+    // black flower
+    // water sand
+    // land water edge
+    if (timer % 16 == 0)
+        QueueAnimTiles_General_Flower(timer / 16);
+    if (timer % 16 == 1)
+        QueueAnimTiles_General_Water(timer / 16);
+    if (timer % 16 == 2)
+        QueueAnimTiles_General_SandWaterEdge(timer / 16);
+    if (timer % 16 == 3)
+        QueueAnimTiles_General_Waterfall(timer / 16);
+    if (timer % 16 == 4)
+        QueueAnimTiles_General_LandWaterEdge(timer / 16);
+}
+
+static void TilesetAnim_FireRedGeneral(u16 timer)
+{
+    // flower
+    // water sand
+    // land water edge
+    if (timer % 16 == 0)
+        QueueAnimTiles_General_Flower(timer / 16);
+    if (timer % 16 == 1)
+        QueueAnimTiles_General_Water(timer / 16);
+    if (timer % 16 == 2)
+        QueueAnimTiles_General_SandWaterEdge(timer / 16);
+    if (timer % 16 == 3)
+        QueueAnimTiles_General_Waterfall(timer / 16);
 }

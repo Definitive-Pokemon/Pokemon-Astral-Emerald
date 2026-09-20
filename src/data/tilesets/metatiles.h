@@ -207,3 +207,15 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiIslands5[] = INCBIN_U16("data/tilesets/secondary/seviiislands5/metatiles.bin");
+const u16 gMetatileAttributes_SeviiIslands5[] = INCBIN_U16("data/tilesets/secondary/seviiislands5/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiIslands45[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_45/metatiles.bin");
+const u16 gMetatileAttributes_SeviiIslands45[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_45/metatile_attributes.bin");
+
+const u16 gMetatiles_RekindledRedGeneral[] = INCBIN_U16("data/tilesets/primary/rekindledred/metatiles.bin");
+const u16 gMetatileAttributes_RekindledRedGeneral[] = INCBIN_U16("data/tilesets/primary/rekindled/metatile_attributes.bin");
+
+const u16 gMetatiles_FireRedGeneral[] = INCBIN_U16("data/tilesets/primary/firered/metatiles.bin");
+const u16 gMetatileAttributes_FireRedGeneral[] = INCBIN_U16("data/tilesets/primary/firered/metatile_attributes.bin");
