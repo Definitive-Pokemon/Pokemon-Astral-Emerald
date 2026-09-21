@@ -192,6 +192,27 @@
       "elevation": 0,
       "dest_map": "MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_FIVE_EMERALD",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_FIVE_RED",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_FIVE_REKINDLED",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
