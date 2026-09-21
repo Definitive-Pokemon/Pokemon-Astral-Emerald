@@ -1710,3 +1710,41 @@ const u16 ALIGNED(4) gTilesetPalettes_SeviiIslands5[][16] =
 	INCBIN_U16("data/tilesets/secondary/seviiislands5/palettes/11.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/seviiislands5/palettes/12.gbapal"),
 };
+
+const u16 gTilesetPalettes_FRGeneral[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/frgeneral/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_FRGeneral[] = INCBIN_U32("data/tilesets/primary/frgeneral/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_FRSevii45[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frsevii_45/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_FRSevii45[] = INCBIN_U32("data/tilesets/secondary/frsevii_45/tiles.4bpp.lz");

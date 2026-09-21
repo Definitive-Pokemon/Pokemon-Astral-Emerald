@@ -4666,7 +4666,7 @@
       "name": "FiveRekindled_Layout",
       "width": 24,
       "height": 20,
-      "primary_tileset": "gTileset_FireRedGeneral",
+      "primary_tileset": "gTileset_FRGeneral",
       "secondary_tileset": "gTileset_SeviiIslands5",
       "border_filepath": "data/layouts/FiveRekindled/border.bin",
       "blockdata_filepath": "data/layouts/FiveRekindled/map.bin"
@@ -4676,7 +4676,7 @@
       "name": "MeadowRekindled_Layout",
       "width": 24,
       "height": 40,
-      "primary_tileset": "gTileset_FireRedGeneral",
+      "primary_tileset": "gTileset_FRGeneral",
       "secondary_tileset": "gTileset_SeviiIslands5",
       "border_filepath": "data/layouts/MeadowRekindled/border.bin",
       "blockdata_filepath": "data/layouts/MeadowRekindled/map.bin"
@@ -4686,8 +4686,8 @@
       "name": "FiveRed_Layout",
       "width": 24,
       "height": 20,
-      "primary_tileset": "gTileset_FireRedGeneral",
-      "secondary_tileset": "gTileset_SeviiIslands45",
+      "primary_tileset": "gTileset_FRGeneral",
+      "secondary_tileset": "gTileset_FRSevii45",
       "border_filepath": "data/layouts/FiveRed/border.bin",
       "blockdata_filepath": "data/layouts/FiveRed/map.bin"
     },
@@ -4696,8 +4696,8 @@
       "name": "MeadowFire_Layout",
       "width": 24,
       "height": 40,
-      "primary_tileset": "gTileset_FireRedGeneral",
-      "secondary_tileset": "gTileset_SeviiIslands45",
+      "primary_tileset": "gTileset_FRGeneral",
+      "secondary_tileset": "gTileset_FRSevii45",
       "border_filepath": "data/layouts/MeadowFire/border.bin",
       "blockdata_filepath": "data/layouts/MeadowFire/map.bin"
     }

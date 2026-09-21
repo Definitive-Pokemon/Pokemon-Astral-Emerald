@@ -219,3 +219,9 @@ const u16 gMetatileAttributes_RekindledRedGeneral[] = INCBIN_U16("data/tilesets/
 
 const u16 gMetatiles_FireRedGeneral[] = INCBIN_U16("data/tilesets/primary/firered/metatiles.bin");
 const u16 gMetatileAttributes_FireRedGeneral[] = INCBIN_U32("data/tilesets/primary/firered/metatile_attributes.bin");
+
+const u16 gMetatiles_FRGeneral[] = INCBIN_U16("data/tilesets/primary/frgeneral/metatiles.bin");
+const u16 gMetatileAttributes_FRGeneral[] = INCBIN_U16("data/tilesets/primary/frgeneral/metatile_attributes.bin");
+
+const u16 gMetatiles_FRSevii45[] = INCBIN_U16("data/tilesets/secondary/frsevii_45/metatiles.bin");
+const u16 gMetatileAttributes_FRSevii45[] = INCBIN_U16("data/tilesets/secondary/frsevii_45/metatile_attributes.bin");
