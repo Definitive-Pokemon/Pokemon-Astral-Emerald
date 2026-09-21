@@ -215,7 +215,7 @@ const u16 gMetatiles_SeviiIslands45[] = INCBIN_U16("data/tilesets/secondary/sevi
 const u16 gMetatileAttributes_SeviiIslands45[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_45/metatile_attributes.bin");
 
 const u16 gMetatiles_RekindledRedGeneral[] = INCBIN_U16("data/tilesets/primary/rekindledred/metatiles.bin");
-const u16 gMetatileAttributes_RekindledRedGeneral[] = INCBIN_U16("data/tilesets/primary/rekindled/metatile_attributes.bin");
+const u16 gMetatileAttributes_RekindledRedGeneral[] = INCBIN_U16("data/tilesets/primary/rekindledred/metatile_attributes.bin");
 
 const u16 gMetatiles_FireRedGeneral[] = INCBIN_U16("data/tilesets/primary/firered/metatiles.bin");
 const u16 gMetatileAttributes_FireRedGeneral[] = INCBIN_U16("data/tilesets/primary/firered/metatile_attributes.bin");
