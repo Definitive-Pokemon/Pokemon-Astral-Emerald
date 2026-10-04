@@ -270,6 +270,13 @@
 #define EVO_LEVEL_FEMALE_MORNING 24 // Pokémon levels up, being female, during the day
 #define EVO_LEVEL_MALE_MORNING   25 // Pokémon levels up, being male, during the day
 #define EVO_ITEM_HOLD        26 // Pokémon levels up, holds specified item
+#define EVO_ITEM_MALE        27
+#define EVO_ITEM_FEMALE      28
+#define EVO_MAP              29
+
+#define EVOLUTION_MAP_NEW_MAUVILLE 0
+#define EVOLUTION_MAP_MOSS_ROCK 1
+#define EVOLUTION_MAP_ICE_ROCK 2
 
 #define EVOS_PER_MON 8
 #define EVOS_PER_LINE 9

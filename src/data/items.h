@@ -881,6 +881,20 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
     },
 
+[ITEM_FIRE_STONE] =
+    {
+        .name = _("Fire Stone"),
+        .itemId = ITEM_FIRE_STONE,
+        .price = 2100,
+        .description = sFireStoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+    },
+
+
+
+
     [ITEM_PP_UP] =
     {
         .name = _("PP Up"),
@@ -2829,111 +2843,111 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_InfiniteRareCandies,
     },
 
-    [ITEM_0E4] =
+    [ITEM_DAWN_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dawn Stone"),
+        .itemId = ITEM_DAWN_STONE,
+        .price = 1050,
+        .description = sDawnStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E5] =
+    [ITEM_DUSK_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dusk Stone"),
+        .itemId = ITEM_DUSK_STONE,
+        .price = 1050,
+        .description = sDuskStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E6] =
+    [ITEM_MAGMORIZER] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Magmorizer"),
+        .itemId = ITEM_MAGMORIZER,
+        .price = 2210,
+        .description = sMagmorizer,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E7] =
+    [ITEM_ELECTIRIZER] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Electirizer"),
+        .itemId = ITEM_ELECTIRIZER,
+        .price = 2210,
+        .description = sElectirizer,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E8] =
+    [ITEM_RAZOR_FANG] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
+        .name = _("Razor Fang"),
+        .itemId = ITEM_RAZOR_FANG,
         .price = 0,
-        .description = sDummyDesc,
+        .description = sRazorFang,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E9] =
+    [ITEM_RAZOR_CLAW] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Razor Claw"),
+        .itemId = ITEM_RAZOR_CLAW,
+        .price = 1050,
+        .description = sRazorClaw,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0EA] =
+    [ITEM_PROTECTOR] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Protector"),
+        .itemId = ITEM_PROTECTOR,
+        .price = 1050,
+        .description = sProtector,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0EB] =
+    [ITEM_REAPER_CLOTH] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Reaper Cloth"),
+        .itemId = ITEM_REAPER_CLOTH,
+        .price = 1050,
+        .description = sReaperCloth,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0EC] =
+    [ITEM_DUBIOUS_DISC] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dubious Disc"),
+        .itemId = ITEM_DUBIOUS_DISC,
+        .price = 1050,
+        .description = sDubiousDisc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0ED] =
+    [ITEM_OVAL_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Oval Stone"),
+        .itemId = ITEM_OVAL_STONE,
+        .price = 1050,
+        .description = sOvalStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -7815,117 +7829,116 @@ const struct Item gItems2[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_InfiniteRareCandies,
     },
-
-    [ITEM_0E4] =
+    [ITEM_DAWN_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dawn Stone"),
+        .itemId = ITEM_DAWN_STONE,
+        .price = 1050,
+        .description = sDawnStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E5] =
+    [ITEM_DUSK_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dusk Stone"),
+        .itemId = ITEM_DUSK_STONE,
+        .price = 1050,
+        .description = sDuskStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E6] =
+    [ITEM_MAGMORIZER] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Magmorizer"),
+        .itemId = ITEM_MAGMORIZER,
+        .price = 2210,
+        .description = sMagmorizer,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E7] =
+    [ITEM_ELECTIRIZER] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Electirizer"),
+        .itemId = ITEM_ELECTIRIZER,
+        .price = 2210,
+        .description = sElectirizer,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E8] =
+    [ITEM_RAZOR_FANG] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
+        .name = _("Razor Fang"),
+        .itemId = ITEM_RAZOR_FANG,
         .price = 0,
-        .description = sDummyDesc,
+        .description = sRazorFang,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E9] =
+    [ITEM_RAZOR_CLAW] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Razor Claw"),
+        .itemId = ITEM_RAZOR_CLAW,
+        .price = 1050,
+        .description = sRazorClaw,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0EA] =
+    [ITEM_PROTECTOR] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Protector"),
+        .itemId = ITEM_PROTECTOR,
+        .price = 1050,
+        .description = sProtector,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0EB] =
+    [ITEM_REAPER_CLOTH] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Reaper Cloth"),
+        .itemId = ITEM_REAPER_CLOTH,
+        .price = 1050,
+        .description = sReaperCloth,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0EC] =
+    [ITEM_DUBIOUS_DISC] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dubious Disc"),
+        .itemId = ITEM_DUBIOUS_DISC,
+        .price = 1050,
+        .description = sDubiousDisc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0ED] =
+    [ITEM_OVAL_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Oval Stone"),
+        .itemId = ITEM_OVAL_STONE,
+        .price = 1050,
+        .description = sOvalStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
-
+    
     [ITEM_0EE] =
     {
         .name = _("????????"),

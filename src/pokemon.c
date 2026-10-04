@@ -9448,6 +9448,16 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 }
                 break;
+            case EVO_MAP:
+                {
+                    u8 location = gEvolutionAreaTable[gEvolutionTable[species][i].param];
+                    if (gSaveBlock1Ptr->location.mapGroup = MAP_GROUP(location)
+                     && gSaveBlock1Ptr->location.mapNum = MAP_NUM(location))
+                    {
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                    }
+                    break;
+                }
             }
         }
         break;
@@ -9475,6 +9485,20 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
         for (i = 0; i < EVOS_PER_MON; i++)
         {
             if (gEvolutionTable[species][i].method == EVO_ITEM
+             && gEvolutionTable[species][i].param == evolutionItem)
+            {
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            }
+            if (gEvolutionTable[species][i].method == EVO_ITEM_MALE
+             && GetMonGender(mon) == MON_MALE
+             && gEvolutionTable[species][i].param == evolutionItem)
+            {
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            }
+            if (gEvolutionTable[species][i].method == EVO_ITEM_FEMALE
+             && GetMonGender(mon) == MON_FEMALE
              && gEvolutionTable[species][i].param == evolutionItem)
             {
                 targetSpecies = gEvolutionTable[species][i].targetSpecies;

@@ -1749,3 +1749,42 @@ static const u8 sHealingHeart[] = _(
     "This soft heart\n"
     "fully heals your\n"
     "Pokémon party.");
+
+static const u8 sDawnStone[] = _(
+A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.
+);
+static const u8 sDuskStone[] = _(
+A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.
+);
+static const u8 sMagmorizer[] = _(
+A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.
+);
+static const u8 sElectirizer[] = _(
+A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon.
+);
+static const u8 sRazorFang[] = _(
+An item to be held by a Pokémon. It may cause the foe to flinch when the holder inflicts damage.
+);
+static const u8 sRazorClaw[] = _(
+An item to be held by a Pokémon. It is a sharply hooked claw that ups the holder's critical-hit ratio.
+);
+static const u8 sProtector[] = _(
+A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon.
+);
+static const u8 sReaperCloth[] = _(
+A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.
+);
+static const u8 sDubiousDisc[] = _(
+    "Overflowing with\n"
+    "dubious data.\n"
+    "Producer unknown."
+);
+
+static const u8 sOvalStone[] = _(
+    "\n"
+    "\n"
+    ""
+);
+A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.
+
+
