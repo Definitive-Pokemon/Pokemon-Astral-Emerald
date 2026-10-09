@@ -849,3 +849,27 @@ const struct Tileset gTileset_UnionRoom =
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
 };
+
+// Tiles based off Rekindled Red (in turn FRLG+):
+
+const struct Tileset gTileset_SeviiGeneral =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_RekindledRedGeneral,
+    .palettes = gTilesetPalettes_RekindledRedGeneral,
+    .metatiles = gMetatiles_RekindledRedGeneral,
+    .metatileAttributes = gMetatileAttributes_RekindledRedGeneral,
+    .callback = InitTilesetAnim_RekindledRedGeneral,
+};
+
+const struct Tileset gTileset_SeviiIslands5 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiIslands5,
+    .palettes = gTilesetPalettes_SeviiIslands5,
+    .metatiles = gMetatiles_SeviiIslands5,
+    .metatileAttributes = gMetatileAttributes_SeviiIslands5,
+    .callback = NULL,
+};
