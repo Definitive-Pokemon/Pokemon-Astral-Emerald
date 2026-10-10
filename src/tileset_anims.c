@@ -43,8 +43,7 @@ static void TilesetAnim_MauvilleGym(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
-static void TilesetAnim_RekindledRedGeneral(u16);
-static void TilesetAnim_FireRedGeneral(u16);
+static void TilesetAnim_SeviiGeneral(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
@@ -1258,6 +1257,10 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
     }
 }
 
+static void QueueAnimTiles_General_SandWatersEdge(u16 timer)
+{
+    AppendTilesetAnimToBuffer(sTilesetAnims_General_SandWatersEdge[timer % ARRAY_COUNT(sTilesetAnims_General_SandWatersEdge)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 18 * TILE_SIZE_4BPP);
+}
 
 static void QueueAnimTiles_SeviiGeneral_Water_Current_LandWatersEdge(u16 timer)
 {
@@ -1269,7 +1272,7 @@ static void TilesetAnim_SeviiGeneral(u16 timer)
 {
 
         if (timer % 8 == 0)
-        QueueAnimTiles_SeviiGeneral_SandWatersEdge(timer / 8);
+        QueueAnimTiles_General_SandWatersEdge(timer / 8);
     if (timer % 16 == 1)
         QueueAnimTiles_SeviiGeneral_Water_Current_LandWatersEdge(timer / 16);
     // flower
