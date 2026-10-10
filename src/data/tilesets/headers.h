@@ -856,11 +856,11 @@ const struct Tileset gTileset_SeviiGeneral =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_RekindledRedGeneral,
-    .palettes = gTilesetPalettes_RekindledRedGeneral,
-    .metatiles = gMetatiles_RekindledRedGeneral,
-    .metatileAttributes = gMetatileAttributes_RekindledRedGeneral,
-    .callback = InitTilesetAnim_RekindledRedGeneral,
+    .tiles = gTilesetTiles_SeviiGeneral,
+    .palettes = gTilesetPalettes_SeviiGeneral,
+    .metatiles = gMetatiles_SeviiGeneral,
+    .metatileAttributes = gMetatileAttributes_SeviiGeneral,
+    .callback = InitTilesetAnim_SeviiGeneral,
 };
 
 const struct Tileset gTileset_SeviiIslands5 =
