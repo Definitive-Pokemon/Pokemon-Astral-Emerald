@@ -44,6 +44,8 @@ static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
 static void TilesetAnim_SeviiGeneral(u16);
+static void TilesetAnim_SeviiIslands67(u16);
+static void TilesetAnim_SeviiIslands5(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
@@ -1284,8 +1286,7 @@ static void QueueAnimTiles_SeviiGeneral_Water_Current_LandWatersEdge(u16 timer)
 
 static void TilesetAnim_SeviiGeneral(u16 timer)
 {
-
-        if (timer % 8 == 0)
+    if (timer % 8 == 0)
         QueueAnimTiles_General_SandWatersEdge(timer / 8);
     if (timer % 16 == 1)
         QueueAnimTiles_SeviiGeneral_Water_Current_LandWatersEdge(timer / 16);
@@ -1308,7 +1309,7 @@ static void TilesetAnim_SeviiGeneral(u16 timer)
 static void QueueAnimTiles_SeviiIslands67_Flower(u16 timer)
 {
     u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_BattleFrontierOutsideEast_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x377)), 0x80);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x377)), 0x80);
 }
 
 static void TilesetAnim_SeviiIslands67(u16 timer)
@@ -1319,7 +1320,7 @@ static void TilesetAnim_SeviiIslands67(u16 timer)
 
 static void QueueAnimTiles_SeviiIslands5_ShortGrassFlower(u16 timer)
 {
-    AppendTilesetAnimToBuffer(sTilesetAnims_General_Flower[timer % NELEMS(sTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x324)), 0x80);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[timer % NELEMS(gTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x324)), 0x80);
 }
 
 static void TilesetAnim_SeviiIslands5(u16 timer)
