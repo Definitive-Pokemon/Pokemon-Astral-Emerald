@@ -4722,6 +4722,16 @@
       "blockdata_filepath": "data/layouts/KnotIsland_KindleRoad/map.bin"
     },
     {
+      "id": "LAYOUT_KNOT_ISLAND_KINDLE_ROAD_GLASS_WORKSHOP",
+      "name": "KnotIsland_KindleRoad_GlassWorkshop_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_SeviiInsideBuilding",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/KnotIsland_KindleRoad_GlassWorkshop/border.bin",
+      "blockdata_filepath": "data/layouts/KnotIsland_KindleRoad_GlassWorkshop/map.bin"
+    },
+    {
       "id": "LAYOUT_MT_EMBER_EXTERIOR",
       "name": "MtEmber_Exterior_Layout",
       "width": 57,
@@ -4976,8 +4986,6 @@
       "name": "KinIsland_DunsparceTunnel_DugOut_Layout",
       "width": 30,
       "height": 7,
-      "border_width": 2,
-      "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/KinIsland_DunsparceTunnel_DugOut/border.bin",
