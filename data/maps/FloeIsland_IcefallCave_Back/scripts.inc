@@ -12,7 +12,7 @@ FloeIsland_IcefallCave_Back_OnTransition::
 	end
 
 FloeIsland_IcefallCave_Back_EventScript_HideLorelei::
-	setflag FLAG_HIDE_ICEFALL_CAVE_LORELEI
+	@setflag FLAG_HIDE_ICEFALL_CAVE_LORELEI
 	return
 
 FloeIsland_IcefallCave_Back_EventScript_LoreleiRocketsScene::
@@ -85,9 +85,9 @@ FloeIsland_IcefallCave_Back_EventScript_LoreleiRocketsScene::
 	waitmovement 0
 
 	msgbox FloeIsland_IcefallCave_Back_Text_ThankYouThisIsAwful
-	setflag FLAG_HIDE_RUIN_VALLEY_SCIENTIST
-	clearflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
-	setvar VAR_MAP_SCENE_ICEFALL_CAVE_BACK, 1
+	@setflag FLAG_HIDE_RUIN_VALLEY_SCIENTIST
+	@clearflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
+	@setvar VAR_MAP_SCENE_ICEFALL_CAVE_BACK, 1
 	releaseall
 	end
 

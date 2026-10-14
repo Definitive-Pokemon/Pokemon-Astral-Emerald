@@ -10,11 +10,11 @@ ChronoIsland_LostCave_Room10_OnResume::
 	end
 
 ChronoIsland_LostCave_Room10_EventScript_StopSelphySceneTrigger::
-	setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
+	@setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
 	return
 
 ChronoIsland_LostCave_Room10_OnFrame::
-	map_script_2 VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 0, ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene
+	@map_script_2 VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 0, ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene
 	.2byte 0
 
 ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene::
@@ -36,10 +36,10 @@ ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene::
 	end
 
 ChronoIsland_LostCave_Room10_EventScript_SetSelphyFound::
-	setflag FLAG_HIDE_LOST_CAVE_SELPHY
-	clearflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
-	setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
-	setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1
+	@setflag FLAG_HIDE_LOST_CAVE_SELPHY
+	@clearflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
+	@setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
+	@setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1
 	return
 
 ChronoIsland_LostCave_Room10_Movement_SelphyWander::

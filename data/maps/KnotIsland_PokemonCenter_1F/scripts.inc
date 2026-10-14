@@ -258,7 +258,7 @@ KnotIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire::
 	waitmovement 0
 	msgbox KnotIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou
 	@setflag FLAG_SYS_CAN_LINK_WITH_RS
-	setflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
+	@setflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
 	@setvar VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F, 6
 	special InitRoamer
 	release
@@ -457,8 +457,8 @@ KnotIsland_PokemonCenter_1F_EventScript_LeaveKnotIslandScene::
 	applymovement LOCALID_BILL, KnotIsland_PokemonCenter_1F_Movement_BillExit
 	waitmovement 0
 	playse SE_EXIT
-	setflag FLAG_HIDE_KNOT_ISLAND_POKECENTER_BILL
-	setvar VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F, 3
+	@setflag FLAG_HIDE_KNOT_ISLAND_POKECENTER_BILL
+	@setvar VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F, 3
 	@ used to be set sail
 	end
 

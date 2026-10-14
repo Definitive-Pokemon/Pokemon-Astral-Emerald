@@ -11,7 +11,7 @@ KinIsland_Port_EventScript_Woman::
 	lock
 	faceplayer
 	goto_if_ge VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 2, KinIsland_Port_EventScript_WomanLostelleFound
-	goto_if_ge VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_Port_EventScript_WomanBikersGone
+	@goto_if_ge VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_Port_EventScript_WomanBikersGone
 	msgbox KinIsland_Port_Text_IllCallThePolice
 	release
 	end

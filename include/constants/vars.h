@@ -271,8 +271,8 @@
 #define VAR_TEST                                         0x40FB // Test VAR
 #define VAR_TEST_DARK                                    0x40FC
 #define VAR_WONDERTRADE                                  0x40FD // 0 and 1 -> First time message when entering Wondertrade. 2 -> No message.
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_GLASS_WORKSHOP_STATE                         0x40FE // Unused Var
+#define VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER     0x40FF // Unused Var
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

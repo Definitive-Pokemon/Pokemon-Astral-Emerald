@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "ChronoIsland_Meadow_EventScript_Rocket3",
-      "flag": "FLAG_HIDE_CHRONO_ISLAND_ROCKETS"
+      "flag": "0"
     },
     {
       "type": "object",
@@ -52,7 +52,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "ChronoIsland_Meadow_EventScript_Rocket1",
-      "flag": "FLAG_HIDE_CHRONO_ISLAND_ROCKETS"
+      "flag": "0"
     },
     {
       "type": "object",
@@ -66,7 +66,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ChronoIsland_Meadow_EventScript_Rocket2",
-      "flag": "FLAG_HIDE_CHRONO_ISLAND_ROCKETS"
+      "flag": "0"
     },
     {
       "type": "object",

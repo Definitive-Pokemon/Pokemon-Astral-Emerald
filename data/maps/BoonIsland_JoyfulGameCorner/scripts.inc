@@ -90,9 +90,9 @@ BoonIsland_JoyfulGameCorner_EventScript_HelpFindLostelleScene::
 	fadedefaultbgm
 	delay 60
 	msgbox BoonIsland_JoyfulGameCorner_Text_PunkScuffedUpMyFloor
-	clearflag FLAG_HIDE_KIN_ISLAND_LONE_BIKER
-	setvar VAR_MAP_SCENE_KIN_ISLAND, 2
-	setvar VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 1
+	@clearflag FLAG_HIDE_KIN_ISLAND_LONE_BIKER
+	@setvar VAR_MAP_SCENE_KIN_ISLAND, 2
+	@setvar VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 1
 	releaseall
 	end
 

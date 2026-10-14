@@ -60,7 +60,7 @@ ChronoIsland_Warehouse_EventScript_MentionGiovannisKid::
 
 ChronoIsland_Warehouse_EventScript_DefeatedGideon::
 	msgbox ChronoIsland_Warehouse_Text_GideonPostBattle
-	setflag FLAG_RECOVERED_SAPPHIRE
+	@setflag FLAG_RECOVERED_SAPPHIRE
 	giveitem ITEM_SAPPHIRE
 	release
 	end
@@ -90,10 +90,10 @@ ChronoIsland_Warehouse_EventScript_DefeatedAdmin2::
 	removeobject LOCALID_WAREHOUSE_GRUNT3
 	removeobject LOCALID_WAREHOUSE_ADMIN2
 	removeobject LOCALID_WAREHOUSE_ADMIN1
-	setflag FLAG_HIDE_CHRONO_ISLAND_ROCKETS
+	@setflag FLAG_HIDE_CHRONO_ISLAND_ROCKETS
 	fadescreen FADE_FROM_BLACK
-	setvar VAR_MAP_SCENE_ROCKET_WAREHOUSE, 1
-	setflag FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE
+	@setvar VAR_MAP_SCENE_ROCKET_WAREHOUSE, 1
+	@setflag FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE
 	release
 	end
 

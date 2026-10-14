@@ -43,17 +43,17 @@ BoonIsland_EventScript_SetShopInitial::
 
 BoonIsland_EventScript_SetShopExpanded1::
 	setvar VAR_MAP_SCENE_BOON_ISLAND, 2
-	clearflag FLAG_HIDE_BOON_ISLAND_WOMAN
+	@clearflag FLAG_HIDE_BOON_ISLAND_WOMAN
 	return
 
 BoonIsland_EventScript_SetShopExpanded2::
 	setvar VAR_MAP_SCENE_BOON_ISLAND, 3
-	clearflag FLAG_HIDE_BOON_ISLAND_BEAUTY
+	@clearflag FLAG_HIDE_BOON_ISLAND_BEAUTY
 	return
 
 BoonIsland_EventScript_SetShopExpanded3::
 	setvar VAR_MAP_SCENE_BOON_ISLAND, 4
-	clearflag FLAG_HIDE_BOON_ISLAND_SUPER_NERD
+	@clearflag FLAG_HIDE_BOON_ISLAND_SUPER_NERD
 	return
 
 BoonIsland_EventScript_Clerk::

@@ -6,7 +6,7 @@ ChronoIsland_ResortGorgeous_MapScripts::
 	.byte 0
 
 ChronoIsland_ResortGorgeous_OnWarp::
-	map_script_2 VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1, ChronoIsland_ResortGorgeous_EventScript_TurnPlayerNorth
+	@map_script_2 VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1, ChronoIsland_ResortGorgeous_EventScript_TurnPlayerNorth
 	.2byte 0
 
 ChronoIsland_ResortGorgeous_EventScript_TurnPlayerNorth::
@@ -14,7 +14,7 @@ ChronoIsland_ResortGorgeous_EventScript_TurnPlayerNorth::
 	end
 
 ChronoIsland_ResortGorgeous_OnFrame::
-	map_script_2 VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1, ChronoIsland_ResortGorgeous_EventScript_SelphyReturnHomeScene
+	@map_script_2 VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1, ChronoIsland_ResortGorgeous_EventScript_SelphyReturnHomeScene
 	.2byte 0
 
 ChronoIsland_ResortGorgeous_EventScript_SelphyReturnHomeScene::
@@ -31,8 +31,8 @@ ChronoIsland_ResortGorgeous_EventScript_SelphyReturnHomeScene::
 	closedoor 39, 8
 	waitdooranim
 	removeobject LOCALID_RESORT_GORGEOUS_SELPHY
-	clearflag FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
-	setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 2
+	@clearflag FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
+	@setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 2
 	releaseall
 	end
 

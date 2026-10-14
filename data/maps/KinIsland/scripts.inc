@@ -14,12 +14,12 @@ KinIsland_MapScripts::
 
 KinIsland_OnTransition::
 	setflag FLAG_VISITED_KIN_ISLAND
-	call_if_set FLAG_RESCUED_LOSTELLE, KinIsland_EventScript_HideAntiBikers
-	call_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_SetAntiBikersMovementAfterBikers
+	@call_if_set FLAG_RESCUED_LOSTELLE, KinIsland_EventScript_HideAntiBikers
+	@call_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_SetAntiBikersMovementAfterBikers
 	end
 
 KinIsland_EventScript_HideAntiBikers::
-	setflag FLAG_HIDE_KIN_ISLAND_ANTIBIKERS
+	@setflag FLAG_HIDE_KIN_ISLAND_ANTIBIKERS
 	return
 
 KinIsland_EventScript_SetAntiBikersMovementAfterBikers::
@@ -36,8 +36,8 @@ KinIsland_EventScript_Biker::
 
 KinIsland_EventScript_AntiBiker1::
 	lock
-	goto_if_set FLAG_GOT_FULL_RESTORE_FROM_KIN_ISLAND_DEFENDER, KinIsland_EventScript_AntiBiker1GotFullRestore
-	goto_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_GiveFullRestore
+	@goto_if_set FLAG_GOT_FULL_RESTORE_FROM_KIN_ISLAND_DEFENDER, KinIsland_EventScript_AntiBiker1GotFullRestore
+	@goto_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_GiveFullRestore
 	setvar VAR_TEMP_1, 0
 	call KinIsland_EventScript_BikerArgumentScene
 	release
@@ -130,7 +130,7 @@ KinIsland_EventScript_PlayerFaceAntiBiker::
 
 KinIsland_EventScript_AntiBiker2::
 	lock
-	goto_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_AntiBiker2BikersGone
+	@goto_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_AntiBiker2BikersGone
 	setvar VAR_TEMP_1, 1
 	call KinIsland_EventScript_BikerArgumentScene
 	release
@@ -161,7 +161,7 @@ KinIsland_EventScript_BikerBossIntroTrigger::
 	applymovement LOCALID_KIN_ISLAND_ANTIBIKER1, KinIsland_Movement_SpeakRight
 	waitmovement 0
 	msgbox KinIsland_Text_YouCowardsToughInPack
-	setvar VAR_MAP_SCENE_KIN_ISLAND, 3
+	@setvar VAR_MAP_SCENE_KIN_ISLAND, 3
 	releaseall
 	end
 
@@ -268,7 +268,7 @@ KinIsland_EventScript_BattleBikersScene::
 	removeobject LOCALID_KIN_ISLAND_BIKER5
 	removeobject LOCALID_KIN_ISLAND_BIKER6
 	fadescreen FADE_FROM_BLACK
-	setvar VAR_MAP_SCENE_KIN_ISLAND, 4
+	@setvar VAR_MAP_SCENE_KIN_ISLAND, 4
 	releaseall
 	end
 
