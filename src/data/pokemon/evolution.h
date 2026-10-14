@@ -1,5 +1,3 @@
-#include "map_groups.h"
-
 const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
 {
     [SPECIES_BULBASAUR]  = {{EVO_LEVEL, 16, SPECIES_IVYSAUR}},
@@ -221,7 +219,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_DUNSPARCE]  = {{EVO_MOVE, MOVE_DRILL_PECK, SPECIES_DUDUNSPARCE}},
 };
 
-const u8 gEvolutionAreaTable[3] = {
+const u16 gEvolutionAreaTable[3] = {
     [EVOLUTION_MAP_NEW_MAUVILLE] = MAP_NEW_MAUVILLE_INSIDE,
     [EVOLUTION_MAP_ICE_ROCK] = MAP_SHOAL_CAVE_LOW_TIDE_INNER_ROOM,
     [EVOLUTION_MAP_MOSS_ROCK] = MAP_PETALBURG_WOODS,
