@@ -1751,40 +1751,51 @@ static const u8 sHealingHeart[] = _(
     "Pokémon party.");
 
 static const u8 sDawnStone[] = _(
-A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.
-);
+    "Makes certain\n"
+    "species of Pokémon\n"
+    "evolve.");
+
 static const u8 sDuskStone[] = _(
-A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.
-);
-static const u8 sMagmorizer[] = _(
-A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.
+    "Makes certain\n"
+    "species of Pokémon\n"
+    "evolve.");
+
+static const u8 sMagmarizer[] = _(
+    "Loved by a certain\n"
+    "Pokémon. It's full\n"
+    "of magma energy.");
 );
 static const u8 sElectirizer[] = _(
-A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon.
+    "Loved by a certain\n"
+    "Pokémon. It's full\n"
+    "of electric energy.");
 );
 static const u8 sRazorFang[] = _(
-An item to be held by a Pokémon. It may cause the foe to flinch when the holder inflicts damage.
-);
+    "A hold item that\n"
+    "may cause flinching\n"
+    "when the foe is hit.");
+
 static const u8 sRazorClaw[] = _(
-An item to be held by a Pokémon. It is a sharply hooked claw that ups the holder's critical-hit ratio.
+    "A hooked claw that\n"
+    "ups the holder's\n"
+    "critical-hit ratio.");
 );
 static const u8 sProtector[] = _(
-A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon.
+    "Loved by a certain\n"
+    "Pokémon. It's stiff\n"
+    "and heavy.");
 );
 static const u8 sReaperCloth[] = _(
-A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.
+    "Loved by a certain\n"
+    "Pokémon. Imbued\n"
+    "with spirit energy.");
 );
 static const u8 sDubiousDisc[] = _(
-    "Overflowing with\n"
-    "dubious data.\n"
-    "Producer unknown."
-);
+    "A clear device\n"
+    "overflowing with\n"
+    "dubious data.");
 
 static const u8 sOvalStone[] = _(
-    "\n"
-    "\n"
-    ""
-);
-A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.
-
-
+    "Peculiar stone\n"
+    "that evolves a\n"
+    "certain Pokémon.");
