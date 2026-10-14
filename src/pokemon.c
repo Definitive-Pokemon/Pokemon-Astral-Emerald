@@ -9451,8 +9451,8 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
             case EVO_MAP:
                 {
                     u16 location = gEvolutionAreaTable[gEvolutionTable[species][i].param];
-                    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(location)
-                     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(location))
+                    if (gSaveBlock1Ptr->location.mapGroup == location >> 8
+                     && gSaveBlock1Ptr->location.mapNum == location & 0xFF)
                     {
                         targetSpecies = gEvolutionTable[species][i].targetSpecies;
                     }
