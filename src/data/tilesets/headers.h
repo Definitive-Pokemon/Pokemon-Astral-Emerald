@@ -871,7 +871,7 @@ const struct Tileset gTileset_SeviiInsideBuilding =
     .palettes = gTilesetPalettes_SeviiInsideBuilding,
     .metatiles = gMetatiles_SeviiInsideBuilding,
     .metatileAttributes = gMetatileAttributes_SeviiInsideBuilding,
-    .callback = InitTilesetAnim_SeviiInsideBuilding,
+    .callback = NULL,
 };
 
 const struct Tileset gTileset_SeviiIslands123 = 
