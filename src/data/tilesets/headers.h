@@ -951,17 +951,6 @@ const struct Tileset gTileset_TrainerTower =
 	.callback = NULL,
 };
 
-const struct Tileset gTileset_FRIslandHarbor = 
-{
-	.isCompressed = TRUE,
-	.isSecondary = TRUE,
-	.tiles = gTilesetTiles_FRIslandHarbor,
-	.palettes = gTilesetPalettes_FRIslandHarbor,
-	.metatiles = gMetatiles_FRIslandHarbor,
-	.metatileAttributes = gMetatileAttributes_FRIslandHarbor,
-	.callback = NULL,
-};
-
 const struct Tileset gTileset_FRMart = 
 {
 	.isCompressed = TRUE,

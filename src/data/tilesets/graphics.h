@@ -1635,7 +1635,7 @@ const u16 ALIGNED(4) gTilesetPalettes_UnionRoom[][16] =
 
 const u32 gTilesetTiles_UnionRoom[] = INCBIN_U32("data/tilesets/secondary/union_room/tiles.4bpp.lz");
 
-const u32 gTilesetTiles_SeviiGeneral = INCBIN_U32("data/tilesets/primary/sevii_general/tiles.4bpp.lz");
+const u32 gTilesetTiles_SeviiGeneral[] = INCBIN_U32("data/tilesets/primary/sevii_general/tiles.4bpp.lz");
 
 const u16 ALIGNED(4) gTilesetPalettes_SeviiGeneral[][16] = 
 {
@@ -1939,7 +1939,6 @@ const u16 ALIGNED(4) gTilesetPalettes_TanobyRuins[][16] =
 	INCBIN_U16("data/tilesets/secondary/tanoby_ruins/palettes/12.gbapal"),
 };
 
-const u32 gTileset_ 
 const u32 gTilesetTiles_MtEmber[] = INCBIN_U32("data/tilesets/secondary/mt_ember/tiles.4bpp.lz");
 
 const u16 ALIGNED(4) gTilesetPalettes_MtEmber[][16] = 
