@@ -1799,3 +1799,8 @@ static const u8 sOvalStone[] = _(
     "Peculiar stone\n"
     "that evolves a\n"
     "certain Pokémon.");
+
+static const u8 sShinyStone[] = _(
+    "Makes certain\n"
+    "species of Pokémon\n"
+    "evolve.");

@@ -2953,12 +2953,12 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0EE] =
+    [ITEM_SHINY_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Shiny Stone"),
+        .itemId = ITEM_SHINY_STONE,
+        .price = 1050,
+        .description = sShinyStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -7939,12 +7939,12 @@ const struct Item gItems2[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
     
-    [ITEM_0EE] =
+    [ITEM_SHINY_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Shiny Stone"),
+        .itemId = ITEM_SHINY_STONE,
+        .price = 1050,
+        .description = sShinyStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
