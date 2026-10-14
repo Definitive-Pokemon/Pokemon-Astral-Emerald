@@ -1764,12 +1764,12 @@ static const u8 sMagmarizer[] = _(
     "Loved by a certain\n"
     "Pokémon. It's full\n"
     "of magma energy.");
-);
+
 static const u8 sElectirizer[] = _(
     "Loved by a certain\n"
     "Pokémon. It's full\n"
     "of electric energy.");
-);
+    
 static const u8 sRazorFang[] = _(
     "A hold item that\n"
     "may cause flinching\n"
@@ -1779,17 +1779,17 @@ static const u8 sRazorClaw[] = _(
     "A hooked claw that\n"
     "ups the holder's\n"
     "critical-hit ratio.");
-);
+
 static const u8 sProtector[] = _(
     "Loved by a certain\n"
     "Pokémon. It's stiff\n"
     "and heavy.");
-);
+
 static const u8 sReaperCloth[] = _(
     "Loved by a certain\n"
     "Pokémon. Imbued\n"
     "with spirit energy.");
-);
+
 static const u8 sDubiousDisc[] = _(
     "A clear device\n"
     "overflowing with\n"

@@ -2865,12 +2865,12 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_MAGMORIZER] =
+    [ITEM_MAGMARIZER] =
     {
-        .name = _("Magmorizer"),
-        .itemId = ITEM_MAGMORIZER,
+        .name = _("Magmarizer"),
+        .itemId = ITEM_MAGMARIZER,
         .price = 2210,
-        .description = sMagmorizer,
+        .description = sMagmarizer,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
