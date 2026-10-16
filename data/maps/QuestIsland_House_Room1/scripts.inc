@@ -104,7 +104,7 @@ QuestIsland_House_Room1_EventScript_TrainerVisiting::
 	call_if_eq VAR_FACING, DIR_NORTH, QuestIsland_House_Room1_EventScript_EnterBattleRoomNorth
 	call_if_eq VAR_FACING, DIR_EAST, QuestIsland_House_Room1_EventScript_EnterBattleRoomEast
 	call_if_eq VAR_FACING, DIR_WEST, QuestIsland_House_Room1_EventScript_EnterBattleRoomWest
-	warp MAP_QUEST_ISLAND_HOUSE_ROOM2, 3, 1
+	@warp MAP_QUEST_ISLAND_HOUSE_ROOM2, 3, 1
 	waitstate
 	release
 	end
