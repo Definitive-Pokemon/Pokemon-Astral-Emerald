@@ -204,7 +204,7 @@
 #define VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER     0x40B8 // Astral Sevii
 #define VAR_MT_PYRE_STATE                                0x40B9
 #define VAR_NEW_MAUVILLE_STATE                           0x40BA
-#define VAR_UNUSED_0x40BB                                0x40BB // Unused Var
+#define MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER         0x40BB // Astral Sevii
 #define VAR_BRAVO_TRAINER_BATTLE_TOWER_ON                0x40BC
 #define VAR_JAGGED_PASS_ASH_WEATHER                      0x40BD
 #define VAR_GLASS_WORKSHOP_STATE                         0x40BE
@@ -272,7 +272,7 @@
 #define VAR_TEST_DARK                                    0x40FC
 #define VAR_WONDERTRADE                                  0x40FD // 0 and 1 -> First time message when entering Wondertrade. 2 -> No message.
 #define VAR_UNUSED_0x40FE                                0x40FE // Nuzlocke?
-#define VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER     0x40FF // Nuzlocke?
+#define VAR_UNUSED_0x40FF                                0x40FF // Nuzlocke?
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
