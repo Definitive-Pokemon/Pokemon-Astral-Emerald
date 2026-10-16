@@ -17,7 +17,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKET_GRUNT_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 11,
       "y": 14,
       "elevation": 3,
@@ -31,7 +31,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKET_GRUNT_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 13,
       "y": 14,
       "elevation": 3,
@@ -45,7 +45,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LORELEI",
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
       "x": 12,
       "y": 16,
       "elevation": 3,
@@ -59,7 +59,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKET_GRUNT_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 10,
       "y": 15,
       "elevation": 3,

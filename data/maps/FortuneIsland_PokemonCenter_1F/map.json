@@ -31,7 +31,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
       "x": 5,
       "y": 5,
       "elevation": 3,
@@ -41,7 +41,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_FORTUNE_ISLAND_POKECENTER_RIVAL"
+      "flag": "0"
     },
     {
       "type": "object",
