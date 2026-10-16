@@ -1182,7 +1182,7 @@ Common_EventScript_LegendaryRanAway::
 	.include "data/maps/FloeIsland_IcefallCave_1F/scripts.inc"
 	.include "data/maps/FloeIsland_IcefallCave_B1F/scripts.inc"
 	.include "data/maps/FloeIsland_IcefallCave_Back/scripts.inc"
-	.include "data/maps/ChronoIsland_RocketWarehouse/scripts.inc"
+	.include "data/maps/ChronoIsland_Warehouse/scripts.inc"
 	.include "data/maps/FortuneIsland_DottedHole_1F/scripts.inc"
 	.include "data/maps/FortuneIsland_DottedHole_B1F/scripts.inc"
 	.include "data/maps/FortuneIsland_DottedHole_B2F/scripts.inc"
