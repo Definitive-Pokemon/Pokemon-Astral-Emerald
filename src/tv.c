@@ -4030,7 +4030,6 @@ void SanitizeTVShowsForRuby(TVShow *shows)
 {
     TVShow *curShow;
 
-    SanitizeTVShowLocationsForRuby(shows);
     for (curShow = shows; curShow < shows + LAST_TVSHOW_IDX; curShow++)
     {
         if (curShow->bravoTrainerTower.kind == TVSHOW_BRAVO_TRAINER_BATTLE_TOWER_PROFILE)
@@ -4167,26 +4166,6 @@ static void TranslateJapaneseEmeraldShows(TVShow *shows)
             curShow->safariFanClub.language = GetStringLanguage(curShow->safariFanClub.playerName);
             break;
         case TVSHOW_MASS_OUTBREAK:
-            break;
-        }
-    }
-}
-
-void SanitizeTVShowLocationsForRuby(TVShow *shows)
-{
-    int i;
-
-    for (i = 0; i < LAST_TVSHOW_IDX; i++)
-    {
-        switch (shows[i].common.kind)
-        {
-        case TVSHOW_WORLD_OF_MASTERS:
-            if (shows[i].worldOfMasters.location > KANTO_MAPSEC_START)
-                memset(&shows[i], 0, sizeof(TVShow));
-            break;
-        case TVSHOW_POKEMON_TODAY_FAILED:
-            if (shows[i].pokemonTodayFailed.location > KANTO_MAPSEC_START)
-                memset(&shows[i], 0, sizeof(TVShow));
             break;
         }
     }
