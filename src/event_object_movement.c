@@ -2579,9 +2579,9 @@ bool8 ScrFunc_getfolloweraction(struct ScriptContext *ctx) // Essentially a big 
         case MAPSEC_FUCHSIA_CITY:
             multi = TYPE_POISON;
             break;
-        case MAPSEC_VIRIDIAN_CITY:
-            multi = TYPE_GROUND;
-            break;
+        //case MAPSEC_VIRIDIAN_CITY:
+        //    multi = TYPE_GROUND;
+        //    break;
         default:
             multi = NUMBER_OF_MON_TYPES;
         }
