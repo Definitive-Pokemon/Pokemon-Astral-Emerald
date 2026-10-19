@@ -662,3 +662,199 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
+
+FloeIsland_EventScript_ItemStarPiece::
+	finditem ITEM_STAR_PIECE
+	end
+
+FloeIsland_EventScript_ItemStardust::
+	finditem ITEM_STARDUST
+	end
+
+KnotIsland_KindleRoad_EventScript_ItemEther::
+	finditem ITEM_ETHER
+	end
+
+KnotIsland_KindleRoad_EventScript_ItemMaxRepel::
+	finditem ITEM_MAX_REPEL
+	end
+
+KnotIsland_KindleRoad_EventScript_ItemCarbos::
+	finditem ITEM_CARBOS
+	end
+
+ChronoIsland_Meadow_EventScript_ItemMaxPotion::
+	finditem ITEM_MAX_POTION
+	end
+
+ChronoIsland_Meadow_EventScript_ItemPPUp::
+	finditem ITEM_PP_UP
+	end
+
+ChronoIsland_MemorialPillar_EventScript_ItemMetalCoat::
+	finditem ITEM_METAL_COAT
+	end
+
+FortuneIsland_OutcastIsland_EventScript_ItemPPUp::
+	finditem ITEM_PP_UP
+	end
+
+FortuneIsland_WaterPath_EventScript_ItemElixir::
+	finditem ITEM_ELIXIR
+	end
+
+FortuneIsland_WaterPath_EventScript_ItemDragonScale::
+	finditem ITEM_DRAGON_SCALE
+	end
+
+FortuneIsland_RuinValley_EventScript_ItemFullRestore::
+	finditem ITEM_FULL_RESTORE
+	end
+
+FortuneIsland_RuinValley_EventScript_ItemHPUp::
+	finditem ITEM_HP_UP
+	end
+
+FortuneIsland_RuinValley_EventScript_ItemSunStone::
+	finditem ITEM_SUN_STONE
+	end
+
+QuestIsland_SevaultCanyon_EventScript_ItemKingsRock::
+	finditem ITEM_KINGS_ROCK
+	end
+	
+Route20_Underwater_EventScript_ItemShellBell::
+	finditem ITEM_SHELL_BELL
+	end
+
+QuestIsland_SevaultCanyon_EventScript_ItemMaxElixir::
+	finditem ITEM_MAX_ELIXIR
+	end
+
+QuestIsland_SevaultCanyon_EventScript_ItemNugget::
+	finditem ITEM_NUGGET
+	end
+
+KinIsland_BerryForest_EventScript_ItemMaxEther::
+	finditem ITEM_MAX_ETHER
+	end
+
+KinIsland_BerryForest_EventScript_ItemFullHeal::
+	finditem ITEM_FULL_HEAL
+	end
+
+KinIsland_BerryForest_EventScript_ItemMaxElixir::
+	finditem ITEM_MAX_ELIXIR
+	end
+
+MtEmber_Exterior_EventScript_ItemUltraBall::
+	finditem ITEM_ULTRA_BALL
+	end
+
+MtEmber_Exterior_EventScript_ItemFireStone::
+	finditem ITEM_FIRE_STONE
+	end
+
+MtEmber_Exterior_EventScript_ItemDireHit::
+	finditem ITEM_DIRE_HIT
+	end
+
+FloeIsland_IcefallCave_1F_EventScript_ItemUltraBall::
+	finditem ITEM_ULTRA_BALL
+	end
+
+FloeIsland_IcefallCave_1F_EventScript_ItemHM07::
+	finditem ITEM_HM07
+	end
+
+FloeIsland_IcefallCave_B1F_EventScript_ItemFullRestore::
+	finditem ITEM_FULL_RESTORE
+	end
+
+FloeIsland_IcefallCave_B1F_EventScript_ItemNeverMeltIce::
+	finditem ITEM_NEVER_MELT_ICE
+	end
+
+ChronoIsland_RocketWarehouse_EventScript_ItemBigPearl::
+	finditem ITEM_BIG_PEARL
+	end
+
+ChronoIsland_RocketWarehouse_EventScript_ItemTM36::
+	finditem ITEM_TM36
+	end
+
+ChronoIsland_RocketWarehouse_EventScript_ItemPearl::
+	finditem ITEM_PEARL
+	end
+
+ChronoIsland_RocketWarehouse_EventScript_ItemUpGrade::
+	finditem ITEM_UP_GRADE
+	end
+
+ChronoIsland_LostCave_Room10_EventScript_ItemSilkScarf::
+	finditem ITEM_SILK_SCARF
+	end
+
+ChronoIsland_LostCave_Room11_EventScript_ItemLaxIncense::
+	finditem ITEM_LAX_INCENSE
+	end
+
+ChronoIsland_LostCave_Room12_EventScript_ItemSeaIncense::
+	finditem ITEM_SEA_INCENSE
+	end
+
+ChronoIsland_LostCave_Room13_EventScript_ItemMaxRevive::
+	finditem ITEM_MAX_REVIVE
+	end
+
+ChronoIsland_LostCave_Room14_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
+	end
+
+QuestIsland_SevaultCanyon_House_EventScript_ItemLuckyPunch::
+	finditem ITEM_LUCKY_PUNCH
+	end
+
+SilphCo_4F_EventScript_ItemTM41::
+	finditem ITEM_TM41
+	end
+
+SafariZone_NorthWest_EventScript_ItemKingsRock::
+	finditem ITEM_KINGS_ROCK
+	end
+
+SafariZone_NorthWest_EventScript_ItemSunStone::
+	finditem ITEM_SUN_STONE
+	end
+
+SafariZone_NorthWest_EventScript_ItemPPMax::
+	finditem ITEM_PP_MAX
+	end
+
+SafariZone_NorthWest_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
+	end
+
+SafariZone_NorthEast_EventScript_ItemMaxRevive::
+	finditem ITEM_MAX_REVIVE
+	end
+
+SafariZone_NorthEast_EventScript_ItemWhiteHerb::
+	finditem ITEM_WHITE_HERB
+	end
+
+SafariZone_NorthEast_EventScript_ItemGlitterMail::
+	finditem ITEM_GLITTER_MAIL
+	end
+
+ArtisanCave_B1F_EventScript_ItemHPUp::
+	finditem ITEM_HP_UP
+	end
+
+ArtisanCave_1F_EventScript_ItemCarbos::
+	finditem ITEM_CARBOS
+	end
+
+KnotIsland_KindleRoad_EmberSpa_EventScript_ItemMoonStone::
+	finditem ITEM_MOON_STONE
+	end
