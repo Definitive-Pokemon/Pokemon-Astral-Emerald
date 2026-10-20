@@ -54,7 +54,7 @@ FortuneIsland_DottedHole_SapphireRoom_EventScript_Sapphire::
 	playse SE_EXIT
 	delay 35
 	removeobject LOCALID_DOTTED_HOLE_THIEF
-	setflag FLAG_LEARNED_YES_NAH_CHANSEY
+	@setflag FLAG_LEARNED_YES_NAH_CHANSEY
 	release
 	end
 
@@ -241,6 +241,7 @@ FortuneIsland_DottedHole_SapphireRoom_EventScript_BrailleMessage::
 	waitbuttonpress
 	releaseall
 	end
+
 FortuneIsland_DottedHole_SapphireRoom_Text_FoundSapphire::
     .string "{PLAYER} found a SAPPHIRE!$"
 
@@ -264,4 +265,3 @@ FortuneIsland_DottedHole_SapphireRoom_Text_SellToTeamRocketTellPassword::
     .string "“Yes, nah, CHANSEY.”\p"
     .string "I'm done.\n"
     .string "Don't think badly of me!$"
-

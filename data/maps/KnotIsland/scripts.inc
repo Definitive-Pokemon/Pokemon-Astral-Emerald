@@ -2,16 +2,16 @@
 
 KnotIsland_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, KnotIsland_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, KnotIsland_OnFrameTable
+	@map_script MAP_SCRIPT_ON_FRAME_TABLE, KnotIsland_OnFrameTable
 	.byte 0
 
 KnotIsland_OnTransition::
 	setflag FLAG_VISITED_KNOT_ISLAND
 	end
 	
-KnotIsland_OnFrameTable::
-	map_script_2 VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 0, KnotIsland_EventScript_EnterKnotIsland_FirstTime
-	.2byte 0
+@KnotIsland_OnFrameTable::
+@	map_script_2 VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 0, KnotIsland_EventScript_EnterKnotIsland_FirstTime
+@	.2byte 0
 
 KnotIsland_EventScript_EnterKnotIsland_FirstTime::
 	lockall
@@ -31,7 +31,7 @@ KnotIsland_EventScript_EnterKnotIsland_FirstTime::
 	closedoor 14, 5
 	waitdooranim
 	removeobject LOCALID_BILL
-	setvar VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 3
+	@setvar VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 3
 	warp MAP_KNOT_ISLAND_POKEMON_CENTER_1F, 9, 9
 	waitstate
 	releaseall

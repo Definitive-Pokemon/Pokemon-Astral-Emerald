@@ -3,17 +3,17 @@
 
 FloeIsland_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, FloeIsland_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, FloeIsland_OnFrame
+	@map_script MAP_SCRIPT_ON_FRAME_TABLE, FloeIsland_OnFrame
 	.byte 0
 
 FloeIsland_OnTransition::
 	setflag FLAG_VISITED_FLOE_ISLAND
-	call_if_eq VAR_MAP_SCENE_FLOE_ISLAND, 0, FloeIsland_EventScript_ShowRival
+	@call_if_eq VAR_MAP_SCENE_FLOE_ISLAND, 0, FloeIsland_EventScript_ShowRival
 	call FloeIsland_EventScript_TrySetDayCareManPos
 	end
 
 FloeIsland_EventScript_ShowRival::
-	clearflag FLAG_HIDE_FLOE_ISLAND_RIVAL
+	@clearflag FLAG_HIDE_FLOE_ISLAND_RIVAL
 	return
 
 FloeIsland_EventScript_TrySetDayCareManPos::
@@ -22,9 +22,9 @@ FloeIsland_EventScript_TrySetDayCareManPos::
 FloeIsland_EventScript_EndSetDayCareManPos::
 	return
 
-FloeIsland_OnFrame::
-	map_script_2 VAR_MAP_SCENE_FLOE_ISLAND, 0, FloeIsland_EventScript_RivalScene
-	.2byte 0
+@FloeIsland_OnFrame::
+	@map_script_2 VAR_MAP_SCENE_FLOE_ISLAND, 0, FloeIsland_EventScript_RivalScene
+	@.2byte 0
 
 FloeIsland_EventScript_RivalScene::
 	lockall
@@ -48,7 +48,7 @@ FloeIsland_EventScript_RivalScene::
 	playse SE_EXIT
 	delay 35
 	removeobject LOCALID_FLOE_ISLAND_RIVAL
-	setvar VAR_MAP_SCENE_FLOE_ISLAND, 1
+	@setvar VAR_MAP_SCENE_FLOE_ISLAND, 1
 	releaseall
 	end
 

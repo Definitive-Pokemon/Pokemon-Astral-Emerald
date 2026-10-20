@@ -15,12 +15,12 @@ QuestIsland_House_Room2_EventScript_BattleVisitingTrainer::
 	lockall
 	applymovement LOCALID_PLAYER, QuestIsland_House_Room2_Movement_PlayerEnterRoom
 	waitmovement 0
-	special BufferEReaderTrainerGreeting
+	@special BufferEReaderTrainerGreeting
 	msgbox gStringVar4
 	closemessage
 	setvar VAR_0x8004, 2
 	setvar VAR_0x8005, 0
-	special StartSpecialBattle
+	@special StartSpecialBattle
 	waitstate
 	call_if_eq VAR_RESULT, 3, QuestIsland_House_Room2_EventScript_BattleTie
 	call_if_eq VAR_RESULT, 1, QuestIsland_House_Room2_EventScript_BattleWon
@@ -37,19 +37,19 @@ QuestIsland_House_Room2_EventScript_BattleVisitingTrainer::
 	end
 
 QuestIsland_House_Room2_EventScript_BattleTie::
-	setvar VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 3
+	@setvar VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 3
 	msgbox QuestIsland_House_Room2_Text_MatchEndedUpDraw
 	return
 
 QuestIsland_House_Room2_EventScript_BattleWon::
-	setvar VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 1
+	@setvar VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 1
 	special ShowFieldMessageStringVar4
 	waitmessage
 	waitbuttonpress
 	return
 
 QuestIsland_House_Room2_EventScript_BattleLost::
-	setvar VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 2
+	@setvar VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 2
 	special ShowFieldMessageStringVar4
 	waitmessage
 	waitbuttonpress

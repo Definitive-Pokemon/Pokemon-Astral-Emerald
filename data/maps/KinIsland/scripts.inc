@@ -14,8 +14,8 @@ KinIsland_MapScripts::
 
 KinIsland_OnTransition::
 	setflag FLAG_VISITED_KIN_ISLAND
-	@call_if_set FLAG_RESCUED_LOSTELLE, KinIsland_EventScript_HideAntiBikers
-	@call_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_SetAntiBikersMovementAfterBikers
+	call_if_set FLAG_RESCUED_LOSTELLE, KinIsland_EventScript_HideAntiBikers
+	call_if_eq VAR_MAP_SCENE_KIN_ISLAND, 4, KinIsland_EventScript_SetAntiBikersMovementAfterBikers
 	end
 
 KinIsland_EventScript_HideAntiBikers::
@@ -59,7 +59,7 @@ KinIsland_EventScript_GiveFullRestore::
 	giveitem ITEM_FULL_RESTORE
 	@msgreceiveditem KinIsland_Text_GivenFullRestore, ITEM_FULL_RESTORE
 	@additem ITEM_FULL_RESTORE
-	setflag FLAG_GOT_FULL_RESTORE_FROM_KIN_ISLAND_DEFENDER
+	@setflag FLAG_GOT_FULL_RESTORE_FROM_KIN_ISLAND_DEFENDER
 	msgbox KinIsland_Text_YouveGotImpressiveMons
 	release
 	end

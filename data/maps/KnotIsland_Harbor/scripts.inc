@@ -1,10 +1,10 @@
 KnotIsland_Harbor_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, KnotIsland_Harbor_OnFrameTable
+	@map_script MAP_SCRIPT_ON_FRAME_TABLE, KnotIsland_Harbor_OnFrameTable
 	.byte 0
 	
-KnotIsland_Harbor_OnFrameTable::
-	map_script_2 VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 0, KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime
-	.2byte 0
+@KnotIsland_Harbor_OnFrameTable::
+@	map_script_2 VAR_MAP_SCENE_KNOT_ISLAND_HARBOR, 0, KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime
+@	.2byte 0
 	
 KnotIsland_Harbor_EventScript_EnterKnotIsland_HarborFirstTime::
 	lockall
@@ -25,17 +25,21 @@ KnotIsland_Harbor_Movement_PlayerExitHarbor:
 KnotIsland_Harbor_EventScript_Sailor::
 	lock
 	faceplayer
-	msgbox Island_Harbors_Text_Oi_Chap, MSGBOX_DEFAULT
+	msgbox Text_WhereDoYouWantToSail, MSGBOX_DEFAULT
 	setvar VAR_0x8004, 1
 	@special ScriptMenu_CreateSeviiFerryMultichoice
 	waitstate
 	setvar VAR_0x8001, 1
-	switch VAR_RESULT
-	case 0, Island_Harbors_EventScript_GoToLilycove
-	case 1, Island_Harbors_EventScript_GoToBoonIsland
-	case 2, Island_Harbors_EventScript_GoToKinIsland
-	case 3, Island_Harbors_EventScript_GoToFloeIsland
-	case 4, Island_Harbors_EventScript_GoToChronoIsland
-	case 5, Island_Harbors_EventScript_GoToFortuneIsland
-	case 6, Island_Harbors_EventScript_GoToQuestIsland
+	@switch VAR_RESULT
+	@case 0, Island_Harbors_EventScript_GoToLilycove
+	@case 1, Island_Harbors_EventScript_GoToBoonIsland
+	@case 2, Island_Harbors_EventScript_GoToKinIsland
+	@case 3, Island_Harbors_EventScript_GoToFloeIsland
+	@case 4, Island_Harbors_EventScript_GoToChronoIsland
+	@case 5, Island_Harbors_EventScript_GoToFortuneIsland
+	@case 6, Island_Harbors_EventScript_GoToQuestIsland
 	end
+
+Text_WhereDoYouWantToSail::
+    .string "Ahoy, there!\n"
+    .string "Where do you want to sail?$"

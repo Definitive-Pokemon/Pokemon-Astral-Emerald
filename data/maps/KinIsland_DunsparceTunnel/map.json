@@ -3,7 +3,7 @@
   "name": "KinIsland_DunsparceTunnel",
   "layout": "LAYOUT_KIN_ISLAND_DUNSPARCE_TUNNEL",
   "music": "MUS_RG_VIRIDIAN_FOREST",
-  "region_map_section": "MAPSEC_THREE_ISLE_PATH",
+  "region_map_section": "MAPSEC_KIN_ISLE_PATH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

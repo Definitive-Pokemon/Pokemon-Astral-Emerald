@@ -32,10 +32,10 @@ KinIsland_BerryForest_EventScript_Lostelle::
 	@special BufferBigGuyOrBigGirlString
 	msgbox KinIsland_BerryForest_Text_LetsGoHome
 	closemessage
-	@setflag FLAG_RESCUED_LOSTELLE
+	setflag FLAG_RESCUED_LOSTELLE
 	@setflag FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST
 	setvar VAR_MAP_SCENE_BOON_ISLAND_JOYFUL_GAME_CORNER, 2
-	clearflag FLAG_HIDE_BOON_ISLAND_GAME_CORNER_LOSTELLE
+	@clearflag FLAG_HIDE_BOON_ISLAND_GAME_CORNER_LOSTELLE
 	warp MAP_BOON_ISLAND_JOYFUL_GAME_CORNER, 6, 6
 	waitstate
 	release

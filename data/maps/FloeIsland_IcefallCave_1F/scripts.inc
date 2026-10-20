@@ -1,4 +1,4 @@
-FloeIsland_IcefallCave_1F_MapScripts::
+IcefallCave_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, FloeIsland_IcefallCave_1F_OnResume
 	map_script MAP_SCRIPT_ON_LOAD, FloeIsland_IcefallCave_1F_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, FloeIsland_IcefallCave_1F_OnFrame

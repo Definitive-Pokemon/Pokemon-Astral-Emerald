@@ -326,8 +326,8 @@ KnotIsland_PokemonCenter_1F_EventScript_CelioRequestRuby::
 	applymovement LOCALID_CELIO, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox KnotIsland_PokemonCenter_1F_Text_NeedsSpecialGemstone
-	setvar VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 1
-	setvar VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F, 4
+	@setvar VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 1
+	@setvar VAR_MAP_SCENE_KNOT_ISLAND_POKEMON_CENTER_1F, 4
 	release
 	end
 

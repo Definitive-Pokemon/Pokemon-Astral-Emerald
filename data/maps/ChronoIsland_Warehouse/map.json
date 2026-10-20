@@ -166,33 +166,6 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 22,
-      "y": 11,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROCKET_WAREHOUSE",
-      "var_value": "0",
-      "script": "ChronoIsland_Warehouse_EventScript_Admin2Trigger"
-    },
-    {
-      "type": "trigger",
-      "x": 23,
-      "y": 11,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROCKET_WAREHOUSE",
-      "var_value": "0",
-      "script": "ChronoIsland_Warehouse_EventScript_Admin2Trigger"
-    },
-    {
-      "type": "trigger",
-      "x": 24,
-      "y": 11,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_ROCKET_WAREHOUSE",
-      "var_value": "0",
-      "script": "ChronoIsland_Warehouse_EventScript_Admin2Trigger"
-    }
   ],
   "bg_events": [
     {

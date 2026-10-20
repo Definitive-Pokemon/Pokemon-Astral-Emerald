@@ -3,21 +3,21 @@
 FortuneIsland_PokemonCenter_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, FortuneIsland_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, FortuneIsland_PokemonCenter_1F_OnFrame
+	@map_script MAP_SCRIPT_ON_FRAME_TABLE, FortuneIsland_PokemonCenter_1F_OnFrame
 	.byte 0
 
 FortuneIsland_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_FORTUNE_ISLAND
-	call_if_eq VAR_MAP_SCENE_FORTUNE_ISLAND_POKEMON_CENTER_1F, 0, FortuneIsland_PokemonCenter_1F_EventScript_ShowRival
+	@call_if_eq VAR_MAP_SCENE_FORTUNE_ISLAND_POKEMON_CENTER_1F, 0, FortuneIsland_PokemonCenter_1F_EventScript_ShowRival
 	end
 
 FortuneIsland_PokemonCenter_1F_EventScript_ShowRival::
 	clearflag FLAG_HIDE_FORTUNE_ISLAND_POKECENTER_RIVAL
 	return
 
-FortuneIsland_PokemonCenter_1F_OnFrame::
-	map_script_2 VAR_MAP_SCENE_FORTUNE_ISLAND_POKEMON_CENTER_1F, 0, FortuneIsland_PokemonCenter_1F_EventScript_RivalScene
-	.2byte 0
+@FortuneIsland_PokemonCenter_1F_OnFrame::
+	@map_script_2 VAR_MAP_SCENE_FORTUNE_ISLAND_POKEMON_CENTER_1F, 0, FortuneIsland_PokemonCenter_1F_EventScript_RivalScene
+	@.2byte 0
 
 FortuneIsland_PokemonCenter_1F_EventScript_RivalScene::
 	lockall
@@ -41,8 +41,8 @@ FortuneIsland_PokemonCenter_1F_EventScript_RivalScene::
 	playse SE_EXIT
 	delay 35
 	removeobject LOCALID_FORTUNE_ISLAND_RIVAL
-	setvar VAR_MAP_SCENE_FORTUNE_ISLAND_POKEMON_CENTER_1F, 1
-	setvar VAR_MAP_SCENE_FLOE_ISLAND, 1
+	@setvar VAR_MAP_SCENE_FORTUNE_ISLAND_POKEMON_CENTER_1F, 1
+	@setvar VAR_MAP_SCENE_FLOE_ISLAND, 1
 	releaseall
 	end
 

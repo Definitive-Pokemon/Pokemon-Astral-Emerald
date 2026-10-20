@@ -4,17 +4,17 @@
 
 QuestIsland_House_Room1_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, QuestIsland_House_Room1_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, QuestIsland_House_Room1_OnFrame
+	@map_script MAP_SCRIPT_ON_FRAME_TABLE, QuestIsland_House_Room1_OnFrame
 	.byte 0
 
 QuestIsland_House_Room1_OnTransition::
 	@special ValidateEReaderTrainer
 	call_if_eq VAR_RESULT, 0, QuestIsland_House_Room1_EventScript_SetTrainerVisitingLayout
-	call_if_ne VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 0, QuestIsland_House_Room1_EventScript_MoveOldWomanToDoor
+	@call_if_ne VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 0, QuestIsland_House_Room1_EventScript_MoveOldWomanToDoor
 	end
 
 QuestIsland_House_Room1_EventScript_SetTrainerVisitingLayout::
-	setvar TRAINER_VISITING, TRUE
+	@setvar TRAINER_VISITING, TRUE
 	setobjectxyperm LOCALID_QUEST_ISLAND_HOUSE_OLD_WOMAN, 4, 2
 	setobjectmovementtype LOCALID_QUEST_ISLAND_HOUSE_OLD_WOMAN, MOVEMENT_TYPE_FACE_DOWN
 	@setmaplayoutindex LAYOUT_QUEST_ISLAND_HOUSE_ROOM1_DOOR_OPEN
@@ -25,11 +25,11 @@ QuestIsland_House_Room1_EventScript_MoveOldWomanToDoor::
 	setobjectmovementtype LOCALID_QUEST_ISLAND_HOUSE_OLD_WOMAN, MOVEMENT_TYPE_FACE_RIGHT
 	return
 
-QuestIsland_House_Room1_OnFrame::
-	map_script_2 VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 1, QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle
-	map_script_2 VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 2, QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle
-	map_script_2 VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 3, QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle
-	.2byte 0
+@QuestIsland_House_Room1_OnFrame::
+	@map_script_2 VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 1, QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle
+	@map_script_2 VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 2, QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle
+	@map_script_2 VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 3, QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle
+	@.2byte 0
 
 QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle::
 	lockall
@@ -41,11 +41,11 @@ QuestIsland_House_Room1_EventScript_OldWomanCommentOnBattle::
 	copyobjectxytoperm LOCALID_QUEST_ISLAND_HOUSE_OLD_WOMAN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	call_if_eq VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 1, QuestIsland_House_Room1_EventScript_BattleWonComment
-	call_if_eq VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 2, QuestIsland_House_Room1_EventScript_BattleLostComment
-	call_if_eq VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 3, QuestIsland_House_Room1_EventScript_BattleTiedComment
+	@call_if_eq VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 1, QuestIsland_House_Room1_EventScript_BattleWonComment
+	@call_if_eq VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 2, QuestIsland_House_Room1_EventScript_BattleLostComment
+	@call_if_eq VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 3, QuestIsland_House_Room1_EventScript_BattleTiedComment
 	special LoadPlayerParty
-	setvar VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 0
+	@setvar VAR_MAP_SCENE_QUEST_ISLAND_HOUSE_ROOM1, 0
 	releaseall
 	end
 

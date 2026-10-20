@@ -1,37 +1,33 @@
-KnotIsland_KindleRoad_EmberSpa_MapScripts::
+EmberSpa_MapScripts::
 	.byte 0
 
-KnotIsland_KindleRoad_EmberSpa_EventScript_OldMan::
+EmberSpa_EventScript_OldMan::
 	msgbox KnotIsland_KindleRoad_EmberSpa_Text_WaterWarmsMeToCore, MSGBOX_NPC
 	end
 
-KnotIsland_KindleRoad_EmberSpa_EventScript_BaldingMan1::
+EmberSpa_EventScript_BaldingMan1::
 	msgbox KnotIsland_KindleRoad_EmberSpa_Text_EnjoyBowlOfChowder, MSGBOX_NPC
 	end
 
-KnotIsland_KindleRoad_EmberSpa_EventScript_BaldingMan2::
+EmberSpa_EventScript_BaldingMan2::
 	msgbox KnotIsland_KindleRoad_EmberSpa_Text_HotSpringIsTherapeutic, MSGBOX_NPC
 	end
 
-KnotIsland_KindleRoad_EmberSpa_EventScript_OldWoman::
+EmberSpa_EventScript_OldWoman::
 	msgbox KnotIsland_KindleRoad_EmberSpa_Text_SeeHowSmoothMySkinIs, MSGBOX_NPC
 	end
 
-KnotIsland_KindleRoad_EmberSpa_EventScript_BlackBelt::
+EmberSpa_EventScript_BlackBelt::
 	lock
 	faceplayer
 	msgbox KnotIsland_KindleRoad_EmberSpa_Text_BrunoVisitsSpaOnOccasion
 	release
 	end
 
-KnotIsland_KindleRoad_EmberSpa_EventScript_RockSmashMan::
+EmberSpa_EventScript_RockSmashMan::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_HM06, KnotIsland_KindleRoad_EmberSpa_EventScript_AlreadyGotHM06
-	msgbox KnotIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa
-	giveitem ITEM_HM06
-	setflag FLAG_GOT_HM06
-	msgbox KnotIsland_KindleRoad_EmberSpa_Text_ExplainHM06
+
 	release
 	end
 
@@ -40,7 +36,7 @@ KnotIsland_KindleRoad_EmberSpa_EventScript_AlreadyGotHM06::
 	release
 	end
 
-KnotIsland_KindleRoad_EmberSpa_EventScript_SpaHeal::
+EmberSpa_EventScript_SpaHeal::
 	lockall
 	fadescreen FADE_TO_WHITE
 	special HealPlayerParty

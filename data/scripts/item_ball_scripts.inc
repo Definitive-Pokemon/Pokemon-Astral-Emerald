@@ -775,19 +775,19 @@ FloeIsland_IcefallCave_B1F_EventScript_ItemNeverMeltIce::
 	finditem ITEM_NEVER_MELT_ICE
 	end
 
-ChronoIsland_RocketWarehouse_EventScript_ItemBigPearl::
+ChronoIsland_Warehouse_EventScript_ItemBigPearl::
 	finditem ITEM_BIG_PEARL
 	end
 
-ChronoIsland_RocketWarehouse_EventScript_ItemTM36::
+ChronoIsland_Warehouse_EventScript_ItemTM36::
 	finditem ITEM_TM36
 	end
 
-ChronoIsland_RocketWarehouse_EventScript_ItemPearl::
+ChronoIsland_Warehouse_EventScript_ItemPearl::
 	finditem ITEM_PEARL
 	end
 
-ChronoIsland_RocketWarehouse_EventScript_ItemUpGrade::
+ChronoIsland_Warehouse_EventScript_ItemUpGrade::
 	finditem ITEM_UP_GRADE
 	end
 
@@ -809,6 +809,14 @@ ChronoIsland_LostCave_Room13_EventScript_ItemMaxRevive::
 
 ChronoIsland_LostCave_Room14_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
+	end
+
+BoonIsland_EventScript_ItemRevive::
+	finditem ITEM_REVIVE
+	end
+
+KinIsland_EventScript_ItemZinc::
+	finditem ITEM_ZINC
 	end
 
 QuestIsland_SevaultCanyon_House_EventScript_ItemLuckyPunch::
