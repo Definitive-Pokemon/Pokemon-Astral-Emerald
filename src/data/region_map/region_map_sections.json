@@ -985,6 +985,14 @@
       "height": 1
     },
     {
+      "map_section": "MAPSEC_KIN_ISLE_PATH",
+      "name": "THREE ISLE PATH",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
       "map_section": "MAPSEC_TANOBY_KEY",
       "name": "Tanoby Key",
       "x": 0,

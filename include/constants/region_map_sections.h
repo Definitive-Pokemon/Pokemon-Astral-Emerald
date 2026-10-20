@@ -156,6 +156,7 @@
 #define MAPSEC_RIXY_CHAMBER                 0x98
 #define MAPSEC_VIAPOIS_CHAMBER              0x99
 #define MAPSEC_EMBER_SPA                    0x9A
+#define MAPSEC_KIN_ISLE_PATH                0x9B
 
 #define MAPSEC_NONE                         0xD7
 

@@ -3,7 +3,7 @@
 .set LOCALID_ICEFALL_LORELEI, 3
 .set LOCALID_ICEFALL_ROCKET3, 4
 
-FloeIsland_IcefallCave_Back_MapScripts::
+IcefallCave_Back_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, FloeIsland_IcefallCave_Back_OnTransition
 	.byte 0
 
