@@ -662,6 +662,16 @@
       "blockdata_filepath": "data/layouts/HouseFRLG3/map.bin"
     },
     {
+      "id": "LAYOUT_FRLG_HOUSE4",
+      "name": "FRLG_House4_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_SeviiInsideBuilding",
+      "secondary_tileset": "gTileset_FRMart",
+      "border_filepath": "data/layouts/HouseFRLG4/border.bin",
+      "blockdata_filepath": "data/layouts/HouseFRLG4/map.bin"
+    },
+    {
       "id": "LAYOUT_DEWFORD_TOWN_GYM",
       "name": "DewfordTown_Gym_Layout",
       "width": 18,
