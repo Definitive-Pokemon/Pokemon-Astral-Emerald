@@ -7,6 +7,7 @@
 #include "battle_dome.h"
 #include "battle_interface.h"
 #include "battle_message.h"
+#include "battle_script_commands.h"
 #include "battle_setup.h"
 #include "battle_tv.h"
 #include "bg.h"
@@ -543,7 +544,7 @@ static void HandleInputChooseTarget(void)
     {
         PlaySE(SE_SELECT);
         gSprites[gBattlerSpriteIds[gMultiUsePlayerCursor]].callback = SpriteCB_HideAsMoveTarget;
-        if (gSaveBlock2Ptr->optionsCursorMemory)
+        if ((gSaveBlock2Ptr->optionsCursorMemory) == 0)
         {
             gTargetSelectionCursor[gActiveBattler] = gMultiUsePlayerCursor;
             gTargetSelectionMove[gActiveBattler] = gMoveSelectionCursor[gActiveBattler];
@@ -722,7 +723,7 @@ static void HandleInputChooseMove(void)
                      && gTargetSelectionMove[gActiveBattler] == gMoveSelectionCursor[gActiveBattler]
                      && !(gAbsentBattlerFlags & gBitTable[gTargetSelectionCursor[gActiveBattler]])
                      && gBattleMons[gTargetSelectionCursor[gActiveBattler]].hp > 0
-                     && (gSaveBlock2Ptr->optionsCursorMemory))
+                     && ((gSaveBlock2Ptr->optionsCursorMemory) == 0))
                 gMultiUsePlayerCursor = gTargetSelectionCursor[gActiveBattler];
             else if (gAbsentBattlerFlags & gBitTable[GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)])
                 gMultiUsePlayerCursor = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
@@ -1837,10 +1838,14 @@ u8 TypeEffectiveness(u8 targetId)
 
 bool8 IsMoveSTAB(u16 move, u8 battlerId)
 {
-	u8 moveType = gBattleMoves[move].type;
+	u8 moveType = DisplayMoveTypeChange(move);
+    u16 species = GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPECIES);
 
     if (IS_MOVE_STATUS(move))
         return FALSE;
+    
+    if ((species == SPECIES_GROUDON) && (moveType == TYPE_FIRE) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;
 
     return (moveType == gBattleMons[battlerId].type1 || moveType == gBattleMons[battlerId].type2);
 }
@@ -1901,7 +1906,7 @@ static void MoveSelectionDisplayMoveTypeDoubles(u8 targetId)
     u16 move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
 
     moveCategory = gBattleMoves[move].category;
-    type = gBattleMoves[move].type;
+    type = DisplayMoveTypeChange(move);
 
     if (move == MOVE_HIDDEN_POWER)
     {
@@ -1951,7 +1956,7 @@ static void MoveSelectionDisplayMoveType(void) //Made this display a Move Type I
     u16 move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
 
     moveCategory = gBattleMoves[move].category;
-    type = gBattleMoves[move].type;
+    type = DisplayMoveTypeChange(move);
 
     if (move == MOVE_HIDDEN_POWER)
     {

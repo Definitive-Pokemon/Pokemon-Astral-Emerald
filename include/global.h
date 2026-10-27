@@ -509,6 +509,13 @@ struct RankingHall2P
 
 struct SaveBlock2
 {
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // WARNING: DO NOT reorder, resize, or remove ANY field from the start of
+    // this struct up to and including `saveVersion`. The save migration system
+    // reads `saveVersion` at a fixed raw byte offset from flash BEFORE the
+    // checksum is validated. If this offset changes, old saves become
+    // unrecoverable. Add new fields AFTER `padding_savecompat` only.
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     /*0x00*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
     /*0x08*/ u8 playerGender; // MALE, FEMALE
     /*0x09*/ u8 specialSaveWarpFlags;
@@ -524,8 +531,6 @@ struct SaveBlock2
              u16 optionsBattleStyle:1; // OPTIONS_BATTLE_STYLE_[SHIFT/SET]
              u16 optionsBattleSceneOff:1; // whether battle animations are disabled
              u16 regionMapZoom:1; // whether the map is zoomed in
-             //u16 padding1:4;
-             //u16 padding2;
              u16 optionsfollowerEnable:1;
              bool8 optionsautoRun;
              u16 optionsDisableMatchCall:1;
@@ -535,7 +540,7 @@ struct SaveBlock2
              u16 optionsFishing:1;
              u16 optionsFastIntro:1;
              u16 optionsfollowerLargeEnable:1;
-             u16 optionsFastBattle:1;
+             u16 optionsSkipDelays:1;
              u16 optionsEvenFasterJoy:1;
              u16 optionsBikeMusic:1;
              u16 optionsSurfMusic:1;
@@ -574,9 +579,16 @@ struct SaveBlock2
               u16 optionsCursorMemory:1;
               u16 optionsBattleSpeed:1; // 0 = normal, 1 = double speed animations/bars
               u16 optionsBrighterNights:1; // 0 = normal darkness, 1 = brighter nights
-              u8 padding_savecompat[4]; // Preserve struct size for save compatibility
-              u8 shinySeen[NUM_DEX_FLAG_BYTES]; // Tracks whether trainer has ever seen/caught a shiny of each species. Stays the last one in case of
-                                                // overflow.
+              // ------- FROZEN OFFSET BOUNDARY -------
+              // Everything above this line MUST NOT change size or order.
+              // The save migration system depends on saveVersion being at a
+              // fixed byte offset within flash sector 0. Moving it = bricked saves.
+              u8 saveVersion;            // ME_SAVE_VERSION_* — read from raw flash pre-checksum
+              u8 padding_savecompat[3]; // Remaining padding for save compatibility
+              // ------- END FROZEN BOUNDARY -------
+              // New fields may be added below here safely (with a version bump + migration).
+              u8 shinySeen[NUM_DEX_FLAG_BYTES]; // Tracks whether trainer has ever seen/caught a shiny of each species. 
+              u8 optionsOWSpeed:1;
 }; // sizeof=0xF2C + NUM_DEX_FLAG_BYTES
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
@@ -1152,14 +1164,12 @@ struct SaveBlock1
         u8 tx_Nuzlocke_ShinyClause:1;
         u8 tx_Nuzlocke_Nicknaming:1;
         u8 tx_Challenges_Mirror:1;
-        //
         u8 tx_Challenges_Mirror_Thief:1;
         u8 tx_Random_Static:1;
         u8 tx_Challenges_NoEVs:1;
         u8 tx_Challenges_TrainerScalingIVs:2;
         u8 tx_Challenges_TrainerScalingEVs:2;
         u8 tx_Nuzlocke_Deletion:1;
-        //
         u8 tx_Random_Starter:1;
         u8 tx_Challenges_MaxPartyIVs:2;
         u8 tx_Mode_InfiniteTMs:1;
@@ -1167,13 +1177,11 @@ struct SaveBlock1
         u8 tx_Features_EasierFeebas:1;
         u8 tx_Nuzlocke_EasyMode:1;
         u8 tx_Challenges_PCHeal:1;
-        //
         u8 tx_Features_RTCType:1;
         u8 tx_Features_ShinyColors:1;
         u8 tx_Features_LimitDifficulty:1;
         u8 tx_Features_ShinyChance:4;
         u8 tx_Features_WildMonDropItems:1;
-        //
         u8 tx_Features_Unlimited_WT:1;
         u8 tx_Mode_Synchronize:1;
         u8 tx_Mode_Mints:1;
@@ -1182,7 +1190,6 @@ struct SaveBlock1
         u8 tx_Mode_Fairy_Types:1;
         u8 tx_Mode_New_Stats:1;
         u8 tx_Mode_Sturdy:1;
-        //
         u8 tx_Mode_Modern_Moves:1;
         u8 tx_Mode_Legendary_Abilities:1;
         u8 tx_Mode_New_Legendaries:1;
@@ -1194,6 +1201,7 @@ struct SaveBlock1
         u8 tx_Mode_TypeEffectiveness:1;
         u8 tx_Difficulty_CatchRate:3;
         u8 tx_Mode_Teams:1;
+        u8 tx_Features_WT:1;
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;

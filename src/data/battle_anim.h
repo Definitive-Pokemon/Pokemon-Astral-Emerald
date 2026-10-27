@@ -1308,6 +1308,9 @@ const struct CompressedSpriteSheet gBattleAnimPicTable[] =
     {gBattleAnimSpriteGfx_EnergyBall, 0x0200, ANIM_TAG_ENERGY_BALL},
     {gBattleAnimSpriteGfx_GrabHandAway, 0x2000, ANIM_TAG_GRAB_AWAY},
     {gBattleAnimSpriteGfx_GrabHandToward, 0x2000, ANIM_TAG_GRAB_TOWARDS},
+    {gBattleAnimSpriteGfx_Beam, 0x0800, ANIM_TAG_BEAM},
+    {gBattleAnimSpriteGfx_BloodMoon, 0x0800, ANIM_TAG_BLOOD_MOON},
+    {gBattleAnimSpriteGfx_RedExplosion, 0x0800, ANIM_TAG_RED_EXPLOSION},
 };
 
 const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
@@ -1611,6 +1614,9 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_EnergyBall, ANIM_TAG_ENERGY_BALL},
     {gBattleAnimSpritePal_BlueLightWall, ANIM_TAG_GRAB_AWAY},
     {gBattleAnimSpritePal_BlueLightWall, ANIM_TAG_GRAB_TOWARDS},
+    {gBattleAnimSpritePal_Beam, ANIM_TAG_BEAM},
+    {gBattleAnimSpritePal_BloodMoon, ANIM_TAG_BLOOD_MOON},
+    {gBattleAnimSpritePal_RedExplosion, ANIM_TAG_RED_EXPLOSION},
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
@@ -1643,4 +1649,6 @@ const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
     [BG_SOLAR_BEAM_PLAYER]   = {gBattleAnimBgImage_Impact,     gBattleAnimBgPalette_SolarBeam,  gBattleAnimBgTilemap_ImpactPlayer},
     [BG_SOLAR_BEAM_CONTESTS] = {gBattleAnimBgImage_Impact,     gBattleAnimBgPalette_SolarBeam,  gBattleAnimBgTilemap_ImpactContests},
     [BG_FOCUS_BLAST]         = {gBattleAnimBgImage_FocusBlast, gBattleAnimBgPalette_FocusBlast, gBattleAnimBgTilemap_FocusBlast},
+    [BG_FIRE]                = {gBattleAnimBgImage_Fire1,      gBattleAnimBgPalette_Fire1,      gBattleAnimBgTilemap_Fire1},
+
 };

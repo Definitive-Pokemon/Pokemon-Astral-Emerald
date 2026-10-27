@@ -38,6 +38,7 @@ enum
     MENUITEM_MAIN_BUTTONMODE,
     MENUITEM_MAIN_FOLLOWER,
     MENUITEM_MAIN_LARGE_FOLLOWER,
+    MENUITEM_MAIN_OVERWORLD_SPEED,
     MENUITEM_MAIN_SURFOVERWORLD,
     MENUITEM_MAIN_MATCHCALL,
     MENUITEM_MAIN_AUTORUN,
@@ -55,12 +56,12 @@ enum
 //Menu options 2
 enum
 {
+    MENUITEM_BATTLE_BATTLE_SPEED,
+    MENUITEM_BATTLE_SKIP_DELAYS,
     MENUITEM_BATTLE_BATTLESCENE,
     MENUITEM_BATTLE_BATTLESTYLE,
     MENUITEM_BATTLE_SPLIT,
     MENUITEM_BATTLE_FAST_INTRO,
-    MENUITEM_BATTLE_FAST_BATTLES,
-    MENUITEM_BATTLE_BATTLE_SPEED,
     MENUITEM_BATTLE_CURSOR_MEMORY,
     MENUITEM_BATTLE_NEW_BACKGROUNDS,
     MENUITEM_BATTLE_BALL_PROMPT,
@@ -210,7 +211,7 @@ static void DrawChoices_Style(int selection, int y);
 static void DrawChoices_TypeEffective(int selection, int y);
 static void DrawChoices_Fishing(int selection, int y);
 static void DrawChoices_FastIntro(int selection, int y);
-static void DrawChoices_FastBattles(int selection, int y);
+static void DrawChoices_SkipDelays(int selection, int y);
 static void DrawChoices_BattleSpeed(int selection, int y);
 static void DrawChoices_BikeMusic(int selection, int y);
 static void DrawChoices_EvenFasterJoy(int selection, int y);
@@ -232,6 +233,7 @@ static void DrawChoices_SurfOverworld(int selection, int y);
 static void DrawChoices_BrighterNights(int selection, int y);
 static void DrawChoices_Font(int selection, int y);
 static void DrawChoices_CursorMemory(int selection, int y);
+static void DrawChoices_OverworldSpeed(int selection, int y);
 static void DrawBgWindowFrames(void);
 
 // EWRAM vars
@@ -281,6 +283,7 @@ struct // MENU_MAIN
     [MENUITEM_MAIN_FRAMETYPE]               = {DrawChoices_FrameType,        ProcessInput_FrameType},
     [MENUITEM_MAIN_BRIGHTER_NIGHTS]         = {DrawChoices_BrighterNights,   ProcessInput_Options_Two},
     [MENUITEM_MAIN_SURFOVERWORLD]           = {DrawChoices_SurfOverworld,    ProcessInput_Options_Two},
+    [MENUITEM_MAIN_OVERWORLD_SPEED]         = {DrawChoices_OverworldSpeed,   ProcessInput_Options_Two},
 };
 
 struct // MENU_CUSTOM
@@ -294,7 +297,7 @@ struct // MENU_CUSTOM
     [MENUITEM_BATTLE_FAST_INTRO]       = {DrawChoices_FastIntro,          ProcessInput_Options_Two},
     [MENUITEM_BATTLE_SPLIT]            = {DrawChoices_Style,              ProcessInput_Options_Two},
     [MENUITEM_BATTLE_TYPE_EFFECTIVE]   = {DrawChoices_TypeEffective,      ProcessInput_Options_Two},
-    [MENUITEM_BATTLE_FAST_BATTLES]     = {DrawChoices_FastBattles,        ProcessInput_Options_Two},
+    [MENUITEM_BATTLE_SKIP_DELAYS]      = {DrawChoices_SkipDelays,        ProcessInput_Options_Two},
     [MENUITEM_BATTLE_BATTLE_SPEED]     = {DrawChoices_BattleSpeed,        ProcessInput_Options_Two},
     [MENUITEM_BATTLE_RUN_TYPE]         = {DrawChoices_Run_Type,           ProcessInput_Options_Four},
     [MENUITEM_BATTLE_LR_RUN]           = {DrawChoices_LR_Run,             ProcessInput_Options_Two},
@@ -324,8 +327,8 @@ static const u8 sText_OptionTypeEffective[]       = _("STAB/EFFECTIVE");
 static const u8 sText_OptionFishing[]             = _("EASIER FISHING");
 static const u8 sText_OptionFastIntro[]           = _("FAST INTRO");
 static const u8 sText_OptionLargeFollower[]       = _("BIG FOLLOWERS");
-static const u8 sText_OptionFastBattles[]         = _("FAST BATTLES");
-static const u8 sText_OptionBattleSpeed[]         = _("ANIM SPEED");
+static const u8 sText_OptionFastBattles[]         = _("SKIP DELAYS");
+static const u8 sText_OptionBattleSpeed[]         = _("BATTLE SPEED");
 static const u8 sText_OptionEvenFasterJoy[]       = _("EVEN FASTER JOY");
 static const u8 sText_OptionSkipIntro[]           = _("SKIP INTRO");
 static const u8 sText_OptionLR_Run[]              = _("RUN PROMPT");
@@ -338,6 +341,7 @@ static const u8 sText_AutorunEnable_Dive[]        = _("AUTORUN (DIVE)");
 static const u8 sText_SurfSprites[]               = _("SURF SPRITES");
 static const u8 sText_BrighterNights[]            = _("BRIGHT NIGHTS");
 static const u8 sText_FontType[]                  = _("FONT TYPE");
+static const u8 sText_OverworldSpeed[]            = _("OW SPEED");
 static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]           = gText_TextSpeed,
@@ -357,6 +361,7 @@ static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
     [MENUITEM_MAIN_FRAMETYPE]           = gText_Frame,
     [MENUITEM_MAIN_BRIGHTER_NIGHTS]     = sText_BrighterNights,
     [MENUITEM_MAIN_SURFOVERWORLD]       = sText_SurfSprites,
+    [MENUITEM_MAIN_OVERWORLD_SPEED]     = sText_OverworldSpeed,
 };
 
 static const u8 sText_CursorMemory[]              = _("CURSOR MEMORY");
@@ -367,7 +372,7 @@ static const u8 *const sOptionMenuItemsNamesCustom[MENUITEM_BATTLE_COUNT] =
     [MENUITEM_BATTLE_FAST_INTRO]       = sText_OptionFastIntro,
     [MENUITEM_BATTLE_SPLIT]            = gText_OptionStyle,
     [MENUITEM_BATTLE_TYPE_EFFECTIVE]   = sText_OptionTypeEffective,
-    [MENUITEM_BATTLE_FAST_BATTLES]     = sText_OptionFastBattles,
+    [MENUITEM_BATTLE_SKIP_DELAYS]     = sText_OptionFastBattles,
     [MENUITEM_BATTLE_BATTLE_SPEED]     = sText_OptionBattleSpeed,
     [MENUITEM_BATTLE_RUN_TYPE]         = sText_OptionRunType,
     [MENUITEM_BATTLE_LR_RUN]           = sText_OptionLR_Run,
@@ -431,6 +436,7 @@ static bool8 CheckConditions(int selection)
         case MENUITEM_MAIN_SKIP_INTRO:        return TRUE;
         case MENUITEM_MAIN_UNIT_TYPE:         return TRUE;
         case MENUITEM_MAIN_SURFOVERWORLD:     return TRUE;
+        case MENUITEM_MAIN_OVERWORLD_SPEED:   return TRUE;
         case MENUITEM_MAIN_BRIGHTER_NIGHTS:   return TRUE;
         }
     case MENU_CUSTOM:
@@ -441,7 +447,7 @@ static bool8 CheckConditions(int selection)
         case MENUITEM_BATTLE_FAST_INTRO:      return TRUE;
         case MENUITEM_BATTLE_SPLIT:           return TRUE;
         case MENUITEM_BATTLE_TYPE_EFFECTIVE:  return TRUE;
-        case MENUITEM_BATTLE_FAST_BATTLES:    return TRUE;
+        case MENUITEM_BATTLE_SKIP_DELAYS:     return TRUE;
         case MENUITEM_BATTLE_BATTLE_SPEED:    return TRUE;
         case MENUITEM_BATTLE_RUN_TYPE:        return TRUE;
         case MENUITEM_BATTLE_LR_RUN:          return sOptions->sel_battle[MENUITEM_BATTLE_RUN_TYPE] == 1 || sOptions->sel_battle[MENUITEM_BATTLE_RUN_TYPE] == 3;
@@ -496,8 +502,8 @@ static const u8 sText_Desc_FishingOn[]             = _("Automatically reel while
 static const u8 sText_Desc_FishingOff[]            = _("Manually reel while fishing.\nFish like you always fished!");
 static const u8 sText_Desc_EvenFasterJoyOn[]       = _("Nurse Joy heals you extremely fast.\nFor those who cannot wait.");
 static const u8 sText_Desc_EvenFasterJoyOff[]      = _("Nurse Joy heals you fast, but\nwith the usual animation.");
-static const u8 sText_Desc_SkipIntroOn[]           = _("Skips the Copyright screen and\nintro. Applies to soft-resets.");
-static const u8 sText_Desc_SkipIntroOff[]          = _("Shows the Copyright screen and\nthe game's introduction.");
+static const u8 sText_Desc_SkipIntroOn[]           = _("Skips the intro and the title screen.\nAlso applies to soft-resets.");
+static const u8 sText_Desc_SkipIntroOff[]          = _("Shows the game's introduction and\nthe title screen.");
 static const u8 sText_Desc_OverworldCallsOn[]      = _("Trainers will be able to call you,\noffering rematches and info.");
 static const u8 sText_Desc_OverworldCallsOff[]     = _("You will not receive calls.\nSpecial events will still occur.");
 static const u8 sText_Desc_Units_Imperial[]        = _("Display Berry and Pokémon weight\nand size in pounds and inches.");
@@ -506,6 +512,8 @@ static const u8 sText_Desc_SurfOverworldDynamic[]       = _("Use the Pokémon's 
 static const u8 sText_Desc_SurfOverworldOriginal[]      = _("Use the original generic sprite when\nsurfing.");
 static const u8 sText_Desc_BrighterNightsOn[]           = _("Night shading is less dark.\nEasier to see at night.");
 static const u8 sText_Desc_BrighterNightsOff[]          = _("Night shading at full darkness.\nOriginal intensity.");
+static const u8 sText_Desc_OWSpeed_x1[]                 = _("Normal overworld speed.");
+static const u8 sText_Desc_OWSpeed_x2[]                 = _("Similar to an emulator speed-up.\nCan affect performance.");
 static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 {
     [MENUITEM_MAIN_TEXTSPEED]         = {sText_Desc_TextSpeed,            sText_Empty,                     sText_Empty},
@@ -525,6 +533,7 @@ static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
     [MENUITEM_MAIN_UNIT_TYPE]         = {sText_Desc_Units_Metric,         sText_Desc_Units_Imperial},
     [MENUITEM_MAIN_SURFOVERWORLD]     = {sText_Desc_SurfOverworldDynamic, sText_Desc_SurfOverworldOriginal},
     [MENUITEM_MAIN_BRIGHTER_NIGHTS]   = {sText_Desc_BrighterNightsOff,     sText_Desc_BrighterNightsOn},
+    [MENUITEM_MAIN_OVERWORLD_SPEED]   = {sText_Desc_OWSpeed_x1,            sText_Desc_OWSpeed_x2},
 };
 
 // Custom {PKMN}
@@ -534,8 +543,8 @@ static const u8 sText_Desc_TypeEffectiveOn[]       = _("Show effectiveness and S
 static const u8 sText_Desc_TypeEffectiveOff[]      = _("Type effectiveness and STAB\nwon't be shown in battles.");
 static const u8 sText_Desc_FastIntroOn[]           = _("Skip the sliding animation\nand enter battles faster.");
 static const u8 sText_Desc_FastIntroOff[]          = _("Battles load at the usual speed.");
-static const u8 sText_Desc_FastBattleOn[]          = _("Skips all delays in battles, which\nmakes them faster.");
-static const u8 sText_Desc_FastBattleOff[]         = _("Manual delay skipping. You can\npress A or B to skip delays.");
+static const u8 sText_Desc_SkipDelay_On[]          = _("Skips all delays in battles, which\nmakes them faster.");
+static const u8 sText_Desc_SkipDelay_Off[]         = _("Manual delay skipping. You can\npress A or B to skip delays.");
 static const u8 sText_Desc_BattleSpeedOn[]         = _("Battle animations play at\nnormal speed.");
 static const u8 sText_Desc_BattleSpeedOff[]        = _("Doubles the speed of HP bars, EXP,\nanims, faints, and switches.");
 static const u8 sText_Desc_Run_Type_Off[]          = _("No quick running from battles.");
@@ -555,7 +564,7 @@ static const u8 *const sOptionMenuItemDescriptionsCustom[MENUITEM_BATTLE_COUNT][
     [MENUITEM_BATTLE_BATTLESCENE]         = {sText_Desc_BattleScene_On,           sText_Desc_BattleScene_Off,        sText_Empty},
     [MENUITEM_BATTLE_BATTLESTYLE]         = {sText_Desc_BattleStyle_Shift,        sText_Desc_BattleStyle_Set,        sText_Empty},
     [MENUITEM_BATTLE_FAST_INTRO]          = {sText_Desc_FastIntroOn,              sText_Desc_FastIntroOff},
-    [MENUITEM_BATTLE_FAST_BATTLES]        = {sText_Desc_FastBattleOn,             sText_Desc_FastBattleOff},
+    [MENUITEM_BATTLE_SKIP_DELAYS]         = {sText_Desc_SkipDelay_On,             sText_Desc_SkipDelay_Off},
     [MENUITEM_BATTLE_BATTLE_SPEED]        = {sText_Desc_BattleSpeedOn,            sText_Desc_BattleSpeedOff},
     [MENUITEM_BATTLE_SPLIT]               = {sText_Desc_StyleOn,                  sText_Desc_StyleOff},
     [MENUITEM_BATTLE_TYPE_EFFECTIVE]      = {sText_Desc_TypeEffectiveOn,          sText_Desc_TypeEffectiveOff},
@@ -627,7 +636,7 @@ static const u8 *const sOptionMenuItemDescriptionsDisabledCustom[MENUITEM_BATTLE
     [MENUITEM_BATTLE_BATTLESCENE]         = sText_Empty,
     [MENUITEM_BATTLE_BATTLESTYLE]         = sText_Empty,
     [MENUITEM_BATTLE_FAST_INTRO]          = sText_Empty,
-    [MENUITEM_BATTLE_FAST_BATTLES]        = sText_Empty,
+    [MENUITEM_BATTLE_SKIP_DELAYS]        = sText_Empty,
     [MENUITEM_BATTLE_BATTLE_SPEED]        = sText_Empty,
     [MENUITEM_BATTLE_SPLIT]               = sText_Empty,
     [MENUITEM_BATTLE_TYPE_EFFECTIVE]      = sText_Empty,
@@ -903,11 +912,12 @@ void CB2_InitOptionPlusMenu(void)
         sOptions->sel[MENUITEM_MAIN_UNIT_TYPE]           = gSaveBlock2Ptr->optionsUnitSystem;
         sOptions->sel[MENUITEM_MAIN_SURFOVERWORLD]       = gSaveBlock2Ptr->optionsSurfOverworld;
         sOptions->sel[MENUITEM_MAIN_BRIGHTER_NIGHTS]     = gSaveBlock2Ptr->optionsBrighterNights;
+        sOptions->sel[MENUITEM_MAIN_OVERWORLD_SPEED]     = gSaveBlock2Ptr->optionsOWSpeed;
 
         sOptions->sel_battle[MENUITEM_BATTLE_BATTLESTYLE]       = gSaveBlock2Ptr->optionsBattleStyle;
         sOptions->sel_battle[MENUITEM_BATTLE_BATTLESCENE]       = gSaveBlock2Ptr->optionsBattleSceneOff;
         sOptions->sel_battle[MENUITEM_BATTLE_FAST_INTRO]        = gSaveBlock2Ptr->optionsFastIntro;
-        sOptions->sel_battle[MENUITEM_BATTLE_FAST_BATTLES]      = gSaveBlock2Ptr->optionsFastBattle;
+        sOptions->sel_battle[MENUITEM_BATTLE_SKIP_DELAYS]       = gSaveBlock2Ptr->optionsSkipDelays;
         sOptions->sel_battle[MENUITEM_BATTLE_BATTLE_SPEED]      = gSaveBlock2Ptr->optionsBattleSpeed;
         sOptions->sel_battle[MENUITEM_BATTLE_SPLIT]             = gSaveBlock2Ptr->optionStyle;
         sOptions->sel_battle[MENUITEM_BATTLE_TYPE_EFFECTIVE]    = gSaveBlock2Ptr->optionTypeEffective;
@@ -1144,11 +1154,12 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsUnitSystem            = sOptions->sel[MENUITEM_MAIN_UNIT_TYPE];
     gSaveBlock2Ptr->optionsSurfOverworld         = sOptions->sel[MENUITEM_MAIN_SURFOVERWORLD];
     gSaveBlock2Ptr->optionsBrighterNights        = sOptions->sel[MENUITEM_MAIN_BRIGHTER_NIGHTS];
+    gSaveBlock2Ptr->optionsOWSpeed               = sOptions->sel[MENUITEM_MAIN_OVERWORLD_SPEED];
 
     gSaveBlock2Ptr->optionsBattleStyle      = sOptions->sel_battle[MENUITEM_BATTLE_BATTLESTYLE];
     gSaveBlock2Ptr->optionsBattleSceneOff   = sOptions->sel_battle[MENUITEM_BATTLE_BATTLESCENE];
     gSaveBlock2Ptr->optionsFastIntro        = sOptions->sel_battle[MENUITEM_BATTLE_FAST_INTRO];
-    gSaveBlock2Ptr->optionsFastBattle       = sOptions->sel_battle[MENUITEM_BATTLE_FAST_BATTLES];
+    gSaveBlock2Ptr->optionsSkipDelays       = sOptions->sel_battle[MENUITEM_BATTLE_SKIP_DELAYS];
     gSaveBlock2Ptr->optionsBattleSpeed      = sOptions->sel_battle[MENUITEM_BATTLE_BATTLE_SPEED];
     gSaveBlock2Ptr->optionStyle             = sOptions->sel_battle[MENUITEM_BATTLE_SPLIT];
     gSaveBlock2Ptr->optionTypeEffective     = sOptions->sel_battle[MENUITEM_BATTLE_TYPE_EFFECTIVE];
@@ -1840,19 +1851,19 @@ static void DrawChoices_FastIntro(int selection, int y)
     DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(1, gText_BattleSceneOff, 198), y, styles[1], active);
 }
 
-static void DrawChoices_FastBattles(int selection, int y)
+static void DrawChoices_SkipDelays(int selection, int y)
 {
-    bool8 active = CheckConditions(MENUITEM_BATTLE_FAST_BATTLES);
+    bool8 active = CheckConditions(MENUITEM_BATTLE_SKIP_DELAYS);
     u8 styles[2] = {0};
     styles[selection] = 1;
 
     if (selection == 0)
     {
-        gSaveBlock2Ptr->optionsFastBattle = 1; //on
+        gSaveBlock2Ptr->optionsSkipDelays = 1; //on
     }
     else
     {
-        gSaveBlock2Ptr->optionsFastBattle = 0; //Off
+        gSaveBlock2Ptr->optionsSkipDelays = 0; //Off
     }
 
     DrawOptionMenuChoice(gText_BattleSceneOn, 104, y, styles[0], active);
@@ -2196,6 +2207,25 @@ static void DrawChoices_CursorMemory(int selection, int y)
 
     DrawOptionMenuChoice(gText_BattleSceneOn, 104, y, styles[0], active);
     DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(1, gText_BattleSceneOff, 198), y, styles[1], active);
+}
+
+static void DrawChoices_OverworldSpeed(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_MAIN_OVERWORLD_SPEED);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    if (selection == 0)
+    {
+        gSaveBlock2Ptr->optionsOWSpeed = 0; //x1
+    }
+    else
+    {
+        gSaveBlock2Ptr->optionsOWSpeed = 1; //x2
+    }
+
+    DrawOptionMenuChoice(sText_BattleSpeed1x, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_BattleSpeed2x, GetStringRightAlignXOffset(1, sText_BattleSpeed2x, 198), y, styles[1], active);
 }
 
 // Background tilemap

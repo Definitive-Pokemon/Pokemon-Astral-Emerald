@@ -567,15 +567,15 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(URSALUNA),
     SPECIES_TO_HOENN(KLEAVOR),
     SPECIES_TO_HOENN(URSALUNA_BLOODMOON),
-    //SPECIES_TO_HOENN(UNUSED_SPACE5),
-    //SPECIES_TO_HOENN(UNUSED_SPACE6),
     SPECIES_TO_HOENN(TEST),
-    //SPECIES_TO_HOENN(UNUSED_SPACE8),
-    //SPECIES_TO_HOENN(UNUSED_SPACE9),
-    //SPECIES_TO_HOENN(UNUSED_SPACE10),
-    //SPECIES_TO_HOENN(DEOXYS_ATTACK),
-    //SPECIES_TO_HOENN(DEOXYS_DEFENSE),
-    //SPECIES_TO_HOENN(DEOXYS_SPEED),
+    SPECIES_TO_HOENN(VICTINI),
+    //SPECIES_TO_HOENN(UNUSED_SPACE6),
+    SPECIES_TO_HOENN(ARTICUNO_GALAR),
+    SPECIES_TO_HOENN(ZAPDOS_GALAR),
+    SPECIES_TO_HOENN(MOLTRES_GALAR),
+    SPECIES_TO_HOENN(DEOXYS_ATTACK),
+    SPECIES_TO_HOENN(DEOXYS_DEFENSE),
+    SPECIES_TO_HOENN(DEOXYS_SPEED),
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -1032,15 +1032,15 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(URSALUNA),
     SPECIES_TO_NATIONAL(KLEAVOR),
     SPECIES_TO_NATIONAL(URSALUNA_BLOODMOON),
-    //SPECIES_TO_NATIONAL(UNUSED_SPACE5),
-    //SPECIES_TO_NATIONAL(UNUSED_SPACE6),
     SPECIES_TO_NATIONAL(TEST),
-    //SPECIES_TO_NATIONAL(UNUSED_SPACE8),
-    //SPECIES_TO_NATIONAL(UNUSED_SPACE9),
-    //SPECIES_TO_NATIONAL(UNUSED_SPACE10),
-    //SPECIES_TO_NATIONAL(DEOXYS_ATTACK),
-    //SPECIES_TO_NATIONAL(DEOXYS_DEFENSE),
-    //SPECIES_TO_NATIONAL(DEOXYS_SPEED),
+    SPECIES_TO_NATIONAL(VICTINI),
+    //SPECIES_TO_NATIONAL(UNUSED_SPACE6),
+    SPECIES_TO_NATIONAL(ARTICUNO_GALAR),
+    SPECIES_TO_NATIONAL(ZAPDOS_GALAR),
+    SPECIES_TO_NATIONAL(MOLTRES_GALAR),
+    SPECIES_TO_NATIONAL(DEOXYS_ATTACK),
+    SPECIES_TO_NATIONAL(DEOXYS_DEFENSE),
+    SPECIES_TO_NATIONAL(DEOXYS_SPEED),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1106,19 +1106,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(GEODUDE),
     HOENN_TO_NATIONAL(GRAVELER),
     HOENN_TO_NATIONAL(GOLEM),
-    HOENN_TO_NATIONAL(PONYTA),
-    HOENN_TO_NATIONAL(RAPIDASH),
-    HOENN_TO_NATIONAL(HOUNDOUR),
-    HOENN_TO_NATIONAL(HOUNDOOM),
-    HOENN_TO_NATIONAL(MISDREAVUS),
-    HOENN_TO_NATIONAL(MISMAGIUS),
-    HOENN_TO_NATIONAL(MURKROW),
-    HOENN_TO_NATIONAL(HONCHKROW),
-    HOENN_TO_NATIONAL(SNEASEL),
-	HOENN_TO_NATIONAL(WEAVILE),
-    HOENN_TO_NATIONAL(SWINUB),
-    HOENN_TO_NATIONAL(PILOSWINE),
-    HOENN_TO_NATIONAL(MAMOSWINE),
     HOENN_TO_NATIONAL(NOSEPASS),
     HOENN_TO_NATIONAL(PROBOPASS),
     HOENN_TO_NATIONAL(SKITTY),
@@ -1266,6 +1253,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(REGISTEEL),
     HOENN_TO_NATIONAL(REGIDRAGO),
     HOENN_TO_NATIONAL(REGIELEKI),
+    HOENN_TO_NATIONAL(REGIGIGAS),
     HOENN_TO_NATIONAL(LATIAS),
     HOENN_TO_NATIONAL(LATIOS),
     HOENN_TO_NATIONAL(KYOGRE),
@@ -1323,6 +1311,8 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(BELLSPROUT),
     HOENN_TO_NATIONAL(WEEPINBELL),
     HOENN_TO_NATIONAL(VICTREEBEL),
+    HOENN_TO_NATIONAL(PONYTA),
+    HOENN_TO_NATIONAL(RAPIDASH),
     HOENN_TO_NATIONAL(SLOWPOKE),
     HOENN_TO_NATIONAL(SLOWBRO),
     HOENN_TO_NATIONAL(FARFETCHD),
@@ -1411,7 +1401,9 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(QUAGSIRE),
     HOENN_TO_NATIONAL(ESPEON),
     HOENN_TO_NATIONAL(UMBREON),
+    HOENN_TO_NATIONAL(MURKROW),
     HOENN_TO_NATIONAL(SLOWKING),
+    HOENN_TO_NATIONAL(MISDREAVUS),
     HOENN_TO_NATIONAL(UNOWN),
     HOENN_TO_NATIONAL(PINECO),
     HOENN_TO_NATIONAL(FORRETRESS),
@@ -1423,12 +1415,17 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(QWILFISH),
     HOENN_TO_NATIONAL(SCIZOR),
     HOENN_TO_NATIONAL(SHUCKLE),
+    HOENN_TO_NATIONAL(SNEASEL),
     HOENN_TO_NATIONAL(TEDDIURSA),
     HOENN_TO_NATIONAL(URSARING),
+    HOENN_TO_NATIONAL(SWINUB),
+    HOENN_TO_NATIONAL(PILOSWINE),
     HOENN_TO_NATIONAL(REMORAID),
     HOENN_TO_NATIONAL(OCTILLERY),
     HOENN_TO_NATIONAL(DELIBIRD),
     HOENN_TO_NATIONAL(MANTINE),
+    HOENN_TO_NATIONAL(HOUNDOUR),
+    HOENN_TO_NATIONAL(HOUNDOOM),
     HOENN_TO_NATIONAL(PORYGON2),
     HOENN_TO_NATIONAL(STANTLER),
     HOENN_TO_NATIONAL(SMEARGLE),
@@ -1481,16 +1478,19 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(ELECTIVIRE),
     HOENN_TO_NATIONAL(GLISCOR),
     HOENN_TO_NATIONAL(HAPPINY),
+    HOENN_TO_NATIONAL(HONCHKROW),
     HOENN_TO_NATIONAL(LICKILICKY),
     HOENN_TO_NATIONAL(MAGMORTAR),
+    HOENN_TO_NATIONAL(MAMOSWINE),
+    HOENN_TO_NATIONAL(MISMAGIUS),
     HOENN_TO_NATIONAL(PORYGON_Z),
     HOENN_TO_NATIONAL(TANGROWTH),
     HOENN_TO_NATIONAL(TOGEKISS),
+    HOENN_TO_NATIONAL(WEAVILE),
     HOENN_TO_NATIONAL(YANMEGA),
     HOENN_TO_NATIONAL(LEAFEON),
     HOENN_TO_NATIONAL(GLACEON),
     HOENN_TO_NATIONAL(SYLVEON),
-    HOENN_TO_NATIONAL(REGIGIGAS),
     HOENN_TO_NATIONAL(ANNIHILAPE),
     HOENN_TO_NATIONAL(FARIGIRAF),
     HOENN_TO_NATIONAL(DUDUNSPARCE),
@@ -1498,15 +1498,15 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(URSALUNA),
     HOENN_TO_NATIONAL(KLEAVOR),
     HOENN_TO_NATIONAL(URSALUNA_BLOODMOON),
-    //HOENN_TO_NATIONAL(UNUSED_SPACE5),
-    //HOENN_TO_NATIONAL(UNUSED_SPACE6),
     HOENN_TO_NATIONAL(TEST),
-    //HOENN_TO_NATIONAL(UNUSED_SPACE8),
-    //HOENN_TO_NATIONAL(UNUSED_SPACE9),
-    //HOENN_TO_NATIONAL(UNUSED_SPACE10),
-    //HOENN_TO_NATIONAL(DEOXYS_ATTACK),
-    //HOENN_TO_NATIONAL(DEOXYS_DEFENSE),
-    //HOENN_TO_NATIONAL(DEOXYS_SPEED),
+    HOENN_TO_NATIONAL(VICTINI),
+    //HOENN_TO_NATIONAL(UNUSED_SPACE6),
+    HOENN_TO_NATIONAL(ARTICUNO_GALAR),
+    HOENN_TO_NATIONAL(ZAPDOS_GALAR),
+    HOENN_TO_NATIONAL(MOLTRES_GALAR),
+    HOENN_TO_NATIONAL(DEOXYS_ATTACK),
+    HOENN_TO_NATIONAL(DEOXYS_DEFENSE),
+    HOENN_TO_NATIONAL(DEOXYS_SPEED),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -1992,12 +1992,12 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_URSALUNA - 1]      = ANIM_V_SHAKE,
     [SPECIES_URSALUNA_BLOODMOON - 1] = ANIM_V_SHAKE,
     [SPECIES_KLEAVOR - 1]       = ANIM_H_VIBRATE,
-    [SPECIES_UNUSED_SPACE5 - 1] = ANIM_H_VIBRATE,
+    [SPECIES_VICTINI - 1]       = ANIM_H_JUMPS,
     [SPECIES_UNUSED_SPACE6 - 1] = ANIM_H_VIBRATE,
     [SPECIES_TEST - 1]          = ANIM_ZIGZAG_FAST,
-    [SPECIES_UNUSED_SPACE8 - 1] = ANIM_H_VIBRATE,
-    [SPECIES_UNUSED_SPACE9 - 1] = ANIM_H_VIBRATE,
-    [SPECIES_UNUSED_SPACE10 - 1] = ANIM_H_VIBRATE,
+    [SPECIES_ARTICUNO_GALAR - 1] = ANIM_CIRCULAR_VIBRATE,
+    [SPECIES_ZAPDOS_GALAR - 1] = ANIM_GROW_VIBRATE,
+    [SPECIES_MOLTRES_GALAR - 1] = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
 };
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
@@ -2919,12 +2919,12 @@ static const u8 gSpeciesMapping[NUM_SPECIES+1] =
     [SPECIES_URSALUNA - 1]      = EVO_TYPE_2,
     [SPECIES_URSALUNA_BLOODMOON - 1] = EVO_TYPE_2,
     [SPECIES_KLEAVOR - 1]       = EVO_TYPE_1,
-    //[SPECIES_UNUSED_SPACE5 - 1] = EVO_TYPE_LEGENDARY,
+    //[SPECIES_VICTINI - 1]       = EVO_TYPE_LEGENDARY,
     //[SPECIES_UNUSED_SPACE6 - 1] = EVO_TYPE_LEGENDARY,
     //[SPECIES_TEST - 1] = EVO_TYPE_LEGENDARY,
-    //[SPECIES_UNUSED_SPACE8 - 1] = EVO_TYPE_LEGENDARY,
-    //[SPECIES_UNUSED_SPACE9 - 1] = EVO_TYPE_LEGENDARY,
-    //[SPECIES_UNUSED_SPACE10 - 1] = EVO_TYPE_LEGENDARY,
+    //[SPECIES_ARTICUNO_GALAR]    = EVO_TYPE_LEGENDARY,
+    //[SPECIES_ZAPDOS_GALAR]      = EVO_TYPE_LEGENDARY,
+    //[SPECIES_MOLTRES_GALAR]     = EVO_TYPE_LEGENDARY,
     //[SPECIES_DEOXYS_ATTACK]     = EVO_TYPE_LEGENDARY,
     //[SPECIES_DEOXYS_DEFENSE]    = EVO_TYPE_LEGENDARY,
     //[SPECIES_DEOXYS_SPEED]      = EVO_TYPE_LEGENDARY,
@@ -3388,12 +3388,12 @@ static const u16 sRandomSpecies[] =
     SPECIES_URSALUNA           ,
     SPECIES_URSALUNA_BLOODMOON ,
     SPECIES_KLEAVOR            ,
-    //SPECIES_UNUSED_SPACE5    ,
+    //SPECIES_VICTINI            ,
     //SPECIES_UNUSED_SPACE6    ,
     //SPECIES_TEST             ,
-    //SPECIES_UNUSED_SPACE8    ,
-    //SPECIES_UNUSED_SPACE9    ,
-    //SPECIES_UNUSED_SPACE10   ,
+    //SPECIES_ARTICUNO_GALAR     ,
+    //SPECIES_ZAPDOS_GALAR       ,
+    //SPECIES_MOLTRES_GALAR      ,
     // SPECIES_EGG             ,
 };
 #define RANDOM_SPECIES_COUNT_LEGENDARY ARRAY_COUNT(sRandomSpeciesLegendary)
@@ -3852,12 +3852,12 @@ static const u16 sRandomSpeciesLegendary[] =
     SPECIES_URSALUNA           ,
     SPECIES_URSALUNA_BLOODMOON           ,
     SPECIES_KLEAVOR           ,
-    //SPECIES_UNUSED_SPACE5           ,
+    //SPECIES_VICTINI           ,
     //SPECIES_UNUSED_SPACE6           ,
     //SPECIES_TEST           ,
-    //SPECIES_UNUSED_SPACE8           ,
-    //SPECIES_UNUSED_SPACE9           ,
-    //SPECIES_UNUSED_SPACE10            ,
+    //SPECIES_ARTICUNO_GALAR     ,
+    //SPECIES_ZAPDOS_GALAR       ,
+    //SPECIES_MOLTRES_GALAR      ,
     //SPECIES_DEOXYS_ATTACK     ,
     //SPECIES_DEOXYS_DEFENSE    ,
     //SPECIES_DEOXYS_SPEED      ,
@@ -4189,23 +4189,23 @@ static const u16 sRandomSpeciesEvo1[] =
     SPECIES_SHELGON         , //= EVO_TYPE_1,
     SPECIES_METANG          , //= EVO_TYPE_1,
     SPECIES_CHIMECHO        , //= EVO_TYPE_1,
-    SPECIES_AMBIPOM           ,
-    SPECIES_FROSLASS          ,
-    SPECIES_GLACEON           ,
-    SPECIES_GLISCOR           ,
-    SPECIES_HONCHKROW         ,
-    SPECIES_LEAFEON           ,
-    SPECIES_LICKILICKY        ,
-    SPECIES_MISMAGIUS         ,
-    SPECIES_PROBOPASS         ,
-    SPECIES_SYLVEON           ,
-    SPECIES_TANGROWTH         ,
-    SPECIES_WEAVILE           ,
-    SPECIES_YANMEGA           ,
-    SPECIES_FARIGIRAF         ,
-    SPECIES_DUDUNSPARCE       ,
-    SPECIES_WYRDEER           ,
-    SPECIES_KLEAVOR           ,
+    SPECIES_AMBIPOM         , //= EVO_TYPE_1,
+    SPECIES_FROSLASS        , //= EVO_TYPE_1,
+    SPECIES_GLACEON         , //= EVO_TYPE_1,
+    SPECIES_GLISCOR         , //= EVO_TYPE_1,
+    SPECIES_HONCHKROW       , //= EVO_TYPE_1,
+    SPECIES_LEAFEON         , //= EVO_TYPE_1,
+    SPECIES_LICKILICKY      , //= EVO_TYPE_1,
+    SPECIES_MISMAGIUS       , //= EVO_TYPE_1,
+    SPECIES_PROBOPASS       , //= EVO_TYPE_1,
+    SPECIES_SYLVEON         , //= EVO_TYPE_1,
+    SPECIES_TANGROWTH       , //= EVO_TYPE_1,
+    SPECIES_WEAVILE         , //= EVO_TYPE_1,
+    SPECIES_YANMEGA         , //= EVO_TYPE_1,
+    SPECIES_FARIGIRAF       , //= EVO_TYPE_1,
+    SPECIES_DUDUNSPARCE     , //= EVO_TYPE_1,
+    SPECIES_WYRDEER         , //= EVO_TYPE_1,
+    SPECIES_KLEAVOR         , //= EVO_TYPE_1,
     //SPECIES_UNUSED_SPACE5           ,
     //SPECIES_UNUSED_SPACE6           ,
     //SPECIES_TEST           ,
@@ -4265,17 +4265,17 @@ static const u16 sRandomSpeciesEvo2[] =
     SPECIES_GARDEVOIR       , //= EVO_TYPE_2,
     SPECIES_SALAMENCE       , //= EVO_TYPE_2,
     SPECIES_METAGROSS       , //= EVO_TYPE_2,
-    SPECIES_DUSKNOIR          ,
-    SPECIES_ELECTIVIRE        ,
-    SPECIES_GALLADE           ,
-    SPECIES_MAGMORTAR         ,
-    SPECIES_MAGNEZONE         ,
-    SPECIES_MAMOSWINE         ,
-    SPECIES_PORYGON_Z         ,
-    SPECIES_RHYPERIOR         ,
-    SPECIES_ROSERADE          ,
-    SPECIES_TOGEKISS          ,
-    SPECIES_ANNIHILAPE        ,
+    SPECIES_DUSKNOIR          , //= EVO_TYPE_2,
+    SPECIES_ELECTIVIRE        , //= EVO_TYPE_2,
+    SPECIES_GALLADE           , //= EVO_TYPE_2,
+    SPECIES_MAGMORTAR         , //= EVO_TYPE_2,
+    SPECIES_MAGNEZONE         , //= EVO_TYPE_2,
+    SPECIES_MAMOSWINE         , //= EVO_TYPE_2,
+    SPECIES_PORYGON_Z         , //= EVO_TYPE_2,
+    SPECIES_RHYPERIOR         , //= EVO_TYPE_2,
+    SPECIES_ROSERADE          , //= EVO_TYPE_2,
+    SPECIES_TOGEKISS          , //= EVO_TYPE_2,
+    SPECIES_ANNIHILAPE        , //= EVO_TYPE_2,
     SPECIES_URSALUNA           ,
     SPECIES_URSALUNA_BLOODMOON           ,
     //SPECIES_UNUSED_SPACE5           ,
@@ -4309,10 +4309,14 @@ static const u16 sRandomSpeciesEvoLegendary[] =
     SPECIES_LATIOS                        , //= EVO_TYPE_LEGENDARY,
     SPECIES_JIRACHI                       , //= EVO_TYPE_LEGENDARY,
     SPECIES_DEOXYS                        , //= EVO_TYPE_LEGENDARY,
-    SPECIES_ARCEUS            ,
-    SPECIES_REGIDRAGO         ,
-    SPECIES_REGIELEKI         ,
-    SPECIES_REGIGIGAS         ,
+    SPECIES_ARCEUS                        , //= EVO_TYPE_LEGENDARY,
+    SPECIES_REGIDRAGO                     , //= EVO_TYPE_LEGENDARY,
+    SPECIES_REGIELEKI                     , //= EVO_TYPE_LEGENDARY,
+    SPECIES_REGIGIGAS                     , //= EVO_TYPE_LEGENDARY,
+    //SPECIES_VICTINI                       ,
+    //SPECIES_ARTICUNO_GALAR                ,
+    //SPECIES_ZAPDOS_GALAR                  ,
+    //SPECIES_MOLTRES_GALAR                 ,
     //SPECIES_DEOXYS_ATTACK     ,
     //SPECIES_DEOXYS_DEFENSE    ,
     //SPECIES_DEOXYS_SPEED      ,
@@ -4320,7 +4324,6 @@ static const u16 sRandomSpeciesEvoLegendary[] =
     //SPECIES_UNUSED_SPACE2           ,
     //SPECIES_UNUSED_SPACE3           ,
     //SPECIES_UNUSED_SPACE4           ,
-    //SPECIES_UNUSED_SPACE5           ,
     //SPECIES_UNUSED_SPACE6           ,
     //SPECIES_TEST           ,
     //SPECIES_UNUSED_SPACE8           ,
@@ -4511,7 +4514,7 @@ const u16 gEvolutionLines[NUM_SPECIES][EVOS_PER_LINE] =
     [SPECIES_DUSKNOIR]                          = {SPECIES_DUSKULL, SPECIES_DUSCLOPS, SPECIES_DUSKNOIR},
     [SPECIES_SLAKOTH ... SPECIES_SLAKING]       = {SPECIES_SLAKOTH, SPECIES_VIGOROTH, SPECIES_SLAKING},
     [SPECIES_ROSELIA]                           = {SPECIES_BUDEW, SPECIES_ROSELIA, SPECIES_ROSERADE},
-    [SPECIES_BUDEW ... SPECIES_ROSERADE]        = {SPECIES_BUDEW, SPECIES_ROSELIA, SPECIES_ROSERADE},
+    [SPECIES_BUDEW]                             = {SPECIES_BUDEW, SPECIES_ROSELIA, SPECIES_ROSERADE},
     [SPECIES_ROSERADE]                          = {SPECIES_BUDEW, SPECIES_ROSELIA, SPECIES_ROSERADE},
     [SPECIES_GULPIN ... SPECIES_SWALOT]         = {SPECIES_GULPIN, SPECIES_SWALOT},
     [SPECIES_WHISMUR ... SPECIES_EXPLOUD]       = {SPECIES_WHISMUR, SPECIES_LOUDRED, SPECIES_EXPLOUD},
@@ -4928,13 +4931,12 @@ static const u16 sRandomValidMoves[MOVES_COUNT-1] =
     MOVE_PLAY_ROUGH,
     MOVE_MOONBLAST,
     MOVE_POISON_JAB,
-    MOVE_HEAL_PULSE,
-    MOVE_DAZZLING_GLEAM,
-    MOVE_ENERGY_BALL,
-    MOVE_X_SCISSOR,
-    MOVE_STONE_EDGE,
-    MOVE_AVALANCHE,
-    MOVE_CRUSH_GRIP,
+    MOVE_BLOOD_MOON,
+    MOVE_JUDGMENT,
+    MOVE_FREEZING_GLARE,
+    MOVE_THUNDEROUS_KICK,
+    MOVE_FIERY_WRATH,
+    MOVE_SEARING_SHOT,
 };
 //**********************
 
@@ -5313,7 +5315,8 @@ void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level,
 }
 
 // This is only used to create Wally's Ralts.
-void CreateMaleMon(struct Pokemon *mon, u16 species, u8 level)
+// Forces female so it's consistent with Wally's later Gardevoir.
+void CreateFemaleMon(struct Pokemon *mon, u16 species, u8 level)
 {
     u32 personality;
     u32 otId;
@@ -5323,7 +5326,7 @@ void CreateMaleMon(struct Pokemon *mon, u16 species, u8 level)
         otId = Random32();
         personality = Random32();
     }
-    while (GetGenderFromSpeciesAndPersonality(species, personality) != MON_MALE);
+    while (GetGenderFromSpeciesAndPersonality(species, personality) != MON_FEMALE);
     CreateMon(mon, species, level, USE_RANDOM_IVS, TRUE, personality, OT_ID_PRESET, otId);
 }
 
@@ -6411,9 +6414,6 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;
 
-    if (gDisableStructs[battlerIdAtk].slowStartTimer > 0 && gBattleMons[battlerIdAtk].ability == ABILITY_SLOW_START)
-        attack /= 2;
-
     if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerIdAtk))
         attack = (110 * attack) / 100;
     if (ShouldGetStatBadgeBoost(FLAG_BADGE05_GET, battlerIdDef))
@@ -6440,8 +6440,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             if (attackerHoldEffect == sHoldEffectToType[i][0]
                 && type == sHoldEffectToType[i][1])
             {
-                attack = (attack * (attackerHoldEffectParam + 100)) / 100;
-                spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
+                if (IS_MOVE_SPECIAL(gCurrentMove))
+                    spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
+                else
+                    attack = (attack * (attackerHoldEffectParam + 100)) / 100;
                 break;
             }
     }
@@ -6564,15 +6566,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
             gBattleMovePower /= 2;
-        if (defender->ability == ABILITY_MAGMA_ARMOR && type == TYPE_WATER)
-            gBattleMovePower /= 8;
     }
     else if (gSaveBlock2Ptr->optionStyle == 1)
     {
         if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
             spAttack /= 2;
-        if (defender->ability == ABILITY_MAGMA_ARMOR && type == TYPE_WATER)
-            spAttack /= 8;
     }
     if ((defender->ability != ABILITY_NONE) 
     && (gSaveBlock2Ptr->optionsDifficulty == 2) 
@@ -6768,9 +6766,6 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (110 * gBattleMovePower) / 100;
     if (defender->ability == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
-    if (attacker->ability == ABILITY_TECHNICIAN && gBattleMovePower < 61 
-            && gBattleScripting.dmgMultiplier < 2)
-        gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
         gBattleMovePower /= 2;
     if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_WATER_SPORT, 0))
@@ -6783,9 +6778,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if ((attacker->species == SPECIES_SPINDA) && ((Random() % 100) <= 2))
+    if ((attacker->species == SPECIES_SPINDA) && ((Random() % 100) <= 2) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (200 * gBattleMovePower) / 100;
-    if ((attacker->species == SPECIES_GROUDON) && (moveType == TYPE_FIRE))
+    if ((attacker->species == SPECIES_GROUDON) && (moveType == TYPE_FIRE) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
 
     // Self-destruct / Explosion cut defense in half
@@ -8276,7 +8271,8 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
         else
             abilityNum = 1;
     }
-    if ((abilityNum == 0) && (species == SPECIES_ARTICUNO 
+    if ((abilityNum == 0) 
+           && (species == SPECIES_ARTICUNO 
             || species == SPECIES_ZAPDOS 
             || species == SPECIES_MOLTRES
             || species == SPECIES_MEWTWO
@@ -8284,7 +8280,10 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
             || species == SPECIES_ENTEI
             || species == SPECIES_SUICUNE
             || species == SPECIES_HO_OH
-            || species == SPECIES_LUGIA)
+            || species == SPECIES_LUGIA
+            || species == SPECIES_DEOXYS_ATTACK
+            || species == SPECIES_DEOXYS_DEFENSE
+            || species == SPECIES_DEOXYS_SPEED)
             && (gSaveBlock1Ptr->tx_Mode_Legendary_Abilities == 0))
         gLastUsedAbility = gSpeciesInfo[species].abilities_old[0];
     else if ((abilityNum == 1)
@@ -8292,7 +8291,10 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
              || species == SPECIES_YANMEGA
              || species == SPECIES_CLAMPERL
              || species == SPECIES_HUNTAIL
-             || species == SPECIES_GOREBYSS)
+             || species == SPECIES_GOREBYSS
+             || species == SPECIES_REGIROCK
+             || species == SPECIES_REGICE
+             || species == SPECIES_REGISTEEL)
             && (gSaveBlock1Ptr->tx_Mode_Modern_Types == 0))
         gLastUsedAbility = gSpeciesInfo[species].abilities_old[1];
     else if (abilityNum)
@@ -9448,16 +9450,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 }
                 break;
-            case EVO_MAP:
-                {
-                    u16 location = gEvolutionAreaTable[gEvolutionTable[species][i].param];
-                    if (gSaveBlock1Ptr->location.mapGroup == location >> 8
-                     && gSaveBlock1Ptr->location.mapNum == location & 0xFF)
-                    {
-                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                    }
-                    break;
-                }
             }
         }
         break;
@@ -9485,20 +9477,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
         for (i = 0; i < EVOS_PER_MON; i++)
         {
             if (gEvolutionTable[species][i].method == EVO_ITEM
-             && gEvolutionTable[species][i].param == evolutionItem)
-            {
-                targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                break;
-            }
-            if (gEvolutionTable[species][i].method == EVO_ITEM_MALE
-             && GetMonGender(mon) == MON_MALE
-             && gEvolutionTable[species][i].param == evolutionItem)
-            {
-                targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                break;
-            }
-            if (gEvolutionTable[species][i].method == EVO_ITEM_FEMALE
-             && GetMonGender(mon) == MON_FEMALE
              && gEvolutionTable[species][i].param == evolutionItem)
             {
                 targetSpecies = gEvolutionTable[species][i].targetSpecies;
