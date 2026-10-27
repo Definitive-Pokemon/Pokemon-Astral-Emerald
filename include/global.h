@@ -1200,6 +1200,7 @@ struct SaveBlock1
         u8 tx_Difficulty_HardExp:1;
         u8 tx_Mode_TypeEffectiveness:1;
         u8 tx_Difficulty_CatchRate:3;
+        u8 tx_Mode_Teams:1;
         u8 tx_Features_WT:1;
 };
 
