@@ -97,6 +97,7 @@ struct DisableStruct
     u8 filler_18_2:2; // Unused field.
     u8 mimickedMoves:4;
     u8 rechargeTimer;
+    u8 slowStartTimer;
 };
 
 struct ProtectStruct
@@ -445,6 +446,7 @@ struct BattleStruct
     u8 alreadyStatusedMoveAttempt; // As bits for battlers; For example when using Thunder Wave on an already paralyzed Pokémon.
     bool8 throwingPokeBall;
     u8 ballSpriteIds[2];
+    bool8 checkedMagmaArmor;
 };
 
 // The palaceFlags member of struct BattleStruct contains 1 flag per move to indicate which moves the AI should consider,

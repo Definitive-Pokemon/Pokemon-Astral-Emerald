@@ -63,43 +63,44 @@
 #define VAR_ENIGMA_BERRY_AVAILABLE                       0x402D
 #define VAR_WONDER_NEWS_STEP_COUNTER                     0x402E
 
-#define VAR_FRONTIER_MANIAC_FACILITY                     0x402F
-#define VAR_FRONTIER_GAMBLER_CHALLENGE                   0x4030
-#define VAR_FRONTIER_GAMBLER_SET_CHALLENGE               0x4031
-#define VAR_FRONTIER_GAMBLER_AMOUNT_BET                  0x4032
-#define VAR_FRONTIER_GAMBLER_STATE                       0x4033
+#define VAR_NUMBER_OF_RELEASE                            0x402F
 
-#define VAR_DEOXYS_ROCK_STEP_COUNT                       0x4034
-#define VAR_DEOXYS_ROCK_LEVEL                            0x4035
-#define VAR_PC_BOX_TO_SEND_MON                           0x4036
-#define VAR_ABNORMAL_WEATHER_LOCATION                    0x4037
-#define VAR_ABNORMAL_WEATHER_STEP_COUNTER                0x4038
-#define VAR_SHOULD_END_ABNORMAL_WEATHER                  0x4039
-#define VAR_FARAWAY_ISLAND_STEP_COUNTER                  0x403A
-#define VAR_REGICE_STEPS_1                               0x403B
-#define VAR_REGICE_STEPS_2                               0x403C
-#define VAR_REGICE_STEPS_3                               0x403D
-#define VAR_ALTERING_CAVE_WILD_SET                       0x403E
-#define VAR_DISTRIBUTE_EON_TICKET                        0x403F // This var is read and written, but is always zero. The only way to obtain the Eon Ticket in Emerald is via Record Mixing
-#define VAR_DAYS                                         0x4040
-#define VAR_FANCLUB_FAN_COUNTER                          0x4041
-#define VAR_FANCLUB_LOSE_FAN_TIMER                       0x4042
-#define VAR_DEPT_STORE_FLOOR                             0x4043
-#define VAR_TRICK_HOUSE_LEVEL                            0x4044
-#define VAR_POKELOT_PRIZE_ITEM                           0x4045
-#define VAR_NATIONAL_DEX                                 0x4046
-#define VAR_SEEDOT_SIZE_RECORD                           0x4047
-#define VAR_ASH_GATHER_COUNT                             0x4048
-#define VAR_BIRCH_STATE                                  0x4049
-#define VAR_CRUISE_STEP_COUNT                            0x404A
-#define VAR_POKELOT_RND1                                 0x404B
-#define VAR_POKELOT_RND2                                 0x404C
-#define VAR_POKELOT_PRIZE_PLACE                          0x404D
-#define VAR_REPEL_LAST_USED                              0x404E
-#define VAR_LOTAD_SIZE_RECORD                            0x404F
-#define VAR_LITTLEROOT_TOWN_STATE                        0x4050
-#define VAR_OLDALE_TOWN_STATE                            0x4051
-#define VAR_DEWFORD_TOWN_STATE                           0x4052 // Unused Var
+#define VAR_FRONTIER_MANIAC_FACILITY                     0x4030
+#define VAR_FRONTIER_GAMBLER_CHALLENGE                   0x4031
+#define VAR_FRONTIER_GAMBLER_SET_CHALLENGE               0x4032
+#define VAR_FRONTIER_GAMBLER_AMOUNT_BET                  0x4033
+#define VAR_FRONTIER_GAMBLER_STATE                       0x4034
+
+#define VAR_DEOXYS_ROCK_STEP_COUNT                       0x4035
+#define VAR_DEOXYS_ROCK_LEVEL                            0x4036
+#define VAR_PC_BOX_TO_SEND_MON                           0x4037
+#define VAR_ABNORMAL_WEATHER_LOCATION                    0x4038
+#define VAR_ABNORMAL_WEATHER_STEP_COUNTER                0x4039
+#define VAR_SHOULD_END_ABNORMAL_WEATHER                  0x403A
+#define VAR_FARAWAY_ISLAND_STEP_COUNTER                  0x403B
+#define VAR_REGICE_STEPS_1                               0x403C
+#define VAR_REGICE_STEPS_2                               0x403D
+#define VAR_REGICE_STEPS_3                               0x403E
+#define VAR_ALTERING_CAVE_WILD_SET                       0x403F
+#define VAR_DISTRIBUTE_EON_TICKET                        0x4040 // This var is read and written, but is always zero. The only way to obtain the Eon Ticket in Emerald is via Record Mixing
+#define VAR_DAYS                                         0x4041
+#define VAR_FANCLUB_FAN_COUNTER                          0x4042
+#define VAR_FANCLUB_LOSE_FAN_TIMER                       0x4043
+#define VAR_DEPT_STORE_FLOOR                             0x4044
+#define VAR_TRICK_HOUSE_LEVEL                            0x4045
+#define VAR_POKELOT_PRIZE_ITEM                           0x4046
+#define VAR_NATIONAL_DEX                                 0x4047
+#define VAR_SEEDOT_SIZE_RECORD                           0x4048
+#define VAR_ASH_GATHER_COUNT                             0x4049
+#define VAR_BIRCH_STATE                                  0x404A
+#define VAR_CRUISE_STEP_COUNT                            0x404B
+#define VAR_POKELOT_RND1                                 0x404C
+#define VAR_POKELOT_RND2                                 0x404D
+#define VAR_POKELOT_PRIZE_PLACE                          0x404E
+#define VAR_REPEL_LAST_USED                              0x404F
+#define VAR_LOTAD_SIZE_RECORD                            0x4050
+#define VAR_LITTLEROOT_TOWN_STATE                        0x4051
+#define VAR_OLDALE_TOWN_STATE                            0x4052
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
 #define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var

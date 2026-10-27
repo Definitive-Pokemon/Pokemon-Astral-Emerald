@@ -1422,6 +1422,31 @@ static const u8 sTM56Desc[] = _(
     "poison appendages\n"
     "may poison the foe.");
 
+static const u8 sTM57Desc[] = _(
+    "Draws power from\n"
+    "nature to attack.\n"
+    "may lower Sp. Def.");
+
+static const u8 sTM58Desc[] = _(
+    "Stabs the foe with\n"
+    "stones. Has a high\n"
+    "critical-hit ratio.");
+
+static const u8 sTM59Desc[] = _(
+    "Inflicts double the\n"
+    "damage if user was\n"
+    "hurt the same turn.");
+
+static const u8 sTM60Desc[] = _(
+    "Slashes at the foe\n"
+    "with crossed claws,\n"
+    "scythes, etc.");
+
+static const u8 sTM61Desc[] = _(
+    "Damages the foe by\n"
+    "emitting a bright\n"
+    "flash of light.");
+
 
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"
@@ -1724,3 +1749,58 @@ static const u8 sHealingHeart[] = _(
     "This soft heart\n"
     "fully heals your\n"
     "Pokémon party.");
+
+static const u8 sDawnStone[] = _(
+    "Makes certain\n"
+    "species of Pokémon\n"
+    "evolve.");
+
+static const u8 sDuskStone[] = _(
+    "Makes certain\n"
+    "species of Pokémon\n"
+    "evolve.");
+
+static const u8 sMagmarizer[] = _(
+    "Loved by a certain\n"
+    "Pokémon. It's full\n"
+    "of magma energy.");
+
+static const u8 sElectirizer[] = _(
+    "Loved by a certain\n"
+    "Pokémon. It's full\n"
+    "of electric energy.");
+    
+static const u8 sRazorFang[] = _(
+    "A hold item that\n"
+    "may cause flinching\n"
+    "when the foe is hit.");
+
+static const u8 sRazorClaw[] = _(
+    "A hooked claw that\n"
+    "ups the holder's\n"
+    "critical-hit ratio.");
+
+static const u8 sProtector[] = _(
+    "Loved by a certain\n"
+    "Pokémon. It's stiff\n"
+    "and heavy.");
+
+static const u8 sReaperCloth[] = _(
+    "Loved by a certain\n"
+    "Pokémon. Imbued\n"
+    "with spirit energy.");
+
+static const u8 sDubiousDisc[] = _(
+    "A clear device\n"
+    "overflowing with\n"
+    "dubious data.");
+
+static const u8 sOvalStone[] = _(
+    "Peculiar stone\n"
+    "that evolves a\n"
+    "certain Pokémon.");
+
+static const u8 sShinyStone[] = _(
+    "Makes certain\n"
+    "species of Pokémon\n"
+    "evolve.");

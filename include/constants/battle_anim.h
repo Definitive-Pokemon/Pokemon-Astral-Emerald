@@ -302,6 +302,13 @@
 #define ANIM_TAG_DRAGON_PULSE               (ANIM_SPRITES_START + 292)
 #define ANIM_TAG_DRAGON_PULSE_RING          (ANIM_SPRITES_START + 293)
 #define ANIM_TAG_PURPLE_JAB                 (ANIM_SPRITES_START + 294)
+#define ANIM_TAG_STONE_EDGE                 (ANIM_SPRITES_START + 295)
+#define ANIM_TAG_ENERGY_BALL                (ANIM_SPRITES_START + 296)
+#define ANIM_TAG_GRAB_AWAY                  (ANIM_SPRITES_START + 297)
+#define ANIM_TAG_GRAB_TOWARDS               (ANIM_SPRITES_START + 298)
+#define ANIM_TAG_BEAM                       (ANIM_SPRITES_START + 299)
+#define ANIM_TAG_BLOOD_MOON                 (ANIM_SPRITES_START + 300)
+#define ANIM_TAG_RED_EXPLOSION              (ANIM_SPRITES_START + 301)
 
 // battlers
 #define ANIM_ATTACKER         0
@@ -328,6 +335,7 @@
 //          127
 //
 #define SOUND_PAN_ATTACKER -64
+#define SOUND_PAN_MIDDLE     0
 #define SOUND_PAN_TARGET    63
 
 // move background ids
@@ -359,6 +367,7 @@
 #define BG_SOLAR_BEAM_PLAYER 25
 #define BG_SOLAR_BEAM_CONTESTS 26
 #define BG_FOCUS_BLAST 27
+#define BG_FIRE 28
 
 // table ids for general animations (gBattleAnims_General)
 #define B_ANIM_CASTFORM_CHANGE          0
@@ -439,6 +448,7 @@
 #define F_PAL_ATK_SIDE    (F_PAL_ATTACKER | F_PAL_ATK_PARTNER)
 #define F_PAL_DEF_SIDE    (F_PAL_TARGET | F_PAL_DEF_PARTNER)
 #define F_PAL_BATTLERS    (F_PAL_ATK_SIDE | F_PAL_DEF_SIDE)
+#define F_PAL_ADJACENT    (F_PAL_DEF_SIDE | F_PAL_ATK_PARTNER)
 // The below are only used by AnimTask_BlendBattleAnimPal to get battler sprite palettes by position rather than by role.
 // It's redundant with F_PAL_BATTLERS, because they're only ever used together to refer to all the battlers at once.
 #define F_PAL_BATTLERS_2  (1 << 7 | 1 << 8 | 1 << 9 | 1 << 10)

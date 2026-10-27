@@ -1473,6 +1473,50 @@ static const u8 sHealPulseDescription[] = _(
     "Recovers up to half the\n"
     "target's maximum HP.");
 
+static const u8 sDazzlingGleamDescription[] = _(
+    "Damages foes by emitting\n"
+    "a bright flash.");
+
+static const u8 sEnergyBallDescription[] = _(
+    "Draws power from nature to\n"
+    "attack. May lower Sp. Def.");
+
+static const u8 sXScissorDescription[] = _(
+    "Slashes the foe with crossed\n"
+    "scythes, claws, etc.");
+
+static const u8 sStoneEdgeDescription[] = _(
+    "Stabs the foe with stones.\n"
+    "High critical-hit ratio.");
+
+static const u8 sCrushGripDescription[] = _(
+    "The higher the foe's HP,\n"
+    "the more damage caused.");
+
+static const u8 sBloodMoonDescription[] = _(
+    "Unleashes the blood moon.\n"
+    "Can't be used twice in a row.");
+
+static const u8 sJudgementDescription[] = _(
+    "Releases countless shots of\n"
+    "light. Raises all stats.");
+
+static const u8 sFreezingGlareDescription[] = _(
+    "Shoots psychic power from\n"
+    "the eyes. May freeze.");
+
+static const u8 sThunderousKickDescription[] = _(
+    "Uses a lightning-like kick\n"
+    "to hit. Lowers foe's Defense.");
+
+static const u8 sFieryWrathDescription[] = _(
+    "An attack fueled by your\n"
+    "wrath. May cause flinching.");
+
+static const u8 sSearingShotDescription[] = _(
+    "Scarlet flames torch\n"
+    "everything around the user.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1844,4 +1888,16 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MOONBLAST - 1] = sMoonblastDescription,
     [MOVE_POISON_JAB - 1] = sPoisonJabDescription,
     [MOVE_HEAL_PULSE - 1] = sHealPulseDescription,
+    [MOVE_DAZZLING_GLEAM - 1] = sDazzlingGleamDescription,
+    [MOVE_ENERGY_BALL - 1] = sEnergyBallDescription,
+    [MOVE_X_SCISSOR - 1] = sXScissorDescription,
+    [MOVE_STONE_EDGE - 1] = sStoneEdgeDescription,
+    [MOVE_AVALANCHE - 1] = sRevengeDescription,
+    [MOVE_CRUSH_GRIP - 1] = sCrushGripDescription,
+    [MOVE_BLOOD_MOON - 1] = sBloodMoonDescription,
+    [MOVE_JUDGMENT - 1] = sJudgementDescription,
+    [MOVE_FREEZING_GLARE - 1] = sFreezingGlareDescription,
+    [MOVE_THUNDEROUS_KICK - 1] = sThunderousKickDescription,
+    [MOVE_FIERY_WRATH - 1] = sFieryWrathDescription,
+    [MOVE_SEARING_SHOT - 1] = sSearingShotDescription,
 };

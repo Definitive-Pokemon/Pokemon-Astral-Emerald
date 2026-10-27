@@ -82,7 +82,7 @@ static const union AffineAnimCmd sAffineAnim_ShadowBall[] =
     AFFINEANIMCMD_JUMP(0),
 };
 
-static const union AffineAnimCmd *const sAffineAnims_ShadowBall[] =
+const union AffineAnimCmd *const sAffineAnims_ShadowBall[] =
 {
     sAffineAnim_ShadowBall,
 };
@@ -167,6 +167,17 @@ const struct SpriteTemplate gCurseGhostSpriteTemplate =
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimGhostStatusSprite,
+};
+
+const struct SpriteTemplate gEnergyBallSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ENERGY_BALL,
+    .paletteTag = ANIM_TAG_ENERGY_BALL,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sAffineAnims_ShadowBall,
+    .callback = AnimShadowBall,
 };
 
 const struct SpriteTemplate gNightmareDevilSpriteTemplate =

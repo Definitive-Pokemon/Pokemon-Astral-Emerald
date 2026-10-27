@@ -506,7 +506,7 @@
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
 
-#define FLAG_WT_ENABLED                      0x1DA
+#define FLAG_WT_ENABLED_AFTER_FIFTH_BADGE    0x1DA //Unrelated to "FLAG_WT_ENABLED"
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
@@ -615,9 +615,9 @@
 #define FLAG_SURF_PICHU_OBTAINED  0x286 // Surf Pichu
 #define FLAG_RS_OUTFIT     0x287
 #define FLAG_OUTFIT_BOX_OBTAINED  0x288
-#define FLAG_MAUVILLE_NPC_TRADE_COMPLETED  0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
+#define FLAG_WT_ENABLED    0x289 // Checks whether WT is enabled or not
+#define FLAG_TEALA_BLOCKS_MULTIPLAYER  0x28A
+#define FLAG_MAUVILLE_NPC_TRADE_COMPLETED  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
 #define FLAG_UNUSED_0x28D  0x28D // Unused Flag
 #define FLAG_UNUSED_0x28E  0x28E // Unused Flag
@@ -1005,7 +1005,7 @@
 #define FLAG_ITEM_ROUTE_120_NUGGET                                  0x406
 #define FLAG_ITEM_ROUTE_120_FULL_HEAL                               0x407
 #define FLAG_ITEM_ROUTE_123_CALCIUM                                 0x408
-#define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
+#define FLAG_ITEM_ROUTE_134_BLUE_SHARD                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
 #define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A
 #define FLAG_ITEM_ROUTE_127_CARBOS                                  0x40B
 #define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
@@ -1105,12 +1105,12 @@
 #define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_NUGGET                           0x46C
-#define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
+#define FLAG_ITEM_ROUTE_108_BLUE_SHARD                              0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
 #define FLAG_CELEBI_EVENT                                           0x470
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_ITEM_ROUTE_124_RED_SHARD_2                             0x472 // Unused Flag
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
@@ -1201,9 +1201,9 @@
 #define FLAG_RIVAL_GOT_BULBASAUR                                           0x4C8 // Unused Flag
 #define FLAG_RIVAL_GOT_CHARMANDER                                           0x4C9 // Unused Flag
 #define FLAG_RIVAL_GOT_SQUIRTLE                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
+#define FLAG_ITEM_ROUTE_132_GREEN_SHARD                                           0x4CB // Unused Flag
+#define FLAG_ITEM_ROUTE_128_YELLOW_SHARD                                           0x4CC // Unused Flag
+#define FLAG_ITEM_ROUTE_125_YELLOW_SHARD                                           0x4CD // Unused Flag
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
 #define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag

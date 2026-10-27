@@ -15,5 +15,6 @@ void Sav2_ClearSetDefault(void);
 void CheckIfChallengesAreActive(void);
 void CheckIfRandomizerIsActive(void);
 bool8 AstralTrainerTeamsEnabled(void);
+bool8 ModernMovepoolEnabled(void);
 
 #endif // GUARD_NEW_GAME_H

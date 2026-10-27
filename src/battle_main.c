@@ -3651,7 +3651,7 @@ static void BattleStartClearSetData(void)
         gLastPrintedMoves[i] = MOVE_NONE;
         gBattleResources->flags->flags[i] = 0;
         gPalaceSelectionBattleScripts[i] = 0;
-        if (gSaveBlock2Ptr->optionsCursorMemory)
+        if ((gSaveBlock2Ptr->optionsCursorMemory) == 0)
         {
             gTargetSelectionCursor[i] = 0xFF;
             gTargetSelectionMove[i] = 0xFF;
@@ -3805,7 +3805,7 @@ void SwitchInClearSetData(void)
 
     gActionSelectionCursor[gActiveBattler] = 0;
     gMoveSelectionCursor[gActiveBattler] = 0;
-    if (gSaveBlock2Ptr->optionsCursorMemory)
+    if ((gSaveBlock2Ptr->optionsCursorMemory) == 0)
         gTargetSelectionCursor[gActiveBattler] = 0xFF;
 
     ptr = (u8 *)&gDisableStructs[gActiveBattler];
@@ -3889,7 +3889,7 @@ void FaintClearSetData(void)
 
     gActionSelectionCursor[gActiveBattler] = 0;
     gMoveSelectionCursor[gActiveBattler] = 0;
-    if (gSaveBlock2Ptr->optionsCursorMemory)
+    if ((gSaveBlock2Ptr->optionsCursorMemory) == 0)
         gTargetSelectionCursor[gActiveBattler] = 0xFF;
 
     ptr = (u8 *)&gDisableStructs[gActiveBattler];
@@ -4213,7 +4213,6 @@ static void BattleIntroSafariQuickRun(void)
             if ((JOY_HELD(R_BUTTON)) && (JOY_HELD(L_BUTTON)))
             {
                 PlaySE(SE_FLEE);
-                gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
                 gBattleOutcome = B_OUTCOME_RAN;
                 gBattleMainFunc = HandleEndTurn_RanFromBattle;
                 return;
@@ -4237,7 +4236,6 @@ static void BattleIntroSafariQuickRun(void)
 
                 sSafariRunHoldCounter = 0;
                 PlaySE(SE_FLEE);
-                gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
                 gBattleOutcome = B_OUTCOME_RAN;
                 gBattleMainFunc = HandleEndTurn_RanFromBattle;
                 return;
@@ -4592,6 +4590,10 @@ static void TryDoEventsBeforeFirstTurn(void)
             return;
     }
     if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0) != 0)
+        return;
+    if (AbilityBattleEffects(ABILITYEFFECT_DOWNLOAD, 0, 0, 0, 0) != 0)
+        return;
+    if (AbilityBattleEffects(ABILITYEFFECT_SLOW_START, 0, 0, 0, 0) != 0)
         return;
     if (AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0) != 0)
         return;
@@ -5394,6 +5396,9 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
     }
 
+    if (gDisableStructs[battler1].slowStartTimer > 0  && gBattleMons[battler1].ability == ABILITY_SLOW_START)
+        speedBattler1 /= 2;
+
     // badge boost
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))
         && FlagGet(FLAG_BADGE03_GET)
@@ -5428,6 +5433,9 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battler2].item);
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
     }
+
+    if (gDisableStructs[battler2].slowStartTimer > 0  && gBattleMons[battler2].ability == ABILITY_SLOW_START)
+        speedBattler2 /= 2;
 
     // badge boost
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))

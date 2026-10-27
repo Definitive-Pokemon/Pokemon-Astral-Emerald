@@ -559,7 +559,7 @@ static void DoBattlePyramidTrainerHillBattle(void)
 // Initiates battle where Wally catches Ralts
 void StartWallyTutorialBattle(void)
 {
-    CreateMaleMon(&gEnemyParty[0], SPECIES_RALTS, 5);
+    CreateFemaleMon(&gEnemyParty[0], SPECIES_RALTS, 5);
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
     gBattleTypeFlags = BATTLE_TYPE_WALLY_TUTORIAL;
@@ -2137,7 +2137,7 @@ u8 NuzlockeIsCaptureBlockedBySpeciesClause(u16 species) // @Kurausukun
     if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))
         return 2; //player already has this exact pokemon
 
-    for (i = 0; i < EVOS_PER_LINE; i++)
+    for (i = 0; i < EVOS_PER_LINE && gEvolutionLines[species][i] != SPECIES_NONE; i++)
     {
         if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(gEvolutionLines[species][i]), FLAG_GET_CAUGHT))
             return TRUE;

@@ -10231,7 +10231,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = 0,
-        LINK_TRAINER_MONS(Red, NO_ITEM_DEFAULT_MOVES, NO_ITEM_DEFAULT_MOVES),
+        LINK_TRAINER_MONS(Red, NO_ITEM_CUSTOM_MOVES, NO_ITEM_DEFAULT_MOVES),
     },
 
     [TRAINER_STEVEN_2] =
