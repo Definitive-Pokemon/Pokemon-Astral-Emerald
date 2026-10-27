@@ -302,9 +302,13 @@
 #define ANIM_TAG_DRAGON_PULSE               (ANIM_SPRITES_START + 292)
 #define ANIM_TAG_DRAGON_PULSE_RING          (ANIM_SPRITES_START + 293)
 #define ANIM_TAG_PURPLE_JAB                 (ANIM_SPRITES_START + 294)
-#define ANIM_TAG_BEAM                       (ANIM_SPRITES_START + 295)
-#define ANIM_TAG_BLOOD_MOON                 (ANIM_SPRITES_START + 296)
-#define ANIM_TAG_RED_EXPLOSION              (ANIM_SPRITES_START + 297)
+#define ANIM_TAG_STONE_EDGE                 (ANIM_SPRITES_START + 295)
+#define ANIM_TAG_ENERGY_BALL                (ANIM_SPRITES_START + 296)
+#define ANIM_TAG_GRAB_AWAY                  (ANIM_SPRITES_START + 297)
+#define ANIM_TAG_GRAB_TOWARDS               (ANIM_SPRITES_START + 298)
+#define ANIM_TAG_BEAM                       (ANIM_SPRITES_START + 299)
+#define ANIM_TAG_BLOOD_MOON                 (ANIM_SPRITES_START + 300)
+#define ANIM_TAG_RED_EXPLOSION              (ANIM_SPRITES_START + 301)
 
 // battlers
 #define ANIM_ATTACKER         0

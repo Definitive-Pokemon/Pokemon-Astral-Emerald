@@ -5678,7 +5678,7 @@ extern const u32 gBattleAnimSpritePal_BloodMoon[];
 extern const u32 gBattleAnimSpriteGfx_RedExplosion[];
 extern const u32 gBattleAnimSpritePal_RedExplosion[];
 extern const u32 gBattleAnimBgImage_Fire1[];
-extern const u16 gBattleAnimBgPalette_Fire1[];
+extern const u32 gBattleAnimBgPalette_Fire1[];
 extern const u32 gBattleAnimBgTilemap_Fire1[];
 
 extern const u8 gMonMarkingsMenu_Gfx[];
