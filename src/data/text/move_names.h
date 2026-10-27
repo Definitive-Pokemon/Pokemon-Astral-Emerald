@@ -375,4 +375,10 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_STONE_EDGE] = _("Stone Edge"), 
     [MOVE_AVALANCHE] = _("Avalanche"),
     [MOVE_CRUSH_GRIP] = _("Crush Grip"),
+    [MOVE_BLOOD_MOON] = _("Blood Moon"),
+    [MOVE_JUDGMENT] = _("Judgment"),
+    [MOVE_FREEZING_GLARE] = _("Freez. Glare"),
+    [MOVE_THUNDEROUS_KICK] = _("Thund. Kick"),
+    [MOVE_FIERY_WRATH] = _("Fiery Wrath"),
+    [MOVE_SEARING_SHOT] = _("Searing Shot"),
 };

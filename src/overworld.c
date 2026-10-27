@@ -1722,12 +1722,36 @@ void CB2_OverworldBasic(void)
     }
 }
 
+// 1 means x2, 2 means x3
+// I chose 1, as 2 and up is pretty glitchy
+#define OVERWORLD_SPEED 1
+
+static void OverworldSpeedUp(void)
+{
+    u8 loops;
+
+    // Do not speed up if field controls are locked (scripts, trainer approaches, etc.).
+    // The game can hang without it, specially when a trainer sees the player but the
+    // game speed is too fast for the game logic to handle it (I think), and freezes the player in place forever.
+    if (ArePlayerFieldControlsLocked())
+        return;
+    
+    for (loops = 0; loops < OVERWORLD_SPEED; loops++)
+    {
+        AnimateSprites();
+        CameraUpdate();
+        UpdateCameraPanning();
+    }
+}
+
 void CB2_Overworld(void)
 {
     bool32 fading = (gPaletteFade.active != 0);
     if (fading)
         SetVBlankCallback(NULL);
     OverworldBasic();
+    if (gSaveBlock2Ptr->optionsOWSpeed == 1)
+        OverworldSpeedUp();
     if (fading) {
         SetFieldVBlankCallback();
         return;

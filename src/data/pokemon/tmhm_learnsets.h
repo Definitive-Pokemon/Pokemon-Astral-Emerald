@@ -21,7 +21,6 @@ const union {
     [SPECIES_NONE] = {},
 
     [SPECIES_BULBASAUR] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -44,7 +43,6 @@ const union {
     } },
 
     [SPECIES_IVYSAUR] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -67,7 +65,6 @@ const union {
     } },
 
     [SPECIES_VENUSAUR] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
@@ -93,7 +90,6 @@ const union {
     } },
 
     [SPECIES_CHARMANDER] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .TOXIC = TRUE,
@@ -120,7 +116,6 @@ const union {
     } },
 
     [SPECIES_CHARMELEON] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .TOXIC = TRUE,
@@ -147,9 +142,6 @@ const union {
     } },
 
     [SPECIES_CHARIZARD] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .ROAR = TRUE,
@@ -235,9 +227,6 @@ const union {
     } },
 
     [SPECIES_BLASTOISE] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .FLASH_CANNON = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -274,7 +263,6 @@ const union {
     } },
 
     [SPECIES_BUTTERFREE] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -297,7 +285,6 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .FLASH = TRUE,
-        .CALM_MIND = TRUE,
     } },
 
     [SPECIES_WEEDLE] = { .learnset = {
@@ -307,8 +294,6 @@ const union {
     } },
 
     [SPECIES_BEEDRILL] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -486,8 +471,6 @@ const union {
     } },
 
     [SPECIES_EKANS] = { .learnset = {
-        .POISON_JAB = TRUE,
-		.DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -512,11 +495,10 @@ const union {
     } },
 
     [SPECIES_ARBOK] = { .learnset = {
-        .POISON_JAB = TRUE,
-		.DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
+        .TAUNT = TRUE,
         .HYPER_BEAM = TRUE,
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
@@ -564,7 +546,6 @@ const union {
     } },
 
     [SPECIES_RAICHU] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -592,10 +573,6 @@ const union {
     } },
 
     [SPECIES_SANDSHREW] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -622,11 +599,6 @@ const union {
     } },
 
     [SPECIES_SANDSLASH] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -654,8 +626,6 @@ const union {
     } },
 
     [SPECIES_NIDORAN_F] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -685,8 +655,6 @@ const union {
     } },
 
     [SPECIES_NIDORINA] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -716,12 +684,6 @@ const union {
     } },
 
     [SPECIES_NIDOQUEEN] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -764,8 +726,6 @@ const union {
     } },
 
     [SPECIES_NIDORAN_M] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -794,8 +754,6 @@ const union {
     } },
 
     [SPECIES_NIDORINO] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -824,12 +782,6 @@ const union {
     } },
 
     [SPECIES_NIDOKING] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -871,7 +823,6 @@ const union {
     } },
 
     [SPECIES_CLEFAIRY] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -909,8 +860,6 @@ const union {
     } },
 
     [SPECIES_CLEFABLE] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -949,8 +898,6 @@ const union {
     } },
 
     [SPECIES_VULPIX] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DARK_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -969,13 +916,9 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
-        .SHADOW_BALL = TRUE,
-        .FLASH = TRUE,
     } },
 
     [SPECIES_NINETALES] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DARK_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -987,6 +930,7 @@ const union {
         .IRON_TAIL = TRUE,
         .RETURN = TRUE,
         .DIG = TRUE,
+        .SHADOW_BALL = TRUE,
         .DOUBLE_TEAM = TRUE,
         .FLAMETHROWER = TRUE,
         .FIRE_BLAST = TRUE,
@@ -995,14 +939,9 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
-        .SOLAR_BEAM = TRUE,
-        .SHADOW_BALL = TRUE,
-        .FLASH = TRUE,
     } },
 
     [SPECIES_JIGGLYPUFF] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -1038,9 +977,6 @@ const union {
     } },
 
     [SPECIES_WIGGLYTUFF] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -1098,7 +1034,6 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SNATCH = TRUE,
-        .FLY = TRUE,
     } },
 
     [SPECIES_GOLBAT] = { .learnset = {
@@ -1124,12 +1059,9 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SNATCH = TRUE,
-        .FLY = TRUE,
     } },
 
     [SPECIES_ODDISH] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1150,8 +1082,6 @@ const union {
     } },
 
     [SPECIES_GLOOM] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1169,12 +1099,9 @@ const union {
         .ATTRACT = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
-        .SAFEGUARD = TRUE,
     } },
 
     [SPECIES_VILEPLUME] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1196,8 +1123,6 @@ const union {
     } },
 
     [SPECIES_PARAS] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1222,8 +1147,6 @@ const union {
     } },
 
     [SPECIES_PARASECT] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1235,6 +1158,7 @@ const union {
         .SOLAR_BEAM = TRUE,
         .RETURN = TRUE,
         .DIG = TRUE,
+        .SHADOW_BALL = TRUE,
         .DOUBLE_TEAM = TRUE,
         .SLUDGE_BOMB = TRUE,
         .AERIAL_ACE = TRUE,
@@ -1249,7 +1173,6 @@ const union {
     } },
 
     [SPECIES_VENONAT] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -1271,7 +1194,6 @@ const union {
     } },
 
     [SPECIES_VENOMOTH] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -1295,8 +1217,6 @@ const union {
     } },
 
     [SPECIES_DIGLETT] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .SHADOW_CLAW = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -1319,8 +1239,6 @@ const union {
     } },
 
     [SPECIES_DUGTRIO] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .SHADOW_CLAW = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -1344,8 +1262,6 @@ const union {
     } },
 
     [SPECIES_MEOWTH] = { .learnset = {
-        .DARK_PULSE = TRUE,
-        .SHADOW_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1375,8 +1291,6 @@ const union {
     } },
 
     [SPECIES_PERSIAN] = { .learnset = {
-        .DARK_PULSE = TRUE,
-        .SHADOW_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -1408,7 +1322,6 @@ const union {
     } },
 
     [SPECIES_PSYDUCK] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -1430,7 +1343,6 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .PSYCHIC = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
@@ -1440,8 +1352,6 @@ const union {
     } },
 
     [SPECIES_GOLDUCK] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -1457,6 +1367,7 @@ const union {
         .IRON_TAIL = TRUE,
         .RETURN = TRUE,
         .DIG = TRUE,
+        .PSYCHIC = TRUE,
         .BRICK_BREAK = TRUE,
         .DOUBLE_TEAM = TRUE,
         .AERIAL_ACE = TRUE,
@@ -1464,7 +1375,6 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .PSYCHIC = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
@@ -1474,9 +1384,6 @@ const union {
     } },
 
     [SPECIES_MANKEY] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -1507,9 +1414,6 @@ const union {
     } },
 
     [SPECIES_PRIMEAPE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -1547,7 +1451,6 @@ const union {
         .SUNNY_DAY = TRUE,
         .PROTECT = TRUE,
         .FRUSTRATION = TRUE,
-        .REFLECT = TRUE,
         .IRON_TAIL = TRUE,
         .RETURN = TRUE,
         .DIG = TRUE,
@@ -1566,7 +1469,6 @@ const union {
     } },
 
     [SPECIES_ARCANINE] = { .learnset = {
-        .DRAGON_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1592,7 +1494,6 @@ const union {
     } },
 
     [SPECIES_POLIWAG] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -1617,7 +1518,6 @@ const union {
     } },
 
     [SPECIES_POLIWHIRL] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -1647,8 +1547,6 @@ const union {
     } },
 
     [SPECIES_POLIWRATH] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -1681,8 +1579,6 @@ const union {
     } },
 
     [SPECIES_ABRA] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -1713,8 +1609,6 @@ const union {
     } },
 
     [SPECIES_KADABRA] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -1745,9 +1639,6 @@ const union {
     } },
 
     [SPECIES_ALAKAZAM] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -1779,8 +1670,6 @@ const union {
     } },
 
     [SPECIES_MACHOP] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -1807,8 +1696,6 @@ const union {
     } },
 
     [SPECIES_MACHOKE] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -1835,9 +1722,6 @@ const union {
     } },
 
     [SPECIES_MACHAMP] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -1865,8 +1749,6 @@ const union {
     } },
 
     [SPECIES_BELLSPROUT] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1888,8 +1770,6 @@ const union {
     } },
 
     [SPECIES_WEEPINBELL] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1911,8 +1791,6 @@ const union {
     } },
 
     [SPECIES_VICTREEBEL] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -1935,8 +1813,6 @@ const union {
     } },
 
     [SPECIES_TENTACOOL] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -1956,15 +1832,12 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .CUT = TRUE,
-        .FLASH = TRUE,
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
     } },
 
     [SPECIES_TENTACRUEL] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -1985,14 +1858,12 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .CUT = TRUE,
-        .FLASH = TRUE,
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
     } },
 
     [SPECIES_GEODUDE] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -2017,7 +1888,6 @@ const union {
     } },
 
     [SPECIES_GRAVELER] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -2042,8 +1912,6 @@ const union {
     } },
 
     [SPECIES_GOLEM] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -2070,7 +1938,6 @@ const union {
     } },
 
     [SPECIES_PONYTA] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2088,12 +1955,9 @@ const union {
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
-        .SAFEGUARD = TRUE,
     } },
 
     [SPECIES_RAPIDASH] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2112,12 +1976,9 @@ const union {
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
-        .SAFEGUARD = TRUE,
-        .REFLECT = TRUE,
     } },
 
     [SPECIES_SLOWPOKE] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -2151,8 +2012,6 @@ const union {
     } },
 
     [SPECIES_SLOWBRO] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -2190,7 +2049,6 @@ const union {
     } },
 
     [SPECIES_MAGNEMITE] = { .learnset = {
-        .FLASH_CANNON = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2205,13 +2063,11 @@ const union {
         .SHOCK_WAVE = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .REST = TRUE,
         .FLASH = TRUE,
     } },
 
     [SPECIES_MAGNETON] = { .learnset = {
-        .FLASH_CANNON = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2227,13 +2083,11 @@ const union {
         .SHOCK_WAVE = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .REST = TRUE,
         .FLASH = TRUE,
     } },
 
     [SPECIES_FARFETCHD] = { .learnset = {
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2293,7 +2147,6 @@ const union {
     } },
 
     [SPECIES_SEEL] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -2317,7 +2170,6 @@ const union {
     } },
 
     [SPECIES_DEWGONG] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -2342,7 +2194,6 @@ const union {
     } },
 
     [SPECIES_GRIMER] = { .learnset = {
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2370,9 +2221,6 @@ const union {
     } },
 
     [SPECIES_MUK] = { .learnset = {
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -2405,7 +2253,6 @@ const union {
     } },
 
     [SPECIES_SHELLDER] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -2426,8 +2273,6 @@ const union {
     } },
 
     [SPECIES_CLOYSTER] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -2450,9 +2295,6 @@ const union {
     } },
 
     [SPECIES_GASTLY] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2478,11 +2320,6 @@ const union {
     } },
 
     [SPECIES_HAUNTER] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2508,12 +2345,6 @@ const union {
     } },
 
     [SPECIES_GENGAR] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -2545,9 +2376,6 @@ const union {
     } },
 
     [SPECIES_ONIX] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -2572,7 +2400,6 @@ const union {
     } },
 
     [SPECIES_DROWZEE] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -2602,8 +2429,6 @@ const union {
     } },
 
     [SPECIES_HYPNO] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -2634,7 +2459,6 @@ const union {
     } },
 
     [SPECIES_KRABBY] = { .learnset = {
-        .X_SCISSOR = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -2658,10 +2482,10 @@ const union {
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
         .DIVE = TRUE,
+        .WATERFALL = TRUE,
     } },
 
     [SPECIES_KINGLER] = { .learnset = {
-        .X_SCISSOR = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -2686,6 +2510,7 @@ const union {
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
         .DIVE = TRUE,
+        .WATERFALL = TRUE,
     } },
 
     [SPECIES_VOLTORB] = { .learnset = {
@@ -2732,7 +2557,6 @@ const union {
     } },
 
     [SPECIES_EXEGGCUTE] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -2758,7 +2582,6 @@ const union {
     } },
 
     [SPECIES_EXEGGUTOR] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -2814,8 +2637,6 @@ const union {
     } },
 
     [SPECIES_MAROWAK] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -2846,9 +2667,6 @@ const union {
     } },
 
     [SPECIES_HITMONLEE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -2872,8 +2690,6 @@ const union {
     } },
 
     [SPECIES_HITMONCHAN] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -2935,7 +2751,6 @@ const union {
     } },
 
     [SPECIES_KOFFING] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2962,7 +2777,6 @@ const union {
     } },
 
     [SPECIES_WEEZING] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -2990,9 +2804,6 @@ const union {
     } },
 
     [SPECIES_RHYHORN] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DRAGON_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -3024,12 +2835,6 @@ const union {
     } },
 
     [SPECIES_RHYDON] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -3066,7 +2871,6 @@ const union {
     } },
 
     [SPECIES_CHANSEY] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -3109,7 +2913,6 @@ const union {
     } },
 
     [SPECIES_TANGELA] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -3133,9 +2936,6 @@ const union {
     } },
 
     [SPECIES_KANGASKHAN] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -3177,8 +2977,6 @@ const union {
     } },
 
     [SPECIES_HORSEA] = { .learnset = {
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3200,8 +2998,6 @@ const union {
     } },
 
     [SPECIES_SEADRA] = { .learnset = {
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3224,7 +3020,6 @@ const union {
     } },
 
     [SPECIES_GOLDEEN] = { .learnset = {
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3246,7 +3041,6 @@ const union {
     } },
 
     [SPECIES_SEAKING] = { .learnset = {
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3269,8 +3063,6 @@ const union {
     } },
 
     [SPECIES_STARYU] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .FLASH_CANNON = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3297,9 +3089,6 @@ const union {
     } },
 
     [SPECIES_STARMIE] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .AVALANCHE = TRUE,
-        .FLASH_CANNON = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3328,9 +3117,6 @@ const union {
     } },
 
     [SPECIES_MR_MIME] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -3365,7 +3151,6 @@ const union {
     } },
 
     [SPECIES_SCYTHER] = { .learnset = {
-        .X_SCISSOR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -3387,9 +3172,6 @@ const union {
     } },
 
     [SPECIES_JYNX] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -3421,7 +3203,6 @@ const union {
     } },
 
     [SPECIES_ELECTABUZZ] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -3449,7 +3230,6 @@ const union {
     } },
 
     [SPECIES_MAGMAR] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -3469,16 +3249,11 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
-        .TORMENT = TRUE,
     } },
 
     [SPECIES_PINSIR] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -3505,7 +3280,6 @@ const union {
     } },
 
     [SPECIES_TAUROS] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -3541,10 +3315,6 @@ const union {
     } },
 
     [SPECIES_GYARADOS] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -3570,7 +3340,6 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .FLY = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
@@ -3579,8 +3348,6 @@ const union {
     } },
 
     [SPECIES_LAPRAS] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -3759,7 +3526,6 @@ const union {
     } },
 
     [SPECIES_OMASTAR] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3786,7 +3552,6 @@ const union {
     } },
 
     [SPECIES_KABUTO] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3814,8 +3579,6 @@ const union {
     } },
 
     [SPECIES_KABUTOPS] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -3847,8 +3610,6 @@ const union {
     } },
 
     [SPECIES_AERODACTYL] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -3881,7 +3642,6 @@ const union {
     } },
 
     [SPECIES_SNORLAX] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -3916,7 +3676,6 @@ const union {
     } },
 
     [SPECIES_ARTICUNO] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -3973,7 +3732,6 @@ const union {
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
-        .SOLAR_BEAM = TRUE,
         .HYPER_BEAM = TRUE,
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
@@ -3995,7 +3753,6 @@ const union {
     } },
 
     [SPECIES_DRATINI] = { .learnset = {
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -4025,7 +3782,6 @@ const union {
     } },
 
     [SPECIES_DRAGONAIR] = { .learnset = {
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -4055,9 +3811,6 @@ const union {
     } },
 
     [SPECIES_DRAGONITE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .DRAGON_PULSE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
@@ -4101,12 +3854,6 @@ const union {
     } },
 
     [SPECIES_MEWTWO] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .ENERGY_BALL = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -4153,17 +3900,6 @@ const union {
     } },
 
     [SPECIES_MEW] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
@@ -4225,8 +3961,6 @@ const union {
     } },
 
     [SPECIES_CHIKORITA] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4250,8 +3984,6 @@ const union {
     } },
 
     [SPECIES_BAYLEEF] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4277,8 +4009,6 @@ const union {
     } },
 
     [SPECIES_MEGANIUM] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4351,16 +4081,16 @@ const union {
     } },
 
     [SPECIES_TYPHLOSION] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .HYPER_BEAM = TRUE,
         .PROTECT = TRUE,
         .FRUSTRATION = TRUE,
+        .THUNDERBOLT = TRUE,
         .EARTHQUAKE = TRUE,
         .RETURN = TRUE,
         .DIG = TRUE,
@@ -4380,7 +4110,6 @@ const union {
     } },
 
     [SPECIES_TOTODILE] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -4405,11 +4134,9 @@ const union {
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
-        .THIEF = TRUE,
     } },
 
     [SPECIES_CROCONAW] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -4437,16 +4164,9 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
-        .THIEF = TRUE,
-        .TORMENT = TRUE,
     } },
 
     [SPECIES_FERALIGATR] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
@@ -4477,13 +4197,9 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
-        .THIEF = TRUE,
-        .TORMENT = TRUE,
-        .TAUNT = TRUE,
     } },
 
     [SPECIES_SENTRET] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -4513,8 +4229,6 @@ const union {
     } },
 
     [SPECIES_FURRET] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -4567,7 +4281,6 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .FLY = TRUE,
         .FLASH = TRUE,
     } },
@@ -4592,7 +4305,6 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .FLY = TRUE,
         .FLASH = TRUE,
     } },
@@ -4623,7 +4335,6 @@ const union {
     } },
 
     [SPECIES_LEDIAN] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4647,12 +4358,9 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .FLASH = TRUE,
-        .BULK_UP = TRUE,
     } },
 
     [SPECIES_SPINARAK] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -4674,9 +4382,6 @@ const union {
     } },
 
     [SPECIES_ARIADOS] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .DARK_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -4696,12 +4401,9 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .FLASH = TRUE,
-        .TORMENT = TRUE,
     } },
 
     [SPECIES_CROBAT] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -4728,7 +4430,6 @@ const union {
     } },
 
     [SPECIES_CHINCHOU] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -4754,7 +4455,6 @@ const union {
     } },
 
     [SPECIES_LANTURN] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -4801,7 +4501,6 @@ const union {
     } },
 
     [SPECIES_CLEFFA] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4830,7 +4529,6 @@ const union {
     } },
 
     [SPECIES_IGGLYBUFF] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4858,7 +4556,6 @@ const union {
     } },
 
     [SPECIES_TOGEPI] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4886,7 +4583,6 @@ const union {
     } },
 
     [SPECIES_TOGETIC] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -4920,7 +4616,6 @@ const union {
     } },
 
     [SPECIES_NATU] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4944,12 +4639,10 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SKILL_SWAP = TRUE,
-        .FLY = TRUE,
         .FLASH = TRUE,
     } },
 
     [SPECIES_XATU] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -4979,7 +4672,6 @@ const union {
     } },
 
     [SPECIES_MAREEP] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .LIGHT_SCREEN = TRUE,
@@ -5000,7 +4692,6 @@ const union {
     } },
 
     [SPECIES_FLAAFFY] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5022,13 +4713,9 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
-        .DRAGON_CLAW = TRUE,
     } },
 
     [SPECIES_AMPHAROS] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .DRAGON_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5051,12 +4738,9 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
-        .DRAGON_CLAW = TRUE,
     } },
 
     [SPECIES_BELLOSSOM] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5076,7 +4760,6 @@ const union {
         .ATTRACT = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
-        .REFLECT = TRUE,
     } },
 
     [SPECIES_MARILL] = { .learnset = {
@@ -5107,7 +4790,6 @@ const union {
     } },
 
     [SPECIES_AZUMARILL] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -5136,7 +4818,6 @@ const union {
     } },
 
     [SPECIES_SUDOWOODO] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -5162,9 +4843,6 @@ const union {
     } },
 
     [SPECIES_POLITOED] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .SOLAR_BEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -5187,19 +4865,14 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
-        .BULLET_SEED = TRUE,
-        .GIGA_DRAIN = TRUE,
     } },
 
     [SPECIES_HOPPIP] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5219,8 +4892,6 @@ const union {
     } },
 
     [SPECIES_SKIPLOOM] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5240,8 +4911,6 @@ const union {
     } },
 
     [SPECIES_JUMPLUFF] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5262,7 +4931,6 @@ const union {
     } },
 
     [SPECIES_AIPOM] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -5295,7 +4963,6 @@ const union {
     } },
 
     [SPECIES_SUNKERN] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5318,8 +4985,6 @@ const union {
     } },
 
     [SPECIES_SUNFLORA] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5333,15 +4998,16 @@ const union {
         .SOLAR_BEAM = TRUE,
         .RETURN = TRUE,
         .DOUBLE_TEAM = TRUE,
+        .FLAMETHROWER = TRUE,
         .SLUDGE_BOMB = TRUE,
+        .FIRE_BLAST = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
+        .OVERHEAT = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
-        .FLAMETHROWER = TRUE,
-        .FIRE_BLAST = TRUE,
     } },
 
     [SPECIES_YANMA] = { .learnset = {
@@ -5367,8 +5033,6 @@ const union {
     } },
 
     [SPECIES_WOOPER] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -5397,9 +5061,6 @@ const union {
     } },
 
     [SPECIES_QUAGSIRE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -5433,7 +5094,6 @@ const union {
     } },
 
     [SPECIES_ESPEON] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5460,7 +5120,6 @@ const union {
     } },
 
     [SPECIES_UMBREON] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -5486,7 +5145,6 @@ const union {
     } },
 
     [SPECIES_MURKROW] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5511,8 +5169,6 @@ const union {
     } },
 
     [SPECIES_SLOWKING] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -5550,9 +5206,6 @@ const union {
     } },
 
     [SPECIES_MISDREAVUS] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5578,7 +5231,6 @@ const union {
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
         .FLASH = TRUE,
-        .SAFEGUARD = TRUE,
     } },
 
     [SPECIES_UNOWN] = { .learnset = {
@@ -5588,9 +5240,6 @@ const union {
     } },
 
     [SPECIES_GIRAFARIG] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5618,7 +5267,6 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
-        .TORMENT = TRUE,
     } },
 
     [SPECIES_PINECO] = { .learnset = {
@@ -5645,8 +5293,6 @@ const union {
     } },
 
     [SPECIES_FORRETRESS] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FLASH_CANNON = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -5671,8 +5317,6 @@ const union {
     } },
 
     [SPECIES_DUNSPARCE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -5706,10 +5350,6 @@ const union {
     } },
 
     [SPECIES_GLIGAR] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .DARK_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -5737,10 +5377,6 @@ const union {
     } },
 
     [SPECIES_STEELIX] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -5767,7 +5403,6 @@ const union {
     } },
 
     [SPECIES_SNUBBULL] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -5804,9 +5439,6 @@ const union {
     } },
 
     [SPECIES_GRANBULL] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -5846,7 +5478,6 @@ const union {
     } },
 
     [SPECIES_QWILFISH] = { .learnset = {
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -5871,8 +5502,6 @@ const union {
     } },
 
     [SPECIES_SCIZOR] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .FLASH_CANNON = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -5896,7 +5525,6 @@ const union {
     } },
 
     [SPECIES_SHUCKLE] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -5920,9 +5548,6 @@ const union {
     } },
 
     [SPECIES_HERACROSS] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -5949,11 +5574,6 @@ const union {
     } },
 
     [SPECIES_SNEASEL] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -5987,8 +5607,6 @@ const union {
     } },
 
     [SPECIES_TEDDIURSA] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -6017,10 +5635,6 @@ const union {
     } },
 
     [SPECIES_URSARING] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -6051,20 +5665,17 @@ const union {
     } },
 
     [SPECIES_SLUGMA] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .LIGHT_SCREEN = TRUE,
         .PROTECT = TRUE,
         .FRUSTRATION = TRUE,
-        .EARTHQUAKE = TRUE,
         .RETURN = TRUE,
         .DOUBLE_TEAM = TRUE,
         .REFLECT = TRUE,
         .FLAMETHROWER = TRUE,
         .FIRE_BLAST = TRUE,
-        .ROCK_TOMB = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
@@ -6074,7 +5685,6 @@ const union {
     } },
 
     [SPECIES_MAGCARGO] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -6100,8 +5710,6 @@ const union {
     } },
 
     [SPECIES_SWINUB] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -6128,8 +5736,6 @@ const union {
     } },
 
     [SPECIES_PILOSWINE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -6157,7 +5763,6 @@ const union {
     } },
 
     [SPECIES_CORSOLA] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -6187,8 +5792,6 @@ const union {
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
-        .WATERFALL = TRUE,
-        .DIVE = TRUE,
     } },
 
     [SPECIES_REMORAID] = { .learnset = {
@@ -6218,8 +5821,6 @@ const union {
     } },
 
     [SPECIES_OCTILLERY] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .FLASH_CANNON = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
@@ -6248,7 +5849,6 @@ const union {
     } },
 
     [SPECIES_DELIBIRD] = { .learnset = {
-        .AVALANCHE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -6260,6 +5860,7 @@ const union {
         .RAIN_DANCE = TRUE,
         .FRUSTRATION = TRUE,
         .RETURN = TRUE,
+        .BRICK_BREAK = TRUE,
         .DOUBLE_TEAM = TRUE,
         .AERIAL_ACE = TRUE,
         .FACADE = TRUE,
@@ -6294,9 +5895,6 @@ const union {
     } },
 
     [SPECIES_SKARMORY] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .DARK_PULSE = TRUE,
-        .FLASH_CANNON = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -6321,7 +5919,6 @@ const union {
     } },
 
     [SPECIES_HOUNDOUR] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -6349,7 +5946,6 @@ const union {
     } },
 
     [SPECIES_HOUNDOOM] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -6379,8 +5975,6 @@ const union {
     } },
 
     [SPECIES_KINGDRA] = { .learnset = {
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -6403,7 +5997,6 @@ const union {
     } },
 
     [SPECIES_PHANPY] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -6425,8 +6018,6 @@ const union {
     } },
 
     [SPECIES_DONPHAN] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .POISON_JAB = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -6476,7 +6067,6 @@ const union {
     } },
 
     [SPECIES_STANTLER] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .CALM_MIND = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -6531,7 +6121,6 @@ const union {
     } },
 
     [SPECIES_HITMONTOP] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -6555,7 +6144,6 @@ const union {
     } },
 
     [SPECIES_SMOOCHUM] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -6628,7 +6216,6 @@ const union {
     } },
 
     [SPECIES_MILTANK] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -6662,9 +6249,6 @@ const union {
     } },
 
     [SPECIES_BLISSEY] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -6710,7 +6294,6 @@ const union {
         .CALM_MIND = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .HYPER_BEAM = TRUE,
@@ -6719,7 +6302,6 @@ const union {
         .FRUSTRATION = TRUE,
         .IRON_TAIL = TRUE,
         .THUNDERBOLT = TRUE,
-        .SHADOW_BALL = TRUE,
         .THUNDER = TRUE,
         .RETURN = TRUE,
         .DIG = TRUE,
@@ -6737,10 +6319,8 @@ const union {
     } },
 
     [SPECIES_ENTEI] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .CALM_MIND = TRUE,
         .ROAR = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -6756,8 +6336,6 @@ const union {
         .REFLECT = TRUE,
         .FLAMETHROWER = TRUE,
         .SANDSTORM = TRUE,
-        .OVERHEAT = TRUE,
-        .SHADOW_BALL = TRUE,
         .FIRE_BLAST = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
@@ -6769,11 +6347,9 @@ const union {
     } },
 
     [SPECIES_SUICUNE] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .ROAR = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -6801,8 +6377,6 @@ const union {
     } },
 
     [SPECIES_LARVITAR] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -6817,6 +6391,7 @@ const union {
         .BRICK_BREAK = TRUE,
         .DOUBLE_TEAM = TRUE,
         .SANDSTORM = TRUE,
+        .ROCK_TOMB = TRUE,
         .TORMENT = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
@@ -6826,8 +6401,6 @@ const union {
     } },
 
     [SPECIES_PUPITAR] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -6842,6 +6415,7 @@ const union {
         .BRICK_BREAK = TRUE,
         .DOUBLE_TEAM = TRUE,
         .SANDSTORM = TRUE,
+        .ROCK_TOMB = TRUE,
         .TORMENT = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
@@ -6851,12 +6425,6 @@ const union {
     } },
 
     [SPECIES_TYRANITAR] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
@@ -6897,8 +6465,6 @@ const union {
     } },
 
     [SPECIES_LUGIA] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .ROAR = TRUE,
@@ -6979,8 +6545,6 @@ const union {
     } },
 
     [SPECIES_CELEBI] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -7086,7 +6650,6 @@ const union {
     } },
 
     [SPECIES_TREECKO] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
@@ -7115,10 +6678,8 @@ const union {
     } },
 
     [SPECIES_GROVYLE] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .ENERGY_BALL = TRUE,
-        .DRAGON_PULSE = TRUE,
         .FOCUS_PUNCH = TRUE,
+        .DRAGON_CLAW = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -7143,14 +6704,9 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
-        .DRAGON_CLAW = TRUE,
     } },
 
     [SPECIES_SCEPTILE] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .ENERGY_BALL = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .DRAGON_PULSE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .ROAR = TRUE,
@@ -7183,7 +6739,6 @@ const union {
     } },
 
     [SPECIES_TORCHIC] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -7203,14 +6758,10 @@ const union {
         .OVERHEAT = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_COMBUSKEN] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -7233,15 +6784,10 @@ const union {
         .OVERHEAT = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_BLAZIKEN] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -7267,12 +6813,10 @@ const union {
         .OVERHEAT = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_MUDKIP] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -7299,7 +6843,6 @@ const union {
     } },
 
     [SPECIES_MARSHTOMP] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -7327,9 +6870,6 @@ const union {
     } },
 
     [SPECIES_SWAMPERT] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -7361,7 +6901,6 @@ const union {
     } },
 
     [SPECIES_POOCHYENA] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -7386,7 +6925,6 @@ const union {
     } },
 
     [SPECIES_MIGHTYENA] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -7437,12 +6975,10 @@ const union {
         .THIEF = TRUE,
         .CUT = TRUE,
         .SURF = TRUE,
-        .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_LINOONE] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -7471,7 +7007,6 @@ const union {
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
-        .WATERFALL = TRUE,
     } },
 
     [SPECIES_WURMPLE] = { .learnset = {
@@ -7481,7 +7016,6 @@ const union {
     } },
 
     [SPECIES_BEAUTIFLY] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -7501,7 +7035,6 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .FLY = TRUE,
         .FLASH = TRUE,
     } },
 
@@ -7509,7 +7042,6 @@ const union {
     } },
 
     [SPECIES_DUSTOX] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -7534,7 +7066,6 @@ const union {
     } },
 
     [SPECIES_LOTAD] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -7556,15 +7087,10 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .SURF = TRUE,
-        .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
-        .WATERFALL = TRUE,
-        .DIVE = TRUE,
     } },
 
     [SPECIES_LOMBRE] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -7595,8 +7121,6 @@ const union {
     } },
 
     [SPECIES_LUDICOLO] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -7629,7 +7153,6 @@ const union {
     } },
 
     [SPECIES_SEEDOT] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -7646,15 +7169,11 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .CUT = TRUE,
-        .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_NUZLEAF] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -7683,10 +7202,6 @@ const union {
     } },
 
     [SPECIES_SHIFTRY] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .ENERGY_BALL = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -7716,7 +7231,6 @@ const union {
     } },
 
     [SPECIES_NINCADA] = { .learnset = {
-        .X_SCISSOR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -7738,8 +7252,6 @@ const union {
     } },
 
     [SPECIES_NINJASK] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -7761,12 +7273,9 @@ const union {
         .THIEF = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
-        .TORMENT = TRUE,
     } },
 
     [SPECIES_SHEDINJA] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .SHADOW_CLAW = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -7829,7 +7338,6 @@ const union {
     } },
 
     [SPECIES_SHROOMISH] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -7851,9 +7359,6 @@ const union {
     } },
 
     [SPECIES_BRELOOM] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .ENERGY_BALL = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -7983,10 +7488,10 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .FLASH = TRUE,
+        .SURF = TRUE,
     } },
 
     [SPECIES_MASQUERAIN] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -8008,12 +7513,13 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .FLY = TRUE,
+        .STEEL_WING = TRUE,
         .FLASH = TRUE,
+        .FLY = TRUE,
+        .SURF = TRUE,
     } },
 
     [SPECIES_WAILMER] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -8040,7 +7546,6 @@ const union {
     } },
 
     [SPECIES_WAILORD] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -8127,7 +7632,6 @@ const union {
     } },
 
     [SPECIES_KECLEON] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -8159,7 +7663,6 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .PSYCHIC = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
@@ -8167,12 +7670,10 @@ const union {
     } },
 
     [SPECIES_BALTOY] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .ICE_BEAM = TRUE,
-        .HYPER_BEAM = TRUE,
         .LIGHT_SCREEN = TRUE,
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
@@ -8195,8 +7696,6 @@ const union {
     } },
 
     [SPECIES_CLAYDOL] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -8226,8 +7725,6 @@ const union {
     } },
 
     [SPECIES_NOSEPASS] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -8248,18 +7745,15 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_TORKOAL] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .PROTECT = TRUE,
         .FRUSTRATION = TRUE,
-        .SOLAR_BEAM = TRUE,
         .IRON_TAIL = TRUE,
         .RETURN = TRUE,
         .DOUBLE_TEAM = TRUE,
@@ -8272,17 +7766,10 @@ const union {
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_SABLEYE] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -8310,13 +7797,11 @@ const union {
         .THIEF = TRUE,
         .SNATCH = TRUE,
         .CUT = TRUE,
-        .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_BARBOACH] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8341,7 +7826,6 @@ const union {
     } },
 
     [SPECIES_WHISCASH] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8391,7 +7875,6 @@ const union {
     } },
 
     [SPECIES_CORPHISH] = { .learnset = {
-        .X_SCISSOR = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8421,9 +7904,6 @@ const union {
     } },
 
     [SPECIES_CRAWDAUNT] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8455,7 +7935,6 @@ const union {
     } },
 
     [SPECIES_FEEBAS] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8477,9 +7956,6 @@ const union {
     } },
 
     [SPECIES_MILOTIC] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .AVALANCHE = TRUE,
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8494,19 +7970,16 @@ const union {
         .IRON_TAIL = TRUE,
         .RETURN = TRUE,
         .DOUBLE_TEAM = TRUE,
-        .REFLECT = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .LIGHT_SCREEN = TRUE,
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
     } },
 
     [SPECIES_CARVANHA] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8531,9 +8004,6 @@ const union {
     } },
 
     [SPECIES_SHARPEDO] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -8564,7 +8034,6 @@ const union {
     } },
 
     [SPECIES_TRAPINCH] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -8584,13 +8053,10 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_VIBRAVA] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DRAGON_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -8612,13 +8078,10 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_FLYGON] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -8644,14 +8107,10 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_MAKUHITA] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -8676,9 +8135,6 @@ const union {
     } },
 
     [SPECIES_HARIYAMA] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -8707,7 +8163,6 @@ const union {
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
-        .SUNNY_DAY = TRUE,
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
         .FRUSTRATION = TRUE,
@@ -8730,7 +8185,6 @@ const union {
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
-        .SUNNY_DAY = TRUE,
         .HYPER_BEAM = TRUE,
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
@@ -8741,18 +8195,18 @@ const union {
         .RETURN = TRUE,
         .DOUBLE_TEAM = TRUE,
         .SHOCK_WAVE = TRUE,
+        .FLAMETHROWER = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
-        .SHADOW_BALL = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
+        .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
     } },
 
     [SPECIES_NUMEL] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -8776,8 +8230,6 @@ const union {
     } },
 
     [SPECIES_CAMERUPT] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FLASH_CANNON = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -8856,7 +8308,6 @@ const union {
     } },
 
     [SPECIES_WALREIN] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -8885,9 +8336,6 @@ const union {
     } },
 
     [SPECIES_CACNEA] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DARK_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
@@ -8904,16 +8352,11 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .THIEF = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
     } },
 
     [SPECIES_CACTURNE] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
@@ -8931,14 +8374,12 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .THIEF = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
     } },
 
     [SPECIES_SNORUNT] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8961,8 +8402,6 @@ const union {
     } },
 
     [SPECIES_GLALIE] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -8989,7 +8428,6 @@ const union {
     } },
 
     [SPECIES_LUNATONE] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9012,12 +8450,10 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .SKILL_SWAP = TRUE,
-        .STRENGTH = TRUE,
         .FLASH = TRUE,
     } },
 
     [SPECIES_SOLROCK] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9043,8 +8479,6 @@ const union {
         .REST = TRUE,
         .SKILL_SWAP = TRUE,
         .OVERHEAT = TRUE,
-        .BRICK_BREAK = TRUE,
-        .STRENGTH = TRUE,
         .FLASH = TRUE,
     } },
 
@@ -9070,7 +8504,6 @@ const union {
     } },
 
     [SPECIES_SPOINK] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9099,9 +8532,6 @@ const union {
     } },
 
     [SPECIES_GRUMPIG] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -9113,8 +8543,8 @@ const union {
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
         .FRUSTRATION = TRUE,
-        .SOLAR_BEAM = TRUE,
         .IRON_TAIL = TRUE,
+        .THUNDERBOLT = TRUE,
         .RETURN = TRUE,
         .PSYCHIC = TRUE,
         .SHADOW_BALL = TRUE,
@@ -9129,7 +8559,6 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .STRENGTH = TRUE,
         .FLASH = TRUE,
     } },
 
@@ -9174,10 +8603,6 @@ const union {
     } },
 
     [SPECIES_MAWILE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .FLASH_CANNON = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9203,13 +8628,10 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_MEDITITE] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -9237,9 +8659,6 @@ const union {
     } },
 
     [SPECIES_MEDICHAM] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -9268,8 +8687,6 @@ const union {
     } },
 
     [SPECIES_SWABLU] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .DRAGON_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -9292,8 +8709,6 @@ const union {
     } },
 
     [SPECIES_ALTARIA] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -9320,16 +8735,13 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .FLY = TRUE,
-        .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
-        .REFLECT = TRUE,
     } },
 
     [SPECIES_WYNAUT] = { .learnset = {
     } },
 
     [SPECIES_DUSKULL] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9356,7 +8768,6 @@ const union {
     } },
 
     [SPECIES_DUSCLOPS] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -9389,9 +8800,6 @@ const union {
     } },
 
     [SPECIES_ROSELIA] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9410,12 +8818,9 @@ const union {
         .ATTRACT = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_SLAKOTH] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -9448,9 +8853,6 @@ const union {
     } },
 
     [SPECIES_VIGOROTH] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -9486,9 +8888,6 @@ const union {
     } },
 
     [SPECIES_SLAKING] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -9578,8 +8977,6 @@ const union {
     } },
 
     [SPECIES_TROPIUS] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DRAGON_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
@@ -9629,7 +9026,6 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .STRENGTH = TRUE,
     } },
 
     [SPECIES_LOUDRED] = { .learnset = {
@@ -9659,14 +9055,11 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
-        .HYPER_BEAM = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_EXPLOUD] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -9699,7 +9092,6 @@ const union {
     } },
 
     [SPECIES_CLAMPERL] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -9721,10 +9113,10 @@ const union {
     } },
 
     [SPECIES_HUNTAIL] = { .learnset = {
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
+        .TAUNT = TRUE,
         .HIDDEN_POWER = TRUE,
         .ICE_BEAM = TRUE,
         .BLIZZARD = TRUE,
@@ -9735,26 +9127,28 @@ const union {
         .RETURN = TRUE,
         .DOUBLE_TEAM = TRUE,
         .ROCK_TOMB = TRUE,
+        .TORMENT = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
+        .THIEF = TRUE,
         .SNATCH = TRUE,
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
-        .TORMENT = TRUE,
     } },
 
     [SPECIES_GOREBYSS] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .WATER_PULSE = TRUE,
+        .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
         .HIDDEN_POWER = TRUE,
         .ICE_BEAM = TRUE,
         .BLIZZARD = TRUE,
         .HYPER_BEAM = TRUE,
+        .LIGHT_SCREEN = TRUE,
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
         .SAFEGUARD = TRUE,
@@ -9763,21 +9157,18 @@ const union {
         .PSYCHIC = TRUE,
         .SHADOW_BALL = TRUE,
         .DOUBLE_TEAM = TRUE,
+        .REFLECT = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
+        .SKILL_SWAP = TRUE,
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
-        .LIGHT_SCREEN = TRUE,
     } },
 
     [SPECIES_ABSOL] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .DARK_PULSE = TRUE,
-        .SHADOW_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -9816,8 +9207,6 @@ const union {
     } },
 
     [SPECIES_SHUPPET] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9845,9 +9234,6 @@ const union {
     } },
 
     [SPECIES_BANETTE] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
-        .SHADOW_CLAW = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9873,13 +9259,9 @@ const union {
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE, 
     } },
 
     [SPECIES_SEVIPER] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .DARK_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -9906,10 +9288,6 @@ const union {
     } },
 
     [SPECIES_ZANGOOSE] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -9941,13 +9319,12 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .CUT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SURF = TRUE,
     } },
 
     [SPECIES_RELICANTH] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -9970,14 +9347,12 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .SURF = TRUE,
-        .STRENGTH = TRUE, 
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
     } },
 
     [SPECIES_ARON] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -9999,16 +9374,12 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .BULK_UP = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_LAIRON] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .SHADOW_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -10030,21 +9401,12 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .BULK_UP = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_AGGRON] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
@@ -10078,17 +9440,13 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .BULK_UP = TRUE,
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_CASTFORM] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -10118,7 +9476,6 @@ const union {
     } },
 
     [SPECIES_VOLBEAT] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -10143,12 +9500,10 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .CUT = TRUE, 
         .FLASH = TRUE,
     } },
 
     [SPECIES_ILLUMISE] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -10173,13 +9528,10 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .REFLECT = TRUE,
-        .CUT = TRUE, 
         .FLASH = TRUE,
     } },
 
     [SPECIES_LILEEP] = { .learnset = {
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10192,17 +9544,13 @@ const union {
         .DOUBLE_TEAM = TRUE,
         .SLUDGE_BOMB = TRUE,
         .SANDSTORM = TRUE,
-        .ROCK_TOMB = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .CUT = TRUE, 
     } },
 
     [SPECIES_CRADILY] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .ENERGY_BALL = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10222,13 +9570,11 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .CUT = TRUE, 
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_ANORITH] = { .learnset = {
-        .X_SCISSOR = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10247,14 +9593,10 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .CUT = TRUE,
-        .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_ARMALDO] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .FLASH_CANNON = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10281,7 +9623,6 @@ const union {
     } },
 
     [SPECIES_RALTS] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10311,7 +9652,6 @@ const union {
     } },
 
     [SPECIES_KIRLIA] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10341,9 +9681,6 @@ const union {
     } },
 
     [SPECIES_GARDEVOIR] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10374,8 +9711,6 @@ const union {
     } },
 
     [SPECIES_BAGON] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -10401,8 +9736,6 @@ const union {
     } },
 
     [SPECIES_SHELGON] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -10428,9 +9761,6 @@ const union {
     } },
 
     [SPECIES_SALAMENCE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -10464,7 +9794,6 @@ const union {
     } },
 
     [SPECIES_METANG] = { .learnset = {
-        .FLASH_CANNON = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -10494,8 +9823,6 @@ const union {
     } },
 
     [SPECIES_METAGROSS] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FLASH_CANNON = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -10525,8 +9852,6 @@ const union {
     } },
 
     [SPECIES_REGIROCK] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10553,9 +9878,6 @@ const union {
     } },
 
     [SPECIES_REGICE] = { .learnset = {
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .FLASH_CANNON = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -10582,9 +9904,6 @@ const union {
     } },
 
     [SPECIES_REGISTEEL] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .FLASH_CANNON = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10612,7 +9931,6 @@ const union {
     } },
 
     [SPECIES_KYOGRE] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .ROAR = TRUE,
@@ -10645,10 +9963,6 @@ const union {
     } },
 
     [SPECIES_GROUDON] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -10684,12 +9998,6 @@ const union {
     } },
 
     [SPECIES_RAYQUAZA] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .ENERGY_BALL = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
@@ -10729,9 +10037,6 @@ const union {
     } },
 
     [SPECIES_LATIAS] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -10772,9 +10077,6 @@ const union {
     } },
 
     [SPECIES_LATIOS] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -10815,9 +10117,6 @@ const union {
     } },
 
     [SPECIES_JIRACHI] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FLASH_CANNON = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -10847,12 +10146,6 @@ const union {
     } },
 
     [SPECIES_DEOXYS] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .FLASH_CANNON = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -10892,8 +10185,6 @@ const union {
     } },
 
     [SPECIES_CHIMECHO] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10917,13 +10208,10 @@ const union {
         .ATTRACT = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .ICE_BEAM = TRUE,
-        .THUNDERBOLT = TRUE,
         .FLASH = TRUE,
     } },    
 
     [SPECIES_AMBIPOM] = { .learnset = {
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -10954,17 +10242,6 @@ const union {
     } }, 
 
     [SPECIES_ARCEUS] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .DRAGON_CLAW = TRUE,
         .WATER_PULSE = TRUE,
@@ -11026,7 +10303,6 @@ const union {
     } }, 
 
     [SPECIES_BONSLY] = { .learnset = {
-        .STONE_EDGE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
@@ -11050,8 +10326,6 @@ const union {
     } }, 
 
     [SPECIES_BUDEW] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -11073,8 +10347,6 @@ const union {
     } }, 
 
     [SPECIES_CHINGLING] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -11102,9 +10374,6 @@ const union {
     } }, 
 
     [SPECIES_DEOXYS_ATTACK] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .FLASH_CANNON = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -11144,9 +10413,6 @@ const union {
     } }, 
 
     [SPECIES_DEOXYS_DEFENSE] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .FLASH_CANNON = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -11186,9 +10452,6 @@ const union {
     } }, 
 
     [SPECIES_DEOXYS_SPEED] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
-        .FLASH_CANNON = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
@@ -11228,8 +10491,6 @@ const union {
     } }, 
         
     [SPECIES_DUSKNOIR] = { .learnset = {
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -11263,9 +10524,9 @@ const union {
     } }, 
         
     [SPECIES_ELECTIVIRE] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
         .TAUNT = TRUE,
         .HYPER_BEAM = TRUE,
@@ -11294,11 +10555,9 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
-        .BULK_UP = TRUE,
     } }, 
         
     [SPECIES_FROSLASS] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -11328,12 +10587,6 @@ const union {
     } }, 
         
     [SPECIES_GALLADE] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -11373,7 +10626,6 @@ const union {
     } }, 
         
     [SPECIES_GLACEON] = { .learnset = {
-        .AVALANCHE = TRUE,
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -11400,10 +10652,6 @@ const union {
     } }, 
         
     [SPECIES_GLISCOR] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .DARK_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -11461,7 +10709,6 @@ const union {
     } }, 
         
     [SPECIES_HONCHKROW] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -11488,8 +10735,6 @@ const union {
     } }, 
         
     [SPECIES_LEAFEON] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .ENERGY_BALL = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
@@ -11517,7 +10762,6 @@ const union {
     } }, 
         
     [SPECIES_LICKILICKY] = { .learnset = {
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -11556,8 +10800,6 @@ const union {
     } }, 
         
     [SPECIES_MAGMORTAR] = { .learnset = {
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -11583,11 +10825,9 @@ const union {
         .THIEF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
-        .TORMENT = TRUE,
     } }, 
         
     [SPECIES_MAGNEZONE] = { .learnset = {
-        .FLASH_CANNON = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -11609,8 +10849,6 @@ const union {
     } }, 
         
     [SPECIES_MAMOSWINE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
         .HAIL = TRUE,
@@ -11660,11 +10898,7 @@ const union {
         .DIVE = TRUE,
     } }, 
         
-    [SPECIES_MISMAGIUS] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .DARK_PULSE = TRUE,
-		.CALM_MIND = TRUE,
+    [SPECIES_MISMAGIUS] = { .learnset = {.CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -11688,12 +10922,10 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .FLASH = TRUE,
-        .SAFEGUARD = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_MIME_JR] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -11724,7 +10956,7 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_MUNCHLAX] = { .learnset = {
@@ -11759,11 +10991,10 @@ const union {
         .ATTRACT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_PORYGON_Z] = { .learnset = {
-        .DARK_PULSE = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -11787,13 +11018,10 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .THIEF = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_PROBOPASS] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FLASH_CANNON = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -11815,7 +11043,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_REGIDRAGO] = { .learnset = {
@@ -11840,13 +11068,10 @@ const union {
         .REST = TRUE,
         .SNATCH = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_REGIGIGAS] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -11869,7 +11094,7 @@ const union {
         .REST = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_REGIELEKI] = { .learnset = {
@@ -11895,17 +11120,10 @@ const union {
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_RHYPERIOR] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .FLASH_CANNON = TRUE,
-        .DRAGON_PULSE = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -11938,13 +11156,10 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
 
     [SPECIES_ROSERADE] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -11963,12 +11178,10 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .CUT = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_SYLVEON] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
-        .SKILL_SWAP = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -11990,13 +11203,10 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .CUT = TRUE,
-        .STRENGTH = TRUE,
+        .STRENGTH = TRUE
     } }, 
         
     [SPECIES_TANGROWTH] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -12023,11 +11233,10 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_TOGEKISS] = { .learnset = {
-        .DAZZLING_GLEAM = TRUE,
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
@@ -12057,16 +11266,10 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_WEAVILE] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .AVALANCHE = TRUE,
-        .DARK_PULSE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
-        .POISON_JAB = TRUE,
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -12097,11 +11300,10 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_YANMEGA] = { .learnset = {
-        .DRAGON_PULSE = TRUE,
         .DRAGON_CLAW = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -12123,14 +11325,10 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .FLY = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
 
     [SPECIES_ANNIHILAPE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .POISON_JAB = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .SHADOW_CLAW = TRUE,
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,
         .BULK_UP = TRUE,
@@ -12159,14 +11357,10 @@ const union {
         .THIEF = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } },                                  
 
     [SPECIES_FARIGIRAF] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .DAZZLING_GLEAM = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .DARK_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -12193,15 +11387,10 @@ const union {
         .SKILL_SWAP = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
-        .TORMENT = TRUE,
-        .TAUNT = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
 
     [SPECIES_DUDUNSPARCE] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .FOCUS_BLAST = TRUE,
-        .DRAGON_PULSE = TRUE,
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
@@ -12232,12 +11421,10 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
 
     [SPECIES_WYRDEER] = { .learnset = {
-        .ENERGY_BALL = TRUE,
-        .FOCUS_BLAST = TRUE,
         .CALM_MIND = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -12268,8 +11455,6 @@ const union {
     } }, 
 
     [SPECIES_URSALUNA] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -12300,8 +11485,6 @@ const union {
     } }, 
 
     [SPECIES_URSALUNA_BLOODMOON] = { .learnset = {
-        .STONE_EDGE = TRUE,
-        .AVALANCHE = TRUE,
         .FOCUS_PUNCH = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
@@ -12332,10 +11515,6 @@ const union {
     } }, 
 
     [SPECIES_KLEAVOR] = { .learnset = {
-        .X_SCISSOR = TRUE,
-        .STONE_EDGE = TRUE,
-        .BRICK_BREAK = TRUE,
-        .POISON_JAB = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
@@ -12356,9 +11535,31 @@ const union {
         .ROCK_SMASH = TRUE,
     } }, 
 
-    [SPECIES_UNUSED_SPACE5] = { .learnset = {
-        .FOCUS_PUNCH = TRUE,
-        .DIVE = TRUE,
+    [SPECIES_VICTINI] = { .learnset = {
+        .CALM_MIND = TRUE,
+        .TOXIC = TRUE,
+        .HIDDEN_POWER = TRUE,
+        .SUNNY_DAY = TRUE,
+        .TAUNT = TRUE,
+        .HYPER_BEAM = TRUE,
+        .LIGHT_SCREEN = TRUE,
+        .PROTECT = TRUE,
+        .FRUSTRATION = TRUE,
+        .RETURN = TRUE,
+        .DIG = TRUE,
+        .PSYCHIC = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .FLAMETHROWER = TRUE,
+        .FIRE_BLAST = TRUE,
+        .TORMENT = TRUE,
+        .SECRET_POWER = TRUE,
+        .REST = TRUE,
+        .ATTRACT = TRUE,
+        .SKILL_SWAP = TRUE,
+        .OVERHEAT = TRUE,
+        .STRENGTH = TRUE,
+        .FLASH = TRUE,
+        .ROCK_SMASH = TRUE,
     } }, 
 
     [SPECIES_UNUSED_SPACE6] = { .learnset = {
@@ -12427,20 +11628,77 @@ const union {
         .DIVE = TRUE,
     } },
 
-    [SPECIES_UNUSED_SPACE8] = { .learnset = {
-        .FOCUS_PUNCH = TRUE,
-        .DIVE = TRUE,
-    } }, 
+    [SPECIES_ARTICUNO_GALAR] = { .learnset = {
+        .CALM_MIND = TRUE,
+        .TOXIC = TRUE,
+        .HIDDEN_POWER = TRUE,
+        .LIGHT_SCREEN = TRUE,
+        .PROTECT = TRUE,
+        .SAFEGUARD = TRUE,
+        .FRUSTRATION = TRUE,
+        .RETURN = TRUE,
+        .PSYCHIC = TRUE,
+        .SHADOW_BALL = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .REFLECT = TRUE,
+        .AERIAL_ACE = TRUE,
+        .TORMENT = TRUE,
+        .FACADE = TRUE,
+        .SECRET_POWER = TRUE,
+        .REST = TRUE,
+        .ATTRACT = TRUE,
+        .STEEL_WING = TRUE,
+        .SKILL_SWAP = TRUE,
+        .FLY = TRUE,
+        .FLASH = TRUE,
+    } },
 
-    [SPECIES_UNUSED_SPACE9] = { .learnset = {
+    [SPECIES_ZAPDOS_GALAR] = { .learnset = {
         .FOCUS_PUNCH = TRUE,
-        .DIVE = TRUE,
-    } }, 
+        .HAIL = TRUE,
+        .BULK_UP = TRUE,
+        .HIDDEN_POWER = TRUE,
+        .TAUNT = TRUE,
+        .PROTECT = TRUE,
+        .FRUSTRATION = TRUE,
+        .RETURN = TRUE,
+        .BRICK_BREAK = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .AERIAL_ACE = TRUE,
+        .TORMENT = TRUE,
+        .SECRET_POWER = TRUE,
+        .REST = TRUE,
+        .ATTRACT = TRUE,
+        .THIEF = TRUE,
+        .STEEL_WING = TRUE,
+        .STRENGTH = TRUE,
+        .ROCK_SMASH = TRUE,
+    } },
 
-    [SPECIES_UNUSED_SPACE10] = { .learnset = {
-        .FOCUS_PUNCH = TRUE,
-        .DIVE = TRUE,
-    } },         
+    [SPECIES_MOLTRES_GALAR] = { .learnset = {
+        .DRAGON_CLAW = TRUE,
+        .TOXIC = TRUE,
+        .HIDDEN_POWER = TRUE,
+        .TAUNT = TRUE,
+        .LIGHT_SCREEN = TRUE,
+        .PROTECT = TRUE,
+        .FRUSTRATION = TRUE,
+        .RETURN = TRUE,
+        .SHADOW_BALL = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .REFLECT = TRUE,
+        .SLUDGE_BOMB = TRUE,
+        .AERIAL_ACE = TRUE,
+        .TORMENT = TRUE,
+        .FACADE = TRUE,
+        .SECRET_POWER = TRUE,
+        .REST = TRUE,
+        .ATTRACT = TRUE,
+        .THIEF = TRUE,
+        .STEEL_WING = TRUE,
+        .SNATCH = TRUE,
+        .FLY = TRUE,
+    } },
 };
 
 const union {
@@ -23320,7 +22578,7 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_MIME_JR] = { .learnset = {
@@ -23354,7 +22612,7 @@ const union {
         .THIEF = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_MUNCHLAX] = { .learnset = {
@@ -23389,7 +22647,7 @@ const union {
         .ATTRACT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_PORYGON_Z] = { .learnset = {
@@ -23416,7 +22674,7 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .THIEF = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_PROBOPASS] = { .learnset = {
@@ -23441,7 +22699,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_REGIDRAGO] = { .learnset = {
@@ -23466,7 +22724,7 @@ const union {
         .REST = TRUE,
         .SNATCH = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_REGIGIGAS] = { .learnset = {
@@ -23492,7 +22750,7 @@ const union {
         .REST = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_REGIELEKI] = { .learnset = {
@@ -23518,7 +22776,7 @@ const union {
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_RHYPERIOR] = { .learnset = {
@@ -23554,7 +22812,7 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
 
     [SPECIES_ROSERADE] = { .learnset = {
@@ -23576,7 +22834,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .CUT = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
         
     [SPECIES_SYLVEON] = { .learnset = {
@@ -23601,7 +22859,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .CUT = TRUE,
-        .STRENGTH = TRUE,
+        .STRENGTH = TRUE
     } }, 
         
     [SPECIES_TANGROWTH] = { .learnset = {
@@ -23631,7 +22889,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_TOGEKISS] = { .learnset = {
@@ -23664,7 +22922,7 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_WEAVILE] = { .learnset = {
@@ -23698,7 +22956,7 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
         
     [SPECIES_YANMEGA] = { .learnset = {
@@ -23723,7 +22981,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .FLY = TRUE,
-        .FLASH = TRUE,
+        .FLASH = TRUE
     } }, 
 
     [SPECIES_ANNIHILAPE] = { .learnset = {
@@ -23755,7 +23013,7 @@ const union {
         .THIEF = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } },                                  
 
     [SPECIES_FARIGIRAF] = { .learnset = {
@@ -23785,7 +23043,7 @@ const union {
         .SKILL_SWAP = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
 
     [SPECIES_DUDUNSPARCE] = { .learnset = {
@@ -23819,7 +23077,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .STRENGTH = TRUE,
-        .ROCK_SMASH = TRUE,
+        .ROCK_SMASH = TRUE
     } }, 
 
     [SPECIES_WYRDEER] = { .learnset = {
@@ -23933,9 +23191,31 @@ const union {
         .ROCK_SMASH = TRUE,
     } }, 
 
-    [SPECIES_UNUSED_SPACE5] = { .learnset = {
-        .FOCUS_PUNCH = TRUE,
-        .DIVE = TRUE,
+    [SPECIES_VICTINI] = { .learnset = {
+        .CALM_MIND = TRUE,
+        .TOXIC = TRUE,
+        .HIDDEN_POWER = TRUE,
+        .SUNNY_DAY = TRUE,
+        .TAUNT = TRUE,
+        .HYPER_BEAM = TRUE,
+        .LIGHT_SCREEN = TRUE,
+        .PROTECT = TRUE,
+        .FRUSTRATION = TRUE,
+        .RETURN = TRUE,
+        .DIG = TRUE,
+        .PSYCHIC = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .FLAMETHROWER = TRUE,
+        .FIRE_BLAST = TRUE,
+        .TORMENT = TRUE,
+        .SECRET_POWER = TRUE,
+        .REST = TRUE,
+        .ATTRACT = TRUE,
+        .SKILL_SWAP = TRUE,
+        .OVERHEAT = TRUE,
+        .STRENGTH = TRUE,
+        .FLASH = TRUE,
+        .ROCK_SMASH = TRUE,
     } }, 
 
     [SPECIES_UNUSED_SPACE6] = { .learnset = {
@@ -24004,19 +23284,76 @@ const union {
         .DIVE = TRUE,
     } },
 
-    [SPECIES_UNUSED_SPACE8] = { .learnset = {
-        .FOCUS_PUNCH = TRUE,
-        .DIVE = TRUE,
-    } }, 
+    [SPECIES_ARTICUNO_GALAR] = { .learnset = {
+        .CALM_MIND = TRUE,
+        .TOXIC = TRUE,
+        .HIDDEN_POWER = TRUE,
+        .LIGHT_SCREEN = TRUE,
+        .PROTECT = TRUE,
+        .SAFEGUARD = TRUE,
+        .FRUSTRATION = TRUE,
+        .RETURN = TRUE,
+        .PSYCHIC = TRUE,
+        .SHADOW_BALL = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .REFLECT = TRUE,
+        .AERIAL_ACE = TRUE,
+        .TORMENT = TRUE,
+        .FACADE = TRUE,
+        .SECRET_POWER = TRUE,
+        .REST = TRUE,
+        .ATTRACT = TRUE,
+        .STEEL_WING = TRUE,
+        .SKILL_SWAP = TRUE,
+        .FLY = TRUE,
+        .FLASH = TRUE,
+    } },
 
-    [SPECIES_UNUSED_SPACE9] = { .learnset = {
+    [SPECIES_ZAPDOS_GALAR] = { .learnset = {
         .FOCUS_PUNCH = TRUE,
-        .DIVE = TRUE,
-    } }, 
+        .HAIL = TRUE,
+        .BULK_UP = TRUE,
+        .HIDDEN_POWER = TRUE,
+        .TAUNT = TRUE,
+        .PROTECT = TRUE,
+        .FRUSTRATION = TRUE,
+        .RETURN = TRUE,
+        .BRICK_BREAK = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .AERIAL_ACE = TRUE,
+        .TORMENT = TRUE,
+        .SECRET_POWER = TRUE,
+        .REST = TRUE,
+        .ATTRACT = TRUE,
+        .THIEF = TRUE,
+        .STEEL_WING = TRUE,
+        .STRENGTH = TRUE,
+        .ROCK_SMASH = TRUE,
+    } },
 
-    [SPECIES_UNUSED_SPACE10] = { .learnset = {
-        .FOCUS_PUNCH = TRUE,
-        .DIVE = TRUE,
-    } },  
+    [SPECIES_MOLTRES_GALAR] = { .learnset = {
+        .DRAGON_CLAW = TRUE,
+        .TOXIC = TRUE,
+        .HIDDEN_POWER = TRUE,
+        .TAUNT = TRUE,
+        .LIGHT_SCREEN = TRUE,
+        .PROTECT = TRUE,
+        .FRUSTRATION = TRUE,
+        .RETURN = TRUE,
+        .SHADOW_BALL = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .REFLECT = TRUE,
+        .SLUDGE_BOMB = TRUE,
+        .AERIAL_ACE = TRUE,
+        .TORMENT = TRUE,
+        .FACADE = TRUE,
+        .SECRET_POWER = TRUE,
+        .REST = TRUE,
+        .ATTRACT = TRUE,
+        .THIEF = TRUE,
+        .STEEL_WING = TRUE,
+        .SNATCH = TRUE,
+        .FLY = TRUE,
+    } },
 
 };

@@ -440,6 +440,7 @@ static void BufferIvOrEvStats(u8 mode);
 static void ToggleStatsOverlay(void);
 static void ShowStatsOverlay(void);
 static void HideStatsOverlay(void);
+static void PrintPokedexOrCancel(void);
 
 // const rom data
 #include "data/text/move_descriptions.h"
@@ -1916,7 +1917,7 @@ static void Task_OpenPokedexFromSummary(u8 taskId)
 static void CB2_ShowPokedexEntryFromSummary(void)
 {
     // Only open Pokedex if not an egg and player has Pokedex
-    if (!sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+    if (!sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER))
     {
         // Begin fade out and set task to open Pokedex after cleanup
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
@@ -1975,7 +1976,9 @@ static void Task_HandleInput(u8 taskId)
             {
                 if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
                 {
-                    if (!sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+                    if (!sMonSummaryScreen->summary.isEgg 
+                        && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE 
+                        && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER))
                     {
                         StopPokemonAnimations();
                         PlaySE(SE_SELECT);
@@ -2138,6 +2141,7 @@ static void Task_ChangeSummaryMon(u8 taskId)
         break;
     case 11:
         PrintPageSpecificText(sMonSummaryScreen->currPageIndex);
+        PrintPokedexOrCancel();
         LimitEggSummaryPageDisplay();
         break;
     case 12:
@@ -3225,6 +3229,7 @@ static void PrintMonInfo(void)
     ScheduleBgCopyTilemapToVram(0);
 }
 static const u8 sText_Deoxys_Number[] = _("{NO}{CLEAR 0x01}386");
+static const u8 sText_Deoxys_Number_NoNational[] = _("{NO}{CLEAR 0x01}215");
 static const u8 sText_Test_Number[] = _("{NO}{CLEAR 0x01}???");
 
 static void PrintNotEggInfo(void)
@@ -3239,12 +3244,18 @@ static void PrintNotEggInfo(void)
     {
         if (!IsMonShiny(mon))
         {
-            PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, sText_Deoxys_Number, 0, 1, 0, 1);
+            if (FlagGet(FLAG_SYS_NATIONAL_DEX) == TRUE)
+                PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, sText_Deoxys_Number, 0, 1, 0, 1);
+            else
+                PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, sText_Deoxys_Number_NoNational, 0, 1, 0, 1);
             SetMonPicBackgroundPalette(FALSE);
         }
         else
         {
-            PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, sText_Deoxys_Number, 0, 1, 0, 7);
+            if (FlagGet(FLAG_SYS_NATIONAL_DEX) == TRUE)
+                PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, sText_Deoxys_Number, 0, 1, 0, 7);
+            else
+                PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, sText_Deoxys_Number_NoNational, 0, 1, 0, 7);
             SetMonPicBackgroundPalette(TRUE);
         }
         PutWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER);
@@ -3336,7 +3347,7 @@ static void PrintPageNamesAndStats(void)
     PrintTextOnWindow(PSS_LABEL_WINDOW_CONTEST_MOVES_TITLE, gText_ContestMoves, 2, 1, 0, 1);
 
     // Show POKéDEX if not an egg and player has Pokedex, otherwise show CANCEL
-    if (!sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+    if (!sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER))
     {
         stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_MenuPokedex, 62);
         iconXPos = stringXPos - 16;
@@ -3401,6 +3412,33 @@ static void PrintPageNamesAndStats(void)
     PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, gText_Accuracy2, 0, 17, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_APPEAL_JAM, gText_Appeal, 0, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_APPEAL_JAM, gText_Jam, 0, 17, 0, 1);
+}
+
+// Redraws the CANCEL or POKEDEX prompt when scrolling between eggs and non-eggs.
+static void PrintPokedexOrCancel(void)
+{
+    int stringXPos;
+    int iconXPos;
+
+    FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_CANCEL, PIXEL_FILL(0));
+    if (!sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER))
+    {
+        stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_MenuPokedex, 62);
+        iconXPos = stringXPos - 16;
+        if (iconXPos < 0)
+            iconXPos = 0;
+        PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_CANCEL, FALSE, iconXPos);
+        PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_MenuPokedex, stringXPos, 1, 0, 0);
+    }
+    else
+    {
+        stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, gText_Cancel2, 62);
+        iconXPos = stringXPos - 16;
+        if (iconXPos < 0)
+            iconXPos = 0;
+        PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_CANCEL, FALSE, iconXPos);
+        PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_Cancel2, stringXPos, 1, 0, 0);
+    }
 }
 
 static void PutPageWindowTilemaps(u8 page)

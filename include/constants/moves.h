@@ -376,8 +376,14 @@
 #define MOVE_STONE_EDGE 372
 #define MOVE_AVALANCHE 373
 #define MOVE_CRUSH_GRIP 374
+#define MOVE_BLOOD_MOON 375
+#define MOVE_JUDGMENT 376
+#define MOVE_FREEZING_GLARE 377
+#define MOVE_THUNDEROUS_KICK 378
+#define MOVE_FIERY_WRATH 379
+#define MOVE_SEARING_SHOT 380
 
-#define MOVES_COUNT 375
+#define MOVES_COUNT 381
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
