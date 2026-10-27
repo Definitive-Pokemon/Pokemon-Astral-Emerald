@@ -1,7 +1,7 @@
 {
   "id": "MAP_KIN_ISLAND_HOUSE2",
   "name": "KinIsland_House2",
-  "layout": "LAYOUT_HOUSE3",
+  "layout": "LAYOUT_FRLG_HOUSE3",
   "music": "MUS_RG_SEVII_123",
   "region_map_section": "MAPSEC_KIN_ISLAND",
   "requires_flash": false,

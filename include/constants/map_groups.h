@@ -631,15 +631,14 @@
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
 // gMapGroup_Sevii_KnotIsland
-#define MAP_KNOT_ISLAND                            (0 | (34 << 8))
-#define MAP_KNOT_ISLAND_HARBOR                     (1 | (34 << 8))
-#define MAP_KNOT_ISLAND_HOUSE1                     (2 | (34 << 8))
-#define MAP_KNOT_ISLAND_HOUSE2                     (3 | (34 << 8))
-#define MAP_KNOT_ISLAND_POKEMON_CENTER_1F          (4 | (34 << 8))
-#define MAP_KNOT_ISLAND_POKEMON_CENTER_2F          (5 | (34 << 8))
-#define MAP_KNOT_ISLAND_TREASURE_BEACH             (6 | (34 << 8))
-#define MAP_KNOT_ISLAND_KINDLE_ROAD                (7 | (34 << 8))
-#define MAP_KNOT_ISLAND_KINDLE_ROAD_GLASS_WORKSHOP (8 | (34 << 8))
+#define MAP_KNOT_ISLAND                   (0 | (34 << 8))
+#define MAP_KNOT_ISLAND_HARBOR            (1 | (34 << 8))
+#define MAP_KNOT_ISLAND_HOUSE1            (2 | (34 << 8))
+#define MAP_KNOT_ISLAND_HOUSE2            (3 | (34 << 8))
+#define MAP_KNOT_ISLAND_POKEMON_CENTER_1F (4 | (34 << 8))
+#define MAP_KNOT_ISLAND_POKEMON_CENTER_2F (5 | (34 << 8))
+#define MAP_KNOT_ISLAND_TREASURE_BEACH    (6 | (34 << 8))
+#define MAP_KNOT_ISLAND_KINDLE_ROAD       (7 | (34 << 8))
 
 // gMapGroup_Sevii_BoonIsland
 #define MAP_BOON_ISLAND                    (0 | (35 << 8))
