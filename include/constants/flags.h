@@ -691,7 +691,7 @@
 #define FLAG_OUTFIT_BOX_OBTAINED  0x288
 #define FLAG_WT_ENABLED    0x289 // Checks whether WT is enabled or not
 #define FLAG_TEALA_BLOCKS_MULTIPLAYER  0x28A
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
+#define FLAG_MAUVILLE_NPC_TRADE_COMPLETED  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
 #define FLAG_UNUSED_0x28D  0x28D // Unused Flag
 #define FLAG_UNUSED_0x28E  0x28E // Unused Flag
