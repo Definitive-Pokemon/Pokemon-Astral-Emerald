@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -22,7 +21,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 9,
       "y": 24,
@@ -33,10 +31,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_OutcastIsland_EventScript_Rocket",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
       "x": 12,
       "y": 15,
@@ -47,10 +45,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_OutcastIsland_EventScript_Tylor",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
       "x": 13,
       "y": 34,
@@ -61,10 +59,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_OutcastIsland_EventScript_Mymo",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
       "x": 14,
       "y": 61,
@@ -75,10 +73,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_OutcastIsland_EventScript_Nicole",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
       "x": 10,
       "y": 44,
@@ -89,10 +87,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_OutcastIsland_EventScript_Ava",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
       "x": 11,
       "y": 44,
@@ -103,10 +101,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FortuneIsland_OutcastIsland_EventScript_Geb",
-      "flag": "0"
+      "flag": "0",
+      "type": "object"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 11,
       "y": 16,
@@ -117,7 +115,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FortuneIsland_OutcastIsland_EventScript_ItemPPUp",
-      "flag": "FLAG_HIDE_FORTUNE_ISLAND_OUTCAST_ISLAND_PP_UP"
+      "flag": "FLAG_HIDE_FORTUNE_ISLAND_OUTCAST_ISLAND_PP_UP",
+      "type": "object"
     }
   ],
   "warp_events": [
@@ -129,7 +128,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "hidden_item",
