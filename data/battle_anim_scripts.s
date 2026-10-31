@@ -9963,7 +9963,7 @@ Move_CRUSH_GRIP:
 	unloadspritegfx ANIM_TAG_GRAB_TOWARDS
 	end
 
-Move_DoubleHit::
+Move_DOUBLE_HIT::
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
@@ -9974,10 +9974,6 @@ Move_DoubleHit::
 	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
 	delay 8
 	waitforvisualfinish
-	@ why does the anim hit twice?
-	@ that just means the anim plays 4 times
-	@ which doesn't make sense
-	@      I don't know, but I'm not gonna argue with it
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
 	delay 6
 	create_basic_hitsplat_sprite ANIM_TARGET, 2, x=0, y=0, relative_to=ANIM_TARGET, animation=2
