@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_QUEST_ISLAND_TRAINER_TOWER",
-      "offset": -48,
+      "offset": -10,
       "direction": "up"
     },
     {

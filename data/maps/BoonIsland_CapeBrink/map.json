@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_BOON_ISLAND",
-      "offset": -24,
+      "offset": 3,
       "direction": "down"
     }
   ],
@@ -24,8 +24,8 @@
   ],
   "warp_events": [
     {
-      "x": 12,
-      "y": 16,
+      "x": 39,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_BOON_ISLAND_CAPE_BRINK_HOUSE",
       "dest_warp_id": "0"
@@ -47,8 +47,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 15,
-      "y": 13,
+      "x": 42,
+      "y": 4,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_BOON_ISLAND_CAPE_BRINK_RARE_CANDY",

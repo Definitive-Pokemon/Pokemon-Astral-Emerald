@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_KIN_ISLAND",
-      "offset": 0,
+      "offset": 20,
       "direction": "right"
     }
   ],
@@ -150,14 +150,14 @@
   "warp_events": [
     {
       "x": 12,
-      "y": 6,
+      "y": 26,
       "elevation": 3,
       "dest_map": "MAP_KIN_ISLAND_BERRY_FOREST",
       "dest_warp_id": "0"
     },
     {
       "x": 13,
-      "y": 6,
+      "y": 26,
       "elevation": 3,
       "dest_map": "MAP_KIN_ISLAND_BERRY_FOREST",
       "dest_warp_id": "0"
@@ -169,8 +169,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 14,
-      "y": 7,
+      "x": 19,
+      "y": 32,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "KinIsland_BondBridge_EventScript_BerryForestSign"

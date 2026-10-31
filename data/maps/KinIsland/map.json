@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_KIN_ISLAND_BOND_BRIDGE",
-      "offset": 0,
+      "offset": -20,
       "direction": "left"
     }
   ],
