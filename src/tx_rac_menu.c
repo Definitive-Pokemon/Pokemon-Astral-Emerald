@@ -846,7 +846,8 @@ static const u8 sText_Description_Mode_New_Legendaries_Off[]      = _("No extra 
 static const u8 sText_Description_Mode_New_Legendaries_On[]       = _("Nine extra legendary Pokémon are\nadded via ingame events.");
 static const u8 sText_Description_Mode_New_Effectiveness_Original[]  = _("Type effectiveness from Gen VI!\nGhost / Dark do x1 to Steel.");
 static const u8 sText_Description_Mode_New_Effectiveness_Modern[]    = _("Rebalanced type effectiveness\nfor certain types. Check docs.");
-static const u8 sText_Description_Mode_Next[]                     = _("Continue to Features options.");
+static const u8 sText_Description_Mode_2_Next[]                     = _("Continue to Features options.");
+static const u8 sText_Description_Mode_Next[]                     = _("Gamemode options continued.");
 
 static const u8 *const sOptionMenuItemDescriptionsMode[MENUITEM_MODE_COUNT][5] =
 {
