@@ -815,8 +815,8 @@ static const u8 sText_Description_Save[]    = _("Save choices and continue...");
 static const u8 sText_Description_Mode_Gamemode_Classic[]         = _("Vanilla-like preset.\n{COLOR 7}{COLOR 8}Note: All selections are permanent.");
 static const u8 sText_Description_Mode_Gamemode_Modern[]          = _("Modernized preset.\n{COLOR 7}{COLOR 8}Note: All selections are permanent.");
 static const u8 sText_Description_Mode_Gamemode_Custom[]          = _("Choose your own rules.\n{COLOR 7}{COLOR 8}Note: All selections are permanent.");
-static const u8 sText_Description_Mode_TrainerTeams_Classic[]     = _("Mostly teams from\noriginal Emerald.");
-static const u8 sText_Description_Mode_TrainerTeams_Modern[]      = _("Astral teams.");
+static const u8 sText_Description_Mode_TrainerTeams_Classic[]     = _("Original Pokémon Emerald\nteams, including new Pokémon.");
+static const u8 sText_Description_Mode_TrainerTeams_Modern[]      = _("Improved party compositions\nfrom Pokémon Emerald Legacy.");
 static const u8 sText_Description_Mode_AlternateSpawns_Vanilla[]        = _("Use Vanilla wild encounters.\nUnchanged from original Emerald.");
 static const u8 sText_Description_Mode_AlternateSpawns_Postgame[]       = _("Vanilla, but after becoming champion,\nall 423 {PKMN} end up being available.");
 static const u8 sText_Description_Mode_AlternateSpawns_Modern[]         = _("Use Modern wild encounters.\nAll 423 {PKMN} will be available.");
@@ -2818,6 +2818,7 @@ static void DrawChoices_Features_Rtc_Type(int selection, int y)
 
 static const u8 sText_Encounters_Vanilla_Long[]   = _("Original");
 static const u8 sText_Encounters_Modern_Long[]    = _("Modern");
+static const u8 sText_Teams_Classic[] = _("Classic");
 static const u8 sText_Teams_Legacy[] = _("Legacy");
 
 
@@ -2836,7 +2837,7 @@ static void DrawChoices_Mode_Change_Teams(int selection, int y)
         gSaveBlock1Ptr->tx_Mode_Teams = 1;
     }
 
-    DrawOptionMenuChoice(sText_Encounters_Vanilla_Long, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_Teams_Classic, 104, y, styles[0], active);
     DrawOptionMenuChoice(sText_Teams_Legacy, GetStringRightAlignXOffset(1, sText_Teams_Legacy, 198), y, styles[1], active);
 }
 
