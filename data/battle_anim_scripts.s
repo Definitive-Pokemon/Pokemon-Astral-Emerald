@@ -397,6 +397,7 @@ gBattleAnims_Moves::
     .4byte Move_THUNDEROUS_KICK
     .4byte Move_FIERY_WRATH
     .4byte Move_SEARING_SHOT
+	.4byte Move_DOUBLE_HIT
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -9961,6 +9962,31 @@ Move_CRUSH_GRIP:
 	unloadspritegfx ANIM_TAG_GRAB_AWAY
 	unloadspritegfx ANIM_TAG_GRAB_TOWARDS
 	end
+
+Move_DoubleHit::
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
+	delay 6
+	create_basic_hitsplat_sprite ANIM_TARGET, 2, x=0, y=0, relative_to=ANIM_TARGET, animation=2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	delay 8
+	waitforvisualfinish
+	@ why does the anim hit twice?
+	@ that just means the anim plays 4 times
+	@ which doesn't make sense
+	@      I don't know, but I'm not gonna argue with it
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
+	delay 6
+	create_basic_hitsplat_sprite ANIM_TARGET, 2, x=0, y=0, relative_to=ANIM_TARGET, animation=2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	delay 8
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
 
 Move_STONE_EDGE::
 	loadspritegfx ANIM_TAG_STONE_EDGE
