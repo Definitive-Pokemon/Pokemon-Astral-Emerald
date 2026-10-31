@@ -1027,3 +1027,14 @@ const struct Tileset gTileset_MtEmber =
     .metatileAttributes = gMetatileAttributes_MtEmber,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_FRNavelRock =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_FRNavelRock,
+    .palettes = gTilesetPalettes_FRNavelRock,
+    .metatiles = gMetatiles_FRNavelRock,
+    .metatileAttributes = gMetatileAttributes_FRNavelRock,
+    .callback = NULL,
+};

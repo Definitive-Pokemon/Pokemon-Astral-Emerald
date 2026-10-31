@@ -259,3 +259,6 @@ const u16 gMetatileAttributes_TanobyRuins[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_MtEmber[] = INCBIN_U16("data/tilesets/secondary/mt_ember/metatiles.bin");
 const u16 gMetatileAttributes_MtEmber[] = INCBIN_U16("data/tilesets/secondary/mt_ember/metatile_attributes.bin");
+
+const u16 gMetatiles_FRNavelRock[] = INCBIN_U16("data/tilesets/secondary/firered_navel_rock/metatiles.bin");
+const u16 gMetatileAttributes_FRNavelRock[] = INCBIN_U16("data/tilesets/secondary/firered_navel_rock/metatile_attributes.bin");
