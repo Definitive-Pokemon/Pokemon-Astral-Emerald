@@ -7226,7 +7226,7 @@ const struct Trainer gTrainers[] = {
             .flags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
             .monPointers = {.ItemCustomMoves = sParty_MaxieMagmaHideout}
         },
-        .classicParty = NULL
+        .classicParty = {.monPointers = {.NoItemDefaultMoves = NULL}, .size = 0, .flags = 0}
     },
 
     [TRAINER_MAXIE_MT_CHIMNEY] =
@@ -7243,7 +7243,7 @@ const struct Trainer gTrainers[] = {
             .flags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
             .monPointers = {.ItemCustomMoves = sParty_MaxieMtChimney}
         },
-        .classicParty = NULL
+        .classicParty = {.monPointers = {.NoItemDefaultMoves = NULL}, .size = 0, .flags = 0}
     },
 
     [TRAINER_TIANA] =
