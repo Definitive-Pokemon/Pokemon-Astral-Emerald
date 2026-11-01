@@ -56,6 +56,18 @@ LittlerootTown_OnTransition:
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_EventScript_LeftLabAfterDexUpgrade
 	end
 
+Evostonemonguy::
+	msgbox Evo, MSGBOX_DEFAULT
+	givemon SPECIES_RHYDON, 1, ITEM_PROTECTOR
+	givemon SPECIES_TOGETIC, 1, ITEM_SHINY_STONE
+	givemon SPECIES_TANGELA, 26, ITEM_LEAF_STONE
+	givemon SPECIES_NOSEPASS, 1, ITEM_MAGNET
+	givemon SPECIES_EEVEE, 1, ITEM_LEAF_STONE
+	givemon SPECIES_SNORUNT, 1, ITEM_DAWN_STONE
+	release
+	end
+	
+	
 GiveNewTMs::
 	lock
 	msgbox Dikke, MSGBOX_DEFAULT
@@ -78,6 +90,9 @@ Dikke::
 	.string "Ik ben zo fucking dik Ploetjes!\n"
 	.string "Ik ben Dikzak Buik!\p"
 	.string "Ach neem die kut TMs.$"
+
+Evo::
+	.string "Gives evo items and mons.$"
 
 GiveLegends::
 	lock
