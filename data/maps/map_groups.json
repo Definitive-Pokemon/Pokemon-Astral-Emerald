@@ -449,21 +449,14 @@
     "ShoalCave_LowTideIceRoom_Suicune",
     "NewMauville_Inside_Raikou",
     "MagmaHideout_3F_1R_Entei",
-    "ShoalCave_LowTideIceRoom_Modern",
-    "NewMauville_Inside_Modern",
-    "MagmaHideout_3F_1R_Modern",
-    "PetalburgWoods_Old",
     "CeruleanCave1",
     "CeruleanCave2",
     "CeruleanCave3",
     "AlteringCave_Mewtwo",
     "VictoryRoad_Moltres",
     "VictoryRoad_Moltres2",
-    "VictoryRoad_B2F_Modern",
-    "MeteorFalls_B1F_2R_Modern",
     "MeteorFalls_Articuno",
-    "ScorchedSlab_Zapdos",
-    "ScorchedSlab_Modern"
+    "ScorchedSlab_Zapdos"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

@@ -5,18 +5,6 @@ MagmaHideout_3F_1R_MapScripts::
 
 MagmaHideout_3F_1R_OnTransition:
 	callnative ChangeEncounterTable
-	goto_if_set FLAG_UNLOCK_DOGS, MagmaHideout_3F_1R_SwitchToModern
-	end
-
-MagmaHideout_3F_1R_SwitchToModern::
-	setmaplayoutindex LAYOUT_MAGMA_HIDEOUT_3F_1R_MODERN
-	goto_if_set FLAG_DEFEATED_ENTEI, MagmaHideout_End
-	goto MagmaHideout_Entei_CryStrong
-	end
-
-MagmaHideout_Entei_CryStrong::
-	playmoncry SPECIES_ENTEI, CRY_MODE_ENCOUNTER
-	release
 	end
 
 MagmaHideout_3F_1R_EventScript_Grunt9::
