@@ -5112,6 +5112,16 @@
       "blockdata_filepath": "data/layouts/FloeIsland/map.bin"
     },
     {
+      "id": "LAYOUT_FLOE_ISLAND_BASE",
+      "name": "FloeIsland_Base_Layout",
+      "width": 33,
+      "height": 39,
+      "primary_tileset": "gTileset_SeviiGeneral",
+      "secondary_tileset": "gTileset_SeviiIslands45",
+      "border_filepath": "data/layouts/FloeIsland_Base/border.bin",
+      "blockdata_filepath": "data/layouts/FloeIsland_Base/map.bin"
+    },
+    {
       "id": "LAYOUT_FLOE_ISLAND_POKEMON_DAYCARE",
       "name": "FloeIsland_PokemonDayCare_Layout",
       "width": 12,

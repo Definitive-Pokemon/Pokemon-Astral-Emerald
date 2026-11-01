@@ -1220,6 +1220,7 @@ Common_EventScript_LegendaryRanAway::
 	.include "data/maps/BoonIsland/scripts.inc"
 	.include "data/maps/KinIsland/scripts.inc"
 	.include "data/maps/FloeIsland/scripts.inc"
+	.include "data/maps/FloeIsland_Base/scripts.inc"
 	.include "data/maps/ChronoIsland/scripts.inc"
 	.include "data/maps/QuestIsland/scripts.inc"
 	.include "data/maps/FortuneIsland/scripts.inc"

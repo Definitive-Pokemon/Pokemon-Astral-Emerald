@@ -676,6 +676,7 @@
 #define MAP_FLOE_ISLAND_HARBOR            (6 | (37 << 8))
 #define MAP_FLOE_ISLAND_HOUSE2            (7 | (37 << 8))
 #define MAP_FLOE_ISLAND_MART              (8 | (37 << 8))
+#define MAP_FLOE_ISLAND_BASE              (9 | (37 << 8))
 
 // gMapGroup_Sevii_ChronoIsland
 #define MAP_CHRONO_ISLAND                       (0 | (38 << 8))
