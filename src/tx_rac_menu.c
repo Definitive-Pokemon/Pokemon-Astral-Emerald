@@ -382,12 +382,12 @@ struct // MENU_MODE
     [MENUITEM_MODE_CLASSIC_MODERN]        = {DrawChoices_Mode_Classic_Modern_Selector,       ProcessInput_Options_Three},
     [MENUITEM_MODE_TRAINER_TEAMS]         = {DrawChoices_Mode_Change_Teams,         ProcessInput_Options_Two},
     [MENUITEM_MODE_ALTERNATE_SPAWNS]      = {DrawChoices_Mode_AlternateSpawns,      ProcessInput_Options_Three},
-    [MENUITEM_MODE_INFINITE_TMS]          = {DrawChoices_Mode_InfiniteTMs,          ProcessInput_Options_Two},
-    [MENUITEM_MODE_SURVIVE_POISON]        = {DrawChoices_Mode_SurvivePoison,        ProcessInput_Options_Two},
     [MENUITEM_MODE_MODERN_TYPES]          = {DrawChoices_Mode_Modern_Types,         ProcessInput_Options_Two},
     [MENUITEM_MODE_FAIRY_TYPES]           = {DrawChoices_Mode_Fairy_Types,          ProcessInput_Options_Two},
     [MENUITEM_MODE_NEW_STATS]             = {DrawChoices_Mode_New_Stats,            ProcessInput_Options_Two},
     [MENUITEM_MODE_NEW_CITRUS]            = {DrawChoices_Mode_New_Citrus,           ProcessInput_Options_Two},
+    [MENUITEM_MODE_SYNCHRONIZE]           = {DrawChoices_Mode_Synchronize,          ProcessInput_Options_Two},
+    [MENUITEM_MODE_STURDY]                = {DrawChoices_Mode_Sturdy,               ProcessInput_Options_Two},
     [MENUITEM_MODE_MODERN_MOVES]          = {DrawChoices_Mode_Modern_Moves,         ProcessInput_Options_Two},
     [MENUITEM_MODE_NEW_EFFECTIVENESS]     = {DrawChoices_Mode_New_Effectiveness,    ProcessInput_Options_Two},
     [MENUITEM_MODE_NEXT]                  = {NULL, NULL},
@@ -525,7 +525,7 @@ static const u8 sText_Next[]                = _("NEXT");
 static const u8 *const sOptionMenuItemsNamesMode[MENUITEM_MODE_COUNT] =
 {
     [MENUITEM_MODE_CLASSIC_MODERN]            = sText_Gamemode,
-        [MENUITEM_MODE_TRAINER_TEAMS]             = sText_TrainerTeams,
+    [MENUITEM_MODE_TRAINER_TEAMS]             = sText_TrainerTeams,
     [MENUITEM_MODE_ALTERNATE_SPAWNS]          = sText_AlternateSpawns,
     [MENUITEM_MODE_SYNCHRONIZE]               = sText_Synchronize,
     [MENUITEM_MODE_STURDY]                    = sText_Sturdy,
@@ -545,7 +545,7 @@ static const u8 *const sOptionMenuItemsNamesModeSecondPage[MENUITEM_MODE_2_COUNT
     [MENUITEM_MODE_MINTS]                     = sText_Mints,
     [MENUITEM_MODE_LEGENDARY_ABILITIES]       = sText_Legendary_Abilities,
     [MENUITEM_MODE_NEW_LEGENDARIES]           = sText_New_Legendaries,
-    [MENUITEM_MODE_2_NEXT]                      = sText_Next,
+    [MENUITEM_MODE_2_NEXT]                    = sText_Next,
 };
 
 static const u8 sText_RTC_Type[]            = _("CLOCK TYPE");
