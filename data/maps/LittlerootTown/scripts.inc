@@ -119,12 +119,15 @@ GiveDexMons::
 	end
 
 Debug_LT_TrainerMode::
+	lock
 	specialvar VAR_RESULT, AstralTrainerTeamsEnabled
 	goto_if_eq Debug_LT_TrainerMode_Modern
 	msgbox Debug_Text_Old, MSGBOX_DEFAULT
+	release
 	end
 Debug_LT_TrainerMode_Modern::
 	msgbox Debug_Text_Modern, MSGBOX_DEFAULT
+	release
 	end
 
 Debug_Text_Old:

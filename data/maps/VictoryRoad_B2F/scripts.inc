@@ -9,11 +9,6 @@ VictoryRoad_B2F_OnResume:
 
 VictoryRoad_B2F_OnTransition:
 	callnative ChangeEncounterTable
-	goto_if_set FLAG_UNLOCK_BIRDS, VictoryRoad_B2F_SwitchToModern
-	end
-
-VictoryRoad_B2F_SwitchToModern::
-	setmaplayoutindex LAYOUT_VICTORY_ROAD_B2F_MODERN
 	end
 
 VictoryRoad_B2F_EventScript_Vito::

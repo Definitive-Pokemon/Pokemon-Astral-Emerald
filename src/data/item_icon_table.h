@@ -114,9 +114,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_DAWN_STONE] = {gItemIcon_DawnStone, gItemIconPalette_DawnStone},
     [ITEM_SHINY_STONE] = {gItemIcon_ShinyStone, gItemIconPalette_ShinyStone},
     // ????????
-    [ITEM_063] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_064] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_065] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+
     [ITEM_066] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Valuables
     [ITEM_TINY_MUSHROOM] = {gItemIcon_TinyMushroom, gItemIconPalette_Mushroom},
@@ -257,6 +255,9 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     // ????????
     [ITEM_INFINITE_REPEL] = {gItemIcon_Repel, gItemIconPalette_MaxRepel},
     [ITEM_INFINITE_RARE_CANDIES] = {gItemIcon_RareCandy, gItemIconPalette_RareCandy},
+    [ITEM_0EC] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_0ED] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_0EE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0EF] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0F0] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0F1] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},

@@ -881,20 +881,6 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
     },
 
-[ITEM_FIRE_STONE] =
-    {
-        .name = _("Fire Stone"),
-        .itemId = ITEM_FIRE_STONE,
-        .price = 2100,
-        .description = sFireStoneDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
-    },
-
-
-
-
     [ITEM_PP_UP] =
     {
         .name = _("PP Up"),
@@ -1252,37 +1238,37 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
-    [ITEM_063] =
+    [ITEM_DAWN_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dawn Stone"),
+        .itemId = ITEM_DAWN_STONE,
+        .price = 1050,
+        .description = sDawnStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
-    [ITEM_064] =
+    [ITEM_DUSK_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dusk Stone"),
+        .itemId = ITEM_DUSK_STONE,
+        .price = 1050,
+        .description = sDuskStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
-    [ITEM_065] =
+    [ITEM_SHINY_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Shiny Stone"),
+        .itemId = ITEM_SHINY_STONE,
+        .price = 1050,
+        .description = sShinyStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
     [ITEM_066] =
@@ -2843,27 +2829,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_InfiniteRareCandies,
     },
 
-    [ITEM_DAWN_STONE] =
-    {
-        .name = _("Dawn Stone"),
-        .itemId = ITEM_DAWN_STONE,
-        .price = 1050,
-        .description = sDawnStone,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
-    [ITEM_DUSK_STONE] =
-    {
-        .name = _("Dusk Stone"),
-        .itemId = ITEM_DUSK_STONE,
-        .price = 1050,
-        .description = sDuskStone,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
+    
 
     [ITEM_MAGMARIZER] =
     {
@@ -2953,12 +2919,34 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_SHINY_STONE] =
+    [ITEM_0EC] =
     {
-        .name = _("Shiny Stone"),
-        .itemId = ITEM_SHINY_STONE,
-        .price = 1050,
-        .description = sShinyStone,
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_0ED] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_0EE] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6240,37 +6228,37 @@ const struct Item gItems2[] =
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
-    [ITEM_063] =
+    [ITEM_DAWN_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dawn Stone"),
+        .itemId = ITEM_DAWN_STONE,
+        .price = 1050,
+        .description = sDawnStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
-    [ITEM_064] =
+    [ITEM_DUSK_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Dusk Stone"),
+        .itemId = ITEM_DUSK_STONE,
+        .price = 1050,
+        .description = sDuskStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
-    [ITEM_065] =
+    [ITEM_SHINY_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("Shiny Stone"),
+        .itemId = ITEM_SHINY_STONE,
+        .price = 1050,
+        .description = sShinyStone,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
     [ITEM_066] =
@@ -7829,27 +7817,6 @@ const struct Item gItems2[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_InfiniteRareCandies,
     },
-    [ITEM_DAWN_STONE] =
-    {
-        .name = _("Dawn Stone"),
-        .itemId = ITEM_DAWN_STONE,
-        .price = 1050,
-        .description = sDawnStone,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
-    [ITEM_DUSK_STONE] =
-    {
-        .name = _("Dusk Stone"),
-        .itemId = ITEM_DUSK_STONE,
-        .price = 1050,
-        .description = sDuskStone,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
 
     [ITEM_MAGMARIZER] =
     {
@@ -7938,13 +7905,35 @@ const struct Item gItems2[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
-    
-    [ITEM_SHINY_STONE] =
+
+    [ITEM_0EC] =
     {
-        .name = _("Shiny Stone"),
-        .itemId = ITEM_SHINY_STONE,
-        .price = 1050,
-        .description = sShinyStone,
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_0ED] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_0EE] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

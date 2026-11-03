@@ -4452,46 +4452,6 @@
       "blockdata_filepath": "data/layouts/MagmaHideout_3F_1R_Entei/map.bin"
     },
     {
-      "id": "LAYOUT_SHOAL_CAVE_LOW_TIDE_ICE_ROOM_MODERN",
-      "name": "ShoalCave_LowTideIceRoom_Modern_Layout",
-      "width": 20,
-      "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/ShoalCave_LowTideIceRoom_Modern/border.bin",
-      "blockdata_filepath": "data/layouts/ShoalCave_LowTideIceRoom_Modern/map.bin"
-    },
-    {
-      "id": "LAYOUT_NEW_MAUVILLE_INSIDE_MODERN",
-      "name": "NewMauville_Inside_Modern_Layout",
-      "width": 41,
-      "height": 41,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BikeShop",
-      "border_filepath": "data/layouts/NewMauville_Inside_Modern/border.bin",
-      "blockdata_filepath": "data/layouts/NewMauville_Inside_Modern/map.bin"
-    },
-    {
-      "id": "LAYOUT_MAGMA_HIDEOUT_3F_1R_MODERN",
-      "name": "MagmaHideout_3F_1R_Modern_Layout",
-      "width": 28,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
-      "border_filepath": "data/layouts/MagmaHideout_3F_1R_Modern/border.bin",
-      "blockdata_filepath": "data/layouts/MagmaHideout_3F_1R_Modern/map.bin"
-    },
-    {
-      "id": "LAYOUT_PETALBURG_WOODS_OLD",
-      "name": "PetalburgWoods_Old_Layout",
-      "width": 54,
-      "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/PetalburgWoods_Old/border.bin",
-      "blockdata_filepath": "data/layouts/PetalburgWoods_Old/map.bin"
-    },
-    {
       "id": "LAYOUT_CERULEAN_CAVE1",
       "name": "CeruleanCave1_Layout",
       "width": 39,
@@ -4552,26 +4512,6 @@
       "blockdata_filepath": "data/layouts/VictoryRoad_Moltres2/map.bin"
     },
     {
-      "id": "LAYOUT_VICTORY_ROAD_B2F_MODERN",
-      "name": "VictoryRoad_B2F_Modern_Layout",
-      "width": 46,
-      "height": 31,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/VictoryRoad_B2F_Modern/border.bin",
-      "blockdata_filepath": "data/layouts/VictoryRoad_B2F_Modern/map.bin"
-    },
-    {
-      "id": "LAYOUT_METEOR_FALLS_B1F_2R_MODERN",
-      "name": "MeteorFalls_B1F_2R_Modern_Layout",
-      "width": 11,
-      "height": 18,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_MeteorFalls",
-      "border_filepath": "data/layouts/MeteorFalls_B1F_2R_Modern/border.bin",
-      "blockdata_filepath": "data/layouts/MeteorFalls_B1F_2R_Modern/map.bin"
-    },
-    {
       "id": "LAYOUT_METEOR_FALLS_ARTICUNO",
       "name": "MeteorFalls_Articuno_Layout",
       "width": 20,
@@ -4590,16 +4530,6 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/ScorchedSlab_Zapdos/border.bin",
       "blockdata_filepath": "data/layouts/ScorchedSlab_Zapdos/map.bin"
-    },
-    {
-      "id": "LAYOUT_SCORCHED_SLAB_MODERN",
-      "name": "ScorchedSlab_Modern_Layout",
-      "width": 15,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/ScorchedSlab_Modern/border.bin",
-      "blockdata_filepath": "data/layouts/ScorchedSlab_Modern/map.bin"
     },
     {
       "id": "LAYOUT_NAVEL_ROCK_FORK_OPEN",
