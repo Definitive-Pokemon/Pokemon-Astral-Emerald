@@ -1245,7 +1245,7 @@ const struct Item gItems[] =
         .price = 1050,
         .description = sDawnStone,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
@@ -1256,7 +1256,7 @@ const struct Item gItems[] =
         .price = 1050,
         .description = sDuskStone,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
@@ -1267,7 +1267,7 @@ const struct Item gItems[] =
         .price = 1050,
         .description = sShinyStone,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
@@ -6235,7 +6235,7 @@ const struct Item gItems2[] =
         .price = 1050,
         .description = sDawnStone,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
@@ -6246,7 +6246,7 @@ const struct Item gItems2[] =
         .price = 1050,
         .description = sDuskStone,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
@@ -6257,7 +6257,7 @@ const struct Item gItems2[] =
         .price = 1050,
         .description = sShinyStone,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
