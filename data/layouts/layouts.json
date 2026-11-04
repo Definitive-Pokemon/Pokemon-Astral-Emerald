@@ -5016,8 +5016,8 @@
       "name": "KinIsland_House1_Layout",
       "width": 11,
       "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "primary_tileset": "gTileset_SeviiInsideBuilding",
+      "secondary_tileset": "gTileset_FRMuseum",
       "border_filepath": "data/layouts/KinIsland_House1/border.bin",
       "blockdata_filepath": "data/layouts/KinIsland_House1/map.bin"
     },
@@ -5496,8 +5496,8 @@
       "name": "ChronoIsland_ResortGorgeous_House_Layout",
       "width": 11,
       "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "primary_tileset": "gTileset_SeviiInsideBuilding",
+      "secondary_tileset": "gTileset_FRMuseum",
       "border_filepath": "data/layouts/ChronoIsland_ResortGorgeous_House/border.bin",
       "blockdata_filepath": "data/layouts/ChronoIsland_ResortGorgeous_House/map.bin"
     },
@@ -5766,8 +5766,8 @@
       "name": "QuestIsland_House_Room1_Layout",
       "width": 11,
       "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "primary_tileset": "gTileset_SeviiInsideBuilding",
+      "secondary_tileset": "gTileset_FRMart",
       "border_filepath": "data/layouts/QuestIsland_House_Room1/border.bin",
       "blockdata_filepath": "data/layouts/QuestIsland_House_Room1/map.bin"
     },
