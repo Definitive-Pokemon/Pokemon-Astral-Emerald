@@ -262,3 +262,6 @@ const u16 gMetatileAttributes_MtEmber[] = INCBIN_U16("data/tilesets/secondary/mt
 
 const u16 gMetatiles_FRNavelRock[] = INCBIN_U16("data/tilesets/secondary/firered_navel_rock/metatiles.bin");
 const u16 gMetatileAttributes_FRNavelRock[] = INCBIN_U16("data/tilesets/secondary/firered_navel_rock/metatile_attributes.bin");
+
+const u16 gMetatiles_IceFallCave[] = INCBIN_U16("data/tilesets/secondary/icefall_cave/metatiles.bin");
+const u16 gMetatileAttributes_IceFallCave[] = INCBIN_U16("data/tilesets/secondary/icefall_cave/metatile_attributes.bin");

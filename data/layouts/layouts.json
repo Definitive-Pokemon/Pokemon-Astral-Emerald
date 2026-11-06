@@ -5206,40 +5206,40 @@
       "name": "IcefallCave_Entrance_Layout",
       "width": 30,
       "height": 36,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/IcefallCave_Entrance/border.bin",
-      "blockdata_filepath": "data/layouts/IcefallCave_Entrance/map.bin"
+      "primary_tileset": "gTileset_SeviiGeneral",
+      "secondary_tileset": "gTileset_IceFallCave",
+      "border_filepath": "data/layouts/FloeIsland_IcefallCave_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/FloeIsland_IcefallCave_Entrance/map.bin"
     },
     {
       "id": "LAYOUT_ICEFALL_CAVE_1F",
       "name": "IcefallCave_1F_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/IcefallCave_1F/border.bin",
-      "blockdata_filepath": "data/layouts/IcefallCave_1F/map.bin"
+      "primary_tileset": "gTileset_SeviiGeneral",
+      "secondary_tileset": "gTileset_IceFallCave",
+      "border_filepath": "data/layouts/FloeIsland_IcefallCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/FloeIsland_IcefallCave_1F/map.bin"
     },
     {
       "id": "LAYOUT_ICEFALL_CAVE_B1F",
       "name": "IcefallCave_B1F_Layout",
       "width": 24,
       "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/IcefallCave_B1F/border.bin",
-      "blockdata_filepath": "data/layouts/IcefallCave_B1F/map.bin"
+      "primary_tileset": "gTileset_SeviiGeneral",
+      "secondary_tileset": "gTileset_IceFallCave",
+      "border_filepath": "data/layouts/FloeIsland_IcefallCave_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/FloeIsland_IcefallCave_B1F/map.bin"
     },
     {
       "id": "LAYOUT_ICEFALL_CAVE_BACK",
       "name": "IcefallCave_Back_Layout",
       "width": 25,
       "height": 26,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/IcefallCave_Back/border.bin",
-      "blockdata_filepath": "data/layouts/IcefallCave_Back/map.bin"
+      "primary_tileset": "gTileset_SeviiGeneral",
+      "secondary_tileset": "gTileset_IceFallCave",
+      "border_filepath": "data/layouts/FloeIsland_IcefallCave_Back/border.bin",
+      "blockdata_filepath": "data/layouts/FloeIsland_IcefallCave_Back/map.bin"
     },
     {
       "id": "LAYOUT_CHRONO_ISLAND",
