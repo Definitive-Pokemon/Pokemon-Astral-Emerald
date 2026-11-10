@@ -5166,8 +5166,8 @@
       "name": "FloeIsland_LoreleisHouse_Layout",
       "width": 11,
       "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "primary_tileset": "gTileset_SeviiInsideBuilding",
+      "secondary_tileset": "gTileset_FRSafariZone",
       "border_filepath": "data/layouts/FloeIsland_LoreleisHouse/border.bin",
       "blockdata_filepath": "data/layouts/FloeIsland_LoreleisHouse/map.bin"
     },
