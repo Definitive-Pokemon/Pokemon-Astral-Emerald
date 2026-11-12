@@ -105,6 +105,25 @@ ChronoIsland_ResortGorgeous_House_EventScript_JustFulfilledRequest::
 	release
 	end
 
+ChronoIsland_ResortGorgeous_House_EventScript_Painting::
+	@goto_if_unset FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY, ChronoIsland_ResortGorgeous_House_EventScript_PaintingSelphy
+	@msgbox ChronoIsland_ResortGorgeous_House_Text_WomanWithCorsola, MSGBOX_SIGN
+	@end
+
+@ChronoIsland_ResortGorgeous_House_EventScript_PaintingSelphy::
+	msgbox ChronoIsland_ResortGorgeous_House_Text_SelphyWithCorsola, MSGBOX_SIGN
+	end
+
+ChronoIsland_ResortGorgeous_House_Text_WomanWithCorsola::
+	.string "It's a photo of a woman relaxing\n"
+	.string "at a resort surrounded by many\l"
+	.string "pink, coral POKéMON.$"
+
+ChronoIsland_ResortGorgeous_House_Text_SelphyWithCorsola::
+	.string "It's a photo of SELPHY relaxing\n"
+	.string "at a resort surrounded by many\l"
+	.string "pink, coral POKéMON.$"
+
 ChronoIsland_ResortGorgeous_House_Movement_ButlerApproachPlayerNorth::
 	walk_left
 	walk_left
