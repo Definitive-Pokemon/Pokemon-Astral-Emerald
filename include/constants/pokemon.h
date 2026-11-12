@@ -273,6 +273,8 @@
 #define EVO_ITEM_MALE        27
 #define EVO_ITEM_FEMALE      28
 #define EVO_MAP              29
+#define EVO_MOVE_TYPE_FRIENDSHIP  30 // Pokémon levels up, knows move with specified type and has high friendship
+#define EVO_PARTY_MON        31 // On level up, when another specific mon is present in the party
 
 #define EVOLUTION_MAP_NEW_MAUVILLE 0
 #define EVOLUTION_MAP_MOSS_ROCK 1

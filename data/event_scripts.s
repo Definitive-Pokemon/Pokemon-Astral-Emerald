@@ -1090,14 +1090,6 @@ Common_EventScript_LegendaryRanAway::
 
 	.include "data/maps/MagmaHideout_3F_1R_Entei/scripts.inc"
 
-	.include "data/maps/ShoalCave_LowTideIceRoom_Modern/scripts.inc"
-
-	.include "data/maps/NewMauville_Inside_Modern/scripts.inc"
-
-	.include "data/maps/MagmaHideout_3F_1R_Modern/scripts.inc"
-
-	.include "data/maps/PetalburgWoods_Old/scripts.inc"
-
 	.include "data/maps/CeruleanCave1/scripts.inc"
 
 	.include "data/maps/CeruleanCave2/scripts.inc"
@@ -1110,15 +1102,9 @@ Common_EventScript_LegendaryRanAway::
 
 	.include "data/maps/VictoryRoad_Moltres2/scripts.inc"
 
-	.include "data/maps/VictoryRoad_B2F_Modern/scripts.inc"
-
-	.include "data/maps/MeteorFalls_B1F_2R_Modern/scripts.inc"
-
 	.include "data/maps/MeteorFalls_Articuno/scripts.inc"
 
 	.include "data/maps/ScorchedSlab_Zapdos/scripts.inc"
-
-	.include "data/maps/ScorchedSlab_Modern/scripts.inc"
 
 	.include "data/maps/OldaleTown_PokemonCenter_3F/scripts.inc"
 
