@@ -281,7 +281,6 @@ ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene::
 	applymovement LOCALID_SELPHY, ChronoIsland_LostCave_Room10_Movement_SelphyApproach
 	waitmovement 0
 	msgbox ChronoIsland_LostCave_Room10_Text_SelphyIntro
-	goto_if_questlog ChronoIsland_LostCave_Room10_EventScript_SelphyQuestLog
 	trainerbattle_no_intro TRAINER_LADY_SELPHY, ChronoIsland_LostCave_Room10_Text_SelphyDefeat
 	msgbox ChronoIsland_LostCave_Room10_Text_MayIAskYouToTakeMeHome
 	closemessage
@@ -297,12 +296,6 @@ ChronoIsland_LostCave_Room10_EventScript_SetSelphyFound::
 	setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
 	setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1
 	return
-
-ChronoIsland_LostCave_Room10_EventScript_SelphyQuestLog::
-	settrainerflag TRAINER_LADY_SELPHY
-	call ChronoIsland_LostCave_Room10_EventScript_SetSelphyFound
-	releaseall
-	end
 
 ChronoIsland_LostCave_Room10_Movement_SelphyWander::
 	walk_left

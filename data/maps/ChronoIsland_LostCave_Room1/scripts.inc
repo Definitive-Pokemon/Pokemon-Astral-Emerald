@@ -121,8 +121,6 @@ ChronoIsland_LostCave_Room1_Movement_Agatha2::
 	delay_16
 	face_right
 	delay_16
-	emote_smile
-	delay_16
 	walk_in_place_right
 	step_end
 	
