@@ -6,7 +6,7 @@ ChronoIsland_LostCave_Entrance_MapScripts::
 	.byte 0
 
 ChronoIsland_LostCave_Entrance_OnTransition::
-	setworldmapflag FLAG_WORLD_MAP_CHRONO_ISLAND_LOST_CAVE_ENTRANCE
+	@setworldmapflag FLAG_WORLD_MAP_CHRONO_ISLAND_LOST_CAVE_ENTRANCE
 	end
 
 ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent1::
@@ -54,8 +54,9 @@ ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent1::
 	removeobject LOCALID_AGATHA
 	setflag FLAG_HIDE_DUO1
 	clearflag FLAG_HIDE_DUO2
-	setvar VAR_CELEBI_EVENT1, 2
-	setvar VAR_CELEBI_EVENT2, 1
+	setvar VAR_CELEBI_EVENT 2
+	releaseall
+	end
 	
 ChronoIsland_LostCave_Entrance_Text_Agatha1::
 	.string "So, is this it, sweetheart?$"

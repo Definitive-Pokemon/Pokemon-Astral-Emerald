@@ -50,8 +50,7 @@ ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent2::
 	setflag FLAG_HIDE_DUO2
 	clearflag FLAG_HIDE_DUO3
 	delay 20
-	setvar VAR_CELEBI_EVENT2, 2
-	setvar VAR_CELEBI_EVENT3, 1
+	setvar VAR_CELEBI_EVENT, 3
 	releaseall
 	end
 	

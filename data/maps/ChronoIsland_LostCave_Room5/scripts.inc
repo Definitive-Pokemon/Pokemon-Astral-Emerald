@@ -46,8 +46,7 @@ ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent3::
 	playse SE_EXIT
 	setflag FLAG_HIDE_DUO3
 	clearflag FLAG_HIDE_DUO4
-	setvar VAR_CELEBI_EVENT3, 2
-	setvar VAR_CELEBI_EVENT4, 1
+	setvar VAR_CELEBI_EVENT, 4
 	releaseall
 	end
 	

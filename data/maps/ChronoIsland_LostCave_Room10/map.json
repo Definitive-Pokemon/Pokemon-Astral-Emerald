@@ -29,7 +29,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY",
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
       "x": 5,
       "y": 6,
       "elevation": 0,
@@ -43,7 +43,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MASTER_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
       "x": 4,
       "y": 6,
       "elevation": 0,
@@ -57,7 +57,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CELEBI",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CELEBI)",
       "x": 5,
       "y": 2,
       "elevation": 0,
@@ -86,8 +86,8 @@
       "x": 5,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_CELEBI_EVENT6",
-      "var_value": "1",
+      "var": "VAR_CELEBI_EVENT",
+      "var_value": "6",
       "script": "ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent6"
     }
   ],

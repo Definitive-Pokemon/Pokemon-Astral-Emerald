@@ -78,8 +78,7 @@ ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent5::
 	setflag FLAG_HIDE_DUO5
 	clearflag FLAG_HIDE_DUO6
 	clearflag FLAG_HIDE_STORY_CELEBI
-	setvar VAR_CELEBI_EVENT5, 2
-	setvar VAR_CELEBI_EVENT6, 1
+	setvar VAR_CELEBI_EVENT, 6
 	fadeinbgm 1
 	releaseall
 	end

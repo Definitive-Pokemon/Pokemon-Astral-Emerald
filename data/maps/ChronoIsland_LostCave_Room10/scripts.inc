@@ -258,7 +258,7 @@ ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	special RemoveCameraObject
 	delay 60
 	setflag FLAG_HIDE_DUO6
-	setvar VAR_CELEBI_EVENT6, 2
+	setvar VAR_CELEBI_EVENT, 7
 	clearflag FLAG_HIDE_LOST_HIKER
 	clearflag FLAG_HIDE_LOST_PSYCHIC
 	releaseall
