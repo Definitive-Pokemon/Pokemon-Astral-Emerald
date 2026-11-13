@@ -11,7 +11,7 @@ ChronoIsland_LostCave_Room10_MapScripts::
 	.byte 0
 	
 ChronoIsland_LostCave_Room10_OnLoad::
-	compare_var_to_value VAR_CELEBI, 0
+	@compare_var_to_value VAR_CELEBI, 0
 	goto_if_eq DontShowCelebiYet
 	call_if_unset FLAG_FOUGHT_CELEBI, ChronoIsland_LostCave_Room10_EventScript_TryShowCelebi
 DontShowCelebiYet::
@@ -22,12 +22,12 @@ ChronoIsland_LostCave_Room10_OnTransition::
 	end
 
 ChronoIsland_LostCave_Room10_OnResume::
-	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, ChronoIsland_LostCave_Room10_EventScript_TryRemoveCelebi
+	@call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, ChronoIsland_LostCave_Room10_EventScript_TryRemoveCelebi
 	call_if_defeated TRAINER_LADY_SELPHY, ChronoIsland_LostCave_Room10_EventScript_StopSelphySceneTrigger
 	end
 	
 ChronoIsland_LostCave_Room10_EventScript_TryShowCelebi::
-	goto_if_set FLAG_CELEBI_FLED, EventScript_Return
+	goto_if_set FLAG_CELEBI_FLED, Common_EventScript_NopReturn
 	clearflag FLAG_HIDE_STORY_CELEBI
 	return
 	
@@ -38,7 +38,7 @@ ChronoIsland_LostCave_Room10_EventScript_HideCelebi::
 ChronoIsland_LostCave_Room10_EventScript_TryRemoveCelebi::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne EventScript_Return
+	goto_if_ne Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
 	return
 	
@@ -53,10 +53,10 @@ ChronoIsland_LostCave_Room10_EventScript_Celebi::
 	waitmoncry
 	delay 10
 	waitbuttonpress
-	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
-	special StartLegendaryBattle
+	@setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special BattleSetup_StartLegendaryBattle
 	waitstate
-	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	@clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq ChronoIsland_LostCave_Room10_EventScript_DefeatedCelebi
@@ -115,7 +115,7 @@ ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	closemessage
 	applymovement LOCALID_AGATHA, ChronoIsland_LostCave_Room10_Movement_Agatha1
 	waitmovement 0
-	playbgm MUS_POKE_TOWER, 0
+	playbgm MUS_RG_POKE_TOWER, 0
 	fadeinbgm 0
 	textcolor 1
 	msgbox ChronoIsland_LostCave_Room10_Text_Agatha2
@@ -265,11 +265,11 @@ ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	end
 
 ChronoIsland_LostCave_Room10_EventScript_StopSelphySceneTrigger::
-	setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
+	@setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
 	return
 
 ChronoIsland_LostCave_Room10_OnFrame::
-	map_script_2 VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 0, ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene
+	@map_script_2 VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 0, ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene
 	.2byte 0
 
 ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene::
@@ -292,9 +292,9 @@ ChronoIsland_LostCave_Room10_EventScript_FindSelphyScene::
 
 ChronoIsland_LostCave_Room10_EventScript_SetSelphyFound::
 	setflag FLAG_HIDE_LOST_CAVE_SELPHY
-	clearflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
-	setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
-	setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1
+	@clearflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
+	@setvar VAR_MAP_SCENE_CHRONO_ISLAND_LOST_CAVE_ROOM10, 1
+	@setvar VAR_MAP_SCENE_CHRONO_ISLAND_RESORT_GORGEOUS, 1
 	return
 
 ChronoIsland_LostCave_Room10_Movement_SelphyWander::
