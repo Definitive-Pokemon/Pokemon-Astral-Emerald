@@ -1049,3 +1049,14 @@ const struct Tileset gTileset_IceFallCave =
     .metatileAttributes = gMetatileAttributes_IceFallCave,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_FRCave =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_FRCave,
+    .palettes = gTilesetPalettes_FRCave,
+    .metatiles = gMetatiles_FRCave,
+    .metatileAttributes = gMetatileAttributes_FRCave,
+    .callback = NULL,
+};

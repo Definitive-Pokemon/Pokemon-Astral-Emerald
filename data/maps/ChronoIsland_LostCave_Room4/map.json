@@ -11,13 +11,11 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
-  
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_F",
       "x": 6,
       "y": 4,
       "elevation": 3,
@@ -27,7 +25,22 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "ChronoIsland_LostCave_Room4_EventScript_Laura",
-      "flag": "0"
+      "flag": "FLAG_HIDE_LOST_PSYCHIC",
+      "type": "object"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ChronoIsland_LostCave_Room10_EventScript_ItemSilkScarf",
+      "flag": "FLAG_HIDE_CHRONO_ISLAND_LOST_CAVE_ROOM10_SILK_SCARF",
+      "type": "object"
     }
   ],
   "warp_events": [
@@ -60,6 +73,10 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

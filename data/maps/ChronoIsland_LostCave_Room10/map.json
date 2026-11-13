@@ -11,13 +11,11 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
-  
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_LADY",
       "x": 5,
       "y": 5,
       "elevation": 3,
@@ -27,21 +25,50 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "0"
+      "flag": "FLAG_HIDE_LOST_CAVE_SELPHY",
+      "type": "object"
     },
     {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 5,
-      "y": 2,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ChronoIsland_LostCave_Room10_EventScript_ItemSilkScarf",
-      "flag": "FLAG_HIDE_CHRONO_ISLAND_LOST_CAVE_ROOM10_SILK_SCARF"
+      "script": "NULL",
+      "flag": "FLAG_HIDE_DUO6",
+      "type": "object"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MASTER_BEAUTY",
+      "x": 4,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_DUO6",
+      "type": "object"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CELEBI",
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ChronoIsland_LostCave_Room10_EventScript_Celebi",
+      "flag": "FLAG_HIDE_STORY_CELEBI",
+      "type": "object"
     }
   ],
   "warp_events": [
@@ -53,6 +80,19 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_CELEBI_EVENT6",
+      "var_value": "1",
+      "script": "ChronoIsland_LostCave_Entrance_EventScript_CelebiEvent6"
+    }
+  ],
+  "bg_events": [
+
+  ],
+  "floor_number": null
 }
