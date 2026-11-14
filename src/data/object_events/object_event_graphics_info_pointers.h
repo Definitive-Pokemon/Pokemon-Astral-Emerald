@@ -272,6 +272,12 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Courtney;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tabitha;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Shelly;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Matt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MotorBiker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketGruntM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketGruntF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AdminM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AdminF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Seagallop;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -540,6 +546,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TABITHA] =                  &gObjectEventGraphicsInfo_Tabitha,
     [OBJ_EVENT_GFX_SHELLY] =                   &gObjectEventGraphicsInfo_Shelly,
     [OBJ_EVENT_GFX_MATT] =                     &gObjectEventGraphicsInfo_Matt,
+    [OBJ_EVENT_GFX_MOTOR_BIKER] =              &gObjectEventGraphicsInfo_MotorBiker,
+    [OBJ_EVENT_GFX_ROCKET_GRUNT_M] =           &gObjectEventGraphicsInfo_RocketGruntM,
+    [OBJ_EVENT_GFX_ROCKET_GRUNT_F] =           &gObjectEventGraphicsInfo_RocketGruntF,
+    [OBJ_EVENT_GFX_ROCKET_ADMIN_M] =           &gObjectEventGraphicsInfo_AdminM,
+    [OBJ_EVENT_GFX_ROCKET_ADMIN_F] =           &gObjectEventGraphicsInfo_AdminF,
+    [OBJ_EVENT_GFX_SEAGALLOP] =                &gObjectEventGraphicsInfo_Seagallop,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

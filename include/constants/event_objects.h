@@ -269,8 +269,14 @@
 #define OBJ_EVENT_GFX_TABITHA                    240
 #define OBJ_EVENT_GFX_SHELLY                     241
 #define OBJ_EVENT_GFX_MATT                       242
+#define OBJ_EVENT_GFX_MOTOR_BIKER                243
+#define OBJ_EVENT_GFX_ROCKET_GRUNT_M             244
+#define OBJ_EVENT_GFX_ROCKET_GRUNT_F             245
+#define OBJ_EVENT_GFX_ROCKET_ADMIN_M             246
+#define OBJ_EVENT_GFX_ROCKET_ADMIN_F             247
+#define OBJ_EVENT_GFX_SEAGALLOP                  248
 
-#define NUM_OBJ_EVENT_GFX                        243
+#define NUM_OBJ_EVENT_GFX                        249
 
 
 // These are dynamic object gfx ids.
