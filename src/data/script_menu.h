@@ -580,6 +580,39 @@ static const struct MenuAction MultichoiceList_FrontierGamblerBet[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_Seagallop123[] = {
+    { gText_KnotIsland },
+    { gText_BoonIsland },
+    { gText_KinIsland },
+    { gText_Exit }
+};
+
+static const struct MenuAction MultichoiceList_SeagallopV23[] = {
+    { gText_Vermilion },
+    { gText_BoonIsland },
+    { gText_KinIsland },
+    { gText_Exit }
+};
+
+static const struct MenuAction MultichoiceList_SeagallopV13[] = {
+    { gText_Vermilion },
+    { gText_KnotIsland },
+    { gText_KinIsland },
+    { gText_Exit }
+};
+
+static const struct MenuAction MultichoiceList_SeagallopV12[] = {
+    { gText_Vermilion },
+    { gText_KnotIsland },
+    { gText_BoonIsland },
+    { gText_Exit }
+};
+
+static const struct MenuAction MultichoiceList_SeagallopVermilion[] = {
+    { gText_Vermilion },
+    { gText_Exit }
+};
+
 static const struct MenuAction MultichoiceList_UnusedSSTidal1[] =
 {
     {gText_SouthernIsland},
@@ -925,7 +958,11 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SLATEPORT_TENT_RULES]       = MULTICHOICE(MultichoiceList_SlateportTentRules),
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
-    [MULTI_GAME_CORNER_DOLLS2]          = MULTICHOICE(MultichoiceList_GameCornerDolls2),
+    [MULTI_GAME_CORNER_DOLLS2]         = MULTICHOICE(MultichoiceList_GameCornerDolls2),
+    [MULTI_SEAGALLOP_123]              = MULTICHOICE(MultichoiceList_Seagallop123),
+    [MULTI_SEAGALLOP_V23]              = MULTICHOICE(MultichoiceList_SeagallopV23),
+    [MULTI_SEAGALLOP_V13]              = MULTICHOICE(MultichoiceList_SeagallopV13),
+    [MULTI_SEAGALLOP_V12]              = MULTICHOICE(MultichoiceList_SeagallopV12),
 };
 
 const u8 *const gStdStrings[] =

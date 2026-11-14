@@ -21,6 +21,7 @@
 #include "constants/items.h"
 #include "constants/script_menu.h"
 #include "constants/songs.h"
+#include "constants/seagallop.h"
 
 #include "data/script_menu.h"
 
@@ -1157,4 +1158,124 @@ int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width)
     }
 
     return adjustedLeft;
+}
+
+static const u8 *const sSeagallopDestStrings[] = {
+    [SEAGALLOP_VERMILION_CITY] = gText_Vermilion,
+    [SEAGALLOP_KNOT_ISLAND]     = gText_OneIsland,
+    [SEAGALLOP_BOON_ISLAND]     = gText_TwoIsland,
+    [SEAGALLOP_KIN_ISLAND]   = gText_ThreeIsland,
+    [SEAGALLOP_FLOE_ISLAND]    = gText_FourIsland,
+    [SEAGALLOP_CHRONO_ISLAND]    = gText_FiveIsland,
+    [SEAGALLOP_FORTUNE_ISLAND]     = gText_SixIsland,
+    [SEAGALLOP_QUEST_ISLAND]   = gText_SevenIsland,
+};
+
+void DrawSeagallopDestinationMenu(void)
+{
+    // 8004 = Starting location
+    // 8005 = Page (0: Verm, One, Two, Three, Four, Other, Exit; 1: Four, Five, Six, Seven, Other, Exit)
+    u8 destinationId;
+    u8 top;
+    u8 numItems;
+    u8 cursorWidth;
+    u8 fontHeight;
+    u8 windowId;
+    u32 i;
+    gSpecialVar_Result = SCR_MENU_UNSET;
+
+    if (QL_AvoidDisplay(QL_DestroyAbortedDisplay) == TRUE)
+        return;
+
+    if (gSpecialVar_0x8005 == 1)
+    {
+        if (gSpecialVar_0x8004 < SEAGALLOP_CHRONO_ISLAND)
+            destinationId = SEAGALLOP_CHRONO_ISLAND;
+        else
+            destinationId = SEAGALLOP_FLOE_ISLAND;
+        numItems = 5;
+        top = 2;
+    }
+    else
+    {
+        destinationId = SEAGALLOP_VERMILION_CITY;
+        numItems = 6;
+        top = 0;
+    }
+    cursorWidth = GetMenuCursorDimensionByFont(FONT_NORMAL, 0);
+    fontHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT);
+    windowId = CreateWindowFromRect(17, top, 11, numItems * 2);
+    SetStdWindowBorderStyle(windowId, FALSE);
+    
+    // -2 excludes "Other" and "Exit", appended after the loop
+    for (i = 0; i < numItems - 2; i++)
+    {
+        if (destinationId != gSpecialVar_0x8004)
+            AddTextPrinterParameterized(windowId, FONT_NORMAL, sSeagallopDestStrings[destinationId], cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+        else
+            i--;
+        destinationId++;
+
+        // Wrap around
+        if (destinationId == SEAGALLOP_QUEST_ISLAND + 1)
+            destinationId = SEAGALLOP_VERMILION_CITY;
+    }
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Other, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+    i++;
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gOtherText_Exit, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+    Menu_InitCursor(windowId, FONT_NORMAL, 0, 2, 16, numItems, 0);
+    CreateMCMenuInputHandlerTask(FALSE, numItems, windowId, MULTICHOICE_NONE);
+    ScheduleBgCopyTilemapToVram(0);
+}
+
+u16 GetSelectedSeagallopDestination(void)
+{
+    // 8004 = Starting location
+    // 8005 = Page (0: Verm, One, Two, Three, Four, Other, Exit; 1: Four, Five, Six, Seven, Other, Exit)
+    if (gSpecialVar_Result == SCR_MENU_CANCEL)
+        return SCR_MENU_CANCEL;
+    if (gSpecialVar_0x8005 == 1)
+    {
+        if (gSpecialVar_Result == 3)
+        {
+            return SEAGALLOP_MORE;
+        }
+        else if (gSpecialVar_Result == 4)
+        {
+            return SCR_MENU_CANCEL;
+        }
+        else if (gSpecialVar_Result == 0)
+        {
+            if (gSpecialVar_0x8004 > SEAGALLOP_FLOE_ISLAND)
+                return SEAGALLOP_FLOE_ISLAND;
+            else
+                return SEAGALLOP_CHRONO_ISLAND;
+        }
+        else if (gSpecialVar_Result == 1)
+        {
+            if (gSpecialVar_0x8004 > SEAGALLOP_CHRONO_ISLAND)
+                return SEAGALLOP_CHRONO_ISLAND;
+            else
+                return SEAGALLOP_FORTUNE_ISLAND;
+        }
+        else if (gSpecialVar_Result == 2)
+        {
+            if (gSpecialVar_0x8004 > SEAGALLOP_FORTUNE_ISLAND)
+                return SEAGALLOP_FORTUNE_ISLAND;
+            else
+                return SEAGALLOP_QUEST_ISLAND;
+        }
+    }
+    else
+    {
+        if (gSpecialVar_Result == 4)
+            return SEAGALLOP_MORE;
+        else if (gSpecialVar_Result == 5)
+            return SCR_MENU_CANCEL;
+        else if (gSpecialVar_Result >= gSpecialVar_0x8004)
+            return gSpecialVar_Result + 1;
+        else
+            return gSpecialVar_Result;
+    }
+    return SEAGALLOP_VERMILION_CITY;
 }

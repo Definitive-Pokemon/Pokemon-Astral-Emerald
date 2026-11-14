@@ -577,4 +577,7 @@ gSpecials::
 	def_special UpdateGymLeaderRematch
 	def_special AstralTrainerTeamsEnabled
 	def_special PlayerHasMESpeciesOrItem
-
+	def_special DoSeagallopFerryScene
+	def_special DrawSeagallopDestinationMenu
+	def_special GetSelectedSeagallopDestination
+	def_special GetSeagallopNumber

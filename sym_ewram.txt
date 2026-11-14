@@ -18,6 +18,7 @@
 	.include "src/mystery_gift_view.o"
 	.include "src/mystery_gift_server.o"
 	.include "src/mystery_gift_client.o"
+	.include "src/seagallop.o"
 	.include "src/union_room_chat.o"
 	.include "src/berry_crush.o"
 	.include "src/berry_powder.o"

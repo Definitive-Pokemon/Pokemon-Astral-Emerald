@@ -902,6 +902,14 @@ extern const u8 gText_SouthernIsland[];
 extern const u8 gText_NavelRock[];
 extern const u8 gText_BirthIsland[];
 extern const u8 gText_FarawayIsland[];
+extern const u8 gText_KnotIsland[];
+extern const u8 gText_BoonIsland[];
+extern const u8 gText_KnotIsland[];
+extern const u8 gText_KinIsland[];
+extern const u8 gText_FloeIsland[];
+extern const u8 gText_ChronoIsland[];
+extern const u8 gText_FortuneIsland[];
+extern const u8 gText_QuestIsland[];
 
 extern const u8 gText_BattleTrainers[];
 extern const u8 gText_BattleBasics[];

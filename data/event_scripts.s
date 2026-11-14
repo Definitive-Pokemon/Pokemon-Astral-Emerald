@@ -53,6 +53,7 @@
 #include "constants/trainer_hill.h"
 #include "constants/trainers.h"
 #include "constants/tv.h"
+#include "constants/seagallop.h"
 #include "constants/union_room.h"
 #include "constants/vars.h"
 #include "constants/weather.h"
@@ -1083,6 +1084,9 @@ Common_EventScript_LegendaryRanAway::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/change_deoxys_form.inc"
+
+	.include "data/scripts/seagallop.inc"
+	.include "data/text/seagallop.inc"
 
 	.include "data/maps/ShoalCave_LowTideIceRoom_Suicune/scripts.inc"
 
