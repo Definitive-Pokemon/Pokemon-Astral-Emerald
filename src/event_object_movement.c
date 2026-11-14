@@ -494,6 +494,7 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
 #define OBJ_EVENT_PAL_TAG_CASTFORM_RAINY          0x1126
 #define OBJ_EVENT_PAL_TAG_CASTFORM_SNOWY          0x1127
 #define OBJ_EVENT_PAL_TAG_RAYQUAZA                0x1128
+#define OBJ_EVENT_PAL_TAG_SEAGALLOP               0x1129
 #if OW_MON_POKEBALLS
 // Vanilla
 #define OBJ_EVENT_PAL_TAG_BALL_MASTER             0x1150
@@ -595,6 +596,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_CastformRainy, OBJ_EVENT_PAL_TAG_CASTFORM_RAINY},
     {gObjectEventPal_CastformSnowy, OBJ_EVENT_PAL_TAG_CASTFORM_SNOWY},
     {gObjectEventPal_Rayquaza, OBJ_EVENT_PAL_TAG_RAYQUAZA},
+    {gObjectEventPal_Seagallop,             OBJ_EVENT_PAL_TAG_SEAGALLOP},
     #if OW_MON_POKEBALLS
     // Vanilla
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
@@ -706,6 +708,13 @@ static const u16 sReflectionPaletteTags_MovingBox[] = {
     OBJ_EVENT_PAL_TAG_MOVING_BOX,
 };
 
+static const u16 sReflectionPaletteTags_Seagallop[] = {
+    OBJ_EVENT_PAL_TAG_SEAGALLOP,
+    OBJ_EVENT_PAL_TAG_SEAGALLOP,
+    OBJ_EVENT_PAL_TAG_SEAGALLOP,
+    OBJ_EVENT_PAL_TAG_SEAGALLOP,
+};
+
 static const u16 sReflectionPaletteTags_CableCar[] = {
     OBJ_EVENT_PAL_TAG_CABLE_CAR,
     OBJ_EVENT_PAL_TAG_CABLE_CAR,
@@ -769,6 +778,7 @@ static const struct PairedPalettes sSpecialObjectReflectionPaletteSets[] = {
     {OBJ_EVENT_PAL_TAG_NPC_3,            sReflectionPaletteTags_Npc3},
     {OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW, sReflectionPaletteTags_SubmarineShadow},
     {OBJ_EVENT_PAL_TAG_RED_LEAF,         sReflectionPaletteTags_RedLeaf},
+    {OBJ_EVENT_PAL_TAG_SEAGALLOP,        sReflectionPaletteTags_Seagallop},
     {OBJ_EVENT_PAL_TAG_NONE,             NULL},
 };
 
