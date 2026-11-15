@@ -108,8 +108,6 @@ EventScript_SetSail::
 	end
 
 EventScript_CancelSail::
-	specialvar VAR_RESULT, IsPlayerLeftOfVermilionSailor
-	goto_if_eq VAR_RESULT, TRUE, VermilionCity_EventScript_WalkUpPier
 	release
 	end
 

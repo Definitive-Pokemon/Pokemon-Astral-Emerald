@@ -14,7 +14,6 @@
 #include "trainer_pokemon_sprites.h"
 #include "text_window.h"
 #include "task.h"
-#include "help_system.h"
 #include "overworld.h"
 #include "event_data.h"
 #include "field_screen_effect.h"
@@ -463,20 +462,9 @@ u8 GetSeagallopNumber(void)
     originId = gSpecialVar_0x8004;
     destId = gSpecialVar_0x8006;
 
-    if (gMapHeader.regionMapSectionId == MAPSEC_FARAWAY_ISLAND)
-        return 14;
-
-    if (gMapHeader.regionMapSectionId == MAPSEC_BATTLE_FRONTIER || gMapHeader.regionMapSectionId == MAPSEC_SOUTHERN_ISLAND)
-        return 13;
-
     if (originId == SEAGALLOP_VERMILION_CITY || destId == SEAGALLOP_VERMILION_CITY)
         return 7;
 
-    if (originId == SEAGALLOP_NAVEL_ROCK || destId == SEAGALLOP_NAVEL_ROCK)
-        return 10;
-
-    if (originId == SEAGALLOP_BIRTH_ISLAND || destId == SEAGALLOP_BIRTH_ISLAND)
-        return 12;
 
     if ((originId == SEAGALLOP_KNOT_ISLAND 
       || originId == SEAGALLOP_BOON_ISLAND 
@@ -499,14 +487,4 @@ u8 GetSeagallopNumber(void)
         return 5;
 
     return 6;
-}
-
-bool8 IsPlayerLeftOfVermilionSailor(void)
-{
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(VERMILION_CITY) 
-       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(VERMILION_CITY) 
-       && gSaveBlock1Ptr->pos.x < 24)
-        return TRUE;
-
-    return FALSE;
 }
