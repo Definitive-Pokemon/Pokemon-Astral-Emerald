@@ -31,7 +31,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
+      "graphics_id": "OBJ_EVENT_GFX_MOTOR_BIKER",
       "x": 5,
       "y": 8,
       "elevation": 3,

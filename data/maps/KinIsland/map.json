@@ -54,7 +54,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
+      "graphics_id": "OBJ_EVENT_GFX_MOTOR_BIKER",
       "x": 8,
       "y": 24,
       "elevation": 3,
@@ -68,7 +68,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
+      "graphics_id": "OBJ_EVENT_GFX_MOTOR_BIKER",
       "x": 9,
       "y": 23,
       "elevation": 3,
@@ -82,7 +82,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
+      "graphics_id": "OBJ_EVENT_GFX_MOTOR_BIKER",
       "x": 9,
       "y": 24,
       "elevation": 3,
@@ -96,7 +96,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
+      "graphics_id": "OBJ_EVENT_GFX_MOTOR_BIKER",
       "x": 10,
       "y": 22,
       "elevation": 3,
@@ -110,7 +110,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
+      "graphics_id": "OBJ_EVENT_GFX_MOTOR_BIKER",
       "x": 10,
       "y": 24,
       "elevation": 3,
@@ -124,7 +124,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
+      "graphics_id": "OBJ_EVENT_GFX_MOTOR_BIKER",
       "x": 11,
       "y": 23,
       "elevation": 3,
@@ -208,7 +208,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRANBULL)",
+      "graphics_id": "OBJ_EVENT_GFX_MOTOR_BIKER",
       "x": 15,
       "y": 31,
       "elevation": 3,
