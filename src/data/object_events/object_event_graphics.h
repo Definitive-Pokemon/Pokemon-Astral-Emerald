@@ -881,6 +881,11 @@ const u32 gObjectEventPic_Matt[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_Shelly[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/shelly.4bpp");
 const u32 gObjectEventPic_Tabitha[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/tabitha.4bpp");
 const u32 gObjectEventPic_Courtney[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/courtney.4bpp");
+const u32 gObjectEventPic_MotorBiker[] = INCBIN_U32("graphics/object_events/pics/people/biker.4bpp");
+const u32 gObjectEventPic_RocketGruntM[] = INCBIN_U32("graphics/object_events/pics/people/team_rocket/grunt_m.4bpp");
+const u32 gObjectEventPic_RocketGruntF[] = INCBIN_U32("graphics/object_events/pics/people/team_rocket/grunt_f.4bpp");
+const u32 gObjectEventPic_AdminM[] = INCBIN_U32("graphics/object_events/pics/people/team_rocket/admin_m.4bpp");
+const u32 gObjectEventPic_AdminF[] = INCBIN_U32("graphics/object_events/pics/people/team_rocket/admin_f.4bpp");
 const u16 gObjectEventPal_Seagallop[] = INCBIN_U16("graphics/object_events/palettes/seagallop.gbapal");
 const u16 gObjectEventPic_Seagallop[] = INCBIN_U16("graphics/object_events/pics/misc/seagallop.4bpp");
 #if OW_MON_POKEBALLS

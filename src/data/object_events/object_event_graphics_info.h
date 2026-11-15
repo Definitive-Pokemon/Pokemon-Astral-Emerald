@@ -345,12 +345,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Courtney = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MotorBiker = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
-    .width = 16,
+    .width = 32,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_2,
+    .paletteSlot = PALSLOT_NPC_3,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .compressed = FALSE,
@@ -358,7 +358,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MotorBiker = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Courtney,
+    .images = sPicTable_MotorBiker,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -377,7 +377,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketGruntM = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Courtney,
+    .images = sPicTable_RocketGruntM,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketGruntF = {
@@ -395,7 +395,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketGruntF = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Courtney,
+    .images = sPicTable_RocketGruntF,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AdminM = {
@@ -413,7 +413,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AdminM = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Courtney,
+    .images = sPicTable_AdminM,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AdminF = {
@@ -431,7 +431,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AdminF = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_Courtney,
+    .images = sPicTable_AdminF,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
