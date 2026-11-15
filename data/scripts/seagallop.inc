@@ -7,7 +7,7 @@ EventScript_ChooseDestFromOneIsland::
 	case 0, EventScript_SailToTwoIsland2
 	case 1, EventScript_SailToThreeIsland2
 	case 2, EventScript_CancelSail
-	case SCR_MENU_CANCEL, EventScript_CancelSail
+	case 255, EventScript_CancelSail
 	end
 
 EventScript_ChooseDestFromOneIslandVermilionAllowed::
@@ -17,7 +17,7 @@ EventScript_ChooseDestFromOneIslandVermilionAllowed::
 	case 1, EventScript_SailToTwoIsland2
 	case 2, EventScript_SailToThreeIsland2
 	case 3, EventScript_CancelSail
-	case SCR_MENU_CANCEL, EventScript_CancelSail
+	case 255, EventScript_CancelSail
 	end
 
 EventScript_ChooseDestFromTwoIsland::
@@ -28,7 +28,7 @@ EventScript_ChooseDestFromTwoIsland::
 	case 0, EventScript_SailToOneIsland2
 	case 1, EventScript_SailToThreeIsland2
 	case 2, EventScript_CancelSail
-	case SCR_MENU_CANCEL, EventScript_CancelSail
+	case 255, EventScript_CancelSail
 	end
 
 EventScript_ChooseDestFromTwoIslandVermilionAllowed::
@@ -38,7 +38,7 @@ EventScript_ChooseDestFromTwoIslandVermilionAllowed::
 	case 1, EventScript_SailToOneIsland2
 	case 2, EventScript_SailToThreeIsland2
 	case 3, EventScript_CancelSail
-	case SCR_MENU_CANCEL, EventScript_CancelSail
+	case 255, EventScript_CancelSail
 	end
 
 EventScript_SailToVermilion2::
@@ -69,7 +69,7 @@ EventScript_ChooseDestFromIsland::
 	case 0, EventScript_SailToOneIsland2
 	case 1, EventScript_SailToTwoIsland2
 	case 2, EventScript_CancelSail
-	case SCR_MENU_CANCEL, EventScript_CancelSail
+	case 255, EventScript_CancelSail
 	end
 
 EventScript_ChooseDestFromIslandVermilionAllowed::
@@ -79,7 +79,7 @@ EventScript_ChooseDestFromIslandVermilionAllowed::
 	case 1, EventScript_SailToOneIsland2
 	case 2, EventScript_SailToTwoIsland2
 	case 3, EventScript_CancelSail
-	case SCR_MENU_CANCEL, EventScript_CancelSail
+	case 255, EventScript_CancelSail
 	end
 
 EventScript_SailToDest::
@@ -135,7 +135,7 @@ EventScript_SeviiDestinationsPage1::
 	case SEAGALLOP_KIN_ISLAND,   EventScript_SailToThreeIsland
 	case SEAGALLOP_FLOE_ISLAND,	EventScript_SailToFourIsland
 	case SEAGALLOP_MORE,		   EventScript_SeviiDestinationsPage2
-	case SCR_MENU_CANCEL,		  EventScript_CancelSail
+	case 255,		  EventScript_CancelSail
 	end
 
 EventScript_SeviiDestinationsPage2::
@@ -149,7 +149,7 @@ EventScript_SeviiDestinationsPage2::
 	case SEAGALLOP_FORTUNE_ISLAND,   EventScript_SailToSixIsland
 	case SEAGALLOP_QUEST_ISLAND, EventScript_SailToSevenIsland
 	case SEAGALLOP_MORE,		 EventScript_SeviiDestinationsPage1
-	case SCR_MENU_CANCEL,		EventScript_CancelSail
+	case 255,		EventScript_CancelSail
 	end
 
 EventScript_SailToVermilionCity::
