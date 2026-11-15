@@ -1,6 +1,7 @@
 #include "global.h"
 #include "bg.h"
 #include "palette.h"
+#include "main.h"
 #include "gpu_regs.h"
 #include "dma3.h"
 #include "malloc.h"
@@ -18,6 +19,7 @@
 #include "event_data.h"
 #include "field_screen_effect.h"
 #include "field_weather.h"
+#include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/maps.h"
 #include "constants/region_map_sections.h"
@@ -70,15 +72,14 @@ static const struct BgTemplate sBGTemplates[] = {
 };
 
 static const s8 sSeag[][4] = {
-                                   // Map                     X     Y
-    [SEAGALLOP_VERMILION_CITY]  = {MAP(KNOT_ISLAND_HARBOR),      0x17, 0x20},
-    [SEAGALLOP_KNOT_ISLAND]      = {MAP(KNOT_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_BOON_ISLAND]      = {MAP(BOON_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_KIN_ISLAND]    = {MAP(KIN_ISLAND_HARBOR), 0x08, 0x05},
-    [SEAGALLOP_FLOE_ISLAND]     = {MAP(FLOE_ISLAND_HARBOR),  0x08, 0x05},
-    [SEAGALLOP_CHRONO_ISLAND]     = {MAP(CHRONO_ISLAND_HARBOR),  0x08, 0x05},
-    [SEAGALLOP_FORTUNE_ISLAND]      = {MAP(FORTUNE_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_QUEST_ISLAND]    = {MAP(QUEST_ISLAND_HARBOR), 0x08, 0x05}
+    [SEAGALLOP_VERMILION_CITY]  = {MAP_GROUP(KNOT_ISLAND_HARBOR), MAP_NUM(KNOT_ISLAND_HARBOR), 0x17, 0x20},
+    [SEAGALLOP_KNOT_ISLAND]      = {MAP_GROUP(KNOT_ISLAND_HARBOR), MAP_NUM(KNOT_ISLAND_HARBOR), 0x08, 0x05},
+    [SEAGALLOP_BOON_ISLAND]      = {MAP_GROUP(BOON_ISLAND_HARBOR), MAP_NUM(BOON_ISLAND_HARBOR), 0x08, 0x05},
+    [SEAGALLOP_KIN_ISLAND]    = {MAP_GROUP(KIN_ISLAND_HARBOR), MAP_NUM(KIN_ISLAND_HARBOR), 0x08, 0x05},
+    [SEAGALLOP_FLOE_ISLAND]     = {MAP_GROUP(FLOE_ISLAND_HARBOR), MAP_NUM(FLOE_ISLAND_HARBOR), 0x08, 0x05},
+    [SEAGALLOP_CHRONO_ISLAND]     = {MAP_GROUP(CHRONO_ISLAND_HARBOR), MAP_NUM(CHRONO_ISLAND_HARBOR), 0x08, 0x05},
+    [SEAGALLOP_FORTUNE_ISLAND]      = {MAP_GROUP(FORTUNE_ISLAND_HARBOR), MAP_NUM(FORTUNE_ISLAND_HARBOR), 0x08, 0x05},
+    [SEAGALLOP_QUEST_ISLAND]    = {MAP_GROUP(QUEST_ISLAND_HARBOR), MAP_NUM(QUEST_ISLAND_HARBOR), 0x08, 0x05}
 };
 
 // Bitpacked array.  In the commented section, right-most bit is the
@@ -178,7 +179,6 @@ static const struct SpriteTemplate sWakeSpriteTemplate = {
 void DoSeagallopFerryScene(void)
 {
     SetVBlankCallback(NULL);
-    HelpSystem_Disable();
     SetMainCallback2(CB2_SetUpSeagallopScene);
 }
 
@@ -301,7 +301,6 @@ static void Task_Seagallop_2(u8 taskId)
     if (BGMusicStopped() && !gPaletteFade.active)
     {
         Task_Seagallop_3();
-        HelpSystem_Enable();
         DestroyTask(taskId);
     }
 }
