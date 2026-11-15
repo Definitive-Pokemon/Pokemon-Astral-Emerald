@@ -1,8 +1,7 @@
 @ Separate selection menus for before the Rainbow Pass is obtained
 EventScript_ChooseDestFromOneIsland::
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, EventScript_SeviiDestinationsPage1
-	goto_if_ge VAR_MAP_SCENE_CINNABAR_ISLAND, 4, EventScript_ChooseDestFromOneIslandVermilionAllowed
-	multichoice 19, 6, MULTICHOICE_ISLAND_23, FALSE
+	@goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, EventScript_SeviiDestinationsPage1
+	multichoice 19, 6, MULTI_ISLAND_23, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_SailToTwoIsland2
 	case 1, EventScript_SailToThreeIsland2
@@ -11,7 +10,7 @@ EventScript_ChooseDestFromOneIsland::
 	end
 
 EventScript_ChooseDestFromOneIslandVermilionAllowed::
-	multichoice 19, 5, MULTICHOICE_SEAGALLOP_V23, FALSE
+	multichoice 19, 5, MULTI_SEAGALLOP_V23, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_SailToVermilion2
 	case 1, EventScript_SailToTwoIsland2
@@ -21,9 +20,8 @@ EventScript_ChooseDestFromOneIslandVermilionAllowed::
 	end
 
 EventScript_ChooseDestFromTwoIsland::
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, EventScript_SeviiDestinationsPage1
-	goto_if_ge VAR_MAP_SCENE_CINNABAR_ISLAND, 4, EventScript_ChooseDestFromTwoIslandVermilionAllowed
-	multichoice 19, 6, MULTICHOICE_ISLAND_13, FALSE
+	@goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, EventScript_SeviiDestinationsPage1
+	multichoice 19, 6, MULTI_ISLAND_13, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_SailToOneIsland2
 	case 1, EventScript_SailToThreeIsland2
@@ -32,7 +30,7 @@ EventScript_ChooseDestFromTwoIsland::
 	end
 
 EventScript_ChooseDestFromTwoIslandVermilionAllowed::
-	multichoice 19, 5, MULTICHOICE_SEAGALLOP_V13, FALSE
+	multichoice 19, 5, MULTI_ISLAND_V13, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_SailToVermilion2
 	case 1, EventScript_SailToOneIsland2
@@ -62,9 +60,8 @@ EventScript_SailToThreeIsland2::
 	end
 
 EventScript_ChooseDestFromIsland::
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, EventScript_SeviiDestinationsPage1
-	goto_if_ge VAR_MAP_SCENE_CINNABAR_ISLAND, 4, EventScript_ChooseDestFromIslandVermilionAllowed
-	multichoice 19, 6, MULTICHOICE_ISLAND_12, FALSE
+	@goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, EventScript_SeviiDestinationsPage1
+	multichoice 19, 6, MULTI_ISLAND_12, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_SailToOneIsland2
 	case 1, EventScript_SailToTwoIsland2
@@ -73,7 +70,7 @@ EventScript_ChooseDestFromIsland::
 	end
 
 EventScript_ChooseDestFromIslandVermilionAllowed::
-	multichoice 19, 5, MULTICHOICE_SEAGALLOP_V12, FALSE
+	multichoice 19, 5, MULTI_ISLAND_V12, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_SailToVermilion2
 	case 1, EventScript_SailToOneIsland2
