@@ -127,6 +127,9 @@
 #define MULTI_SEAGALLOP_V23                116
 #define MULTI_SEAGALLOP_V13                117
 #define MULTI_SEAGALLOP_V12                118
+#define MULTI_SEAGALLOP_23                 119
+#define MULTI_SEAGALLOP_13                 120
+#define MULTI_SEAGALLOP_12                 121
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
