@@ -588,28 +588,28 @@ static const struct MenuAction MultichoiceList_Seagallop123[] = {
 };
 
 static const struct MenuAction MultichoiceList_SeagallopV23[] = {
-    { gText_Vermilion },
+    { gText_BoonIsland },
     { gText_BoonIsland },
     { gText_KinIsland },
     { gText_Exit }
 };
 
 static const struct MenuAction MultichoiceList_SeagallopV13[] = {
-    { gText_Vermilion },
+    { gText_BoonIsland },
     { gText_KnotIsland },
     { gText_KinIsland },
     { gText_Exit }
 };
 
 static const struct MenuAction MultichoiceList_SeagallopV12[] = {
-    { gText_Vermilion },
+    { gText_BoonIsland },
     { gText_KnotIsland },
     { gText_BoonIsland },
     { gText_Exit }
 };
 
 static const struct MenuAction MultichoiceList_SeagallopVermilion[] = {
-    { gText_Vermilion },
+    { gText_BoonIsland },
     { gText_Exit }
 };
 

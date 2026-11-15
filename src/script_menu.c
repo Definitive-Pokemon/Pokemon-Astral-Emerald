@@ -1217,7 +1217,7 @@ void DrawSeagallopDestinationMenu(void)
         if (destinationId == SEAGALLOP_QUEST_ISLAND + 1)
             destinationId = SEAGALLOP_VERMILION_CITY;
     }
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Others, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Others2, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
     i++;
     AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Exit, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
     InitMenuNormal(windowId, FONT_NORMAL, 0, 2, 16, numItems, 0);
