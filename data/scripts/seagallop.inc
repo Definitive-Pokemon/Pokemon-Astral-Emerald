@@ -87,7 +87,7 @@ EventScript_SailToDest::
 	end
 
 EventScript_DepartingVermilion::
-	msgbox VermilionCity_Text_Seagallop7Departing
+
 	goto EventScript_SetSail
 	end
 
