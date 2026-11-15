@@ -1,5 +1,15 @@
 #include "global.h"
-#include "gflib.h"
+#include "bg.h"
+#include "palette.h"
+#include "gpu_regs.h"
+#include "dma3.h"
+#include "malloc.h"
+#include "sound.h"
+#include "text.h"
+#include "sprite.h"
+#include "window.h"
+#include "blit.h"
+#include "string_util.h"
 #include "scanline_effect.h"
 #include "trainer_pokemon_sprites.h"
 #include "text_window.h"
@@ -62,20 +72,14 @@ static const struct BgTemplate sBGTemplates[] = {
 
 static const s8 sSeag[][4] = {
                                    // Map                     X     Y
-    [SEAGALLOP_VERMILION_CITY]  = {MAP(VERMILION_CITY),      0x17, 0x20},
-    [SEAGALLOP_KNOT_ISLAND]      = {MAP(ONE_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_BOON_ISLAND]      = {MAP(TWO_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_KIN_ISLAND]    = {MAP(THREE_ISLAND_HARBOR), 0x08, 0x05},
-    [SEAGALLOP_FLOE_ISLAND]     = {MAP(FOUR_ISLAND_HARBOR),  0x08, 0x05},
-    [SEAGALLOP_CHRONO_ISLAND]     = {MAP(FIVE_ISLAND_HARBOR),  0x08, 0x05},
-    [SEAGALLOP_FORTUNE_ISLAND]      = {MAP(SIX_ISLAND_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_QUEST_ISLAND]    = {MAP(SEVEN_ISLAND_HARBOR), 0x08, 0x05},
-    [SEAGALLOP_CINNABAR_ISLAND] = {MAP(CINNABAR_ISLAND),     0x11, 0x17},
-    [SEAGALLOP_NAVEL_ROCK]      = {MAP(NAVEL_ROCK_HARBOR),   0x08, 0x05},
-    [SEAGALLOP_BIRTH_ISLAND]    = {MAP(BIRTH_ISLAND_HARBOR), 0x08, 0x05},
-    [SEAGALLOP_FARAWAY_ISLAND]  = {MAP(FARAWAY_ISLAND_EXTERIOR), 13, 38},
-    [SEAGALLOP_BATTLE_TOWER]    = {MAP(RS_BATTLE_TOWER),     19, 24},
-    [SEAGALLOP_SOUTHERN_ISLAND] = {MAP(SOUTHERN_ISLAND_EXTERIOR), 13, 22}
+    [SEAGALLOP_VERMILION_CITY]  = {MAP(KNOT_ISLAND_HARBOR),      0x17, 0x20},
+    [SEAGALLOP_KNOT_ISLAND]      = {MAP(KNOT_ISLAND_HARBOR),   0x08, 0x05},
+    [SEAGALLOP_BOON_ISLAND]      = {MAP(BOON_ISLAND_HARBOR),   0x08, 0x05},
+    [SEAGALLOP_KIN_ISLAND]    = {MAP(KIN_ISLAND_HARBOR), 0x08, 0x05},
+    [SEAGALLOP_FLOE_ISLAND]     = {MAP(FLOE_ISLAND_HARBOR),  0x08, 0x05},
+    [SEAGALLOP_CHRONO_ISLAND]     = {MAP(CHRONO_ISLAND_HARBOR),  0x08, 0x05},
+    [SEAGALLOP_FORTUNE_ISLAND]      = {MAP(FORTUNE_ISLAND_HARBOR),   0x08, 0x05},
+    [SEAGALLOP_QUEST_ISLAND]    = {MAP(QUEST_ISLAND_HARBOR), 0x08, 0x05}
 };
 
 // Bitpacked array.  In the commented section, right-most bit is the
@@ -97,9 +101,6 @@ static const u16 sTravelDirectionMatrix[] = {
     [SEAGALLOP_CHRONO_ISLAND]     = 0x4c0, // 10011000000
     [SEAGALLOP_FORTUNE_ISLAND]      = 0x400, // 10000000000
     [SEAGALLOP_QUEST_ISLAND]    = 0x440, // 10001000000
-    [SEAGALLOP_CINNABAR_ISLAND] = 0x7ff, // 11111111111
-    [SEAGALLOP_NAVEL_ROCK]      = 0x6e0, // 11011100000
-    [SEAGALLOP_BIRTH_ISLAND]    = 0x000  // 00000000000
 };
 
 static const union AnimCmd sSpriteAnims_Ferry_WB[] = {
@@ -461,9 +462,6 @@ u8 GetSeagallopNumber(void)
 
     originId = gSpecialVar_0x8004;
     destId = gSpecialVar_0x8006;
-
-    if (originId == SEAGALLOP_CINNABAR_ISLAND || destId == SEAGALLOP_CINNABAR_ISLAND)
-        return 1;
 
     if (gMapHeader.regionMapSectionId == MAPSEC_FARAWAY_ISLAND)
         return 14;
