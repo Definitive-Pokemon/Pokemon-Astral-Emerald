@@ -7,7 +7,7 @@
 #include "help_system.h"
 #include "overworld.h"
 #include "event_data.h"
-#include "field_fadetransition.h"
+#include "field_screen_effect.h"
 #include "field_weather.h"
 #include "constants/songs.h"
 #include "constants/maps.h"
