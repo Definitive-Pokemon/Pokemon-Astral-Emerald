@@ -1025,7 +1025,7 @@ const struct Tileset gTileset_MtEmber =
     .palettes = gTilesetPalettes_MtEmber,
     .metatiles = gMetatiles_MtEmber,
     .metatileAttributes = gMetatileAttributes_MtEmber,
-    .callback = NULL,
+    .callback = InitTilesetAnim_MtEmber,
 };
 
 const struct Tileset gTileset_FRNavelRock =

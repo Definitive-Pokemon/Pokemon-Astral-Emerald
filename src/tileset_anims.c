@@ -46,6 +46,7 @@ static void TilesetAnim_BattleDome(u16);
 static void TilesetAnim_SeviiGeneral(u16);
 static void TilesetAnim_SeviiIslands67(u16);
 static void TilesetAnim_SeviiIslands5(u16);
+static void TilesetAnim_MtEmber(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
@@ -609,6 +610,18 @@ static const u16 *const gTilesetAnims_Mossdeep_Tree_Base[] = {
     gTilesetAnims_Mossdeep_Tree_Base_Frame7
 };
 
+static const u16 sTilesetAnims_MtEmber_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/mt_ember/anim/steam/0.4bpp");
+static const u16 sTilesetAnims_MtEmber_Steam_Frame1[] = INCBIN_U16("data/tilesets/secondary/mt_ember/anim/steam/1.4bpp");
+static const u16 sTilesetAnims_MtEmber_Steam_Frame2[] = INCBIN_U16("data/tilesets/secondary/mt_ember/anim/steam/2.4bpp");
+static const u16 sTilesetAnims_MtEmber_Steam_Frame3[] = INCBIN_U16("data/tilesets/secondary/mt_ember/anim/steam/3.4bpp");
+
+static const u16 *const sTilesetAnims_MtEmber_Steam[] = {
+    sTilesetAnims_MtEmber_Steam_Frame0,
+    sTilesetAnims_MtEmber_Steam_Frame1,
+    sTilesetAnims_MtEmber_Steam_Frame2,
+    sTilesetAnims_MtEmber_Steam_Frame3
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -887,7 +900,7 @@ void InitTilesetAnim_BikeShop(void)
 
 void InitTilesetAnim_SeviiGeneral(void)
 {
-    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounter = sPrimaryTilesetAnimCounter;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
     sSecondaryTilesetAnimCallback = TilesetAnim_SeviiGeneral;
 }
@@ -895,15 +908,22 @@ void InitTilesetAnim_SeviiGeneral(void)
 void InitTilesetAnim_SeviiIslands67(void)
 {
     sSecondaryTilesetAnimCounter = 0;
-    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
     sSecondaryTilesetAnimCallback = TilesetAnim_SeviiIslands67;
 }
 
 void InitTilesetAnim_SeviiIslands5(void)
 {
-    sSecondaryTilesetAnimCounter = sPrimaryTilesetAnimCounter;
+    sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
     sSecondaryTilesetAnimCallback = TilesetAnim_SeviiIslands5;
+}
+
+void InitTilesetAnim_MtEmber(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_MtEmber;
 }
 
 void InitTilesetAnim_BattlePyramid(void)
@@ -1328,3 +1348,16 @@ static void TilesetAnim_SeviiIslands5(u16 timer)
     if (timer % 16 == 2)
         QueueAnimTiles_SeviiIslands5_ShortGrassFlower(timer >> 4);
 }
+
+static void QueueAnimTiles_MtEmber_Steam(u16 timer)
+{
+    AppendTilesetAnimToBuffer(sTilesetAnims_MtEmber_Steam[timer % ARRAY_COUNT(sTilesetAnims_MtEmber_Steam)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x380)), 8 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_MtEmber(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_MtEmber_Steam(timer / 16);
+}
+
+
