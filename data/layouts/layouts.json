@@ -4076,8 +4076,8 @@
       "name": "IslandHarbor_Layout",
       "width": 17,
       "height": 13,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
+      "primary_tileset": "gTileset_SeviiGeneral",
+      "secondary_tileset": "gTileset_SeviiIslandHarbor",
       "border_filepath": "data/layouts/IslandHarbor/border.bin",
       "blockdata_filepath": "data/layouts/IslandHarbor/map.bin"
     },
@@ -4612,16 +4612,6 @@
       "blockdata_filepath": "data/layouts/KnotIsland/map.bin"
     },
     {
-      "id": "LAYOUT_KNOT_ISLAND_HARBOR",
-      "name": "KnotIsland_Harbor_Layout",
-      "width": 17,
-      "height": 12,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/KnotIsland_Harbor/border.bin",
-      "blockdata_filepath": "data/layouts/KnotIsland_Harbor/map.bin"
-    },
-    {
       "id": "LAYOUT_KNOT_ISLAND_POKEMON_CENTER_1F",
       "name": "KnotIsland_PokemonCenter_1F_Layout",
       "width": 14,
@@ -4862,16 +4852,6 @@
       "blockdata_filepath": "data/layouts/BoonIsland_PokemonCenter_2F/map.bin"
     },
     {
-      "id": "LAYOUT_BOON_ISLAND_HARBOR",
-      "name": "BoonIsland_Harbor_Layout",
-      "width": 17,
-      "height": 12,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/BoonIsland_Harbor/border.bin",
-      "blockdata_filepath": "data/layouts/BoonIsland_Harbor/map.bin"
-    },
-    {
       "id": "LAYOUT_BOON_ISLAND_CAPE_BRINK_HOUSE",
       "name": "BoonIsland_CapeBrink_House_Layout",
       "width": 11,
@@ -5022,16 +5002,6 @@
       "blockdata_filepath": "data/layouts/KinIsland_House5/map.bin"
     },
     {
-      "id": "LAYOUT_KIN_ISLAND_HARBOR",
-      "name": "KinIsland_Harbor_Layout",
-      "width": 17,
-      "height": 12,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/KinIsland_Harbor/border.bin",
-      "blockdata_filepath": "data/layouts/KinIsland_Harbor/map.bin"
-    },
-    {
       "id": "LAYOUT_FLOE_ISLAND",
       "name": "FloeIsland_Layout",
       "width": 48,
@@ -5100,16 +5070,6 @@
       "secondary_tileset": "gTileset_FRSafariZone",
       "border_filepath": "data/layouts/FloeIsland_LoreleisHouse/border.bin",
       "blockdata_filepath": "data/layouts/FloeIsland_LoreleisHouse/map.bin"
-    },
-    {
-      "id": "LAYOUT_FLOE_ISLAND_HARBOR",
-      "name": "FloeIsland_Harbor_Layout",
-      "width": 17,
-      "height": 12,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/FloeIsland_Harbor/border.bin",
-      "blockdata_filepath": "data/layouts/FloeIsland_Harbor/map.bin"
     },
     {
       "id": "LAYOUT_FLOE_ISLAND_HOUSE2",
@@ -5392,16 +5352,6 @@
       "blockdata_filepath": "data/layouts/ChronoIsland_PokemonCenter_2F/map.bin"
     },
     {
-      "id": "LAYOUT_CHRONO_ISLAND_HARBOR",
-      "name": "ChronoIsland_Harbor_Layout",
-      "width": 17,
-      "height": 12,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/ChronoIsland_Harbor/border.bin",
-      "blockdata_filepath": "data/layouts/ChronoIsland_Harbor/map.bin"
-    },
-    {
       "id": "LAYOUT_CHRONO_ISLAND_HOUSE1",
       "name": "ChronoIsland_House1_Layout",
       "width": 11,
@@ -5510,16 +5460,6 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/FortuneIsland_PokemonCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/FortuneIsland_PokemonCenter_2F/map.bin"
-    },
-    {
-      "id": "LAYOUT_FORTUNE_ISLAND_HARBOR",
-      "name": "FortuneIsland_Harbor_Layout",
-      "width": 17,
-      "height": 12,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/FortuneIsland_Harbor/border.bin",
-      "blockdata_filepath": "data/layouts/FortuneIsland_Harbor/map.bin"
     },
     {
       "id": "LAYOUT_FORTUNE_ISLAND_HOUSE",
@@ -5740,16 +5680,6 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/QuestIsland_PokemonCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/QuestIsland_PokemonCenter_2F/map.bin"
-    },
-    {
-      "id": "LAYOUT_QUEST_ISLAND_HARBOR",
-      "name": "QuestIsland_Harbor_Layout",
-      "width": 17,
-      "height": 12,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/QuestIsland_Harbor/border.bin",
-      "blockdata_filepath": "data/layouts/QuestIsland_Harbor/map.bin"
     },
     {
       "id": "LAYOUT_QUEST_ISLAND_SEVAULT_CANYON_HOUSE",

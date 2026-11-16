@@ -50,7 +50,7 @@
       "x": 12,
       "y": 27,
       "elevation": 3,
-      "dest_map": "MAP_DYNAMIC",
+      "dest_map": "MAP_FLOE_ISLAND_HARBOR",
       "dest_warp_id": "0"
     },
     {
