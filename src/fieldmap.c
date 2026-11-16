@@ -52,7 +52,7 @@ static bool8 IsCoordInIncomingConnectingMap(int coord, int srcMax, int destMax, 
 
 #define GetBorderBlockAt(x, y)({                                                                   \
     u16 block;                                                                                     \
-    if (gMapHeader.mapLayoutId == LAYOUT_SLATEPORT_CITY) {                                \
+    if (gMapHeader.mapLayoutId == LAYOUT_KIN_ISLAND_BERRY_FOREST) {                                \
         u16 block;                                                                                 \
         s32 xprime;                                                                                \
         s32 yprime;                                                                                \
@@ -72,6 +72,7 @@ static bool8 IsCoordInIncomingConnectingMap(int coord, int srcMax, int destMax, 
         i += ((y + 1) & 1) * 2;                                                                    \
         block = gMapHeader.mapLayout->border[i] | MAPGRID_COLLISION_MASK;                          \
     }                                                                                              \
+    block = block | MAPGRID_COLLISION_MASK;                                                        \
 })
 
 #define AreCoordsWithinMapGridBounds(x, y) (x >= 0 && x < gBackupMapLayout.width && y >= 0 && y < gBackupMapLayout.height)
