@@ -473,6 +473,10 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_RegionMap;
     if (MetatileBehavior_IsRunningShoesManual(metatileBehavior) == TRUE)
         return EventScript_RunningShoesManual;
+    if (MetatileBehavior_IsPainting(metatileBehavior) == TRUE)
+        return EventScript_Painting;
+    if (MetatileBehavior_IsKitchen(metatileBehavior) == TRUE)
+        return EventScript_Kitchen;
     if (MetatileBehavior_IsPictureBookShelf(metatileBehavior) == TRUE)
         return EventScript_PictureBookShelf;
     if (MetatileBehavior_IsBookShelf(metatileBehavior) == TRUE)
@@ -825,9 +829,9 @@ static bool8 TryStartWarpEventScript(struct MapPosition *position, u16 metatileB
             DoSpinExitWarp();
             return TRUE;
         }
-        if (MetatileBehavior_IsMtPyreHole(metatileBehavior) == TRUE)
+        if (MetatileBehavior_IsHoleWarp(metatileBehavior) == TRUE)
         {
-            ScriptContext_SetupScript(EventScript_FallDownHoleMtPyre);
+            ScriptContext_SetupScript(EventScript_FallDownHole);
             return TRUE;
         }
         if (MetatileBehavior_IsMossdeepGymWarp(metatileBehavior) == TRUE)
@@ -850,7 +854,7 @@ static bool8 IsWarpMetatileBehavior(u16 metatileBehavior)
      && MetatileBehavior_IsLavaridgeB1FWarp(metatileBehavior) != TRUE
      && MetatileBehavior_IsLavaridge1FWarp(metatileBehavior) != TRUE
      && MetatileBehavior_IsAquaHideoutWarp(metatileBehavior) != TRUE
-     && MetatileBehavior_IsMtPyreHole(metatileBehavior) != TRUE
+     && MetatileBehavior_IsHoleWarp(metatileBehavior) != TRUE
      && MetatileBehavior_IsMossdeepGymWarp(metatileBehavior) != TRUE
      && MetatileBehavior_IsUnionRoomWarp(metatileBehavior) != TRUE)
         return FALSE;

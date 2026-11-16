@@ -25,3 +25,11 @@ Text_ShopShelf:
 Text_Blueprint:
 	.string "A blueprint of some sort?\n"
 	.string "It's too complicated!$"
+
+Text_Kitchen::
+	.string "It smells delicious!\n"
+	.string "Somebody's been cooking here.$"
+
+Text_Painting::
+	.string "It's a pretty picture of a POKéMON.\n"
+	.string "It looks like it's feeling good.$"

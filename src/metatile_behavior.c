@@ -21,7 +21,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_MOUNTAIN_TOP]                    = TILE_FLAG_UNUSED,
     [MB_BATTLE_PYRAMID_WARP]             = TILE_FLAG_UNUSED,
     [MB_MOSSDEEP_GYM_WARP]               = TILE_FLAG_UNUSED,
-    [MB_MT_PYRE_HOLE]                    = TILE_FLAG_UNUSED,
+    [MB_FALL_WARP]                       = TILE_FLAG_UNUSED,
     [MB_POND_WATER]                      = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_INTERIOR_DEEP_WATER]             = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_DEEP_WATER]                      = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
@@ -35,6 +35,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_SHOAL_CAVE_ENTRANCE]             = TILE_FLAG_UNUSED,
     [MB_ICE]                             = TILE_FLAG_UNUSED,
     [MB_SAND]                            = TILE_FLAG_UNUSED,
+    [MB_SAND_CAVE]                       = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_SEAWEED]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_UNUSED_23]                       = TILE_FLAG_UNUSED,
     [MB_ASHGRASS]                        = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
@@ -187,7 +188,7 @@ bool8 MetatileBehavior_IsPokeGrass(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsSandOrDeepSand(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_SAND || metatileBehavior == MB_DEEP_SAND)
+    if (metatileBehavior == MB_SAND || metatileBehavior == MB_DEEP_SAND || metatileBehavior == MB_SAND_CAVE)
         return TRUE;
     else
         return FALSE;
@@ -1170,9 +1171,9 @@ bool8 MetatileBehavior_IsSurfableFishableWater(u8 metatileBehavior)
         return FALSE;
 }
 
-bool8 MetatileBehavior_IsMtPyreHole(u8 metatileBehavior)
+bool8 MetatileBehavior_IsHoleWarp(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_MT_PYRE_HOLE)
+    if (metatileBehavior == MB_FALL_WARP)
         return TRUE;
     else
         return FALSE;
@@ -1472,4 +1473,18 @@ bool8 MetatileBehavior_IsRockStairs(u8 metatileBehavior)
         return FALSE;
 }
 
+bool8 MetatileBehavior_IsKitchen(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_KITCHEN)
+        return TRUE;
+    else
+        return FALSE;
+}
 
+bool8 MetatileBehavior_IsPainting(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_PAINTING)
+        return TRUE;
+    else
+        return FALSE;
+}

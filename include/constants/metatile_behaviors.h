@@ -16,7 +16,7 @@
 #define MB_MOUNTAIN_TOP 0x0C
 #define MB_BATTLE_PYRAMID_WARP 0x0D
 #define MB_MOSSDEEP_GYM_WARP 0x0E
-#define MB_MT_PYRE_HOLE 0x0F
+#define MB_FALL_WARP 0x0F
 #define MB_POND_WATER 0x10
 #define MB_INTERIOR_DEEP_WATER 0x11 // Used by interior maps; functionally the same as MB_DEEP_WATER
 #define MB_DEEP_WATER 0x12
@@ -31,7 +31,7 @@
 #define MB_STAIRS_OUTSIDE_ABANDONED_SHIP 0x1B
 #define MB_SHOAL_CAVE_ENTRANCE 0x1C
 #define MB_UNUSED_1D 0x1D
-#define MB_UNUSED_1E 0x1E
+#define MB_SAND_CAVE 0x1E
 #define MB_UNUSED_1F 0x1F
 #define MB_ICE 0x20
 #define MB_SAND 0x21
@@ -223,8 +223,8 @@
 #define MB_UNUSED_DB 0xDB
 #define MB_UNUSED_DC 0xDC
 #define MB_UNUSED_DD 0xDD
-#define MB_UNUSED_DE 0xDE
-#define MB_UNUSED_DF 0xDF
+#define MB_KITCHEN 0xDE
+#define MB_PAINTING 0xDF
 #define MB_PICTURE_BOOK_SHELF 0xE0
 #define MB_BOOKSHELF 0xE1
 #define MB_POKEMON_CENTER_BOOKSHELF 0xE2
