@@ -51,13 +51,26 @@ static bool8 IsCoordInIncomingConnectingMap(int coord, int srcMax, int destMax, 
 
 #define GetBorderBlockAt(x, y)({                                                                   \
     u16 block;                                                                                     \
-    int i;                                                                                         \
-    const u16 *border = gMapHeader.mapLayout->border; /* Unused, they read it again below */       \
+    if (gMapHeader.mapLayoutId == LAYOUT_KIN_ISLAND_BERRY_FOREST) {                                \
+        u16 block;                                                                                 \
+        s32 xprime;                                                                                \
+        s32 yprime;                                                                                \
                                                                                                    \
-    i = (x + 1) & 1;                                                                               \
-    i += ((y + 1) & 1) * 2;                                                                        \
+        xprime = x - MAP_OFFSET;                                                                   \
+        xprime += 8 * 3;                                                                           \
+        xprime %= 3;                                                                               \
                                                                                                    \
-    block = gMapHeader.mapLayout->border[i] | MAPGRID_COLLISION_MASK;                              \
+        yprime = y - MAP_OFFSET;                                                                   \
+        yprime += 8 * 2;                                                                           \
+        yprime %= 2;                                                                               \
+                                                                                                   \
+        block = gMapHeader.mapLayout->border[xprime + yprime * 3] | MAPGRID_COLLISION_MASK;        \
+    } else {                                                                                       \
+        int i;                                                                                     \
+        i = (x + 1) & 1;                                                                           \
+        i += ((y + 1) & 1) * 2;                                                                    \
+        block = gMapHeader.mapLayout->border[i] | MAPGRID_COLLISION_MASK;                          \
+    }                                                                                              \
 })
 
 #define AreCoordsWithinMapGridBounds(x, y) (x >= 0 && x < gBackupMapLayout.width && y >= 0 && y < gBackupMapLayout.height)
