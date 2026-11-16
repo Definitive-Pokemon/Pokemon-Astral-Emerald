@@ -52,7 +52,7 @@ static bool8 IsCoordInIncomingConnectingMap(int coord, int srcMax, int destMax, 
 
 #define GetBorderBlockAt(x, y)({                                                                   \
     u16 block;                                                                                     \
-    if (gMapHeader.mapLayoutId == LAYOUT_KIN_ISLAND_BERRY_FOREST) {                                \
+    if (gMapHeader.mapLayoutId == LAYOUT_SLATEPORT_CITY) {                                \
         u16 block;                                                                                 \
         s32 xprime;                                                                                \
         s32 yprime;                                                                                \
