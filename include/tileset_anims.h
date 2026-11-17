@@ -28,6 +28,7 @@ void InitTilesetAnim_BikeShop(void);
 void InitTilesetAnim_SeviiGeneral(void);
 void InitTilesetAnim_SeviiIslands67(void);
 void InitTilesetAnim_SeviiIslands5(void);
+void InitTilesetAnim_MtEmber(void);
 void InitTilesetAnim_Underwater(void);
 void InitTilesetAnim_SootopolisGym(void);
 void InitTilesetAnim_MauvilleGym(void);
