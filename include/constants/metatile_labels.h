@@ -795,4 +795,9 @@
 #define METATILE_RSMossdeepGym_Switch_Down     0x239
 #define METATILE_RSMossdeepGym_Switch_Up       0x238
 
+// gTileset_IceFallCave
+#define METATILE_Cave_ThinIce       0x2D9
+#define METATILE_Cave_Cracked_Ice   0x2DA
+#define METATILE_Cave_IceHole       0x2DB
+
 #endif // GUARD_METATILE_LABELS_H

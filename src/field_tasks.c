@@ -29,7 +29,7 @@
  *      . AshGrassPerStepCallback: Removes the ash from ash-covered grass that the player steps on.
  *      . FortreeBridgePerStepCallback: Depresses Fortree log bridges that the player steps on.
  *      . PacifidlogBridgePerStepCallback: Submerges Pacifidlog log bridges that the player steps on.
- *      . SootopolisGymIcePerStepCallback: Cracks/breaks ice in Sootopolis Gym that the player steps on.
+ *      . BreakableIcePerStepCallback: Cracks/breaks ice in Sootopolis Gym that the player steps on.
  *      . EndTruckSequence: Sets the moving truck boxes to their final position when the truck sequence ends.
  *      . SecretBasePerStepCallback: Records the decorations in a friend's secret base that the player steps on.
  *      . CrackedFloorPerStepCallback: Breaks cracked floors that the player steps on.
@@ -52,7 +52,7 @@ static void DummyPerStepCallback(u8);
 static void AshGrassPerStepCallback(u8);
 static void FortreeBridgePerStepCallback(u8);
 static void PacifidlogBridgePerStepCallback(u8);
-static void SootopolisGymIcePerStepCallback(u8);
+static void BreakableIcePerStepCallback(u8);
 static void CrackedFloorPerStepCallback(u8);
 static void Task_MuddySlope(u8);
 
@@ -62,7 +62,7 @@ static const TaskFunc sPerStepCallbacks[] =
     [STEP_CB_ASH]               = AshGrassPerStepCallback,
     [STEP_CB_FORTREE_BRIDGE]    = FortreeBridgePerStepCallback,
     [STEP_CB_PACIFIDLOG_BRIDGE] = PacifidlogBridgePerStepCallback,
-    [STEP_CB_SOOTOPOLIS_ICE]    = SootopolisGymIcePerStepCallback,
+    [STEP_CB_BREAKABLE_ICE]     = BreakableIcePerStepCallback,
     [STEP_CB_TRUCK]             = EndTruckSequence,
     [STEP_CB_SECRET_BASE]       = SecretBasePerStepCallback,
     [STEP_CB_CRACKED_FLOOR]     = CrackedFloorPerStepCallback
@@ -656,7 +656,7 @@ void SetSootopolisGymCrackedIceMetatiles(void)
 #define tIceY  data[5]
 #define tDelay data[6]
 
-static void SootopolisGymIcePerStepCallback(u8 taskId)
+static void BreakableIcePerStepCallback(u8 taskId)
 {
     s16 x, y;
     u16 tileBehavior;
@@ -710,9 +710,14 @@ static void SootopolisGymIcePerStepCallback(u8 taskId)
             x = tIceX;
             y = tIceY;
             PlaySE(SE_ICE_CRACK);
-            MapGridSetMetatileIdAt(x, y, METATILE_SootopolisGym_Ice_Cracked);
+            if (MapGridGetMetatileIdAt(x, y) == METATILE_Cave_ThinIce)
+                MapGridSetMetatileIdAt(x, y, METATILE_Cave_Ice_Cracked);
+            else 
+            {
+                MapGridSetMetatileIdAt(x, y, METATILE_SootopolisGym_Ice_Cracked);
+                MarkIcePuzzleCoordVisited(x - MAP_OFFSET, y - MAP_OFFSET);
+            }
             CurrentMapDrawMetatileAt(x, y);
-            MarkIcePuzzleCoordVisited(x - MAP_OFFSET, y - MAP_OFFSET);
             tState = 1;
         }
         break;
@@ -727,7 +732,10 @@ static void SootopolisGymIcePerStepCallback(u8 taskId)
             x = tIceX;
             y = tIceY;
             PlaySE(SE_ICE_BREAK);
-            MapGridSetMetatileIdAt(x, y, METATILE_SootopolisGym_Ice_Broken);
+            if (MapGridGetMetatileIdAt(x, y) == METATILE_Cave_Ice_Cracked)
+                MapGridSetMetatileIdAt(x, y, METATILE_Cave_IceHole);
+            else 
+                MapGridSetMetatileIdAt(x, y, METATILE_SootopolisGym_Ice_Broken);
             CurrentMapDrawMetatileAt(x, y);
             tState = 1;
         }

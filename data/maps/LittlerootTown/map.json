@@ -229,21 +229,28 @@
       "x": 18,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM",
+      "dest_map": "MAP_ICEFALL_CAVE_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 19,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_NEW_MAUVILLE_INSIDE",
+      "dest_map": "MAP_CHRONO_ISLAND",
       "dest_warp_id": "0"
     },
     {
       "x": 15,
       "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_KIN_ISLAND_BERRY_FOREST",
+      "dest_map": "MAP_KIN_ISLAND",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MT_EMBER_RUBY_PATH_B1F",
       "dest_warp_id": "0"
     }
   ],

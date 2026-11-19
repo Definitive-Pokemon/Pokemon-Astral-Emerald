@@ -10,7 +10,7 @@ SootopolisCity_Gym_1F_OnTransition:
 	end
 
 SootopolisCity_Gym_1F_OnResume:
-	setstepcallback STEP_CB_SOOTOPOLIS_ICE
+	setstepcallback STEP_CB_BREAKABLE_ICE
 	end
 
 SootopolisCity_Gym_1F_OnLoad:
