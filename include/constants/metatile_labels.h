@@ -797,7 +797,7 @@
 
 // gTileset_IceFallCave
 #define METATILE_Cave_ThinIce       0x2D9
-#define METATILE_Cave_Cracked_Ice   0x2DA
+#define METATILE_Cave_Ice_Cracked   0x2DA
 #define METATILE_Cave_IceHole       0x2DB
 
 #endif // GUARD_METATILE_LABELS_H
