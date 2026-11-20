@@ -134,9 +134,6 @@
 #define MAPSEC_CANYON_ENTRANCE              0x82
 #define MAPSEC_SEVAULT_CANYON               0x83
 #define MAPSEC_TANOBY_RUINS                 0x84
-#define MAPSEC_SEVII_ISLE_22                0x85
-#define MAPSEC_SEVII_ISLE_23                0x86
-#define MAPSEC_SEVII_ISLE_24                0x87
 #define MAPSEC_MT_EMBER                     0x88
 #define MAPSEC_BERRY_FOREST                 0x89
 #define MAPSEC_ICEFALL_CAVE                 0x8A
