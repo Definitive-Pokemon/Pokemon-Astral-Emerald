@@ -49,6 +49,7 @@ struct HyperCutterUnk
 // this file's functions
 static void FieldCallback_CutTree(void);
 static void FieldCallback_CutGrass(void);
+static void FieldCallback_BrailleWallCut(void);
 static void StartCutTreeFieldEffect(void);
 static void StartCutGrassFieldEffect(void);
 static void SetCutGrassMetatile(s16, s16);
@@ -143,6 +144,13 @@ bool8 SetUpFieldMove_Cut(void)
     u8 userAbility;
     bool8 cutTiles[CUT_NORMAL_AREA];
     bool8 ret;
+
+    if (CutMoveRuinValleyCheck() == TRUE)
+    {
+        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_BrailleWallCut;
+        return TRUE;
+    }
 
     if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE) == TRUE)
     {
@@ -305,6 +313,16 @@ bool8 FldEff_UseCutOnTree(void)
     gTasks[taskId].data[9] = (u32)StartCutTreeFieldEffect;
     IncrementGameStat(GAME_STAT_USED_CUT);
     return FALSE;
+}
+
+static void FieldCallback_BrailleWallCut(void)
+{
+    FieldEffectActiveListRemove(FLDEFF_USE_CUT_ON_GRASS);
+    MapGridSetMetatileIdAt(31, 31, METATILE_SeviiIslands6_DottedHoleDoor_Open);
+    DrawWholeMapView();
+    PlaySE(SE_BANG);
+    FlagSet(FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE);
+    UnlockPlayerFieldControls();
 }
 
 static void StartCutGrassFieldEffect(void)

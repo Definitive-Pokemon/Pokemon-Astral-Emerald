@@ -800,4 +800,6 @@
 #define METATILE_Cave_Ice_Cracked   0x2DA
 #define METATILE_Cave_IceHole       0x2DB
 
+#define METATILE_SeviiIslands6_DottedHoleDoor_Open  0x2D8
+
 #endif // GUARD_METATILE_LABELS_H

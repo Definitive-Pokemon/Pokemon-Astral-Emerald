@@ -3320,6 +3320,19 @@ void ScrollableMultichoice_ClosePersistentMenu(void)
     }
 }
 
+bool8 CutMoveRuinValleyCheck(void)
+{
+    if (FlagGet(FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE) != TRUE
+     && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(FORTUNE_ISLAND_RUIN_VALLEY)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(FORTUNE_ISLAND_RUIN_VALLEY)
+     && gSaveBlock1Ptr->pos.x == 24
+     && gSaveBlock1Ptr->pos.y == 25
+     && GetPlayerFacingDirection() == DIR_NORTH) 
+        return TRUE;
+    else
+        return FALSE;
+}
+
 // Undefine Scrollable Multichoice task data macros
 #undef tMaxItemsOnScreen
 #undef tNumItems
