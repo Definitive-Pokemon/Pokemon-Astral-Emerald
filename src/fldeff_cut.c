@@ -5,6 +5,7 @@
 #include "faraway_island.h"
 #include "field_camera.h"
 #include "field_effect.h"
+#include "field_specials.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "fldeff.h"
