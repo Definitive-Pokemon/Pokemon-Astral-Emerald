@@ -1301,7 +1301,7 @@ static void QueueAnimTiles_General_SandWatersEdge(u16 timer)
 static void QueueAnimTiles_SeviiGeneral_Water_Current_LandWatersEdge(u16 timer)
 {
     AppendTilesetAnimToBuffer(sTilesetAnims_General_Water_Current_LandWatersEdge[timer % ARRAY_COUNT(sTilesetAnims_General_Water_Current_LandWatersEdge)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Mossdeep_Tree_Base[timer % ARRAY_COUNT(gTilesetAnims_Mossdeep_Tree_Base)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(492)), 0x80);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Mossdeep_Tree_Base[timer % ARRAY_COUNT(gTilesetAnims_Mossdeep_Tree_Base)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x133)), 0x80);
 }
 
 static void TilesetAnim_SeviiGeneral(u16 timer)
@@ -1329,7 +1329,7 @@ static void TilesetAnim_SeviiGeneral(u16 timer)
 static void QueueAnimTiles_SeviiIslands67_Flower(u16 timer)
 {
     u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x377)), 0x80);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x177)), 0x80);
 }
 
 static void TilesetAnim_SeviiIslands67(u16 timer)
@@ -1340,7 +1340,7 @@ static void TilesetAnim_SeviiIslands67(u16 timer)
 
 static void QueueAnimTiles_SeviiIslands5_ShortGrassFlower(u16 timer)
 {
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[timer % NELEMS(gTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x324)), 0x80);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[timer % NELEMS(gTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x124)), 0x80);
 }
 
 static void TilesetAnim_SeviiIslands5(u16 timer)
@@ -1351,7 +1351,7 @@ static void TilesetAnim_SeviiIslands5(u16 timer)
 
 static void QueueAnimTiles_MtEmber_Steam(u16 timer)
 {
-    AppendTilesetAnimToBuffer(sTilesetAnims_MtEmber_Steam[timer % ARRAY_COUNT(sTilesetAnims_MtEmber_Steam)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x380)), 8 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(sTilesetAnims_MtEmber_Steam[timer % ARRAY_COUNT(sTilesetAnims_MtEmber_Steam)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x180)), 8 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_MtEmber(u16 timer)
@@ -1359,5 +1359,3 @@ static void TilesetAnim_MtEmber(u16 timer)
     if (timer % 16 == 0)
         QueueAnimTiles_MtEmber_Steam(timer / 16);
 }
-
-
