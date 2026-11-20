@@ -2,6 +2,7 @@
 #include "event_object_lock.h"
 #include "event_object_movement.h"
 #include "event_scripts.h"
+#include "event_data.h"
 #include "faraway_island.h"
 #include "field_camera.h"
 #include "field_effect.h"
