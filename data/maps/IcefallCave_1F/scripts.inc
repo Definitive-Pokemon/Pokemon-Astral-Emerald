@@ -1,3 +1,33 @@
 IcefallCave_1F_MapScripts::
-	.byte 0
+    map_script MAP_SCRIPT_ON_RESUME, IcefallCave_1F_OnResume
+    map_script MAP_SCRIPT_ON_LOAD, IcefallCave_1F_OnLoad
+    map_script MAP_SCRIPT_ON_FRAME_TABLE, IcefallCave_1F_OnFrame
+    .byte 0
 
+IcefallCave_1F_OnResume::
+    setstepcallback STEP_CB_BREAKABLE_ICE
+    end
+
+IcefallCave_1F_OnLoad::
+    @special SetIcefallCaveCrackedIceMetatiles
+    end
+
+IcefallCave_1F_OnFrame::
+    map_script_2 VAR_ICE_STEP_COUNT, 0, IcefallCave_1F_EventScript_FallDownHole
+    .2byte 0
+
+IcefallCave_1F_EventScript_FallDownHole::
+    lockall
+    delay 20
+    applymovement LOCALID_PLAYER, IcefallCave_1F_Movement_SetInvisible
+    waitmovement 0
+    playse SE_FALL
+    delay 60
+    warphole MAP_FLOE_ISLAND_ICEFALL_CAVE_B1F
+    waitstate
+    releaseall
+    end
+
+IcefallCave_1F_Movement_SetInvisible::
+    set_invisible
+    step_end
