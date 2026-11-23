@@ -1295,12 +1295,13 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
 
 static void QueueAnimTiles_General_SandWatersEdge(u16 timer)
 {
-    AppendTilesetAnimToBuffer(sTilesetAnims_General_SandWatersEdge[timer % ARRAY_COUNT(sTilesetAnims_General_SandWatersEdge)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 18 * TILE_SIZE_4BPP);
+    u16 i = timer % ARRAY_COUNT(sTilesetAnims_General_SandWatersEdge);
+    AppendTilesetAnimToBuffer(sTilesetAnims_General_SandWatersEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 18 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_SeviiGeneral_Water_Current_LandWatersEdge(u16 timer)
 {
-    AppendTilesetAnimToBuffer(sTilesetAnims_General_Water_Current_LandWatersEdge[timer % ARRAY_COUNT(sTilesetAnims_General_Water_Current_LandWatersEdge)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(sTilesetAnims_General_Water_Current_LandWatersEdge[timer % ARRAY_COUNT(sTilesetAnims_General_Water_Current_LandWatersEdge)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x1A0)), 48 * TILE_SIZE_4BPP);
     AppendTilesetAnimToBuffer(gTilesetAnims_Mossdeep_Tree_Base[timer % ARRAY_COUNT(gTilesetAnims_Mossdeep_Tree_Base)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x133)), 0x80);
 }
 
@@ -1314,6 +1315,7 @@ static void TilesetAnim_SeviiGeneral(u16 timer)
     // black flower
     // water sand
     // land water edge
+    /*
     if (timer % 16 == 0)
         QueueAnimTiles_General_Flower(timer / 16);
     if (timer % 16 == 1)
@@ -1323,7 +1325,7 @@ static void TilesetAnim_SeviiGeneral(u16 timer)
     if (timer % 16 == 3)
         QueueAnimTiles_General_Waterfall(timer / 16);
     if (timer % 16 == 4)
-        QueueAnimTiles_General_LandWaterEdge(timer / 16);
+        QueueAnimTiles_General_LandWaterEdge(timer / 16);*/
 }
 
 static void QueueAnimTiles_SeviiIslands67_Flower(u16 timer)
