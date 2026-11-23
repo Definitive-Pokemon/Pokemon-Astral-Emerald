@@ -763,10 +763,6 @@ FloeIsland_IcefallCave_1F_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
-FloeIsland_IcefallCave_1F_EventScript_ItemHM07::
-	finditem ITEM_HM07
-	end
-
 FloeIsland_IcefallCave_B1F_EventScript_ItemFullRestore::
 	finditem ITEM_FULL_RESTORE
 	end
