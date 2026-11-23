@@ -2,6 +2,7 @@ IcefallCave_1F_MapScripts::
     map_script MAP_SCRIPT_ON_RESUME, IcefallCave_1F_OnResume
     map_script MAP_SCRIPT_ON_LOAD, IcefallCave_1F_OnLoad
     map_script MAP_SCRIPT_ON_FRAME_TABLE, IcefallCave_1F_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, IcefallCave_OnTransition
     .byte 0
 
 IcefallCave_1F_OnResume::
@@ -11,6 +12,10 @@ IcefallCave_1F_OnResume::
 IcefallCave_1F_OnLoad::
     @special SetIcefallCaveCrackedIceMetatiles
     end
+
+IcefallCave_OnTransition::
+	setvar VAR_ICE_STEP_COUNT, 1
+	end
 
 IcefallCave_1F_OnFrame::
     map_script_2 VAR_ICE_STEP_COUNT, 0, IcefallCave_1F_EventScript_FallDownHole
