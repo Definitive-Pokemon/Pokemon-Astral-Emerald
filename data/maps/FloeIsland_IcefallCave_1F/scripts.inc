@@ -13,7 +13,7 @@ FloeIsland_IcefallCave_1F_OnLoad::
 	end
 
 FloeIsland_IcefallCave_1F_OnFrame::
-	map_script_2 VAR_TEMP_1, 1, FloeIsland_IcefallCave_1F_EventScript_FallDownHole
+	map_script_2 VAR_ICE_STEP_COUNT, 0, FloeIsland_IcefallCave_1F_EventScript_FallDownHole
 	.2byte 0
 
 FloeIsland_IcefallCave_1F_EventScript_FallDownHole::
@@ -23,7 +23,7 @@ FloeIsland_IcefallCave_1F_EventScript_FallDownHole::
 	waitmovement 0
 	playse SE_FALL
 	delay 60
-	@warphole MAP_FLOE_ISLAND_ICEFALL_CAVE_B1F
+	warphole MAP_FLOE_ISLAND_ICEFALL_CAVE_B1F
 	waitstate
 	releaseall
 	end
