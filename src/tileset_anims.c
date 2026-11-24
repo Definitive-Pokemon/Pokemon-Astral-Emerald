@@ -900,9 +900,9 @@ void InitTilesetAnim_BikeShop(void)
 
 void InitTilesetAnim_SeviiGeneral(void)
 {
-    sSecondaryTilesetAnimCounter = sPrimaryTilesetAnimCounter;
-    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = TilesetAnim_SeviiGeneral;
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_SeviiGeneral;
 }
 
 void InitTilesetAnim_SeviiIslands67(void)
