@@ -2866,3 +2866,6 @@ $(OBJEVENTGFXDIR)/pokemon/surfable/test_shiny.4bpp: %.4bpp: %.png
 
 graphics/seagallop/water.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 41 -Wnum_tiles
+
+$(OBJEVENTGFXDIR)/people/biker.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
