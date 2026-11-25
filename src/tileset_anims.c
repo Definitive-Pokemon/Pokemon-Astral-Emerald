@@ -948,7 +948,7 @@ void InitTilesetAnim_SeviiIslands67(void)
 
 void InitTilesetAnim_SeviiIslands5(void)
 {
-    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounter = sPrimaryTilesetAnimCounter;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
     sSecondaryTilesetAnimCallback = TilesetAnim_SeviiIslands5;
 }
