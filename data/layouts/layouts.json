@@ -4816,8 +4816,8 @@
       "name": "BoonIsland_JoyfulGameCorner_Layout",
       "width": 12,
       "height": 10,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_MossdeepGameCorner",
+      "primary_tileset": "gTileset_SeviiInsideBuilding",
+      "secondary_tileset": "gTileset_SeviiGameCorner",
       "border_filepath": "data/layouts/BoonIsland_JoyfulGameCorner/border.bin",
       "blockdata_filepath": "data/layouts/BoonIsland_JoyfulGameCorner/map.bin"
     },
