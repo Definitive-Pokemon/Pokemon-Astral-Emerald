@@ -121,6 +121,8 @@
 #define METATILE_Cave_CrackedFloor                       0x22F
 #define METATILE_Cave_CrackedFloor_Hole                  0x206
 #define METATILE_Cave_EntranceCover                      0x229
+#define METATILE_Cave_IceHole                            0x2DB
+#define METATILE_Cave_Ice_Cracked                        0x2DA
 #define METATILE_Cave_NormalHole_BottomLeft              0x213
 #define METATILE_Cave_NormalHole_BottomMid               0x214
 #define METATILE_Cave_NormalHole_BottomRight             0x215
@@ -139,6 +141,7 @@
 #define METATILE_Cave_ShoalCave_BlueStone_Small          0x35B
 #define METATILE_Cave_ShoalCave_DirtPile_Large           0x358
 #define METATILE_Cave_ShoalCave_DirtPile_Small           0x35A
+#define METATILE_Cave_ThinIce                            0x2D9
 
 // gTileset_Contest
 #define METATILE_Contest_CounterFlap_Bottom  0x2D9
@@ -715,6 +718,9 @@
 #define METATILE_SecretBase_YellowBrick_Bottom          0x22E
 #define METATILE_SecretBase_YellowBrick_Top             0x226
 
+// gTileset_SeviiIslands6
+#define METATILE_SeviiIslands6_DottedHoleDoor_Open  0x2D8
+
 // gTileset_Shop
 #define METATILE_Shop_Door_Elevator   0x285
 #define METATILE_Shop_Laptop1_Flash   0x258
@@ -794,12 +800,5 @@
 #define METATILE_RSMossdeepGym_RedArrow_Up     0x20D
 #define METATILE_RSMossdeepGym_Switch_Down     0x239
 #define METATILE_RSMossdeepGym_Switch_Up       0x238
-
-// gTileset_IceFallCave
-#define METATILE_Cave_ThinIce       0x2D9
-#define METATILE_Cave_Ice_Cracked   0x2DA
-#define METATILE_Cave_IceHole       0x2DB
-
-#define METATILE_SeviiIslands6_DottedHoleDoor_Open  0x2D8
 
 #endif // GUARD_METATILE_LABELS_H
