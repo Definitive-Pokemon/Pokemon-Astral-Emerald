@@ -661,7 +661,7 @@
 
 // gMapGroup_Sevii_FloeIsland
 #define MAP_FLOE_ISLAND                   (0 | (37 << 8))
-#define MAP_FLOE_ISLAND_POKEMON_DAYCARE   (1 | (37 << 8))
+#define MAP_FLOE_ISLAND_POKEMON_DAY_CARE  (1 | (37 << 8))
 #define MAP_FLOE_ISLAND_POKEMON_CENTER_1F (2 | (37 << 8))
 #define MAP_FLOE_ISLAND_POKEMON_CENTER_2F (3 | (37 << 8))
 #define MAP_FLOE_ISLAND_HOUSE1            (4 | (37 << 8))
@@ -683,7 +683,7 @@
 #define MAP_CHRONO_ISLAND_HOUSE1                (8 | (38 << 8))
 #define MAP_CHRONO_ISLAND_HOUSE2                (9 | (38 << 8))
 #define MAP_CHRONO_ISLAND_RESORT_GORGEOUS_HOUSE (10 | (38 << 8))
-#define MAP_CHRONO_ISLAND_ROCKET_WAREHOUSE      (11 | (38 << 8))
+#define MAP_CHRONO_ISLAND_WAREHOUSE             (11 | (38 << 8))
 
 // gMapGroup_Sevii_FortuneIsland
 #define MAP_FORTUNE_ISLAND                   (0 | (39 << 8))
@@ -772,7 +772,5 @@
 #define MAP_QUEST_ISLAND_SEVAULT_CANYON_TANOBY_KEY    (7 | (45 << 8))
 
 #define MAP_GROUPS_COUNT 46
-
-// static const u8 MAP_GROUP_COUNT[] = {57, 5, 6, 7, 8, 9, 10, 8, 8, 15, 9, 18, 11, 24, 14, 16, 17, 2, 2, 2, 3, 1, 1, 1, 119, 61, 94, 2, 1, 13, 1, 1, 3, 1, 8, 8, 14, 10, 12, 12, 11, 14, 4, 15, 8, 8, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
