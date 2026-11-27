@@ -8,7 +8,7 @@
 
 static inline enum Region GetCurrentRegion(void)
 {
-    return gMapHeader.region;
+    return (gMapHeader.regionMapSectionId > MAPSEC_CAVE_OF_SHOCK2)? REGION_SEVII: REGION_HOENN;
 }
 
 static inline const u8 *GetCurrentRegionName(void)
@@ -21,7 +21,7 @@ static inline const u8 *GetCurrentRegionName(void)
         return gText_Sevii;
     case REGION_NONE:
     case REGIONS_COUNT:
-        return gText_RegionDefault;
+        return gText_Hoenn;
     }
     return gText_Hoenn;
 }

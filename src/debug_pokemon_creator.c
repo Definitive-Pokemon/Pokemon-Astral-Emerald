@@ -1164,7 +1164,6 @@ static void DebugPkmCreator_Redraw(void)
             StringExpandPlaceholders(bufferPosition, Str_StringVars);
             AddTextPrinterParameterized(sDebugPkmCreatorData.menuWindowId, FONT_NARROW, gStringVar2, x, y, 0, NULL);
             x = 130;
-            GetMapName_HandleVersion(gStringVar1, sDebugPkmCreatorData.data[index], sDebugPkmCreatorData.data[13]);
             AddTextPrinterParameterized(sDebugPkmCreatorData.menuWindowId, 1, gStringVar1, x, y, 0, NULL);
             break;
         case VAL_BALL:
@@ -1438,7 +1437,6 @@ static void DebugPkmCreator_EditModeRedraw(u32 digit, u8 editIndex)
         {
             x = 130;
             FillWindowPixelRect(sDebugPkmCreatorData.menuWindowId, 0x11, x, y, 120, 16);
-            GetMapName_HandleVersion(gStringVar2, DebugPkmCreator_editingVal[editIndex], sDebugPkmCreatorData.data[13]);
             AddTextPrinterParameterized(sDebugPkmCreatorData.menuWindowId, 1, gStringVar2, x, y, 0, NULL);
             x = 100;
         }

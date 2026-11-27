@@ -146,6 +146,7 @@ static void MCB2_FieldUpdateRegionMap(void)
 
 static void FieldUpdateRegionMap(void)
 {
+    u8 offset;
     switch (sFieldRegionMapHandler->state)
     {
         case 0:
@@ -157,7 +158,8 @@ static void FieldUpdateRegionMap(void)
         case 1:
             DrawStdFrameWithCustomTileAndPalette(WIN_TITLE, FALSE, 0x27, 0xd);
             FillWindowPixelBuffer(WIN_TITLE, PIXEL_FILL(1));
-            PrintTitleWindowText();
+            offset = GetStringCenterAlignXOffset(FONT_NORMAL, gText_Hoenn, 0x38);
+            AddTextPrinterParameterized(1, FONT_NORMAL, gText_Hoenn, offset, 1, 0, NULL);
             ScheduleBgCopyTilemapToVram(0);
             DrawStdFrameWithCustomTileAndPalette(WIN_MAPSEC_NAME, FALSE, 0x27, 0xd);
             PrintRegionMapSecName();
@@ -181,21 +183,13 @@ static void FieldUpdateRegionMap(void)
             {
                 case MAP_INPUT_MOVE_END:
                     PrintRegionMapSecName();
-                    PrintTitleWindowText();
+                    offset = GetStringCenterAlignXOffset(FONT_NORMAL, gText_Hoenn, 0x38);
+                    AddTextPrinterParameterized(1, FONT_NORMAL, gText_Hoenn, offset, 1, 0, NULL);
                     break;
                 case MAP_INPUT_A_BUTTON:
                 case MAP_INPUT_B_BUTTON:
                     sFieldRegionMapHandler->state++;
                     break;
-                case MAP_INPUT_R_BUTTON:
-                    if (sFieldRegionMapHandler->regionMap.mapSecType == MAPSECTYPE_CITY_CANFLY 
-                        && FlagGet(OW_FLAG_POKE_RIDER) && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
-                    {
-                        PlaySE(SE_SELECT);
-                        SetFlyDestination(&sFieldRegionMapHandler->regionMap);
-                        gSkipShowMonAnim = TRUE;
-                        ReturnToFieldFromFlyMapSelect();
-                    }
             }
             break;
         case 5:
@@ -219,39 +213,12 @@ static void PrintRegionMapSecName(void)
     if (sFieldRegionMapHandler->regionMap.mapSecType != MAPSECTYPE_NONE)
     {
         FillWindowPixelBuffer(WIN_MAPSEC_NAME, PIXEL_FILL(1));
-        u32 mapSecNameFontId = GetFontIdToFit(sFieldRegionMapHandler->regionMap.mapSecName, FONT_NORMAL, 0, 100);
-        u32 mapSecNameOffset = GetStringCenterAlignXOffset(mapSecNameFontId, sFieldRegionMapHandler->regionMap.mapSecName, 0x26);
-        AddTextPrinterParameterized(WIN_MAPSEC_NAME, mapSecNameFontId, sFieldRegionMapHandler->regionMap.mapSecName, mapSecNameOffset, 1, 0, NULL);
+        AddTextPrinterParameterized(0, FONT_NORMAL, sFieldRegionMapHandler->regionMap.mapSecName, 0, 1, 0, NULL);
         ScheduleBgCopyTilemapToVram(WIN_MAPSEC_NAME);
     }
     else
     {
         FillWindowPixelBuffer(WIN_MAPSEC_NAME, PIXEL_FILL(1));
         CopyWindowToVram(WIN_MAPSEC_NAME, COPYWIN_FULL);
-    }
-}
-
-static void PrintTitleWindowText(void)
-{
-    const u8* regionName = GetCurrentRegionName();
-    u32 regionFontId = GetFontIdToFit(regionName, FONT_NORMAL, 0, 60);
-    u32 regionOffset = GetStringCenterAlignXOffset(regionFontId, regionName, 0x38);
-
-    static const u8 FlyPromptText[] = _("{R_BUTTON} FLY");
-    u32 flyFontId = GetFontIdToFit(FlyPromptText, FONT_NORMAL, 0, 60);
-    u32 flyOffset = GetStringCenterAlignXOffset(flyFontId, FlyPromptText, 0x38);
-
-    FillWindowPixelBuffer(WIN_TITLE, PIXEL_FILL(1));
-
-    if (sFieldRegionMapHandler->regionMap.mapSecType == MAPSECTYPE_CITY_CANFLY
-        && FlagGet(OW_FLAG_POKE_RIDER) && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
-    {
-        AddTextPrinterParameterized(WIN_TITLE, flyFontId, FlyPromptText, flyOffset, 1, 0, NULL);
-        ScheduleBgCopyTilemapToVram(WIN_TITLE);
-    }
-    else
-    {
-        AddTextPrinterParameterized(WIN_TITLE, regionFontId, regionName, regionOffset, 1, 0, NULL);
-        CopyWindowToVram(WIN_TITLE, COPYWIN_FULL);
     }
 }

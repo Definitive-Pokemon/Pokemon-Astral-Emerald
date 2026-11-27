@@ -10,27 +10,26 @@
 static EWRAM_DATA u8 *sPokedexAreaMapBgNum = NULL;
 
 // Hoenn region map
-static const u16 ALIGNED(4) sPokedexAreaMap_Pal_Hoenn[] = INCBIN_U16("graphics/pokedex/region_map_hoenn.gbapal");
-static const u32 sPokedexAreaMap_Gfx_Hoenn[] = INCBIN_U32("graphics/pokedex/region_map_hoenn.8bpp.smol");
-static const u32 sPokedexAreaMap_Tilemap_Hoenn[] = INCBIN_U32("graphics/pokedex/region_map_hoenn.bin.smolTM");
+static const u16 ALIGNED(4) sPokedexAreaMap_Pal_Hoenn[] = INCBIN_U16("graphics/pokedex/region_map.gbapal");
+static const u32 sPokedexAreaMap_Gfx_Hoenn[] = INCBIN_U32("graphics/pokedex/region_map.8bpp.lz");
+static const u32 sPokedexAreaMap_Tilemap_Hoenn[] = INCBIN_U32("graphics/pokedex/region_map.bin.lz");
 // Affine versions (not used)
-static const u32 sPokedexAreaMapAffine_Gfx[] = INCBIN_U32("graphics/pokedex/region_map_affine.8bpp.smol");
-static const u32 sPokedexAreaMapAffine_Tilemap[] = INCBIN_U32("graphics/pokedex/region_map_affine.bin.smolTM");
+static const u32 sPokedexAreaMapAffine_Gfx[] = INCBIN_U32("graphics/pokedex/region_map_affine.8bpp.lz");
+static const u32 sPokedexAreaMapAffine_Tilemap[] = INCBIN_U32("graphics/pokedex/region_map_affine.bin.lz");
+
+// Sevii Islands map
+static const u16 ALIGNED(4) sPokedexAreaMap_Pal_Sevii[] = INCBIN_U16("graphics/pokedex/sevii_region_map.gbapal");
+static const u32 sPokedexAreaMap_Gfx_Sevii[] = INCBIN_U32("graphics/pokedex/sevii_region_map.8bpp.lz");
+static const u32 sPokedexAreaMap_Tilemap_Sevii[] = INCBIN_U32("graphics/pokedex/sevii_region_map.bin.lz");
 
 const u16 *GetPokedexAreaMapPal(void)
 {
     switch (GetCurrentRegion())
     {
-    case REGION_KANTO:
-    case REGION_JOHTO:
-    case REGION_SINNOH:
-    case REGION_UNOVA:
-    case REGION_KALOS:
-    case REGION_ALOLA:
-    case REGION_GALAR:
-    case REGION_HISUI:
-    case REGION_PALDEA:
     case REGION_HOENN:
+        return sPokedexAreaMap_Pal_Hoenn;
+    case REGION_SEVII:
+        return sPokedexAreaMap_Pal_Sevii;
     case REGION_NONE:
     case REGIONS_COUNT:
         DebugPrintf("GetCurrentRegionMapBgPal[Multi-Region]: Returning Hoenn Palette");
@@ -45,7 +44,9 @@ const u32 *GetPokedexAreaMapGfx(void)
     switch (GetCurrentRegion())
     {
     case REGION_HOENN:
+        return sPokedexAreaMap_Gfx_Hoenn;
     case REGION_SEVII:
+        return sPokedexAreaMap_Gfx_Sevii;
     case REGION_NONE:
     case REGIONS_COUNT:
         DebugPrintf("GetCurrentRegionMapBgPal[Multi-Region]: Returning Hoenn Graphics");
@@ -59,16 +60,10 @@ const u32 *GetPokedexAreaMapTilemap(void)
 {
     switch (GetCurrentRegion())
     {
-    case REGION_KANTO:
-    case REGION_JOHTO:
-    case REGION_SINNOH:
-    case REGION_UNOVA:
-    case REGION_KALOS:
-    case REGION_ALOLA:
-    case REGION_GALAR:
-    case REGION_HISUI:
-    case REGION_PALDEA:
     case REGION_HOENN:
+        return sPokedexAreaMap_Tilemap_Hoenn;
+    case REGION_SEVII:
+        return sPokedexAreaMap_Tilemap_Sevii;
     case REGION_NONE:
     case REGIONS_COUNT:
         DebugPrintf("GetCurrentRegionMapBgPal[Multi-Region]: Returning Hoenn Tilemap");
